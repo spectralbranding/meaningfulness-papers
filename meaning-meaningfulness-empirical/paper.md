@@ -348,7 +348,7 @@ This release is honest about scope. Seven limitations carry forward to future ve
 
 ## Acknowledgments
 
-AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1, GPT-4o) were used for initial literature search, editorial refinement, companion-code implementation, running experiments (the prose-rendering operations for the three self-application renderings; the cross-operator spine extractions; the bibliographic-hallucination audit via Crossref API), and pre-draft critical-review cycles. Operator separation discipline (the rendering operator and the extraction operator are different models) was applied to all P4 evidence per the §Method §Cross-operator extraction discipline subsection. All theoretical claims, propositions, methodology specifications, calibration choices, and interpretations are the author's sole responsibility.
+AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1, GPT-4o) were used for initial literature search, companion-code implementation, running experiments (the prose-rendering operations for the three self-application renderings; the cross-operator spine extractions). Operator separation discipline (the rendering operator and the extraction operator are different models) was applied to all P4 evidence per the §Method §Cross-operator extraction discipline subsection. All theoretical claims, propositions, methodology specifications, calibration choices, and interpretations are the author's sole responsibility.
 
 **CRediT contributions.** Dmitry Zharnikov: conceptualization, methodology, formal analysis, investigation, data curation, writing — original draft, writing — review & editing.
 

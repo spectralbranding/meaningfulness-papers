@@ -9,7 +9,7 @@ companion_paper_key: "2026ao"
 companion_paper_concept_doi: "10.5281/zenodo.20409683"
 version: "1.0.0"
 status: "v1.0.0 public Zenodo release: integrative theory engagement with Carlile 2004 + Raisch-Krakowski 2021 + Kaplan-Vakili 2015 + Felin-Kauffman-Zenger 2023 + Levinthal-March 1993; random-graph null baseline (Pr(Rec ≥ 4 by chance) = .000); Phase 2 Task α Substack self-application (11/14 strict / 14/14 semantic preservation under within-operator extraction; 9/14 strict / 14/14 semantic under cross-operator GPT-4o extraction); Phase 2.5 cross-paper P4 rendering of Paper A's full theoretical apparatus (12/15 strict / 15/15 semantic within-operator; 10/15 / 14/15 cross-operator); Phase 3 Task β LinkedIn third rendering of focal-pair substrate (Rec=4); cross-operator extraction discipline (Operator B ≠ Operator C); LLM-call professional logging; Conclusion section; abstract at 195 words; Task δ inter-coder κ + Task γ cross-language Russian + Phase 3.5b multi-LLM cross-FAMILY pre-registered for v1.1.0. Internal drafting versions (Session E v1.0.0 + Session E continuation v1.1.0 KBV add + Session F v1.2.0 P4 reframe + Session H v1.3.0 deep-path) consolidated to public v1.0.0 per feedback_version_only_at_zenodo HARD RULE; see PROVENANCE.yaml for internal drafting history."
-date: "2026-05-29"
+date: "2026-05-27"
 
 target_venue:
   primary: "Strategic Management Journal"
@@ -22,7 +22,7 @@ sub_canon: "empirical-companion (paired with Paper A 2026ao theoretical foundati
 zenodo:
   concept_doi: "10.5281/zenodo.20409701"
   version_doi: "10.5281/zenodo.20409702"
-  upload_status: "v1.0.0 jointly uploaded with Paper A 2026ao on 2026-05-29 per SESSION_I 13-step procedure"
+  upload_status: "v1.0.0 jointly uploaded with Paper A 2026ao on 2026-05-27 per SESSION_I 13-step procedure"
 
 body_word_count_approx: 11878
 abstract_word_count: 195

@@ -102,7 +102,7 @@ Every experimental LLM call producing cited evidence in `paper.md` is logged in 
 
 | Release | Scope addition | Estimated wall-clock |
 |---|---|---|
-| **v1.0.0** (this release) | Two twin pairs + null baseline + 3 self-application renderings + cross-operator extraction + LLM-call provenance | 2026-05-29 |
+| **v1.0.0** (this release) | Two twin pairs + null baseline + 3 self-application renderings + cross-operator extraction + LLM-call provenance | 2026-05-27 |
 | v1.1.0 | Task δ inter-coder κ + Task γ Russian human-native + Phase 3.5b multi-LLM cross-FAMILY | 4–8 weeks post-v1.0.0 |
 | v2.0.0 | First prospective lab cohort + larger-N twin-pair extension + β/δ confidence intervals | 6–12 months post-v1.0.0 |
 | v3.0.0 | Multi-cohort prospective tracking + DiD identification on Zenodo spine-publication events | 12–18 months post-v1.0.0 |

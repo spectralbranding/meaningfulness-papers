@@ -105,7 +105,7 @@ zenodo_upload:
   paper_a_version_doi: "10.5281/zenodo.20409684"
   paper_b_concept_doi: "10.5281/zenodo.20409701"
   paper_b_version_doi: "10.5281/zenodo.20409702"
-  date: "2026-05-29"
+  date: "2026-05-27"
   procedure: "SESSION_I 14-step joint upload (Paper A 2026ao + Paper B 2026ap)"
 
 reproducibility_anchors:

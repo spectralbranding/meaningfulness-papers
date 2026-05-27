@@ -7,7 +7,7 @@
 paper_key: "2026ap"
 companion_paper: "2026ao"
 public_release_version: "1.0.0"
-date_published: "2026-05-29"
+date_published: "2026-05-27"
 zenodo:
   concept_doi: "10.5281/zenodo.20409701"
   version_doi: "10.5281/zenodo.20409702"
@@ -170,7 +170,7 @@ versioning_trajectory:
   v1_0_0:
     description: "Public Zenodo initial release (this release)"
     evidence: "Two twin pairs at Rec=4 + null baseline + 3 self-application renderings + cross-operator extraction + LLM-call provenance"
-    date: "2026-05-29"
+    date: "2026-05-27"
   v1_1_0:
     description: "Task delta inter-coder kappa + Task gamma Russian human-native + Phase 3.5b multi-LLM cross-FAMILY"
     estimated: "4-8 weeks post-v1.0.0"

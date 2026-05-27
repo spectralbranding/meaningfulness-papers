@@ -6,7 +6,7 @@ paper_key: 2026ao
 status: published
 version: 1.0.0
 date_draft_started: 2026-05-26
-date_published: 2026-05-29
+date_published: 2026-05-27
 zenodo:
   concept_doi: "10.5281/zenodo.20409683"
   version_doi: "10.5281/zenodo.20409684"
@@ -29,7 +29,7 @@ empirical_companion:
   version_doi: "10.5281/zenodo.20409702"
   scoping_doc: research/meaning_meaningfulness_paper/PAPER_B_2026ap_SCOPING.md
   trigger: Paper A Phase 3 GO + paper.md complete + post-draft review pass + Zenodo upload
-  published: 2026-05-29 (joint Zenodo upload with Paper A)
+  published: 2026-05-27 (joint Zenodo upload with Paper A)
 spine_artifact: research/meaning_meaningfulness_paper/SPINE.yaml
 spine_version: v0.7.1
 schema_version: v0.2

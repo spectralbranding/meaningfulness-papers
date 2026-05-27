@@ -4,7 +4,7 @@ Dmitry Zharnikov
 
 ORCID: 0009-0000-6893-9231
 
-DOI: [10.5281/zenodo.20409683](https://doi.org/10.5281/zenodo.20409683)
+DOI: [10.5281/zenodo.20409683](DOI: 10.5281/zenodo.20409683)
 
 Working Paper v1.0.0 – May 2026
 
@@ -330,9 +330,9 @@ Brynjolfsson, Erik, Danielle Li, and Lindsey R. Raymond. 2025. "Generative AI at
 
 Bikard, Michaël. 2020. "Idea Twins: Simultaneous Discoveries as a Research Tool." *Strategic Management Journal* 41 (8): 1528–1543. DOI: 10.1002/smj.3162.
 
-Born, Max, and Pascual Jordan. 1925. "Zur Quantenmechanik." *Zeitschrift für Physik* 34: 858–888.
+Born, Max, and Pascual Jordan. 1925. "Zur Quantenmechanik." *Zeitschrift für Physik* 34: 858–888. DOI: 10.1007/BF01328531.
 
-Born, Max, Werner Heisenberg, and Pascual Jordan. 1926. "Zur Quantenmechanik II." *Zeitschrift für Physik* 35: 557–615.
+Born, Max, Werner Heisenberg, and Pascual Jordan. 1926. "Zur Quantenmechanik II." *Zeitschrift für Physik* 35: 557–615. DOI: 10.1007/BF01379806.
 
 Alavi, Maryam, Dorothy E. Leidner, and Reza Mousavi. 2024. "Knowledge Management Perspective of Generative Artificial Intelligence." *Journal of the Association for Information Systems* 25 (1). DOI: 10.17705/1jais.00859.
 
@@ -358,7 +358,7 @@ Grodal, Stine, and Siobhán O'Mahony. 2017. "How Does a Grand Challenge Become D
 
 Grodal, Stine, Aharon Cohen Ha, and Roy Hood. 2024. "Between Humans and Machines: The Social Construction of the Generative AI Category." *Organization Theory* 5 (3). DOI: 10.1177/26317877241275125.
 
-Heisenberg, Werner. 1925. "Über quantentheoretische Umdeutung kinematischer und mechanischer Beziehungen." *Zeitschrift für Physik* 33: 879–893.
+Heisenberg, Werner. 1925. "Über quantentheoretische Umdeutung kinematischer und mechanischer Beziehungen." *Zeitschrift für Physik* 33: 879–893. DOI: 10.1007/BF01328377.
 
 Kellogg, Katherine C., Melissa A. Valentine, and Angèle Christin. 2020. "Algorithms at Work: The New Contested Terrain of Control." *Academy of Management Annals* 14 (1): 366–410. DOI: 10.5465/annals.2018.0174.
 
@@ -378,17 +378,17 @@ Liebeskind, Julia Porter. 1996. "Knowledge, Strategy, and the Theory of the Firm
 
 Marchetti, Antonio, and Phanish Puranam. 2025. "Are Less Hierarchical Firms Organized Around Stronger Cultures? Evidence from Big Data." *Strategic Management Journal* 47 (2): 463–493. DOI: 10.1002/smj.70020.
 
-Merton, Robert K. 1961. "Singletons and Multiples in Scientific Discovery: A Chapter in the Sociology of Science." *Proceedings of the American Philosophical Society* 105 (5): 470–486.
+Merton, Robert K. 1961. "Singletons and Multiples in Scientific Discovery: A Chapter in the Sociology of Science." *Proceedings of the American Philosophical Society* 105 (5): 470–486. DOI: 10.2307/985546.
 
 Murray, Alex, Jen Rhymer, and David G. Sirmon. 2021. "Humans and Technology: Forms of Conjoined Agency in Organizations." *Academy of Management Review* 46 (3): 552–571. DOI: 10.5465/amr.2019.0186.
 
 Nonaka, Ikujiro. 1994. "A Dynamic Theory of Organizational Knowledge Creation." *Organization Science* 5 (1): 14–37. DOI: 10.1287/orsc.5.1.14.
 
-Nakajima, Tatsuya. 2026. "The Log Is the Agent: ActiveGraph and the Render-at-Consumption Paradigm." arXiv preprint arXiv:2605.21997 [cs.AI].
+Nakajima, Tatsuya. 2026. "The Log Is the Agent: ActiveGraph and the Render-at-Consumption Paradigm." arXiv preprint arXiv:2605.21997 [cs.AI]. URL: https://arxiv.org/abs/2605.21997.
 
 Nickerson, Jack A., and Todd R. Zenger. 2004. "A Knowledge-Based Theory of the Firm — The Problem-Solving Perspective." *Organization Science* 15 (6): 617–632. DOI: 10.1287/orsc.1040.0093.
 
-Pauli, Wolfgang. 1927. "Zur Quantenmechanik des magnetischen Elektrons." *Zeitschrift für Physik* 43: 601–623.
+Pauli, Wolfgang. 1927. "Zur Quantenmechanik des magnetischen Elektrons." *Zeitschrift für Physik* 43: 601–623. DOI: 10.1007/BF01397326.
 
 Pratt, Michael G., and Blake E. Ashforth. 2003. "Fostering Meaningfulness in Working and at Work." In *Positive Organizational Scholarship: Foundations of a New Discipline*, edited by Kim S. Cameron, Jane E. Dutton, and Robert E. Quinn, 309–327. Berrett-Koehler.
 
@@ -396,9 +396,9 @@ Raisch, Sebastian, and Sebastian Krakowski. 2021. "Artificial Intelligence and M
 
 Rosso, Brent D., Kathryn H. Dekas, and Amy Wrzesniewski. 2010. "On the Meaning of Work: A Theoretical Integration and Review." *Research in Organizational Behavior* 30: 91–127. DOI: 10.1016/j.riob.2010.09.001.
 
-Schrödinger, Erwin. 1926. "Quantisierung als Eigenwertproblem (Erste–Vierte Mitteilung)." *Annalen der Physik* 79–81.
+Schrödinger, Erwin. 1926. "Quantisierung als Eigenwertproblem (Erste–Vierte Mitteilung)." *Annalen der Physik* 79–81. DOI: 10.1002/andp.19263840404.
 
-Schrödinger, Erwin. 1926. "Über das Verhältnis der Heisenberg-Born-Jordanschen Quantenmechanik zu der meinen." *Annalen der Physik* 79: 734–756.
+Schrödinger, Erwin. 1926. "Über das Verhältnis der Heisenberg-Born-Jordanschen Quantenmechanik zu der meinen." *Annalen der Physik* 79: 734–756. DOI: 10.1002/andp.19263840804.
 
 Seidel, Stefan, Nicholas Berente, and Abayomi Baiyere. 2025. "Stability and Change in Digital Transformation: A Repertoire Model of Institutionally Embedded Affordances." *Information and Organization* 35 (2): 100564. DOI: 10.1016/j.infoandorg.2025.100564.
 
@@ -410,7 +410,7 @@ Star, Susan Leigh, and James R. Griesemer. 1989. "Institutional Ecology, 'Transl
 
 Toulmin, Stephen. 1958. *The Uses of Argument*. Cambridge University Press.
 
-Tushman, Michael L., and Charles A. O'Reilly. 1996. "Ambidextrous Organizations: Managing Evolutionary and Revolutionary Change." *California Management Review* 38 (4): 8–30.
+Tushman, Michael L., and Charles A. O'Reilly. 1996. "Ambidextrous Organizations: Managing Evolutionary and Revolutionary Change." *California Management Review* 38 (4): 8–30. DOI: 10.2307/41165852.
 
 Walton, Douglas. 2008. *Argumentation Schemes*. Cambridge University Press.
 

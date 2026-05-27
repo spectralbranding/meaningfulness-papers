@@ -16,8 +16,8 @@ Operators (target: 2-3 of these depending on API access):
   - GPT-4o (English-substrate; OPENAI_API_KEY env)
 
 Per Session H init prompt §Phase 3.5b stretch budget rule: execute ONLY when
-Phase 3.5a finishes with >2h remaining; otherwise mark as v1.1.0 backlog.
-This script is the EXECUTION-READY SKELETON for that v1.1.0 sub-task; it is
+Phase 3.5a finishes with >2h remaining; otherwise mark as v1.4.0 backlog.
+This script is the EXECUTION-READY SKELETON for that v1.4.0 sub-task; it is
 NOT fired in Session H.
 
 Run pattern (BWS-injected per fleet convention):
@@ -70,7 +70,7 @@ def get_source_extract(paper_md_path: Path, extract: str) -> str:
 
 # ============================================================================
 # Per-operator render functions. Each takes (source_english_text, seed) and
-# returns the operator's Russian rendering. Stubs for v1.1.0 execution.
+# returns the operator's Russian rendering. Stubs for v1.4.0 execution.
 # ============================================================================
 
 
@@ -119,7 +119,8 @@ def render_with_yandexgpt(source_text: str, seed: int) -> str:
 def render_with_gigachat(source_text: str, seed: int) -> str:
     """Render via GigaChat (Sberbank).
 
-    Requires GIGACHAT_AUTH (basic-auth credential) in environment.
+    Requires GIGACHAT_AUTH (basic-auth credential) OR GIGACHAT_API_KEY (same
+    value; base64 of client_id:client_secret) in environment.
     Endpoint: https://gigachat.devices.sberbank.ru/api/v1/chat/completions
     OAuth2 flow: POST to /api/v2/oauth with client credentials, get token,
     then call /api/v1/chat/completions.
@@ -127,19 +128,21 @@ def render_with_gigachat(source_text: str, seed: int) -> str:
     """
     import httpx
 
-    auth = os.environ.get("GIGACHAT_AUTH", "").strip()
+    auth = os.environ.get("GIGACHAT_AUTH", "").strip() or os.environ.get("GIGACHAT_API_KEY", "").strip()
     if not auth:
-        raise RuntimeError("GIGACHAT_AUTH required (basic-auth credential)")
-    # OAuth2 token flow
+        raise RuntimeError("GIGACHAT_AUTH or GIGACHAT_API_KEY required (basic-auth credential)")
+    # OAuth2 token flow (RqUID must be a valid UUID v4)
+    import uuid
     token_resp = httpx.post(
         "https://ngw.devices.sberbank.ru:9443/api/v2/oauth",
         headers={
             "Authorization": f"Basic {auth}",
-            "RqUID": "phase35b-2026-05-27",
+            "RqUID": str(uuid.uuid4()),
             "Content-Type": "application/x-www-form-urlencoded",
+            "Accept": "application/json",
         },
         data={"scope": "GIGACHAT_API_PERS"},
-        verify=False,  # GigaChat root CA not in default trust store
+        verify=False,
         timeout=60.0,
     )
     token_resp.raise_for_status()
@@ -215,9 +218,40 @@ def render_with_gpt4o(source_text: str, seed: int) -> str:
     return resp.choices[0].message.content
 
 
+def render_with_deepseek(source_text: str, seed: int) -> str:
+    """Render via DeepSeek (Chinese-native operator; primarily-Chinese training corpus).
+
+    Requires DEEPSEEK_API_KEY in environment.
+    Endpoint: https://api.deepseek.com/chat/completions (OpenAI-compatible).
+    Reference: https://api-docs.deepseek.com/
+    """
+    from openai import OpenAI
+
+    client = OpenAI(
+        api_key=os.environ["DEEPSEEK_API_KEY"],
+        base_url="https://api.deepseek.com",
+    )
+    prompt = (
+        "Render the following English academic abstract into native Russian "
+        "appropriate for an SMJ-tier Russian academic readership. Preserve all "
+        "propositional claims, numerical figures, and citation references. Use "
+        "formal academic Russian register. Do not translate verbatim; render "
+        "naturally. Return only the Russian text, no preamble:\n\n"
+        f"{source_text}"
+    )
+    resp = client.chat.completions.create(
+        model="deepseek-chat",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.3,
+        max_tokens=2000,
+    )
+    return resp.choices[0].message.content
+
+
 OPERATORS: dict[str, Callable[[str, int], str]] = {
     "yandexgpt": render_with_yandexgpt,
     "gigachat": render_with_gigachat,
+    "deepseek": render_with_deepseek,
     "claude_opus": render_with_claude_opus,
     "gpt4o": render_with_gpt4o,
 }

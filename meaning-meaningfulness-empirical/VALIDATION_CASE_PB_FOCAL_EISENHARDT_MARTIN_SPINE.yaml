@@ -1,0 +1,129 @@
+# VALIDATION_CASE_PB_FOCAL — Eisenhardt & Martin (2000) SMJ
+# Retroactive spine extraction per paper_a:appendix_B_protocol (spine-first
+# drafting protocol applied in reverse). Single-coder by author at v1.0.0;
+# inter-coder κ scheduled for v1.1.0.
+
+extraction_version: "1.0.0"
+extraction_session: "Session E Phase 2"
+extraction_date: "2026-05-27"
+schema_version: "0.2"
+
+source_paper:
+  citation_key: eisenhardt-martin-2000-dynamic-capabilities
+  full_citation: "Eisenhardt, K. M., & Martin, J. A. (2000). Dynamic capabilities: What are they? Strategic Management Journal 21(10–11): 1105–1121."
+  doi: "10.1002/1097-0266(200010/11)21:10/11<1105::AID-SMJ133>3.0.CO;2-E"
+  publication_date: "2000-10/11"
+  venue: "Strategic Management Journal"
+  source_pdf: "research/references/pericles_exported.pdf (17 pages)"
+
+paper_thesis: |
+  Dynamic capabilities are specific and identifiable organizational processes
+  (product development, strategic decision making, alliancing) that explain how
+  firms reconfigure resources in dynamic markets. Contrary to the prevailing
+  RBV-derived view, DCs are not vague or tautological; they have significant
+  commonalities across firms, making them more homogeneous, fungible, equifinal,
+  and substitutable than the resource-based-view tradition assumed. DC form
+  shifts by market dynamism: routine-like in moderately dynamic markets,
+  simple-and-experiential in high-velocity markets.
+
+# ============================================================================
+# Propositions (the paper's central claims, locked at this spine extraction)
+# ============================================================================
+propositions:
+  - id: EM_P1
+    statement: "Dynamic capabilities are a set of specific and identifiable organizational processes (e.g., product development, strategic decision making, alliancing)."
+    falsifier: "DCs that produce competitive advantage cannot be operationalized as identifiable processes."
+    body_location: "abstract; §Dynamic Capabilities Defined"
+    antecedents: []
+
+  - id: EM_P2
+    statement: "Dynamic capabilities are neither vague nor tautological."
+    falsifier: "Empirical attempts to specify DCs yield circular definitions."
+    body_location: "abstract; introduction"
+    antecedents: ["RBV-critique-literature (Priem-Butler 2000; Williamson 1999)"]
+
+  - id: EM_P3
+    statement: "Dynamic capabilities are idiosyncratic in their details and path-dependent in their emergence, but have significant commonalities across firms (best practices)."
+    falsifier: "Cross-firm DC comparisons show no measurable commonalities; idiosyncrasy dominates."
+    body_location: "abstract; §Commonalities"
+    antecedents: ["EM_P1"]
+
+  - id: EM_P4
+    statement: "Dynamic capabilities are more homogeneous, fungible, equifinal, and substitutable than is usually assumed by RBV scholars."
+    falsifier: "DCs prove uniformly heterogeneous, non-fungible, and non-substitutable across firms."
+    body_location: "abstract; §Implications"
+    antecedents: ["EM_P3", "Teece-Pisano-Shuen 1997"]
+
+  - id: EM_P5
+    statement: "In moderately dynamic markets, dynamic capabilities resemble the traditional conception of routines: detailed, analytic, stable processes with predictable outcomes."
+    falsifier: "DCs in moderately dynamic markets exhibit unpredictability and instability."
+    body_location: "§Moderate vs High Velocity"
+    antecedents: ["EM_P1", "Nelson-Winter 1982 routines"]
+
+  - id: EM_P6
+    statement: "In high-velocity markets, dynamic capabilities are simple, highly experiential, and fragile processes with unpredictable outcomes."
+    falsifier: "DCs in high-velocity markets are detailed and predictable."
+    body_location: "§Moderate vs High Velocity"
+    antecedents: ["EM_P1", "Brown-Eisenhardt 1997 simple rules"]
+
+  - id: EM_P7
+    statement: "Well-known learning mechanisms (practice, codification, articulation, error rate, pacing of experience) guide the evolution of dynamic capabilities."
+    falsifier: "DC evolution is independent of the canonical learning-mechanism literature."
+    body_location: "§Evolution of Dynamic Capabilities"
+    antecedents: ["Argote 1999 organizational learning curve", "Levitt-March 1988"]
+
+# ============================================================================
+# Observations: the paper's empirical anchors
+# ============================================================================
+observations:
+  - id: EM_O1
+    statement: "Cisco's product development capability characterized as iterative, prototype-driven, repeated across multiple business units."
+    role: "illustrative_case"
+    body_location: "§Specific Identifiable Processes"
+
+  - id: EM_O2
+    statement: "Reviewed empirical studies on best practices (Chaparral Steel, Toyota, Disney, etc.) cited as evidence for cross-firm DC commonality."
+    role: "literature_synthesis"
+    body_location: "§Commonalities Across Firms"
+
+  - id: EM_O3
+    statement: "Reviewed empirical evidence on high-velocity vs moderately dynamic markets (semiconductors, computers, telecom)."
+    role: "boundary_condition_evidence"
+    body_location: "§Moderate vs High Velocity"
+
+# ============================================================================
+# Methods: the paper's argumentative apparatus
+# ============================================================================
+methods:
+  - id: EM_M1
+    statement: "Conceptual synthesis of dynamic-capability literature with selective citation of empirical case studies."
+    type: "theoretical_review_with_empirical_grounding"
+    body_location: "throughout"
+
+# ============================================================================
+# Findings: the paper's inferential aggregations
+# ============================================================================
+findings:
+  - id: EM_F1
+    statement: "Dynamic capabilities can be made operationally precise as specific organizational processes, dissolving the RBV-tautology critique."
+    type: "theoretical_reconstruction"
+    source_propositions: [EM_P1, EM_P2]
+    body_location: "§Dynamic Capabilities Defined; §Commonalities"
+
+  - id: EM_F2
+    statement: "DC form is market-contingent: moderately dynamic markets favor routine-like DCs; high-velocity markets favor experiential-fragile DCs."
+    type: "boundary_finding"
+    source_propositions: [EM_P5, EM_P6]
+    body_location: "§Moderate vs High Velocity"
+
+# ============================================================================
+# Provenance (top-level)
+# ============================================================================
+provenance:
+  extraction_method: "paper_a:M2 retroactive spine extraction"
+  coder: "author (single-coder at v1.0.0; κ scheduled v1.1.0)"
+  source_pdf_first_page_verified: "2026-05-27 via PyPDF2"
+  spine_node_count: 7  # propositions
+  observation_count: 3
+  method_count: 1
+  finding_count: 2

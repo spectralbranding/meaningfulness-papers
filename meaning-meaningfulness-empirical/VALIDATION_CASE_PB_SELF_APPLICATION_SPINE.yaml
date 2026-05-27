@@ -1,0 +1,218 @@
+# VALIDATION_CASE_PB_SELF_APPLICATION_SPINE.yaml
+#
+# Spine re-extracted from RENDERING_PB_SUBSTACK_PRACTITIONER.md (1,615 words
+# Substack practitioner-register rendering of Paper B v1.2.0's substrate).
+# This is the Task α self-application output: the same operator (author)
+# acting as a fresh coder reading the Substack rendering as if it were a
+# source paper, applying paper_a:appendix_B_protocol in reverse, and
+# extracting the structural substrate the article encodes.
+#
+# Comparison against SPINE.yaml v0.3.1 (the source spine) is in
+# SELF_APPLICATION_ISOMORPHISM_PB.md.
+#
+# Schema: paper_a:appendix_A_schema (10 node types, 17 edge types).
+# Node-ID prefix: RPB_ (Rendering of Paper B) to distinguish from the
+# source PB_ nodes the academic paper exposes.
+
+spine_version: "0.2"
+spine_doc_version: "0.1.0"        # first extraction
+extracted_from: "RENDERING_PB_SUBSTACK_PRACTITIONER.md"
+extraction_protocol: "paper_a:appendix_B_protocol applied in reverse by single coder (author)"
+extraction_session: "Session H Phase 2 — Task α self-application"
+extraction_date: "2026-05-27"
+target_for_isomorphism: "SPINE.yaml v0.3.1 (source spine of Paper B v1.2.0)"
+
+# ============================================================================
+# Observations (raw material the rendering invokes)
+# ============================================================================
+observations:
+  - id: RPB_O1
+    statement: "Eisenhardt-Martin 2000 and Zollo-Winter 2002 are widely-read dynamic-capabilities papers that use markedly different vocabularies (best-practices-converging-to-common-forms vs deliberate-learning-mechanisms) and reach broadly convergent conclusions."
+    raw_data_pointer: "Substack article opening paragraph"
+    maps_to_source_spine: ["PB_O1", "PB_O2"]
+    map_quality: "preserved (named-case anecdote vs academic citation; same observation underneath)"
+
+  - id: RPB_O2
+    statement: "Grant 1996 and Liebeskind 1996 are both in the SMJ knowledge-based-view special issue with different framings (integration of dispersed knowledge vs protection of knowledge from imitation) reaching similar conclusions about why firms exist."
+    raw_data_pointer: "Substack article paragraph 2"
+    maps_to_source_spine: ["PB_O5", "PB_O6"]
+    map_quality: "preserved (same observation; venue + special-issue context retained)"
+
+  - id: RPB_O3
+    statement: "GitLab and Stripe maintain structured, version-controlled, publicly-published handbooks where policy changes propagate to all rendered communications."
+    raw_data_pointer: "Substack article §named-patterns paragraph"
+    maps_to_source_spine: []
+    map_quality: "ADDED in this rendering (practitioner-register-required named-case examples; consistent with PB_F4 self-application worked-instance pattern but not in source spine v0.3.1)"
+
+# ============================================================================
+# Methods
+# ============================================================================
+methods:
+  - id: RPB_M1
+    statement: "Retroactively reconstruct the structural substrate of each paper as the typed graph of claims, observations, methods, findings, and dependency edges; measure shared substrate between members of each pair."
+    type: "qualitative_coding + graph_construction"
+    inputs: ["RPB_O1", "RPB_O2"]
+    outputs: ["measurement of shared substrate per pair"]
+    maps_to_source_spine: ["PB_M1", "PB_M2"]
+    map_quality: "preserved (Rec-metric language compressed to 'shared substrate measurement' for practitioner register; mathematical formalism dropped but operation identical)"
+
+  - id: RPB_M2
+    statement: "Run two renderings of the same substrate at the same time and have a reader check whether they reach the same bottom-line conclusion; instrument AI cost on substrate operations vs human cost on rendering verification."
+    type: "operational_protocol"
+    inputs: ["organizational knowledge artifacts"]
+    outputs: ["cost ratio AI-substrate vs human-rendering", "conclusion-equivalence check across renderings"]
+    maps_to_source_spine: ["PB_M3", "PB_M4"]
+    map_quality: "preserved (β/δ calibration translated to 'cost ratio'; iterative-cohort-growth protocol translated to operational Monday-morning instrumentation; functional forms dropped but ordering claim preserved)"
+
+# ============================================================================
+# Measurements
+# ============================================================================
+measurements:
+  - id: RPB_m_pair_focal
+    statement: "Eisenhardt-Martin + Zollo-Winter pair share approximately four linked elements with dependency structure intact."
+    source_observations: ["RPB_O1"]
+    generating_method: "RPB_M1"
+    value: "4 linked elements"
+    uncertainty: "deterministic; described as 'four linked elements with their full dependency structure intact'"
+    maps_to_source_spine: ["PB_m_rec_focal"]
+    map_quality: "preserved (Rec = 4 = four linked elements; antecedent-edge preservation = dependency structure intact)"
+
+  - id: RPB_m_pair_kbv
+    statement: "Grant + Liebeskind pair share approximately four linked elements with dependency structure intact."
+    source_observations: ["RPB_O2"]
+    generating_method: "RPB_M1"
+    value: "4 linked elements"
+    uncertainty: "deterministic; described as 'same pattern' as focal pair"
+    maps_to_source_spine: ["PB_m_rec_kbv"]
+    map_quality: "preserved (same)"
+
+# ============================================================================
+# Findings
+# ============================================================================
+findings:
+  - id: RPB_F1
+    statement: "Independently-produced prose renderings of a shared underlying substrate converge on conclusions when the substrate is preserved — empirically demonstrated on two contemporary management-theory pairs."
+    type: "P4_demonstration_at_small_N (practitioner-rendered)"
+    source_measurements: ["RPB_m_pair_focal", "RPB_m_pair_kbv"]
+    generating_method: "RPB_M1"
+    statistical_strength: "two pairs across distinct theoretical sub-domains; practitioner-rendered as 'across two different theoretical sub-domains, the same pattern: substantial structural overlap underneath very different prose'"
+    conditions: ["RPB_BC_VC", "RPB_BC_PROP", "RPB_BC_AUD", "RPB_BC_VOL"]
+    maps_to_source_spine: ["PB_F1"]
+    map_quality: "preserved (central P4 claim; framework-jargon translated to 'substrate' and 'rendering'; substrate-sharing-as-evidence-for-P4 framing preserved)"
+
+  - id: RPB_F2
+    statement: "AI cost on substrate operations scales sub-linearly with substrate size; human cost on rendering verification scales super-linearly with rendering length; the joint ordering creates a measurable economic asymmetry organizations can exploit by routing AI to substrate and reserving human judgment for rendering."
+    type: "cost_asymmetry_ordering (practitioner-rendered)"
+    source_measurements: []
+    generating_method: "general framework specification"
+    statistical_strength: "framework-derived; practitioner-rendered as cost-ratio claim"
+    maps_to_source_spine: ["PB_F2"]
+    map_quality: "preserved (β<1<δ ordering translated to 'sub-linear AI cost / super-linear human cost' without invoking the exponents; secondary-supportive role preserved by being placed AFTER P4 in the article structure)"
+
+  - id: RPB_F4
+    statement: "The Substack article itself is a worked instance of the framework: same substrate as the working paper, different rendering, same conclusions expected — and the reader who walks away with a different bottom line from the academic version vs the Substack version is themselves the falsification test."
+    type: "P4_self_application (in-rendering)"
+    source_measurements: []
+    generating_method: "explicit self-reference in article §test-you-can-run-on-the-article"
+    maps_to_source_spine: ["PB_F4"]
+    map_quality: "preserved + EXTENDED — Substack rendering adds an explicit invitation for reader to act as second-coder via comment-section falsifier; source-spine PB_F4 is at the version-trajectory scale, rendering adds a per-reader scale"
+
+# ============================================================================
+# Boundary conditions (translated to operational language)
+# ============================================================================
+boundary_conditions:
+  - id: RPB_BC_VC
+    statement: "Authoring is version-controlled."
+    maps_to_source_spine: ["paper_a:C1"]
+    map_quality: "preserved (direct translation; explicit in Boundary-conditions paragraph)"
+
+  - id: RPB_BC_PROP
+    statement: "Claims are propositional (typed nodes and edges, not just narrative arcs)."
+    maps_to_source_spine: ["paper_a:C2"]
+    map_quality: "preserved (translated to 'propositional content with typed nodes and edges')"
+
+  - id: RPB_BC_AUD
+    statement: "Audience for different renderings is genuinely divergent."
+    maps_to_source_spine: ["paper_a:C3"]
+    map_quality: "preserved (translated to 'audience for different renderings is genuinely divergent')"
+
+  - id: RPB_BC_VOL
+    statement: "Artifact volume exceeds what unaided human reviewers can verify."
+    maps_to_source_spine: ["paper_a:C4"]
+    map_quality: "preserved (translated to 'artifact volume exceeds what unaided human reviewers can verify')"
+
+  - id: RPB_BC_SUB
+    statement: "Pair members are produced as separate prose renderings of an extractable substrate (Bikard-protocol-independence helpful but not required)."
+    maps_to_source_spine: ["PB_BC1"]
+    map_quality: "preserved by IMPLICIT instantiation — Substack article does not name Bikard explicitly, but the framing 'two prose versions of the same idea' is the practitioner translation of PB_BC1's substrate-extractability requirement; the Bikard-independence demotion is implicitly preserved by absence (article does not claim authors were unaware of each other's drafts)."
+
+# ============================================================================
+# Propositions (inheritance from Paper A; engagement points only)
+# ============================================================================
+propositions:
+  primary_engagement: "paper_a:P4 (rendering-equivalence under spine-preservation)"
+  secondary_engagement: "paper_a:P3 (verification-cost asymmetry β < 1 < δ)"
+  inheritance_note: "Substack rendering does not introduce new propositions; same P4 / P3 engagement as source spine. P4 is the explicit central claim of the article (substrate vs rendering distinction + Rec=4 evidence + self-application). P3 is the secondary frame for the AI-cost-asymmetry section. P2 (organizational recombination rates) is implicitly out-of-scope (article never claims to predict recombination-rate outcomes; only claims operational direction)."
+  maps_to_source_spine_propositions: ["paper_a:P3", "paper_a:P4"]
+  map_quality: "preserved with identical primary/secondary ordering"
+
+# ============================================================================
+# Recommended actions (rendering-specific addition; practitioner register)
+# ============================================================================
+recommended_actions:
+  - id: RPB_A1
+    statement: "Pick any single recurring knowledge artifact and lift the substrate out as a structured document maintained separately from any rendered version."
+    type: "operational_first_move"
+    maps_to_source_spine: ["PB_F3"]
+    map_quality: "rendered as practitioner-actionable; source PB_F3 is the operational-finding-existence node at the working-paper-release scale; the article translates it to organization-internal scale"
+
+  - id: RPB_A2
+    statement: "Run two renderings of the same substrate at the same time and check whether they reach the same bottom-line conclusion."
+    type: "operational_first_move + self-application protocol"
+    maps_to_source_spine: ["PB_F4", "PB_M4"]
+    map_quality: "rendered as Monday-morning-actionable"
+
+  - id: RPB_A3
+    statement: "Instrument the cost ratio: AI time on substrate operations vs human time on rendering verification."
+    type: "operational_first_move + β/δ measurement"
+    maps_to_source_spine: ["PB_M3", "PB_F2"]
+    map_quality: "rendered as Monday-morning-actionable instrumentation, not statistical-power claim"
+
+# ============================================================================
+# Limitations / boundary disclosure (translated to plain-English)
+# ============================================================================
+limitations:
+  - id: RPB_L1
+    statement: "Not universal. Small gain for organizations producing few long narrative documents for one homogeneous audience; substantial gain for organizations producing large volumes of structured propositional artifacts for divergent audiences."
+    maps_to_source_spine: ["PB_L4"]
+    map_quality: "preserved (cross-discipline-generalization limitation translated to organizational-form-generalization limitation)"
+
+  - id: RPB_L2
+    statement: "The specific numbers (Rec=4; β below 1; δ above 1) are not claimed to generalize; the direction of the cost asymmetry and the substrate-rendering separation are claimed to generalize."
+    maps_to_source_spine: ["PB_L1"]
+    map_quality: "preserved (N=2 small-N limitation translated to specific-numbers-don't-generalize-but-direction-does limitation)"
+
+# ============================================================================
+# Notes on rendering choices the operator made
+# ============================================================================
+rendering_choices:
+  jargon_translation:
+    spine: "structural substrate"
+    rendering: "structural substrate, structure, substrate, underlying structure"
+    notes: "kept word 'substrate' explicitly to anchor the technical concept; reader gets the meaning from context"
+  rec_metric:
+    spine: "Rec(G1, G2) = 4 linked propositions with preserved antecedents"
+    rendering: "four linked elements with their full dependency structure intact"
+    notes: "mathematical notation dropped; 'antecedent edges' translated to 'dependency structure'"
+  cost_function_exponents:
+    spine: "β < 1 < δ ordering on cost functions c_AI(S) = α·|V|^β; c_human(R) = γ·|tokens|^δ"
+    rendering: "AI cost scales sub-linearly with substrate size; human cost scales super-linearly with rendering length"
+    notes: "functional forms dropped; ordering claim preserved in plain English"
+  bikard_protocol:
+    spine: "PB_BC1 substrate-extractability required; Bikard-independence helpful but not required"
+    rendering: "two prose versions of the same idea / pair of independently-authored prose renderings"
+    notes: "Bikard not named; substrate-extractability + independence-when-present preserved implicitly"
+  self_application:
+    spine: "PB_F4 P4-self-application across Paper B version trajectory"
+    rendering: "the article itself is a worked instance + reader-as-second-coder via comment section"
+    notes: "self-application claim preserved + extended to per-reader scale; falsifier-via-reader-comments is a rendering-specific addition consistent with spine"

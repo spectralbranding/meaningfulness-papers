@@ -1,0 +1,74 @@
+spine_version: "0.2"
+extracted_from: "The structure your work has is not the prose you wrote — why the AI era separates meaning from meaningfulness"
+extracted_by: "gpt-4 (operator C; received prose only; no source spine)"
+nodes:
+  - id: "EM_P1"
+    type: proposition
+    statement: "Generative AI changes the cost structure of knowledge work, making the underlying structure of claims, observations, methods, and findings a first-class artifact alongside the prose."
+    antecedent_edges: []
+
+  - id: "EM_P2"
+    type: proposition
+    statement: "Any knowledge artifact has three layers: the log substrate, the spine, and the rendering."
+    antecedent_edges: []
+
+  - id: "EM_P3"
+    type: proposition
+    statement: "The distinction between the spine and rendering is operationally consequential, with the spine being machine-tractable and the rendering being human-tractable."
+    antecedent_edges:
+      - target: "EM_P2"
+        edge_type: extends
+
+  - id: "EM_P4"
+    type: proposition
+    statement: "The Operator role in knowledge work involves structural-substrate operations and judgment operations, with AI and humans performing different projections of these operations."
+    antecedent_edges: []
+
+  - id: "EM_P5"
+    type: proposition
+    statement: "Generative AI shifts the cost structure of knowledge work asymmetrically across the substrate/rendering boundary, making the Operator-role allocation economically dominant."
+    antecedent_edges: []
+
+  - id: "EM_P6"
+    type: proposition
+    statement: "The spine-first drafting protocol is a cost-minimizing arrangement of Operator operations at the artifact-production scale under the cost asymmetry."
+    antecedent_edges:
+      - target: "EM_P5"
+        edge_type: extends
+
+  - id: "EM_SF1"
+    type: stylized_fact
+    statement: "Generative AI hallucinates citations when given access only to rendered prose."
+    antecedent_edges: []
+
+  - id: "EM_SF2"
+    type: stylized_fact
+    statement: "Replication failures in management research are often rendering divergences over a preserved claim graph."
+    antecedent_edges: []
+
+  - id: "EM_SF3"
+    type: stylized_fact
+    statement: "Cross-language collaboration preserves meaning while losing meaningfulness."
+    antecedent_edges: []
+
+  - id: "EM_SF4"
+    type: stylized_fact
+    statement: "Scholarly artifacts exhibit conclusion-invariance across rendering media."
+    antecedent_edges: []
+
+  - id: "EM_BC1"
+    type: boundary_condition
+    statement: "The framework's predictions hold under conditions where authoring is version-controlled, claims are propositional, audience for different renderings is genuinely divergent, and artifact volume exceeds what unaided human reviewers can verify."
+    antecedent_edges: []
+
+  - id: "EM_P7"
+    type: proposition
+    statement: "In a generative-AI era, the substrate of a knowledge artifact and the rendering of that artifact are separate first-class objects, optimizable independently."
+    antecedent_edges:
+      - target: "EM_P1"
+        edge_type: extends
+      - target: "EM_P5"
+        edge_type: extends
+
+boundary_conditions: ["EM_BC1"]
+stylized_facts: ["EM_SF1", "EM_SF2", "EM_SF3", "EM_SF4"]

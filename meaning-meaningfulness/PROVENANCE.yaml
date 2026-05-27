@@ -1,0 +1,128 @@
+---
+paper_key: 2026ao
+provenance_schema_version: v0.1
+status: drafting-phase (Session D first window; pre-Zenodo)
+artifact_lineage:
+  - phase: 0
+    output: pre-draft thesis (internal; not public-mirrored)
+    completion: 2026-05-26
+  - phase: 0.5
+    output: SPINE.yaml (v0.7.3 in public mirror; schema v0.2)
+    completion: 2026-05-26
+    note: First paper drafted under spine-first protocol per CLAUDE.md item 0aa
+  - phase: 1
+    output: pre-draft bundle (internal; not public-mirrored)
+    completion: 2026-05-26
+  - phase: 1.5
+    output: 5 Grok pre-draft critical-review cycles (summaries internal; not public-mirrored)
+    completion: 2026-05-26
+    note: 5 cycles; plateau reached r4→r5; GO recommendation issued; cumulative Grok-suggestion hallucination rate ~50% documented
+  - phase: 2
+    output: Validation case extractions
+    sub_artifacts:
+      - VALIDATION_CASE_T1_HEISENBERG_SPINE.yaml
+      - VALIDATION_CASE_T1_SCHRODINGER_SPINE.yaml
+      - VALIDATION_CASE_T1_SCHRODINGER_EQUIVALENCE_NOTES.md
+      - VALIDATION_CASE_T2_KULKARNI_2024_SPINE.yaml
+      - TWIN_PAIR_SPINE_ISOMORPHISM.md
+    note: T1′ Eisenhardt-Martin + Zollo-Winter extraction deferred to Paper B 2026ap v1.0.0
+    completion: 2026-05-26 (T1 + T2)
+  - phase: 2-dr
+    output:
+      - deep-research prior-art verification log (internal; not public-mirrored)
+      - twin-pair-acquisition log (internal; not public-mirrored)
+    completion: 2026-05-26
+    note: 5-stage verification cascade caught 6 Grok-suggested hallucinated anchors across r1+r2+r3+r4+r5 (~50% rate); pre-draft discipline preserved
+  - phase: 3
+    output:
+      - paper.md (Session D first window; main body skeleton + selected full prose)
+      - appendix_A_schema.md (full prose)
+      - appendix_B_protocol.md (full prose)
+      - appendix_C_simulation.md (skeleton + key content; companion code scaffold)
+      - appendix_D_historical_existence_proof.md (full prose)
+      - paper.yaml (this paper's frontmatter)
+      - CITATION.cff
+      - CONTRIBUTORS.yaml
+      - PROVENANCE.yaml (this file)
+    completion: in progress
+    started: 2026-05-26
+    estimated_finish: 2-3 weeks (multi-session)
+  - phase: 4
+    output: Post-draft Grok review pass + author fix-pass
+    status: BLOCKED on Phase 3 paper.md full prose completion
+  - phase: 5
+    output: Zenodo upload (v1.0.0; first DOI mint); public mirror creation
+    status: BLOCKED on Phase 4
+  - phase: 6
+    output: Organization Science submission
+    status: BLOCKED on Phase 5
+
+drafting_protocol:
+  protocol_name: spine-first
+  protocol_doc: research/SPINE_FIRST_DRAFTING_PROTOCOL.md
+  schema_version: v0.2
+  applied_at_phase: 0.5 onward
+  self_application: true
+  note: "First paper drafted under the spine-first protocol; self-application is the strongest novelty contribution available and a worked T3 validation case by construction."
+
+verification_cascade_state:
+  cascade_doc: research/code/verify_citations.py
+  cascade_stages: 5 (Crossref → Semantic Scholar → arXiv → OpenAlex → OpenLibrary → Perplexity)
+  external_anchors_verified: 17 (all in SPINE.yaml v0.7.1 external_anchors)
+  fabricated_anchors_caught_pre_draft: 6 (across r1–r5 Grok review cycles; ~50% Grok-suggested-anchor catch rate)
+  negative_findings_recorded: NF1, NF2 (RESOLVED-PARTIAL v0.7.1), NF3 (RESOLVED-PARTIAL v0.7.1)
+
+session_lineage:
+  - session: A
+    output: v0.1.0 → v0.2.0 thesis + bundle + spine + Grok r1
+    date: 2026-05-26
+  - session: B
+    output: v0.3.0 + V0.4.0 — schema v0.1→v0.2, P4 added, four fabricated anchors rebased, T1 H-S extractions
+    date: 2026-05-26
+  - session: B-prime
+    output: v0.4.0 editorial — Operator generalization, F2 audit_internal demotion
+    date: 2026-05-26
+  - session: C
+    output: Grok r2 fire on v0.4.0
+    date: 2026-05-26
+  - session: C-prime
+    output: v0.5.0 (NF1/2/3 closures), v0.6.0 (PIVOT-SPLIT), v0.7.0 (schema/protocol appendix subordination + KBT anchors), v0.7.1 patch (NF2/3 partial-resolution + Pauli 1927); Grok r3/r4/r5
+    date: 2026-05-26
+  - session: D
+    output: paper.md + appendices + frontmatter (this session)
+    date: 2026-05-26
+    status: first window in progress
+
+immutability_invariants:
+  - "Spine v0.7.1 is FROZEN as Phase 3 input. Divergences between paper.md and spine resolve via FORK (extend spine to v0.7.2 first) or REBASE (drop the claim) — never silent introduction."
+  - "Pre-draft scaffold artifacts (thesis + bundle) are internal coordination drafts; the public artifact is the v1.0.0 paper.md + SPINE.yaml + appendices in this mirror."
+  - "Version v1.0.0 is held through all internal drafting + post-draft review per feedback_version_only_at_zenodo. Version increments only at Zenodo upload events."
+  - "Acknowledgments + CRediT placement at END of paper, never on first page, per reference_paper_first_page_defaults."
+  - "Target venue name does NOT appear in paper body; lives in paper.yaml only, per feedback_no_venue_names_in_paper_body."
+
+zenodo_upload:
+  paper_a_concept_doi: "10.5281/zenodo.20409683"
+  paper_a_version_doi: "10.5281/zenodo.20409684"
+  paper_b_concept_doi: "10.5281/zenodo.20409701"
+  paper_b_version_doi: "10.5281/zenodo.20409702"
+  date: "2026-05-29"
+  procedure: "SESSION_I 14-step joint upload (Paper A 2026ao + Paper B 2026ap)"
+
+reproducibility_anchors:
+  - companion_code_repo: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness/code"
+  - random_seeds: "42 (fixed at file top of every computation script)"
+  - cost_simulation_script: "cost_asymmetry_simulation.py (scaffold; full implementation in Phase 5 mirror creation)"
+  - spine_artifact: "SPINE.yaml v0.7.1 (machine-readable companion publishable as Zenodo dataset)"
+
+editorial_discipline_anchors:
+  - rule: "no fabricated DOIs (feedback_no_fabricated_dois)"
+    enforcement: "5-stage verification cascade pre-draft; Crossref-verified anchors only"
+  - rule: "audit_internal F2/L3/NF2/NF3 (feedback_audit_record_discipline_in_public_papers)"
+    enforcement: "self-referential AI-tool incidents kept internal; public SF1 evidence cites generic RAG-hallucination literature"
+  - rule: "no 'load-bearing' in public copy (feedback_no_load_bearing_word)"
+    enforcement: "QC pass greps for 'load-bearing'; substitutes critical / central / essential / anchor"
+  - rule: "no venue names in body (feedback_no_venue_names_in_paper_body)"
+    enforcement: "venue lives in paper.yaml only"
+  - rule: "default AI disclosure format (feedback_default_ai_disclosure)"
+    enforcement: "Acknowledgments uses verbatim default text"
+---

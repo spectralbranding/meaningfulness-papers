@@ -1,0 +1,1021 @@
+# VALIDATION_CASE_T1_HEISENBERG_SPINE.yaml
+#
+# Retroactive spine extraction of the HEISENBERG PATH of the 1925-1926
+# twin-pair natural experiment (matrix mechanics formulation of quantum
+# mechanics). This is the T1 validation case for the meaningfulness paper
+# (2026ao); the parallel SCHRODINGER PATH extraction lives in
+# VALIDATION_CASE_T1_SCHRODINGER_SPINE.yaml (companion file).
+#
+# What this file IS: the spine of the matrix-mechanics formulation as it
+# was argued in 1925-1926, in the vocabulary the original papers used.
+# What this file IS NOT: a modern textbook reformulation; not a validation
+# of Heisenberg/Born/Jordan against modern QM; not a translation of their
+# claims into Hilbert-space language.
+#
+# The point of the twin-pair extraction is to show — by structural
+# comparison of two independently-built spines — that the meaning graph
+# converges across two radically different mathematical formalisms whose
+# rendering vocabularies share almost no surface tokens. That convergence
+# is the load-bearing existence-proof for P4 (rendering-equivalence
+# under spine-preservation) of the meaningfulness paper.
+#
+# Sources extracted from:
+#   Heisenberg 1925 "Über quantentheoretische Umdeutung kinematischer
+#     und mechanischer Beziehungen" Zeit. Phys. 33, 879-893 (Delphenich
+#     translation; research/references/heisenberg_1925_english_delphenich.pdf)
+#   Born-Jordan 1925 "Zur Quantenmechanik" Zeit. Phys. 34, 858-888
+#     (Delphenich translation;
+#      research/references/born_jordan_1925_english_neoclassical.pdf)
+#   Born-Heisenberg-Jordan 1926 "Zur Quantenmechanik II" (Three-Men paper)
+#     engaged indirectly via citations in Born-Jordan 1925 §3 footnote
+#     and standard physics-history secondary literature (van der Waerden
+#     1968 "Sources of Quantum Mechanics" compilation cited as canonical
+#     anchor; not extracted directly).
+
+spine_version: "0.2"
+spine_doc_version: "0.1.0"
+case_key: "T1-HEISENBERG-PATH"
+paper_key_of_parent: "2026ao"
+status: "Phase 0.5 — initial extraction; coder = AI single-pass; awaiting inter-coder reliability check per AA2 of parent spine"
+
+title: >-
+  The Heisenberg-Born-Jordan matrix-mechanics formulation of quantum
+  mechanics (1925-1926): spine extraction
+
+thesis_of_the_path: |
+  Mechanics in the atomic regime is to be rebuilt as an algebra of
+  arrays (later: matrices) of complex transition amplitudes indexed by
+  pairs of stationary states. The arrays are required by construction
+  to involve only observable quantities — spectral frequencies and
+  intensities — and to obey the Ritz combination principle as their
+  composition law. Position and momentum, so reconceived, no longer
+  commute; their commutator is the fixed quantity h/(2πi). Mechanical
+  equations of motion are imposed in their classical form but applied
+  to the arrays; energy is the diagonalised Hamiltonian; transition
+  frequencies are differences of its diagonal entries (Bohr's
+  frequency condition recovered as a theorem, not a postulate). The
+  hydrogen spectrum, the anharmonic-oscillator energy levels, and
+  multiplet/Zeeman intensities are reproduced as eigenvalues and
+  squared array entries of the new formalism.
+
+# ============================================================================
+# Boundary conditions of the path (what the formulation assumes about its
+# domain of applicability — these are NOT relaxable within the path itself)
+# ============================================================================
+boundary_conditions:
+  - id: HC1
+    statement: "System is restricted, initially, to one degree of freedom; periodic (in the classical limit) motion."
+    observable: "Single-coordinate Hamiltonian; classical orbit closes."
+    excludes: "Aperiodic atomic motions (e.g., ionised hydrogen continuum); multi-electron atoms (left to a later treatment); relativistic dynamics."
+    source_pdf_section: "Heisenberg 1925 §1 (¶ ending 'restrict ourselves to problems of one degree of freedom'); Born-Jordan 1925 Introduction"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "research/references/heisenberg_1925_english_delphenich.pdf §1 p.2"
+
+  - id: HC2
+    statement: "Theory traffics only in quantities observable in principle (spectral frequencies, transition intensities); unobservable kinematic quantities (electron position, orbital period) are excluded as inputs to the formalism."
+    observable: "Every defined quantity in the array calculus maps to a measurable spectroscopic line or intensity."
+    excludes: "Bohr-Sommerfeld trajectory pictures; visualisable electron orbits."
+    source_pdf_section: "Heisenberg 1925 §0 opening abstract sentence + §1 ¶1-3"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "research/references/heisenberg_1925_english_delphenich.pdf p.1 abstract"
+
+  - id: HC3
+    statement: "The correspondence principle holds: in the large-quantum-number limit, the new quantum-theoretical quantities go over asymptotically into their classical Fourier-series analogues."
+    observable: "Heisenberg eq. (21) — amplitudes a(n,n-τ) → classical amplitude τ-th Fourier coefficient as n → ∞."
+    excludes: "A formulation that fails to reduce to classical mechanics in the high-n limit."
+    source_pdf_section: "Heisenberg 1925 §3 ¶ after eq. (21)"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "research/references/heisenberg_1925_english_delphenich.pdf p.11 after eq. (21)"
+
+# ============================================================================
+# Observations: empirical inputs the matrix-mechanics formulation took as data
+# ============================================================================
+observations:
+  - id: H_O1
+    statement: "Atomic spectroscopic lines (hydrogen Balmer series; helium series; alkali doublets) appear at frequencies ν(n,m) labelled by pairs of stationary states n, m."
+    raw_data_pointer: "Standard pre-1925 spectroscopic tables; cited via Bohr/Sommerfeld lineage in Heisenberg 1925 §0"
+    instrument: "Atomic spectrographs (1885-1925 generation)"
+    timestamp: "1885 (Balmer) — 1925"
+    conditions_at_capture: "Discharge tubes; spectrograph plates"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §0 ¶2 (citing 'hydrogen atom and the Stark effect ... obey those formal rules')"
+
+  - id: H_O2
+    statement: "Ritz combination principle: spectral frequencies of any atom satisfy ν(n,k) + ν(k,m) = ν(n,m); equivalently, every observed line is a difference of two terms drawn from a discrete term spectrum."
+    raw_data_pointer: "Ritz 1908 (cited via Bohr correspondence-principle literature)"
+    instrument: "Cumulative pre-1925 atomic spectroscopy"
+    timestamp: "1908"
+    conditions_at_capture: "Empirical regularity, theory-free"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §1 ¶ introducing 'combining relations of the frequencies' (p.3)"
+
+  - id: H_O3
+    statement: "Anharmonic-oscillator-like molecular vibrational spectra (band spectra) display intensity and frequency patterns inconsistent with strict harmonic-oscillator predictions and with classical perturbation analysis at observed magnitudes."
+    raw_data_pointer: "Cited via Kratzer 1922 (Heisenberg 1925 §3 footnote 3)"
+    instrument: "Molecular vibrational/rotational spectrographs"
+    timestamp: "ca. 1922"
+    conditions_at_capture: "Band-spectra observation in molecules"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §3 footnote 3 (citing Kratzer; supporting formulas (28)-(29))"
+
+  - id: H_O4
+    statement: "Zeeman-effect multiplet intensities and Goudsmit-Kronig-Hönl sum rules for atomic multiplet line intensities are measured at fixed numerical ratios."
+    raw_data_pointer: "Goudsmit-Kronig 1925; Sommerfeld-Hönl 1925; Russell 1925 (Heisenberg 1925 §3 footnotes 1-3)"
+    instrument: "Magnetic-field spectroscopy"
+    timestamp: "1925"
+    conditions_at_capture: "Atomic-rotator emission in external magnetic field"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §3 closing paragraphs on the rotator (p.13-15)"
+
+  - id: H_O5
+    statement: "Kramers-Heisenberg dispersion formula (1925) successfully relates atomic-dispersion measurements to sums of squared amplitudes weighted by frequency differences."
+    raw_data_pointer: "Kramers 1924 Nature 113, 673; Kramers-Heisenberg 1925 Zeit. Phys. 31, 681; Thomas 1925; Kuhn 1925"
+    instrument: "Atomic-dispersion measurements + Kramers-Heisenberg derivation"
+    timestamp: "1924-1925"
+    conditions_at_capture: "Atomic dispersion of light at frequencies far from resonance"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §1 footnote 1; §2 around eq. (16) (p.8)"
+
+# ============================================================================
+# Methods: the methodological apparatus of the formulation
+# ============================================================================
+methods:
+  - id: H_M1
+    statement: "Reinterpret each classical Fourier amplitude a_τ(n) of a periodic motion as a two-index array a(n, n-τ) labelled by pairs of stationary states; phase factors e^{iω(n)t} become e^{iω(n,n-τ)t}."
+    type: "formal_reformulation"
+    inputs: [H_O1, H_O2]
+    outputs: ["The kinematic array a(n,m) for position x(t); the combination law (eqs. 7-8)"]
+    code_anchor: "n/a (analytic prescription)"
+    reproducibility:
+      seed: "deterministic prescription"
+      version: "Heisenberg 1925 §1"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §1 around eqs. (1)-(8) (p.3-5)"
+
+  - id: H_M2
+    statement: "Define multiplication of two such arrays by the 'natural' rule c(n, n-β) = Σ_κ a(n, n-κ) b(n-κ, n-β); this is the unique law forced by combining frequency-conservation under the Ritz principle. (In Heisenberg's text the operation is given by the explicit sum; Born subsequently identifies it as matrix multiplication.)"
+    type: "algebraic_definition"
+    inputs: [H_O2, H_M1]
+    outputs: ["The non-commutative algebra of kinematic arrays (Heisenberg 1925 eq. 7); explicit matrix multiplication law (Born-Jordan 1925 Ch. I eq. 3)"]
+    reproducibility:
+      seed: "deterministic"
+      version: "Heisenberg 1925 §1; formalised Born-Jordan 1925 Ch. I"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §1 eq. (7)-(8) (p.5); Born-Jordan 1925 Ch. I §1 eq. (3) (p.3)"
+
+  - id: H_M3
+    statement: "Impose the classical equation of motion ẍ + f(x) = 0 array-by-array on the new kinematic variables — i.e., demand that the same functional form of the equation of motion holds when x is replaced by the array."
+    type: "formal_postulation"
+    inputs: [H_M1, H_M2]
+    outputs: ["Recursion relations for the array entries (Heisenberg 1925 eqs. 18-19)"]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §2 eqs. (11), (17)-(19) (p.6, p.10)"
+
+  - id: H_M4
+    statement: "Replace the Bohr-Sommerfeld phase-integral quantisation ∮ p dq = nh with the Thomas-Kuhn sum-rule analogue: a sum over squared array entries weighted by transition frequencies equals h (Heisenberg 1925 eq. 16); the Born-Jordan refinement (1925 eq. 37-38) sharpens this to the matrix commutator pq - qp = (h/2πi)·1."
+    type: "quantum_condition"
+    inputs: [H_O5, H_M2, H_M3]
+    outputs: ["Heisenberg 1925 eq. (16) sum rule; Born-Jordan 1925 eq. (38) sharpened canonical commutator"]
+    code_anchor: "n/a"
+    reproducibility:
+      version: "Heisenberg 1925 §2; Born-Jordan 1925 Ch. II §3"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §2 eq. (16) (p.8); Born-Jordan 1925 eq. (37)-(38) (p.13-14)"
+
+  - id: H_M5
+    statement: "Diagonal entries of the Hamiltonian array H(n,n) are interpreted as the energies of the stationary states; transition frequencies are derived from differences of those diagonal entries via hν(n,m) = H(n,n) - H(m,m). The Bohr frequency condition becomes a theorem rather than a postulate."
+    type: "interpretive_postulate"
+    inputs: [H_M3, H_M4]
+    outputs: ["Energy spectrum as diagonal of H; Bohr frequency condition derived as eq. (28) of Born-Jordan 1925"]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 Ch. II §4 eq. (28), (44) and surrounding text (p.13-15)"
+
+  - id: H_M6
+    statement: "Variational principle: equations of motion derived by extremising the diagonal sum D(L) = D(pq̇ - H(p,q)) under variation of the array entries of p and q; this delivers the canonical Hamiltonian equations of motion (Born-Jordan 1925 eqs. 34-35)."
+    type: "variational_principle"
+    inputs: [H_M2, H_M3]
+    outputs: ["Canonical equations of motion q̇ = ∂H/∂p, ṗ = -∂H/∂q for arrays (Born-Jordan eq. 35)"]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 Ch. II §3 eqs. (33)-(35) (p.11-12)"
+
+# ============================================================================
+# Measurements: derived quantities computed via the methods on the inputs
+# ============================================================================
+measurements:
+  - id: H_m1
+    statement: "Anharmonic-oscillator energy spectrum to second order in λ (Heisenberg 1925 eq. 27): W = (n+½)ħω₀ + (3λ²(n²+n+½)ħ²)/(8·4·ω₀²m) + O(λ⁴)."
+    source_observations: [H_O3]
+    generating_method: H_M3
+    value: "W = (n+½)ħω₀ + correction series in λ"
+    uncertainty: "Truncation at λ² (Heisenberg states he 'cannot generally prove' that higher periodic terms vanish but verified for terms computed)."
+    units: "energy"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §3 eq. (27) (p.12)"
+
+  - id: H_m2
+    statement: "Amplitudes (transition matrix entries) for the harmonic oscillator: a(n,n-1) = φ·√(n!/(n-τ)!) (Heisenberg 1925 eq. 21); for the rotator, ν(n,n-1) = hn/(2π·m·a²) (eq. 28) and W = (h²/(8π²ma²))(n² - ¼) (eq. 29)."
+    source_observations: [H_O1, H_O3, H_O4]
+    generating_method: H_M3
+    value: "Closed-form amplitudes and energy levels"
+    uncertainty: "First-approximation expressions; agree with Kratzer band-spectra and with Goudsmit-Kronig-Hönl multiplet intensities."
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §3 eqs. (21), (28), (29) (p.11, 13)"
+
+  - id: H_m3
+    statement: "Canonical commutator value: pq - qp = (h/2πi)·1 (Born-Jordan 1925 eq. 38, the 'sharpened quantum condition')."
+    source_observations: [H_O5]
+    generating_method: H_M4
+    value: "h/2πi (equivalently iħ with modern sign convention)"
+    uncertainty: "Exact identity; proved by combining Thomas-Kuhn sum rule with the equations of motion."
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 Ch. II §3 eqs. (37)-(38) (p.13-14)"
+
+  - id: H_m4
+    statement: "Transition intensities for the rotator-in-magnetic-field model: b(n,n-1; m,m-1) = α·√((n-m-1)(n-m)/(4(n-½)n)); b(n,n-1;m-1,m) = α·√((n+m)(n+m-1)/(4(n-½)n)); a(n,n-1;m,m) = α·√((n-m-1)(n+m)/((n-½)n)) (Heisenberg 1925 eqs. at p.15)."
+    source_observations: [H_O4]
+    generating_method: H_M2
+    value: "Closed-form square-root expressions in (n,m)"
+    uncertainty: "Heisenberg notes uniqueness is not strictly established — only that these are 'the simplest solution' of the array equations (30)-(32); broader-class solutions left open."
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 closing paragraph + eqs. (30)-(32) (p.14-15)"
+
+# ============================================================================
+# Findings: claims the papers make about WHAT IS THE CASE
+# ============================================================================
+findings:
+  - id: H_F1
+    statement: >-
+      The two-index array a(n,n-τ) of complex transition amplitudes,
+      multiplied by the rule a(n,n-β) = Σ_κ a(n,n-κ)·b(n-κ,n-β), reproduces
+      the classical multiplication law in the high-quantum-number limit
+      while remaining non-commutative for finite n.
+    type: "structural_finding"
+    source_measurements: [H_m2]
+    generating_method: H_M2
+    statistical_strength: "Analytic identity; not statistical."
+    conditions: "HC1 + HC3"
+    antecedents: [H_O1, H_O2, H_M1, H_M2]
+    falsifier: "If two arrays of the prescribed shape that obey the Ritz combination law admit a commutative product preserving the same frequency-difference structure, H_F1 is wrong. (None has been exhibited.)"
+    citation_role_in_path: "kinematic_foundation"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §1 eqs. (7)-(8) (p.5); 'this difficulty will not arise' phrase regarding xy vs yx (p.6)"
+
+  - id: H_F2
+    statement: >-
+      Imposing the classical equation of motion ẍ + ω₀²x + λx² = 0 (or
+      ẍ + ω₀²x + λx³ = 0) on the array x, together with the quantum
+      condition (Heisenberg eq. 16 / Born-Jordan eq. 38), yields a finite
+      recursion that determines all array entries uniquely up to a
+      normalisation fixed by the ground-state condition a(n₀, n₀-τ) = 0
+      for all τ > 0.
+    type: "derivational_finding"
+    source_measurements: [H_m1, H_m2]
+    generating_method: H_M3
+    statistical_strength: "Analytic identity for first-approximation calculation; Heisenberg notes higher-order terms verified case-by-case (p.12)."
+    conditions: "HC1; ground-state existence"
+    antecedents: [H_M3, H_M4]
+    falsifier: "If the recursion under-determines or over-determines the array entries for some anharmonic oscillator, H_F2 fails."
+    citation_role_in_path: "constructive_existence_proof"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §3 eqs. (17)-(23) (p.9-11)"
+
+  - id: H_F3
+    statement: >-
+      For the harmonic oscillator the energy is W = (n+½)ħω₀ rather than
+      the classical W = nħω₀ — i.e., the new formalism predicts a
+      zero-point energy ħω₀/2 absent from the Bohr-Sommerfeld picture.
+    type: "empirical_finding"
+    source_measurements: [H_m1]
+    generating_method: H_M3
+    statistical_strength: "Analytic, exact in first approximation."
+    conditions: "HC1"
+    antecedents: [H_M3, H_M4]
+    falsifier: "If careful low-temperature molecular-vibrational measurements show zero residual energy in the vibrational ground state, H_F3 is wrong."
+    citation_role_in_path: "novel_empirical_prediction"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §3 around eq. (23) (p.11): 'In this picture, the energy cannot be represented by classical mechanics ... but it will have the form (23).'"
+
+  - id: H_F4
+    statement: >-
+      The matrix commutator pq - qp = (h/2πi)·1 is exact (Born-Jordan
+      1925 eq. 38, the 'sharpened quantum condition'); it follows from
+      the Thomas-Kuhn sum rule plus the Hamiltonian equations of motion
+      and the requirement that the off-diagonal entries of pq - qp
+      vanish under the imposed dynamics.
+    type: "structural_finding"
+    source_measurements: [H_m3]
+    generating_method: H_M4
+    statistical_strength: "Exact analytic identity."
+    conditions: "HC1, HC2"
+    antecedents: [H_M4, H_M6]
+    falsifier: "If any consistent realisation of the array calculus yields a different scalar for the canonical commutator, H_F4 fails."
+    citation_role_in_path: "central_algebraic_law"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 Ch. II §3 eqs. (37)-(38) and surrounding derivation (p.13-14)"
+
+  - id: H_F5
+    statement: >-
+      The law of energy conservation Ḣ = 0 and Bohr's frequency condition
+      hν(n,m) = H(n,n) - H(m,m) follow as theorems from the matrix
+      equations of motion plus the sharpened quantum condition; they are
+      no longer independent postulates.
+    type: "derivational_finding"
+    source_measurements: []
+    generating_method: H_M6
+    statistical_strength: "Analytic proof."
+    conditions: "HC1 + Hamiltonian of form H = p²/2m + U(q) or any analytic H(p,q) admitting the symmetrisation H* of Born-Jordan §4."
+    antecedents: [H_M4, H_M5, H_M6]
+    falsifier: "If a counter-example Hamiltonian generating non-diagonal H̄ under the same construction were exhibited, H_F5 fails."
+    citation_role_in_path: "unification_result"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 Ch. II §4 eqs. (40)-(44) (p.14-15)"
+
+  - id: H_F6
+    statement: >-
+      The Goudsmit-Kronig-Hönl multiplet intensity formulas and the
+      Ornstein-Burger sum rule (eq. 30 of Heisenberg 1925) emerge from the
+      kinematic array equation x² + y² + z² = a² applied to the
+      rotator-in-magnetic-field model.
+    type: "empirical_finding"
+    source_measurements: [H_m4]
+    generating_method: H_M2
+    statistical_strength: "Closed-form match between calculated array entries and pre-existing semi-empirical formulas."
+    conditions: "Rigid-rotator approximation; external field treated as slow precession."
+    antecedents: [H_O4, H_M2]
+    falsifier: "If observed Zeeman-multiplet intensity ratios deviate from the GKH formulas reproduced here, H_F6 fails."
+    citation_role_in_path: "external_corroboration"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §3 closing pages, eqs. (30)-(33) and surrounding (p.14-15)"
+
+# ============================================================================
+# Propositions: theoretical claims (H-prefixed to distinguish from parent P1-P4)
+# ============================================================================
+propositions:
+  - id: H1
+    statement: >-
+      Kinematic and mechanical relationships in the atomic regime must
+      be reinterpreted so that the formalism's primitive quantities are
+      themselves observable, in principle; the position and orbital
+      period of an electron, having no observable status, are no longer
+      eligible inputs to the theory.
+    type: "ontological"
+    conditions: "HC2"
+    antecedents: []
+    falsifier: "If a theory built on unobservable kinematic quantities (e.g., electron trajectories) accurately reproduces all atomic spectroscopy in its full domain — including the 'crossed fields' problem where Bohr-Sommerfeld is known to fail — H1's foundational claim is wrong."
+    evidence:
+      - type: empirical
+        anchor: "Bohr-Sommerfeld success on hydrogen + failure on crossed fields and multi-electron atoms"
+        citation_keys: []
+        citation_role: "motivating_problem"
+    ruled_out_rivals: [H_A1]
+    body_sections: ["Heisenberg 1925 §0 abstract; §1 ¶1-2"]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 abstract sentence: 'In this paper, we will attempt to achieve a quantum-theoretical mechanics that is based exclusively upon relationships between quantities that are observable, in principle.'"
+
+  - id: H2
+    statement: >-
+      The natural representative of a kinematic variable in the new
+      mechanics is a two-index array of complex amplitudes a(n, n-τ)
+      with associated phase factor e^{iω(n,n-τ)t}, where (n, n-τ)
+      indexes a pair of stationary states and ω(n,n-τ) is the observed
+      transition frequency between them.
+    type: "ontological"
+    conditions: "HC1, HC2"
+    antecedents: [H1]
+    falsifier: "If single-index Fourier-coefficient representations a_τ(n) suffice to encode all observable atomic spectra under any consistent dynamical postulate, H2 is over-built."
+    evidence:
+      - type: analytic
+        anchor: "Heisenberg 1925 §1: classical x(t) → array a(n,n-τ)·e^{iω(n,n-τ)t}"
+        citation_role: "definitional_source"
+    ruled_out_rivals: []
+    body_sections: ["Heisenberg 1925 §1 eqs. (1)-(2)"]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §1 eqs. (1)-(2) (p.3)"
+
+  - id: H3
+    statement: >-
+      The multiplication law of these arrays is non-commutative:
+      a(n,m)·b(m,k) ≠ b(n,m)·a(m,k) in general. Position and momentum,
+      as arrays, do not commute.
+    type: "ontological"
+    conditions: "HC1, HC2"
+    antecedents: [H2]
+    falsifier: "If the Ritz combination principle is compatible with a commutative algebra of observable arrays, H3 is unforced."
+    evidence:
+      - type: analytic
+        anchor: "Heisenberg 1925 §1: 'whereas classically x(t) y(t) is always equal to y(t) x(t), this does not need to be the case in quantum theory, in general'; formalised Born-Jordan 1925 Ch. I §1: 'the commutative law of multiplication is not true'"
+        citation_role: "definitional_source"
+    ruled_out_rivals: [H_A1]
+    body_sections: ["Heisenberg 1925 §1 paragraph after eq. C(n,τ); Born-Jordan 1925 Ch. I §1 eq. (3) and surrounding text"]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §1 p.6; Born-Jordan 1925 Ch. I §1 p.3"
+
+  - id: H4
+    statement: >-
+      Position and momentum arrays satisfy the canonical commutation
+      relation pq - qp = (h/2πi)·1 (the 'sharpened quantum condition').
+    type: "ontological"
+    conditions: "HC1, HC2"
+    antecedents: [H3, H6]
+    assumptions: [H_AA1, H_AA2]
+    falsifier: "Any consistent realisation of the array calculus reproducing atomic spectra in which the commutator equals some other scalar (or a non-scalar operator) refutes H4."
+    evidence:
+      - type: analytic
+        anchor: "Born-Jordan 1925 §3 derivation of eq. (38) from Thomas-Kuhn sum rule + Hamiltonian equations of motion"
+        citation_keys: []
+        citation_role: "definitional_source"
+    ruled_out_rivals: [H_A2]
+    body_sections: ["Born-Jordan 1925 Ch. II §3 eqs. (37)-(38)"]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 §3 eq. (38) (p.14)"
+
+  - id: H5
+    statement: >-
+      The energies of the stationary states are the diagonal entries
+      H(n,n) of the Hamiltonian array; equivalently, the Hamiltonian is
+      diagonal in the stationary-state basis under the dynamics induced
+      by the array equations of motion.
+    type: "ontological"
+    conditions: "HC1; Hamiltonian admitting a Hermitian array representative"
+    antecedents: [H2, H6]
+    falsifier: "Existence of a stationary-state representation under which H is non-diagonal and the equations of motion still hold falsifies H5."
+    evidence:
+      - type: analytic
+        anchor: "Born-Jordan 1925 §4 derivation of Ḣ = 0 (eq. 44) and the interpretation of diagonal H(nn) as state energies"
+        citation_role: "definitional_source"
+    ruled_out_rivals: []
+    body_sections: ["Born-Jordan 1925 Ch. II §4 around eq. (28), (44)"]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 §4 (p.13-15)"
+
+  - id: H6
+    statement: >-
+      The classical canonical equations of motion q̇ = ∂H/∂p, ṗ = -∂H/∂q
+      are imposed unchanged in form on the position- and momentum-arrays,
+      with the symbolic differentiation of matrix functions defined per
+      Born-Jordan 1925 §2.
+    type: "ontological"
+    conditions: "HC1; H expressible as a polynomial or analytic function of p, q"
+    antecedents: [H2, H3]
+    falsifier: "If atomic spectra require a different dynamical equation in the array calculus (e.g., a non-Hamiltonian dissipative term) to match observation, H6 fails."
+    evidence:
+      - type: analytic
+        anchor: "Heisenberg 1925 §2 (eq. 11) — equation of motion imposed in classical form; Born-Jordan 1925 §3 (eq. 32, 35) — variational derivation"
+        citation_role: "definitional_source"
+    ruled_out_rivals: []
+    body_sections: ["Heisenberg 1925 §2; Born-Jordan 1925 Ch. II §3"]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §2 eq. (11) (p.6); Born-Jordan 1925 §3 eqs. (32), (35) (p.11-12)"
+
+  - id: H7
+    statement: >-
+      The Bohr frequency condition is a theorem of the new mechanics:
+      hν(n,m) = H(n,n) - H(m,m) follows from H5 + H6 + H4, rather than
+      being an independent postulate.
+    type: "ontological"
+    conditions: "HC1, HC2 + H5, H6, H4"
+    antecedents: [H4, H5, H6]
+    falsifier: "Independent of the new mechanics' algebraic structure, Bohr's condition has direct empirical content; refuting it spectroscopically would refute the embedding theory as well."
+    evidence:
+      - type: analytic
+        anchor: "Born-Jordan 1925 §4 derivation hν(nm) = H(nn) - H(mm) on p.15 after eq. (41)-(44)"
+        citation_role: "definitional_source"
+    ruled_out_rivals: []
+    body_sections: ["Born-Jordan 1925 Ch. II §4 (p.14-15)"]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 §4 (p.14-15)"
+
+# ============================================================================
+# Derivations: reasoning bridges
+# ============================================================================
+derivations:
+  - id: H_D1
+    statement: >-
+      Bridge from Ritz combination principle (H_O2) + reinterpretation
+      ansatz (H1, H2) to the non-commutative multiplication rule (H3).
+      The 'natural' choice c(n,n-β) = Σ_κ a(n,n-κ)b(n-κ,n-β) is the
+      unique law that preserves frequency-combination ν(n,n-κ)+
+      ν(n-κ,n-β) = ν(n,n-β); commutativity is broken because index
+      conjugation is asymmetric.
+    from: [H1, H2, H_O2]
+    to: H3
+    reasoning_type: "deductive"
+    formal_proof_anchor: "Heisenberg 1925 §1 eqs. (7)-(8) and surrounding text (p.5)"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §1 (p.5)"
+
+  - id: H_D2
+    statement: >-
+      Bridge from Thomas-Kuhn dispersion sum rule (H_O5) + array
+      equations of motion (H6) to the sharpened canonical commutator
+      (H4). Born-Jordan §3 shows that pq - qp must be a diagonal matrix
+      (off-diagonal entries forced to zero by the equations of motion)
+      and its diagonal entries are fixed by the sum rule to be the
+      scalar h/2πi.
+    from: [H_O5, H6]
+    to: H4
+    reasoning_type: "deductive"
+    formal_proof_anchor: "Born-Jordan 1925 Ch. II §3 around eq. (37)-(38) (p.13-14)"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 §3 (p.13-14)"
+
+  - id: H_D3
+    statement: >-
+      Bridge from canonical commutator (H4) + array equations of motion
+      (H6) to the law of energy conservation Ḣ = 0 (H_F5) and Bohr's
+      frequency condition (H7). The proof proceeds by computing ḋ for
+      d = pq - qp; the variational identity and the symbolic
+      differentiation rules of Born-Jordan §2 force d to be diagonal,
+      Ḣ = 0, and hν(nm) = H(nn) - H(mm).
+    from: [H4, H6]
+    to: H7
+    reasoning_type: "deductive"
+    formal_proof_anchor: "Born-Jordan 1925 Ch. II §4 eqs. (40)-(44) (p.14-15)"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 §4 (p.14-15)"
+
+  - id: H_D4
+    statement: >-
+      Bridge from anharmonic equation of motion ẍ + ω₀²x + λx² = 0 + array
+      recursion (H_M3) + ground-state condition a(n₀, n₀-τ) = 0 to the
+      closed-form amplitudes (eq. 21) and the energy spectrum eq. (23):
+      W = (n+½)ħω₀. Heisenberg first solves the harmonic case then
+      perturbs in λ; the half-integer shift in n+½ emerges directly from
+      the boundary condition n₀ = 0.
+    from: [H_M3, H_M4]
+    to: H_F2
+    reasoning_type: "deductive"
+    formal_proof_anchor: "Heisenberg 1925 §3 eqs. (17)-(23), (27) (p.9-12)"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §3 (p.9-12)"
+
+# ============================================================================
+# Alternative explanations: rivals ruled out by the formulation
+# ============================================================================
+alternative_explanations:
+  - id: H_A1
+    statement: >-
+      Bohr-Sommerfeld old quantum theory: classical electron orbits
+      with phase-integral quantisation ∮p dq = nh, supplemented by
+      ad hoc selection rules for transitions. The atomic kinematics
+      remain classical (visualisable orbits with well-defined position
+      and period); quantisation is imposed externally on classically
+      allowed motions.
+    rules_out_required: [H_F2, H_F3, H_F6]
+    ruled_out_by: [H_F2, H_F3, H_F4, H_F6]
+    rules_out_status: "rejected"
+    reasoning: >-
+      Heisenberg 1925 §0: '... fundamental difficulties will appear
+      already in the problem of "crossed fields" ... namely, that the
+      reaction of the atom to periodically-varying fields certainly
+      cannot be described by the stated rules and that ultimately an
+      extension of the quantum rules to the treatment of the atom and
+      many atoms has proven to be impossible.' Furthermore, H_F3
+      (zero-point energy ħω₀/2) is a quantitative prediction that the
+      Bohr-Sommerfeld picture does not supply, and H_F4 (the commutator
+      having a definite scalar value) has no analogue in the old theory.
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §0 ¶2-3 (p.1); Born-Jordan 1925 Introduction (p.1)"
+
+  - id: H_A2
+    statement: >-
+      Classical mechanics applied straightforwardly to atomic systems
+      (the limit λ → 0 or h → 0 of the new theory, without imposing the
+      quantum condition).
+    rules_out_required: [H_O1, H_O3]
+    ruled_out_by: [H_O1, H_O3, H_F3]
+    rules_out_status: "rejected"
+    reasoning: >-
+      Classical mechanics predicts continuous radiation spectra rather
+      than discrete spectral lines (H_O1); does not produce the
+      observed band-spectrum patterns of Kratzer 1922 (H_O3); does not
+      produce the zero-point energy (H_F3) which Heisenberg notes is
+      necessary even at the harmonic-oscillator level.
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §0 ¶3 (p.1); §3 around eq. (23) (p.11)"
+
+# ============================================================================
+# Assumption atoms
+# ============================================================================
+assumption_atoms:
+  - id: H_AA1
+    statement: >-
+      Among the possible solutions of the array equations of motion +
+      quantum condition, the physically realised one is the simplest /
+      lowest-rank — explicitly stated as an open question by Heisenberg
+      at the end of §3.
+    type: "solution_selection"
+    relaxable: true
+    relaxation_consequence: >-
+      Multiple solutions of (30)-(32) consistent with the boundary
+      conditions exist; Heisenberg verifies match only for 'the simplest
+      solution.' If a non-simplest solution is physically realised in
+      some atomic system, H4-H7 may need restriction.
+    affects: [H4, H_F6, H_m4]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §3 closing paragraph (p.15): 'these expressions ... only one solution ... not simply accept ... only solution of (30), (31), (32)'"
+
+  - id: H_AA2
+    statement: >-
+      The Hamiltonian function admits an analytic representation
+      H(p,q) as a sum of finite/infinite products of powers of p and q;
+      Born-Jordan extend this to Hermitian-symmetric H* = ½(p²q + qp²)
+      orderings.
+    type: "form_of_H"
+    relaxable: true
+    relaxation_consequence: >-
+      For non-analytic Hamiltonians (singular potentials, e.g., the
+      Coulomb potential at r = 0) the symbolic-differentiation machinery
+      of Born-Jordan §2 does not apply directly; multi-electron and
+      relativistic extensions are explicitly left to subsequent work.
+    affects: [H6, H_F5]
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 Ch. I §1 (definition of polynomial matrix functions p.4); §4 closing paragraph 'H* = ½(p²q + qp²)' (p.15)"
+
+# ============================================================================
+# Limitations the papers explicitly acknowledge
+# ============================================================================
+limitations:
+  - id: H_L1
+    statement: >-
+      The mathematical implementation of the program can be carried out
+      'only in the simplest cases, for now' — explicitly: hydrogen-like
+      atoms and the harmonic/anharmonic oscillator. Many-electron atoms
+      and atoms in 'crossed fields' beyond perturbative order are not
+      treated.
+    affects: [H_F2, H_F5, H_F6]
+    severity: "high"
+    mitigation: "Deferred to subsequent work; Born-Jordan 1925 Introduction promises generalisation to many degrees of freedom and to electromagnetic-field interaction in a continuation."
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §2 (p.8): 'the actual mathematical implementation of that can be achieved only in the simplest cases, for now'; Born-Jordan 1925 Introduction (p.1-2)"
+
+  - id: H_L2
+    statement: >-
+      Relativistic mechanics is explicitly outside scope. Born-Jordan
+      1925 Introduction: 'we will not restrict our treatment to either
+      non-relativistic mechanics or to calculations with Cartesian
+      coordinates' (stated as program goal), but the worked examples
+      are all non-relativistic.
+    affects: [H6, H_F5]
+    severity: "medium"
+    mitigation: "Deferred to subsequent work."
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 Introduction (p.1-2)"
+
+  - id: H_L3
+    statement: >-
+      No geometric or visualisable picture for the array entries is
+      offered; Heisenberg 1925 §1 explicitly: 'a geometric
+      interpretation of such quantum-theoretical phase relationships
+      in analogy with the ones in the classical theory seems hardly
+      possible.' This is a deliberate methodological feature, not a
+      bug, but one that the founders flag.
+    affects: [H1, H2, H3]
+    severity: "low (by design)"
+    mitigation: "None offered; treated as the price of obtaining a theory in only observable quantities. Schrödinger's wave-mechanics formulation (the parallel path of the twin pair) re-introduces a visualisable wave-function — exactly the surface-vocabulary difference whose underlying-spine equivalence is the focal interest of the T1 case."
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §1 p.5 (phrase verbatim)"
+
+  - id: H_L4
+    statement: >-
+      The term 'matrix' is not used by Heisenberg in the July 1925
+      paper. He refers throughout to 'sets of quantities' or 'two-index
+      ensembles of amplitudes' (in the Delphenich translation: 'array').
+      Born recognised the multiplication law as matrix multiplication
+      AFTER reading Heisenberg's draft; the matrix vocabulary is first
+      systematically deployed in Born-Jordan 1925 (Chapter I §1).
+      Whether this is a 'limitation' or a feature of vocabulary
+      evolution is a matter of taste — it is recorded here because the
+      historical record matters for the rendering-equivalence claim of
+      the parent paper.
+    affects: ["the entire vocabulary layer of the spine"]
+    severity: "low (historical)"
+    mitigation: "n/a — historical fact, not a defect"
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Born-Jordan 1925 Introduction (p.1-2): 'The mathematical tool is the matrix calculus ... A square array ... a so-called matrix ... is the representative of a physical quantity'; van der Waerden 1968 'Sources of Quantum Mechanics' editorial commentary"
+
+  - id: H_L5
+    statement: >-
+      Half-integer vs integer quantum numbers: Heisenberg notes (§2
+      p.7) that the array calculus 'will give rise to difficulties in
+      the appearance of half-integer quantum numbers' and that
+      empirically (notably Kratzer 1922 band spectra) half-integer
+      formulas are sometimes demanded. The ground-state-zero condition
+      a(n₀,n₀-τ) = 0 forces a particular choice but the calculus per
+      se does not uniquely fix integer vs half-integer indexing.
+    affects: [H_F3, H_F6, H_m1]
+    severity: "medium"
+    mitigation: "Ground-state condition (n₀ = 0) imposed as additional postulate."
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §2 around eqs. (14)-(16) (p.7-8)"
+
+# ============================================================================
+# Negative findings
+# ============================================================================
+negative_findings:
+  - id: H_NF1
+    statement: >-
+      No analogue of a single-particle wave function is constructed,
+      and Heisenberg notes that no general method is offered for
+      determining the spectrum of arbitrary Hamiltonians: 'except for
+      a general relation between Kramers's dispersion formulas and
+      equations (11) and (16), we can answer the questions that were
+      posed above only in the entirely specialized cases that can be
+      solved by a simple recursion.'
+    expected_observation: "A general spectral-determination method for arbitrary H(p,q) at non-perturbative order."
+    source_method: "Heisenberg's own self-assessment in §2"
+    affects_nodes: [H6, H7, H_L1]
+    motivates: []
+    provenance:
+      created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
+      created_at: "2026-05-26"
+      source_log_event: "Heisenberg 1925 §2 p.8 ¶ before 'That general relationship between Kramers's dispersion theory and our equations (11), (16)...'"
+
+# ============================================================================
+# External anchors (the formulation's own citation graph)
+# ============================================================================
+external_anchors:
+  - citation_key: bohr-correspondence-principle-pre-1925
+    role: theoretical_predecessor
+    spine_nodes: [H1, H_A1, HC3]
+    source_in_pdf: "Heisenberg 1925 §0-§1 (Bohr referenced throughout as motivating predecessor)"
+  - citation_key: kramers-1924-nature-113-673
+    role: methodological_source
+    spine_nodes: [H_O5, H_M4]
+    source_in_pdf: "Heisenberg 1925 §1 footnote 1 (p.2)"
+  - citation_key: born-1924-zeit-phys-26-379
+    role: theoretical_predecessor
+    spine_nodes: [H1, H_M3]
+    source_in_pdf: "Heisenberg 1925 §1 footnote 2 (p.2)"
+  - citation_key: kramers-heisenberg-1925-zeit-phys-31-681
+    role: methodological_source
+    spine_nodes: [H_O5, H_M4]
+    source_in_pdf: "Heisenberg 1925 §1 footnote 2 (p.2)"
+  - citation_key: thomas-1925-naturwiss-13-627
+    role: methodological_source
+    spine_nodes: [H_M4, H_D2]
+    source_in_pdf: "Heisenberg 1925 §2 footnote (p.8); Born-Jordan 1925 §3 footnote 1 (p.12)"
+  - citation_key: kuhn-1925-zeit-phys-33-408
+    role: methodological_source
+    spine_nodes: [H_M4, H_D2]
+    source_in_pdf: "Heisenberg 1925 §2 footnote (p.8); Born-Jordan 1925 §3 footnote 2 (p.12)"
+  - citation_key: kratzer-1922-sitzber-bayer-akad
+    role: contrast_case
+    spine_nodes: [H_O3, H_F6]
+    source_in_pdf: "Heisenberg 1925 §3 footnote 3 (p.13)"
+  - citation_key: goudsmit-kronig-1925-naturwiss-13-90
+    role: replication_anchor
+    spine_nodes: [H_O4, H_F6, H_m4]
+    source_in_pdf: "Heisenberg 1925 §3 footnote 1 (p.13)"
+  - citation_key: sommerfeld-honl-1925-sitzber-preuss-akad
+    role: replication_anchor
+    spine_nodes: [H_O4, H_F6]
+    source_in_pdf: "Heisenberg 1925 §3 footnote 2 (p.13)"
+  - citation_key: russell-1925-nature-115-835
+    role: replication_anchor
+    spine_nodes: [H_O4]
+    source_in_pdf: "Heisenberg 1925 §3 footnote 2 (p.13)"
+  - citation_key: bocher-1907-einfuhrung-hohere-algebra
+    role: canonical_reference
+    spine_nodes: [H_M2]
+    source_in_pdf: "Born-Jordan 1925 Ch. I §1 footnote 1 (p.2) — matrix calculus formal source"
+  - citation_key: courant-hilbert-1924-methoden-mathematischen-physik
+    role: canonical_reference
+    spine_nodes: [H_M2]
+    source_in_pdf: "Born-Jordan 1925 Ch. I §1 footnote 1 (p.2)"
+
+# ============================================================================
+# Cross-path engagement (T1 twin-pair) — placeholder; full structural
+# comparison done in companion file + parent paper Section 7
+# ============================================================================
+twin_pair_engagement:
+  parallel_path: "SCHRODINGER PATH (wave mechanics, January-March 1926)"
+  parallel_path_spine_file: "VALIDATION_CASE_T1_SCHRODINGER_SPINE.yaml"
+  isomorphism_anchor: "Schrödinger 1926 'Über das Verhältnis der Heisenberg-Born-Jordanschen Quantenmechanik zu der meinen' (Zeit. Phys. 78); formally completed by von Neumann 1932 'Mathematische Grundlagen der Quantenmechanik' — both formalisms are unitarily equivalent representations of the same algebra."
+  expected_node_correspondences:
+    - heisenberg_node: H2
+      schrodinger_node: "(wave function ψ(x,t) as kinematic-state representative)"
+      correspondence_type: "alternative_representation_of_same_substrate"
+    - heisenberg_node: H3
+      schrodinger_node: "(non-commutativity of multiplication-by-x vs differentiation -iħ∂/∂x as operators on ψ)"
+      correspondence_type: "alternative_realisation_of_same_algebra"
+    - heisenberg_node: H4
+      schrodinger_node: "([x̂, -iħ∂/∂x] = iħ on the wave-function space)"
+      correspondence_type: "same_algebraic_law"
+    - heisenberg_node: H5
+      schrodinger_node: "(energy eigenvalues from time-independent Schrödinger equation Ĥψ = Eψ)"
+      correspondence_type: "same_spectral_claim"
+    - heisenberg_node: H7
+      schrodinger_node: "(Bohr frequency condition recovered from energy eigenvalue differences)"
+      correspondence_type: "same_unification_result"
+  note: |
+    The expected correspondences above are stated as hypotheses to be
+    confirmed against the SCHRODINGER PATH spine extraction. The
+    rendering vocabularies share almost no surface tokens (Heisenberg
+    talks about arrays, amplitudes, sums; Schrödinger talks about
+    wave functions, eigenvalue equations, differential operators) yet
+    the underlying claim graph — H1 through H7 plus H_F1 through H_F6
+    — is expected to map node-for-node with the Schrödinger path's
+    propositional structure under the unitary equivalence proved by
+    Schrödinger himself (1926 equivalence paper) and rigorously
+    formalised by von Neumann (1932). If the structural mapping
+    succeeds, the T1 case is the natural-experiment confirmation of
+    P4 (rendering-equivalence under spine-preservation) for the
+    parent paper.
+
+# ============================================================================
+# Open questions
+# ============================================================================
+open:
+  - "Uniqueness of array-equation solutions (per H_AA1, Heisenberg's own closing remark)."
+  - "Extension to multi-electron atoms — explicitly deferred."
+  - "Relativistic extension — explicitly deferred."
+  - "Whether 'periodic and aperiodic motions' can be unified within one array formalism (Heisenberg 1925 §2 p.8)."
+  - "Physical interpretation of phases of individual array entries (Heisenberg 1925 §1 p.5: 'a geometric interpretation ... seems hardly possible')."
+
+# ============================================================================
+# Changelog
+# ============================================================================
+changelog:
+  - date: 2026-05-26
+    operation: lock
+    by: "Phase 0.5 retroactive extraction by AI subagent for parent paper 2026ao T1 validation case"
+    note: "Initial extraction from Heisenberg 1925 (Delphenich translation) + Born-Jordan 1925 (Delphenich translation). Three-Men paper (1926) engaged indirectly via Born-Jordan footnote citations + secondary physics-history literature (van der Waerden 1968)."
+
+# ============================================================================
+# NOTES (prose summary; per task brief)
+# ============================================================================
+# NOTES:
+#
+# Five-to-seven most load-bearing propositions of the Heisenberg path
+# (in order of dependency depth, shallowest first):
+#
+#   H1 — Observable-quantities-only methodological commitment. The
+#        ontological foundation; everything else inherits from it.
+#   H2 — Two-index amplitude arrays as the new kinematic representative
+#        (replacing the classical orbit). Pure ontological substitution.
+#   H3 — Non-commutativity of the multiplication of those arrays. The
+#        first structural rupture with classical mechanics.
+#   H4 — Sharpened canonical commutator pq - qp = h/(2πi)·1 (Born-Jordan
+#        1925 eq. 38). The single most-cited finding of the entire path;
+#        the algebraic spine of matrix mechanics.
+#   H6 — Classical canonical equations of motion imposed in form on the
+#        arrays (with Born-Jordan §2 symbolic-differentiation machinery).
+#   H7 — Bohr frequency condition recovered as a theorem rather than a
+#        postulate — the unification result that justifies the entire
+#        reconstruction.
+#
+# H_F3 (zero-point energy ħω₀/2 for the harmonic oscillator) is the
+# single most-quoted novel empirical prediction of the path; H_F4
+# (commutator value) is the most-quoted structural prediction.
+#
+# Coder judgment exercised explicitly (per AA2 of parent SPINE.yaml,
+# inter-coder reliability check pending):
+#
+#   - I treated 'array' and 'matrix' as the SAME object at the spine
+#     level, while flagging the vocabulary distinction in H_L4. A
+#     reviewer could legitimately demand they be two nodes with an
+#     equivalence edge between them; I judged the equivalence too
+#     immediate (Born identifies it on first reading of Heisenberg's
+#     draft) to warrant the duplication.
+#   - I assigned the canonical commutator (H4) to the path as a whole
+#     rather than to Born-Jordan 1925 specifically, on the grounds
+#     that Heisenberg eq. (16) already states the Thomas-Kuhn sum-rule
+#     form and Born-Jordan eq. (38) is the sharpening, not the
+#     discovery. A reviewer prioritising historical authorship over
+#     algebraic content would split this into two nodes.
+#   - I did NOT separately code the Three-Men paper (Born-Heisenberg-
+#     Jordan 1926) because the PDF was not available; secondary-source
+#     and footnote engagement is reflected in external_anchors. The
+#     general-degrees-of-freedom extension, perturbation theory, and
+#     transformation theory belonging to the Three-Men paper are
+#     therefore absent from this spine; this is a known gap rather
+#     than a coder choice.
+#   - I retained Heisenberg's original vocabulary ('amplitudes',
+#     'arrays', 'sets of quantities') in node statements per the task
+#     constraint to avoid retrofitting modern textbook language. The
+#     word 'matrix' appears only where Born-Jordan use it.
+#
+# PDF section anchors for each major node group:
+#
+#   observations (H_O1-H_O5):       Heisenberg 1925 §0-§1 (p.1-2);
+#                                   §1 footnotes 1-2 (p.2);
+#                                   §3 footnotes (p.13)
+#   methods (H_M1-H_M6):            Heisenberg 1925 §1 eqs. (1)-(8)
+#                                   (p.3-5); §2 (p.6-8); §3 (p.9-11);
+#                                   Born-Jordan 1925 Ch. I §1-§2
+#                                   (p.2-7); Ch. II §3 (p.11-12)
+#   measurements (H_m1-H_m4):       Heisenberg 1925 §3 eqs. (21)-(33)
+#                                   (p.11-15);
+#                                   Born-Jordan 1925 Ch. II §3
+#                                   eq. (38) (p.14)
+#   findings (H_F1-H_F6):           Heisenberg 1925 §1 (p.5-6) [F1],
+#                                   §3 (p.9-15) [F2, F3, F6];
+#                                   Born-Jordan 1925 §3-§4 (p.13-15)
+#                                   [F4, F5]
+#   propositions (H1-H7):           Heisenberg 1925 abstract + §1
+#                                   (p.1-5) [H1, H2, H3];
+#                                   Born-Jordan 1925 Ch. II §3-§4
+#                                   (p.11-15) [H4, H5, H6, H7]
+#   derivations (H_D1-H_D4):        Heisenberg 1925 §1, §3 (p.5, p.9-12);
+#                                   Born-Jordan 1925 Ch. II §3-§4
+#                                   (p.13-15)
+#   alternative_explanations:       Heisenberg 1925 §0 ¶2-3 (p.1)
+#   assumption_atoms:               Heisenberg 1925 §3 closing
+#                                   paragraph (p.15);
+#                                   Born-Jordan 1925 Ch. I §1, Ch. II
+#                                   §4 closing (p.4, p.15)
+#   limitations:                    Heisenberg 1925 §1 (p.5), §2
+#                                   (p.7-8), §3 (p.15);
+#                                   Born-Jordan 1925 Introduction
+#                                   (p.1-2)
+#
+# End of NOTES.

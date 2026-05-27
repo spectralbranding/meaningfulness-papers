@@ -1,0 +1,171 @@
+# VALIDATION_CASE_PA_PRACTITIONER_SPINE.yaml
+#
+# Spine re-extracted from RENDERING_PA_PRACTITIONER.md (2,102-word Substack
+# practitioner-register rendering of PAPER A 2026ao's substrate). This is the
+# Session H Phase 2.5 output: cross-paper P4 evidence — Paper A's spine
+# (v0.7.3) rendered into a fresh practitioner article, re-extracted, and
+# compared to the source spine.
+#
+# Schema: paper_a:appendix_A_schema (10 node types; 17 edge types).
+# Node-ID prefix: PA_R_ (Paper A Rendering) to distinguish from Paper A's
+# source node IDs.
+
+spine_version: "0.2"
+spine_doc_version: "0.1.0"
+extracted_from: "RENDERING_PA_PRACTITIONER.md"
+extraction_protocol: "paper_a:appendix_B_protocol applied in reverse by single coder (author)"
+extraction_session: "Session H Phase 2.5 — Cross-paper P4 (Paper A → practitioner rendering)"
+extraction_date: "2026-05-27"
+target_for_isomorphism: "Paper A SPINE.yaml v0.7.3 at /Users/d/projects/spectral-branding-meaningfulness/research/meaning_meaningfulness_paper/SPINE.yaml"
+dual_purpose: "research artifact + Article 1 raw material for forthcoming practitioner-tier Substack series"
+
+# ============================================================================
+# Propositions (Paper A's four propositions; preserved in rendering)
+# ============================================================================
+propositions:
+  - id: PA_R_P1
+    statement: "The structural substrate of a knowledge artifact is independently optimizable from its rendering — meaning is a property of the substrate (transferable across renderings; inspectable at the graph layer); meaningfulness is a property of a specific rendering for a specific cohort."
+    node_typing: "proposition"
+    maps_to_paper_a: ["P1 separability"]
+    map_quality: "PRESERVED — 'meaning is a property of the spine; meaningfulness is a property of a specific rendering' verbatim from rendering §three-layer-decomposition"
+
+  - id: PA_R_P4
+    statement: "Two prose renderings of a locked substrate converge on conclusions when both preserve the substrate's structure. Heisenberg-Schrödinger founding papers of quantum mechanics supply the historical existence proof at extreme formalism distance."
+    node_typing: "proposition"
+    maps_to_paper_a: ["P4 rendering-equivalence under spine-preservation", "Appendix D Heisenberg-Schrödinger historical existence proof"]
+    map_quality: "PRESERVED — H-S 1925/1926 named with Schrödinger 1926 equivalence proof + von Neumann 1932 Hilbert-space foundation; preservation-under-rendering claim preserved"
+
+  - id: PA_R_P3
+    statement: "Generative AI shifts cost asymmetrically across substrate/rendering: AI cost on structural graphs scales sub-linearly with node count; human cost on rendering verification scales super-linearly with token count."
+    node_typing: "proposition"
+    maps_to_paper_a: ["P3 verification-cost asymmetry β < 1 < δ"]
+    map_quality: "PRESERVED (semantic) — functional forms c_AI = α·|V|^β / c_human = γ·|tokens|^δ DROPPED; ordering preserved in plain English; β/δ symbols absent"
+
+  - id: PA_R_P2
+    statement: "Organizations that publish substrate as a first-class artifact get the AI cost advantage + convergence-across-renderings guarantee; organizations that ship rendered communications without a substrate-of-record pay full human verification cost + accept drift across renderings."
+    node_typing: "proposition"
+    maps_to_paper_a: ["P2 recombination"]
+    map_quality: "PRESERVED (operational reading) — organizational-outcome-statement (citation-weighted derivative work over 24-36 months) DROPPED; the operational direction (substrate-publishing organizations recombine more efficiently) preserved at practitioner scale"
+
+# ============================================================================
+# Findings: methodological + framework-derived
+# ============================================================================
+findings:
+  - id: PA_R_F1
+    statement: "Three-layer decomposition L → S → R is the central explanatory move; two-layer frameworks that collapse log and substrate cannot distinguish SF1-SF4 patterns from generic AI error or generic translation difficulty."
+    type: "framework_advantage_over_two_level"
+    source_observations: ["PA_R_O_phil_lineage"]
+    generating_method: "PA_R_M_three_layer_decomp"
+    maps_to_paper_a: ["Theory §The Three-Level Hierarchy", "P1 falsifier specification"]
+    map_quality: "PRESERVED — explicit framework-vs-two-level contrast preserved in §four-stylized-facts paragraph 1"
+
+  - id: PA_R_F2
+    statement: "The Operator role is the post-AI projection-composition shell over era-invariant intrinsic operations (structural-substrate vs judgment). Pre-AI: Operator = human alone. Post-AI: human reviewing AI-authored substrate. Stretch case: AI handles most operations + human at fork-rebase-merge gates."
+    type: "role_architecture"
+    source_observations: ["PA_R_O_bechky_okhuysen_lineage"]
+    generating_method: "PA_R_M_operator_role_specification"
+    maps_to_paper_a: ["Operator role + era-dependent projection table", "Bechky-Okhuysen 2011 role-coordination lineage"]
+    map_quality: "PRESERVED — three eras explicitly named; structural-substrate/judgment operation split preserved; Bechky-Okhuysen lineage retained at light citation"
+
+# ============================================================================
+# Stylized facts (Paper A's SF1-SF4 — preserved in rendering)
+# ============================================================================
+stylized_facts:
+  - id: PA_R_SF1
+    statement: "Generative AI hallucinates citations when given access only to rendered prose without a verified claim graph; substrate publication removes the σ-direction reconstruction failure mode."
+    node_typing: "stylized_fact"
+    maps_to_paper_a: ["SF1 rendering-layer hallucination under R-only access"]
+    map_quality: "PRESERVED — substrate-publication intervention named; σ-direction failure mode preserved; Brynjolfsson-Li-Raymond 2025 reference DROPPED at practitioner register (it would have been an academic anchor)"
+
+  - id: PA_R_SF2
+    statement: "Replication failures in management research are often rendering divergences over a preserved claim graph: same propositions, different operationalizations / scales / time windows / sample-inclusion criteria. Open Science Collaboration + Many Labs + Camerer replications document the pattern at population scale."
+    node_typing: "stylized_fact"
+    maps_to_paper_a: ["SF2 replication failure as rendering divergence"]
+    map_quality: "PRESERVED — three named replication initiatives retained; rendering-divergence-over-preserved-substrate framing preserved"
+
+  - id: PA_R_SF3
+    statement: "Cross-language collaboration preserves meaning while losing meaningfulness; Mathematical Reviews + clinical-trials registries institutionalize the pattern. ρ is cohort-conditional and reconstructed per language; σ produces a language-invariant spine."
+    node_typing: "stylized_fact"
+    maps_to_paper_a: ["SF3 cross-language collaboration"]
+    map_quality: "PRESERVED — Mathematical Reviews and clinical-trials anchors retained; the existing Russian-channel self-application instance from Paper A §SF3 (t.me/spectralbranding) DROPPED at practitioner register (self-referential audit incident per feedback_audit_record_discipline_in_public_papers.md)"
+
+  - id: PA_R_SF4
+    statement: "Scholarly artifacts exhibit conclusion-invariance across rendering media (conference talk vs journal paper; textbook vs video lecture). Medium is a parameter of ρ; the spine is medium-invariant; P4 formalizes the invariance."
+    node_typing: "stylized_fact"
+    maps_to_paper_a: ["SF4 cross-medium conclusion-invariance"]
+    map_quality: "PRESERVED — conference-talk + textbook-vs-video examples preserved; P4 invariance claim explicit"
+
+# ============================================================================
+# Boundary conditions (Paper A's C1-C4 + negative scope)
+# ============================================================================
+boundary_conditions:
+  - id: PA_R_C1
+    statement: "Authoring is version-controlled (log substrate preserved)."
+    maps_to_paper_a: ["paper_a:C1"]
+    map_quality: "PRESERVED — explicit in §boundary-conditions"
+
+  - id: PA_R_C2
+    statement: "Claims are propositional (typed nodes and edges, not just narrative arcs)."
+    maps_to_paper_a: ["paper_a:C2"]
+    map_quality: "PRESERVED"
+
+  - id: PA_R_C3
+    statement: "Audience for different renderings is genuinely divergent."
+    maps_to_paper_a: ["paper_a:C3"]
+    map_quality: "PRESERVED"
+
+  - id: PA_R_C4
+    statement: "Artifact volume exceeds what unaided human reviewers can verify."
+    maps_to_paper_a: ["paper_a:C4"]
+    map_quality: "PRESERVED"
+
+  - id: PA_R_NS
+    statement: "Framework does NOT apply: humanities-tradition narrative scholarship; private corporate artifacts without version-controlled log; one-rendering-for-one-audience contexts; pre-2023 management research under early-generation AI; pure performative speech acts."
+    maps_to_paper_a: ["paper_a:NSC1..NSC5"]
+    map_quality: "PRESERVED — five negative-scope conditions named at appropriate practitioner-register level"
+
+# ============================================================================
+# Methods + protocols (preserved)
+# ============================================================================
+methods:
+  - id: PA_R_M_spine_first_protocol
+    statement: "Spine-first drafting protocol: lock the substrate before drafting prose; trace every prose claim to a substrate entry; surface orphan claims as fork (extend substrate) or rebase (drop claim) operations; evaluate substrate coherence and prose craft separately."
+    type: "operational_protocol"
+    maps_to_paper_a: ["paper_a:appendix_B_protocol spine-first drafting protocol"]
+    map_quality: "PRESERVED — explicit fork/rebase vocabulary retained; cost-minimizing arrangement framing preserved"
+
+  - id: PA_R_M_three_first_moves
+    statement: "Three operational first moves: (1) Pick one recurring artifact and lift its substrate out; (2) Run two renderings of the same substrate simultaneously and check whether colleagues reach the same conclusion; (3) Instrument the cost ratio AI-substrate-time vs human-rendering-verification-time."
+    type: "operational_first_moves_for_practitioners"
+    maps_to_paper_a: ["paper_a:design_propositions (organizational governance + role-and-incentive design + editorial-process decoupling)"]
+    map_quality: "EXTENDED at practitioner register — Paper A's three Design Propositions for organizational governance are translated to three first-move recommendations; semantic preservation strong, formal-design-proposition structure compressed"
+
+# ============================================================================
+# Recommended actions / operational implications (rendering-specific additions)
+# ============================================================================
+operational:
+  - id: PA_R_OP_substrate_first_class
+    statement: "Treat the substrate and the rendering as separate first-class objects optimizable independently; organizations that conflate them pay full human verification cost on every rendering + accept drift across renderings."
+    maps_to_paper_a: ["paper_a:P1", "paper_a:P3 + cost-asymmetry intervention"]
+    map_quality: "preserved + operational rendering at organization scale"
+
+# ============================================================================
+# Rendering choices (operator notes)
+# ============================================================================
+rendering_choices:
+  formal_apparatus:
+    spine: "P1, P4 formal preservation theorem under axiom A1 (σ-faithfulness on locked subsets); P4 holds as graph-theoretic preservation result"
+    rendering: "P1 and P4 stated as plain-English claims; axiom A1 not named; falsifier specifications dropped at practitioner register"
+    notes: "formal-apparatus compression appropriate for Substack practitioner audience; preservation-theorem language replaced with operational consequence"
+  greek_symbols:
+    spine: "σ extraction operator; ρ rendering operator; α, β, γ, δ cost-function constants"
+    rendering: "σ named once for substrate-from-rendering direction (SF1 failure mode explanation); ρ named once for cohort-dependent reconstruction; α/γ scale constants dropped; β/δ exponents replaced with 'sub-linear / super-linear' plain English"
+    notes: "Greek symbols selectively retained where they ARE the explanation (SF1 σ-direction; SF3 ρ-reconstruction); dropped where plain English suffices"
+  self_referential_audit_incidents:
+    spine: "F2 fabrication-discovery audit + Russian-channel self-application instance"
+    rendering: "F2 audit DROPPED entirely per feedback_audit_record_discipline_in_public_papers.md; Russian-channel reference DROPPED (kept as separate Task γ Phase 3.5a artifact)"
+    notes: "self-referential audit incidents kept internal in public-tier renderings; Substack rendering instead uses Heisenberg-Schrödinger as historical anchor"
+  mathematical_notation:
+    spine: "G = (V, E, τ); σ : L → G; ρ : (G, audience, language, medium) → R; |V|^β; |tokens|^δ"
+    rendering: "all mathematical notation dropped; replaced with plain-English description ('typed graph of claims and dependencies'; 'sub-linear scaling'; 'super-linear scaling')"
+    notes: "expected rendering-cost frontier per Phase 2 SELF_APPLICATION_ISOMORPHISM_PB.md observation: math notation reliably compressed at academic → practitioner boundary"

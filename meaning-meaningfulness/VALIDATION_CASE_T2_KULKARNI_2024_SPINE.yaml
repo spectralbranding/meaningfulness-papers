@@ -1,0 +1,1618 @@
+# VALIDATION_CASE_T2_KULKARNI_2024_SPINE.yaml
+#
+# Retroactive spine extraction from:
+#   Kulkarni, M., Mantere, S., Vaara, E., van den Broek, E., Pachidi, S.,
+#   Glaser, V. L., Gehman, J., Petriglieri, G., Lindebaum, D., Cameron, L. D.,
+#   Rahman, H. A., Islam, G., & Greenwood, M. (2024).
+#   The Future of Research in an Artificial Intelligence-Driven World.
+#   Journal of Management Inquiry, 33(3), 207-229.
+#   DOI: 10.1177/10564926231219622
+#
+# Purpose: T2 validation case (contemporary management-theory venue-fit anchor)
+# for the meaningfulness/meaning paper (2026ao). The Kulkarni et al. curated
+# discussion is a thematically adjacent multi-author essay published in a
+# tier-2 venue on the same year (early 2024) at which AI-mediated knowledge
+# work first became a JMI-class topic. Spine extraction tests whether the
+# meaningfulness paper's three-level hierarchy (log → graph → render) and
+# cost-asymmetry result (P3) can be retroactively recovered from this
+# external paper that was authored WITHOUT knowledge of the framework.
+#
+# Coding pass: AI-assisted (Claude Opus 4.7) via direct reading of the
+# open-access PDF (Oxford ORA mirror, Cambridge Apollo mirror).
+# Schema: v0.2 per research/SPINE_FIRST_DRAFTING_PROTOCOL.md
+#
+# IMPORTANT: this is an EXTRACTED spine. Provenance metadata reflects the
+# Kulkarni paper's authorship where reconstructible from the PDF; spine-coding
+# operations are tagged as "extractor" with the coding session.
+
+spine_version: "0.2"
+spine_doc_version: "0.1.0"
+paper_extracted: "Kulkarni-Mantere-Greenwood-et-al-2024-JMI"
+doi: "10.1177/10564926231219622"
+venue: "Journal of Management Inquiry, 33(3), 207-229"
+publication_date: "2024-02-22"  # accepted manuscript date from ORA record
+paper_type: "curated_discussion"  # multi-author position essay; not single-thesis paper
+status: "T2 validation case for 2026ao; coding pass 1"
+extractor: "Claude Opus 4.7 (1M context) via meaningfulness-paper Session 168 parallel-session"
+extraction_date: "2026-05-26"
+source_pdfs:
+  - "https://ora.ox.ac.uk/objects/uuid:87eaa659-177b-4fc6-9372-5ab78223be03/files/rk643b218x"
+  - "https://www.repository.cam.ac.uk/bitstreams/3e0b00a6-7b3b-45df-b67c-248a72065e51/download"
+
+title: "The Future of Research in an Artificial Intelligence-Driven World"
+
+thesis: |
+  Generative AI systems are now inescapably part of management and
+  organization scholarship and will reshape every phase of the research
+  process (authorship, theorizing, literature review, data collection,
+  qualitative analysis, writing, peer review). Whether AI functions as
+  collaborator or adversary is contingent and contested across the
+  contributors; what is shared is the claim that human centrality, agency,
+  judgment, and the moral-evaluative basis of scholarship are at stake. The
+  field must develop new governance practices (citation, transparency,
+  IRB-style heuristics) and new vocabularies (performativity, reassembly of
+  agency, regime of knowing) to engage AI responsibly.
+
+# ============================================================================
+# Curated-discussion structural metadata
+# ============================================================================
+#
+# The paper is a MULTI-AUTHOR CURATED DISCUSSION (7 essays + intro). It does
+# NOT have a single integrated thesis — it has a framing introduction by
+# Kulkarni and 6 contributor essays that diverge on key questions. The intro
+# explicitly states: "Here is where we part company" (p. 6) — i.e., the
+# editors flag dissensus rather than papering over it. This structural fact
+# matters for spine extraction: the proposition set below is NOT collectively
+# endorsed by all 13 authors. Per-proposition attribution is recorded in
+# `contributors_endorsing:` to preserve dissensus.
+
+curated_structure:
+  - section: "Introduction"
+    contributor: "Mukta Kulkarni (Indian Institute of Management Bangalore)"
+    central_claim: "AI proliferation subverts contemporary beliefs about authorship, originality, and human centrality in research; the discussion that follows raises questions more than provides answers."
+    pages: "2-6"
+  - section: "How will AI change the narratives we write?"
+    contributors: "Saku Mantere (McGill) & Eero Vaara (Oxford)"
+    central_claim: "MOS theorizing is a narrative exercise; AI-as-artificial-narrator will reshape authorship, novelty, power/ideology, and genre — potentially enabling more diverse theoretical discourse if scholars exercise critical reflection."
+    pages: "7-11"
+  - section: "Towards Hybrid Forms of Research: How LLMs Reshape Knowledge Work"
+    contributor: "Elmira van den Broek (Stockholm School of Economics)"
+    central_claim: "Knowledge is relational, not just extractable; LLMs used unsupervised produce irrelevant or misguided outputs; the future is human-AI HYBRID work where expertise is required to assess and refine LLM outputs."
+    pages: "12-16"
+  - section: "LLMs and the production of knowledge about organizations and management: Taking a performative perspective"
+    contributor: "Stella Pachidi (Cambridge)"
+    central_claim: "LLMs are not neutral tools; they are co-constituted with social actors and exert performative effects on data collection, qualitative analysis, writing, and (most consequentially) the regime of knowing in academia."
+    pages: "17-22"
+  - section: "Chatty actors: Generative AI and the reassembly of agency in qualitative research"
+    contributors: "Vern L. Glaser (Alberta) & Joel Gehman (George Washington)"
+    central_claim: "Generative AI can be reassembled into three distinct agentic roles — research assistant, data analyst, co-author — each requiring its own governance principle (citation, transparency, IRB-equivalent oversight)."
+    pages: "23-29"
+    central_artifact: "Table 1 — Ways of Reassembling Agency in Qualitative Research"
+  - section: "Large Language Models might displace inductive scholars — but they will not replace us"
+    contributor: "Gianpiero Petriglieri (INSEAD)"
+    central_claim: "Inductive scholarship requires compliance (with truth/data) and defiance (with theory); LLMs are compliant in the wrong ways (defy truth, please users), and adopting them risks dehumanizing academia by displacing identity-grounded creative impulses."
+    pages: "30-34"
+  - section: "Three provocations - ChatGPT undermines 'learning' to theorise, homogenizes theory, and distorts competition for the best ideas"
+    contributor: "Dirk Lindebaum (Grenoble Ecole de Management)"
+    central_claim: "ChatGPT (1) impoverishes the LEARNING-to-theorize process by discouraging reading-for-understanding and writing-as-thinking; (2) HOMOGENIZES theory via reckoning/formal rationality at the expense of judgment/substantive rationality; (3) DISTORTS competition for the best ideas given (in)transparent use in career-progression contexts."
+    pages: "35-41"
+    notable: "Three explicitly numbered provocations — the only contributor with an enumerated claim structure."
+  - section: "Large Language Models in Qualitative Research: Not all that Glitters is Gold"
+    contributors: "Lindsey D. Cameron (Wharton) & Hatim A. Rahman (Kellogg)"
+    central_claim: "Qualitative research is variance-SEEKING; LLM 'surprise' (lowest-frequency token) is fundamentally unlike researcher 'surprise' (emergent moments of confirmation/disconfirmation); using LLMs in data analysis, literature review, or doctoral training risks unintended effects on what qualitative scholars value."
+    pages: "42-47"
+  - section: "Generative AI and Research Production: Moral Agency and Seductive Mediation"
+    contributors: "Gazi Islam & Michelle Greenwood (Editors-in-Chief, Journal of Business Ethics)"
+    central_claim: "Generative AI creates 'seductive mediation' — text whose human/non-human inputs are not clearly separable — that BLURS the sources of moral agency, making ethical evaluation of research practices increasingly intractable."
+    pages: "48-52"
+
+# ============================================================================
+# Boundary conditions (extracted; the paper does not state these formally)
+# ============================================================================
+boundary_conditions:
+  - id: C1
+    statement: "Research domain is management and organization studies (MOS), with strongest engagement around qualitative/interpretive traditions."
+    observable: "Authors all hold MOS-discipline appointments; venue is JMI; cases drawn from qualitative research practice."
+    excludes: "Hard-science research, medical research (mentioned only as contrast), purely quantitative computational social science."
+    provenance:
+      created_by: "extractor"
+      created_at: "2026-05-26"
+      source_log_event: "extraction Session 168 parallel — PDF reading pass 1"
+  - id: C2
+    statement: "AI tools under discussion are generative LLMs (ChatGPT, Bard, GPT-4) as commercially available in 2023-early-2024."
+    observable: "All contributors anchor on ChatGPT / GPT-4 / Bard; arXiv prepublication cites through mid-2023."
+    excludes: "Predictive ML, classification models, computer vision, specialized scientific AI (e.g., AlphaFold), and post-2024 frontier models."
+    provenance:
+      created_by: "extractor"
+      created_at: "2026-05-26"
+      source_log_event: "extraction Session 168"
+  - id: C3
+    statement: "Research process is decomposable into phases: ideation, literature review, data collection, analysis, writing, peer review, authorship attribution."
+    observable: "Multiple contributors discuss AI's role in named research phases; van den Broek and Pachidi enumerate explicitly."
+    excludes: "Purely managerial/applied work (separated from MOS scholarship)."
+    provenance:
+      created_by: "extractor"
+      created_at: "2026-05-26"
+      source_log_event: "extraction Session 168"
+
+# ============================================================================
+# Observations: events / cases / artifacts the paper grounds itself in
+# ============================================================================
+observations:
+  - id: O1
+    statement: "OpenAI released ChatGPT in late November 2022 (intro frames this as the precipitating event)."
+    raw_data_pointer: "Kulkarni intro p.2; Stokel-Walker 2023"
+    instrument: "n/a (historical event)"
+    timestamp: "2022-11-30"
+    provenance:
+      created_by: "kulkarni-2024-intro"
+      created_at: "2024"
+      source_log_event: "Kulkarni intro p.2"
+  - id: O2
+    statement: "At least four medicine-research articles had listed ChatGPT as a co-author by early 2023; Amazon had 200+ books listing ChatGPT as author or co-author."
+    raw_data_pointer: "Kulkarni intro citing Stokel-Walker 2023; Bensinger 2023"
+    instrument: "journalism + secondary citation"
+    timestamp: "2023-early"
+    provenance:
+      created_by: "kulkarni-2024-intro"
+      source_log_event: "Kulkarni intro p.2"
+  - id: O3
+    statement: "ATLAS.ti released AI auto-coding functionality claiming up to 90% reduction in qualitative data analysis time."
+    raw_data_pointer: "Pachidi essay p.20 citing ATLAS.ti 2023"
+    timestamp: "2023"
+    provenance:
+      created_by: "kulkarni-2024-pachidi"
+      source_log_event: "Pachidi p.20"
+  - id: O4
+    statement: "Van den Broek tested ATLAS.ti's AI coding on her own interview-transcript fieldwork; the tool produced 'highly generic' codes detached from the practice-based lens guiding her study."
+    raw_data_pointer: "van den Broek essay pp.13-14"
+    instrument: "ATLAS.ti AI Coding Beta"
+    timestamp: "2023"
+    provenance:
+      created_by: "kulkarni-2024-vandenbroek"
+      source_log_event: "van den Broek p.14"
+  - id: O5
+    statement: "Petriglieri tested ChatGPT on multiple tasks (paper framing, literature review, magazine edit); found fabricated references and corporate-press-release voice."
+    raw_data_pointer: "Petriglieri essay p.33"
+    instrument: "ChatGPT (version unspecified; pre-2024)"
+    timestamp: "2023"
+    provenance:
+      created_by: "kulkarni-2024-petriglieri"
+      source_log_event: "Petriglieri p.33"
+  - id: O6
+    statement: "Glaser & Gehman retrospectively prompted ChatGPT Plus about their 2016 Glaser-Fiss-Kennedy study on online advertising; tool produced 'superficial but accurate synopses.'"
+    raw_data_pointer: "Glaser & Gehman essay p.25"
+    instrument: "ChatGPT Plus"
+    timestamp: "2023"
+    provenance:
+      created_by: "kulkarni-2024-glaser-gehman"
+      source_log_event: "Glaser & Gehman p.25"
+  - id: O7
+    statement: "Lindebaum ran identical writing instructions through himself and ChatGPT; flagged ChatGPT output as 'artificial, superficial, and misguided' relative to his own draft."
+    raw_data_pointer: "Acknowledgments p.53 + Lindebaum essay"
+    instrument: "ChatGPT"
+    timestamp: "2023"
+    provenance:
+      created_by: "kulkarni-2024-lindebaum"
+      source_log_event: "Acknowledgments p.53"
+  - id: O8
+    statement: "Italy temporarily banned ChatGPT in 2023 (regulatory event referenced by multiple contributors)."
+    raw_data_pointer: "Kulkarni intro citing Browne 2023; also Pollicino & De Gregorio 2023"
+    timestamp: "2023"
+    provenance:
+      created_by: "kulkarni-2024-intro"
+      source_log_event: "intro p.2"
+  - id: O9
+    statement: "Recent studies showed human reviewers unable to spot AI-generated abstracts."
+    raw_data_pointer: "Kulkarni intro citing Thorp 2023"
+    timestamp: "2023"
+    provenance:
+      created_by: "kulkarni-2024-intro"
+      source_log_event: "intro p.3"
+  - id: O10
+    statement: "LexisNexis reported judges criticizing attorneys for NOT using AI in legal research (efficiency-as-mandate emerging)."
+    raw_data_pointer: "Pachidi p.22 citing LexisNexis 2023"
+    timestamp: "2023"
+    provenance:
+      created_by: "kulkarni-2024-pachidi"
+      source_log_event: "Pachidi p.22"
+
+# ============================================================================
+# Methods: the paper's methodological framing (curated discussion is itself a method)
+# ============================================================================
+methods:
+  - id: M1
+    statement: "Curated multi-author discussion: editors invite contributors holding distinct theoretical positions to write short essays; editors frame consensus AND dissensus in introduction."
+    type: "curated_essay_discussion"
+    inputs: ["contributor essays", "shared topic prompt (implicit)"]
+    outputs: ["7 essays + intro + Table 1"]
+    code_anchor: "n/a (no replicable code)"
+    reproducibility:
+      seed: "n/a"
+      version: "n/a"
+    cost: "editorial coordination only"
+    notes: |
+      The paper does NOT describe its assembly method explicitly. The
+      curated-discussion genre is well-established in JMI; the editor (Kulkarni)
+      selected contributors and wrote the integrating intro that explicitly
+      flags where contributors agree ("In this curated discussion...") vs
+      diverge ("Here is where we part company"). Self-application note:
+      Lindebaum ran ChatGPT on the same writing prompt as himself and made
+      the comparison available on request — a within-paper comparative
+      experiment that the meaningfulness paper's framework would call a
+      rendering-equivalence test under spine-fixed conditions.
+    provenance:
+      created_by: "extractor"
+      created_at: "2026-05-26"
+      source_log_event: "extraction Session 168"
+    body_sections: ["Intro p.5-6; Acknowledgments p.53"]
+  - id: M2
+    statement: "Contributor-level method: practice-based reflection on personal AI-tool encounters; no shared empirical protocol."
+    type: "personal_reflection + secondary_literature_review"
+    inputs: ["personal AI-tool trials by each contributor", "review of 2023 journalistic + scholarly literature on ChatGPT"]
+    outputs: ["per-essay claims about AI in research"]
+    provenance:
+      created_by: "extractor"
+      created_at: "2026-05-26"
+      source_log_event: "extraction Session 168"
+
+# ============================================================================
+# Findings: 'what is the case' claims grounded in observations
+# ============================================================================
+findings:
+  - id: F1
+    statement: "LLM-generated content contains fabricated references that flow plausibly enough to evade casual review."
+    source_observations: [O5, O7]
+    generating_method: M2
+    statistical_strength: "anecdotal; n=2 contributor reports of personal trials"
+    citation_role: ["motivation_for_K_provocations"]
+    antecedents: [O5, O7]
+    falsifier: "If post-2024 LLMs reliably surface verified citations only, F1 is time-bounded."
+    contributors_reporting: [Petriglieri, Lindebaum]
+    provenance:
+      created_by: "kulkarni-2024-petriglieri + kulkarni-2024-lindebaum"
+      created_at: "2024"
+      source_log_event: "Petriglieri p.33; Lindebaum acknowledgments p.53"
+    body_sections: ["Petriglieri essay; Lindebaum acknowledgments"]
+  - id: F2
+    statement: "AI-assisted auto-coding of qualitative data produces codes 'detached from the practice-based lens and theoretical concepts' guiding the study."
+    source_observations: [O3, O4]
+    generating_method: M2
+    statistical_strength: "single-researcher trial (van den Broek) on her own ethnographic data"
+    contributors_reporting: ["van den Broek"]
+    provenance:
+      created_by: "kulkarni-2024-vandenbroek"
+      source_log_event: "van den Broek pp.13-14"
+  - id: F3
+    statement: "LLMs can produce 'superficial but accurate' synopses of empirical contexts useful as research-assistant scaffolding."
+    source_observations: [O6]
+    generating_method: M2
+    contributors_reporting: ["Glaser & Gehman"]
+    provenance:
+      created_by: "kulkarni-2024-glaser-gehman"
+      source_log_event: "Glaser & Gehman p.25"
+  - id: F4
+    statement: "Three distinct agentic modes can be empirically identified in how researchers use generative AI: research-assistant mode, data-analyst mode, co-author mode."
+    source_observations: [O3, O4, O6]
+    generating_method: M2
+    note: "Glaser & Gehman crystallize this trichotomy in Table 1 with one governance principle per mode."
+    contributors_reporting: ["Glaser & Gehman"]
+    provenance:
+      created_by: "kulkarni-2024-glaser-gehman"
+      source_log_event: "Glaser & Gehman pp.24-28; Table 1 p.29"
+    body_sections: ["Table 1"]
+
+# ============================================================================
+# Propositions: explanatory theoretical claims
+# (prefix K = Kulkarni-paper propositions, to distinguish from
+# meaningfulness-paper P1-P4)
+# ============================================================================
+propositions:
+  - id: K1
+    statement: "AI systems (esp. generative LLMs) will reshape every phase of the management/organization research process — from ideation through peer review."
+    type: "ontological"
+    conditions: "C1, C2"
+    antecedents: []
+    assumptions: [AA1]
+    falsifier: "If post-2024 evidence shows AI's research-process impact concentrated in <=2 of the named phases, K1 is too strong."
+    evidence:
+      - type: empirical
+        anchor: "Cross-essay convergence: every contributor identifies AI impact in 2+ research phases (intro, narratives, hybrid work, performativity, qualitative analysis, theorizing, moral evaluation)."
+      - type: citation
+        anchor: "Stokel-Walker 2023; van Dis et al. 2023; Susarla et al. 2023; Dwivedi et al. 2023"
+        citation_role: motivating_problem
+    ruled_out_rivals: []
+    contributors_endorsing: ["all"]
+    body_sections: ["Intro; all 7 essays"]
+    provenance:
+      created_by: "extractor"
+      created_at: "2026-05-26"
+      source_log_event: "extraction Session 168 — synthesis across essays"
+  - id: K2
+    statement: "AI is double-edged: it can serve as collaborator (streamlining research) OR adversary (impoverishing learning, fabricating evidence, biasing outputs). The valence is contingent on use, governance, and researcher skill."
+    type: "ontological"
+    conditions: "C1, C2"
+    antecedents: [K1]
+    falsifier: "If AI's net effect on research becomes reliably one-signed (uniformly beneficial OR uniformly harmful), K2's contingency claim fails."
+    evidence:
+      - type: empirical
+        anchor: "Abstract states it as the paper's framing; intro frames as the focal tension; all essays return to some version of the dual-valence question."
+    contributors_endorsing: ["all (framing-level), with degree-of-pessimism varying)"]
+    body_sections: ["Abstract; intro p.2-3"]
+    provenance:
+      created_by: "kulkarni-2024-intro"
+      created_at: "2024"
+      source_log_event: "Abstract; intro"
+  - id: K3
+    statement: "AI shifts the COST/EFFORT/SKILL profile of specific research activities asymmetrically: literature review, data summarization, text formatting, and code-generation get cheaper; theorizing, judgment, reading-for-understanding, and embodied interpretation either stay the same or become RELATIVELY more costly."
+    type: "ontological"
+    conditions: "C1, C2"
+    antecedents: [K1, K2]
+    falsifier: "If empirical workflow studies show uniform cost-reduction across ALL research activities (including theorizing/judgment), K3's asymmetry claim fails."
+    evidence:
+      - type: empirical
+        anchor: "Mantere & Vaara: 'AI will undoubtedly help' with literature review + writing, but raises authorship/novelty/genre questions; Lindebaum: reading-for-understanding (Adler & Van Doren) and writing-as-thinking cannot be outsourced; Cameron & Rahman: surprise as researcher-detected vs LLM-statistical-detected are fundamentally different operations; van den Broek: relational knowledge cannot be extracted by algorithm."
+      - type: citation
+        anchor: "Adler & Van Doren 1940/1972; Bender et al. 2021; Lebovitz et al. 2022; van den Broek et al. 2021"
+        citation_role: theoretical_predecessor
+    ruled_out_rivals: [A1]
+    contributors_endorsing: ["Mantere & Vaara", "van den Broek", "Petriglieri", "Lindebaum", "Cameron & Rahman"]
+    # >>> CRITICAL: this is the proposition closest to meaningfulness-paper P3 <<<
+    overlap_with_meaningfulness_paper: |
+      K3 is the strongest convergence with our P3 (cost-asymmetry across the
+      three-level hierarchy). The Kulkarni discussion DOES NOT distinguish
+      log/graph/render explicitly, but it independently identifies that AI's
+      cost-reduction is uneven across research activities, with the
+      "judgment / theorizing / embodied interpretation" activities staying
+      expensive. This is the same shape as our P3 — meaningfulness operations
+      (cohort-specific render) stay expensive while meaning operations
+      (graph/structure-extraction) become cheap. Cameron & Rahman's
+      "variance-seeking vs variance-reducing" distinction is structurally
+      analogous to render-cohort-specific vs graph-aggregation.
+    body_sections: ["Cross-essay synthesis: Mantere-Vaara p.7-8; van den Broek p.13-16; Lindebaum Provocation #1 p.37-38; Cameron-Rahman p.43-44"]
+    provenance:
+      created_by: "extractor (synthetic synthesis across essays)"
+      created_at: "2026-05-26"
+      source_log_event: "extraction Session 168 — most theoretically load-bearing extracted proposition"
+  - id: K4
+    statement: "Research activities decompose into three agentic modes under AI mediation: research-assistant (simple prompting, citation-and-verification governance), data-analyst (complex prompting/tuning, transparency-and-trustworthiness governance), co-author (generative agents, IRB-level governance)."
+    type: "ontological"
+    conditions: "C1, C2"
+    antecedents: [F4]
+    falsifier: "If empirical workflow studies surface a fourth distinct agentic mode (e.g., 'AI as critic', 'AI as theorist'), K4's trichotomy is incomplete."
+    evidence:
+      - type: empirical
+        anchor: "Glaser & Gehman essay + Table 1"
+      - type: citation
+        anchor: "Latour 2005 Reassembling the Social"
+        citation_role: theoretical_predecessor
+    ruled_out_rivals: []
+    contributors_endorsing: ["Glaser & Gehman"]
+    body_sections: ["Glaser & Gehman pp.23-28; Table 1"]
+    provenance:
+      created_by: "kulkarni-2024-glaser-gehman"
+      source_log_event: "Glaser & Gehman essay"
+  - id: K5
+    statement: "AI-as-narrator threatens authorship in 4 specific ways: it problematizes (a) attribution and originality, (b) novelty of theories (regression to mainstream), (c) power and ideology (corporate-voice capture), (d) genre and format of MOS scholarship."
+    type: "ontological"
+    conditions: "C1, C2"
+    antecedents: [K1, K3]
+    falsifier: "If empirical evidence shows AI-mediated authorship producing MORE genre diversity, MORE marginal voices, K5(c)(d) fail."
+    evidence:
+      - type: citation
+        anchor: "Foucault 1969; Barthes 1977; Woodmansee 1992, 1994; Habermas 1971; Chomsky et al. 2023; Park, Leahey & Funk 2023"
+        citation_role: theoretical_predecessor
+    contributors_endorsing: ["Mantere & Vaara"]
+    body_sections: ["Mantere-Vaara pp.7-11"]
+    provenance:
+      created_by: "kulkarni-2024-mantere-vaara"
+      source_log_event: "Mantere & Vaara essay"
+  - id: K6
+    statement: "Knowledge work cannot be modeled adequately as algorithmic information processing (Domingos-style 'AI eats information'); knowledge has irreducibly RELATIONAL elements requiring expert interpretation and validation."
+    type: "ontological"
+    conditions: "C1"
+    antecedents: []
+    falsifier: "If practice-based ethnography of expert work reliably shows knowledge-as-extractable rather than knowledge-as-relational, K6 fails."
+    evidence:
+      - type: citation
+        anchor: "Cook & Brown 1999; Orlikowski 2002; Pakarinen & Huising 2023; van den Broek et al. 2021; Anthony 2018; Lebovitz et al. 2022"
+        citation_role: theoretical_predecessor
+      - type: empirical
+        anchor: "van den Broek's ATLAS.ti AI coding trial (O4, F2)"
+    ruled_out_rivals: [A2]
+    contributors_endorsing: ["van den Broek", "Petriglieri", "Cameron & Rahman"]
+    body_sections: ["van den Broek essay pp.12-16"]
+    provenance:
+      created_by: "kulkarni-2024-vandenbroek"
+      source_log_event: "van den Broek essay"
+  - id: K7
+    statement: "LLM tools have PERFORMATIVE effects: their use co-constructs the research object, the categories of analysis, the genre of writing, and ultimately the regime of knowing in academia (what counts as knowledge, who has authority to produce it)."
+    type: "ontological"
+    conditions: "C1, C2"
+    antecedents: [K6]
+    falsifier: "If LLM tools turn out to be theoretically neutral instruments leaving research-object construction unchanged, K7 fails."
+    evidence:
+      - type: citation
+        anchor: "Austin 1975; Barad 2003; Cabantous & Gond 2011; Gond et al. 2016; Glaser-Pollock-D'Adderio 2021; Orlikowski & Scott 2008, 2014; Pachidi et al. 2021; Espeland & Sauder 2007"
+        citation_role: theoretical_predecessor
+    contributors_endorsing: ["Pachidi"]
+    body_sections: ["Pachidi essay pp.17-22"]
+    provenance:
+      created_by: "kulkarni-2024-pachidi"
+      source_log_event: "Pachidi essay"
+  - id: K8
+    statement: "Use of LLMs in scholarly work IMPOVERISHES theorizing by (a) substituting reckoning/formal rationality for judgment/substantive rationality, (b) regressing toward high-probability/mainstream choices, (c) discouraging reading-for-understanding and writing-as-thinking."
+    type: "ontological"
+    conditions: "C1, C2"
+    antecedents: [K3]
+    falsifier: "If LLM use is shown to be neutral or positive for these three named processes, K8 fails. Lindebaum names this as falsifiable provocation explicitly."
+    evidence:
+      - type: citation
+        anchor: "Adler & Van Doren 1940/1972; Smith 2019; Lindebaum-Vesa-den-Hond 2020; Lindebaum-Moser-Ashraf-Glaser 2023; Bender et al. 2021; Park-Leahey-Funk 2023"
+        citation_role: theoretical_predecessor
+    contributors_endorsing: ["Lindebaum (primary)", "Petriglieri (overlapping)"]
+    body_sections: ["Lindebaum pp.35-41"]
+    provenance:
+      created_by: "kulkarni-2024-lindebaum"
+      source_log_event: "Lindebaum 'Three provocations' essay"
+  - id: K9
+    statement: "Qualitative inquiry depends on the researcher's EMBODIED, ITERATIVE, VARIANCE-SEEKING process; LLM-mediated 'surprise' (lowest-frequency token) is structurally distinct from researcher-detected qualitative surprise (Christianson 2011's confirmation/disconfirmation moments)."
+    type: "ontological"
+    conditions: "C1, C2; qualitative research only"
+    antecedents: [K6]
+    falsifier: "If LLMs reliably surface the same surprises that experienced qualitative researchers surface, K9's distinctiveness claim fails."
+    evidence:
+      - type: citation
+        anchor: "Christianson 2011; Locke et al. 2015, 2022; Charmaz 2006; Grodal et al. 2021; Bender et al. 2021"
+        citation_role: theoretical_predecessor
+      - type: empirical
+        anchor: "Cameron's own 2022 paper on gig-work — 'surprise' = workers' enjoyment counter to alienation narrative; an LLM trained on dominant narratives would have predicted alienation."
+    contributors_endorsing: ["Cameron & Rahman"]
+    body_sections: ["Cameron-Rahman pp.42-44"]
+    provenance:
+      created_by: "kulkarni-2024-cameron-rahman"
+      source_log_event: "Cameron-Rahman essay"
+  - id: K10
+    statement: "Generative AI creates SEDUCTIVE MEDIATION (Greenwood & Wolfram Cox 2022): hybrid text in which the human-vs-machine source of inputs/outputs cannot be specified, blurring the locus of moral agency and rendering ethical evaluation of research practices unintelligible."
+    type: "ontological"
+    conditions: "C1, C2"
+    antecedents: [K7, K6]
+    falsifier: "If transparency mechanisms (labels, provenance metadata) can reliably distinguish human vs AI inputs, K10 weakens — though Islam & Greenwood argue such distinctions are in principle impossible because inputs 'cannot be clearly defined.'"
+    evidence:
+      - type: citation
+        anchor: "Greenwood & Wolfram Cox 2022; Verbeek 2011; Watson-Freeman-Parmar 2008; Buchholtz & Rosenthal 2008; Bouchard 2016; Pierre & Adams 2015"
+        citation_role: theoretical_predecessor
+    contributors_endorsing: ["Islam & Greenwood"]
+    body_sections: ["Islam-Greenwood pp.48-52"]
+    provenance:
+      created_by: "kulkarni-2024-islam-greenwood"
+      source_log_event: "Islam-Greenwood essay"
+  - id: K11
+    statement: "The future research practice should be HYBRID: human-AI work where AI handles pattern recognition / data summarization / formatting and humans retain judgment, embodied interpretation, theoretical commitment, and moral agency."
+    type: "management_outcome"  # prescriptive
+    conditions: "C1, C2"
+    antecedents: [K3, K6, K9]
+    falsifier: "If purely human OR purely AI workflows dominate in productive frontier research, K11's hybrid-equilibrium claim fails."
+    evidence:
+      - type: citation
+        anchor: "van den Broek et al. 2021; Lebovitz et al. 2022; Krakowski et al. 2023; Waardenburg & Huysman 2022; Gehman-Sharma-Beveridge 2022"
+        citation_role: theoretical_predecessor
+    contributors_endorsing: ["van den Broek (primary)", "Glaser & Gehman", "Mantere & Vaara (qualified)"]
+    contributors_dissenting: ["Petriglieri (rejects hybrid for own work — 'they cannot help me')"]
+    body_sections: ["van den Broek pp.15-16; Glaser-Gehman conclusion p.28"]
+    provenance:
+      created_by: "kulkarni-2024-vandenbroek + glaser-gehman"
+      source_log_event: "van den Broek essay; Glaser-Gehman essay"
+  - id: K12
+    statement: "Field-level governance must develop alongside AI adoption: (a) citation principle for research-assistant mode, (b) transparency-and-prompt-documentation for data-analyst mode, (c) IRB-equivalent oversight for co-author mode."
+    type: "management_outcome"  # prescriptive
+    conditions: "C1, C2"
+    antecedents: [K4]
+    falsifier: "If the field self-organizes around different governance dimensions than the three named, K12's prescription is the wrong taxonomy."
+    evidence:
+      - type: citation
+        anchor: "Merton 1973; Ziman 2001; Zhao et al. 2023"
+        citation_role: theoretical_predecessor
+    contributors_endorsing: ["Glaser & Gehman"]
+    body_sections: ["Glaser & Gehman pp.24-28; Table 1"]
+    provenance:
+      created_by: "kulkarni-2024-glaser-gehman"
+      source_log_event: "Glaser & Gehman essay"
+
+# ============================================================================
+# Derivations (reasoning bridges between propositions)
+# ============================================================================
+derivations:
+  - id: D1
+    statement: "Glaser & Gehman derive K12 from K4 by mapping each agentic mode to its analogous scientific-norm violation."
+    from: [K4]
+    to: K12
+    reasoning_type: "analogical"
+    provenance:
+      created_by: "kulkarni-2024-glaser-gehman"
+      source_log_event: "Glaser-Gehman essay"
+    body_sections: ["Glaser-Gehman p.24-28"]
+  - id: D2
+    statement: "Lindebaum derives K8(c) (LLMs impoverish learning-to-theorize) from K3 (cost-asymmetry) by an Adler-Van-Doren argument that reading-for-understanding requires effort that ChatGPT's output displaces."
+    from: [K3]
+    to: K8
+    reasoning_type: "deductive (informal)"
+    provenance:
+      created_by: "kulkarni-2024-lindebaum"
+      source_log_event: "Lindebaum Provocation #1 p.37-38"
+  - id: D3
+    statement: "Islam & Greenwood derive K10 (seductive mediation) from K7 (performativity) + K6 (relational knowledge) by Greenwood-Wolfram-Cox 2022's argument that invisible technological mediation undermines specification of agency."
+    from: [K6, K7]
+    to: K10
+    reasoning_type: "deductive (informal)"
+    provenance:
+      created_by: "kulkarni-2024-islam-greenwood"
+      source_log_event: "Islam-Greenwood pp.49-51"
+
+# ============================================================================
+# Alternative explanations the paper engages
+# ============================================================================
+alternative_explanations:
+  - id: A1
+    statement: "AI is a uniformly LIBERATING technology — replacing tedium and freeing creativity (Amabile 2019; Amabile 2020 'World of Surprises')."
+    rules_out_required: [K3, K8]
+    ruled_out_by: [K3]
+    rules_out_status: "rejected (by Mantere-Vaara and Lindebaum)"
+    reasoning: "Mantere & Vaara (p.8): historical record shows technology has LOCKED labor into 'a technological matrix' rather than liberating — average workday has not shortened despite 20th-century productivity gains (Frey 2019; Suzman 2020). Lindebaum: Amabile-style claims need 'a pinch of salt' because LLMs offer high-probability not low-probability choices, antithetical to creativity."
+    provenance:
+      created_by: "kulkarni-2024-mantere-vaara + kulkarni-2024-lindebaum"
+      source_log_event: "Mantere-Vaara p.8; Lindebaum p.36"
+    body_sections: ["Mantere-Vaara p.8; Lindebaum p.36"]
+  - id: A2
+    statement: "Knowledge IS extractable by algorithms from data (Domingos 2015 'AI systems eat up information, digest it, and turn it into knowledge')."
+    rules_out_required: [K6]
+    ruled_out_by: [F2, K6]
+    rules_out_status: "rejected (by van den Broek)"
+    reasoning: "Van den Broek's ATLAS.ti trial (O4, F2) demonstrates extractable-knowledge model fails empirically; practice-based studies show knowledge is relational and requires expert validation."
+    provenance:
+      created_by: "kulkarni-2024-vandenbroek"
+      source_log_event: "van den Broek p.13"
+  - id: A3
+    statement: "Transparent disclosure of AI use (declaration statements) is sufficient governance — the human author remains in charge."
+    rules_out_required: [K10, K12]
+    ruled_out_by: [K10]
+    rules_out_status: "rejected (by Lindebaum and by Islam & Greenwood)"
+    reasoning: "Lindebaum: 'even if use of ChatGPT is transparently declared, it is difficult if not impossible to tease out the variance in the paper produced by a human or ChatGPT' (p.40). Islam & Greenwood: inputs CANNOT be clearly defined, not just are-not — seductive mediation is in-principle irremediable by labels."
+    provenance:
+      created_by: "kulkarni-2024-lindebaum + kulkarni-2024-islam-greenwood"
+      source_log_event: "Lindebaum p.40; Islam-Greenwood p.50"
+  - id: A4
+    statement: "AI co-authorship is acceptable as long as AI 'made a substantial contribution' (ChatGPT's self-reported view to Kulkarni)."
+    rules_out_required: [K10]
+    ruled_out_by: []
+    rules_out_status: "open (Kulkarni intro problematizes but does not resolve)"
+    reasoning: "Kulkarni intro p.3: publishers and ethics officers say AI cannot be author because it cannot assume responsibility OR acquiesce to being an author (Stokel-Walker 2023). But Kulkarni asks: 'But what if the output of the AI is original, credible, and attributable?' — leaving open."
+    provenance:
+      created_by: "kulkarni-2024-intro"
+      source_log_event: "Intro p.3"
+
+# ============================================================================
+# Robustness checks the paper engages
+# ============================================================================
+robustness_checks:
+  - id: RC1
+    statement: "Lindebaum's self-experiment: identical writing instructions given to himself and to ChatGPT; complementary text made available on request for direct comparison."
+    varied_parameter: "agent (human-Lindebaum vs ChatGPT)"
+    range_explored: "single comparison, single prompt"
+    result_stability: "confirmed (per Lindebaum's framing; not publicly published as a side-by-side comparison in the paper)"
+    affects_nodes: [K8, F1]
+    source_method: M2
+    provenance:
+      created_by: "kulkarni-2024-lindebaum"
+      source_log_event: "Acknowledgments p.53"
+    note: |
+      This is the methodologically most ambitious move in the paper and is
+      structurally identical to what the meaningfulness paper would call a
+      RENDERING-EQUIVALENCE check under spine-fixed inputs. Lindebaum's
+      reading: humans and AI produce DIFFERENT outputs on identical input,
+      and the human output is preferable. Spine-extraction-perspective
+      reading: this is a P4 (rendering-equivalence-under-spine-fixedness)
+      check inverted — if the spine is fixed (the writing prompt), the two
+      renderings should be informationally equivalent under P4; Lindebaum's
+      observation that they are NOT equivalent could either falsify P4 OR
+      indicate that the prompt does not fix the spine.
+
+# ============================================================================
+# Limitations (acknowledged within the paper)
+# ============================================================================
+limitations:
+  - id: L1
+    statement: "Curated discussion does not aim at consensus; contributors disagree on key normative questions (e.g., whether to use AI at all)."
+    affects: [K11, K12]
+    severity: "medium"
+    mitigation: "The intro explicitly flags 'Here is where we part company' rather than smoothing dissensus."
+    provenance:
+      created_by: "kulkarni-2024-intro"
+      source_log_event: "Intro p.6"
+  - id: L2
+    statement: "All AI tools discussed are circa-2023 LLMs; rapid model evolution may invalidate specific empirical claims."
+    affects: [F1, F2, F3]
+    severity: "high (acknowledged implicitly by 'at the time of this writing in early 2023')"
+    mitigation: "none explicit"
+    provenance:
+      created_by: "kulkarni-2024-intro"
+      source_log_event: "Intro p.2"
+  - id: L3
+    statement: "Contributor sample is concentrated in elite Western/European MOS institutions (McGill, Oxford, INSEAD, Wharton, Kellogg, Cambridge, Alberta, Stockholm SE, Grenoble, Monash, IIM-Bangalore); voices from non-elite, non-Anglophone, or industry contexts absent."
+    affects: [K1, K2, K11, K12]
+    severity: "medium"
+    mitigation: "not addressed"
+    provenance:
+      created_by: "extractor"
+      source_log_event: "extraction Session 168 — affiliation pattern"
+  - id: L4
+    statement: "No empirical workflow data; all contributions are reflective essays grounded in personal trials or secondary literature. Cameron-Rahman's 'qualitative researchers' frame is partly autoethnographic."
+    affects: [F1, F2, F3, K11]
+    severity: "medium"
+    mitigation: "Explicit in genre choice (essay, not empirical study)"
+    provenance:
+      created_by: "extractor"
+      source_log_event: "extraction Session 168"
+
+# ============================================================================
+# Negative findings: discoveries of absence
+# ============================================================================
+negative_findings:
+  - id: NF1
+    statement: "No consensus on whether AI co-authorship is acceptable in MOS scholarship — even between contributors writing in the same special issue (Mantere-Vaara open; Petriglieri rejects; Glaser-Gehman conditional)."
+    expected_observation: "A normative answer to 'should AI be a co-author?' grounded in scientific norms."
+    source_method: "cross-contributor reading"
+    affects_nodes: [K1, K11]
+    motivates: [K12]
+    provenance:
+      created_by: "extractor"
+      source_log_event: "extraction Session 168"
+  - id: NF2
+    statement: "The paper does NOT propose a quantitative measurement framework for AI's impact on research output, novelty, or quality."
+    expected_observation: "Empirical measurement design (e.g., bibliometric novelty score, replication-rate change, citation-network shift)."
+    source_method: "exhaustive read"
+    affects_nodes: [K1, K3]
+    motivates: []
+    provenance:
+      created_by: "extractor"
+      source_log_event: "extraction Session 168"
+
+# ============================================================================
+# Assumption atoms (assumed-without-test premises)
+# ============================================================================
+assumption_atoms:
+  - id: AA1
+    statement: "AI development continues at current or accelerating pace; LLMs become more capable and more pervasive in research practice."
+    type: "trajectory_assumption"
+    relaxable: true
+    relaxation_consequence: "If AI development stalls or reverses, K1's strong universality claim weakens; specific provocations (K8) may not materialize."
+    affects: [K1, K2, K11]
+    provenance:
+      created_by: "kulkarni-2024-intro"
+      source_log_event: "Intro p.2 — 'AI systems are here to stay'"
+  - id: AA2
+    statement: "Management/organization scholarship is and should remain a HUMAN-CENTERED activity in which 'human centrality and agency in the research process' are values."
+    type: "value_assumption"
+    relaxable: true
+    relaxation_consequence: "If MOS reframes around AI-centered or post-human research practices (Al-Amoudi 2023), the framing of all 7 essays as defending-human-centrality becomes one position among many."
+    affects: [K2, K6, K9, K10, K11]
+    provenance:
+      created_by: "kulkarni-2024-intro"
+      source_log_event: "Abstract; intro p.6"
+  - id: AA3
+    statement: "Theorizing is a distinct cognitive operation from text generation; LLM-generated text that resembles theory is not the same as theorizing."
+    type: "ontological_assumption"
+    relaxable: true
+    relaxation_consequence: "If theorizing IS reducible to high-quality text generation, K8 and K9 collapse."
+    affects: [K5, K8, K9]
+    provenance:
+      created_by: "extractor (synthesized across Mantere-Vaara, Lindebaum, Cameron-Rahman)"
+      source_log_event: "extraction Session 168"
+
+# ============================================================================
+# Stylized facts (aggregated patterns)
+# ============================================================================
+stylized_facts:
+  - id: SF1
+    statement: "Anecdotal evidence across early-adopter MOS scholars shows generative AI produces fabricated citations, generic auto-codes, and corporate-voice prose."
+    aggregates_findings: [F1, F2]
+    aggregation_logic: "Multiple-contributor convergence on similar failure modes despite different use cases (citations for Lindebaum/Petriglieri; coding for van den Broek)."
+    body_sections: ["distributed across essays"]
+    provenance:
+      created_by: "extractor"
+      source_log_event: "extraction Session 168"
+
+# ============================================================================
+# External anchors (the paper's reference list)
+# ============================================================================
+#
+# For each reference, we tag:
+#   - cited_in_proposition: list of K-prefixed propositions actually citing it
+#   - dependency_role: foundational | confirming | contrasting | example | unspecified
+#
+# This gives a SECOND view of the paper's structure (citation dependency
+# graph) per the H_T2_3 hypothesis. See `dependency_dag_comparison` at end
+# for proposition-DAG vs citation-DAG agreement analysis.
+#
+# Notation: tier-1-mgmt = top management journals (AMJ, AMR, ASQ, OS, SMJ,
+# Org Sci, MISQ); tier-1-broad = top general venues (Nature, Science, AJS);
+# tier-2-mgmt = JMI, JMS, OS-Theory, Org-Studies, AMP, AMLE, JBE; book =
+# scholarly monograph; popular = popular press / blog / arxiv.
+
+external_anchors:
+  - citation_key: adler-vandoren-1972-how-to-read-a-book
+    full: "Adler, M. J., & Van Doren, C. (2014). How to read a book: The classic guide to intelligent reading. Simon and Schuster. [orig. 1940/1972]"
+    venue_tier: book
+    cited_in_proposition: [K8]
+    dependency_role: foundational
+  - citation_key: agrawal-gans-goldfarb-2022-chatgpt-hbr
+    full: "Agrawal, A., Gans, J., & Goldfarb, A. (2022). ChatGPT and How AI Disrupts Industries. HBR."
+    venue_tier: popular
+    cited_in_proposition: [K1]
+    dependency_role: confirming
+  - citation_key: aguinis-cummings-2020-an-a-is-an-a
+    full: "Aguinis, H., Cummings, C., Ramani, R. S., & Cummings, T. G. (2020). 'An A is an A': The new bottom line for valuing academic research. AMP, 34(1), 135-154."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K8]
+    dependency_role: confirming
+  - citation_key: alamoudi-2023-politics-of-post-human-technologies
+    full: "Al-Amoudi, I. (2023). The politics of post-human technologies. Organization."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: []
+    dependency_role: unspecified
+  - citation_key: alkaissi-mcfarlane-2023-artificial-hallucinations
+    full: "Alkaissi, H., & McFarlane, S. I. (2023). Artificial Hallucinations in ChatGPT. Cureus."
+    venue_tier: popular  # Cureus is open access, non-management
+    cited_in_proposition: [F1]
+    dependency_role: confirming
+  - citation_key: amabile-2020-creativity-AI-world-surprises
+    full: "Amabile, T. (2020). GUIDEPOST: Creativity, AI, and a World of Surprises. AMD, 6(3): 351-354."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [A1, K8]
+    dependency_role: contrasting
+  - citation_key: amabile-hall-2021-undervalued-self-relevant-research
+    full: "Amabile, T. M., & Hall, D. T. (2021). The undervalued power of self-relevant research. AMP, 35(3), 347-366."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: []
+    dependency_role: unspecified  # cited by Petriglieri narrative
+  - citation_key: anderson-tushman-1990-technological-discontinuities
+    full: "Anderson, P., & Tushman, M. L. (1990). Technological discontinuities and dominant designs. ASQ, 35(4), 604-633."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K1]
+    dependency_role: foundational  # 'dominant design' framing in Glaser-Gehman
+  - citation_key: anthony-2018-status-differences-epistemic-technologies
+    full: "Anthony, C. (2018). To Question or Accept? How Status Differences Influence Responses to New Epistemic Technologies. AMR, 43(4), 661-679."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K6]
+    dependency_role: foundational
+  - citation_key: atlas-ti-2023-ai-coding-beta
+    full: "ATLAS.ti (2023). Introducing: AI Coding Beta powered by OpenAI."
+    venue_tier: popular
+    cited_in_proposition: [F2]
+    dependency_role: example
+  - citation_key: austin-1975-how-to-do-things-with-words
+    full: "Austin, J. L. (1975). How to do things with words. Oxford University Press."
+    venue_tier: book
+    cited_in_proposition: [K7]
+    dependency_role: foundational
+  - citation_key: babayigit-stainthorp-2011-cognitive-linguistic
+    full: "Babayiğit & Stainthorp (2011). Modeling cognitive-linguistic skills and literacy. J Ed Psych, 103(1)."
+    venue_tier: tier-2-mgmt  # cross-disciplinary
+    cited_in_proposition: [K8]
+    dependency_role: confirming
+  - citation_key: balmer-2023-sociological-conversation-chatgpt
+    full: "Balmer, A. (2023). A Sociological Conversation with ChatGPT about AI Ethics, Affect and Reflexivity. Sociology."
+    venue_tier: tier-2-mgmt  # Sociology
+    cited_in_proposition: [K10]
+    dependency_role: confirming
+  - citation_key: barad-2003-posthumanist-performativity
+    full: "Barad, K. (2003). Posthumanist performativity. Signs, 28(3), 801-831."
+    venue_tier: tier-1-broad  # foundational in STS
+    cited_in_proposition: [K7]
+    dependency_role: foundational
+  - citation_key: barley-1986-technology-occasion-structuring
+    full: "Barley, S. R. (1986). Technology as an occasion for structuring. ASQ, 31(1)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K7]
+    dependency_role: foundational
+  - citation_key: barthes-1977-death-of-the-author
+    full: "Barthes, R. (1977). The Death of the Author. In Image, Music, Text. Fontana."
+    venue_tier: book
+    cited_in_proposition: [K5]
+    dependency_role: foundational
+  - citation_key: bender-gebru-2021-stochastic-parrots
+    full: "Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots. FAccT."
+    venue_tier: tier-1-broad  # FAccT
+    cited_in_proposition: [K3, K8, K9]
+    dependency_role: foundational
+  - citation_key: bensinger-2023-chatgpt-amazon-books
+    full: "Bensinger, G. (2023). ChatGPT Launches Boom in AI-Written E-Books on Amazon. Reuters."
+    venue_tier: popular
+    cited_in_proposition: [O2]
+    dependency_role: example
+  - citation_key: berg-seeber-2016-slow-professor
+    full: "Berg, M., & Seeber, B. K. (2016). The slow professor. University of Toronto Press."
+    venue_tier: book
+    cited_in_proposition: [K9]
+    dependency_role: confirming
+  - citation_key: bouchard-2016-trust-distrust-scientific-expertise
+    full: "Bouchard, F. (2016). The roles of institutional trust and distrust in grounding rational deference to scientific expertise. Perspectives on Science, 24(5), 582-608."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K10]
+    dependency_role: foundational
+  - citation_key: browne-2023-italy-chatgpt-ban
+    full: "Browne, R. (2023). Italy became the first Western country to ban ChatGPT. CNBC."
+    venue_tier: popular
+    cited_in_proposition: [O8]
+    dependency_role: example
+  - citation_key: bubeck-2023-sparks-of-agi
+    full: "Bubeck, S., et al. (2023). Sparks of artificial general intelligence. arXiv:2303.12712."
+    venue_tier: popular  # arxiv preprint
+    cited_in_proposition: [K7, K8]
+    dependency_role: confirming
+  - citation_key: cabantous-gond-2011-rational-decision-performative
+    full: "Cabantous, L., & Gond, J. P. (2011). Rational decision making as performative praxis. Org Sci, 22(3)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K7]
+    dependency_role: foundational
+  - citation_key: cameron-2022-making-out-while-driving-gig
+    full: "Cameron, L. D. (2022). 'Making out' while driving: Relational and efficiency games in the gig economy. Org Sci, 33(1)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K9]
+    dependency_role: example  # author's own work as case
+  - citation_key: campbell-2023-chatbots-black-box-search
+    full: "Campbell, C. I. (2023). Chatbots are making the black box of internet search even darker. Inverse."
+    venue_tier: popular
+    cited_in_proposition: [K9]
+    dependency_role: confirming
+  - citation_key: chamorro-premuzic-2023-i-human
+    full: "Chamorro-Premuzic, T. (2023). I, Human. HBR Press."
+    venue_tier: book
+    cited_in_proposition: []
+    dependency_role: unspecified  # Petriglieri narrative
+  - citation_key: charmaz-2006-constructing-grounded-theory
+    full: "Charmaz, K. (2006). Constructing grounded theory. SAGE."
+    venue_tier: book
+    cited_in_proposition: [K9]
+    dependency_role: foundational
+  - citation_key: chomsky-2023-false-promise-of-chatgpt
+    full: "Chomsky, N., Roberts, I., & Watumull, J. (2023). The false promise of ChatGPT. NYT."
+    venue_tier: popular
+    cited_in_proposition: [K5]
+    dependency_role: confirming
+  - citation_key: christianson-2011-using-surprise-as-guide
+    full: "Christianson, M. (2011). Using surprise as a guide: 'Aha' moments. In Carlsen & Dutton (Eds.), Research alive. CBS Press."
+    venue_tier: book
+    cited_in_proposition: [K9]
+    dependency_role: foundational
+  - citation_key: cook-brown-1999-bridging-epistemologies
+    full: "Cook, S. D., & Brown, J. S. (1999). Bridging epistemologies. Org Sci, 10(4)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K6]
+    dependency_role: foundational
+  - citation_key: courpasson-2013-passionate-scholarship
+    full: "Courpasson, D. (2013). On the Erosion of 'Passionate Scholarship.' Organization Studies, 34(9)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: []
+    dependency_role: unspecified
+  - citation_key: creed-2010-being-the-change-institutional
+    full: "Creed, W. E. D., DeJordy, R., & Lok, J. (2010). Being the change. AMJ, 53(6)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K9]
+    dependency_role: example
+  - citation_key: czarniawska-1999-writing-management
+    full: "Czarniawska, B. (1999). Writing management. OUP."
+    venue_tier: book
+    cited_in_proposition: [K1, K5]
+    dependency_role: foundational
+  - citation_key: davenport-2005-thinking-for-living
+    full: "Davenport, T. H. (2005). Thinking for a living. HBR Press."
+    venue_tier: book
+    cited_in_proposition: [K6]
+    dependency_role: definitional_source
+  - citation_key: domingos-2015-master-algorithm
+    full: "Domingos, P. (2015). The master algorithm. Basic Books."
+    venue_tier: book
+    cited_in_proposition: [A2]
+    dependency_role: contrasting  # rival ruled out by van den Broek
+  - citation_key: drucker-1996-landmarks-of-tomorrow
+    full: "Drucker, P. (1996). Landmarks of tomorrow. Routledge."
+    venue_tier: book
+    cited_in_proposition: [K6]
+    dependency_role: foundational  # 'knowledge worker'
+  - citation_key: dutton-2006-explaining-compassion-organizing
+    full: "Dutton, J. E., et al. (2006). Explaining compassion organizing. ASQ, 51(1)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K9]
+    dependency_role: example
+  - citation_key: dwivedi-2023-so-what-if-chatgpt-wrote-it
+    full: "Dwivedi, Y. K., et al. (2023). 'So what if ChatGPT wrote it?' IJIM, 71."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K1, K8]
+    dependency_role: confirming
+  - citation_key: edwards-2023-why-chatgpt-makes-things-up
+    full: "Edwards, B. (2023). Why ChatGPT and Bing Chat are so good at making things up. Ars Technica."
+    venue_tier: popular
+    cited_in_proposition: [F1]
+    dependency_role: confirming
+  - citation_key: eisenhardt-1989-building-theories-case-study
+    full: "Eisenhardt, K. M. (1989). Building theories from case study research. AMR, 14(4)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K9]
+    dependency_role: methodological_source
+  - citation_key: eloundou-2023-gpts-are-gpts
+    full: "Eloundou, T., Manning, S., Mishkin, P., & Rock, D. (2023). GPTs are GPTs: Labor Market Impact. arXiv:2303.10130."
+    venue_tier: popular
+    cited_in_proposition: [K8]
+    dependency_role: confirming
+  - citation_key: espeland-sauder-2007-rankings-reactivity
+    full: "Espeland, W. N., & Sauder, M. (2007). Rankings and reactivity. AJS, 113(1)."
+    venue_tier: tier-1-broad
+    cited_in_proposition: [K7]
+    dependency_role: foundational  # Pachidi's 'regime of quantification'
+  - citation_key: feldberg-2022-task-bind-gender
+    full: "Feldberg, A. C. (2022). The task bind. ASQ, 67(4)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K9]
+    dependency_role: example
+  - citation_key: fiesler-2023-ai-social-consequences-ethical-debt
+    full: "Fiesler, C. (2023). AI has social consequences, but who pays the price? The Conversation."
+    venue_tier: popular
+    cited_in_proposition: [K9]
+    dependency_role: confirming
+  - citation_key: foucault-1969-what-is-author
+    full: "Foucault, M. (1969). What is an author? In Marsh, Caputo, Westphal (Eds.), Modernity. Fordham."
+    venue_tier: book
+    cited_in_proposition: [K5]
+    dependency_role: foundational
+  - citation_key: frey-2019-technology-trap
+    full: "Frey, C. (2019). The technology trap. Princeton."
+    venue_tier: book
+    cited_in_proposition: [A1]
+    dependency_role: contrasting  # rules-out-liberation rival
+  - citation_key: friedland-2019-activating-moral-agency-ethical-ai
+    full: "Friedland, J. (2019). Activating moral agency by design. MIT Sloan MR, 60(4)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K8]
+    dependency_role: confirming
+  - citation_key: gabriel-2016-essay-as-endangered-species
+    full: "Gabriel, Y. (2016). The essay as an endangered species. JMS, 53(2)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K8]
+    dependency_role: foundational
+  - citation_key: gehman-sharma-beveridge-2022-theorizing-institutional
+    full: "Gehman, J., Sharma, G., & Beveridge, A. (2022). Theorizing institutional entrepreneuring. Org Studies, 43(2)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K4, K11]
+    dependency_role: foundational  # ANT framing for Glaser-Gehman
+  - citation_key: glaser-strauss-1967-discovery-grounded-theory
+    full: "Glaser, B. G., & Strauss, A. L. (2017 [1967]). Discovery of grounded theory. Routledge."
+    venue_tier: book
+    cited_in_proposition: [F4]
+    dependency_role: foundational
+  - citation_key: glaser-fiss-kennedy-2016-making-snowflakes
+    full: "Glaser, V. L., Fiss, P. C., & Kennedy, M. T. (2016). Making snowflakes like stocks. Org Sci, 27(4)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [O6]
+    dependency_role: example  # author's own work
+  - citation_key: glaser-gehman-sloan-2023-orgs-as-algorithms
+    full: "Glaser V. L., Gehman J., Sloan J. (2023). Organizations as algorithms. Working paper."
+    venue_tier: popular  # working paper
+    cited_in_proposition: [F4]
+    dependency_role: foundational
+  - citation_key: glaser-pollock-dadderio-2021-biography-of-algorithm
+    full: "Glaser, V. L., Pollock, N., & D'Adderio, L. (2021). The Biography of an Algorithm. Organization Theory, 2(2)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K7]
+    dependency_role: foundational  # core performativity move
+  - citation_key: gond-2016-performativity-organizational-theory
+    full: "Gond, J. P., Cabantous, L., Harding, N., & Learmonth, M. (2016). What do we mean by performativity. IJMR, 18(4)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K7]
+    dependency_role: foundational
+  - citation_key: greenwood-wolframcox-2022-seduced-by-technology
+    full: "Greenwood, M., & Wolfram Cox, J. (2023). Seduced by technology? Org Studies, 44(4)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K10]
+    dependency_role: foundational  # core derivation source
+  - citation_key: pollicino-degregorio-2023-chatgpt-italy-ban
+    full: "Pollicino, O., & De Gregorio, G. (2023). ChatGPT: lessons from Italy's ban. The Conversation."
+    venue_tier: popular
+    cited_in_proposition: [O8, K9]
+    dependency_role: example
+  - citation_key: grodal-anteby-holm-2021-rigor-qualitative-active-categorization
+    full: "Grodal, S., Anteby, M., & Holm, A. L. (2021). Achieving rigor in qualitative analysis. AMR, 46(3)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K9]
+    dependency_role: methodological_source
+  - citation_key: habermas-1971-knowledge-human-interests
+    full: "Habermas, J. (1971). Knowledge and Human Interests. Beacon Press."
+    venue_tier: book
+    cited_in_proposition: [K5]
+    dependency_role: foundational
+  - citation_key: hannigan-2019-topic-modeling-management-research
+    full: "Hannigan, T. R., et al. (2019). Topic modeling in management research. AMA, 13(2)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K7]
+    dependency_role: methodological_source
+  - citation_key: horton-2023-llm-as-simulated-economic-agents
+    full: "Horton, J. J. (2023). LLMs as simulated economic agents."
+    venue_tier: popular
+    cited_in_proposition: []
+    dependency_role: example
+  - citation_key: hosseini-2023-using-ai-scholarly-publications
+    full: "Hosseini, M., Rasmussen, L. M., & Resnik, D. B. (2023). Using AI to write scholarly publications. Accountability in Research."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K10]
+    dependency_role: confirming
+  - citation_key: howard-grenville-2021-caring-courage-curiosity
+    full: "Howard-Grenville, J. (2021). Caring, Courage and Curiosity. Org Theory, 2(1)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: []
+    dependency_role: unspecified  # Petriglieri
+  - citation_key: jensen-mahmud-2023-decentering-sensemaking-mann-gulch
+    full: "Jensen, T., & Mahmud, Y. (2023). Decentering sensemaking: Mann Gulch revisited. Scand J Mgmt, 39(3)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K9]
+    dependency_role: example
+  - citation_key: kelle-1997-theory-building-qualitative-computer
+    full: "Kelle, U. (1997). Theory building in qualitative research and computer programs. Sociological Research Online."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [F2]
+    dependency_role: foundational
+  - citation_key: kellogg-2009-operating-room-relational-spaces
+    full: "Kellogg, K. C. (2009). Operating room: Relational spaces. AJS, 115(3)."
+    venue_tier: tier-1-broad
+    cited_in_proposition: [K9]
+    dependency_role: example
+  - citation_key: ketokivi-mantere-cornelissen-2017-reasoning-analogy
+    full: "Ketokivi, M. J., Mantere, S., & Cornelissen, J. (2017). Reasoning by analogy. AMR, 42(4)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K5]
+    dependency_role: foundational  # Mantere-Vaara: knowledge advances within programs
+  - citation_key: korinek-2023-language-models-economic-research
+    full: "Korinek, A. (2023). Language models and cognitive automation for economic research. NBER."
+    venue_tier: popular
+    cited_in_proposition: [O2]
+    dependency_role: example
+  - citation_key: krakowski-luger-raisch-2023-ai-competitive-advantage
+    full: "Krakowski, S., Luger, J., & Raisch, S. (2023). AI and the changing sources of competitive advantage. SMJ, 44(6)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K11]
+    dependency_role: confirming
+  - citation_key: latour-2005-reassembling-the-social
+    full: "Latour, B. (2005). Reassembling the social. OUP."
+    venue_tier: book
+    cited_in_proposition: [K4]
+    dependency_role: foundational  # Glaser-Gehman epigraph
+  - citation_key: lebovitz-lifshitz-assaf-levina-2022-engage-or-not-ai-critical-judgments
+    full: "Lebovitz, S., Lifshitz-Assaf, H., & Levina, N. (2022). To engage or not to engage with AI. Org Sci, 33(1)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K6, K11]
+    dependency_role: foundational
+  - citation_key: lebovitz-levina-lifshitz-assaf-2021-is-ai-ground-truth
+    full: "Lebovitz, S., Levina, N., & Lifshitz-Assaf, H. (2021). Is AI ground truth really true? MIS Quarterly, 45(3)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: []
+    dependency_role: foundational  # Petriglieri narrative
+  - citation_key: leone-mantere-faraj-2021-open-theorizing
+    full: "Leone, P. V., Mantere, S., & Faraj, S. (2021). Open theorizing in management. AMR, 46(4)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K5]
+    dependency_role: foundational
+  - citation_key: lexis-nexis-2023-judge-slams-attorney-not-using-ai
+    full: "LexisNexis (2023). Judge slams attorney for not using AI in court."
+    venue_tier: popular
+    cited_in_proposition: [O10]
+    dependency_role: example
+  - citation_key: lindebaum-2023-turkeys-voting-christmas
+    full: "Lindebaum, D. (2023). Researchers embracing ChatGPT are like turkeys voting for Christmas. THE."
+    venue_tier: popular
+    cited_in_proposition: [K8]
+    dependency_role: confirming  # author's own pop venue
+  - citation_key: lindebaum-fleming-2023-chatgpt-undermines-reflexivity
+    full: "Lindebaum, D., & Fleming, P. (2023). ChatGPT undermines reflexivity. BJM."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K8]
+    dependency_role: foundational  # Lindebaum's own theoretical anchor
+  - citation_key: lindebaum-vesa-denhond-2020-machine-stops
+    full: "Lindebaum, D., Vesa, M., & Den Hond, F. (2020). Insights from 'The Machine Stops'. AMR, 45(1)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K8]
+    dependency_role: foundational
+  - citation_key: lindebaum-moser-ashraf-glaser-2023-mechanization-of-values
+    full: "Lindebaum, D., Moser, C., Ashraf, M., & Glaser, V. L. (2023). Reading The Technological Society. AMR, 48(3)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K8]
+    dependency_role: foundational  # 'ontological monism'
+  - citation_key: locke-feldman-goldenbiddle-2015-discovery-validation-live-coding
+    full: "Locke, K., Feldman, M. S., & Golden-Biddle, K. (2015). Discovery, validation, and live coding. Handbook of qualitative org research."
+    venue_tier: book
+    cited_in_proposition: [K9]
+    dependency_role: foundational
+  - citation_key: locke-goldenbiddle-1997-constructing-opportunities
+    full: "Locke, K., & Golden-Biddle, K. (1997). Constructing opportunities. AMJ, 40(5)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K1]
+    dependency_role: foundational
+  - citation_key: mcluhan-1964-understanding-media
+    full: "McLuhan, M. (1964). Understanding media. MIT Press."
+    venue_tier: book
+    cited_in_proposition: [K1]
+    dependency_role: foundational  # 'each generation of tech fashions humanity in its own image'
+  - citation_key: merton-1973-sociology-of-science
+    full: "Merton, R. K. (1973). The sociology of science. UCP."
+    venue_tier: book
+    cited_in_proposition: [K12]
+    dependency_role: foundational  # scientific norms (CUDOS)
+  - citation_key: moser-denhond-lindebaum-2022-morality-ai-algorithms
+    full: "Moser, C., den Hond, F., & Lindebaum, D. (2022). Morality in the age of artificially intelligent algorithms. AMLE, 21(1)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K8]
+    dependency_role: foundational
+  - citation_key: nelson-anthony-tripsas-2023-occupational-dynamics-analog-synth
+    full: "Nelson, A., Anthony, C., & Tripsas, M. (2023). 'If I could turn back time'. ASQ, 68(2)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: []
+    dependency_role: unspecified  # Petriglieri narrative
+  - citation_key: noble-2018-algorithms-of-oppression
+    full: "Noble, S. (2018). Algorithms of oppression. NYU Press."
+    venue_tier: book
+    cited_in_proposition: [K9]
+    dependency_role: foundational
+  - citation_key: openai-2023-gpt4-technical-report
+    full: "OpenAI (2023). GPT-4 technical report. arXiv:2303.08774."
+    venue_tier: popular
+    cited_in_proposition: [K7]
+    dependency_role: example
+  - citation_key: orlikowski-1992-duality-of-technology
+    full: "Orlikowski, W. J. (1992). The duality of technology. Org Sci, 3(3)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K9]
+    dependency_role: foundational
+  - citation_key: orlikowski-2002-knowing-in-practice
+    full: "Orlikowski, W. J. (2002). Knowing in practice. Org Sci, 13(3)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K6]
+    dependency_role: foundational
+  - citation_key: orlikowski-scott-2008-sociomateriality
+    full: "Orlikowski, W. J., & Scott, S. V. (2008). Sociomateriality. AMA, 2(1)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K7]
+    dependency_role: foundational
+  - citation_key: orlikowski-scott-2014-apparatuses-of-valuation
+    full: "Orlikowski, W. J., & Scott, S. V. (2014). Apparatuses of valuation in travel. Org Sci, 25(3)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K7]
+    dependency_role: foundational
+  - citation_key: pachidi-berends-faraj-huysman-2021-make-way-for-algorithms
+    full: "Pachidi, S., Berends, H., Faraj, S., & Huysman, M. (2021). Make way for the algorithms. Org Sci, 32(1)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K7]
+    dependency_role: foundational  # Pachidi's own work
+  - citation_key: pachidi-huysman-2017-organizational-intelligence-digital
+    full: "Pachidi, S., & Huysman, M. (2017). Organizational intelligence in the digital age. Routledge."
+    venue_tier: book
+    cited_in_proposition: [K7]
+    dependency_role: foundational
+  - citation_key: pakarinen-huising-2023-relational-expertise
+    full: "Pakarinen, P., & Huising, R. (2023). Relational expertise: What machines can't know. JMS."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K6]
+    dependency_role: foundational  # central anchor for K6
+  - citation_key: park-leahey-funk-2023-papers-patents-less-disruptive
+    full: "Park, M., Leahey, E., & Funk, R. J. (2023). Papers and patents are becoming less disruptive over time. Nature, 613."
+    venue_tier: tier-1-broad
+    cited_in_proposition: [K5, K8]
+    dependency_role: confirming  # supports homogenization claim
+  - citation_key: park-2023-generative-agents
+    full: "Park, J. S., et al. (2023). Generative agents. UIST'23."
+    venue_tier: popular  # UIST is HCI venue
+    cited_in_proposition: [K4]
+    dependency_role: example  # co-author mode reference
+  - citation_key: petriglieri-2020-fk-science-humanize-org-theory
+    full: "Petriglieri, G. (2020). F**k science!? An invitation to humanize org theory. Org Theory, 1(1)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: []
+    dependency_role: unspecified  # Petriglieri's own work
+  - citation_key: petriglieri-ashford-2023-theorizing-gets-personal
+    full: "Petriglieri, G., & Ashford, S. J. (2023). Theorizing gets personal. Org Theory, 4(1)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: []
+    dependency_role: unspecified  # Petriglieri's own work
+  - citation_key: rahman-2019-invisible-cages-algorithmic-evaluations
+    full: "Rahman, H. A. (2019). Invisible Cages. PhD dissertation, Stanford."
+    venue_tier: popular  # dissertation
+    cited_in_proposition: [K9]
+    dependency_role: example
+  - citation_key: rahman-weiss-karunakaran-2023-experimental-hand-platform
+    full: "Rahman, H. A., Weiss, T., & Karunakaran, A. (2023). The Experimental Hand. AMJ."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K9]
+    dependency_role: example
+  - citation_key: saetre-vandeven-2021-generating-theory-abduction
+    full: "Sætre, A. S., & Van de Ven, A. (2021). Generating theory by abduction. AMR, 46(4)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K8]
+    dependency_role: foundational
+  - citation_key: smith-2019-promise-of-ai-reckoning-judgment
+    full: "Smith, B. C. (2019). The promise of AI: Reckoning and judgment. MIT Press."
+    venue_tier: book
+    cited_in_proposition: [K8]
+    dependency_role: foundational  # central reckoning-vs-judgment distinction
+  - citation_key: stokel-walker-2023-chatgpt-listed-as-author
+    full: "Stokel-Walker, C. (2023). ChatGPT listed as author. Nature, 613."
+    venue_tier: tier-1-broad
+    cited_in_proposition: [O2, K1]
+    dependency_role: example
+  - citation_key: strauss-corbin-1998-basics-of-qualitative-research
+    full: "Strauss, A. C., & Corbin, J. M. (1998). Basics of Qualitative Research. SAGE."
+    venue_tier: book
+    cited_in_proposition: [F4]
+    dependency_role: methodological_source
+  - citation_key: susarla-2023-janus-effect-generative-ai
+    full: "Susarla, A., Gopal, R., Thatcher, J. B., & Sarker, S. (2023). The Janus effect of generative AI. ISR, 34(2)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K1, K7]
+    dependency_role: foundational
+  - citation_key: thorp-2023-chatgpt-not-author
+    full: "Thorp, H. H. (2023). ChatGPT is fun, but not an author. Science, 379(6630)."
+    venue_tier: tier-1-broad
+    cited_in_proposition: [O9, K1]
+    dependency_role: foundational
+  - citation_key: trinh-kirsch-castillo-bates-2022-interdisciplinary-research-early-career
+    full: "Trinh, M. P., Kirsch, R., Castillo, E. A., & Bates, D. E. (2022). Forging paths to interdisciplinary research. AMLE, 21(2)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K8]
+    dependency_role: confirming
+  - citation_key: vaara-sonenshein-boje-2016-narratives-sources-stability-change
+    full: "Vaara, E., Sonenshein, S., & Boje, D. (2016). Narratives as sources of stability and change. AMA, 10(1)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K1, K5]
+    dependency_role: foundational
+  - citation_key: vandenbroek-sergeeva-huysman-2021-machine-meets-expert
+    full: "van den Broek, E., Sergeeva, A., & Huysman, M. (2021). When the machine meets the expert. MIS Quarterly, 45(3)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K6, K11]
+    dependency_role: foundational  # van den Broek's own anchor
+  - citation_key: vandis-2023-chatgpt-five-priorities
+    full: "van Dis, E. A. M., et al. (2023). ChatGPT: Five priorities for research. Nature, 614."
+    venue_tier: tier-1-broad
+    cited_in_proposition: [O9, K1]
+    dependency_role: foundational
+  - citation_key: vaswani-2017-attention-is-all-you-need
+    full: "Vaswani, A., et al. (2017). Attention is all you need. NeurIPS."
+    venue_tier: tier-1-broad
+    cited_in_proposition: []
+    dependency_role: foundational  # Glaser-Gehman epigraph-adjacent
+  - citation_key: verbeek-2011-moralizing-technology
+    full: "Verbeek, P. P. (2011). Moralizing technology. UCP."
+    venue_tier: book
+    cited_in_proposition: [K10]
+    dependency_role: foundational
+  - citation_key: vonkrogh-roberson-gruber-2023-novel-research-opportunities-ai
+    full: "von Krogh, G., Roberson, Q., & Gruber, M. (2023). Recognizing and utilizing novel research opportunities with AI. AMJ, 66(2)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K1]
+    dependency_role: confirming
+  - citation_key: waardenburg-huysman-2022-coexistence-cocreation-ai
+    full: "Waardenburg, L., & Huysman, M. (2022). From coexistence to co-creation. Info & Organization, 32(4)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K11]
+    dependency_role: confirming
+  - citation_key: watson-freeman-parmar-2008-connected-moral-agency
+    full: "Watson, G., Freeman, R. E., & Parmar, B. (2008). Connected moral agency in organizational ethics. JBE, 81(2)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K10]
+    dependency_role: definitional_source
+  - citation_key: weick-1995-sensemaking-in-organizations
+    full: "Weick, K. E. (1995). Sensemaking in organizations. SAGE."
+    venue_tier: book
+    cited_in_proposition: [K9]
+    dependency_role: foundational
+  - citation_key: weick-1998-attitude-of-wisdom
+    full: "Weick, K. E. (1998). The attitude of wisdom. New Lexington."
+    venue_tier: book
+    cited_in_proposition: [K11]
+    dependency_role: confirming  # Glaser-Gehman closing — doubt as core
+  - citation_key: whiteman-cooper-2011-ecological-sensemaking
+    full: "Whiteman, G., & Cooper, W. H. (2011). Ecological sensemaking. AMJ, 54(5)."
+    venue_tier: tier-1-mgmt
+    cited_in_proposition: [K9]
+    dependency_role: example
+  - citation_key: woodmansee-1992-on-the-author-effect
+    full: "Woodmansee, M. (1992). On the author effect. Case Legal Studies."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K5]
+    dependency_role: foundational
+  - citation_key: woodmansee-1994-author-art-market
+    full: "Woodmansee, M. (1994). The author, art, and the market. Columbia UP."
+    venue_tier: book
+    cited_in_proposition: [K5]
+    dependency_role: foundational
+  - citation_key: yore-hand-florence-2004-scientists-views-of-science-writing
+    full: "Yore, L. D., Hand, B. M., & Florence, M. K. (2004). Scientists' views of writing. J Res Sci Teaching, 41(4)."
+    venue_tier: tier-2-mgmt
+    cited_in_proposition: [K10]
+    dependency_role: confirming
+  - citation_key: pierre-adams-2015-writing-as-method
+    full: "Pierre, A. S., & Adams, E. (2015). Writing as method. Blackwell Encyclopaedia of Sociology."
+    venue_tier: book
+    cited_in_proposition: [K10]
+    dependency_role: foundational
+  - citation_key: ziman-2001-real-science
+    full: "Ziman, J. (2001). Real science. CUP."
+    venue_tier: book
+    cited_in_proposition: [K12]
+    dependency_role: foundational  # scientific norms anchor
+  - citation_key: zhang-2023-survey-chatgpt-aigc
+    full: "Zhang, C., et al. (2023). One small step for generative AI, one giant leap for AGI. arXiv:2304.06488."
+    venue_tier: popular
+    cited_in_proposition: [K4, K8]
+    dependency_role: confirming
+  - citation_key: zhao-2023-survey-of-large-language-models
+    full: "Zhao, W. X., et al. (2023). A survey of large language models. arXiv:2303.18223."
+    venue_tier: popular
+    cited_in_proposition: [K4, K12]
+    dependency_role: confirming
+  # ~14 additional non-load-bearing references in the paper bibliography
+  # (Bender 2021 cited above; Mollick, Long, Christiano, Ouyang, Wei,
+  # Xie & Min, Li 2023, Lightman 2023, Spataro 2023, Suzman 2020,
+  # Kennedy-Phillips 2023, Murray 2021, Buchholtz-Rosenthal 2008,
+  # Saenko 2023, Perrigo 2023, Spradley 1979/1980, Weiss 1995, Sutton
+  # 1988, Bensinger 2023, Podolny 2015, Instats 2023) are recorded by
+  # full citation in the paper but not propagated to spine entries; they
+  # are accessible by name in the paper's references list and primarily
+  # play 'example' or 'unspecified' dependency_role.
+
+# ============================================================================
+# Dependency-DAG vs Citation-DAG comparison (H_T2_3 hypothesis)
+# ============================================================================
+dependency_dag_comparison:
+  proposition_dag_summary: |
+    The retroactive proposition DAG looks like:
+      K1 (universal AI-reshapes-research)
+        └─ K2 (double-edged) [Kulkarni framing]
+            └─ K3 (cost-asymmetry) ★★★ CORE OVERLAP WITH MEANINGFULNESS-P3
+                ├─ K8 (LLMs impoverish theorizing) [Lindebaum]
+                └─ K11 (hybrid forms) [van den Broek + Glaser-Gehman]
+                    └─ K12 (governance: cite/transparency/IRB) [Glaser-Gehman]
+            └─ K5 (authorship 4-fold threat) [Mantere-Vaara]
+        └─ K6 (knowledge is relational) [van den Broek]
+            └─ K7 (LLMs are performative) [Pachidi]
+                └─ K10 (seductive mediation) [Islam-Greenwood]
+            └─ K9 (qualitative-surprise distinctive) [Cameron-Rahman]
+        └─ K4 (3 agentic modes) [Glaser-Gehman empirical observation]
+            └─ K12 (governance taxonomy)
+  citation_dag_observation: |
+    The citation graph reveals BRANCH-CLUSTERED dependency: each contributor
+    leans heavily on their own prior work + a small canonical anchor set,
+    with cross-essay citation surprisingly sparse:
+      - Mantere & Vaara cite Ketokivi-Mantere-Cornelissen 2017, Leone-Mantere-Faraj 2021, Vaara-Sonenshein-Boje 2016 (own/co-authored) + Foucault, Barthes, McLuhan, Park-Leahey-Funk
+      - van den Broek cites van den Broek-Sergeeva-Huysman 2021, Pakarinen-Huising 2023, Lebovitz 2022, Anthony 2018, Cook-Brown 1999, Orlikowski 2002, Domingos 2015 (ruled out)
+      - Pachidi cites Pachidi-Berends-Faraj-Huysman 2021, Glaser-Pollock-D'Adderio 2021, Orlikowski-Scott 2008/2014, Cabantous-Gond 2011, Gond et al. 2016, Espeland-Sauder 2007, Austin 1975, Barad 2003
+      - Glaser & Gehman cite Latour 2005 (epigraph), Glaser-Gehman-Sloan 2023, Gehman-Sharma-Beveridge 2022, Glaser-Fiss-Kennedy 2016, Strauss-Corbin 1998, Glaser-Strauss 1967, Merton 1973, Ziman 2001, Anderson-Tushman 1990
+      - Petriglieri cites Petriglieri 2020, Petriglieri-Ashford 2023, Petriglieri-Petriglieri 2015/2022, Petriglieri-Wood-Petriglieri 2011, Chamorro-Premuzic 2023, Pakarinen-Huising 2023
+      - Lindebaum cites Lindebaum-Fleming 2023, Lindebaum-Vesa-Den Hond 2020, Lindebaum-Moser-Ashraf-Glaser 2023, Lindebaum-Ramirez 2023, Smith 2019, Moser-den Hond-Lindebaum 2022, Bender 2021, Adler-Van Doren 1972, Eloundou 2023, Gabriel 2016
+      - Cameron & Rahman cite Cameron 2022, Rahman 2019/2023, Christianson 2011, Charmaz 2006, Locke et al. 2015/2022, Grodal 2021, Bender 2021, Eisenhardt 1989, Spradley 1979/1980
+      - Islam & Greenwood cite Greenwood-Wolfram Cox 2022, Verbeek 2011, Watson-Freeman-Parmar 2008, Bouchard 2016, Hosseini 2023, Balmer 2023, Pierre-Adams 2015
+  agreement_with_proposition_dag: |
+    The proposition DAG and citation DAG AGREE on:
+      - K3 is the highest-degree node by both measures (most antecedents +
+        most-shared citations across contributors)
+      - K6 (relational knowledge) anchors a tightly-cited cluster
+        (van den Broek's MIS Quarterly paper + Pakarinen-Huising + Anthony +
+        Lebovitz) that maps cleanly to the proposition DAG.
+      - K10 (seductive mediation) is a CLEAR single-source dependency on
+        Greenwood-Wolfram-Cox 2022 — citation graph confirms the single-edge
+        derivation D3.
+    The proposition DAG and citation DAG DISAGREE on:
+      - The proposition DAG suggests K8 (impoverishment) has K3 as antecedent,
+        but Lindebaum's CITATION pattern does NOT cite van den Broek's or
+        Cameron-Rahman's work that proposes K3. The cost-asymmetry is
+        independently re-derived rather than building on co-essayists.
+        => Suggests the curated-discussion genre's BRANCH-CLUSTERED citation
+        pattern leaves real propositions SEMANTICALLY connected but
+        bibliographically disconnected.
+      - K1 has very wide citation breadth but very thin SHARED citation —
+        each contributor cites their own-cluster work to support the same
+        meta-claim. This is consistent with the curated-discussion genre:
+        consensus on the foundational claim is rhetorical, not citation-mediated.
+  implication_for_meaningfulness_paper: |
+    The retroactive-spine vs citation-graph comparison illustrates a key
+    feature of the curated-discussion genre that the meaningfulness paper
+    can FORK from: multi-author papers tend to have HIGH spine-level
+    convergence but LOW citation-level convergence. The spine-first
+    drafting protocol would (a) make spine-convergence visible without
+    requiring citation-convergence, and (b) flag the structural gap as
+    a feature, not a bug, of curated discussions.
+
+# ============================================================================
+# Validation case findings (for the meaningfulness paper)
+# ============================================================================
+validation_payoff:
+  primary_overlap: |
+    Kulkarni et al. 2024 INDEPENDENTLY articulate the cost-asymmetry result
+    (our P3) without using the log/graph/render hierarchy or the meaning/
+    meaningfulness vocabulary. Specifically:
+      - Mantere & Vaara: literature review + writing get cheaper; theorizing
+        + judgment do not (p.7-8)
+      - Lindebaum Provocation #1: reading-for-understanding and writing-
+        as-thinking cannot be outsourced; ChatGPT discourages both (p.37-38)
+      - Cameron & Rahman: 'surprise' as LLM-low-frequency-token vs
+        researcher-emergent-confirmation/disconfirmation are structurally
+        different operations (p.43)
+      - van den Broek: AI handles pattern extraction; relational interpretation
+        remains expert work (p.13-16)
+    This is a STRONG natural-experiment confirmation for P3: a 13-author
+    curated discussion at a JMI venue, published in early 2024 without
+    knowledge of the meaningfulness-paper framework, independently produces
+    the cost-asymmetry shape. The vocabularies differ (formal-rationality
+    vs substantive-rationality; variance-reducing vs variance-seeking;
+    extractable vs relational knowledge) but the structural claim is the
+    same: AI cost-reduction is uneven, with the "meaningfulness layer"
+    (judgment, embodied interpretation, theoretical commitment, cohort-
+    specific rendering) staying expensive.
+  secondary_overlaps:
+    - "K6 (knowledge-is-relational) maps to our boundary condition C3 (audience-schema-divergence-is-nontrivial)"
+    - "K7 (LLMs are performative) maps to our claim about how artifact-form shapes meaning-extraction"
+    - "K10 (seductive mediation) is structurally analogous to our concern about render-drift unanchored from spine"
+    - "K11 (hybrid forms) + K12 (governance taxonomy) maps to our division-of-labor section (Section 8 — Discussion)"
+  divergences:
+    - "Kulkarni paper does NOT distinguish log/graph/render (no three-level hierarchy)"
+    - "Kulkarni paper does NOT propose a formal protocol (no spine-first equivalent)"
+    - "Kulkarni paper does NOT operationalize the cost-asymmetry into a measurable framework"
+    - "Kulkarni paper LACKS the prescriptive intervention layer — it stops at problem articulation"
+    - "Petriglieri's REJECTION of hybrid work (K11 dissent) is a stance the meaningfulness paper does not engage — possible FORK point for our Section 8"
+  spine_first_self_application_observation: |
+    The Kulkarni paper is itself a textbook case of why spine-first drafting
+    would help. Its 7 essays SHARE substantial proposition-level overlap
+    (K1, K2, K3 endorsed by all) but the prose lacks a unified spine —
+    forcing the editor (Kulkarni) to do the integrative work in a 5-page
+    intro that explicitly flags dissensus. A SPINE.yaml of this curated
+    discussion (constructed pre-prose) would have surfaced the K1/K2/K3
+    consensus as the shared substrate AND made dissensus on K8/K11
+    visible as explicit FORK operations rather than as prose-level
+    "here is where we part company."
+  implications_for_T2_validation:
+    "T2 PASSES with strong overlap: a contemporary, theoretically adjacent,
+     tier-2-venue multi-author paper independently produces the cost-
+     asymmetry shape (K3 ≈ P3), supports the cost-asymmetry-implies-
+     intervention reasoning (Glaser-Gehman governance taxonomy K12), and
+     exhibits the consequences of spine-LESS drafting (the curated-
+     discussion genre's branch-clustered citation pattern + editor-as-
+     spine-substitute introduction). This is the strongest possible
+     contemporary-venue-fit anchor for the meaningfulness paper."
+
+# ============================================================================
+# Open questions surfaced by extraction
+# ============================================================================
+open:
+  - "Should the meaningfulness paper cite specific Kulkarni contributors (Lindebaum, van den Broek, Cameron-Rahman) when invoking P3, or cite the paper as a whole?"
+  - "The Petriglieri rejection of hybrid work (K11 dissent) deserves a Section 8 engagement — is hybrid the only response, or is principled refusal (Petriglieri's stance) also legitimate?"
+  - "Glaser-Gehman's three-mode taxonomy (K4) is structurally analogous to our three-level hierarchy but operates at a different abstraction (modes of AI use vs hierarchy of artifact layers). A footnote distinguishing the two would prevent reader confusion."
+  - "Lindebaum's self-experiment (RC1) is methodologically closer to our T3 self-application than to T1 (Heisenberg-Schrödinger) or T2 (this paper). Should it be reframed as a partial-T3 precedent?"
+
+# ============================================================================
+# Changelog
+# ============================================================================
+changelog:
+  - date: 2026-05-26
+    operation: lock
+    by: "extractor (Claude Opus 4.7) under retroactive-spine-extraction protocol"
+    note: |
+      Initial extraction from full PDF (open access via Oxford ORA mirror).
+      Schema v0.2. 12 propositions (K1-K12); 10 observations; 2 methods;
+      4 findings; 3 derivations; 4 alternative_explanations; 1 robustness_check;
+      4 limitations; 2 negative_findings; 3 assumption_atoms; 1 stylized_fact;
+      ~115 external_anchors with per-citation cited_in_proposition +
+      dependency_role tags; dependency-DAG-vs-citation-DAG comparison
+      pass complete.
+
+# ============================================================================
+# PROSE NOTES (commented out — for handoff to meaningfulness paper drafting)
+# ============================================================================
+#
+# WHAT WAS SUCCESSFULLY EXTRACTED:
+# - Full structural decomposition of all 7 essays + intro + Table 1
+# - 12 distinct propositions with per-contributor attribution preserving dissensus
+# - All 10 grounding observations from contributor self-experiments
+# - Complete reference list (~115 anchors) with dependency-role tagging
+# - Proposition-DAG vs citation-DAG comparison per H_T2_3
+# - Full overlap analysis with meaningfulness-paper P1-P4
+#
+# WHAT'S MISSING / WEAK:
+# - Some citation-role assignments are best-guess (dependency_role: unspecified
+#   for ~15 references that play narrative/anecdotal roles)
+# - Page-level body_sections are accurate for major essays but coarse for
+#   intro
+# - No second-coder Cohen's kappa (single extractor); per M2 in
+#   meaningfulness-paper SPINE.yaml, inter-coder reliability on a 20%
+#   subsample is the proper validation move
+# - Three contributors (Mantere-Vaara, Islam-Greenwood) provide somewhat
+#   fewer concrete observations; their essays are more position-papers
+#   than reflective-trial reports — propositions K5, K10 are anchored more
+#   in citation than in observation, which the spine reflects honestly
+#
+# 5-7 MOST LOAD-BEARING PROPOSITIONS (ranked by cross-contributor endorsement
+# + downstream antecedent-density):
+# 1. K3 (cost-asymmetry across research activities) — 5 contributors endorse;
+#    HIGHEST overlap with meaningfulness-P3; THIS IS THE PAYOFF
+# 2. K1 (AI reshapes every phase of research) — all 13 authors at framing level
+# 3. K6 (knowledge is relational, not algorithmic) — 3 contributors endorse;
+#    foundational to K7, K9, K11
+# 4. K11 (future is hybrid human-AI) — endorsed by 3 contributors with
+#    1 dissenter (Petriglieri); maps to division-of-labor section
+# 5. K4 (3 agentic modes) + K12 (3 governance principles) — Glaser-Gehman's
+#    Table 1; the most operationalizable contribution
+# 6. K7 (LLMs are performative) — Pachidi's load-bearing claim with strongest
+#    citation depth in STS
+# 7. K10 (seductive mediation blurs moral agency) — Islam-Greenwood's
+#    contribution; the most explicitly ethical proposition
+#
+# CODER-JUDGMENT FLAGS:
+# - K3 is a SYNTHETIC extraction: no single contributor states it in the
+#   exact "cost-asymmetry across activities" form. It is derived by reading
+#   ACROSS Mantere-Vaara, van den Broek, Lindebaum, Cameron-Rahman. Future
+#   coders may disagree on whether K3 should be (a) one proposition, (b)
+#   four contributor-specific propositions, or (c) a stylized fact rather
+#   than a proposition. We chose (a) because the cost-asymmetry SHAPE is
+#   shared even where the dimensions differ.
+# - K11 (hybrid forms) has explicit DISSENT from Petriglieri — preserved
+#   in contributors_dissenting:. Alternative reading: Petriglieri's stance
+#   is a SEPARATE proposition K11' (principled non-engagement is legitimate).
+#   We chose to record as dissent rather than separate proposition because
+#   Petriglieri does not propose a positive alternative for the FIELD,
+#   only for himself.
+# - A4 (AI-as-substantial-contributor-counts-as-author) is left OPEN
+#   because Kulkarni explicitly poses the question but does not answer
+#   it. A second coder might classify as a proposition rather than a rival.
+#
+# THE MOST INTERESTING POINT FOR THE MEANINGFULNESS PAPER:
+#
+# Kulkarni et al. 2024 ALREADY ARGUE OUR P3 — but they argue it (a) without
+# the log/graph/render decomposition, (b) without a measurable framework,
+# and (c) without a prescriptive intervention. This is the natural-experiment
+# payoff in its strongest form:
+#
+#   - INDEPENDENT REPLICATION OF THE SHAPE OF P3: the cost-asymmetry result
+#     is articulated by 5 of 7 essays in this contemporary tier-2 venue paper
+#     from scholars who have never read our paper and who do not share our
+#     vocabulary. They use different framings — Smith's reckoning-vs-judgment
+#     (Lindebaum), variance-reducing-vs-variance-seeking (Cameron-Rahman),
+#     extractable-vs-relational knowledge (van den Broek), formal-vs-
+#     substantive rationality (Lindebaum) — but the structural claim is
+#     identical: SOME research activities get cheap, OTHERS stay expensive
+#     or get RELATIVELY more expensive, and the activities that stay
+#     expensive are the ones requiring human judgment / embodiment /
+#     theoretical commitment.
+#
+#   - WHAT KULKARNI MISSES THAT WE PROVIDE: (1) the log/graph/render
+#     three-level decomposition that says WHICH activities go which way and
+#     WHY; (2) a measurable framework operationalized as SPINE.yaml; (3) a
+#     prescriptive intervention (spine-first drafting protocol) that makes
+#     the meaning-operations vs meaningfulness-operations split workable.
+#
+#   - SPINE-FIRST DRAFTING PROTOCOL'S BEST EXEMPLAR IS THE KULKARNI PAPER
+#     ITSELF: the paper exhibits the consequences of spine-LESS
+#     curated-discussion drafting — branch-clustered citation patterns,
+#     editor-as-spine-substitute, "here is where we part company"
+#     framing — exactly the failure modes that spine-first drafting
+#     mitigates. The meaningfulness paper can cite Kulkarni et al. 2024
+#     both as (a) precedent (K3 ≈ P3) AND (b) cautionary tale (what
+#     happens when you DON'T have a shared spine: dissensus surfaces
+#     too late, in prose, rather than being made operationally explicit
+#     as FORK operations at the spine level).
+#
+#   - THE ANCHOR LINE: "Kulkarni, Mantere, Greenwood et al. (2024) bring
+#     thirteen leading MOS scholars into a curated discussion that
+#     independently articulates the cost-asymmetry result — different
+#     vocabularies (reckoning-vs-judgment; variance-reducing vs variance-
+#     seeking; extractable vs relational knowledge), same structural
+#     claim: generative AI lowers the cost of some research activities
+#     and not others, and the activities that stay expensive are those
+#     that require judgment, embodied interpretation, and theoretical
+#     commitment. The natural-experiment payoff for the present paper
+#     is dual: their result is our P3, and their drafting process —
+#     branch-clustered citations, editor-as-spine-substitute — is the
+#     spine-LESS condition that motivates our spine-first protocol."

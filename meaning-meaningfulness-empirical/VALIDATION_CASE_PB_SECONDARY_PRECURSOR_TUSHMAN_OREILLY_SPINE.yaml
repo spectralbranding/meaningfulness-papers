@@ -1,0 +1,115 @@
+# VALIDATION_CASE_PB_SECONDARY_PRECURSOR — Tushman & O'Reilly (1996) CMR
+# Retroactive spine extraction per paper_a:appendix_B_protocol. Released
+# standalone at v1.0.0 awaiting v1.1.0 long-gap partner extraction
+# (Duncan 1976 chapter OR substitute). This single-paper spine is NOT
+# paired with a twin at v1.0.0; no Rec computation against a partner.
+
+extraction_version: "1.0.0"
+extraction_session: "Session E Phase 2"
+extraction_date: "2026-05-27"
+schema_version: "0.2"
+
+source_paper:
+  citation_key: tushman-oreilly-1996-ambidextrous-organizations
+  full_citation: "Tushman, M. L., & O'Reilly, C. A. (1996). Ambidextrous Organizations: Managing Evolutionary and Revolutionary Change. California Management Review 38(4): 8–30."
+  doi: "10.2307/41165852"
+  publication_date: "1996-07 (Summer 1996)"
+  venue: "California Management Review (practitioner-oriented; not peer-reviewed academic-tier; intentional positioning for practitioner readership)"
+  source_pdf: "research/references/tushman1996.pdf (23 pages reproduced-with-permission)"
+  v1_1_0_role: "Secondary-pair-precursor awaiting partner extraction (Duncan 1976 OR substitute). At v1.0.0, this spine is released standalone for transparency + v1.1.0 commitment concreteness."
+
+paper_thesis: |
+  Successful organizations face an enduring pattern in which prior success
+  precedes failure during technology discontinuities. To remain successful
+  across long periods, organizations must be ambidextrous — able to implement
+  both incremental (evolutionary) and revolutionary (discontinuous) change.
+  Ambidexterity requires maintaining multiple structures, processes, and
+  cultures within the same firm, integrated by a senior leadership team.
+
+# ============================================================================
+# Propositions (v1.1.0 partner extraction will check antecedent preservation)
+# ============================================================================
+propositions:
+  - id: TO_P1
+    statement: "Across industries, prior success often precedes failure: leading firms in one technology era typically do not lead the next."
+    falsifier: "Cross-industry leadership-turnover analysis shows incumbent advantage dominates across technology eras."
+    body_location: "§Patterns in Organization Evolution"
+    antecedents: ["industry-evolution literature; Schumpeter creative destruction; Foster 1986 Innovation"]
+
+  - id: TO_P2
+    statement: "To remain successful over long periods, organizations must be ambidextrous — capable of implementing both incremental and revolutionary change."
+    falsifier: "Long-run-successful organizations rely on either incremental OR revolutionary change exclusively without ambidexterity."
+    body_location: "abstract; §Patterns; §Ambidextrous Organizations"
+    antecedents: ["March 1991 exploration/exploitation"]
+
+  - id: TO_P3
+    statement: "Established organizations struggle with revolutionary change because of internal inertia (structural, cultural, political); the same factors that drive incremental success obstruct discontinuous response."
+    falsifier: "Successful incumbents transition through technology discontinuities at rates comparable to new entrants."
+    body_location: "§Cycles of Technology and Organizational Change"
+    antecedents: ["Hannan-Freeman 1984 structural inertia"]
+
+  - id: TO_P4
+    statement: "Ambidextrous organizations use multiple structures, processes, and cultures within the same firm to handle exploration and exploitation in parallel."
+    falsifier: "Successful ambidextrous outcomes occur without internal-structural duality."
+    body_location: "§Ambidextrous Organizations"
+    antecedents: ["Lawrence-Lorsch 1967 differentiation/integration", "Galbraith 1973"]
+
+  - id: TO_P5
+    statement: "Senior leadership team integration is the central managerial mechanism enabling ambidexterity — the team must hold tensions between exploration and exploitation explicitly."
+    falsifier: "Ambidextrous outcomes achieved without senior-team integration of the tension."
+    body_location: "§Managing Ambidextrous Organizations"
+    antecedents: ["TO_P3", "TO_P4"]
+
+  - id: TO_P6
+    statement: "Organizational culture is the primary lever for maintaining ambidexterity — explicit cultural management is required to prevent the dominant culture from suppressing the minority innovation effort."
+    falsifier: "Ambidextrous orgs maintain structural duality without cultural-management investment."
+    body_location: "§Cultural Levers"
+    antecedents: ["TO_P4", "O'Reilly 1989 corporations culture commitment"]
+
+# ============================================================================
+# Observations
+# ============================================================================
+observations:
+  - id: TO_O1
+    statement: "Semiconductor industry 1955-1995 leadership turnover (Figure 1): RCA/Sylvania/GE/Raytheon/Westinghouse → Intel/Motorola/TI/NEC etc. across vacuum-tube → transistor → semiconductor → IC → VLSI eras."
+    role: "headline_empirical_pattern"
+    body_location: "Figure 1; §Patterns in Organization Evolution"
+
+  - id: TO_O2
+    statement: "Cases of HP, J&J, ABB, GE-1980s as ambidextrous-organization exemplars."
+    role: "illustrative_cases"
+    body_location: "§Ambidextrous Organizations"
+
+# ============================================================================
+# Methods
+# ============================================================================
+methods:
+  - id: TO_M1
+    statement: "Practitioner-targeted theoretical synthesis with industry-case illustrations; not empirical hypothesis testing."
+    type: "practitioner_oriented_framework"
+    venue_register: "California Management Review (practitioner tier)"
+    body_location: "throughout"
+
+# ============================================================================
+# Findings
+# ============================================================================
+findings:
+  - id: TO_F1
+    statement: "Ambidexterity is a learnable organizational capability; specific structural + cultural + leadership patterns distinguish ambidextrous from non-ambidextrous firms."
+    type: "framework_synthesis"
+    source_propositions: [TO_P2, TO_P4, TO_P5, TO_P6]
+    body_location: "§Lessons; §Conclusion"
+
+# ============================================================================
+# Provenance
+# ============================================================================
+provenance:
+  extraction_method: "paper_a:M2 retroactive spine extraction"
+  coder: "author (single-coder at v1.0.0; κ scheduled v1.1.0)"
+  source_pdf_first_page_verified: "2026-05-27 via PyPDF2"
+  spine_node_count: 6  # propositions
+  observation_count: 2
+  method_count: 1
+  finding_count: 1
+  v1_0_0_status: "Standalone precursor (not paired); Rec metric requires v1.1.0 partner extraction"
+  v1_1_0_commitment: "Pair with Duncan 1976 OR substitute long-gap partner; compute Rec(G_TO, G_partner) on linked propositions with preserved antecedents."

@@ -1,0 +1,864 @@
+# VALIDATION_CASE_T1_SCHRODINGER_SPINE.yaml
+#
+# Retroactive spine extraction from Schrödinger 1926 wave-mechanics
+# papers + the 1926 equivalence paper, performed under SPINE schema v0.2
+# for use as Validation Case T1 of the meaningfulness paper (2026ao).
+#
+# Source artifact: research/references/schrodinger_1928_collected_papers_wave_mechanics.pdf
+# (E. Schrödinger, Collected Papers on Wave Mechanics, Blackie & Son, London, 1928;
+#  English translation of Abhandlungen zur Wellenmechanik, J.A. Barth, 2nd German ed., 1928.)
+#
+# Twin-pair partner: Heisenberg (1925) + Born-Jordan (1925) + Born-Heisenberg-Jordan
+# (1926) matrix-mechanics series, extracted in a sibling YAML (T1 Heisenberg side).
+#
+# Critical proposition for the meaningfulness paper: S4 (mathematical equivalence
+# of wave mechanics and matrix mechanics). S4 is the empirical-historical instance
+# of P4 (rendering-equivalence under spine-preservation) and grounds the entire T1
+# natural-experiment claim. See VALIDATION_CASE_T1_SCHRODINGER_EQUIVALENCE_NOTES.md.
+
+spine_version: "0.2"
+spine_doc_version: "0.1.0"
+artifact_key: "schrodinger-1926-wave-mechanics"
+validation_case: "T1 (Schrödinger side of the Heisenberg-Schrödinger twin pair)"
+parent_paper: "2026ao (meaningfulness paper)"
+status: "Phase-0.5 retroactive extraction; single-coder; AA2 inter-coder κ pending."
+
+title: >-
+  Schrödinger 1926 Wave-Mechanics Series (Quantisation as a Problem of Proper
+  Values, Parts I–IV) + the 1926 Equivalence Paper ("On the Relation between
+  the Quantum Mechanics of Heisenberg, Born, and Jordan, and that of Schrödinger")
+
+thesis_of_extracted_artifact: |
+  Atomic-scale mechanics is governed by a wave equation (eigenvalue problem for a
+  linear, self-adjoint differential operator on configuration space) whose proper
+  values reproduce the empirically known atomic spectra (Balmer, Lyman, Paschen
+  series; harmonic oscillator; rigid rotator; Stark effect; Sommerfeld fine
+  structure). The proper-value spectrum of the wave equation is the energy-level
+  structure of the atom; the proper functions encode its dynamical content. The
+  resulting formalism is mathematically equivalent to the matrix mechanics of
+  Heisenberg, Born, and Jordan: the two formulations differ in apparatus but
+  agree on every empirical prediction and are mutually constructible.
+
+# ============================================================================
+# Boundary conditions for the extracted artifact
+# ============================================================================
+boundary_conditions:
+  - id: C1
+    statement: "Non-relativistic regime (treated rigorously in Parts I–III)."
+    observable: "Velocities small compared with c; relativistic-magnetic generalisation only sketched (Part IV §6)."
+    excludes: "Full relativistic electron dynamics (Dirac 1928); high-energy phenomena."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf p.57 §5 (note on relativistic extension)"
+
+  - id: C2
+    statement: "Single-electron and few-electron atoms; multi-electron systems handled by approximation."
+    observable: "Hydrogen treated exactly (Part I §2); heavier atoms only sketched (Abstract p. xiii)."
+    excludes: "Exact treatment of multi-electron correlations."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Abstract p.xiii"
+
+  - id: C3
+    statement: "Conservative systems (potential V independent of time) in Parts I–III; non-conservative cases addressed in Part IV §1–§2."
+    observable: "Vibration equation reduced to amplitude equation only when V is time-independent."
+    excludes: "Strongly time-dependent driving outside perturbation regime."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part IV §1 p.102"
+
+# ============================================================================
+# Observations: empirical data Schrödinger takes as input
+# ============================================================================
+observations:
+  - id: S_O1
+    statement: "Hydrogen-atom Balmer series: spectral lines ν = R(1/n² − 1/m²) with R = Rydberg constant; integer n, m."
+    raw_data_pointer: "Spectroscopic tables of Bohr-era atomic physics; assumed-known to 1926 audience."
+    instrument: "Optical spectroscopy (pre-existing)."
+    timestamp: "pre-1926 (Balmer 1885; Rydberg 1888)"
+    conditions_at_capture: "Visible-range hydrogen emission spectrum."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part I §2 p.2 (Balmer terms)"
+    body_sections: ["Part I §2 (Keplerian motion / hydrogen)"]
+
+  - id: S_O2
+    statement: "Hydrogen Lyman series and Paschen series; full discrete + continuous hydrogen spectrum."
+    raw_data_pointer: "Spectroscopic tables; cited via Part III addendum (Pauli, Proof Correction p.101)."
+    instrument: "Optical / UV / IR spectroscopy (pre-existing)."
+    timestamp: "pre-1926"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part III addendum p.101"
+    body_sections: ["Part III §3 (Lyman, Balmer intensities via Pauli)"]
+
+  - id: S_O3
+    statement: "Stark effect: shift / splitting of hydrogen spectral lines in static external electric field."
+    raw_data_pointer: "Stark 1913 + subsequent decade of measurements."
+    instrument: "Spectroscopy in applied electric field."
+    timestamp: "1913 onward"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Abstract p.ix (Stark effect pp.76-82, 93-96)"
+    body_sections: ["Part III §5 (Stark effect)"]
+
+  - id: S_O4
+    statement: "Harmonic-oscillator and rigid-rotator spectra (vibrational and rotational molecular spectra)."
+    raw_data_pointer: "Molecular spectroscopy of the 1910s-20s."
+    instrument: "IR / Raman / band spectroscopy."
+    timestamp: "pre-1926"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Abstract p.ix (harmonic oscillator pp.30-34; rigid rotator pp.35-36; non-rigid pp.36-40)"
+    body_sections: ["Part II"]
+
+  - id: S_O5
+    statement: "Sommerfeld fine-structure of hydrogen levels (relativistic spin-orbit-like splitting; ½-integral azimuthal quantum number)."
+    raw_data_pointer: "Sommerfeld 1916; later refined."
+    instrument: "High-resolution spectroscopy."
+    timestamp: "1916 onward"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part IV §6 p.118"
+    body_sections: ["Part IV §6 (relativistic-magnetic generalisation)"]
+
+  - id: S_O6
+    statement: "Heisenberg-Born-Jordan matrix-mechanics formalism (1925) reproduces atomic transition frequencies via algebra on infinite matrices."
+    raw_data_pointer: "Heisenberg 1925 Ztschr.f.Phys. 33 p.879; Born-Jordan 1925 Ztschr.f.Phys. 34 p.858; Born-Heisenberg-Jordan 1926 Ztschr.f.Phys. 35 p.557."
+    instrument: "Published theoretical apparatus (rendering substrate distinct from wave mechanics)."
+    timestamp: "1925-1926"
+    conditions_at_capture: "Read by Schrödinger before/during composition of equivalence paper; per his own footnote disclosure (p.46 fn.1)."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf equivalence paper p.45 footnote 1"
+    body_sections: ["Equivalence paper §1 (Introduction and Abstract)"]
+
+# ============================================================================
+# Methods: methodological apparatus
+# ============================================================================
+methods:
+  - id: S_M1
+    statement: "Hamilton-Jacobi differential equation H(q, ∂S/∂q) = E as classical starting point; substitution S = K log ψ rewrites the dynamics in terms of a new field scalar ψ."
+    type: "formal_derivation"
+    inputs: [S_O1, S_O4]
+    outputs: ["wave equation (Part I eq. 1', 1''')"]
+    code_anchor: "n/a (pre-computational derivation; see Part I §1 pp.1-2)"
+    reproducibility:
+      seed: "n/a"
+      version: "Schrödinger 1926, Annalen der Physik (4), vol. 79, p. 361"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part I §1 pp.1-2"
+    body_sections: ["Part I §1 (derivation from Hamilton-Jacobi)"]
+
+  - id: S_M2
+    statement: "Variation principle: δJ = δ ∫∫∫ {(∇ψ)² − (2m/K²)(E + e²/r)ψ²} dx dy dz = 0; the quantum condition is replaced by demanding stationarity over admissible ψ (everywhere real, single-valued, finite, continuous)."
+    type: "formal_derivation"
+    inputs: ["S_M1 output"]
+    outputs: ["wave equation ∇²ψ + (2m/K²)(E + e²/r)ψ = 0"]
+    reproducibility:
+      seed: "n/a"
+      version: "Part I §1 eqs. (3)-(5)"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part I §1 p.2 eqs. (3)-(5)"
+    body_sections: ["Part I §1 (variational principle)"]
+
+  - id: S_M3
+    statement: "Eigenvalue problem (Sturm-Liouville / boundary-value problem): solve the wave equation under the boundary requirement that ψ remain finite, single-valued, continuous on the entire q-space; the proper values E are those for which such solutions exist."
+    type: "formal_derivation"
+    inputs: ["S_M2 output"]
+    outputs: ["discrete proper-value spectrum {Eₙ}; corresponding proper functions {uₙ(x)}"]
+    reproducibility:
+      seed: "n/a"
+      version: "Part I §2 + Part II"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part I §2 pp.2-12"
+    body_sections: ["Part I §2; Part II"]
+
+  - id: S_M4
+    statement: "Optical-mechanical analogy: classical mechanics : wave mechanics :: geometrical optics : wave optics. The path of a representative point in configuration space corresponds to a light ray; the wave equation extends mechanics into the regime where path dimensions are comparable to the de-Broglie wavelength."
+    type: "analogical"
+    inputs: [S_O1, S_O4]
+    outputs: ["physical motivation for the wave equation as a refinement of classical mechanics in the small-action regime"]
+    citation_keys: ["de-broglie-1924-recherches-sur-la-theorie-des-quanta", "hamilton-1834-general-method"]
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Abstract pp.ix-xiii; Part II pp.13-29 (optical analogy)"
+    body_sections: ["Part II (optical-mechanical analogy)"]
+
+  - id: S_M5
+    statement: "Operator-matrix correspondence: associate to each well-arranged function F(qₖ, pₖ) (i) the differential operator obtained by substituting pᵣ → K∂/∂qᵣ, with K = h/(2πi), and (ii) the matrix Fᵏˡ = ∫ρ(x)uₖ(x)[F, uₗ(x)]dx over an arbitrary complete orthonormal system {uᵢ(x)} on q-space; show that operator algebra carries faithfully to matrix algebra."
+    type: "formal_derivation"
+    inputs: [S_O6, "S_M3 output (orthonormal proper-function system)"]
+    outputs: ["matrix realisation of any well-arranged dynamical function; equivalence proof apparatus"]
+    code_anchor: "n/a (analytic; equivalence paper §2 pp.47-50)"
+    reproducibility:
+      seed: "n/a"
+      version: "Equivalence paper §2, eqs. (3)-(9)"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf equivalence paper §2 pp.47-50"
+    body_sections: ["Equivalence paper §2-§4"]
+
+  - id: S_M6
+    statement: "Time-dependent perturbation theory: extend the stationary eigenvalue problem to time-varying potentials V(q, t) = V₀(q) + r(q, t); resolve r as Fourier components and compute perturbed proper functions ψ = uₖ(x) + w(x, t) to first order in the perturbation."
+    type: "formal_derivation"
+    inputs: ["S_M3 output", S_O3]
+    outputs: ["dispersion theory; Stark-effect quantitative predictions; transition probabilities/intensities"]
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part IV §2 pp.104-106"
+    body_sections: ["Part IV §2"]
+
+# ============================================================================
+# Measurements: derived quantities
+# ============================================================================
+measurements:
+  - id: S_m1
+    statement: "Hydrogen proper-value spectrum: discrete Eₙ = −me⁴/(2K²n²) (Balmer / Rydberg formula form), n = 1, 2, 3, …, plus continuum E > 0."
+    source_observations: [S_O1, S_O2]
+    generating_method: S_M3
+    value: "Eₙ ∝ −1/n²; matches Rydberg constant within numerical agreement K = h/2π."
+    uncertainty: "exact at the level of the model (non-relativistic, single-electron)"
+    units: "energy (eV equivalent at K = h/2π)"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part I §2 pp.2-12"
+
+  - id: S_m2
+    statement: "Harmonic-oscillator proper-value spectrum: Eₙ = (n + ½)hν₀, n = 0, 1, 2, …"
+    source_observations: [S_O4]
+    generating_method: S_M3
+    value: "linear in n; matches observed vibrational band structure"
+    uncertainty: "exact in the model"
+    units: "energy"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part II pp.30-34"
+
+  - id: S_m3
+    statement: "Stark-effect splitting amplitudes and the relative intensities of Stark components (linear in field strength to first order)."
+    source_observations: [S_O3]
+    generating_method: S_M6
+    value: "quantitative match to Stark's measurements"
+    uncertainty: "first-order perturbation theory"
+    units: "energy (frequency shift)"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part III §5 pp.76-82, 93-96"
+
+  - id: S_m4
+    statement: "Lyman + Balmer series total emission intensities (squares of amplitudes into fourth power of frequency): closed-form formulae per Pauli's proof-correction addendum to Part III."
+    source_observations: [S_O2]
+    generating_method: S_M6
+    value: "ν(l,1) = R(1 − 1/l²); J(l,1) = 2⁷·(l−1)^{2l−1}/l·(l+1)^{2l+1}; analogous for Balmer."
+    uncertainty: "from first-order matrix elements"
+    units: "intensity (arbitrary)"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part III addendum p.101 (Pauli)"
+
+# ============================================================================
+# Findings: what's-the-case claims
+# ============================================================================
+findings:
+  - id: S_F1
+    statement: >-
+      The proper values of the wave equation for the hydrogen atom coincide
+      exactly with the empirical Balmer-Rydberg term values; the Bohr energy-
+      level structure is reproduced as the discrete part of the eigenvalue
+      spectrum of a linear PDE, without the ad-hoc whole-number postulate of
+      the old quantum theory.
+    type: "empirical_finding"
+    source_measurements: [S_m1]
+    generating_method: S_M3
+    statistical_strength: "Exact analytic agreement (single-electron, non-relativistic)."
+    conditions: "C1, C2"
+    antecedents: [S_O1, S_M1, S_M2, S_M3]
+    falsifier: "Discovery of hydrogen spectral lines not predicted by the Schrödinger equation (within C1, C2)."
+    citation_role_in_paper: "primary_anchor_for_S_F_propositions"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part I §2 + Abstract p.ix"
+    body_sections: ["Part I §2 (hydrogen)"]
+
+  - id: S_F2
+    statement: >-
+      The proper-value spectrum of the wave equation has, in general,
+      both a discrete part (the 'line spectrum', e.g. bound states of
+      hydrogen, harmonic oscillator) and a continuous part (the 'band
+      spectrum', e.g. hyperbolic-orbit hydrogen states above ionisation).
+    type: "empirical_finding"
+    source_measurements: [S_m1, S_m2]
+    generating_method: S_M3
+    statistical_strength: "Analytic; demonstrated case-by-case for Kepler, oscillator, rotator."
+    antecedents: [S_M3]
+    falsifier: "Failure of completeness (i.e., a system whose dynamics cannot be expanded in proper functions of the wave operator) within the C1+C2 regime."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Abstract pp.ix-x"
+    body_sections: ["Part I §2; Part II; Abstract"]
+
+  - id: S_F3
+    statement: >-
+      Heisenberg's quantum condition pq − qp = (h/2πi)·I corresponds
+      identically, under the operator substitution pᵣ ↦ K∂/∂qᵣ, to a
+      trivial commutator identity on differential operators; every matrix
+      element of any well-arranged dynamical function in matrix mechanics
+      coincides with an integral over the corresponding wave-mechanical
+      proper functions.
+    type: "empirical_finding"
+    source_measurements: []
+    generating_method: S_M5
+    statistical_strength: "Analytic equivalence proof."
+    antecedents: [S_O6, S_M3, S_M5]
+    falsifier: "Exhibition of a matrix-mechanical computation (within C1+C2+C3) whose result is not reproducible from a corresponding wave-mechanical boundary-value problem."
+    citation_role_in_paper: "critical_evidence_for_P4"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf equivalence paper §§2-4 pp.47-56"
+    body_sections: ["Equivalence paper §2-§4"]
+
+  - id: S_F4
+    statement: >-
+      The Stark-effect line patterns of hydrogen (energy shifts and
+      intensities of components) are quantitatively predicted by first-order
+      time-dependent perturbation of the wave equation, in agreement with
+      Stark's measurements.
+    type: "empirical_finding"
+    source_measurements: [S_m3]
+    generating_method: S_M6
+    antecedents: [S_O3, S_M6]
+    falsifier: "Discrepancy beyond perturbative error between Stark-effect data and the wave-mechanical prediction (within C1+C2)."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part III §5 pp.76-82, 93-96"
+    body_sections: ["Part III §5"]
+
+# ============================================================================
+# Propositions: theoretical claims (S-prefixed)
+# ============================================================================
+propositions:
+  - id: S1
+    statement: >-
+      Quantum behaviour at atomic scale is governed by a continuous wave
+      equation on configuration space, with eigenvalue conditions that
+      replace the ad-hoc integer-quantisation postulates of the old quantum
+      theory; the discreteness of atomic spectra is a consequence of
+      boundary-value-problem completeness, not an extra-mechanical axiom.
+    type: "ontological"
+    conditions: "C1, C2"
+    antecedents: []
+    assumptions: []
+    falsifier: "Discovery of atomic-scale phenomena that cannot be cast as eigenvalue problems for any linear differential operator on configuration space."
+    evidence:
+      - type: empirical
+        anchor: "Reproduction of Balmer, Lyman, Paschen, harmonic-oscillator, rigid-rotator, Stark-effect spectra (S_F1, S_F2, S_F4)."
+        citation_keys: []
+    ruled_out_rivals: [S_A1, S_A2]
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part I §1 + Abstract"
+    body_sections: ["Part I §1; Abstract"]
+
+  - id: S2
+    statement: >-
+      Energy levels of an atomic system are eigenvalues of a linear,
+      self-adjoint differential operator (the wave-equation Hamiltonian)
+      acting on a function space of admissible ψ; transition frequencies
+      between observed spectral lines correspond to differences of these
+      eigenvalues divided by h.
+    type: "ontological"
+    conditions: "C1, C2, C3"
+    antecedents: [S1]
+    assumptions: [S_AA1]
+    falsifier: "Spectroscopic transitions inconsistent with any eigenvalue-difference / h structure (within C1+C2)."
+    evidence:
+      - type: empirical
+        anchor: "S_F1 (hydrogen), S_m2 (oscillator), S_m4 (Lyman + Balmer intensities)."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part I §2; Abstract"
+    body_sections: ["Part I §2; Part II"]
+
+  - id: S3
+    statement: >-
+      The wave function ψ admits a physical interpretation as a 'weight-
+      function' on configuration space: ψψ̄ describes the density of electric
+      charge (continuous-charge-density reading endorsed by Schrödinger);
+      the system is to be conceived as a superposition of point-mechanical
+      configurations each contributing with weight ψψ̄. (Note: this is
+      Schrödinger's own preferred interpretation in Part IV §7; Born's
+      probabilistic interpretation, published the same year, replaces this
+      with a probability-density reading and ultimately prevailed. The
+      claim S3 captures Schrödinger's 1926 commitment, not the consensus
+      that followed.)
+    type: "ontological"
+    conditions: "C1, C2"
+    antecedents: [S1, S2]
+    assumptions: [S_AA2]
+    falsifier: "Experimental demonstration that ψψ̄ behaves as a probability density (single-particle detection events) and not as a continuous charge density."
+    evidence:
+      - type: empirical
+        anchor: "Schrödinger's worked-out continuity-of-electricity argument (Part IV §7, eqs. 37-42)."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part IV §7 pp.120-122"
+    body_sections: ["Part IV §7"]
+    historical_note: "Born 1926 Ztschr.f.Phys. 37 p.863 proposed |ψ|² as probability density shortly after; over 1926-1927 the Born interpretation became standard. Schrödinger's S3 here is the original wave-mechanics commitment, retained verbatim in the 1928 collected edition without retraction."
+
+  - id: S4
+    statement: >-
+      Wave mechanics and the matrix mechanics of Heisenberg, Born, and
+      Jordan are mathematically equivalent: every matrix-mechanical
+      computation can be reduced to a wave-mechanical boundary-value
+      problem (via the operator substitution pᵣ ↦ K∂/∂qᵣ and the orthonormal-
+      proper-function construction of matrices), and conversely the wave-
+      mechanical proper functions can be reconstructed from numerically
+      given matrices. The two formulations differ in mathematical apparatus
+      ('garb') but agree on every empirical prediction; from the formal
+      mathematical standpoint they may be regarded as the same theory.
+    type: "rendering_equivalence"
+    conditions: "C1, C2, C3"
+    antecedents: [S1, S2, S_O6]
+    assumptions: [S_AA1, S_AA3]
+    falsifier: >-
+      Exhibition of an empirical prediction on which the two formulations
+      disagree (within the shared boundary C1+C2+C3); or a proof that the
+      operator-matrix correspondence S_M5 fails for some class of well-
+      arranged dynamical functions.
+    evidence:
+      - type: analytic
+        anchor: "Equivalence paper §§2-4: operator-matrix correspondence S_M5 + reduction of matrix equations of motion to wave-equation boundary-value problem (eqs. 18'-32)."
+      - type: empirical
+        anchor: "S_F3 + identical empirical predictions for hydrogen, oscillator, rotator, Stark effect; both formulations reproduce S_O1-S_O5."
+      - type: log_anchor
+        anchor: "schrodinger_1928_collected_papers_wave_mechanics.pdf equivalence paper p.46: 'one might well speak of the identity of the two theories'; p.57: 'they are completely equivalent from the mathematical point of view'; p.58: 'The equivalence actually exists, and it also exists conversely.'"
+    citation_role_in_paper: "critical_evidence_for_P4"
+    ruled_out_rivals: [S_A3]
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf equivalence paper pp.45-61"
+    body_sections: ["Equivalence paper §1-§5"]
+
+  - id: S5
+    statement: >-
+      The optical-mechanical analogy (classical mechanics : wave mechanics ::
+      geometrical optics : wave optics) supplies the physical motivation for
+      the wave equation: classical mechanics is the eikonal-limit
+      approximation of an underlying wave theory, valid only when system
+      dimensions are large compared with the de-Broglie wavelength.
+    type: "ontological"
+    conditions: "C1"
+    antecedents: []
+    assumptions: []
+    falsifier: "Failure of the wave equation to reproduce classical mechanics in the appropriate limit (h → 0 or large-system limit)."
+    evidence:
+      - type: analytic
+        anchor: "Continuous-transition argument from micro- to macro-mechanics (separate paper in the collected volume, pp. 41-44)."
+      - type: citation
+        anchor: "de Broglie 1924; Hamilton-Jacobi theory"
+        citation_keys: ["de-broglie-1924-recherches-sur-la-theorie-des-quanta"]
+        citation_role: "theoretical_predecessor"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part II + 'Continuous Transition' essay pp.41-44"
+    body_sections: ["Part II; 'Continuous Transition' essay"]
+
+# ============================================================================
+# Derivations: reasoning bridges
+# ============================================================================
+derivations:
+  - id: S_D1
+    statement: >-
+      From the operator-matrix correspondence (S_M5) plus the completeness
+      of the wave-equation proper functions (S_F2, S_AA3), every matrix
+      element predicted by Heisenberg-Born-Jordan can be computed as an
+      integral over proper functions, and every spectroscopic transition
+      derived in matrix mechanics is recovered as an eigenvalue-difference
+      in wave mechanics — establishing S4.
+    from: [S1, S2, S_F3]
+    to: S4
+    reasoning_type: "formal_proof"
+    formal_proof_anchor: "schrodinger_1928_collected_papers_wave_mechanics.pdf equivalence paper §§2-4, esp. eqs. (6), (18'), (21), (32)"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf equivalence paper §§2-4"
+    body_sections: ["Equivalence paper §2-§4"]
+
+  - id: S_D2
+    statement: >-
+      From S1 + the variational formulation (S_M2) together with the
+      Sturm-Liouville boundary-value structure (S_M3), the eigenvalue
+      spectrum is discrete in regimes where ψ must vanish at infinity
+      (bound states) and continuous in regimes where it need not
+      (scattering states) — establishing S_F2.
+    from: [S1, S_M2, S_M3]
+    to: S_F2
+    reasoning_type: "deductive"
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part I §2 + Part III"
+    body_sections: ["Part I §2"]
+
+# ============================================================================
+# Alternative explanations (rivals)
+# ============================================================================
+alternative_explanations:
+  - id: S_A1
+    statement: >-
+      Atomic spectra are explained by Bohr's 1913 quantisation of action
+      (∮p dq = nh) on classical orbits; no wave mechanics required.
+    rules_out_required: [S_F2, S_F3]
+    ruled_out_by: [S_F1, S_F2, S_F4]
+    rules_out_status: "rejected"
+    reasoning: >-
+      Bohr-Sommerfeld quantisation succeeds for hydrogen but fails for the
+      helium atom and predicts integer azimuthal quantum numbers contradicted
+      by Sommerfeld fine-structure (half-integral; cf. S_O5) and by the
+      anomalous Zeeman effect. Wave mechanics reproduces the same hydrogen
+      spectrum from a single underlying eigenvalue equation and accommodates
+      the half-integral fine-structure naturally.
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Abstract p.xi; Part I §1 p.1"
+    body_sections: ["Part I §1; Abstract"]
+
+  - id: S_A2
+    statement: >-
+      Atomic-scale dynamics can be captured by purely classical continuum
+      mechanics (no quantisation; no wave equation).
+    rules_out_required: [S_F1]
+    ruled_out_by: [S_F1, S_F2]
+    rules_out_status: "rejected"
+    reasoning: >-
+      Classical mechanics produces no discrete spectra — hydrogen radiation
+      would be continuous, contradicting the Balmer series. The wave equation
+      adds a 'proper-value parameter' E whose spectrum is discrete precisely
+      in the bound regime.
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Abstract pp.ix-x"
+    body_sections: ["Part I §1"]
+
+  - id: S_A3
+    statement: >-
+      Matrix mechanics is genuinely physically different from wave
+      mechanics: the two theories predict different spectra or different
+      transition probabilities for some atomic system, and one is correct
+      while the other is not.
+    rules_out_required: [S_F3]
+    ruled_out_by: [S_F3, S4]
+    rules_out_status: "rejected"
+    reasoning: >-
+      Schrödinger's equivalence proof (S_D1) shows that every matrix
+      element computed in matrix mechanics equals an integral over
+      wave-mechanical proper functions; the two formulations agree on every
+      empirical prediction within their shared regime. Cf. equivalence paper
+      p.57: 'every discussion of the superiority of the one over the other
+      has only an illusory object'.
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf equivalence paper p.57 §5"
+    body_sections: ["Equivalence paper §5"]
+
+# ============================================================================
+# Assumption atoms
+# ============================================================================
+assumption_atoms:
+  - id: S_AA1
+    statement: >-
+      The wave-equation Hamiltonian operator is self-adjoint on its natural
+      domain (relative to the appropriate density function ρ), guaranteeing
+      real proper values and a complete orthonormal proper-function system.
+    type: "method_validity"
+    relaxable: true
+    relaxation_consequence: >-
+      Without self-adjointness, the proper values may be complex (non-
+      physical energies) and completeness fails, jeopardising the matrix
+      construction in S_M5 and hence S4.
+    affects: [S_M3, S_M5, S2, S4]
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf equivalence paper §4 p.56 (uniqueness of symmetricalisation)"
+    body_sections: ["Equivalence paper §4 (footnote on symmetricalisation)"]
+
+  - id: S_AA2
+    statement: >-
+      ψ is a real (or, in Part IV, complex) function of configuration-space
+      coordinates whose square modulus has direct physical meaning (charge
+      density in Schrödinger's own reading; probability density in Born's
+      reading published shortly after).
+    type: "ontological_interpretation"
+    relaxable: true
+    relaxation_consequence: >-
+      If ψψ̄ has neither interpretation, S3 is empty as a physical claim;
+      the formalism survives but its physical content is unspecified.
+    affects: [S3]
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part IV §7"
+    body_sections: ["Part IV §7"]
+
+  - id: S_AA3
+    statement: >-
+      The orthonormal proper-function system used to construct matrices in
+      S_M5 may be chosen arbitrarily on q-space; different choices yield
+      unitarily equivalent matrix realisations of the same dynamical
+      function.
+    type: "method_invariance"
+    relaxable: true
+    relaxation_consequence: >-
+      Without basis-choice freedom, the operator-matrix correspondence is
+      not a true representation result; S4's bidirectionality (matrices ↔
+      functions) weakens.
+    affects: [S_M5, S4]
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf equivalence paper §2 p.46 ('arbitrary orthogonal system')"
+    body_sections: ["Equivalence paper §2"]
+
+# ============================================================================
+# Limitations
+# ============================================================================
+limitations:
+  - id: S_L1
+    statement: >-
+      Relativistic-magnetic generalisation is only sketched (Part IV §6); a
+      fully relativistic single-electron wave equation reproducing
+      Sommerfeld fine-structure plus Goudsmit-Uhlenbeck spin is not given
+      here. (Dirac 1928 supplies it later.)
+    affects: [S1, S2]
+    severity: "medium"
+    mitigation: "Dirac 1928 relativistic equation; Pauli 1927 spin matrices."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part IV §6 pp.118-120"
+    body_sections: ["Part IV §6"]
+
+  - id: S_L2
+    statement: >-
+      Multi-electron atoms are handled only approximately; exact treatment
+      of electron-electron correlation is not attempted in the 1926
+      series.
+    affects: [S2]
+    severity: "medium"
+    mitigation: "Hartree-Fock + later many-body methods."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Abstract p.xiii"
+    body_sections: ["Abstract"]
+
+  - id: S_L3
+    statement: >-
+      Schrödinger's own continuous-charge-density interpretation of ψψ̄
+      (S3) is acknowledged as provisional; he flags interpretive open
+      questions about coupling to the electromagnetic field and the
+      'paradox' of a system 'simultaneously in all kinematically imaginable
+      positions' (Part IV §7 p.120). Born's probability-density reading
+      published shortly after supersedes S3 in the eventual consensus —
+      but importantly does NOT alter the equivalence claim S4, which is
+      interpretation-independent.
+    affects: [S3]
+    severity: "high (for S3); none (for S4)"
+    mitigation: "Born 1926 probability interpretation; later operational reading via measurement theory."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Part IV §7 p.120"
+    body_sections: ["Part IV §7"]
+
+  - id: S_L4
+    statement: >-
+      The equivalence proof (S4) treats only well-arranged (power-series-
+      in-momentum) dynamical functions on a chosen orthonormal basis;
+      Schrödinger notes the basis choice has 'no false step to be feared'
+      epistemologically but acknowledges the proof's restriction to this
+      function class. Full rigorous equivalence (Hilbert-space formulation
+      of both theories under a common operator algebra) is supplied by
+      von Neumann 1932.
+    affects: [S4, S_D1]
+    severity: "medium"
+    mitigation: "von Neumann 1932 Mathematische Grundlagen der Quantenmechanik."
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf equivalence paper §4 p.56"
+    body_sections: ["Equivalence paper §4"]
+
+# ============================================================================
+# Negative findings
+# ============================================================================
+negative_findings:
+  - id: S_NF1
+    statement: >-
+      The two-electron helium atom is not solved exactly in this series;
+      only approximate treatments are sketched. Bohr-Sommerfeld
+      quantisation had failed for helium; wave mechanics inherits the
+      problem (multi-electron correlation), demonstrating that the new
+      formalism is not a universal solvent but a reformulation that
+      preserves and exposes the same physical difficulties.
+    expected_observation: "Exact closed-form helium ground-state energy."
+    source_method: "Direct application of S_M3 to He-atom Hamiltonian."
+    affects_nodes: [S2]
+    motivates: []
+    provenance:
+      created_by: "ai:claude-opus-4-7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_SCHRODINGER_SPINE_extraction_prompt"
+      created_at: "2026-05-26"
+      source_log_event: "schrodinger_1928_collected_papers_wave_mechanics.pdf Abstract p.xiii"
+    body_sections: ["Abstract"]
+
+# ============================================================================
+# External anchors
+# ============================================================================
+external_anchors:
+  - citation_key: "de-broglie-1924-recherches-sur-la-theorie-des-quanta"
+    role: "theoretical_predecessor"
+    spine_nodes: [S_M4, S5]
+    note: "Explicitly named by Schrödinger as the inspiration for wave mechanics (equivalence paper p.46 fn.1)."
+
+  - citation_key: "hamilton-jacobi-classical-mechanics"
+    role: "methodological_source"
+    spine_nodes: [S_M1, S_M2]
+    note: "Hamilton-Jacobi formalism supplies the starting equation for the substitution S = K log ψ."
+
+  - citation_key: "heisenberg-1925-quantum-theoretical-reinterpretation"
+    role: "contrast_case"
+    spine_nodes: [S_O6, S4]
+    note: "The 'matrix-mechanics' formulation that S4 proves equivalent."
+
+  - citation_key: "born-jordan-1925-zur-quantenmechanik"
+    role: "contrast_case"
+    spine_nodes: [S_O6, S4]
+    note: "Companion to Heisenberg 1925; cited in equivalence paper p.45 fn.1."
+
+  - citation_key: "born-heisenberg-jordan-1926-zur-quantenmechanik-ii"
+    role: "contrast_case"
+    spine_nodes: [S_O6, S4]
+    note: "The 'three-man paper'; cited in equivalence paper p.45 fn.1."
+
+  - citation_key: "dirac-1925-proc-roy-soc-fundamental-equations"
+    role: "theoretical_predecessor"
+    spine_nodes: [S4]
+    note: "Cited in equivalence paper p.45 fn.1 as alternative matrix-mechanics development."
+
+  - citation_key: "bohr-1913-on-the-constitution-of-atoms-and-molecules"
+    role: "rival_ruled_out"
+    spine_nodes: [S_A1]
+    note: "Old-quantum-theory action quantisation that wave mechanics replaces."
+
+  - citation_key: "sommerfeld-1916-zur-quantentheorie-der-spektrallinien"
+    role: "contrast_case"
+    spine_nodes: [S_O5, S_L1]
+    note: "Sommerfeld fine-structure formula; reproduced by Schrödinger via classical-relativistic equation in Part IV §6."
+
+  - citation_key: "courant-hilbert-1924-methoden-der-mathematischen-physik"
+    role: "methodological_source"
+    spine_nodes: [S_M3]
+    note: "Sturm-Liouville eigenvalue-problem framework that Schrödinger applies to atomic mechanics (cited in equivalence paper p.50 fn.1)."
+
+  - citation_key: "born-1926-zur-quantenmechanik-der-stossvorgaenge"
+    role: "rival_ruled_out"
+    spine_nodes: [S3, S_AA2, S_L3]
+    note: "Born probability-density interpretation, published shortly after the wave-mechanics series; supersedes Schrödinger's S3 charge-density reading in eventual consensus. S4 (equivalence) is independent of which interpretation is adopted."
+
+# ============================================================================
+# Open questions
+# ============================================================================
+open:
+  - "Full rigorous Hilbert-space equivalence proof not given here (supplied by von Neumann 1932); does the operator-matrix correspondence extend uniquely to all self-adjoint operators on L²(q-space, ρdx)?"
+  - "Physical interpretation of ψψ̄ remains unsettled in the 1926 series (S3 vs Born); how does this affect any P4-style rendering-equivalence claim?"
+  - "Multi-electron atoms (S_L2) — does the equivalence S4 extend straightforwardly, or do correlation effects complicate the matrix construction?"
+
+# ============================================================================
+# Mapping to parent paper (2026ao meaningfulness paper)
+# ============================================================================
+mapping_to_parent_paper:
+  T1_role: |
+    This spine extraction operationalises the Schrödinger side of the
+    Heisenberg-Schrödinger twin-pair natural experiment used as Validation
+    Case T1 of paper 2026ao. The Heisenberg side is extracted in a sibling
+    YAML (forthcoming). The matched-pair structure permits direct isomorphism
+    analysis: matrix-mechanics and wave-mechanics spines should map onto a
+    common claim-graph (same observations S_O1-S_O5; same findings S_F1-S_F4
+    up to formal restatement; same propositions modulo operator-vs-matrix
+    rendering), differing only at the rendering-substrate (method) layer.
+  P4_evidence: |
+    S4 is the load-bearing proposition. It is the empirical-historical
+    instance of P4 (rendering-equivalence under spine-preservation) in
+    parent paper 2026ao. The case is strong because (a) the two formulations
+    share no sentences — matrix algebra and continuous PDEs have no common
+    surface vocabulary; (b) Schrödinger's footnote (p.46 fn.1) attests
+    independent authorship from Heisenberg; (c) Schrödinger's own equivalence
+    proof (§§2-4) constructs the bidirectional correspondence explicitly;
+    (d) every empirical prediction (S_O1-S_O5) is shared. This is exactly
+    the structural pattern P4 predicts and exactly what a sentence-by-
+    sentence translation theory of cross-rendering invariance (rival A2 in
+    2026ao SPINE.yaml) cannot explain — there are no shared sentences to
+    translate.
+  ruling_out_A2: |
+    Alternative explanation A2 in the parent paper claims rendering-
+    equivalence is reducible to translation-studies sentence-equivalence.
+    The Schrödinger-Heisenberg twin pair existence-proves the rival false:
+    no sentence-level map between matrix formulas and partial differential
+    equations exists, yet the two formalisms preserve all empirical
+    conclusions. The equivalence is at the operator/structural layer, not
+    the sentence layer — exactly the P4 mechanism.
+  caveats:
+    - "Schema v0.2 represents Schrödinger's spine at a single time-slice (1926-1928 collected edition). Later modifications (Born interpretation, von Neumann formalisation, Dirac relativistic equation) sit OUTSIDE this spine and are flagged as open questions / external anchors."
+    - "Single-coder extraction; AA2 (inter-coder κ ≥ 0.7) is not yet satisfied. Inter-coder validation pending Phase 2 of T1 case construction."
+
+# ============================================================================
+# Changelog
+# ============================================================================
+changelog:
+  - date: 2026-05-26
+    operation: lock
+    by: "Retroactive extraction subagent (claude-opus-4-7) under SPINE_FIRST_DRAFTING_PROTOCOL"
+    note: |
+      Initial spine extraction from Schrödinger 1928 Collected Papers on
+      Wave Mechanics (Blackie & Son English edition) for Validation Case
+      T1 of meaningfulness paper 2026ao. Source PDF:
+      research/references/schrodinger_1928_collected_papers_wave_mechanics.pdf.
+      Companion prose summary in
+      VALIDATION_CASE_T1_SCHRODINGER_EQUIVALENCE_NOTES.md.

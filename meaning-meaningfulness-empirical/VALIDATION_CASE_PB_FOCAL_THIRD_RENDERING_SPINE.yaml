@@ -1,0 +1,139 @@
+# VALIDATION_CASE_PB_FOCAL_THIRD_RENDERING_SPINE.yaml
+#
+# Spine re-extracted from RENDERING_FOCAL_PAIR_THIRD_PROSE.md (1,044-word
+# LinkedIn long-post rendering of the focal-pair shared substrate L1-L4
+# from TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md §2).
+#
+# Task β output (Session H Phase 3). The third rendering operationalizes
+# paper_a:P4 at the focal-pair-shared-substrate boundary: same substrate as
+# the Eisenhardt-Martin and Zollo-Winter prose renderings, third independent
+# rendering, isomorphism check on substrate preservation.
+#
+# Schema: paper_a:appendix_A_schema (10 node types; 17 edge types).
+# Node-ID prefix: T_ (Third-rendering) to distinguish from EM_, ZW_, and
+# the synthesized shared-substrate L1-L4 nodes.
+
+spine_version: "0.2"
+spine_doc_version: "0.1.0"
+extracted_from: "RENDERING_FOCAL_PAIR_THIRD_PROSE.md"
+extraction_protocol: "paper_a:appendix_B_protocol applied in reverse by single coder (author)"
+extraction_session: "Session H Phase 3 — Task β third rendering of focal-pair shared substrate"
+extraction_date: "2026-05-27"
+target_for_isomorphism: "TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md §2 alignment table (focal-pair shared substrate L1-L4)"
+
+# ============================================================================
+# Observations (raw material the third rendering invokes)
+# ============================================================================
+observations:
+  - id: T_O1
+    statement: "Eisenhardt-Martin 2000 SMJ and Zollo-Winter 2002 Org Sci are widely-cited dynamic-capabilities papers with markedly different vocabularies, journals, first authors, evidence bases, and theoretical lineages."
+    raw_data_pointer: "LinkedIn post opening lines"
+    maps_to_focal_substrate: ["TWIN_PAIR_ISOMORPHISM_PB_FOCAL §1 Bikard-protocol independence preamble"]
+    map_quality: "preserved (named-papers + difference-recognition)"
+
+# ============================================================================
+# Findings / propositions about the shared substrate
+# ============================================================================
+findings:
+  - id: T_L1
+    statement: "Dynamic capabilities are specific identifiable processes built on routines, not vague organizational mystique. Eisenhardt-Martin frame as 'strategic and organizational processes — like product development, alliancing, and strategic decision-making' with cross-firm commonalities. Zollo-Winter frame as 'routinized activities directed at the development and adaptation of operating routines.' Different vocabulary; same underlying claim: DCs sit above operating routines and are nameable."
+    type: "shared_substrate_proposition"
+    node_typing: "proposition"
+    antecedent_edge:
+      type: "refines"
+      antecedent: "Nelson and Winter (1982) evolutionary theory of routines"
+      preserved: true
+    maps_to_focal_substrate: ["L1"]
+    map_quality: "PRESERVED — node type (proposition) matches; antecedent (Nelson-Winter 1982 routines) preserved with edge type 'refines' (LinkedIn rendering: 'built on routines' = refines edge)"
+
+  - id: T_L2
+    statement: "Learning mechanisms drive how dynamic capabilities form and evolve. Eisenhardt-Martin name 'practice, codification of experience, mistakes, and pacing of experience.' Zollo-Winter operationalize into three mechanisms: experience accumulation, knowledge articulation, knowledge codification. Different granularity; same underlying claim: DCs do not emerge spontaneously; learning produces them."
+    type: "shared_substrate_proposition"
+    node_typing: "proposition"
+    antecedent_edge:
+      type: "refines"
+      antecedent: "Levitt and March (1988) organizational learning"
+      preserved: true
+    maps_to_focal_substrate: ["L2"]
+    map_quality: "PRESERVED — node type matches; antecedent (Levitt-March 1988) explicitly named; edge type 'refines' (LinkedIn rendering: 'operationalize into three mechanisms' = refines from EM catalog to ZW partition)"
+
+  - id: T_L3
+    statement: "There are cross-firm commonalities in dynamic capabilities at the best-practice or mechanism level, even where firm-specific detail diverges. Eisenhardt-Martin: 'best practices that lead to common-form configurations.' Zollo-Winter: 'a mix of learning behaviors firms use across contexts.' Different framings; same claim: DCs are not pure firm idiosyncrasy. Structural patterns generalize."
+    type: "shared_substrate_proposition"
+    node_typing: "proposition"
+    antecedent_edge:
+      type: "bridges"
+      antecedent: "Teece, Pisano, and Shuen (1997) SMJ dynamic-capabilities framework"
+      preserved: true
+    maps_to_focal_substrate: ["L3"]
+    map_quality: "PRESERVED — node type matches; antecedent (Teece-Pisano-Shuen 1997) named with full author list; edge type 'bridges' preserved (LinkedIn rendering: 'common-form configurations' / 'mix of learning behaviors' both bridge to TPS-1997 framework)"
+
+  - id: T_L4
+    statement: "Dynamic-capability form is contingent on market or task features. Eisenhardt-Martin distinguish moderately dynamic markets from high-velocity markets; Zollo-Winter distinguish task frequency, task homogeneity, causal ambiguity. Different contingency variables; same claim: DC form is not market-or-task-invariant. Boundary conditions matter."
+    type: "shared_substrate_proposition"
+    node_typing: "proposition"
+    antecedent_edge:
+      type: "extends"
+      antecedent: "Eisenhardt and Tabrizi (1995) ASQ adaptive processes"
+      preserved: true
+    maps_to_focal_substrate: ["L4"]
+    map_quality: "PRESERVED — node type matches; antecedent (Eisenhardt-Tabrizi 1995 ASQ) explicitly named; edge type 'extends' preserved (LinkedIn rendering: 'predict different DC forms... mechanism-effectiveness across task features' extends ET-1995 environment-contingent-adaptation logic)"
+
+# ============================================================================
+# Unlinked propositions per paper (rendered accurately)
+# ============================================================================
+unlinked_propositions:
+  - id: T_unlinked_EM
+    statement: "Eisenhardt-Martin's claim that DCs are 'homogeneous, fungible, equifinal' more than RBV assumes does not appear in Zollo-Winter."
+    maps_to_focal_substrate: ["L5 (per TWIN_PAIR_ISOMORPHISM_PB_FOCAL §2 'no direct twin')"]
+    map_quality: "PRESERVED (LinkedIn rendering explicitly names EM's homogeneity-fungibility-equifinality claim as not-in-ZW)"
+
+  - id: T_unlinked_ZW
+    statement: "Zollo-Winter's counterintuitive prediction that deliberate codification dominates at low-frequency / high-heterogeneity / high-causal-ambiguity tasks does not appear in Eisenhardt-Martin."
+    maps_to_focal_substrate: ["L5/L6 (ZW_P5 unlinked)"]
+    map_quality: "PRESERVED (LinkedIn rendering explicitly names ZW's counterintuitive codification-prediction as not-in-EM)"
+
+# ============================================================================
+# Bridging claims (consistent with source paper)
+# ============================================================================
+bridging:
+  - id: T_B1
+    statement: "Same substrate-vs-rendering layering applies to the knowledge-based-view pair (Grant 1996 + Liebeskind 1996) — same Rec=4 structural-overlap pattern."
+    maps_to_source_spine: ["PB_F1 cross-pair convergence"]
+    map_quality: "preserved + bridges to KBV pair"
+
+  - id: T_B2
+    statement: "The same substrate-vs-rendering layering applies to organizational knowledge artifacts (board memos, audit reports, vendor evaluations, handbooks); convergence-across-renderings is testable on any organization's own artifacts."
+    maps_to_source_spine: ["paper_a:operator_role + practical implications"]
+    map_quality: "consistent with spine; generalization claim retained at moderate strength"
+
+  - id: T_B3
+    statement: "GitLab + Stripe handbook examples illustrate the substrate-first discipline at organization scale."
+    maps_to_source_spine: ["RPB_O3 (named-case examples from Phase 2 Substack rendering)"]
+    map_quality: "consistent across multiple practitioner-register renderings"
+
+# ============================================================================
+# Operational implications
+# ============================================================================
+operational:
+  - id: T_OP1
+    statement: "The four substrate propositions L1-L4 are what to act on; the framings either paper layers on top of them are vocabulary, audience-fittable."
+    maps_to_focal_substrate: ["L1", "L2", "L3", "L4"]
+    map_quality: "operational rendering of the four shared substrate items as a working summary"
+
+  - id: T_OP2
+    statement: "Substrate-vs-rendering separation gives two operational advantages: AI cost advantage on structure + convergence-across-renderings guarantee."
+    maps_to_source_spine: ["paper_a:cost_asymmetry + paper_a:P4"]
+    map_quality: "preserved (rendered as operational claim at practitioner register)"
+
+# ============================================================================
+# Cross-rendering consistency check
+# ============================================================================
+cross_rendering_consistency:
+  - against: "RENDERING_PB_SUBSTACK_PRACTITIONER.md (Phase 2 Task α)"
+    consistent_claims:
+      - "GitLab + Stripe handbook examples appear in both practitioner renderings (one as named-case in §named-patterns; one as canonical-reference in §generalization)"
+      - "AI cost-asymmetry framing preserved across both"
+      - "substrate-vs-rendering distinction preserved across both"
+    inconsistent_claims: []
+    notes: "Two practitioner-register renderings of overlapping substrates produced under same operator on same day; expected high consistency; no contradictions surfaced. The Task α Substack rendering centers on Paper B's WHOLE substrate (P4 + P3 + self-application); the Task β LinkedIn rendering centers on the focal-pair-shared substrate (L1-L4 dynamic-capabilities content). Different scope; consistent framework."

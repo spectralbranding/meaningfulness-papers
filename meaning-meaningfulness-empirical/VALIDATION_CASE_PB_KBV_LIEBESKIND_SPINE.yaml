@@ -1,0 +1,124 @@
+# VALIDATION_CASE_PB_KBV — Liebeskind (1996) SMJ
+# Second twin pair partner (KBV neighborhood); v1.1.0 addition.
+
+extraction_version: "1.1.0"
+extraction_session: "Session E continuation post-Path-A"
+extraction_date: "2026-05-27"
+schema_version: "0.2"
+
+source_paper:
+  citation_key: liebeskind-1996-knowledge-strategy-theory-firm
+  full_citation: "Liebeskind, J. P. (1996). Knowledge, Strategy, and the Theory of the Firm. Strategic Management Journal 17 (Winter Special Issue): 93–107."
+  doi: "10.1002/smj.4250171109"
+  publication_date: "1996 (Winter Special Issue: Knowledge and the Firm)"
+  venue: "Strategic Management Journal (Winter 1996 Special Issue 'Knowledge and the Firm' — SAME ISSUE as Grant 1996)"
+  source_pdf: "research/references/knowledge-strategy-and-the-theory-of-the-firm-3vnmmubi3u.pdf (16 pages)"
+
+paper_thesis: |
+  Firms have particular institutional capabilities that allow them to
+  protect knowledge from expropriation and imitation more effectively than
+  market contracting. Where property rights in knowledge are weak and
+  costly to enforce, firms use organizational arrangements not available
+  in markets to protect knowledge value. Firms can differentially prevent
+  expropriation and differentially reduce observability of knowledge and
+  its products, creating 'possession rights' to knowledge as valuable as
+  or more valuable than limited legal property rights. Firms differ in
+  these protective capabilities; this heterogeneity explains differences
+  in profits among firms.
+
+# ============================================================================
+# Propositions
+# ============================================================================
+propositions:
+  - id: L_P1
+    statement: "Firms have particular institutional capabilities that allow them to protect knowledge from expropriation and imitation more effectively than market contracting."
+    falsifier: "Empirical work shows market contracting is equally or more effective at protecting knowledge across firm-relevant contexts; or institutional protection capabilities do not vary across firms."
+    body_location: "Abstract; Introduction"
+    antecedents: ["RBV-tradition (Penrose 1959; Barney 1991)", "Williamson 1975 markets-and-hierarchies"]
+
+  - id: L_P2
+    statement: "These generalized institutional capabilities allow firms to generate and protect the unique resources and capabilities that are central to the strategic theory of the firm."
+    falsifier: "Resource heterogeneity persists in the absence of institutional protection differences; or strategic-theory rents are not explained by knowledge protection."
+    body_location: "Abstract; Theoretical implications section"
+    antecedents: ["L_P1", "Barney 1991 firm resources sustained competitive advantage"]
+
+  - id: L_P3
+    statement: "Where property rights in knowledge are weak and costly to enforce (the typical case across patents, copyrights, trade secrets), firms use an array of organizational arrangements not available in markets to protect the value of knowledge."
+    falsifier: "Property-rights protections in knowledge are uniformly strong AND market contracting suffices; or firms do not systematically deploy organizational arrangements specifically to protect knowledge."
+    body_location: "Limits to Legal Protections for Knowledge; Table 1"
+    antecedents: ["L_P1", "Hart-Moore 1990 incomplete-contracts", "Teece 1986 profiting-from-innovation"]
+
+  - id: L_P4
+    statement: "Firms can (a) differentially prevent expropriation of knowledge and (b) differentially reduce the observability of knowledge and its products — thereby creating 'possession rights' to knowledge that are just as valuable, if not more valuable, than limited legal property rights."
+    falsifier: "Expropriation and observability are independent of firm institutional capabilities; OR 'possession rights' do not predict firm-level rent capture."
+    body_location: "Introduction; Institutional capabilities section"
+    antecedents: ["L_P1", "L_P3"]
+
+  - id: L_P5
+    statement: "Legal protections for knowledge (patents, copyrights, trade secrets) have systematic limits: tacit/inchoate knowledge is excluded; protection has limited lifetime; costs of definition, registration, and enforcement are substantial; firms develop institutional alternatives to fill the protection gap."
+    falsifier: "Legal protections cover the tacit-knowledge domain adequately; or firms do not invest in institutional alternatives."
+    body_location: "Limits to Legal Protections for Knowledge; Table 1"
+    antecedents: ["L_P3", "Patent-and-copyright-law literature"]
+
+  - id: L_P6
+    statement: "Firms differ in their protective capabilities. This heterogeneity is one explanation for differences in profits among firms (resource-heterogeneity-as-rent-source result)."
+    falsifier: "Protective capabilities are homogeneous across firms; or profit differences are uncorrelated with measured protective capabilities."
+    body_location: "Conclusion; Theoretical implications"
+    antecedents: ["L_P2", "L_P4", "RBV resource-heterogeneity logic"]
+
+  - id: L_P7
+    statement: "Incentives to invest in innovation depend on knowledge-protection effectiveness; firms with weaker protection capabilities face systematically lower innovation incentives, dynamic-capability implications follow."
+    falsifier: "Innovation investment is independent of protection-capability heterogeneity."
+    body_location: "Implications for dynamic strategic behavior"
+    antecedents: ["L_P4", "L_P6"]
+
+# ============================================================================
+# Observations
+# ============================================================================
+observations:
+  - id: L_O1
+    statement: "Table 1: Cross-tabulation of limits to legal protections for knowledge across patents, copyrights, trade secrets — showing each protection mechanism's gaps in scope (tacit/inchoate excluded; products vs processes; etc.) and costs (registration, enforcement)."
+    role: "structured_evidence_table"
+    body_location: "Table 1"
+
+  - id: L_O2
+    statement: "Citations to legal-scholarship literature establishing the empirical reality of legal-protection gaps and enforcement costs."
+    role: "literature_anchor"
+    body_location: "Limits to Legal Protections for Knowledge section"
+
+# ============================================================================
+# Methods
+# ============================================================================
+methods:
+  - id: L_M1
+    statement: "Conceptual theory development with structured comparative analysis (Table 1) of legal-protection mechanisms; argument by example + by logical derivation from incomplete-contracts and transaction-cost premises."
+    type: "theoretical_with_comparative_analysis"
+    body_location: "throughout"
+
+# ============================================================================
+# Findings
+# ============================================================================
+findings:
+  - id: L_F1
+    statement: "Firms' institutional knowledge-protection capabilities are a distinct source of sustained competitive advantage beyond the legal-property-rights regime; this is a knowledge-based addition to the strategic theory of the firm."
+    type: "theoretical_synthesis_finding"
+    source_propositions: [L_P1, L_P3, L_P4, L_P6]
+    body_location: "Conclusion"
+
+  - id: L_F2
+    statement: "Internalization of knowledge production (vs market contracting) is the dominant firm strategy where legal protection is weak and institutional protection costs are lower than market-contracting protection costs; firm boundaries are partly determined by this calculus."
+    type: "boundary_finding"
+    source_propositions: [L_P3, L_P4]
+    body_location: "Conclusion; Implications for firm boundaries"
+
+# ============================================================================
+# Provenance
+# ============================================================================
+provenance:
+  extraction_method: "paper_a:M2 retroactive spine extraction"
+  coder: "author (single-coder at v1.1.0; κ scheduled v1.2.0)"
+  source_pdf_first_page_verified: "2026-05-27 via PyPDF2 (text-readable PDF, no OCR needed)"
+  spine_node_count: 7  # propositions
+  observation_count: 2
+  method_count: 1
+  finding_count: 2

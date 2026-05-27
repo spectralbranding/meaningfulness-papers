@@ -1,0 +1,98 @@
+---
+title: "Same Meaning, Different Prose: An Empirical Demonstration of Rendering-Equivalence Under Spine-Preservation in Organizational Knowledge Work"
+short_title: "Rendering-Equivalence Demonstration (Paper B 2026ap)"
+author:
+  name: "Dmitry Zharnikov"
+  orcid: "0009-0000-6893-9231"
+paper_key: "2026ap"
+companion_paper_key: "2026ao"
+companion_paper_concept_doi: "10.5281/zenodo.20409683"
+version: "1.0.0"
+status: "v1.0.0 public Zenodo release: integrative theory engagement with Carlile 2004 + Raisch-Krakowski 2021 + Kaplan-Vakili 2015 + Felin-Kauffman-Zenger 2023 + Levinthal-March 1993; random-graph null baseline (Pr(Rec ≥ 4 by chance) = .000); Phase 2 Task α Substack self-application (11/14 strict / 14/14 semantic preservation under within-operator extraction; 9/14 strict / 14/14 semantic under cross-operator GPT-4o extraction); Phase 2.5 cross-paper P4 rendering of Paper A's full theoretical apparatus (12/15 strict / 15/15 semantic within-operator; 10/15 / 14/15 cross-operator); Phase 3 Task β LinkedIn third rendering of focal-pair substrate (Rec=4); cross-operator extraction discipline (Operator B ≠ Operator C); LLM-call professional logging; Conclusion section; abstract at 195 words; Task δ inter-coder κ + Task γ cross-language Russian + Phase 3.5b multi-LLM cross-FAMILY pre-registered for v1.1.0. Internal drafting versions (Session E v1.0.0 + Session E continuation v1.1.0 KBV add + Session F v1.2.0 P4 reframe + Session H v1.3.0 deep-path) consolidated to public v1.0.0 per feedback_version_only_at_zenodo HARD RULE; see PROVENANCE.yaml for internal drafting history."
+date: "2026-05-29"
+
+target_venue:
+  primary: "Strategic Management Journal"
+  secondary: "Organization Science"
+  tertiary: "Journal of Management Studies"
+
+paper_type: "empirical"
+sub_canon: "empirical-companion (paired with Paper A 2026ao theoretical foundation; central engagement is paper_a:P4 rendering-equivalence under spine-preservation)"
+
+zenodo:
+  concept_doi: "10.5281/zenodo.20409701"
+  version_doi: "10.5281/zenodo.20409702"
+  upload_status: "v1.0.0 jointly uploaded with Paper A 2026ao on 2026-05-29 per SESSION_I 13-step procedure"
+
+body_word_count_approx: 10369
+abstract_word_count: 198
+title_word_count: 15
+references_count: 19
+
+contributions:
+  - "Empirical demonstration of paper_a:P4 (rendering-equivalence under spine-preservation) on two independently-authored management-theory twin pairs: focal dynamic-capabilities pair (Eisenhardt-Martin 2000 + Zollo-Winter 2002) at Rec = 4 linked propositions with preserved antecedents; KBV pair (Grant 1996 + Liebeskind 1996) at Rec = 4 linked propositions with preserved antecedents. Each Rec value measures structural-substrate preservation across two prose renderings — direct paper_a:P4 evidence extending the companion theory's Online Appendix D Heisenberg-Schrödinger historical existence proof from physics into contemporary management research."
+  - "Cross-pair convergence at Rec = 4 across two distinct theoretical sub-domains (dynamic capabilities + knowledge-based view) at small N: suggestive small-N P4 evidence that substrate-sharing is observable at the typed-DAG isomorphism level in management theory."
+  - "SECONDARY (supportive of paper_a:P3 ordering): grid-anchored illustrative point estimates of β and δ across five available spines and renderings; joint ordering β < 1 < δ holds across all observations. NOT a falsificational test of paper_a:P3 at the organizational-outcome scale (reserved for v4.0.0)."
+  - "SECONDARY (methodological): pre-registered iterative-cohort-growth protocol v1.0.0 → v4.0.0 with Zenodo-version-DOI discipline; the working-paper trajectory itself is a longitudinal self-test of paper_a:P4. v1.0.0 task α (self-application of P4 to Paper B's own substrate via Substack practitioner-register re-rendering), task β (third rendering of focal-pair shared substrate), task γ (cross-language re-rendering into Russian), and task δ (inter-coder κ measurement on axiom A1) extend the P4 evidence base."
+
+propositions_tested:
+  - "Zharnikov 2026ao P4 (rendering-equivalence under spine-preservation): PRIMARY ENGAGEMENT. P4 demonstration at N=2 twin pairs (= 4 prose renderings) with cross-sub-domain convergence at Rec = 4; v1.0.0 task α + β + γ extend with three additional self-application renderings."
+  - "Zharnikov 2026ao P3 (verification-cost asymmetry): SECONDARY supportive engagement. β < 1 < δ ordering across 5 spines + 5 renderings is consistent with P3 ordering but NOT a falsificational test at organizational-outcome scale."
+  - "Zharnikov 2026ao P2 (organizational recombination rates): NOT TESTED at v1.0.0. P2 is a separate organizational-outcome proposition requiring large-N prospective cohort design at v3.0.0+ scale."
+  - "Zharnikov 2026ao axiom A1 (σ-faithfulness on locked subsets): tested directly by v1.0.0 task δ inter-coder κ measurement on two of the five extracted spines; κ ≥ .75 threshold determines whether P4 holds as preservation result or degrades to probabilistic tendency on the affected subdomain."
+
+new_proposition_paper_b:
+  - id: "Rec_star_beta"
+    statement: "Rec*(β) = ⌈3 · 2^(1−β)⌉ as β-conditional minimum-threshold (Discussion-level cross-tie footnote under v1.0.0 reframe; DEMOTED from contribution-2 level under v1.0.1 to footnote-level cross-tie under v1.0.0 per feedback_paper_b_p4_reframe.md — Rec*(β) is a P3-conditional cross-tie note not a primary Paper B contribution under the P4-centered scope)."
+    falsifier: "Observed Rec below Rec*(β) on a substrate-sharing twin OR systematic misprediction in prospective lab cohort at v3.0.0+ (P3-conditional, not central to Paper B v1.0.0)"
+
+versioning_trajectory:
+  v1_0_0: "Public Zenodo initial release: two twin pairs (focal EM2000+ZW2002 + KBV Grant1996+Liebeskind1996) at Rec=4 + TO1996 standalone precursor + integrative theory engagement (Carlile 2004 + Raisch-Krakowski 2021 + Kaplan-Vakili 2015 + Felin-Kauffman-Zenger 2023 + Levinthal-March 1993) + random-graph null baseline + Task α Substack self-application + Task β LinkedIn third rendering + Phase 2.5 cross-paper P4 (Paper A practitioner rendering) + cross-operator extraction discipline (GPT-4o) + LLM-call provenance logging + Conclusion. Consolidates internal drafting versions v1.0.0/v1.1.0/v1.2.0/v1.3.0 (Sessions E/F/G/H) per feedback_version_only_at_zenodo HARD RULE."
+  v1_1_0: "Task δ inter-coder κ on axiom A1 (protocol pre-registered at PHASE4_KAPPA_MEASUREMENT_2026-05-27.md) + Task γ cross-language Russian re-rendering (human-native) + Phase 3.5b multi-LLM cross-FAMILY operator robustness (Slavic + Sino-Tibetan; YandexGPT + GigaChat + DeepSeek + Claude Opus control)"
+  v2_0_0: "First prospective lab cohort (substrate-publish vs rendering-only condition); larger-N twin-pair extension; first non-trivial confidence intervals on β/δ; third-party-coder substitution for δ"
+  v3_0_0: "Multi-cohort prospective tracking; pre-registered identification (DiD on Zenodo spine-publication events) for P3 ordering and P2 organizational-recombination claim"
+  v4_0_0: "Submission-scale empirical companion; full P4 demonstration corpus + falsificational P3 test at organizational-outcome scale"
+
+spine_doc_version: "0.4.2"
+phase_1_5_grok_verdicts:
+  r1: "MEDIUM / R&R_LIKELY (3 WEAK ratings) — fired against internal-drafting P2/P3 framing; superseded by internal-drafting P4 reframe (Session F)"
+  r2: "MEDIUM / R&R_LIKELY (1 WEAK rating; 3 STRONG ratings) — fired against internal-drafting P2/P3 framing; superseded by internal-drafting P4 reframe (Session F)."
+phase_4_grok_verdicts:
+  postdraft_r1: "3/10 SMJ-tier readiness at internal-drafting P4 reframe; reframe coherence VERIFIED (Grok reads paper.md as P4 demonstration not P2/P3 test); 11 must-fix items elevated (3 addressable in v1.0.0 release window; 8 deferred to v2.0.0+); fired Session G; raw at audit/grok_outputs/2026ap_grok_postdraft_r1.md"
+  postdraft_r2: "4/10 (+1 improvement from postdraft_r1); substantive credit for Phase 5 work; plateau-and-ship at 4/10 per working-paper tier discipline (Paper A 2026am precedent)"
+
+ai_disclosure: "AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1) were used for initial literature search and editorial refinement; all theoretical claims, propositions, and interpretations are the author's sole responsibility."
+
+related_artifacts:
+  spine: "SPINE.yaml (v0.4.x; published in this mirror)"
+  phase_protocols:
+    - "PHASE1_ANCHOR_VERIFICATION_2026-05-27.md (Crossref anchor-verification audit; SF1 hallucination evidence)"
+    - "PHASE3_5A_RUSSIAN_RENDERING_PROTOCOL.md (cross-language pre-registered for v1.1.0)"
+    - "PHASE3_5B_MULTI_LLM_OPERATOR_PROTOCOL.md (multi-LLM cross-FAMILY pre-registered for v1.1.0)"
+    - "PHASE4_KAPPA_MEASUREMENT_2026-05-27.md (inter-coder kappa pre-registered for v1.1.0)"
+  isomorphism_analyses:
+    - "TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md"
+    - "TWIN_PAIR_ISOMORPHISM_PB_KBV.md"
+    - "SELF_APPLICATION_ISOMORPHISM_PB.md"
+    - "CROSS_PAPER_P4_ISOMORPHISM.md"
+    - "CROSS_OPERATOR_EXTRACTION_RESULTS.md"
+  validation_cases:
+    - "VALIDATION_CASE_PB_FOCAL_EISENHARDT_MARTIN_SPINE.yaml"
+    - "VALIDATION_CASE_PB_FOCAL_ZOLLO_WINTER_SPINE.yaml"
+    - "VALIDATION_CASE_PB_SECONDARY_PRECURSOR_TUSHMAN_OREILLY_SPINE.yaml"
+    - "VALIDATION_CASE_PB_KBV_GRANT_SPINE.yaml"
+    - "VALIDATION_CASE_PB_KBV_LIEBESKIND_SPINE.yaml"
+    - "VALIDATION_CASE_PB_SELF_APPLICATION_SPINE.yaml (within-operator Phase 2)"
+    - "VALIDATION_CASE_PB_SELF_APPLICATION_GPT4_SPINE.yaml (cross-operator Phase 2-prime)"
+    - "VALIDATION_CASE_PB_FOCAL_THIRD_RENDERING_SPINE.yaml (within-operator Phase 3)"
+    - "VALIDATION_CASE_PB_FOCAL_THIRD_GPT4_SPINE.yaml (cross-operator Phase 3-prime)"
+    - "VALIDATION_CASE_PA_PRACTITIONER_SPINE.yaml (cross-paper within-operator Phase 2.5)"
+    - "VALIDATION_CASE_PA_PRACTITIONER_GPT4_SPINE.yaml (cross-paper cross-operator Phase 2.5-prime)"
+  renderings:
+    - "RENDERING_PB_SUBSTACK_PRACTITIONER.md (Phase 2 Substack 1,615w)"
+    - "RENDERING_FOCAL_PAIR_THIRD_PROSE.md (Phase 3 LinkedIn 1,044w)"
+    - "RENDERING_PA_PRACTITIONER.md (Phase 2.5 Substack cross-paper 2,102w)"
+  companion_code: "code/ (rec_metric.py + cost_function_calibration.py + null_baseline.py + cross_operator_extraction.py + multi_llm_rendering.py + llm_call_logger.py + reconstruct_session_h_logs.py + README.md)"
+  experimental_logs: "logs/ (9 JSONL files + logs/README.md; experimental LLM calls only; redaction audit clean)"
+  companion_paper_public_mirror: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness"
+---

@@ -1,0 +1,110 @@
+---
+title: "Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work"
+author: "Dmitry Zharnikov"
+orcid: 0009-0000-6893-9231
+paper_key: 2026ao
+status: published
+version: 1.0.0
+date_draft_started: 2026-05-26
+date_published: 2026-05-29
+zenodo:
+  concept_doi: "10.5281/zenodo.20409683"
+  version_doi: "10.5281/zenodo.20409684"
+  url: "https://doi.org/10.5281/zenodo.20409683"
+companion_paper_concept_doi: "10.5281/zenodo.20409701"
+target_venue_primary: Organization Science
+target_venue_secondary: Journal of Management Inquiry
+target_venue_tertiary: AI & Society
+paper_type: theoretical
+primary_contribution: "The Operator role and era-dependent projection of structural-substrate vs judgment operations in knowledge-work artifact production"
+primary_propositions:
+  - P1 (separability)
+  - P4 (rendering-equivalence under spine-preservation)
+deferred_propositions:
+  - P2 (recombination — empirical estimation in 2026ap companion working paper)
+  - P3 (verification-cost asymmetry β/δ — empirical estimation in 2026ap companion working paper)
+empirical_companion:
+  paper_key: 2026ap
+  concept_doi: "10.5281/zenodo.20409701"
+  version_doi: "10.5281/zenodo.20409702"
+  public_mirror: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical"
+  trigger: Paper A Phase 3 GO + paper.md complete + post-draft review pass + Zenodo upload
+  published: 2026-05-29 (joint Zenodo upload with Paper A)
+spine_artifact: research/meaning_meaningfulness_paper/SPINE.yaml
+spine_version: v0.7.1
+schema_version: v0.2
+spine_first_protocol: research/SPINE_FIRST_DRAFTING_PROTOCOL.md
+phase_1_5_grok_cycles_completed: "5 (r1 through r5; plateau reached r4→r5; GO recommendation issued; ~50% Grok-suggestion hallucination rate verified via 5-stage Crossref+SS+arXiv+OpenAlex+OpenLibrary cascade)"
+appendices:
+  A: appendix_A_schema.md (substrate schema + preservation theorem + κ threshold)
+  B: appendix_B_protocol.md (spine-first drafting protocol operational specification)
+  C: appendix_C_simulation.md (calibrated cost-asymmetry simulation harness)
+  D: appendix_D_historical_existence_proof.md (Heisenberg-Schrödinger T1 + Telegram T3 supplementary)
+companion_code:
+  expected_path: sbt-papers/meaningfulness/code/cost_asymmetry_simulation.py
+  status: scaffold (full implementation post-Zenodo-mirror-creation)
+  random_seed: 42
+key_external_anchors_verified:
+  - kulkarni-2024-future-of-research-in-ai-driven-world (DOI 10.1177/10564926231219622)
+  - kocak-levinthal-puranam-2023-dual-challenge-search-coordination (DOI 10.1287/orsc.2022.1601)
+  - raisch-2021-artificial-intelligence-management (DOI 10.5465/amr.2018.0072)
+  - carlile-2004-transferring-translating-transforming-boundaries (DOI 10.1287/orsc.1040.0094)
+  - star-griesemer-1989-boundary-objects-museum-vertebrate (DOI 10.1177/030631289019003001)
+  - rosso-dekas-wrzesniewski-2010-meaning-of-work (DOI 10.1016/j.riob.2010.09.001)
+  - liebeskind-1996-knowledge-strategy-theory-firm (DOI 10.1002/smj.4250171109)
+  - nickerson-zenger-2004-knowledge-based-theory-firm-problem-solving (DOI 10.1287/orsc.1040.0093)
+  - bechky-okhuysen-2011-expecting-unexpected-swat-film (DOI 10.5465/amj.2011.60263060)
+  - felin-kauffman-zenger-2023-resource-origins-search (DOI 10.1002/smj.3350)
+  - leonardi-vaast-2017-social-media-affordances-organizing (DOI 10.5465/annals.2015.0144)
+  - eisenhardt-martin-2000-dynamic-capabilities-what-are-they (DOI 10.1002/1097-0266(200010/11)21:10/11<1105::AID-SMJ133>3.0.CO;2-E)
+  - zollo-winter-2002-deliberate-learning-dynamic-capabilities (DOI 10.1287/orsc.13.3.339.2780)
+  - bikard-2020-idea-twins-simultaneous-discoveries-research-tool (DOI 10.1002/smj.3162)
+  - schrodinger-1926-equivalence-heisenberg-wave-mechanics
+  - vonneumann-1932-mathematical-foundations-quantum-mechanics
+  - pauli-1927-quantenmechanik-magnetischen-elektrons
+  - cover-2006-elements-information-theory (DOI 10.1002/047174882X)
+boundary_conditions:
+  - C1 (version-controlled authoring)
+  - C2 (propositional claims)
+  - C3 (non-trivial audience-schema divergence)
+  - C4 (volume exceeds unaided human verification capacity)
+negative_scope_conditions:
+  - NSC1 (routine operational work)
+  - NSC2 (real-time control systems)
+  - NSC3 (narrative-only scholarship)
+  - NSC4 (high-stakes executive sensemaking)
+  - NSC5 (pure discovery science without reproducibility pressure)
+word_count_body_target: 11000-12000
+word_count_body_current: 8826 (Session D init draft pre-polish-pass)
+draft_phase_completion:
+  end_to_end_skeleton: complete (Session D first window)
+  main_body_full_prose: pending (Session D second window)
+  appendices_full_prose: appendix_D complete; A/B/C at skeleton+key-content
+  qc_pass: pending
+  post_draft_grok_review: pending
+  zenodo_upload: pending
+double_anonymous_prep:
+  status: not_applied
+  notes: "Apply at submission step — remove byline; change self-citations to [Author, 2026X]; redact DOIs to [DOI withheld for anonymous review]; keep DOIs in separate title page file"
+ai_disclosure:
+  acknowledged_in_paper: true
+  default_format_used: true
+  models_disclosed: "Claude Opus 4.7, Grok 4.1, Gemini 3.1"
+related_artifacts:
+  spine: SPINE.yaml (v0.7.3; published in this mirror)
+  appendices:
+    - appendix_A_schema.md (substrate schema + preservation theorem + κ threshold)
+    - appendix_B_protocol.md (spine-first drafting protocol)
+    - appendix_C_simulation.md (cost-asymmetry simulation harness)
+    - appendix_D_historical_existence_proof.md (Heisenberg-Schrödinger founding pair)
+  illustrative_validation:
+    - VALIDATION_CASE_T1_HEISENBERG_SPINE.yaml
+    - VALIDATION_CASE_T1_SCHRODINGER_SPINE.yaml
+    - VALIDATION_CASE_T1_SCHRODINGER_EQUIVALENCE_NOTES.md
+    - VALIDATION_CASE_T2_KULKARNI_2024_SPINE.yaml
+    - TWIN_PAIR_SPINE_ISOMORPHISM.md
+  empirical_companion:
+    paper_key: "2026ap"
+    concept_doi: "10.5281/zenodo.20409701"
+    public_mirror: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical"
+---

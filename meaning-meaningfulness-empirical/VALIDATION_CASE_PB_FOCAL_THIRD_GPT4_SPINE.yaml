@@ -1,0 +1,78 @@
+spine_version: "0.2"
+extracted_from: "What two famous dynamic-capabilities papers actually agree on — a structural read"
+extracted_by: "gpt-4 (operator C; received prose only; no source spine)"
+nodes:
+  - id: DC_P1
+    type: proposition
+    statement: "Dynamic capabilities are specific identifiable processes built on routines, not vague organizational mystique."
+    antecedent_edges:
+      - target: "Nelson and Winter 1982"
+        edge_type: extends
+  - id: DC_P2
+    type: proposition
+    statement: "Learning mechanisms drive how dynamic capabilities form and evolve."
+    antecedent_edges:
+      - target: "Levitt and March 1988"
+        edge_type: extends
+  - id: DC_P3
+    type: proposition
+    statement: "There are cross-firm commonalities in dynamic capabilities at the best-practice or mechanism level, even where firm-specific detail diverges."
+    antecedent_edges:
+      - target: "Teece, Pisano, and Shuen 1997"
+        edge_type: extends
+  - id: DC_P4
+    type: proposition
+    statement: "Dynamic-capability form is contingent on market or task features."
+    antecedent_edges:
+      - target: "Eisenhardt and Tabrizi 1995"
+        edge_type: extends
+  - id: DC_P5
+    type: proposition
+    statement: "The agreement-at-center pattern means you can act on a stable shared substrate without having to pick a side between two formulations."
+    antecedent_edges:
+      - target: "DC_P1"
+        edge_type: depends-on
+      - target: "DC_P2"
+        edge_type: depends-on
+      - target: "DC_P3"
+        edge_type: depends-on
+      - target: "DC_P4"
+        edge_type: depends-on
+  - id: DC_P6
+    type: proposition
+    statement: "Two independently-produced prose renderings of the same underlying substrate converge on conclusions when the substrate is preserved."
+    antecedent_edges:
+      - target: "DC_P1"
+        edge_type: depends-on
+      - target: "DC_P2"
+        edge_type: depends-on
+      - target: "DC_P3"
+        edge_type: depends-on
+      - target: "DC_P4"
+        edge_type: depends-on
+  - id: DC_P7
+    type: proposition
+    statement: "If you make the substrate of your knowledge work explicit and version-controlled, you get AI cost advantage and convergence-across-renderings guarantee."
+    antecedent_edges:
+      - target: "DC_P6"
+        edge_type: depends-on
+  - id: DC_P8
+    type: proposition
+    statement: "Strategy groups inside large firms that maintain explicit decision logs and structured handbooks are getting both advantages of AI cost advantage and convergence-across-renderings."
+    antecedent_edges:
+      - target: "DC_P7"
+        edge_type: depends-on
+  - id: DC_P9
+    type: proposition
+    statement: "The dynamic-capabilities literature converged on a stable substrate because the field organized itself around that substrate over decades."
+    antecedent_edges:
+      - target: "DC_P1"
+        edge_type: depends-on
+      - target: "DC_P2"
+        edge_type: depends-on
+      - target: "DC_P3"
+        edge_type: depends-on
+      - target: "DC_P4"
+        edge_type: depends-on
+boundary_conditions: []
+stylized_facts: []

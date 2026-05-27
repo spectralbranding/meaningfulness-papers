@@ -1,0 +1,58 @@
+spine_version: "0.2"
+extracted_from: "When two strategy papers say the same thing in different words — and what that tells you about AI in your organization"
+extracted_by: "gpt-4 (operator C; received prose only; no source spine)"
+nodes:
+  - id: "P1"
+    type: proposition
+    statement: "Eisenhardt and Martin (2000) and Zollo and Winter (2002) reach similar conclusions about dynamic capabilities despite using different vocabularies."
+    antecedent_edges:
+      - target: "Eisenhardt and Martin 2000"
+        edge_type: extends
+      - target: "Zollo and Winter 2002"
+        edge_type: extends
+  - id: "P2"
+    type: proposition
+    statement: "Grant (1996) and Liebeskind (1996) reach similar conclusions about the knowledge-based view of the firm despite using different vocabularies."
+    antecedent_edges:
+      - target: "Grant 1996"
+        edge_type: extends
+      - target: "Liebeskind 1996"
+        edge_type: extends
+  - id: "P3"
+    type: proposition
+    statement: "The structural substrate of knowledge artifacts can be separated from their rendering, allowing for different presentations of the same underlying content."
+    antecedent_edges: []
+  - id: "P4"
+    type: observation
+    statement: "In a recent working paper, four central claims with their full dependency structure were found to be present in both pairs of strategy papers."
+    antecedent_edges:
+      - target: "P1"
+        edge_type: evidences
+      - target: "P2"
+        edge_type: evidences
+  - id: "P5"
+    type: proposition
+    statement: "Generative AI introduces a cost asymmetry by being more efficient at operating on the structural substrate than verifying rendered prose."
+    antecedent_edges: []
+  - id: "P6"
+    type: proposition
+    statement: "Organizations can gain a measurable advantage by separating the structural substrate from the rendering and using AI to operate on the substrate."
+    antecedent_edges:
+      - target: "P5"
+        edge_type: extends
+  - id: "P7"
+    type: proposition
+    statement: "The separation between substrate and rendering generalizes across organizations, and the direction of cost asymmetry under generative AI generalizes."
+    antecedent_edges:
+      - target: "P6"
+        edge_type: extends
+  - id: "BC1"
+    type: boundary_condition
+    statement: "The framework applies when authoring is version-controlled, claims are propositional, the audience for different renderings is divergent, and artifact volume exceeds what unaided human reviewers can verify."
+    antecedent_edges: []
+  - id: "BC2"
+    type: boundary_condition
+    statement: "The framework does not apply if an organization produces a small number of long narrative documents read by a homogeneous audience."
+    antecedent_edges: []
+boundary_conditions: ["BC1", "BC2"]
+stylized_facts: []

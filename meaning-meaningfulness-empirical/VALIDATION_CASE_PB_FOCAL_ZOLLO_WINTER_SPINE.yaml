@@ -1,0 +1,118 @@
+# VALIDATION_CASE_PB_FOCAL — Zollo & Winter (2002) Organization Science
+# Retroactive spine extraction per paper_a:appendix_B_protocol.
+
+extraction_version: "1.0.0"
+extraction_session: "Session E Phase 2"
+extraction_date: "2026-05-27"
+schema_version: "0.2"
+
+source_paper:
+  citation_key: zollo-winter-2002-deliberate-learning
+  full_citation: "Zollo, M., & Winter, S. G. (2002). Deliberate Learning and the Evolution of Dynamic Capabilities. Organization Science 13(3): 339–351."
+  doi: "10.1287/orsc.13.3.339.2780"
+  publication_date: "2002-05/06"
+  venue: "Organization Science (Special Issue on Knowledge, Knowing and Organization)"
+  source_pdf: "research/references/Deliberate_Learning_and_the_Evolution_of_Dynamic_C.pdf (47 pages incl. tables/refs)"
+  working_paper_predecessor: "Zollo & Winter (1999) WP 99-07 'From Organizational Routines to Dynamic Capabilities' — confirms independent draft-time emergence relative to Eisenhardt-Martin 2000 (both circulating as working papers in parallel through 1999-2000)."
+
+paper_thesis: |
+  Dynamic capabilities are routinized activities directed at developing and
+  adapting operating routines. They are shaped by the co-evolution of three
+  learning mechanisms: (1) semi-automatic experience accumulation, (2)
+  deliberate knowledge articulation, and (3) deliberate knowledge codification.
+  Relative effectiveness of these mechanisms is contingent on task features
+  (frequency, homogeneity, causal ambiguity). Counterintuitively, highly
+  deliberate learning processes (codification) have superior effectiveness at
+  lower task frequency, higher heterogeneity, and higher causal ambiguity.
+
+# ============================================================================
+# Propositions
+# ============================================================================
+propositions:
+  - id: ZW_P1
+    statement: "Dynamic capabilities are routinized activities directed to the development and adaptation of operating routines."
+    falsifier: "DCs can be empirically separated from any routinized substrate; one-off activities qualify as DCs."
+    body_location: "abstract; §Definition"
+    antecedents: ["Nelson-Winter 1982 routines"]
+
+  - id: ZW_P2
+    statement: "Three learning mechanisms — semi-automatic experience accumulation, deliberate knowledge articulation, deliberate knowledge codification — jointly shape DC evolution."
+    falsifier: "DC evolution observable in the absence of any of the three mechanisms; or a fourth mechanism dominates."
+    body_location: "abstract; §Learning Mechanisms"
+    antecedents: ["Levitt-March 1988 organizational learning", "Nonaka 1994 tacit/explicit"]
+
+  - id: ZW_P3
+    statement: "Firms adopt a mix of learning behaviors constituted by semi-automatic experience accumulation + deliberate investments in articulation + codification."
+    falsifier: "Firms specialize in only one mechanism and still achieve DC evolution."
+    body_location: "§Learning Mix"
+    antecedents: ["ZW_P2"]
+
+  - id: ZW_P4
+    statement: "Relative effectiveness of the capability-building mechanisms is contingent on task features: frequency, homogeneity, causal ambiguity."
+    falsifier: "Mechanism effectiveness is uniform across task types."
+    body_location: "§Contingencies; §Hypotheses"
+    antecedents: ["ZW_P2", "ZW_P3"]
+
+  - id: ZW_P5
+    statement: "Highly deliberate learning processes (codification) have superior effectiveness at lower task frequency, higher heterogeneity, and higher causal ambiguity (counterintuitive result)."
+    falsifier: "Codification effectiveness is highest at high frequency / low heterogeneity / low causal ambiguity (the conventional intuition)."
+    body_location: "§Hypotheses; §Discussion"
+    antecedents: ["ZW_P4"]
+
+  - id: ZW_P6
+    statement: "DCs themselves require investment; they do not emerge automatically from operating-routine variance."
+    falsifier: "Firms achieve DC evolution without deliberate articulation or codification investment."
+    body_location: "§Cost of DCs"
+    antecedents: ["ZW_P2", "ZW_P3"]
+
+# ============================================================================
+# Observations
+# ============================================================================
+observations:
+  - id: ZW_O1
+    statement: "Citation of acquisitions-and-alliances empirical work (Zollo-Singh 1998 ACAD-MGT-PROC; Kale 1999 dissertation) on codification effects on M&A performance."
+    role: "supporting_empirical_anchor"
+    body_location: "§Empirical Evidence; footnote 5"
+
+  - id: ZW_O2
+    statement: "Reference to literature on organizational routines (Nelson-Winter 1982; Cohen-Bacdayan 1994) as foundational substrate."
+    role: "theoretical_anchor"
+    body_location: "§Definition; §Learning Mechanisms"
+
+# ============================================================================
+# Methods
+# ============================================================================
+methods:
+  - id: ZW_M1
+    statement: "Conceptual theory development with hypotheses derivation; selective integration of empirical evidence from organizational-learning and M&A literatures."
+    type: "theoretical_with_hypothesis_derivation"
+    body_location: "throughout"
+
+# ============================================================================
+# Findings
+# ============================================================================
+findings:
+  - id: ZW_F1
+    statement: "DC evolution requires a co-evolution of three learning mechanisms; no single mechanism is sufficient."
+    type: "theoretical_synthesis"
+    source_propositions: [ZW_P2, ZW_P3, ZW_P6]
+    body_location: "§Discussion"
+
+  - id: ZW_F2
+    statement: "Counterintuitive contingency: deliberate codification dominates in low-frequency / high-heterogeneity / high-causal-ambiguity tasks — exactly where conventional intuition would predict experience accumulation."
+    type: "counterintuitive_finding"
+    source_propositions: [ZW_P4, ZW_P5]
+    body_location: "§Hypotheses; §Discussion"
+
+# ============================================================================
+# Provenance
+# ============================================================================
+provenance:
+  extraction_method: "paper_a:M2 retroactive spine extraction"
+  coder: "author (single-coder at v1.0.0; κ scheduled v1.1.0)"
+  source_pdf_first_page_verified: "2026-05-27 via PyPDF2"
+  spine_node_count: 6  # propositions
+  observation_count: 2
+  method_count: 1
+  finding_count: 2
+  independence_check: "Working-paper version dated 1999 (WP 99-07) demonstrates parallel circulation with Eisenhardt-Martin 2000 (cited by Eisenhardt-Martin in references list as 'Zollo M, Winter S. 1999. From organizational routines to dynamic capabilities. Working paper WP 99-07'). Both papers cite Teece-Pisano-Shuen 1997 as foundational antecedent; neither cites a substantive prior preprint of the other's central thesis. Independence at draft time HOLDS."

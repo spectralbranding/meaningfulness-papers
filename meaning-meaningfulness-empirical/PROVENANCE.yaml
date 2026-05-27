@@ -1,0 +1,186 @@
+---
+# Paper B 2026ap PROVENANCE (public mirror; honest drafting trail summary)
+# Internal SSOT with full session-level provenance lives in the author's
+# corpus repo; this file summarizes the v1.0.0-release drafting trail
+# at the level reviewers need for academic-robustness purposes.
+
+paper_key: "2026ap"
+companion_paper: "2026ao"
+public_release_version: "1.0.0"
+date_published: "2026-05-29"
+zenodo:
+  concept_doi: "10.5281/zenodo.20409701"
+  version_doi: "10.5281/zenodo.20409702"
+
+companion_paper_zenodo:
+  concept_doi: "10.5281/zenodo.20409683"
+  version_doi: "10.5281/zenodo.20409684"
+
+drafting_protocol:
+  spine_first: "Per SPINE_FIRST_DRAFTING_PROTOCOL (Paper A 2026ao Online Appendix B)"
+  pre_draft_gate: "Grok pre-draft critical-review HARD GATE applied (2 cycles)"
+  post_draft_review: "Grok post-draft critical-review applied (2 cycles; readiness 3/10 -> 4/10 working-paper tier; plateau-and-ship per Paper A 2026am precedent)"
+
+# v1.0.0 release consolidates 4 internal drafting phases (collapsed per
+# feedback_version_only_at_zenodo HARD RULE). Each phase summarized below
+# at the experiment + artifact level; internal session-coordination
+# artifacts (handoff docs, triage memos, review summaries) stay internal.
+
+phase_summary:
+  phase_0:
+    description: "Thesis lock + scope decisions"
+    artifacts_public:
+      - "Initial twin-pair scope (focal pair Eisenhardt-Martin 2000 + Zollo-Winter 2002 dynamic capabilities)"
+  phase_0_5:
+    description: "Spine v0.1.0 schema v0.2 lock"
+    artifacts_public:
+      - "SPINE.yaml v0.4.x (final at this release)"
+  phase_1:
+    description: "Predraft bundle assembly + integrative-literature scan"
+    artifacts_public:
+      - "Theoretical-antecedent anchors verified via Crossref (PHASE1_ANCHOR_VERIFICATION_2026-05-27.md)"
+  phase_1_5_pre_draft_review:
+    description: "Pre-draft critical-review cycles (2 rounds; MEDIUM/R&R_LIKELY plateau)"
+    cycles: 2
+    plateau_at_round: 2
+    hallucination_rate_round: "~57% across r1+r2 anchor suggestions"
+    artifacts_public:
+      - "logs/phase_1_crossref_anchor_verification_calls.jsonl (12 Crossref calls; SF1 hallucination audit)"
+  phase_2_extractions:
+    description: "Retroactive spine extractions of five source papers"
+    artifacts_public:
+      - "VALIDATION_CASE_PB_FOCAL_EISENHARDT_MARTIN_SPINE.yaml (7 propositions + 3 observations + 2 findings)"
+      - "VALIDATION_CASE_PB_FOCAL_ZOLLO_WINTER_SPINE.yaml (6 propositions + 2 observations + 2 findings)"
+      - "VALIDATION_CASE_PB_KBV_GRANT_SPINE.yaml (KBV pair; OCR'd PDF source)"
+      - "VALIDATION_CASE_PB_KBV_LIEBESKIND_SPINE.yaml (KBV pair)"
+      - "VALIDATION_CASE_PB_SECONDARY_PRECURSOR_TUSHMAN_OREILLY_SPINE.yaml (standalone precursor)"
+      - "TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md (Rec=4 with preserved antecedents L1-L4)"
+      - "TWIN_PAIR_ISOMORPHISM_PB_KBV.md (Rec=4 with preserved antecedents K1-K4)"
+  phase_2_task_alpha_self_application:
+    description: "Substack practitioner-register rendering of Paper B's own substrate (Task alpha self-application)"
+    operator_b_renderer: "Claude Opus 4.7"
+    artifacts_public:
+      - "RENDERING_PB_SUBSTACK_PRACTITIONER.md (1,615 words)"
+      - "VALIDATION_CASE_PB_SELF_APPLICATION_SPINE.yaml (within-operator extraction baseline)"
+      - "SELF_APPLICATION_ISOMORPHISM_PB.md (11/14 strict / 14/14 semantic / 0 contradicted)"
+      - "logs/phase_2_render_PB_spine_to_substack_practitioner_calls.jsonl"
+      - "logs/phase_2_extract_spine_from_substack_rendering_calls.jsonl"
+  phase_2_prime_cross_operator:
+    description: "Cross-operator re-extraction of Phase 2 rendering via GPT-4o (Operator C; prose-only; no source-spine context)"
+    operator_c_extractor: "gpt-4o-2024-08-06"
+    rule_source: "Operator-B-must-not-equal-Operator-C cross-operator extraction separation discipline"
+    artifacts_public:
+      - "VALIDATION_CASE_PB_SELF_APPLICATION_GPT4_SPINE.yaml"
+      - "logs/phase_2_prime_extract_spine_from_substack_rendering_PB_via_GPT4_calls.jsonl"
+    result: "9/14 strict / 14/14 semantic / 0 contradicted (vs within-operator 11/14 / 14/14 / 0; -2 strict / 0 semantic delta = within-model memory contamination bound)"
+  phase_2_5_cross_paper_p4:
+    description: "Cross-paper P4 demonstration — Substack practitioner rendering of Paper A's full theoretical apparatus"
+    operator_b_renderer: "Claude Opus 4.7"
+    operator_c_extractor: "gpt-4o-2024-08-06"
+    artifacts_public:
+      - "RENDERING_PA_PRACTITIONER.md (2,102 words; dual-purpose research artifact + practitioner-tier source material)"
+      - "VALIDATION_CASE_PA_PRACTITIONER_SPINE.yaml (within-operator baseline)"
+      - "VALIDATION_CASE_PA_PRACTITIONER_GPT4_SPINE.yaml (cross-operator GPT-4o)"
+      - "CROSS_PAPER_P4_ISOMORPHISM.md"
+      - "logs/phase_2.5_render_PA_spine_to_substack_practitioner_calls.jsonl"
+      - "logs/phase_2.5_extract_spine_from_PA_practitioner_rendering_calls.jsonl"
+      - "logs/phase_2.5_prime_extract_spine_from_PA_practitioner_rendering_via_GPT4_calls.jsonl"
+    result: "12/15 strict / 15/15 semantic within-operator; 10/15 strict / 14/15 semantic cross-operator; 0 contradicted both extractions; strongest single P4 evidence point in v1.0.0 release"
+  phase_3_task_beta_third_rendering:
+    description: "Third LinkedIn long-post rendering of focal-pair shared substrate L1-L4"
+    operator_b_renderer: "Claude Opus 4.7"
+    operator_c_extractor: "gpt-4o-2024-08-06"
+    artifacts_public:
+      - "RENDERING_FOCAL_PAIR_THIRD_PROSE.md (1,044 words)"
+      - "VALIDATION_CASE_PB_FOCAL_THIRD_RENDERING_SPINE.yaml (within-operator)"
+      - "VALIDATION_CASE_PB_FOCAL_THIRD_GPT4_SPINE.yaml (cross-operator)"
+      - "TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md section 8 (extended)"
+      - "logs/phase_3_render_focal_pair_shared_substrate_to_linkedin_calls.jsonl"
+      - "logs/phase_3_prime_extract_spine_from_focal_pair_third_rendering_via_GPT4_calls.jsonl"
+    result: "Rec(G_third, G_shared_spine) = 4; 4/4 node-type+antecedent strict (within and cross); 1/4 strict edge-type cross-operator; 4/4 semantic; 0 contradicted"
+  phase_3_5a_russian_protocol_pre_registered:
+    description: "Russian human-native rendering protocol pre-registered for v1.1.0"
+    artifacts_public:
+      - "PHASE3_5A_RUSSIAN_RENDERING_PROTOCOL.md (codebook locked; source-text selection; falsifier specification)"
+  phase_3_5b_multi_llm_protocol_pre_registered:
+    description: "Multi-LLM cross-FAMILY operator-robustness protocol pre-registered for v1.1.0"
+    operators_planned: ["YandexGPT", "GigaChat", "DeepSeek", "Claude Opus (control)"]
+    language_families: ["Slavic", "Sino-Tibetan"]
+    artifacts_public:
+      - "PHASE3_5B_MULTI_LLM_OPERATOR_PROTOCOL.md"
+      - "code/multi_llm_rendering.py (execution-ready)"
+  phase_4_task_delta_kappa_protocol_pre_registered:
+    description: "Inter-coder kappa measurement protocol pre-registered for v1.1.0"
+    artifacts_public:
+      - "PHASE4_KAPPA_MEASUREMENT_2026-05-27.md (codebook + sampling frame + thresholds + recruitment candidate list)"
+  phase_5_paper_md_assembly:
+    description: "paper.md assembly + integrative theory engagement + null baseline + Conclusion + abstract refresh"
+    artifacts_public:
+      - "paper.md v1.0.0 (~10,779 words)"
+      - "SPINE.yaml v0.4.x"
+      - "code/rec_metric.py + code/null_baseline.py + code/cost_function_calibration.py + code/README.md"
+  phase_5h_llm_call_provenance:
+    description: "LLM-call professional logging discipline applied to all experimental calls"
+    artifacts_public:
+      - "code/llm_call_logger.py (single-source schema + JSONL writer + redaction at write time)"
+      - "code/reconstruct_session_h_logs.py (post-hoc reconstruction for harness-internal calls predating real-time logging)"
+      - "logs/ directory with 9 JSONL files + logs/README.md"
+    redaction_audit: "post-write grep for embedded API key patterns -> empty; clean for public publication"
+    note: "Internal authoring-process LLM calls (drafting assistance, internal peer-review cycles, AI-assisted literature exploration not producing cited results) are NOT in the public log per the experiment-scope-only publication rule."
+  phase_6_post_draft_review:
+    description: "Post-draft critical-review cycles (2 rounds)"
+    cycles: 2
+    plateau_at_round: 2
+    readiness_trajectory: "3/10 -> 4/10 (working-paper tier)"
+    hallucination_rate_round_1: "~83% across 12 anchor suggestions (post-draft r1; tier-1-venue-retrofit pattern)"
+    note: "Stop-at-plateau-and-ship per Paper A 2026am working-paper precedent; r3+ would not improve rating without rolling back framework-coherence choices."
+
+bikard_protocol_independence_check:
+  focal_pair:
+    em_2000_cites_zw_1999_wp: "YES (in reference list; not in central in-text argument)"
+    zw_2002_cites_em_2000: "NO"
+    shared_antecedents: ["teece-pisano-shuen-1997", "nelson-winter-1982"]
+    verdict: "PARTIAL independence; acceptable for v1.0.0 existence-proof scope. P4 demonstration does not require strict Bikard independence."
+  kbv_pair:
+    grant_1996_liebeskind_1996_same_special_issue: "YES (SMJ Winter 1996 Special Issue 'Knowledge and the Firm')"
+    grant_cites_liebeskind: "NO (independent contributions to same conversation)"
+    shared_antecedents: ["coase-1937", "williamson-1975", "penrose-1959", "barney-1991", "polanyi-1966"]
+    verdict: "STRONG independence (same-volume special-issue concurrent authorship; independent submissions)"
+
+grok_suggested_anchors_hallucination_rate:
+  paper_b_pre_draft_r1_plus_r2: "~57% (4 of 7 suggested anchors hallucinated)"
+  paper_b_post_draft_r1: "~83% (10 of 12 suggested anchors hallucinated; tier-1 venue retrofit pattern)"
+  cumulative_corpus_documented: "~64% across Paper A + Paper B negative findings documented in respective SPINE.yaml files"
+  audit_methodology: "5-stage Crossref -> SemanticScholar -> arXiv -> OpenAlex -> OpenLibrary -> Perplexity verification cascade"
+
+reproducibility_anchors:
+  - "Twin-pair Rec metric: uv run python code/rec_metric.py --spine1 <yaml1> --spine2 <yaml2>"
+  - "Null baseline: uv run python code/null_baseline.py --n-shadows 1000 --seed 42"
+  - "Cost calibration: uv run python code/cost_function_calibration.py --spines <paths> --renderings <paths>"
+  - "Cross-operator extraction: uv run python code/cross_operator_extraction.py --rendering <md> --codebook appendix_A_schema --extractor gpt-4o-2024-08-06"
+  - "Random seed: 42 (fixed at file top of every computation script)"
+
+editorial_discipline_anchors:
+  - "No fabricated DOIs: 5-stage verification cascade pre-draft + post-draft; Crossref-verified anchors only"
+  - "Cross-operator extraction separation: Operator B is not equal to Operator C (renderer model is not equal to extractor model) for all P4 evidence in Results section Self-application"
+  - "LLM-call professional logging: every experimental LLM call producing cited evidence is logged in JSONL with operator + model_version + prompts + parameters + response + tokens + latency + cost + redaction-discipline pass"
+  - "Internal drafting versions consolidated to public v1.0.0 at Zenodo upload (version-only-at-Zenodo discipline)"
+
+versioning_trajectory:
+  v1_0_0:
+    description: "Public Zenodo initial release (this release)"
+    evidence: "Two twin pairs at Rec=4 + null baseline + 3 self-application renderings + cross-operator extraction + LLM-call provenance"
+    date: "2026-05-29"
+  v1_1_0:
+    description: "Task delta inter-coder kappa + Task gamma Russian human-native + Phase 3.5b multi-LLM cross-FAMILY"
+    estimated: "4-8 weeks post-v1.0.0"
+  v2_0_0:
+    description: "First prospective lab cohort + larger-N twin-pair extension + confidence intervals on beta/delta + third-party-coder substitution for delta"
+    estimated: "6-12 months post-v1.0.0"
+  v3_0_0:
+    description: "Multi-cohort prospective tracking; pre-registered identification (DiD on Zenodo spine-publication events) for P3 ordering and P2 organizational-recombination claim"
+    estimated: "12-18 months post-v1.0.0"
+  v4_0_0:
+    description: "Submission-scale empirical companion; full P4 demonstration corpus + falsificational P3 test at organizational-outcome scale"
+    estimated: "18-24 months post-v1.0.0"
+---

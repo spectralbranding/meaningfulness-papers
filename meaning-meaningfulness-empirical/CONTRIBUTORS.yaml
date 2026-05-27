@@ -1,0 +1,43 @@
+---
+# Paper B 2026ap "Same Meaning, Different Prose: An Empirical Demonstration
+# of Rendering-Equivalence Under Spine-Preservation in Organizational
+# Knowledge Work" — Working Paper v1.0.0 (initial public Zenodo release;
+# consolidates internal drafting versions v1.0.0 through v1.3.0 per
+# feedback_version_only_at_zenodo HARD RULE; see PROVENANCE.yaml for
+# internal drafting history).
+# CRediT contributor statement per CRediT taxonomy.
+# AI assistants are NOT listed as authors (per PAPER_QUALITY_STANDARDS item 57).
+
+contributors:
+  - name: "Dmitry Zharnikov"
+    orcid: "0009-0000-6893-9231"
+    credit_roles:
+      - "Conceptualization"
+      - "Methodology"
+      - "Software"
+      - "Validation"
+      - "Formal analysis"
+      - "Investigation"
+      - "Data curation"
+      - "Writing — original draft"
+      - "Writing — review & editing"
+      - "Visualization"
+      - "Supervision"
+      - "Project administration"
+
+ai_assistance_disclosure: |
+  AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1) were used during
+  the drafting of this paper for initial literature search and editorial
+  refinement. The Phase 1.5 pre-draft Grok HARD-GATE review process and
+  the Phase 4 post-draft Grok review cycle are documented in the
+  project's audit trail (audit/grok_outputs/2026ap_r1_grok.md +
+  2026ap_r2_grok.md + 2026ap_grok_postdraft_r1.md) with each round
+  surfaced to the author for GO/REVISE/DROP verdict per the
+  R_PAPER_PREDRAFT_WORKFLOW HARD GATE discipline. Grok-suggested
+  citation anchors are subject to the project's Crossref-verification
+  discipline (audit/scripts/verify_2026ap_postdraft_r1_anchors.py +
+  PHASE1_ANCHOR_VERIFICATION_2026-05-27.md document the verification of
+  12 anchors with 10 negative findings recorded). All theoretical
+  claims, propositions, methodology specifications, calibration choices,
+  and interpretations are the author's sole responsibility.
+---

@@ -1,0 +1,130 @@
+# VALIDATION_CASE_PB_KBV — Grant (1996) SMJ
+# Second twin pair (KBV neighborhood); v1.1.0 addition per Path A.
+# OCR-extracted from /Users/d/projects/spectral-branding/research/references/Toward_A_Knowledge-Based_Theory_of_the_Firm.pdf
+# via ocrmypdf --force-ocr at Session E continuation; original PDF was image-only.
+
+extraction_version: "1.1.0"
+extraction_session: "Session E continuation post-Path-A"
+extraction_date: "2026-05-27"
+schema_version: "0.2"
+
+source_paper:
+  citation_key: grant-1996-knowledge-based-theory-firm
+  full_citation: "Grant, R. M. (1996). Toward a Knowledge-Based Theory of the Firm. Strategic Management Journal 17 (Winter Special Issue): 109–122."
+  doi: "10.1002/smj.4250171110"
+  publication_date: "1996 (Winter Special Issue: Knowledge and the Firm)"
+  venue: "Strategic Management Journal (Winter 1996 Special Issue 'Knowledge and the Firm')"
+  source_pdf: "research/references/Toward_A_Knowledge-Based_Theory_of_the_Firm.pdf (14 pages; image-only — OCR'd via ocrmypdf --force-ocr Session E continuation)"
+
+paper_thesis: |
+  The firm exists primarily as an institution for the integration of
+  specialist knowledge into productive activity. Knowledge is the most
+  strategically important resource of the firm; the fundamental asymmetry
+  is that knowledge acquisition requires greater specialization than its
+  utilization, so production requires coordinated efforts of individual
+  specialists. Markets cannot perform this coordinating role because of
+  (a) tacit-knowledge immobility and (b) explicit-knowledge
+  expropriation risk. Hence the firm exists. The paper develops the
+  characteristics of knowledge (transferability, aggregation,
+  appropriability; tacit vs explicit), the mechanisms of knowledge
+  integration (rules and directives; sequencing; routines; group
+  problem-solving), and the implications for organizational structure
+  (hierarchy as economizing on integration) and firm boundaries.
+
+# ============================================================================
+# Propositions
+# ============================================================================
+propositions:
+  - id: G_P1
+    statement: "Knowledge is the most strategically important resource of the firm; the knowledge-based view is an outgrowth of the resource-based view focused on knowledge as the central resource."
+    falsifier: "Empirical work shows non-knowledge resources dominate firm-level strategic outcomes; or knowledge does not satisfy the resource-based-view criteria for strategic resources."
+    body_location: "Introduction; Foundations"
+    antecedents: ["RBV-tradition (Penrose 1959; Barney 1991; Wernerfelt 1984)"]
+
+  - id: G_P2
+    statement: "Knowledge has critical characteristics including transferability (within and between firms), aggregation efficiency (enhanced by common-language encoding such as statistics), appropriability (constrained by property-rights weakness), and the tacit-vs-explicit (knowing-how vs knowing-about) distinction."
+    falsifier: "Empirical work shows these characteristics are not stable; or alternative typologies (e.g., procedural vs declarative) better predict firm outcomes."
+    body_location: "Foundations — Characteristics of Knowledge"
+    antecedents: ["Polanyi 1966 tacit knowledge", "Nonaka 1991/1994", "Spender 1989"]
+
+  - id: G_P3
+    statement: "Knowledge creation is an individual activity (not organizational); organizations apply existing individual knowledge to production rather than themselves creating knowledge."
+    falsifier: "Empirical or theoretical demonstration that organizational entities create knowledge in ways irreducible to individual creation + integration."
+    body_location: "The Existence of the Firm; Distinction-from-Spender 1989/1992"
+    antecedents: ["Simon 1991 'All learning takes place inside individual human heads'"]
+
+  - id: G_P4
+    statement: "The firm exists as an institution for production because (a) production requires the coordinated efforts of specialists with diverse knowledge, and (b) markets cannot perform this coordinating role due to tacit-knowledge immobility and explicit-knowledge expropriation risk."
+    falsifier: "Markets demonstrably achieve the coordination role at lower cost than firms in production contexts requiring specialist knowledge integration."
+    body_location: "The Existence of the Firm"
+    antecedents: ["Coase 1937", "Williamson 1975 markets-and-hierarchies", "Demsetz 1991"]
+
+  - id: G_P5
+    statement: "Coordination within the firm requires knowledge-integration mechanisms: rules and directives; sequencing; routines; group problem-solving and decision-making. The choice among mechanisms is contingent on interdependence type (pooled, sequential, reciprocal, team) and on knowledge tacitness."
+    falsifier: "Empirical work shows a single mechanism dominates across interdependence types; or interdependence type does not predict mechanism choice."
+    body_location: "Coordination Within the Firm"
+    antecedents: ["Thompson 1967 organizational interdependence", "Van de Ven Delbecq Koenig 1976", "Ouchi 1979 coordination mechanisms"]
+
+  - id: G_P6
+    statement: "Hierarchy as basic organizational structure emerges to economize on specialist knowledge integration; decision-making rights are co-located with the knowledge required to make the decision."
+    falsifier: "Hierarchy persists even when knowledge integration is more efficiently achieved through non-hierarchical structures; or decision rights are systematically misaligned with knowledge locations."
+    body_location: "Organizational Structure"
+    antecedents: ["Jensen-Meckling 1992 specific knowledge", "Hayek 1945 knowledge-of-time-and-place"]
+
+  - id: G_P7
+    statement: "Firm boundaries are determined by efficient knowledge integration vs market alternatives; firms internalize activities where knowledge integration is more efficient inside the firm than across market boundaries."
+    falsifier: "Firm boundary choices do not correlate with knowledge-integration-efficiency differentials; alternative boundary-choice theories better predict empirical boundaries."
+    body_location: "Boundaries of the Firm"
+    antecedents: ["G_P4", "Coase 1937 nature of the firm", "Teece 1986 profiting from technological innovation"]
+
+# ============================================================================
+# Observations
+# ============================================================================
+observations:
+  - id: G_O1
+    statement: "Cited example: Ford Motor Company aggregation of explicit financial knowledge (cash balances, foreign currency exposure, inventory) via statistical encoding versus non-aggregable tacit knowledge (capabilities of managers, quirks of machine tools)."
+    role: "illustrative_case"
+    body_location: "Foundations — Transferability"
+
+  - id: G_O2
+    statement: "Cited example: Manchester United soccer team requiring long-term relationships for team-based skill investment (team production requires knowledge co-location)."
+    role: "illustrative_case"
+    body_location: "The Existence of the Firm"
+
+# ============================================================================
+# Methods
+# ============================================================================
+methods:
+  - id: G_M1
+    statement: "Conceptual synthesis of RBV + Coase/Williamson transaction-cost + organizational-learning + Nelson-Winter evolutionary economics into a single 'knowledge-based view' framework."
+    type: "theoretical_synthesis"
+    body_location: "throughout"
+
+# ============================================================================
+# Findings
+# ============================================================================
+findings:
+  - id: G_F1
+    statement: "The knowledge-based view of the firm is consistent with transaction-cost theory but emphasizes a different role: firms as institutions for managing team production (knowledge integration) rather than as institutions for managing transactions."
+    type: "theoretical_synthesis_finding"
+    source_propositions: [G_P3, G_P4, G_P5]
+    body_location: "The Existence of the Firm"
+
+  - id: G_F2
+    statement: "Interdependence within tasks is endogenous to organizational design (not exogenously driven by production technology); the knowledge-based view supports managerial choice over interdependence patterns."
+    type: "theoretical_implication"
+    source_propositions: [G_P5, G_P6]
+    body_location: "Coordination Within the Firm"
+
+# ============================================================================
+# Provenance
+# ============================================================================
+provenance:
+  extraction_method: "paper_a:M2 retroactive spine extraction; OCR-assisted via ocrmypdf --force-ocr"
+  coder: "author (single-coder at v1.1.0; κ scheduled v1.2.0)"
+  ocr_tool: "ocrmypdf 16.x + tesseract 5.5.2"
+  source_pdf_first_page_verified: "2026-05-27 via OCR'd pdftotext output"
+  spine_node_count: 7  # propositions
+  observation_count: 2
+  method_count: 1
+  finding_count: 2

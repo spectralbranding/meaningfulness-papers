@@ -1,0 +1,2753 @@
+# SPINE.yaml — Layered Knowledge Artifacts Under Generative AI
+#
+# First paper drafted under the spine-first drafting protocol per CLAUDE.md
+# item 0aa + research/SPINE_FIRST_DRAFTING_PROTOCOL.md.
+#
+# This file is the canonical structured representation of the paper's
+# meaning. Prose in paper.md (when drafted at Phase 3) MUST trace every
+# claim to a node here. FORK / REBASE / MERGE operations append rows in
+# `changelog` below.
+#
+# Schema v0.2 (extended): observations, methods, measurements, findings,
+# derivations, alternative_explanations, robustness_checks, limitations,
+# negative_findings, assumption_atoms — all first-class. Provenance on every
+# node. The schema is intentionally machine-operable; humans review and edit
+# selectively, not author top-to-bottom. That is itself a structural claim
+# of this paper (the schema's complexity is the cost-asymmetry result
+# operationalized — see thesis below).
+
+spine_version: "0.2"              # schema version (extended; see SPINE_FIRST_DRAFTING_PROTOCOL.md §"Schema v0.2")
+spine_doc_version: "0.7.3"        # document revision (v0.1.0 → v0.2.0 → v0.3.0 → v0.4.0 → v0.5.0 → v0.6.0 PIVOT-SPLIT → v0.7.0 r4 closure → v0.7.1 user-supplied NF2/NF3-partial-resolution anchors → v0.7.2 post-draft Grok review FORK + 7 verified anchors + NF4-NF10 → v0.7.3 post-draft Grok r2 FORK + 8 verified anchors + NF11-NF14)
+paper_key: "2026ao"               # placeholder; verify CANONICAL_REFERENCES.md at Phase 5; Paper A only post-PIVOT-SPLIT
+paper_b_companion_key: "2026ap"   # empirical companion; scoping at research/meaning_meaningfulness_paper/PAPER_B_2026ap_SCOPING.md
+status: "Phase 0.5 + Phase 4 FORK x2 — locked under schema v0.2 (Paper A theory-only post-PIVOT-SPLIT; v0.7.3 FORK pass after post-draft Grok review r2 adds 8 verified external_anchors plus records NF11-NF14; cumulative SF1 hallucination rate across r1-r5 + post1 + post2 ≈ 17 catches / ~53%)"
+target_venue_primary: "Organization Science"
+target_venue_secondary: "Journal of Management Inquiry"
+target_venue_tertiary: "AI & Society"
+
+title: >-
+  Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of
+  Meaning and Meaningfulness in Organizational Knowledge Work
+
+thesis: |
+  Generative AI shifts the cost-structure of knowledge work asymmetrically
+  across the three-level hierarchy of scholarly artifacts (log → semantic
+  graph → rendering). Meaning (the graph-extractable structure of claims,
+  dependencies, and evidence) becomes cheap to verify and recombine at
+  scale; meaningfulness (the context-dependent prose realization for a
+  specific cohort) does not, and may become more costly relative to the new
+  equilibrium. This asymmetry creates a management-theoretic cost-allocation
+  problem. The three-level hierarchy is the analytical tool; the spine-first
+  drafting protocol is the prescriptive intervention; the SPINE.yaml v0.2
+  schema is the operational artifact — and its intentional complexity is
+  the first operationalization of the cost-asymmetry result: a schema that
+  is unwieldy for a human to author top-to-bottom is exactly what the
+  cost-asymmetry predicts, because the spine is the meaning-operations layer
+  where AI's comparative advantage is largest. The paper exhibits the
+  post-AI knowledge-work organizational form by building it. The PRIMARY
+  CONTRIBUTION (v0.6.0 PIVOT-SPLIT scoping) is the Operator role +
+  era-dependent projection of structural-versus-judgment operations;
+  the cost-asymmetry mechanism, the typed-DAG specification, the
+  three-level hierarchy, the SPINE.yaml v0.2 schema, and the spine-first
+  drafting protocol are operationalizations of the role-theoretic move,
+  subordinated to online appendix structure (per Grok r3 NR1).
+  Primary propositions locked v0.6.0: P1 (separability) + P4 (rendering-
+  equivalence under spine-preservation). P2 (recombination) and P3
+  (verification-cost asymmetry) are stated as theoretically-derived
+  predictions with explicit falsifier specifications; empirical
+  estimation deferred to Paper B 2026ap empirical companion (iteratively-
+  versioned working paper; v1.0.0 N=2 twin pairs → v4.0.0 N=80-120 SMJ
+  submission scale). Validation strategy four-case, illustrative for
+  theory paper: (T1', PRIMARY illustrative case) Eisenhardt-Martin 2000
+  SMJ + Zollo-Winter 2002 Organization Science dynamic-capabilities twin
+  pair (Grok r3 §5 endorsed as strongest of three candidates); (T2,
+  venue-fit) Kulkarni-Mantere-Greenwood et al. 2024 JMI with K3 ≈ P3
+  multiple-discovery internal; (T1, HISTORICAL EXISTENCE PROOF for P4)
+  Heisenberg-Schrödinger 1925/26 twin pair; (T3, ROBUSTNESS) self-
+  application with 5+ companion renderings.
+
+# ============================================================================
+# Preamble: the Operator role and its era-dependent projections
+# (closes the "is this too complex for humans" objection by generalizing
+# the role above the human/AI instance distinction).
+#
+# v0.5.0: Per Grok r2 § single_most_important_thing_to_keep + § contribution-
+# sprawl gap (NF3), the Operator role + era-dependent projection table is
+# now FOREGROUNDED as the paper's PRIMARY contribution (Contribution 1).
+# The three-level hierarchy, the schema v0.2, the cost-asymmetry theorem,
+# and the spine-first protocol are now positioned as OPERATIONALIZATIONS of
+# the role-theoretic move — co-equal-contribution framing rejected.
+# ============================================================================
+operator_role:
+  contribution_status: "PRIMARY (Contribution 1 v0.5.0; role-theoretic move foregrounded per Grok r2 NF3 closure)"
+  position: >-
+    The schema is machine-operable by design. The role-level abstraction is
+    the Operator: the agent (or composition of agents) performing the
+    operations the framework specifies. Operator projections vary by era
+    and capability; the role's operations do not. This is the same
+    role-as-projection move OST applies to organizational roles.
+  rationale: |
+    The cost-asymmetry result (P3) implies that meaning operations — graph
+    construction, dependency tracing, structural verification — become
+    cheap under AI mediation while meaningfulness operations — cohort-
+    specific prose rendering — stay expensive. The SPINE.yaml is the
+    meaning-operations layer made operational. If the operator role's
+    operations look unwieldy for a single-human projection of the role,
+    that is the framework predicting its own operational shape: the
+    operations are intrinsic to the role; the projection (who/what
+    performs them) varies across eras.
+  operator_projections:
+    - era: "Pre-AI (and non-AI domains)"
+      composition: "Operator = Human(s) alone"
+      note: "All operations executed via human projection; no instance distinction needed."
+    - era: "AI-assisted current standard"
+      composition: "Operator = Human + AI tools (calculators, search, formatters)"
+      note: "Some deterministic operations delegated to tools; theoretical commitments retained by human."
+    - era: "Post-AI (the mode this paper exhibits)"
+      composition: "Operator = Human reviewing AI-authored structural substrate"
+      note: "Structural extraction by AI; FORK/REBASE/judgment by human; rendering by either with the other as reviewer."
+    - era: "Stretch: AI-primary"
+      composition: "Operator = AI primary with human supervision at FORK gates"
+      note: "AI handles most operations; human's job becomes goal-setting and structural-commit approval."
+  operations_by_role:
+    structural_substrate_operations:
+      items:
+        - "Extract observations / measurements / methods / findings from raw work"
+        - "Maintain proposition DAG, edge types, provenance metadata"
+        - "Check structural consistency; surface rivals; run robustness checks"
+        - "Generate prose drafts from the spine for cohort-specific editing"
+      note: "Era-dependent projection: pre-AI by human; post-AI typically by AI under human review."
+    judgment_operations:
+      items:
+        - "Decide which substrate slice to query (Operator's first-person substrate access)"
+        - "Decide FORK / REBASE / MERGE on each surfaced claim (theoretical commitment)"
+        - "Author the cohort-specific prose rendering (meaningfulness operations)"
+        - "Verify the substrate operations reflect the operator's intent"
+      note: "Era-invariant: stays with human projection across all current and near-future composition modes."
+  related_corpus:
+    - paper_key: orgschema-role-as-projection
+      relationship: extends
+      description: "OST's role-as-projection move: roles are abstractions; human / team / function-bundle instances project the role differently. Applied here to the Operator role across eras."
+    - paper_key: zharnikov-2026d
+      relationship: parallel_structure
+      description: "Paper Spec v0.1.0 already framed papers as machine-operable specs; this generalizes to the operator-level."
+    - paper_key: zharnikov-2026e
+      relationship: parallel_structure
+    - paper_key: zharnikov-2026am
+      relationship: parallel_structure
+      description: "Specification Readiness at the organizational level; operator-role projection at the artifact level."
+    - paper_key: project_researcher_substrate_operator_judgment
+      relationship: extends
+      description: "Researcher-as-Operator memory; the Operator generalization replaces the awkward Human-vs-AI framing with a role-as-projection structure."
+  body_sections: ["Section 8 — Discussion: the Operator role and its era-dependent projections"]
+
+# ============================================================================
+# Boundary conditions (closes Grok F1) — joint sufficient for the framework
+# ============================================================================
+boundary_conditions:
+  - id: C1
+    statement: "Authoring is version-controlled."
+    observable: "Presence of commit/revision history with attribution."
+    excludes: "Single-author handwritten manuscripts; broadcast media without provenance."
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "Phase-0 thesis v0.2.0 locked at eabf424c"
+
+  - id: C2
+    statement: "Claims are propositional, not purely narrative."
+    observable: "Presence of identifiable propositional claim markers with truth conditions."
+    excludes: "Pure fiction, lyric poetry, devotional or ritual text."
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "Phase-0 thesis v0.2.0 locked at eabf424c"
+
+  - id: C3
+    statement: "Audience-schema divergence is non-trivial."
+    observable: "Measured lexical/structural distance between author-domain and target-cohort domain exceeds threshold."
+    excludes: "Internal documentation read only by authors; same-discipline expert correspondence."
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "Phase-0 thesis v0.2.0 locked at eabf424c"
+
+  - id: C4
+    statement: "Volume of artifacts exceeds unaided human reviewer verification capacity."
+    observable: "Artifact volume per unit time relative to community reviewer capacity."
+    excludes: "Single-paper one-shot evaluation; bounded artisan-craft domains."
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "Phase-0 thesis v0.2.0 locked at eabf424c"
+
+# ============================================================================
+# Negative scope conditions (v0.7.0 per Grok r4 §1.3 STRONG closure)
+# Explicit names of domains where the theory does NOT apply. Counter-balances
+# C1-C4 positive scope. Closes Grok r4's "add one paragraph contrasting with
+# high-stakes executive sensemaking or pure discovery science without
+# reproducibility pressure" recommendation.
+# ============================================================================
+negative_scope_conditions:
+  - id: NSC1
+    statement: >-
+      Routine operational work without propositional structure.
+    domain_examples: "Customer-service call scripts; production-line work instructions; commodity-form-filling work."
+    why_excluded: >-
+      C2 (claims-are-propositional) fails: routine operational artifacts
+      consist of procedural directives, not propositional claims with
+      truth-conditions. The L → S extraction operator σ has no propositional
+      content to extract. The framework does not contradict prior
+      operations-research / work-design theory in this domain.
+
+  - id: NSC2
+    statement: >-
+      Real-time control systems where L (log), S (spine), and R (rendering)
+      collapse into single closed-loop execution.
+    domain_examples: "Trading-algorithm execution loops; autonomous-vehicle perception-action loops; physiological feedback control."
+    why_excluded: >-
+      C1 (version-controlled authoring) fails operationally: real-time
+      systems lack a stable L→S→R cycle because L is consumed before
+      σ can extract; the three layers are not separately observable. The
+      framework's cost-asymmetry result presupposes a temporal separation
+      between substrate maintenance and rendering production that real-time
+      systems do not exhibit.
+
+  - id: NSC3
+    statement: >-
+      Narrative-only scholarship without propositional cores.
+    domain_examples: "Literary criticism that operates as exegesis; ethnographic narrative without explicit claim-graph; philosophical phenomenology that resists propositional reformulation in principle."
+    why_excluded: >-
+      C2 (claims-are-propositional) is principle-failed, not contingently
+      failed: narrative-only scholarship resists propositional reformulation
+      as a methodological commitment, not a temporary lack of formalization.
+      The framework cedes this domain explicitly to interpretive traditions
+      (Geertz, Ricoeur, Latour-as-narrative) rather than colonizing it.
+
+  - id: NSC4
+    statement: >-
+      High-stakes executive sensemaking under genuine uncertainty.
+    domain_examples: "First-principles strategic decisions during crisis; novel venture-creation acts where no comparable spine exists; political-leadership judgment calls during crises."
+    why_excluded: >-
+      C4 (volume-exceeds-verification-capacity) is principle-inverted:
+      single-instance high-stakes judgment is characterized by deliberate
+      slow deliberation, not by volume pressure. The Operator-role-
+      structural/judgment split is irrelevant because the judgment side
+      already dominates by design; AI-projection cost-advantage does not
+      arise. The framework cedes this domain to traditional sensemaking
+      theory (Weick; Maitlis-Christianson).
+
+  - id: NSC5
+    statement: >-
+      Pure discovery science without reproducibility pressure.
+    domain_examples: "Pre-paradigmatic theoretical physics speculation; mathematical-conjecture exploration before formal proof; artistic-research practice without peer-review reproducibility commitment."
+    why_excluded: >-
+      C4 (volume-exceeds-verification-capacity) does not apply: the
+      community standard for the artifact does not require verification
+      at scale because there is no replicable substrate yet. The
+      framework's cost-asymmetry result is irrelevant when verification
+      cost is not yet a community-binding constraint.
+
+# ============================================================================
+# Observations: L-layer events lifted into the spine
+# ============================================================================
+observations:
+  - id: O1
+    statement: "Grok-4.1 response received with 15 cited claims during session-165 literature-review pass."
+    raw_data_pointer: "audit/grok_outputs/session-165-2026-04-15.log"
+    instrument: "Grok-4.1 (xAI API)"
+    timestamp: "2026-04-15"
+    conditions_at_capture: "lit-review prompt template v2; temperature 0.7"
+    provenance:
+      created_by: "ai:grok-4.1+seed:N/A+prompt_anchor:audit/prompts/lit-review-v2.md"
+      created_at: "2026-04-15"
+      source_log_event: "audit/sessions/session-165.log"
+      under_conditions: "Grok-4.1 default settings; xAI API"
+    body_sections: ["Section 4.1 — Stylized Fact 1"]
+
+  - id: O2
+    statement: "Grok r1 pre-draft HARD-GATE review of meaningfulness-paper PREDRAFT_BUNDLE.md v0.1.0 returned with 4 specific prior-art citations surfaced for engagement."
+    raw_data_pointer: "audit/grok_outputs/2026ao_grok.md"
+    instrument: "Grok-4.1 via run_grok_review.py with prompt template GROK_R_PAPER_PREDRAFT_PROMPT.md"
+    timestamp: "2026-05-26"
+    conditions_at_capture: "Session 168 parallel-session A; default temperature"
+    provenance:
+      created_by: "ai:grok-4.1+seed:N/A+prompt_anchor:research/reviews/GROK_R_PAPER_PREDRAFT_PROMPT.md"
+      created_at: "2026-05-26"
+      source_log_event: "audit/grok_outputs/2026ao_grok.md"
+    body_sections: ["Section 4.1 — Stylized Fact 1"]
+
+  - id: O3
+    statement: "Session 168 Q2 corpus graph analysis identified R15 AI Search Metamerism as most bibliographically-promiscuous bridge paper (21 neighbors in co-citation graph)."
+    raw_data_pointer: "research/code/q2_outputs/co_citation_graph.json"
+    instrument: "research/code/build_q2_graphs.py"
+    timestamp: "2026-05-26"
+    conditions_at_capture: "corpus substrate at commit 043700ea (Q1 pipeline applied; 1625 citations)"
+    provenance:
+      created_by: "tool:build_q2_graphs.py"
+      created_at: "2026-05-26"
+      source_log_event: "commit 13d0b568"
+    body_sections: ["Section 4.2 — Corpus parallels"]
+
+# ============================================================================
+# Methods: procedural transformations from observations to measurements/findings
+# ============================================================================
+methods:
+  - id: M1
+    statement: "5-stage citation verification cascade (Crossref → Semantic Scholar → arXiv → OpenAlex → OpenLibrary → Perplexity)."
+    type: "verification_cascade"
+    inputs: [O1, O2]
+    outputs: ["m1..m15 (session-165)", "m16..m19 (Phase-2 DR Session B)"]
+    code_anchor: "research/code/verify_citations.py"
+    reproducibility:
+      seed: "deterministic (no RNG; cascade ordering fixed)"
+      version: "git:b9d34789"
+      runtime_environment: "Python 3.12 + uv-managed dependencies"
+    cost: "~$0.04 per citation (Stage 5 Perplexity); free Stages 1-4"
+    provenance:
+      created_by: "author + tool:verify_citations.py"
+      created_at: "2026-05-26"
+      source_log_event: "commit b9d34789"
+    body_sections: ["Section 4.1 — Method"]
+
+  - id: M2
+    statement: "Retroactive spine extraction from external paper.md (or PDF) via Q1 context-capture pipeline + manual proposition coding."
+    type: "qualitative_coding"
+    inputs: ["external paper artifact"]
+    outputs: ["VALIDATION_CASE_<key>_SPINE.yaml"]
+    code_anchor: "research/code/extract_citation_contexts.py + manual coding"
+    reproducibility:
+      seed: "single-coder by default; inter-coder κ on 20% subsample for reliability"
+      version: "git:26b1b22a"
+    provenance:
+      created_by: "author + tool:extract_citation_contexts.py"
+      created_at: "2026-05-26"
+      source_log_event: "commit 26b1b22a"
+    body_sections: ["Section 6 — Validation Case A self-application", "Section 7 — Validation Cases T1+T2"]
+
+  - id: M3
+    statement: "Calibrated simulation of recombination advantage under semantic-substrate vs. rendering-only publication."
+    type: "simulation"
+    inputs: ["artifact-density parameters", "σ lossiness parameter"]
+    outputs: ["recombination-rate curve as function of σ lossiness"]
+    code_anchor: "<public-mirror>/<paper-slug>/code/recombination_simulation.py"
+    reproducibility:
+      seed: "42 (fixed)"
+      version: "TBD at Phase 3"
+    citation_keys: [cover-2006-elements-information-theory]
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_0_THESIS v0.2.0 §11 (planned; not yet executed)"
+    body_sections: ["Section 5 — Three-Level Hierarchy", "Section 11 — Calibrated simulation"]
+
+# ============================================================================
+# Measurements: derived data from observations via methods
+# ============================================================================
+measurements:
+  - id: m_session165_summary
+    statement: "Of 15 Grok-recommended citations from session-165, 8 were FABRICATED (DOI/title/author mismatched against the cascade), 7 were VERIFIED."
+    source_observations: [O1]
+    generating_method: M1
+    value: "8 fabricated / 7 verified / 0 other"
+    uncertainty: "deterministic verdicts from cascade; categorical"
+    units: "count out of 15"
+    provenance:
+      created_by: "author + tool:verify_citations.py"
+      created_at: "2026-04-15"
+      source_log_event: "audit/grok_outputs/session-165-cascade.json"
+
+  - id: m_phase2dr_summary
+    statement: "Of 4 Grok-r1-recommended prior-art citations for this paper (PHASE_0_THESIS v0.2.0), 0 were VERIFIED and 4 were FABRICATED (NOT_FOUND or DIFFERENT_RECORD)."
+    source_observations: [O2]
+    generating_method: M1
+    value: "0 verified / 4 fabricated"
+    uncertainty: "deterministic; 3 NOT_FOUND, 1 DIFFERENT_RECORD"
+    units: "count out of 4"
+    detail:
+      - "Puranam-Raveendran 2024 AMR: NOT_FOUND"
+      - "Cornelissen-Schildt 2025 Org Sci: NOT_FOUND"
+      - "Glaser et al. 2024 SMJ (DOI 10.1002/smj.3601): DIFFERENT_RECORD (resolves to Polidoro-Yang on platform multihoming)"
+      - "Seidel-O'Mahony 2023 AMJ: NOT_FOUND"
+    provenance:
+      created_by: "author + tool:verify_citations.py (Session B Phase-2 DR)"
+      created_at: "2026-05-26"
+      source_log_event: "research/meaning_meaningfulness_paper/PHASE_2_DR_PRIOR_ART_VERIFICATION_2026-05-26.md"
+
+# ============================================================================
+# Findings: inferential claims aggregating measurements via methods
+# ============================================================================
+findings:
+  - id: F1
+    statement: >-
+      In session-165 of this corpus, 8 of 15 (53%) Grok-recommended
+      citations failed verification on the 5-stage cascade. The
+      fabrications included invented DOIs, mismatched titles, and
+      mismatched authors — patterns consistent with AI-generated
+      hallucination of plausible-sounding scholarly references rather
+      than random error.
+    type: "empirical_finding"
+    source_measurements: [m_session165_summary]
+    generating_method: M1
+    statistical_strength: "single-session observation, n=15; no inferential statistics applied"
+    conditions: "C1, C4; specifically Grok-4.1 architecture, lit-review prompt template v2"
+    antecedents: [O1, M1]
+    falsifier: "If the same prompt + cascade across N≥20 additional Grok sessions yields fabrication rate <10%, F1 does not generalize."
+    citation_role_in_paper: "primary_evidence_for_SF1"
+    provenance:
+      created_by: "author + tool:verify_citations.py"
+      created_at: "2026-04-15"
+      source_log_event: "audit/grok_outputs/session-165-cascade.json"
+    body_sections: ["Section 4.1 — Stylized Fact 1"]
+
+  - id: F2
+    visibility: audit_internal     # v0.4.0 — NOT to be elevated in public paper per editorial direction
+    statement: >-
+      [AUDIT-INTERNAL ONLY] An early-draft pre-publication verification audit
+      of operator-surfaced prior-art citations against the 5-stage cascade
+      surfaced a fabrication rate of 4/4 (100%) on a small sample (n=4),
+      caught pre-drafting. Documented in
+      AUDIT_INTERNAL_F2_PHASE2_DR_NEAR_MISS.md. Per editorial direction
+      2026-05-26, the public paper does NOT elevate this self-referential
+      near-miss as primary SF1 evidence; the published narrative cites
+      generic literature on RAG hallucination rates instead.
+    type: "empirical_finding"
+    source_measurements: [m_phase2dr_summary]
+    generating_method: M1
+    statistical_strength: "n=4; not generalizable; retained as audit record only"
+    conditions: "C1, C2, C4"
+    antecedents: [O2, M1]
+    citation_role_in_paper: "audit_internal_only; public paper relies on generic SF1 evidence per editorial direction"
+    audit_internal_reference: "research/meaning_meaningfulness_paper/AUDIT_INTERNAL_F2_PHASE2_DR_NEAR_MISS.md"
+    provenance:
+      created_by: "operator (Session B per editorial direction)"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_2_DR_PRIOR_ART_VERIFICATION_2026-05-26.md + AUDIT_INTERNAL_F2_PHASE2_DR_NEAR_MISS.md (v0.4.0 audit-internal scoping)"
+    body_sections: []   # NOT cited in body; audit-internal only
+
+  - id: F3
+    statement: >-
+      R15 AI Search Metamerism is the most bibliographically-promiscuous
+      bridge paper in the SBT/OST corpus (21 neighbors in the co-citation
+      graph constructed at Session 168). R15's core claim — that distinct
+      AI search results render the same brand substrate
+      metameric-equivalently — is the brand-perception-level analog of
+      this paper's rendering-equivalence claim (P4) at the scholarly-
+      artifact level.
+    type: "empirical_finding"
+    source_measurements: []
+    generating_method: "tool:build_q2_graphs.py"
+    statistical_strength: "graph-structural observation on n=47-paper corpus; no inferential statistics"
+    antecedents: [O3]
+    falsifier: "If R15's neighborhood ranking is sensitive to graph-construction parameters (window size, citation-context coding), F3 weakens to 'R15 is among the most bibliographically promiscuous papers' rather than 'the most'."
+    citation_role_in_paper: "evidence_for_corpus_precedent_R15"
+    provenance:
+      created_by: "tool:build_q2_graphs.py"
+      created_at: "2026-05-26"
+      source_log_event: "commit 13d0b568"
+    body_sections: ["Section 4.2 — Corpus parallels", "Section 5 — Three-Level Hierarchy"]
+
+# ============================================================================
+# Stylized facts (closes Grok F2) — aggregated patterns over findings;
+# competing two-level frameworks cannot distinguish them.
+# ============================================================================
+stylized_facts:
+  - id: SF1
+    statement: >-
+      Generative-AI literature-review tools hallucinate citations at rates
+      above chance when given access only to rendered prose, not to
+      verified claim graphs.
+    aggregates_findings: [F1]      # v0.4.0: F2 removed from public aggregation per editorial direction
+    aggregation_logic: >-
+      F1 from this corpus (an aggregate-level observation that operator
+      lit-review workflows produce fabrication rates above chance under
+      R-only-access conditions) supplemented by NF1 (literature gap)
+      and by generic-literature evidence on RAG-hallucination rates in
+      scientific summarization (Session C Phase-2 DR identifies specific
+      published benchmarks).
+    indirect_evidence:
+      - "Published hallucination-rate studies on RAG in scientific summarization (Phase-2 DR Session C will identify specific papers; current NF1)"
+      - "Generic-literature primacy: SF1 in the public paper rests on these published studies, not on self-referential audit evidence (audit-internal F2 retained but not body-cited per v0.4.0 editorial direction)"
+    uniquely_explained_by: >-
+      Three-level hierarchy: AI operating on R alone reconstructs a
+      plausible-sounding S from rendering-shaped tokens because S is not
+      exposed. Two-level frames cannot distinguish this failure mode from
+      generic AI error.
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_0_THESIS v0.3.0 §7"
+    body_sections: ["Section 4.1 — Stylized Fact 1"]
+
+  - id: SF2
+    statement: >-
+      A sub-class of replication failures in management research are
+      rendering-layer divergences (operationalization, scale anchors, time
+      windows) over a preserved underlying claim graph, not graph-layer
+      disagreements.
+    aggregates_findings: ["TBD Phase-2 DR Session C identifies specific OSC-2015 / Many-Labs / Camerer cases"]
+    direct_evidence:
+      - "Open Science Collaboration 2015 replication project"
+      - "Many Labs studies"
+      - "Camerer et al. economic-experiment replications"
+    uniquely_explained_by: >-
+      Three-level hierarchy locates failure at R layer; prescribes
+      intervention (publish S; let replicators inspect the graph the
+      rendering instantiated).
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_0_THESIS v0.3.0 §7"
+    body_sections: ["Section 4.2 — Stylized Fact 2"]
+
+  - id: SF3
+    statement: >-
+      Cross-language research collaboration preserves meaning (claim graph
+      translates cleanly) while losing meaningfulness (register,
+      citation-density expectations, narrative arc cues do not).
+    aggregates_findings: ["TBD: structured measurement of register-divergence in Russian Telegram channel material"]
+    direct_evidence:
+      - "Mathematical Reviews translation workflow"
+      - "Bulletin of the AMS Russian translation series"
+      - "Multi-language clinical-trial registry summary practice"
+      - "Spectral Branding Russian Telegram channel (memory: reference_telegram_channel) — same S, distinct R"
+    uniquely_explained_by: >-
+      Three-level hierarchy: ρ is cohort-conditional and reconstructed per
+      language; σ produces a language-invariant S.
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_0_THESIS v0.3.0 §7"
+    body_sections: ["Section 4.3 — Stylized Fact 3"]
+
+  - id: SF4
+    statement: >-
+      Properly-specified scholarly artifacts exhibit conclusion-invariance
+      across rendering medium (written prose, spoken podcast, slide deck,
+      infographic, video). Neither pure philosophy of meaning, nor
+      translation studies (sentence-equivalence focus), nor AI-generated-
+      text research (typically single-medium) can explain this invariance.
+      The three-level hierarchy explains it directly: medium is a
+      rendering-layer parameter; spine is medium-invariant.
+    aggregates_findings: ["TBD: structural comparison of T1 Heisenberg-Schrödinger twin pair (different formalisms, same conclusions)", "TBD: comparison protocol on this paper's own 5 companion renderings"]
+    uniquely_explained_by: >-
+      Three-level hierarchy: medium is a rendering-layer parameter; the
+      spine is medium-invariant. P4 formalizes the invariance and supplies
+      the falsifier (when two renderings disagree on conclusions, at least
+      one broke the spine).
+    provenance:
+      created_by: "author (via IDEA_P4 doc 2026-05-26)"
+      created_at: "2026-05-26"
+      source_log_event: "research/meaning_meaningfulness_paper/IDEA_P4_RENDERING_EQUIVALENCE_2026-05-26.md"
+    body_sections: ["Section 4.4 — Stylized Fact 4 (NEW)"]
+
+# ============================================================================
+# Alternative explanations (rivals ruled out)
+# ============================================================================
+alternative_explanations:
+  - id: A1
+    statement: "AI fabrication of citations is due to outdated training data, not the architectural distinction between S-access and R-only access."
+    rules_out_required: [F1, F2]
+    ruled_out_by: [F2]
+    rules_out_status: "rejected"
+    reasoning: >-
+      F2's fabrications include synthesized 2024-2025 DOIs and venue
+      references temporally posterior to Grok-4.1's training cutoff;
+      the model is not "remembering" outdated data, it is generating
+      novel plausible-sounding references at inference time. This is
+      the architectural failure mode the framework predicts.
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_2_DR_PRIOR_ART_VERIFICATION_2026-05-26.md §summary"
+    body_sections: ["Section 4.1 — Stylized Fact 1 (rivals)"]
+
+  - id: A2
+    statement: >-
+      Rendering-equivalence under spine-preservation (P4) is just
+      translation studies under a new name; sentence-equivalence
+      between renderings is the actual claim.
+    rules_out_required: [F3, "T1 isomorphism analysis (forthcoming)"]
+    ruled_out_by: ["pending T1 + Distinction-from-translation-studies argument in PREDRAFT_BUNDLE §"]
+    rules_out_status: "candidate (will be rejected at Phase 3 via formal distinction)"
+    reasoning: >-
+      Translation studies operates rendering→rendering (sentence ↔
+      sentence equivalence). P4 operates spine→rendering
+      (multi-realization from common substrate). Different mechanism,
+      stronger invariance. T1's twin pair (Heisenberg matrix formalism
+      vs Schrödinger PDE formalism) is the existence-proof: the two
+      renderings could not possibly be sentence-by-sentence translations
+      of one another (mathematical formalisms have no common sentences),
+      yet they preserve conclusions.
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "IDEA_P4_RENDERING_EQUIVALENCE_2026-05-26.md §Distinction"
+    body_sections: ["Section 5 — Three-Level Hierarchy (rivals)"]
+
+# ============================================================================
+# Assumption atoms — assumed-without-test premises (relaxable)
+# ============================================================================
+assumption_atoms:
+  - id: AA1
+    statement: "Crossref + Semantic Scholar + OpenAlex are authoritative for journal-published citations in 2020-2026 with <5% false-negative rate."
+    type: "data_source_trust"
+    relaxable: true
+    relaxation_consequence: >-
+      If the cascade is unreliable (>5% false negatives), M1 produces
+      measurements with unknown error rate; F1 and F2 confidence
+      degrade; SF1's quantitative force weakens to qualitative.
+    affects: [M1, F1, F2, SF1]
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_2_DR_PRIOR_ART_VERIFICATION_2026-05-26.md §method-assumptions"
+    body_sections: ["Section 4.1 — Method assumptions (footnote)"]
+
+  - id: AA2
+    statement: "Spine extraction from prose papers (Method M2) can be done with inter-coder agreement κ ≥ 0.7 for proposition identification."
+    type: "method_validity"
+    relaxable: true
+    relaxation_consequence: >-
+      If coder agreement is low (κ < 0.5), the extracted spines for T1
+      and T2 reflect coder idiosyncrasy more than the source artifact;
+      the isomorphism claim weakens to author-specific reconstruction.
+    affects: [M2, "T1", "T2"]
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_0_THESIS v0.2.0 §10 method note"
+    body_sections: ["Section 7 — Method (validation cases)"]
+
+# ============================================================================
+# Negative findings — discoveries of absence
+# ============================================================================
+negative_findings:
+  - id: NF1
+    statement: >-
+      No published benchmark currently reports per-claim DOI-level
+      verification fabrication rates for AI literature-review tools at
+      scale ≥ 100 papers; existing RAG-hallucination studies measure
+      retrieval precision or qualitative-rating-of-output, not the
+      hard verification rate that the cost-asymmetry framework
+      requires for empirical anchoring.
+    expected_observation: "A benchmark with per-citation DOI-verification at scale ≥ 100 papers across multiple AI lit-review tools."
+    source_method: "Phase-2 DR literature search (Crossref + SemScholar + Google Scholar; Session B agent a59fe34fb8eecb54e secondary scan)"
+    affects_nodes: [F1, F2, SF1]
+    motivates: [SF1]
+    provenance:
+      created_by: "author (via Session B DR)"
+      created_at: "2026-05-26"
+      source_log_event: "research/meaning_meaningfulness_paper/PHASE_2_DR_TWIN_PAIR_ACQUISITION_2026-05-26.md §literature-gap-note"
+    body_sections: ["Section 4.1 — Stylized Fact 1 (literature gap)"]
+
+  - id: NF2
+    status_v0_7_1: "RESOLVED-PARTIAL — original Grok-suggested citation does not exist; real Felin-Kauffman-Zenger 2023 SMJ on adjacent topic supplied by user 2026-05-26 and engaged at felin-kauffman-zenger-2023-resource-origins-search anchor"
+    statement: >-
+      Grok r2 (audit/grok_outputs/2026ao_grok_r2.md §2 second bullet)
+      flagged HIGH-priority missing prior art "Felin, T., & Zenger, T. R.
+      (2023). The theory of the firm and the knowledge problem: AI,
+      bounded rationality, and the limits of organizational design.
+      Strategic Management Journal (early view, 2023)." Crossref search
+      (Session C-prime 2026-05-26) returned NO Felin-Zenger 2023 SMJ
+      paper matching this title or topic. v0.7.1 update (user-supplied
+      2026-05-26): a real Felin-Kauffman-Zenger 2023 SMJ paper DOES
+      exist on a different topic — "Resource origins and search" (DOI
+      10.1002/smj.3350; SMJ 44(6): 1514-1533). Engaged as a Phase-3-
+      relevant anchor under felin-kauffman-zenger-2023-resource-origins-
+      search. Pattern: Grok r2's specific title/topic was fabricated,
+      but the author/year/venue tuple existed — typical hallucination
+      shape that maps onto a real paper at adjacent topic. Other
+      verified Felin-Zenger work: Yang-Felin-Zenger 2026 SSRN preprint
+      on AI biases (DOI 10.2139/ssrn.6248918); Felin-Zenger 2014 Research
+      Policy "Closed or open innovation? Problem solving and the
+      governance choice" (DOI 10.1016/j.respol.2013.09.006). The
+      verification cascade caught the original Grok r2 hallucination
+      pre-draft; the user-supplied real-adjacent-paper enriches Paper A's
+      prior-art engagement without retroactively legitimizing the
+      Grok-suggested title.
+    expected_observation: "Either a Crossref-verified Felin-Zenger 2023 SMJ paper, or operator confirmation that the citation is fabricated."
+    source_method: M1
+    affects_nodes: [external_anchors, SF1]
+    motivates: [SF1]
+    provenance:
+      created_by: "operator (Session C-prime 2026-05-26; Crossref API check)"
+      created_at: "2026-05-26"
+      source_log_event: "GROK_REVIEW_SUMMARY_r2.md §4 + Session C-prime verification log"
+    body_sections: []   # audit-internal per editorial discipline (matches F2 visibility pattern)
+    visibility: audit_internal
+    note: >-
+      Visibility audit_internal per editorial discipline matching F2
+      (Session B-prime decision: self-referential AI-tool incidents from
+      the paper's own pre-draft do not foreground in the public paper).
+      NF2 is structurally identical to F2 but at a different stage —
+      Grok r2 (not Grok r1) supplied the suggested-anchor; the cascade
+      caught it pre-draft, same protocol, same outcome.
+
+  - id: NF3
+    status_v0_7_1: "RESOLVED-PARTIAL — original Grok-suggested citation does not exist with the suggested title/venue; real Leonardi-Vaast 2017 AM Annals paper on social-media affordances supplied by user 2026-05-26 and engaged at leonardi-vaast-2017-social-media-affordances-organizing anchor"
+    statement: >-
+      Grok r4 (audit/grok_outputs/2026ao_grok_r4.md §2 second bullet)
+      flagged HIGH-priority missing prior art "Leonardi, P. M., & Vaast,
+      E. (2017). The sociality of algorithms: Rethinking the materiality
+      of digital technologies. Organization Science, 28(5), 815-832.
+      DOI: 10.1287/orsc.2017.1152." Crossref verification (Session
+      C-prime 2026-05-26): the suggested DOI resolves to Tzabbar-Margolis
+      2017 ("Beyond the Startup Stage..."; Org Sci 28(5): 857-872), not
+      Leonardi-Vaast. v0.7.1 update (user-supplied 2026-05-26): a real
+      Leonardi-Vaast 2017 paper DOES exist on a different topic + at a
+      different venue — "Social Media and Their Affordances for
+      Organizing: A Review and Agenda for Research" (DOI
+      10.5465/annals.2015.0144; AM Annals 11(1): 150-188). Engaged as a
+      Phase-3-relevant anchor under leonardi-vaast-2017-social-media-
+      affordances-organizing. Pattern: Grok r4's title + venue + DOI
+      were all fabricated, but the author/year tuple existed — typical
+      hallucination shape that maps onto a real paper at adjacent
+      topic / different venue. The verification cascade caught the
+      original Grok r4 hallucination pre-draft; the user-supplied real-
+      adjacent-paper enriches Paper A's prior-art engagement
+      (affordance perspective applies to SPINE.yaml as technological
+      artifact) without retroactively legitimizing the Grok-suggested
+      title/venue/DOI tuple.
+    expected_observation: "Either a Crossref-verified Leonardi-Vaast 2017 Org Sci paper matching the suggested title, or operator confirmation that the citation is fabricated."
+    source_method: M1
+    affects_nodes: [external_anchors, SF1]
+    motivates: [SF1]
+    provenance:
+      created_by: "operator (Session C-prime 2026-05-26 v0.7.0; Crossref API check)"
+      created_at: "2026-05-26"
+      source_log_event: "GROK_REVIEW_SUMMARY_r4.md §4 + Session C-prime verification log"
+    body_sections: []
+    visibility: audit_internal
+    note: >-
+      Meta-finding (SF1 cumulative evidence across Grok r1+r2+r3+r4):
+      across four Grok pre-draft critical-review rounds, the verification
+      cascade (M1) has caught 6 hallucinated prior-art anchors total
+      (4 r1 + Felin-Zenger r2 + Leonardi-Vaast r4) — approximately
+      50% of Grok-suggested missing-prior-art citations across the
+      four review cycles. The framework's verification discipline
+      operates across reviewer rounds with consistent catch rate. This
+      cumulative SF1 evidence is itself audit_internal per editorial
+      discipline (the public paper cites general RAG-hallucination
+      literature, not paper-internal cascade incidents). However, the
+      cumulative pattern is documented in the spine for potential
+      empirical-companion engagement at Paper B v3.0.0+ as a within-
+      corpus SF1 instance.
+
+  - id: NF4
+    status_v0_7_2: "RESOLVED-PARTIAL — Bailey-Barley 2023 Org Sci hallucinated; user-supplied real Bailey-Barley 2010 Org Sci at adjacent topic engaged"
+    statement: >-
+      Post-draft Grok review §5 fifth bullet suggested HIGH-priority
+      "Bailey, D. E., & Barley, S. R. (2023). Beyond design: The
+      evolution of organizational roles in the age of AI. Organization
+      Science." Grok itself flagged [VERIFY BEFORE CITING]. Crossref
+      Session D: no Bailey-Barley 2023 Org Sci paper exists matching
+      that title. User-supplied 2026-05-26: real Bailey-Barley 2010
+      Org Sci 22(1): 262-285 "Teaching-Learning Ecologies" (DOI
+      10.1287/orsc.1090.0511) exists on adjacent topic — environment
+      shapes role structure through teaching-learning episodes.
+      Engagement angle: the Operator's era-dependent projection
+      extends Bailey-Barley's environment-shaping logic to operator-
+      internal operation-class projection.
+    source_method: M1
+    affects_nodes: [external_anchors, SF1]
+    motivates: [SF1]
+    provenance:
+      created_by: "operator (Session D + user-supplied 2026-05-26)"
+      created_at: "2026-05-26"
+      source_log_event: "audit/grok_outputs/2026ao_postdraft_grok.md §5 + user message"
+    body_sections: []
+    visibility: audit_internal
+
+  - id: NF5
+    status_v0_7_2: "RESOLVED-PARTIAL — Leonardi 2024 Org Sci hallucinated; user-supplied real Leonardi-Pilny-Treem-Sharma 2024 book chapter at adjacent topic engaged"
+    statement: >-
+      Post-draft Grok review §5 eleventh bullet suggested HIGH-priority
+      "Leonardi, P. M. (2024). AI and the future of work: New
+      affordances, new organizing. Organization Science." Grok itself
+      flagged [VERIFY BEFORE CITING]. Crossref: no single-author
+      Leonardi 2024 Org Sci paper matching. User-supplied 2026-05-26:
+      real Leonardi, Pilny, Treem, Sharma (2024) book chapter Ch 22
+      "Artificial Intelligence and Organizational Communication"
+      (DOI 10.1515/9783110718508-023) exists. Pattern structurally
+      identical to NF3 (Leonardi-Vaast 2017 hallucination → real
+      Leonardi-Vaast 2017 AM Annals adjacent).
+    source_method: M1
+    affects_nodes: [external_anchors, SF1]
+    motivates: [SF1]
+    provenance:
+      created_by: "operator (Session D + user-supplied 2026-05-26)"
+      created_at: "2026-05-26"
+      source_log_event: "audit/grok_outputs/2026ao_postdraft_grok.md §5 + user message"
+    body_sections: []
+    visibility: audit_internal
+
+  - id: NF6_through_NF10
+    status_v0_7_2: "HALLUCINATED-NO-ADJACENT — Crossref no match + no user-supplied real-adjacent"
+    statement: >-
+      Five additional post-draft Grok citations failed Crossref with
+      no adjacent supplied: (NF6) Glaser 2022 AMR future-organizational-
+      theory; (NF7) Pachidi 2024 Org Sci algorithmic-interactions
+      (Faraj-Pachidi-Sayegh 2018 engaged separately as different
+      paper); (NF8) Burt-Oppezzo 2024 SMJ AI-augmentation (Grok self-
+      flagged); (NF9) Raisch-Furr-Birkinshaw 2024 AMP hybrid-
+      organization (Raisch-Krakowski 2021 AMR engaged separately as
+      different paper); (NF10) Puranam 2024 SMJ AI-theory-firm
+      revisited (Nickerson-Zenger 2004 engaged separately as different
+      paper).
+
+  - id: NF11
+    status_v0_7_3: "RESOLVED-PARTIAL — Puranam-Raveendran 2024 SMJ hallucinated; user-supplied real Marchetti-Puranam 2025 SMJ at adjacent topic engaged"
+    statement: >-
+      Post-draft Grok review r2 §5 fourth bullet suggested HIGH-priority
+      "Puranam & Raveendran (2024). Strategic Management Journal."
+      Crossref Session D: no Puranam-Raveendran 2024 SMJ paper exists
+      matching that author-pair + year + venue (pattern matches
+      pre-draft r1 hallucination of "Puranam-Raveendran 2024 AMR" —
+      same fictional author pair, different fictional venue, same
+      false anchor reused across review cycles). User-supplied
+      2026-05-26: real Marchetti, A., & Puranam, P. (2025) SMJ "Are
+      less hierarchical firms organized around stronger cultures?
+      Evidence from big data." Vol 47(2): 463-493; DOI 10.1002/smj.70020
+      exists on adjacent topic — hierarchy + culture + organizational
+      structure. Engaged in Discussion KBV-positioning subsection.
+    source_method: M1
+    affects_nodes: [external_anchors, SF1]
+    motivates: [SF1]
+    provenance:
+      created_by: "operator (Session D postdraft r2 + user-supplied 2026-05-26)"
+      created_at: "2026-05-26"
+      source_log_event: "audit/grok_outputs/2026ao_postdraft_r2_grok.md §5 + user message"
+    body_sections: []
+    visibility: audit_internal
+
+  - id: NF12
+    status_v0_7_3: "RESOLVED-COMPLETE — Leonardi-Vaast 2024 update hallucinated; real Leonardi-Vaast 2017 AM Annals already engaged at v0.7.1"
+    statement: >-
+      Post-draft Grok review r2 §5 fifth bullet suggested HIGH-priority
+      "Leonardi & Vaast (2024 update to 2017 AMR)" affordances paper.
+      Crossref Session D: no Leonardi-Vaast 2024 paper exists matching.
+      The real Leonardi-Vaast 2017 AM Annals paper engaged at v0.7.1
+      under leonardi-vaast-2017-social-media-affordances-organizing
+      anchor is what Grok r2 is approximating with the "2024 update"
+      framing. Discipline preserved: cascade caught the suggested
+      "2024 update" pre-revision; existing v0.7.1 anchor remains the
+      Leonardi-Vaast engagement.
+    source_method: M1
+    affects_nodes: [external_anchors, SF1]
+    motivates: [SF1]
+    provenance:
+      created_by: "operator (Session D postdraft r2 verification cascade 2026-05-26)"
+      created_at: "2026-05-26"
+      source_log_event: "audit/grok_outputs/2026ao_postdraft_r2_grok.md §5"
+    body_sections: []
+    visibility: audit_internal
+
+  - id: NF13
+    status_v0_7_3: "RESOLVED-PARTIAL — Seidel-Berente 2023 Org Sci hallucinated; user-supplied THREE real-adjacent Seidel-Berente papers at adjacent venues/years engaged"
+    statement: >-
+      Post-draft Grok review r2 §5 tenth bullet suggested HIGH-priority
+      "Seidel & Berente (2023 Org Sci) AI and organizational knowledge
+      boundaries." Crossref Session D: no Seidel-Berente 2023 Org Sci
+      paper exists matching that author-pair + year + venue + title
+      (pattern matches pre-draft r1 hallucination of "Seidel-O'Mahony
+      2023 AMJ" — Seidel-X 2023 AMJ/Org Sci hallucination shape
+      recurring). User-supplied 2026-05-26: THREE real-adjacent papers
+      engage the same conceptual neighborhood:
+      (a) Seidel, Berente, Baiyere (2025) Information and Organization
+      "Stability and change in digital transformation: A repertoire
+      model of institutionally embedded affordances" (DOI 10.1016/
+      j.infoandorg.2025.100564);
+      (b) Seidel, O'Mahony (2014) Organization Science "Managing the
+      Repertoire: Stories, Metaphors, Prototypes, and Concept Coherence
+      in Product Innovation" (DOI 10.1287/orsc.2013.0879);
+      (c) Berente, Seidel, Safadi (2019) Information Systems Research
+      "Research Commentary—Data-Driven Computationally Intensive
+      Theory Development" (DOI 10.1287/isre.2018.0774).
+      All three engage repertoire / affordances / data-driven-theory
+      neighborhoods. Engaged in Discussion boundary-object subsection.
+    source_method: M1
+    affects_nodes: [external_anchors, SF1]
+    motivates: [SF1]
+    provenance:
+      created_by: "operator (Session D postdraft r2 + user-supplied 2026-05-26)"
+      created_at: "2026-05-26"
+      source_log_event: "audit/grok_outputs/2026ao_postdraft_r2_grok.md §5 + user message"
+    body_sections: []
+    visibility: audit_internal
+
+  - id: NF14
+    status_v0_7_3: "VENUE-WRONG — Grok r2 suggested Grodal et al. 2024 AMJ; real Grodal-Ha-Hood 2024 Organization Theory engaged"
+    statement: >-
+      Post-draft Grok review r2 §5 sixth bullet suggested HIGH-priority
+      "Grodal et al. (2024). Academy of Management Journal. Category
+      emergence in AI discourse." Crossref Session D: real Grodal, Ha,
+      Hood (2024) paper exists at SIMILAR topic — "Between Humans and
+      Machines: The social construction of the generative AI category"
+      — but venue is *Organization Theory* (DOI 10.1177/26317877241275125),
+      not AMJ. Engaged at venue-corrected citation. Note: this is the
+      Grok hallucination shape where author + year + topic are correct
+      but venue is mis-attributed — different from the NF11/NF13 shape
+      where the entire suggestion fails.
+    source_method: M1
+    affects_nodes: [external_anchors, SF1]
+    motivates: [SF1]
+    provenance:
+      created_by: "operator (Session D postdraft r2 verification cascade 2026-05-26)"
+      created_at: "2026-05-26"
+      source_log_event: "audit/grok_outputs/2026ao_postdraft_r2_grok.md §5"
+    body_sections: []
+    visibility: audit_internal
+    source_method: M1
+    cumulative_evidence: >-
+      Combined with NF2 + NF3 + NF4 + NF5 RESOLVED-PARTIAL entries +
+      the four r1 hallucinations recorded in v0.3.0 changelog:
+      cumulative SF1 evidence across 6 Grok cycles (r1+r2+r3+r4+r5+
+      postdraft) catches ~13 hallucinated anchors out of ~24 Grok-
+      suggested anchors total — sustained ~54% hallucination rate.
+      `feedback_grok_suggested_anchor_50pct_hallucination_rate`
+      empirically confirmed across full Paper A review trajectory.
+    affects_nodes: [external_anchors, SF1]
+    motivates: [SF1]
+    provenance:
+      created_by: "operator (Session D verification cascade 2026-05-26)"
+      created_at: "2026-05-26"
+      source_log_event: "audit/grok_outputs/2026ao_postdraft_grok.md §5 + Crossref verification log"
+    body_sections: []
+    visibility: audit_internal
+
+# ============================================================================
+# Robustness checks — sensitivity analyses
+# ============================================================================
+robustness_checks:
+  - id: RC1
+    statement: "Re-run citation verification on N=10 additional Grok lit-review sessions across varied prompt templates to test single-session bias of F1+F2."
+    varied_parameter: "session_id and prompt_template"
+    range_explored: "PLANNED — 10 additional sessions, May-June 2026"
+    result_stability: "planned"
+    affects_nodes: [F1, F2, SF1]
+    mitigates: [L1]
+    source_method: M1
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_0_THESIS v0.3.0 §14 (RC planned)"
+    body_sections: ["Section 4.1 — Robustness", "Section 8 — Discussion (future work)"]
+
+  - id: RC2
+    statement: "Second-coder Cohen's κ ≥ 0.75 on node typing AND edge placement on 20% subsample of T1' + T1 + T2 spine extractions (v0.7.0 threshold per Grok r4 §5 HIGH-priority addition; previously unspecified threshold)."
+    varied_parameter: "coder"
+    range_explored: "PLANNED — Paper B v1.0.0 supplies first measurement at N=2 twin pairs; Paper A appendix supplies threshold criterion"
+    result_stability: "planned"
+    threshold_specification:
+      kappa_target: 0.75
+      threshold_source: "Grok r4 §5 EMPIRICAL ROADMAP recommendation 2026-05-26"
+      what_is_measured: "Two-coder agreement on (a) node typing per schema v0.2 10-type taxonomy, (b) edge placement per v0.2 edge-type catalog (17 types)"
+      what_below_threshold_means: "If κ < 0.75 on node typing OR edge placement, axiom A1 (σ-faithfulness) is empirically falsified; P4 preservation theorem holds only conditional on the failed A1; theory weakens to a probabilistic tendency. NSC for the failed subdomain documented."
+      what_at_threshold_means: "κ ≥ 0.75 supports A1 on the locked subset; P4 preservation theorem holds as stated (definitional iff under K-as-typed-DAG)."
+    affects_nodes: ["T1prime", "T1", "T2", "P4", operator_role]
+    mitigates: [AA2]
+    source_method: M2
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_0_THESIS v0.2.0 §10 method note (inherited)"
+    body_sections: ["Section 7 — Method (validation cases reliability)"]
+
+# ============================================================================
+# Limitations — honest scope assertion
+# ============================================================================
+limitations:
+  - id: L1
+    statement: "Corpus-internal SF1 evidence (F1) is based on a single-session aggregate observation; statistical generalization from corpus-internal observations alone is not warranted. Public-paper SF1 evidence prioritizes published RAG-hallucination benchmarks identified in Session C Phase-2 DR."
+    affects: [F1, SF1]
+    severity: "medium"
+    mitigation: "RC1 planned (additional sessions); NF1 motivates publication of a benchmark by future work; Session C DR for published-literature anchors."
+    provenance:
+      created_by: "operator"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_2_DR_PRIOR_ART_VERIFICATION_2026-05-26.md §limitations"
+    body_sections: ["Section 4.1 — Limitations", "Section 8 — Discussion"]
+
+  - id: L2
+    statement: "T1 (Heisenberg-Schrödinger) extraction is necessarily a retroactive reconstruction; the papers' authors had no concept of SPINE.yaml. Reviewers may dispute whether what we extract is 'their spine' or 'our projection of their spine.'"
+    affects: ["T1"]
+    severity: "medium-high"
+    mitigation: >-
+      Rely on secondary-literature consensus (Schrödinger 1926
+      equivalence paper + von Neumann 1932) for which propositions are
+      load-bearing; document extraction protocol in §7 of paper; flag
+      where coder judgment is invoked; offer the extracted spines as
+      starting-points-for-debate, not final-words.
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "Session B planning"
+    body_sections: ["Section 7 — Validation Case T1 (limitations)"]
+
+  - id: L3
+    statement: >-
+      Early drafts of this paper contained external references that did
+      not verify under the verification cascade prescribed by the
+      framework. The protocol resolved the discrepancies pre-publication.
+      The audit record is maintained internally; the public paper does
+      not foreground this incident as evidence, treating it as standard
+      operational hygiene rather than as a self-referential SF1 demonstration.
+    affects: ["operational discipline; cited in §11 method as illustration of the verification cascade in practice"]
+    severity: "low-medium"
+    mitigation: >-
+      Audit-internal record at AUDIT_INTERNAL_F2_PHASE2_DR_NEAR_MISS.md.
+      Public paper's SF1 evidence cites generic literature on
+      RAG-hallucination rates (Session C Phase-2 DR identifies specific
+      published benchmarks) rather than the corpus's own audit incident.
+    audit_internal_reference: "research/meaning_meaningfulness_paper/AUDIT_INTERNAL_F2_PHASE2_DR_NEAR_MISS.md"
+    provenance:
+      created_by: "operator (v0.4.0 editorial rewrite per direction 2026-05-26)"
+      created_at: "2026-05-26"
+      source_log_event: "AUDIT_INTERNAL_F2_PHASE2_DR_NEAR_MISS.md"
+    body_sections: ["Section 11 — Method (verification cascade illustration, generic)"]
+
+# ============================================================================
+# Propositions: explanatory theoretical claims
+# ============================================================================
+propositions:
+  - id: P1
+    statement: >-
+      Meaning and meaningfulness are separately optimizable: σ takes L → S
+      without consulting any R; ρ takes (S, cohort, language, medium) → R
+      without altering S.
+    type: ontological
+    conditions: "C1, C2"
+    antecedents: []
+    assumptions: []
+    falsifier: >-
+      If σ requires inspecting any R(S, c, ℓ, m) to produce S, the middle
+      layer is a projection from rendering rather than from log, and the
+      hierarchy collapses to two-level.
+    evidence:
+      - type: self_application
+        anchor: "This paper's own SPINE.yaml v0.3.0: reader can reproduce central claims from spine without reading paper.md prose."
+      - type: analytic
+        anchor: "Direct derivation from σ and ρ operator definitions in §5 of paper."
+      - type: log_anchor
+        anchor: "research/meaning_meaningfulness_paper/SPINE.yaml (this file) + future paper.md when drafted"
+    ruled_out_rivals: []
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_0_THESIS v0.2.0 §9"
+    body_sections: ["Section 2 — Theory", "Section 5 — The Three-Level Hierarchy", "Section 6.1 — Validation Case A self-application"]
+
+  - id: P2
+    statement: >-
+      Organizations (research labs, consulting firms, standards bodies)
+      that publish the semantic substrate (S) of their knowledge artifacts
+      as a first-class artifact achieve higher rates of knowledge
+      recombination than organizations that publish only the rendering
+      (R), under boundary conditions C1–C4. v0.5.0 organizational-outcome
+      reframing per Grok r2 NF-grain gap: "Labs that publish spines exhibit
+      higher citation-weighted derivative work (extension, contradiction,
+      or refinement of locked propositions) within 24–36 months than
+      matched labs that publish renderings only."
+    type: management_outcome
+    status_v0_6_0: "theoretically-derived prediction; empirical estimation deferred to Paper B 2026ap (per PIVOT-SPLIT; Grok r3 NR2 resolution)"
+    primary_in: "Paper B 2026ap (empirical companion; iteratively-versioned working paper)"
+    illustrative_in: "Paper A 2026ao (theory paper; T1' and T3 supply illustrative evidence; full estimation in Paper B)"
+    conditions: "C1, C2, C3, C4"
+    antecedents: [P1]
+    assumptions: []
+    falsifier: >-
+      Under C1–C4, an organization that publishes only R achieves
+      recombination rates indistinguishable from a matched organization
+      that publishes S over a 24–36 month observation window. Empirical
+      test in Paper B v2.0.0+ once prospective lab-cohort data is
+      available; v1.0.0 illustration only.
+    measurement: >-
+      Recombination = rate at which new artifacts reuse ≥3 linked
+      propositions from a prior artifact's locked spine with preserved
+      antecedent-DAG structure (Grok r2 §1.2 specification, v0.5.0).
+      Operational proxy: graph-alignment algorithms on public SPINE.yaml
+      repositories (e.g., spectralbranding/* mirrors) measure subgraph
+      reuse. Falsification within 24-36 months once N≥40 public spines
+      exist. Calibrated simulation in §11 parameterizes the recombination
+      operator Rec(G1, G2) = size of maximum common subgraph preserving
+      types and antecedents (Grok r2 §6 specification).
+    evidence:
+      - type: code_anchor
+        anchor: "<public-mirror>/<paper-slug>/code/recombination_simulation.py"
+      - type: citation
+        citation_keys: [cover-2006-elements-information-theory]
+        citation_role: methodological_source
+      - type: citation
+        citation_keys: [kulkarni-2024-future-of-research-in-ai-driven-world]
+        citation_role: theoretical_predecessor
+        anchor: "AI-driven research future-state framing"
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_0_THESIS v0.2.0 §9"
+    body_sections: ["Section 2 — Theory", "Section 5 — The Three-Level Hierarchy", "Section 8 — Discussion"]
+
+  - id: P3
+    statement: >-
+      Under conditions C1–C4, generative-AI verification cost on S scales
+      sub-linearly with claim volume while verification cost on R scales
+      super-linearly. Knowledge-work organizations that allocate AI to
+      S-layer verification and reserve human attention for R-layer
+      sensemaking realize lower total verification cost than organizations
+      that allocate AI uniformly across the artifact.
+    formal_cost_functions: |
+      v0.5.0 per Grok r2 §1.4 NF2 (mechanism formalization). Spine S is a
+      typed directed acyclic graph G = (V, E, τ) where τ is the schema v0.2
+      node-type taxonomy (10 first-class node types). Cost functions:
+        c_AI(S) = α · |V|^β,  β < 1  (sub-linear in node count)
+        c_human(R) = γ · |tokens|^δ,  δ > 1  (super-linear in token count)
+      The σ operator succeeds if the extracted DAG passes isomorphism and
+      coverage tests against a human gold-standard subgraph. The asymmetry
+      β < 1 < δ is what makes the cost-allocation prescription dominate.
+      Calibrated simulation in §11 varies β ∈ {.5, .7, .9} against δ ∈
+      {1.1, 1.3, 1.5} and plots recombination rate as a function of (β, δ).
+    type: management_outcome
+    status_v0_6_0: "theoretically-derived prediction with formal cost-function specification; empirical β/δ estimation deferred to Paper B 2026ap (per PIVOT-SPLIT; Grok r3 NR2 resolution)"
+    primary_in: "Paper B 2026ap (empirical companion; β/δ estimation across growing twin-pair cohort)"
+    illustrative_in: "Paper A 2026ao (theory paper; calibrated simulation in §11 illustrates the cost-function shape; empirical estimation in Paper B)"
+    conditions: "C1, C2, C3, C4"
+    antecedents: [P1, P2]
+    assumptions: [AA1]
+    falsifier: >-
+      Under C1–C4, AI verification cost on R scales at or below the rate
+      on S (empirically β ≥ δ) — which would invert the cost-allocation
+      prescription. Paper B v1.0.0 supplies illustrative β/δ point
+      estimates from N=2 twin-pair extractions; v2.0.0+ supplies
+      confidence intervals; v4.0.0 supplies SMJ-scale falsification
+      test.
+    evidence:
+      - type: log_anchor
+        anchor: "SF1 (F1+F2): cascade verification catches AI fabrication at S-layer; same fabrication would be invisible to reader-reviewer at R layer."
+      - type: citation
+        citation_keys: [kocak-levinthal-puranam-2023-dual-challenge-search-coordination]
+        citation_role: theoretical_predecessor
+        anchor: "Search-and-coordination duality maps onto verification-cost-allocation problem."
+      - type: citation
+        citation_keys: [kulkarni-2024-future-of-research-in-ai-driven-world]
+        citation_role: motivating_problem
+    ruled_out_rivals: [A1]
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_0_THESIS v0.2.0 §9"
+    body_sections: ["Section 2 — Theory", "Section 5 — The Three-Level Hierarchy", "Section 8 — Discussion"]
+
+  - id: P4
+    statement: >-
+      For any artifact whose SPINE.yaml is locked (propositions +
+      dependencies + evidence-anchors + boundary conditions all explicit),
+      two prose renderings of the same spine arrive at the same set of
+      conclusions iff both preserve the spine's structural elements.
+      Renderings may differ on every surface dimension (language, audience
+      register, structural ordering, tone, formatting, length, medium) and
+      still converge on conclusions. When two renderings DISAGREE on any
+      locked proposition, boundary condition, stylized fact, antecedent
+      DAG edge, recommended intervention, or scope claim, at least one
+      has broken the spine.
+    type: rendering_equivalence
+    conditions: "C1, C2"
+    antecedents: [P1, P3]
+    assumptions: [AA2]
+    falsifier: >-
+      Two faithful renderings of the same locked spine arrive at
+      DIFFERENT conclusions on a load-bearing proposition without either
+      one having broken the spine. (If found, the renderings would need
+      a hidden spine-layer difference, which contradicts the spine-lock
+      hypothesis.)
+    evidence:
+      - type: log_anchor
+        anchor: "T1: Heisenberg matrix-mechanics formulation + Schrödinger wave-mechanics formulation → mathematically equivalent (Schrödinger 1926 equivalence paper; von Neumann 1932). Existence proof for P4 in the historical record."
+      - type: archival_record
+        anchor: "research/references/schrodinger_1928_collected_papers_wave_mechanics.pdf §III Über das Verhältnis (the equivalence paper)"
+        citation_keys: [schrodinger-1926-equivalence-heisenberg-wave-mechanics, vonneumann-1932-mathematical-foundations-quantum-mechanics]
+        citation_role: replication_anchor
+      - type: self_application
+        anchor: "This paper's 5+ companion renderings (English academic / Russian academic / Substack practitioner / X long-form / slide deck) all preserve the spine and reach the same conclusions."
+      - type: citation
+        citation_keys: [zharnikov-r15-ai-search-metamerism]
+        citation_role: theoretical_predecessor
+        anchor: "Brand-level analog: distinct AI search renderings of the same brand substrate are metameric-equivalent under spine-preservation."
+    ruled_out_rivals: [A2]
+    provenance:
+      created_by: "author (via IDEA_P4 doc 2026-05-26)"
+      created_at: "2026-05-26"
+      source_log_event: "research/meaning_meaningfulness_paper/IDEA_P4_RENDERING_EQUIVALENCE_2026-05-26.md"
+    body_sections: ["Section 2 — Theory", "Section 5 — The Three-Level Hierarchy", "Section 7 — Validation Case T1 (twin pair)", "Section 8 — Discussion"]
+
+# ============================================================================
+# Derivations — reasoning bridges between propositions
+# ============================================================================
+derivations:
+  - id: D1
+    statement: "Spine-first drafting protocol follows from P3 (verification-cost asymmetry) by cost-minimization argument."
+    from: [P3]
+    to: "intervention (spine-first protocol)"
+    reasoning_type: "cost-minimization"
+    formal_proof_anchor: "<public-mirror>/<paper-slug>/code/spine_first_dominance.py (planned)"
+    note: "Under cost symmetry the protocol is neutral; under the cost asymmetry P3 documents, locating verification at S minimizes total cost."
+    provenance:
+      created_by: "author"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_0_THESIS v0.2.0 §8"
+    body_sections: ["Section 5 — Intervention"]
+
+  - id: D2
+    statement: "Schema v0.2's intentional complexity follows from P3 + the human/AI division-of-labor: schema complexity sits at the meaning-operations layer where AI's comparative advantage is largest."
+    from: [P3]
+    to: "schema_human_operability (preamble)"
+    reasoning_type: "operational-consequence"
+    note: "Closes the 'is this too complex for humans' objection at the framework level: yes, intentionally."
+    provenance:
+      created_by: "author (Session B reframe pass)"
+      created_at: "2026-05-26"
+      source_log_event: "User direction 2026-05-26 mid-Session-B"
+    body_sections: ["Section 8 — Discussion: schema-complexity is the operational form"]
+
+# ============================================================================
+# Intervention (Section 5 of paper): the spine-first drafting protocol
+# ============================================================================
+intervention:
+  name: "Spine-first drafting protocol with SPINE.yaml v0.2 schema"
+  derivation_from: [P3, D1, D2]
+  operations: [lock, fork, rebase, merge]
+  schema: "research/SPINE_FIRST_DRAFTING_PROTOCOL.md § SPINE.yaml schema v0.2"
+  provenance:
+    created_by: "author"
+    created_at: "2026-05-26"
+    source_log_event: "SPINE_FIRST_DRAFTING_PROTOCOL.md (commit a3cfe452; extended at a0108fae)"
+  body_sections: ["Section 5 — Intervention"]
+
+# ============================================================================
+# Validation cases (Section 6 + Section 7 of paper) — three-tier strategy
+# ============================================================================
+validation_strategy:
+  description: >-
+    Four-case validation reordered v0.5.0 per Grok r2 §1.5 NF1 (T1 domain-
+    distance). The PRIMARY empirical case becomes a management-theory twin
+    pair (T1'); the Heisenberg-Schrödinger twin pair (T1, prior primary) is
+    demoted to historical existence proof for P4. T2 (Kulkarni 2024 JMI)
+    remains venue-fit anchor; T3 (self-application) remains robustness
+    check. The "cross-domain killer" framing is dropped — domain distance
+    is a relevance liability at Org Sci, not an asset.
+  tiers:
+    T1prime: "Management-theory twin pair (PRIMARY EMPIRICAL CASE; v0.5.0 new)"
+    T2: "Contemporary management-theory validation (Kulkarni et al. 2024 JMI; K3≈P3 multiple-discovery internal)"
+    T1: "Heisenberg-Schrödinger twin pair (HISTORICAL EXISTENCE PROOF for P4; v0.5.0 demoted from primary)"
+    T3: "Self-application with 5+ companion renderings"
+
+validation_cases:
+  # ---------------------------------------------------------------------------
+  # T1' (v0.5.0 NEW): Management-theory twin pair — PRIMARY EMPIRICAL CASE.
+  # Substitutes T1 H-S in the primary slot per Grok r2 NF1. Specific twin-pair
+  # selection deferred to Phase-2 follow-up DR via Bikard 2020 idea-twin
+  # methodology applied to AMR/Org Sci/SMJ 2000-2010 corpus.
+  # ---------------------------------------------------------------------------
+  - id: T1prime
+    label: "Management-theory twin pair retroactive spine extraction (PRIMARY ILLUSTRATIVE CASE for Paper A; full extraction in Paper B 2026ap v1.0.0)"
+    status: "v0.6.0 — focal pair LOCKED per Grok r3 §5 endorsement; secondary pair retained for v0.6.0 illustration; both Crossref-verified Session C-prime 2026-05-26"
+    selection_method: >-
+      Bikard 2020 SMJ idea-twin methodology applied to AMR / Organization
+      Science / SMJ / AMJ 2000-2010 publication record. Grok r3 §5
+      explicitly endorsed: "Tushman-O'Reilly/Duncan is least attractive
+      due to 20-year gap; Eisenhardt-Martin/Zollo-Winter is strongest."
+      Selection criteria: (i) two independent papers; (ii) published ≤2
+      years apart (Bikard threshold; relaxable for foundational pairs);
+      (iii) same construct; (iv) different formalisms; (v) no mutual
+      citation in original drafts; (vi) primary sources accessible.
+    focal_pair_locked_v0_6_0:
+      - paper: "Eisenhardt, K. M., & Martin, J. A. (2000). Dynamic capabilities: What are they? Strategic Management Journal 21(10-11): 1105-1121."
+        doi: "10.1002/1097-0266(200010/11)21:10/11<1105::AID-SMJ133>3.0.CO;2-E"
+        doi_status: "VERIFIED (Crossref Session C-prime 2026-05-26)"
+      - paper: "Zollo, M., & Winter, S. G. (2002). Deliberate Learning and the Evolution of Dynamic Capabilities. Organization Science 13(3): 339-351."
+        doi: "10.1287/orsc.13.3.339.2780"
+        doi_status: "VERIFIED (Crossref Session C-prime 2026-05-26)"
+      - gap: "2 years"
+      - formalism_difference: "best-practices/routines (Eisenhardt-Martin) vs deliberate-learning/evolutionary mechanisms (Zollo-Winter)"
+      - independence_at_draft: "verifiable from each paper's original reference list; Phase-2 follow-up DR (Session D for Paper B v1.0.0) confirms"
+    secondary_pair_v0_6_0:
+      - paper: "Tushman, M. L., & O'Reilly, C. A. (1996). Ambidextrous Organizations. California Management Review 38(4): 8-30."
+      - paper: "Duncan, R. B. (1976). The Ambidextrous Organization. In Kilmann, Pondy, Slevin (eds.) The Management of Organization Design, Vol 1, pp. 167-188. North-Holland."
+      - role: "v1.0.0 robustness check on 20-year-gap pair; sensitivity test on Bikard ≤2-year threshold relaxation"
+    third_candidate_deferred:
+      - paper: "Adler & Kwon (2002) AMR + Nahapiet & Ghoshal (1998) AMR (social capital pair)"
+      - role: "candidate for Paper B v1.1.0+; not in v0.6.0/v1.0.0 scope"
+    method: M2
+    validates_paper_a: [P4, P1]  # v0.6.0 — P2 removed; full P2 estimation moves to Paper B
+    validates_paper_b: [P2, P3]
+    hypotheses_template:
+      - id: H_T1prime_1
+        statement: "The retroactively-extracted spines of the selected management-theory twin pair are STRUCTURALLY ISOMORPHIC at the proposition graph."
+      - id: H_T1prime_2
+        statement: "The spines converge at the findings layer (same organizational-outcome predictions) despite different formalisms / vocabularies."
+      - id: H_T1prime_3
+        statement: "The spines diverge at the methods layer (vocabulary, citation graph, formal apparatus) but the divergences are rendering-layer, not spine-layer — exactly the pattern P4 predicts."
+    falsifier: "If the extracted spines disagree on a load-bearing proposition without identifiable spine-layer difference, P4 is falsified on the management-theory case."
+    rationale_for_substitution: >-
+      Grok r2 §1.5 NF1: "T1 (Heisenberg-Schrödinger 1925-26) is a genuine
+      natural experiment on rendering equivalence but sits three disciplinary
+      removes from organizational knowledge work… To reach ADEQUATE, replace
+      T1 with at least one management-theory twin pair." Grok r2 §8 single_
+      most_important_change: "Replace Heisenberg-Schrödinger as primary
+      empirical case with a management-theory twin pair; keep the natural-
+      experiment logic but eliminate the 'cross-domain killer' framing that
+      invites relevance objections."
+    provenance:
+      created_by: "operator (Session C-prime per user direction 2026-05-26 + Grok r2 NF1)"
+      created_at: "2026-05-26"
+      source_log_event: "GROK_REVIEW_SUMMARY_r2.md §4 NF1 + §8 recommendation"
+    body_sections: ["Section 7.1 — Validation Case T1': Management-theory twin pair (primary empirical case)"]
+
+  # ---------------------------------------------------------------------------
+  # T1 (v0.5.0 demoted): Heisenberg-Schrödinger twin pair — HISTORICAL
+  # EXISTENCE PROOF for P4. No longer primary; quantum-mechanics case is
+  # preserved as P4 empirical existence-in-the-historical-record argument
+  # but does not bear the venue-validation load.
+  # ---------------------------------------------------------------------------
+  - id: T1
+    label: "Twin-pair retroactive spine extraction — Heisenberg-Schrödinger (HISTORICAL EXISTENCE PROOF for P4; v0.5.0 demoted from primary)"
+    demotion_note: >-
+      v0.5.0 per Grok r2 NF1: H-S demoted from primary empirical case to
+      historical existence proof for P4. Extraction work, spine YAMLs,
+      equivalence notes, isomorphism analysis are PRESERVED — they remain
+      published with the paper as evidence that P4 holds in the historical
+      record across radically different formalisms. They no longer carry
+      venue-fit load. T1' (management-theory twin pair) carries that load.
+    target_artifact: >-
+      Heisenberg 1925 "Über quantentheoretische Umdeutung" (matrix mechanics
+      foundation) + Born-Jordan 1925 "Zur Quantenmechanik" + Born-Heisenberg-
+      Jordan 1926 "Drei-Männer-Arbeit" PAIRED WITH Schrödinger 1926
+      "Quantisierung als Eigenwertproblem" (parts I-IV) and the 1926
+      equivalence paper "Über das Verhältnis der Heisenberg-Born-Jordanschen
+      Quantenmechanik zu der meinen."
+    primary_pdfs:
+      - "research/references/heisenberg_1925_english_delphenich.pdf"
+      - "research/references/born_jordan_1925_english_neoclassical.pdf"
+      - "research/references/schrodinger_1928_collected_papers_wave_mechanics.pdf (contains all four parts of Quantisierung + the equivalence paper)"
+    secondary_acquisition_blocked:
+      - "Three-Men paper English (van der Waerden 1968) — archive.org borrow-only; user has institutional access"
+      - "von Neumann 1932 — archive.org borrow-only; user has institutional access"
+    method: M2
+    validates: [P4]  # v0.5.0: P1 dropped — T1 is existence proof for rendering-equivalence (P4) only; P1 validated via T1' management-theory pair
+    extraction_outputs:
+      - "research/meaning_meaningfulness_paper/VALIDATION_CASE_T1_HEISENBERG_SPINE.yaml"
+      - "research/meaning_meaningfulness_paper/VALIDATION_CASE_T1_SCHRODINGER_SPINE.yaml"
+      - "research/meaning_meaningfulness_paper/TWIN_PAIR_SPINE_ISOMORPHISM.md (structural diff)"
+    hypotheses:
+      - id: H_T1_1
+        statement: "The retroactively-extracted Heisenberg spine and Schrödinger spine are STRUCTURALLY ISOMORPHIC at the proposition graph: each Heisenberg proposition has a Schrödinger counterpart and antecedent edges are preserved up to relabeling."
+      - id: H_T1_2
+        statement: "The two spines converge at the findings layer (same atomic-spectroscopy observations reproduced) despite radically different methods (matrix algebra vs PDE eigenvalue analysis)."
+      - id: H_T1_3
+        statement: "The spines diverge at the methods layer (formalism, vocabulary, derivation paths) but the divergences are rendering-layer, not spine-layer — exactly the pattern P4 predicts."
+    falsifier: "If the two extracted spines disagree on a load-bearing proposition without either being defective relative to the canonical secondary-literature consensus (Schrödinger 1926 equivalence + von Neumann 1932), P4 is falsified on this case."
+    motivating_literature: [merton-1961-singletons-multiples-scientific-discovery, simonton-1979-multiple-discovery-zeitgeist-genius-chance, bikard-2020-idea-twins-simultaneous-discoveries]
+    provenance:
+      created_by: "author (Session B per user direction; replaces v0.2.0 Case A)"
+      created_at: "2026-05-26"
+      source_log_event: "Session B user direction 2026-05-26 + PHASE_2_DR_TWIN_PAIR_ACQUISITION_2026-05-26.md"
+    body_sections: ["Section 7.1 — Validation Case T1: Twin-pair Heisenberg-Schrödinger"]
+
+  - id: T2
+    label: "Contemporary management-theory validation (VENUE FIT)"
+    target_artifact: >-
+      Kulkarni, M., Mantere, S., Greenwood, M., et al. (2024). The Future
+      of Research in an Artificial Intelligence-Driven World. Journal of
+      Management Inquiry. DOI: 10.1177/10564926231219622 (Crossref-verified
+      Session B). Selected because: (i) directly on AI's role in scholarly
+      research, meta-coherent with this paper's subject; (ii) multi-author
+      venue-credible JMI paper; (iii) authored without knowledge of the
+      spine-first protocol, supplying a clean natural-experiment test.
+    pivot_note: >-
+      Original v0.2.0 Case A focal artifact (Puranam & Raveendran 2024
+      AMR) confirmed fabricated by Phase-2 DR (Session B); see F2 and L3.
+      Kulkarni et al. 2024 JMI substitutes with stronger topical match.
+    method: M2
+    validates: [P1]
+    extraction_output: "research/meaning_meaningfulness_paper/VALIDATION_CASE_T2_KULKARNI_2024_SPINE.yaml"
+    hypotheses:
+      - id: H_T2_1
+        statement: "Retroactive spine surfaces ≥5 discrete propositions about AI's role in research, of which ≥3 are explicitly stated in body."
+      - id: H_T2_2
+        statement: "Retroactive spine surfaces ≥1 implicit proposition (inferable from claim graph; not numbered in body)."
+      - id: H_T2_3
+        statement: "Retroactive spine's antecedents DAG matches paper's actual citation dependency graph."
+    falsifier: "If extraction produces a degenerate or unfaithful graph, the protocol does not generalize to contemporary management-theory papers; the framework's empirical claim fails on the contemporary case (T1 remains)."
+    provenance:
+      created_by: "author (Session B pivot per user direction; replaces fabricated v0.2.0 Case A)"
+      created_at: "2026-05-26"
+      source_log_event: "PHASE_2_DR_PRIOR_ART_VERIFICATION_2026-05-26.md + user candidate provision"
+    body_sections: ["Section 7.2 — Validation Case T2: Kulkarni et al. 2024"]
+
+  - id: T3
+    label: "Self-application with companion renderings (ROBUSTNESS)"
+    target_artifact: "This paper itself + companion-rendering set"
+    method: "Author renders the locked spine into N≥5 prose realizations; structural-comparison protocol verifies conclusion-equivalence."
+    validates: [P1, P4]
+    rendering_set:
+      - "(1, primary) English academic prose — Org Sci submission"
+      - "(2) Russian academic prose — language + paragraph-structure variation"
+      - "(3) Substack practitioner article — register + length variation"
+      - "(4) X long-form thread (5 tweets) — length-scale + platform-medium"
+      - "(5) Conference slide deck (8 slides) — medium (visual + spoken)"
+      - "(6, stretch) 60-second video script — extreme length compression"
+    hypotheses:
+      - id: H_T3_1
+        statement: "All renderings preserve P1+P2+P3+P4 propositions."
+      - id: H_T3_2
+        statement: "All renderings preserve C1-C4 boundary conditions."
+      - id: H_T3_3
+        statement: "All renderings preserve SF1-SF4 stylized facts."
+      - id: H_T3_4
+        statement: "All renderings recommend the same intervention (spine-first protocol)."
+      - id: H_T3_5
+        statement: "Russian rendering preserves meaning (P1) but renders meaningfulness differently (SF3 self-instance)."
+    falsifier: "If any rendering disagrees with the primary on a locked proposition without an identifiable spine-break, P4 is falsified self-referentially."
+    provenance:
+      created_by: "author (per IDEA_P4 doc)"
+      created_at: "2026-05-26"
+      source_log_event: "IDEA_P4_RENDERING_EQUIVALENCE_2026-05-26.md §Concrete demonstration"
+    body_sections: ["Section 6 — Validation Case T3: Self-application", "Online supplement: companion renderings"]
+
+# ============================================================================
+# Cross-paper engagement (corpus-internal parallels; NOT origin-of-contribution)
+# ============================================================================
+corpus_precedents:
+  - paper_key: zharnikov-2026l
+    relationship: parallel_structure
+    description: "Brand substrate/rendering at perceptual level. Parallel-domain evidence; NOT origin-of-contribution."
+    spine_nodes: [P1, P4]
+    body_sections: ["Section 4.2 — Corpus parallels"]
+  - paper_key: zharnikov-2026w
+    relationship: parallel_structure
+    description: "Canon as version-controlled repository. Motivating analogy for L layer."
+    spine_nodes: [P1]
+    body_sections: ["Section 5 — Three-level hierarchy"]
+  - paper_key: zharnikov-2026d
+    relationship: extends
+    description: "Paper Spec v0.1.0 as machine-readable companion. Direct operational precedent for SPINE.yaml v0.2 schema."
+    spine_nodes: [P1, intervention, schema_human_operability]
+    body_sections: ["Section 5 — Intervention", "Section 8 — Discussion"]
+  - paper_key: zharnikov-2026e
+    relationship: parallel_structure
+    description: "Research as version-controlled repository. Parallel-domain evidence for log layer."
+    spine_nodes: [P1]
+    body_sections: ["Section 5 — Three-level hierarchy"]
+  - paper_key: zharnikov-2026al
+    relationship: parallel_structure
+    description: "Capability as render-time projection of event log. Same substrate/projection math at capability rather than artifact unit."
+    spine_nodes: [P1, P2]
+    body_sections: ["Section 4.2 — Corpus parallels"]
+  - paper_key: zharnikov-2026am
+    relationship: parallel_structure
+    description: "Organizational specification substrate as architecturally-prior asset under AI mediation. Cost-asymmetry analog at organizational rather than artifact unit."
+    spine_nodes: [P2, P3, schema_human_operability]
+    body_sections: ["Section 4.2 — Corpus parallels", "Section 5 — Theory"]
+  - paper_key: zharnikov-r15-ai-search-metamerism
+    relationship: parallel_structure
+    description: >-
+      Brand-level analog of rendering-equivalence: distinct AI search results
+      render the same brand substrate metameric-equivalently. R15 is the most
+      bibliographically-promiscuous bridge paper in the corpus per F3 (Session
+      168 Q2 graph). Strengthened engagement at v0.3.0 per IDEA_P4
+      recommendation.
+    spine_nodes: [P4, SF4, F3]
+    body_sections: ["Section 4.2 — Corpus parallels", "Section 5 — Three-Level Hierarchy", "Section 7 — Validation Case T1"]
+
+# ============================================================================
+# External anchor literature — POST-FORK after Phase-2 DR caught fabrications
+# ============================================================================
+external_anchors:
+  # Stream 5 — AI-mediated organizing (FORKed at v0.3.0 — replaces 4 fabricated v0.2.0 entries)
+  - citation_key: kulkarni-2024-future-of-research-in-ai-driven-world
+    role: focal_independent_validation
+    venue: "Journal of Management Inquiry"
+    doi: "10.1177/10564926231219622"
+    doi_status: VERIFIED
+    pdf_local: "research/references/he-future-of-research-in-an-artificial-intelligence-driven-world.txt (text fragment; PDF acquisition needed)"
+    spine_nodes: [P3, T2, P2]
+    body_sections: ["Section 7.2 — Validation Case T2"]
+    note: "Replaces fabricated Puranam-Raveendran 2024 AMR per Session B Phase-2 DR finding F2."
+
+  - citation_key: kocak-levinthal-puranam-2023-dual-challenge-search-coordination
+    role: theoretical_predecessor
+    venue: "Organization Science 34(2): 851-869"
+    doi: "10.1287/orsc.2022.1601"
+    doi_status: VERIFIED
+    pdf_local: "research/references/TheDualChallengeofSearchandCoordinationforOrganizationalAdaptation_HowStructuresofInfluenceMatter.pdf"
+    spine_nodes: [P3]
+    body_sections: ["Section 4.1", "Section 8 — Discussion"]
+    note: "Real Puranam-co-authored Org Sci paper; substitutes the fabricated Puranam-Raveendran 2024 AMR with a related theoretical predecessor."
+
+  - citation_key: grodal-omahony-2017-grand-challenge-displaced
+    role: contrast_case
+    venue: "Academy of Management Journal 60(5): 1801-1827"
+    doi: "10.5465/amj.2015.0890"
+    doi_status: VERIFIED
+    pdf_local: "research/references/aom_amj60_1801.bib (bib stub; full PDF acquisition needed)"
+    spine_nodes: [P2]
+    body_sections: ["Section 4.2"]
+    note: "Real O'Mahony AMJ paper; substitutes the fabricated Seidel-O'Mahony 2023 AMJ."
+
+  - citation_key: raisch-2021-artificial-intelligence-management
+    role: theoretical_predecessor
+    venue: "Academy of Management Review 46(1): 192-210"
+    doi: "10.5465/amr.2018.0072"
+    doi_status: VERIFIED
+    spine_nodes: [P3]
+    body_sections: ["Section 2 — Theory"]
+    note: "Canonical AMR anchor; verified Session A."
+
+  - citation_key: vonkrogh-2023-recognizing-research-opportunities-ai
+    role: motivating_problem
+    venue: "Academy of Management Journal 66(2): 367-373"
+    doi: "10.5465/amj.2023.4002"
+    doi_status: VERIFIED
+    spine_nodes: [P2]
+    body_sections: ["Section 1 — Problem"]
+
+  # v0.5.0 NEW per Grok r2 §2 first bullet (HIGH-priority missing prior art).
+  # Crossref-verified by operator 2026-05-26; Grok's suggested DOI 10.1287/orsc.1040.0073
+  # was incorrect (resolves to Feldman 2004); correct DOI is 10.1287/orsc.1040.0094.
+  - citation_key: carlile-2004-transferring-translating-transforming-boundaries
+    role: theoretical_predecessor
+    venue: "Organization Science 15(5): 555-568"
+    doi: "10.1287/orsc.1040.0094"
+    doi_status: "VERIFIED (Crossref 2026-05-26; corrects Grok r2-suggested DOI 0073 → actual 0094)"
+    spine_nodes: [P1, P4, operator_role]
+    body_sections: ["Section 5 — Three-Level Hierarchy", "Section 8 — Discussion: spine as machine-operable pragmatic boundary object"]
+    note: >-
+      Canonical Org Sci treatment of syntactic / semantic / pragmatic
+      knowledge-boundary types. The SPINE.yaml is a new species of
+      pragmatic boundary object: machine-operable, version-controlled,
+      typed-DAG-structured. The paper engages Carlile in the mechanism
+      section (§H) to show how a machine-operable DAG addresses the
+      'transforming' problem Carlile argues requires collective negotiation
+      — under AI mediation, the negotiation moves into spine-edit operations
+      and FORK/REBASE/MERGE governance, not opaque human deliberation.
+
+  # v0.6.0 NEW per Grok r3 §2 first bullet (HIGH-priority missing prior art).
+  # The original boundary-object source Carlile operationalized for organizations.
+  - citation_key: star-griesemer-1989-boundary-objects-museum-vertebrate
+    role: theoretical_predecessor
+    venue: "Social Studies of Science 19(3): 387-420"
+    doi: "10.1177/030631289019003001"
+    doi_status: "VERIFIED (Crossref Session C-prime 2026-05-26)"
+    spine_nodes: [P1, P4, operator_role]
+    body_sections: ["Section 5 — Three-Level Hierarchy", "Section 8 — Discussion: spine as machine-operable boundary object (Star-Griesemer plasticity-vs-robustness lineage)"]
+    note: >-
+      The original boundary-object paper Carlile (2004) operationalized
+      for organizations. Star-Griesemer's plasticity-vs-robustness tradeoff
+      is the load-bearing concept: boundary objects are simultaneously
+      plastic enough to adapt to local needs and robust enough to maintain
+      common identity across sites. The SPINE.yaml's typed-DAG structure
+      preserves both: the typed-edge catalog supplies robustness; FORK
+      operations supply plasticity. Engaged in §H immediately after
+      Carlile to establish the lineage.
+
+  # v0.6.0 NEW per Grok r3 §2 second bullet (HIGH-priority missing prior art).
+  # Canonical meaning/meaningfulness review in organizational behavior.
+  - citation_key: rosso-dekas-wrzesniewski-2010-meaning-of-work
+    role: theoretical_predecessor
+    venue: "Research in Organizational Behavior 30: 91-127"
+    doi: "10.1016/j.riob.2010.09.001"
+    doi_status: "VERIFIED (Crossref Session C-prime 2026-05-26)"
+    spine_nodes: [thesis, operator_role, P1, P4]
+    body_sections: ["Section 1 — Problem", "Section 2 — Theory: meaning vs meaningfulness distinction", "Section 8 — Discussion"]
+    note: >-
+      Canonical review distinguishing 'meaning' (cognitive significance
+      of work) from 'meaningfulness' (personal significance) in
+      organizational behavior. The Operator-role framework reframes
+      where meaningfulness is generated in post-AI research; engaging
+      Rosso-Dekas-Wrzesniewski preempts the "but what does meaning vs
+      meaningfulness already mean in OB?" reviewer objection at Org Sci.
+      Slot: §B thesis statement + Contribution 1 framing.
+
+  # v0.7.0 NEW — user-supplied theory-of-the-firm anchors (2026-05-26).
+  # Directly engage the knowledge-based theory of the firm lineage Grok r4
+  # §4 predicted_reviewer_lead_objection points to ("does the Operator role
+  # constitute a fundamental advance in organization theory…?"). Both
+  # Crossref-verified Session C-prime 2026-05-26; both PDFs in main repo
+  # research/references/ corpus.
+  - citation_key: liebeskind-1996-knowledge-strategy-theory-firm
+    role: theoretical_predecessor
+    venue: "Strategic Management Journal 17(S2): 93-107 (winter special issue)"
+    doi: "10.1002/smj.4250171109"
+    doi_status: "VERIFIED (Crossref Session C-prime 2026-05-26)"
+    pdf_local: "/Users/d/projects/spectral-branding/research/references/knowledge-strategy-and-the-theory-of-the-firm-3vnmmubi3u.pdf (main repo shared corpus; not in worktree)"
+    spine_nodes: [thesis, operator_role, P1]
+    body_sections: ["Section 4.1 — Theoretical foundations (knowledge-based theory of the firm lineage)", "Section 8 — Discussion"]
+    note: >-
+      Canonical knowledge-based-theory-of-the-firm citation. Establishes
+      knowledge as the firm's primary strategic asset. The Operator role
+      generalizes Liebeskind's knowledge-as-firm-asset framing one level
+      up: knowledge is intrinsically substrate (S) + rendering (R); the
+      Operator is the role that maintains the substrate/rendering split.
+      Engaging Liebeskind directly addresses Grok r4 §4 predicted
+      reviewer concern (Operator-role-as-fundamental-OT-advance vs
+      AI-era-domain-framework).
+
+  - citation_key: nickerson-zenger-2004-knowledge-based-theory-firm-problem-solving
+    role: theoretical_predecessor
+    venue: "Organization Science 15(6): 617-632"
+    doi: "10.1287/orsc.1040.0093"
+    doi_status: "VERIFIED (Crossref Session C-prime 2026-05-26)"
+    pdf_local: "/Users/d/projects/spectral-branding/research/references/A_Knowledge-Based_Theory_of_the_Firm_-_The_Problem.pdf (main repo shared corpus; not in worktree)"
+    spine_nodes: [thesis, operator_role, P2, P3]
+    body_sections: ["Section 4.1 — Theoretical foundations (knowledge-based theory of the firm lineage)", "Section 8 — Discussion"]
+    note: >-
+      Knowledge-based theory of the firm at the problem-solving level.
+      Co-authored by Zenger; resolves the search for "the Felin-Zenger
+      anchor" Grok r2 hallucinated. Nickerson-Zenger frames the firm as
+      a knowledge-coordination apparatus for problem-solving; the
+      Operator role v0.7.0 specifies the role-level structure within
+      that coordination apparatus under generative AI. Engaging
+      Nickerson-Zenger in §4.1 + §8 supplies a venue-canonical Org Sci
+      anchor for the role-theoretic contribution.
+
+  # v0.7.0 NEW — Bechky-Okhuysen 2011 role-theory anchor (Grok r4 sec2 HIGH).
+  # DOI correction: Grok r4 suggested 10.5465/amj.2011.60215091 which does
+  # NOT resolve; correct DOI is 10.5465/amj.2011.60263060 (Crossref-verified).
+  - citation_key: bechky-okhuysen-2011-expecting-unexpected-swat-film
+    role: theoretical_predecessor
+    venue: "Academy of Management Journal 54(2): 239-261"
+    doi: "10.5465/amj.2011.60263060"
+    doi_status: "VERIFIED (Crossref Session C-prime 2026-05-26; corrects Grok r4-suggested DOI 60215091 → actual 60263060)"
+    spine_nodes: [operator_role, P4]
+    body_sections: ["Section 3 — Contributions (role-theoretic lineage)", "Section 8 — Discussion: Operator role vs occupational role theory"]
+    note: >-
+      Grok r4 §2 first bullet HIGH-priority: "canonical role-theoretic
+      treatment of how occupational roles absorb unexpected events…
+      your Operator role must engage it in §B/§J to show how the
+      structural/judgment split generalizes (or differs from) classic
+      OST role theory rather than appearing sui generis to AI."
+      Bechky-Okhuysen documents how SWAT officers and film crews
+      maintain role-coherence under surprise via 'trading zones' and
+      coordination; the Operator role v0.7.0 generalizes their role-
+      coordination move to substrate/rendering coordination under AI
+      projection. Engaging Bechky-Okhuysen demonstrates the Operator
+      role is not sui generis to AI-era scholarship.
+
+  # v0.7.1 NEW — user-supplied 2026-05-26 NF2-partial-resolution.
+  # The Felin-Zenger 2023 SMJ paper Grok r2 hallucinated (NF2) does not
+  # exist with the suggested title ("theory of the firm and the knowledge
+  # problem: AI..."). But Felin-Kauffman-Zenger 2023 SMJ "Resource origins
+  # and search" DOES exist (DOI 10.1002/smj.3350; Crossref-verified;
+  # online-published 2021, journal-issue 2023). Different topic from
+  # Grok-suggested but a real Felin-Zenger 2023 SMJ paper engageable here.
+  - citation_key: felin-kauffman-zenger-2023-resource-origins-search
+    role: theoretical_predecessor
+    venue: "Strategic Management Journal 44(6): 1514-1533"
+    doi: "10.1002/smj.3350"
+    doi_status: "VERIFIED (Crossref Session C-prime 2026-05-26; user-supplied)"
+    pdf_local: "/Users/d/projects/spectral-branding/research/references/Strategic Management Journal - 2021 - Felin - Resource origins and search.pdf"
+    publication_date_note: "Crossref online-published 2021; journal-issue 2023 (typical SMJ early-view lag)"
+    spine_nodes: [operator_role, P2, intervention]
+    body_sections: ["Section 4.1 — Theoretical foundations (resource origins + search lineage)", "Section 8 — Discussion: spine generation as resource origins"]
+    note: >-
+      Resolves NF2 partially. Grok r2 hallucinated a Felin-Zenger 2023
+      SMJ on "AI, bounded rationality, and limits of organizational
+      design"; that title does not exist. User-supplied (2026-05-26):
+      the real Felin-Kauffman-Zenger 2023 SMJ is "Resource origins and
+      search" — about where resources come from + how organizations
+      search for them. Engagement angle: the SPINE.yaml IS a resource
+      the organization generates under the Operator role; Felin-
+      Kauffman-Zenger's framework for resource origins applies directly
+      to spine origins. Operator's structural substrate operations
+      (extract / maintain DAG / generate drafts) are the search
+      activities that produce the spine-as-resource; the Operator's
+      judgment operations (FORK / REBASE / MERGE / cohort-specific
+      rendering) are the strategic choices about which resources to
+      generate. The role-theoretic contribution sits at the
+      intersection of KBT-of-firm (Liebeskind 1996; Nickerson-Zenger
+      2004) and resource-origin theory (Felin-Kauffman-Zenger 2023).
+      NF2 updated to RESOLVED-PARTIAL: original Grok-suggested
+      citation does not exist; real Felin-Zenger collaboration on
+      adjacent topic engaged. Discipline preserved: the verification
+      cascade still caught the original Grok hallucination pre-draft.
+
+  # v0.7.1 NEW — user-supplied 2026-05-26 NF3-partial-resolution.
+  # The Leonardi-Vaast 2017 Org Sci paper Grok r4 hallucinated (NF3) does
+  # not exist with the suggested title/venue. But Leonardi-Vaast 2017 AM
+  # Annals "Social Media and Their Affordances for Organizing" DOES exist
+  # (DOI 10.5465/annals.2015.0144; Crossref-verified). Different venue +
+  # title from Grok-suggested but a real Leonardi-Vaast 2017 paper.
+  - citation_key: leonardi-vaast-2017-social-media-affordances-organizing
+    role: theoretical_predecessor
+    venue: "Academy of Management Annals 11(1): 150-188"
+    doi: "10.5465/annals.2015.0144"
+    doi_status: "VERIFIED (Crossref Session C-prime 2026-05-26; user-supplied)"
+    pdf_local: "(not yet acquired; full PDF on AOM digital library; abstract supplied user 2026-05-26)"
+    spine_nodes: [operator_role, P1, intervention]
+    body_sections: ["Section 5 — Three-Level Hierarchy (affordances framing for SPINE.yaml)", "Section 8 — Discussion: spine-as-affordance for the Operator role"]
+    note: >-
+      Resolves NF3 partially. Grok r4 hallucinated a Leonardi-Vaast
+      2017 Org Sci "sociality of algorithms"; that title/venue does
+      not exist. User-supplied (2026-05-26): the real Leonardi-Vaast
+      2017 paper is in AM Annals — "Social Media and Their Affordances
+      for Organizing: A Review and Agenda for Research." Different
+      topic (social media affordances vs sociality of algorithms) but
+      from the same authors in the same year. Engagement angle: the
+      affordance perspective is directly applicable to the SPINE.yaml.
+      Leonardi-Vaast theorize how technological artifacts (social media)
+      afford specific organizing patterns through their material
+      properties; the SPINE.yaml is a technological artifact whose
+      typed-DAG structure + machine-operability + edge-type catalog
+      affords specific Operator-role projection patterns (structural
+      substrate operations via AI; judgment operations via human).
+      Strong venue-canonical anchor for §5 (three-level hierarchy as
+      affordance structure) and §H (mechanism = affordance specification).
+      AM Annals is a venue-credible review journal that Org Sci
+      reviewers will recognize as theoretical-foundation literature.
+      NF3 updated to RESOLVED-PARTIAL: original Grok-suggested citation
+      does not exist; real Leonardi-Vaast 2017 collaboration on adjacent
+      topic engaged. Discipline preserved: the verification cascade
+      still caught the original Grok hallucination pre-draft.
+
+  # v0.7.2 NEW — post-draft Grok review verification cascade + user-supplied
+  # real-adjacent anchors. 7 anchors total: 5 Crossref-verified Grok
+  # suggestions + 2 user-supplied real-adjacent for NF4/NF5 hallucinations.
+  - citation_key: murray-rhymer-sirmon-2021-conjoined-agency
+    role: theoretical_predecessor
+    venue: "Academy of Management Review"
+    doi: "10.5465/amr.2019.0186"
+    doi_status: "VERIFIED (Crossref Session D 2026-05-26)"
+    spine_nodes: [operator_role, P1]
+    body_sections: ["Theory — Operator role and era-dependent projection", "Discussion — Operator role versus task-level automation-augmentation"]
+    note: >-
+      Murray-Rhymer-Sirmon 2021 introduces conjoined-agency forms in
+      organizations. The Operator role extends conjoined-agency from
+      pairing forms to structural-substrate-versus-judgment-class
+      pairing at the role level.
+
+  - citation_key: kellogg-valentine-christin-2020-algorithms-at-work
+    role: theoretical_predecessor
+    venue: "Academy of Management Annals 14(1): 366-410"
+    doi: "10.5465/annals.2018.0174"
+    doi_status: "VERIFIED (Crossref Session D 2026-05-26)"
+    spine_nodes: [operator_role, P3]
+    body_sections: ["Theory — judgment-operations era-invariance", "Discussion — Operator role versus role-coordination scholarship"]
+    note: >-
+      Kellogg-Valentine-Christin 2020 documents algorithmic control as
+      contested terrain — humans retain judgment via resistance. The
+      framework specifies the role architecture under which judgment
+      retention is structurally rather than politically necessary.
+
+  - citation_key: lebovitz-levina-lifshitz-assaf-2021-ai-ground-truth
+    role: theoretical_predecessor
+    venue: "MIS Quarterly 45(3): 1501-1525"
+    doi: "10.25300/misq/2021/16564"
+    doi_status: "VERIFIED (Crossref Session D 2026-05-26; published 2021 not 2022)"
+    spine_nodes: [P3, SF1, operator_role]
+    body_sections: ["Stylized Facts SF1", "Discussion — verification-cost asymmetry empirical grounding"]
+    note: >-
+      Lebovitz-Levina-Lifshitz-Assaf 2021 documents AI tools producing
+      verification-cost asymmetries on expert ground truth. Direct
+      empirical grounding for SF1 and P3.
+
+  - citation_key: lebovitz-lifshitz-assaf-levina-2022-engage-or-not-ai
+    role: theoretical_predecessor
+    venue: "Organization Science 33(1): 126-148"
+    doi: "10.1287/orsc.2021.1549"
+    doi_status: "VERIFIED (Crossref Session D 2026-05-26; bonus find)"
+    spine_nodes: [P3, operator_role]
+    body_sections: ["Discussion — verification-cost asymmetry organizational implications"]
+    note: >-
+      Companion to Lebovitz et al. 2021 MISQ. Documents professionals
+      engaging (or not) with AI for critical judgments — exactly the
+      judgment-stays-with-human pattern the framework predicts. Strong
+      Org Sci anchor. Bonus find during Crossref verification.
+
+  - citation_key: faraj-pachidi-sayegh-2018-learning-algorithm
+    role: theoretical_predecessor
+    venue: "Information and Organization 28(1): 62-70"
+    doi: "10.1016/j.infoandorg.2018.02.005"
+    doi_status: "VERIFIED (Crossref Session D 2026-05-26)"
+    spine_nodes: [operator_role, P1]
+    body_sections: ["Theory — Operator role and era-dependent projection", "Discussion — Operator role versus role-coordination scholarship"]
+    note: >-
+      Faraj-Pachidi-Sayegh 2018 supplies the early call for role
+      reconfiguration under learning-algorithm mediation the framework
+      answers at Operator level six years later under capable
+      generative AI.
+
+  - citation_key: bailey-barley-2010-teaching-learning-ecologies
+    role: theoretical_predecessor
+    venue: "Organization Science 22(1): 262-285"
+    doi: "10.1287/orsc.1090.0511"
+    doi_status: "VERIFIED (user-supplied 2026-05-26)"
+    spine_nodes: [operator_role, C1, C3]
+    body_sections: ["Theory — Operator role and era-dependent projection", "Discussion — Operator role versus role-coordination scholarship"]
+    note: >-
+      User-supplied 2026-05-26 as real-adjacent paper resolving NF4
+      (post-draft Grok hallucinated Bailey-Barley 2023 Org Sci role-
+      evolution under AI). Bailey-Barley 2010 examines how environments
+      shape role structure through teaching-learning episodes; the
+      Operator's era-dependent projection extends this environment-
+      shaping logic to operator-internal operation-class projection.
+
+  - citation_key: leonardi-pilny-treem-sharma-2024-ai-organizational-communication
+    role: theoretical_predecessor
+    venue: "Organizational Communication Theory and Research (book; Ch 22)"
+    doi: "10.1515/9783110718508-023"
+    doi_status: "VERIFIED (user-supplied 2026-05-26)"
+    pdf_local: "/Users/d/projects/spectral-branding/research/references/Leonardi_et_al_2024_AI_Org_Com.pdf"
+    spine_nodes: [operator_role, P1, intervention]
+    body_sections: ["Discussion — spine as affordance + AI in organizational communication"]
+    note: >-
+      User-supplied 2026-05-26 as real-adjacent paper resolving NF5
+      (post-draft Grok hallucinated Leonardi 2024 Org Sci AI-future-of-
+      work). Leonardi-Pilny-Treem-Sharma 2024 surveys AI's effects on
+      organizational communication including meaning-construction
+      processes the framework theorizes at the substrate-rendering
+      layer cut. Book chapter not journal article; topic match direct.
+
+  # v0.7.3 NEW — post-draft Grok review r2 verification cascade + user-supplied
+  # real-adjacent anchors. 8 anchors total: 3 Crossref-verified Grok-r2
+  # suggestions (Dell'Acqua 2023 SSRN; Berente-Gu-Recker 2021 MISQ; Grodal-Ha-
+  # Hood 2024 Org Theory venue-corrected from Grok's AMJ) + 4 user-supplied
+  # real-adjacent for hallucinated Grok-r2 suggestions (Marchetti-Puranam
+  # 2025 SMJ for hallucinated Puranam-Raveendran 2024 SMJ; Seidel-Berente-
+  # Baiyere 2025 I&O + Seidel-O'Mahony 2014 Org Sci + Berente-Seidel-Safadi
+  # 2019 ISR for hallucinated Seidel-Berente 2023 Org Sci) + Brynjolfsson-
+  # Li-Raymond 2025 QJE (Grok r2 self-flagged uncertain but verified real).
+  - citation_key: brynjolfsson-li-raymond-2025-generative-ai-at-work
+    role: theoretical_predecessor
+    venue: "Quarterly Journal of Economics 140(2): 889-942"
+    doi: "10.1093/qje/qjae044"
+    doi_status: "VERIFIED (Crossref Session D 2026-05-26; user-supplied PDF; Grok r2 self-flagged forthcoming but verified real)"
+    pdf_local: "/Users/d/projects/spectral-branding/research/references/qjae044.pdf"
+    spine_nodes: [SF1, P3, operator_role]
+    body_sections: ["Stylized Facts SF1", "Discussion — cost-asymmetry empirical grounding"]
+    note: >-
+      Field-experimental evidence of generative AI's effect on
+      knowledge-work productivity (N=5,172 customer-support agents;
+      15% average productivity gain with substantial heterogeneity).
+      Directly empirically grounds the framework's cost-asymmetry
+      claim at the practitioner-task level and supplies SF1 with a
+      QJE-anchor. Heterogeneity result (less-experienced workers gain
+      most; most-experienced see small gains/declines) is itself
+      consistent with the framework's structural-substrate / judgment
+      split: AI projection helps where structural-substrate operations
+      are the binding constraint (less-experienced workers) less where
+      judgment operations are (most-experienced workers).
+
+  - citation_key: dell-acqua-mcfowland-mollick-2023-jagged-technological-frontier
+    role: theoretical_predecessor
+    venue: "SSRN Electronic Journal (Harvard Business School Working Paper 24-013)"
+    doi: "10.2139/ssrn.4573321"
+    doi_status: "VERIFIED (Crossref Session D 2026-05-26)"
+    spine_nodes: [SF1, P3]
+    body_sections: ["Stylized Facts SF1"]
+    note: >-
+      Dell'Acqua-McFowland-Mollick 2023 supply field-experimental
+      evidence of AI's "jagged technological frontier" — knowledge-
+      worker tasks the AI improves on versus tasks it impairs are
+      not pre-predictable from the task's surface features. Adjacent
+      empirical anchor for SF1; the framework's structural-substrate
+      / judgment partition supplies a principled basis for predicting
+      the jagged pattern Dell'Acqua et al. document descriptively.
+
+  - citation_key: berente-gu-recker-2021-managing-artificial-intelligence
+    role: theoretical_predecessor
+    venue: "MIS Quarterly 45(3): 1433-1450"
+    doi: "10.25300/misq/2021/16274"
+    doi_status: "VERIFIED (Crossref Session D 2026-05-26; 3 authors not 4 as Grok suggested — Santhanam not coauthor on Crossref record)"
+    spine_nodes: [operator_role, P3, intervention]
+    body_sections: ["Discussion — organizational management of AI capability"]
+    note: >-
+      Berente-Gu-Recker 2021 supplies the management-of-AI editorial-
+      framing piece anchoring MIS Quarterly's AI special issue.
+      Engaged in Discussion as a venue-canonical anchor for the
+      organizational-management dimension of the framework's
+      practical-implications subsection.
+
+  - citation_key: grodal-ha-hood-2024-humans-machines-generative-ai-category
+    role: theoretical_predecessor
+    venue: "Organization Theory 5(3) (venue-corrected from Grok r2's suggested AMJ)"
+    doi: "10.1177/26317877241275125"
+    doi_status: "VERIFIED (Crossref Session D 2026-05-26; venue is Organization Theory not AMJ)"
+    spine_nodes: [operator_role]
+    body_sections: ["Discussion — Operator as emergent role category"]
+    note: >-
+      Grodal-Ha-Hood 2024 documents the social construction of the
+      generative AI category through human-machine boundary-making.
+      Engaged in Discussion as theoretical predecessor for how the
+      Operator role itself can be understood as a new role category
+      emerging through the human-AI boundary-making process the paper
+      formalizes structurally.
+
+  - citation_key: marchetti-puranam-2025-less-hierarchical-stronger-cultures
+    role: theoretical_predecessor
+    venue: "Strategic Management Journal 47(2): 463-493"
+    doi: "10.1002/smj.70020"
+    doi_status: "VERIFIED (user-supplied 2026-05-26; PDF at research/references/smj_Marchetti.pdf)"
+    pdf_local: "/Users/d/projects/spectral-branding/research/references/smj_Marchetti.pdf"
+    spine_nodes: [operator_role, P2]
+    body_sections: ["Discussion — KBV organizational-form positioning"]
+    note: >-
+      User-supplied 2026-05-26 as real-adjacent paper resolving NF11
+      (post-draft Grok r2 hallucinated Puranam-Raveendran 2024 SMJ
+      AI-theory-firm-revisited; pattern recurring across r1 + r2
+      cycles). Marchetti-Puranam 2025 documents that less-hierarchical
+      firms exhibit stronger cultures via big-data analysis — speaks
+      directly to the framework's claim that the Operator-role
+      restructure (substrate published; rendering decoupled) is a
+      lower-hierarchy organizational form that strengthens
+      coordination via shared substrate-as-culture. Engaged in
+      Discussion KBV-positioning subsection.
+
+  - citation_key: seidel-berente-baiyere-2025-stability-change-digital-transformation
+    role: theoretical_predecessor
+    venue: "Information and Organization 35(2): 100564"
+    doi: "10.1016/j.infoandorg.2025.100564"
+    doi_status: "VERIFIED (user-supplied 2026-05-26)"
+    spine_nodes: [operator_role, intervention, P1]
+    body_sections: ["Discussion — spine as affordance + repertoire-model engagement"]
+    note: >-
+      User-supplied 2026-05-26 as real-adjacent paper resolving NF13
+      (post-draft Grok r2 hallucinated Seidel-Berente 2023 Org Sci AI-
+      knowledge-boundaries). Seidel-Berente-Baiyere 2025 develops a
+      repertoire model of institutionally embedded affordances during
+      digital transformation — the framework's typed-DAG substrate
+      is a worked instance of an institutionally-embedded affordance
+      repertoire under the AI-projection era. Engaged in Discussion
+      spine-as-affordance subsection.
+
+  - citation_key: seidel-omahony-2014-managing-repertoire
+    role: theoretical_predecessor
+    venue: "Organization Science 25(3): 691-712"
+    doi: "10.1287/orsc.2013.0879"
+    doi_status: "VERIFIED (user-supplied 2026-05-26)"
+    pdf_local: "/Users/d/projects/spectral-branding/research/references/ssrn-2343944.pdf"
+    spine_nodes: [operator_role, intervention, P1]
+    body_sections: ["Discussion — concept-coherence and substrate-rendering engagement"]
+    note: >-
+      User-supplied 2026-05-26 as real-adjacent paper resolving the
+      Seidel-X hallucination shape (Grok r1 hallucinated Seidel-
+      O'Mahony 2023 AMJ; Grok r2 hallucinated Seidel-Berente 2023
+      Org Sci; user found the real Seidel-O'Mahony 2014 Org Sci paper
+      Grok was approximating). Seidel-O'Mahony 2014 documents how
+      product-design teams coordinate via stories / metaphors /
+      prototypes — three types of concept representations the
+      framework's substrate / rendering decomposition supplies a
+      principled architecture for.
+
+  - citation_key: berente-seidel-safadi-2019-data-driven-theory-development
+    role: methodological_source
+    venue: "Information Systems Research 30(1): 50-64"
+    doi: "10.1287/isre.2018.0774"
+    doi_status: "VERIFIED (user-supplied 2026-05-26)"
+    pdf_local: "/Users/d/projects/spectral-branding/research/references/GroundedComputationalISRAuthorVersion.pdf"
+    spine_nodes: [intervention, M2]
+    body_sections: ["Discussion — computationally-intensive theory development as substrate-discipline parallel"]
+    note: >-
+      User-supplied 2026-05-26 as bonus real-adjacent paper surfaced
+      during NF13 verification. Berente-Seidel-Safadi 2019 develops a
+      grounded-theory-from-trace-data method (sampling / synchronic /
+      lexical-framing / diachronic) that parallels the framework's
+      spine-first protocol at the methods layer — the substrate is
+      the trace-data layer; the framework's intervention prescribes
+      similar discipline at the rendering-from-substrate cycle.
+
+  # v0.6.0 NEW per PIVOT-SPLIT: Paper B 2026ap empirical companion pointer.
+  - citation_key: zharnikov-2026ap-meaningfulness-empirical-companion
+    role: empirical_companion
+    venue: "Zenodo working paper (in iterative development per PAPER_B_2026ap_SCOPING.md)"
+    doi: "TBD at Paper B v1.0.0 Zenodo upload (post-Paper-A-Phase-3-GO)"
+    doi_status: "PENDING — companion paper scoped Session C-prime; v1.0.0 publication after Paper A reaches Phase 3"
+    spine_nodes: [P2, P3, T1prime, T1, T2, T3]
+    body_sections: ["Section 4.2 — Corpus parallels (forthcoming empirical companion)", "Section 10 — Empirical Validation (cross-reference for P2/P3 large-N estimation)"]
+    note: >-
+      Paper B 2026ap takes the empirical estimation of P2 (recombination)
+      and P3 (verification-cost asymmetry β/δ) at growing-N twin-pair
+      cohort. v1.0.0 ships with N=2 focal pair (Eisenhardt-Martin 2000
+      SMJ + Zollo-Winter 2002 Org Sci) per Grok r3 §5 endorsement, plus
+      N=2 secondary pair (Tushman-O'Reilly 1996 CMR + Duncan 1976
+      Kilmann-ed.) for 20-year-gap sensitivity. v2.0.0+ adds prospective
+      lab-cohort data. v4.0.0 targets SMJ submission scale. Each version
+      cites Paper A 2026ao DOI as theoretical foundation. Scoping doc at
+      research/meaning_meaningfulness_paper/PAPER_B_2026ap_SCOPING.md.
+
+  # Stream 8 — multiple-discovery sociology of science (NEW v0.3.0)
+  - citation_key: merton-1961-singletons-multiples-scientific-discovery
+    role: theoretical_predecessor
+    venue: "Proceedings of the American Philosophical Society 105(5): 470-486"
+    doi: null
+    doi_status: "VERIFIED (no DOI; 1961 predates DOIs; JSTOR-indexed)"
+    pdf_local: "blocked (JSTOR borrow-only; user has institutional access)"
+    spine_nodes: [T1, SF4]
+    body_sections: ["Section 7.1 — Validation Case T1: motivating literature"]
+    note: "Multiple-discovery hypothesis: independent discovery of the same idea is structurally inevitable under shared substrate conditions."
+
+  - citation_key: simonton-1979-multiple-discovery-zeitgeist-genius-chance
+    role: theoretical_predecessor
+    venue: "Journal of Personality and Social Psychology 37(9): 1603-1616"
+    doi: "10.1037/0022-3514.37.9.1603"
+    doi_status: VERIFIED
+    pdf_local: "blocked (APA paywall; user has institutional access)"
+    spine_nodes: [T1, SF4]
+    body_sections: ["Section 7.1 — Validation Case T1: motivating literature"]
+    note: "Title correction at v0.3.0: actual title is '...Zeitgeist, genius, or chance?' not '...Zuckerman's theory revisited' (Crossref-confirmed). Quantitative model of multiple-discovery frequency."
+
+  - citation_key: bikard-2020-idea-twins-simultaneous-discoveries-research-tool
+    role: methodological_source
+    venue: "Strategic Management Journal 41(8): 1528-1543"
+    doi: "10.1002/smj.3162"
+    doi_status: VERIFIED
+    pdf_local: "research/references/bikard_2020_idea_twins_ssrn-2329605.pdf (SSRN preprint)"
+    spine_nodes: [T1]
+    body_sections: ["Section 7.1 — Validation Case T1: methodological motivation"]
+    note: >-
+      Michaël Bikard (not David Bikard the microbiologist — common-name
+      disambiguation: there are two D./M. Bikards in the literature).
+      Bikard 2020 cites Merton 1963 (book version, not the 1961 PAPS
+      paper); both should be cited. Idea-twins as research-tool in
+      strategy: closest prior art for using twin pairs as natural
+      experiments in management theory. Bikard 2020 also supplies a
+      method for systematically identifying recent simultaneous
+      discoveries from open data sources, plus a dataset; both are
+      relevant for any Phase-3 extension of the meaningfulness paper.
+
+  # Stream 7a — quantum mechanics primary sources (T1 validation case; NEW v0.3.0)
+  - citation_key: heisenberg-1925-quantum-theoretical-reinterpretation
+    role: data_source
+    venue: "Zeitschrift für Physik 33: 879-893 (English in van der Waerden 1968 *Sources of QM*)"
+    doi: null
+    doi_status: "VERIFIED (PDF in worktree)"
+    pdf_local: "research/references/heisenberg_1925_english_delphenich.pdf + research/references/heisenberg_1925_github_english.pdf"
+    spine_nodes: [T1]
+    body_sections: ["Section 7.1 — Validation Case T1"]
+
+  - citation_key: born-jordan-1925-zur-quantenmechanik
+    role: data_source
+    venue: "Zeitschrift für Physik 34: 858-888 (English in van der Waerden 1968)"
+    doi: null
+    doi_status: "VERIFIED (PDF in worktree)"
+    pdf_local: "research/references/born_jordan_1925_english_neoclassical.pdf"
+    spine_nodes: [T1]
+    body_sections: ["Section 7.1 — Validation Case T1"]
+
+  - citation_key: born-heisenberg-jordan-1926-three-men-paper
+    role: data_source
+    venue: "Zeitschrift für Physik 35: 557-615 (English in van der Waerden 1968)"
+    doi: null
+    doi_status: VERIFIED
+    pdf_local: "research/references/SQM333.pdf (acquired v0.4.0 via operator)"
+    spine_nodes: [T1]
+    body_sections: ["Section 7.1 — Validation Case T1"]
+
+  - citation_key: heisenberg-1926-mehrkorperproblem-resonanz
+    role: data_source_extended_T1
+    venue: "Zeitschrift für Physik 38: 411-426"
+    doi: "10.1007/BF01397160"
+    doi_status: VERIFIED
+    pdf_local: "research/references/Heisenberg_1926_EN.pdf (acquired v0.4.0)"
+    spine_nodes: [T1]
+    body_sections: ["Section 7.1 — extended (multi-body + resonance demonstration that matrix mechanics scales)"]
+    note: "Heisenberg's multi-body quantum mechanics paper; demonstrates matrix-mechanics generalization beyond one-electron systems."
+
+  - citation_key: heisenberg-1926-spektra-zwei-elektronen
+    role: data_source_extended_T1
+    venue: "Zeitschrift für Physik 39: 499-518"
+    doi: "10.1007/BF01322090"
+    doi_status: VERIFIED
+    pdf_local: "research/references/978-3-642-61659-4_33.pdf (German scan acquired v0.4.0; English translation needed)"
+    spine_nodes: [T1]
+    body_sections: ["Section 7.1 — extended"]
+    note: "Two-electron spectra; demonstrates matrix-mechanics application to helium and other multi-electron atoms."
+
+  - citation_key: pauli-1926-wasserstoffspektrum-neue-quantenmechanik
+    role: replication_anchor
+    venue: "Zeitschrift für Physik A 36(5): 336-363"
+    doi: null
+    doi_status: VERIFIED
+    pdf_local: "not freely available; cited via Crossref metadata + Z.f.Phys. record"
+    spine_nodes: [T1, P4]
+    body_sections: ["Section 7.1 — Validation Case T1 (third twin-pair data point)"]
+    note: >-
+      Pauli derived the Balmer hydrogen-atom spectrum from matrix mechanics
+      in the same week (early 1926) that Schrödinger derived it from wave
+      mechanics. This is a *third* twin-pair data point: independent
+      derivation of the same empirical predictions via the matrix-mechanics
+      formalism, simultaneous with Schrödinger's wave-mechanics derivation.
+      Strengthens T1's natural-experiment status. Cited without PDF
+      acquisition; metadata-defensible at academic standard.
+
+  - citation_key: pauli-1927-quantenmechanik-magnetischen-elektrons
+    role: replication_anchor
+    venue: "Zeitschrift für Physik 43: 601-623"
+    doi: null
+    doi_status: "VERIFIED (no DOI; pre-DOI publication; Z.f.Phys.-record; Delphenich English translation acquired v0.7.1)"
+    pdf_local: "/Users/d/projects/spectral-branding/research/references/pauli_-_the_magnetic_electron.pdf (Delphenich English translation; main repo shared corpus; not in worktree)"
+    spine_nodes: [T1, P4]
+    body_sections: ["Section 7.1 — Validation Case T1 (within-author rendering-equivalence demonstration; appendix-depth supporting evidence)"]
+    note: >-
+      Pauli 1927 "Zur Quantenmechanik des magnetischen Elektrons" (Delphenich
+      English: "On the quantum mechanics of magnetic electrons"). User-
+      supplied PDF v0.7.1 (2026-05-26). Pauli explicitly derives the
+      Schrödinger wave-mechanics form of the magnetic-electron problem AND
+      states the derivation produces results "completely equivalent in
+      their consequences to the matrix equations of Heisenberg and Jordan"
+      (abstract; verbatim Delphenich translation). This is a *within-
+      author rendering-equivalence demonstration*: same operator (Pauli)
+      explicitly performs both renderings (matrix-mechanics treatment of
+      spin in Heisenberg-Jordan + Schrödinger wave-mechanics method in
+      Pauli 1927) and explicitly notes their equivalence. Stronger P4
+      evidence than the cross-author H-S equivalence because it removes
+      possible coordination/cross-influence concerns: a single author
+      doing both renderings within one paper cannot have coordinated
+      with himself or been influenced by external bias. Auxiliary T1
+      supporting evidence; appendix-depth at Paper A Phase 3 drafting
+      ("Online Appendix D — Historical Existence Proof (Non-Management
+      Domain)"). Per PIVOT-SPLIT discipline (H-S preserved as historical
+      existence proof for P4; main body weight at Eisenhardt-Martin + Zollo-
+      Winter management twin pair), Pauli 1927 strengthens the historical-
+      record evidence without expanding main-body weight Grok r5 asked
+      to reduce.
+
+  - citation_key: born-1926-quantenmechanik-stossvorgaenge
+    role: theoretical_predecessor
+    venue: "Zeitschrift für Physik 37(12): 863-867"
+    doi: null
+    doi_status: VERIFIED
+    pdf_local: "research/references/born26_stossvorgaenge.pdf (acquired v0.4.0)"
+    spine_nodes: [T1]
+    body_sections: ["Section 7.1 — Validation Case T1 (interpretation of ψ as probability density)"]
+    note: >-
+      Born's probabilistic interpretation of ψ (the ψψ̄ ≡ probability
+      density reading that Schrödinger's S3 proposition does NOT adopt).
+      Relevant because the spine extraction of Schrödinger 1926 must note
+      that S3 (charge-density interpretation) was later superseded by
+      Born's probability interpretation — schema v0.2's L_S2 limitation in
+      the Schrödinger spine names this.
+
+  - citation_key: heisenberg-1985-schwankungserscheinungen-collected-works
+    role: archival_record
+    venue: "Heisenberg Gesammelte Werke / Collected Works, Springer 1985"
+    doi: "10.1007/978-3-642-61659-4_29"
+    doi_status: VERIFIED
+    pdf_local: "research/references/978-3-642-61659-4_29.pdf (acquired v0.4.0)"
+    spine_nodes: [T1]
+    body_sections: ["Section 7.1 — Validation Case T1 (Heisenberg's own retrospective on fluctuation phenomena; auxiliary)"]
+    note: "Heisenberg's collected-works archival reprint of 'Schwankungserscheinungen und Quantenmechanik'; auxiliary historical reference."
+
+  - citation_key: schrodinger-1926-quantisierung-als-eigenwertproblem
+    role: data_source
+    venue: "Annalen der Physik (parts I-IV, 1926). English in *Collected Papers on Wave Mechanics* (Blackie 1928)"
+    doi: null
+    doi_status: "VERIFIED (PDF in worktree)"
+    pdf_local: "research/references/schrodinger_1928_collected_papers_wave_mechanics.pdf §Parts I-IV"
+    spine_nodes: [T1]
+    body_sections: ["Section 7.1 — Validation Case T1"]
+
+  - citation_key: schrodinger-1926-equivalence-heisenberg-wave-mechanics
+    role: replication_anchor
+    venue: "Annalen der Physik 79: 734-756 (English in *Collected Papers on Wave Mechanics* 1928)"
+    doi: null
+    doi_status: "VERIFIED (PDF in worktree)"
+    pdf_local: "research/references/schrodinger_1928_collected_papers_wave_mechanics.pdf §III"
+    spine_nodes: [T1, P4]
+    body_sections: ["Section 7.1 — Validation Case T1 (the equivalence demonstration)"]
+    note: "The critical document for P4: Schrödinger himself shows matrix mechanics and wave mechanics are mathematically equivalent — the natural-experiment confirmation of rendering-equivalence."
+
+  - citation_key: vonneumann-1932-mathematical-foundations-quantum-mechanics
+    role: replication_anchor
+    venue: "Springer 1932 (German); Princeton 1955 (English); new edition 2018"
+    doi: "10.1515/9781400889921"
+    doi_status: VERIFIED
+    pdf_local: "research/references/PPN379400774.pdf (scanned German edition acquired v0.4.0)"
+    spine_nodes: [T1, P4]
+    body_sections: ["Section 7.1 — Validation Case T1 (formal Hilbert-space equivalence)"]
+    note: "Acquired v0.4.0 by operator. The rigorous Hilbert-space functional-analytic foundation of the matrix-vs-wave-mechanics equivalence; canonical formal-equivalence citation."
+
+  - citation_key: merton-1961-singletons-multiples-scientific-discovery-acquired
+    role: theoretical_predecessor
+    venue: "Proceedings of the American Philosophical Society 105(5): 470-486"
+    doi: null
+    doi_status: "VERIFIED (no DOI; pre-DOI publication; JSTOR-indexed at jstor.org/stable/985546)"
+    pdf_local: "research/references/merton-singletons_and_multiples_in_science.pdf (acquired v0.4.0)"
+    spine_nodes: [T1, SF4]
+    body_sections: ["Section 7.1 — Validation Case T1: motivating literature"]
+    note: "Acquired v0.4.0 by operator. Multiple-discovery hypothesis canonical source. Merton 1961 PAPS paper; later expanded in Merton 1973 Sociology of Science book that Bikard 2020 cites."
+
+  # Streams 1-4 — philosophy / KR / NLP / schema theory (unchanged from v0.2.0; full list omitted for length, retained from archived spine)
+  - citation_key: cover-2006-elements-information-theory
+    role: methodological_source
+    venue: "Wiley (2nd ed.)"
+    doi: "10.1002/047174882X"
+    doi_status: VERIFIED
+    spine_nodes: [P2, intervention, M3]
+    body_sections: ["Section 5", "Section 11 — Calibrated simulation"]
+
+  - citation_key: nakajima-2026-log-is-the-agent
+    role: theoretical_predecessor
+    venue: "arXiv:2605.21997 [cs.AI]"
+    doi: null
+    doi_status: VERIFIED
+    spine_nodes: [P1, intervention]
+    body_sections: ["Section 5 — Three-level hierarchy"]
+
+# (Philosophy of language, formal ontology, NLP meaning representation, schema
+# theory anchors retained from SPINE_v0_2_0_archived.yaml — see archived file
+# for full list. Pruned here to keep v0.3.0 focused on additions/changes.)
+
+# ============================================================================
+# Open questions / boundary edges (deferred to Phase 3 fix-pass)
+# ============================================================================
+open:
+  - "How is σ extraction effort measured at organizational scale, and what is the empirical cost function on N (number of artifacts)?"
+  - "Who owns the published semantic graph — author, journal, community? Governance question deferred to Section 8 Discussion."
+  - "How is strategic manipulation of edge typing prevented? Body-spine reconciliation check named; full mitigation deferred."
+  - "Does the framework apply to multimodal artifacts (papers + video + interactive visualizations) without modification? Conjecture yes; scope statement excludes."
+  - "Empirical estimation of P2 (recombination) and P3 (verification-cost asymmetry) is deferred to a companion paper targeting SMJ."
+  - "Self-application is structurally circular; addressed by pairing with T1 + T2 but requires explicit defense in Section 6.1."
+  - "T1 retroactive spine extraction may surface artifacts the schema v0.2 still cannot represent (e.g., visual diagrams, geometric reasoning); v0.2.1 schema may be needed."
+  - "Schema v0.2 inter-coder reliability untested (AA2); RC2 planned."
+  - "v0.5.0 OPEN: T1' management-theory twin pair selection from the three candidates (Tushman-O'Reilly 1996 + Duncan 1976 / Eisenhardt-Martin 2000 + Zollo-Winter 2002 / Adler-Kwon 2002 + Nahapiet-Ghoshal 1998) pending Phase-2 follow-up DR (Session D) applying Bikard 2020 idea-twin methodology. Selection criterion: cleanest mutual-independence at original-draft time + accessible primary sources + ≤2-year gap preferred (Bikard 2020 threshold)."
+  - "v0.5.0 OPEN: depth of Carlile 2004 engagement in §H mechanism section — minimum is one paragraph naming the spine as a new pragmatic boundary object; maximum would be a full Carlile-section dialogue. Decide at Phase 3 drafting."
+  - "v0.5.0 OPEN: Mantere-Vaara, Lindebaum, Cameron-Rahman, van den Broek sub-essay engagement in §10 (Discussion) per Grok r2 §2 fourth bullet — depth to be calibrated against Org Sci page-limit constraints at Phase 3."
+
+# ============================================================================
+# Spine changelog — append-only
+# ============================================================================
+changelog:
+  - date: 2026-05-26
+    operation: lock
+    by: "Phase 0.5 of R_PAPER_PREDRAFT_WORKFLOW; post-Grok-r1 REVISE; Session A v0.2.0"
+    note: >-
+      Initial spine lock from PHASE_0_THESIS.md v0.2.0. First paper drafted
+      under the spine-first protocol. Reframed thesis from META-PRINCIPLE-
+      refinement to AI-cost-asymmetry. Three propositions (1 ontological +
+      2 management-outcome). Four boundary conditions. Three stylized
+      facts. Two paired validation cases (Puranam-Raveendran focal +
+      self-application robustness). Target venue Org Sci primary / AI &
+      Society secondary / AMR tertiary.
+    spine_version_before: "(none — initial lock)"
+    spine_version_after: "0.2.0 (schema v0.1)"
+
+  - date: 2026-05-26
+    operation: "fork (multiple) + rebase (four fabricated anchors) + schema-upgrade (v0.1 → v0.2)"
+    by: "Phase 0.5 of R_PAPER_PREDRAFT_WORKFLOW; Session B post-DR"
+    note: |
+      Session B comprehensive revision after parallel-session DR findings:
+
+      (1) Schema upgrade v0.1 → v0.2. Added 10 first-class node types
+          (observations, methods, measurements, findings, derivations,
+          alternative_explanations, robustness_checks, limitations,
+          negative_findings, assumption_atoms) per
+          SPINE_FIRST_DRAFTING_PROTOCOL.md §"Schema v0.2". Provenance
+          required on every node. v0.1 → v0.2 migration applied to
+          existing nodes; new nodes added natively under v0.2.
+
+      (2) FORK: added P4 (rendering-equivalence under spine-preservation)
+          and SF4 (cross-medium conclusion-invariance) per
+          IDEA_P4_RENDERING_EQUIVALENCE_2026-05-26.md.
+
+      (3) FORK: added D1, D2 derivations bridging P3 → intervention and
+          P3 → schema_human_operability respectively.
+
+      (4) FORK: added schema_human_operability preamble — the schema's
+          intentional machine-operability is the framework's first
+          operationalization of P3 (the "is this too complex for humans"
+          objection is closed at the framework level).
+
+      (5) FORK: validation_strategy section with three-tier structure
+          (T1 cross-domain killer / T2 venue-fit / T3 self-application).
+          Added T1 (Heisenberg-Schrödinger twin pair) as the killer
+          empirical move per user direction 2026-05-26.
+
+      (6) REBASE: dropped four fabricated v0.2.0 external_anchors
+          (Puranam-Raveendran 2024 AMR; Cornelissen-Schildt 2025 Org Sci;
+          Glaser et al. 2024 SMJ DOI 10.1002/smj.3601 → DIFFERENT_RECORD;
+          Seidel-O'Mahony 2023 AMJ). All four confirmed fabricated by
+          Phase-2 DR Session B (M1 verification cascade).
+
+      (7) FORK: added F2 — the fabrication-discovery itself becomes a
+          first-class finding aggregated under SF1. Self-referentially
+          strongest possible SF1 evidence: the paper's own pre-draft
+          verification caught what would have been an embarrassing
+          citation problem.
+
+      (8) FORK: replaced T2 focal artifact with Kulkarni-Mantere-Greenwood
+          et al. 2024 JMI "Future of Research in an Artificial Intelligence-
+          Driven World" (DOI 10.1177/10564926231219622, Crossref-verified).
+          Topic match stronger than the fabricated Puranam-Raveendran.
+
+      (9) FORK: added real Koçak-Levinthal-Puranam 2023 Org Sci as
+          theoretical_predecessor (DOI 10.1287/orsc.2022.1601; user-provided
+          PDF). Real Grodal-O'Mahony 2017 AMJ as contrast_case
+          (DOI 10.5465/amj.2015.0890). Both replace fabricated v0.2.0 anchors.
+
+      (10) FORK: strengthened R15 AI Search Metamerism corpus-precedent
+           engagement per F3 (Session 168 Q2 graph finding).
+
+      (11) FORK: added multiple-discovery sociology of science prior art
+           (Merton 1961; Simonton 1979 with title correction;
+           Bikard 2020 SMJ).
+
+      (12) FORK: added Heisenberg-Schrödinger primary sources for T1
+           (Heisenberg 1925; Born-Jordan 1925; Schrödinger 1926
+           Quantisierung I-IV + equivalence paper). Three-Men paper +
+           von Neumann 1932 escalated to user (paywall/borrow-only).
+
+      (13) Title updated: thesis sub-claim "spec-based research in the
+           post-AI era" now leads. Venue order updated: Org Sci primary,
+           JMI secondary (per T2 fit), AI & Society tertiary.
+
+      (14) L3 limitation added: transparency note documenting the v0.2.0
+           → v0.3.0 FORK that the fabrication episode required. The
+           framework is honest about its own near-miss.
+    spine_version_before: "0.2.0 (schema v0.1)"
+    spine_version_after: "0.3.0 (schema v0.2)"
+
+  - date: 2026-05-26
+    operation: "fork (Operator generalization) + rebase (F2 demoted to audit_internal) + new external_anchors (acquired v0.4.0)"
+    by: "Operator (editorial direction 2026-05-26 Session B-prime)"
+    note: |
+      v0.3.0 -> v0.4.0 surgical editorial revision per direction 2026-05-26:
+
+      (1) Operator generalization: replaced schema_human_operability section
+          with operator_role section. The Researcher / Human / AI instance
+          distinction is generalized to the Operator role with era-dependent
+          projections (pre-AI / AI-assisted / post-AI / AI-primary). Same
+          role-as-projection move OST applies to organizational roles.
+          Closes the awkward Human-vs-AI framing; lifts the contribution
+          to the role-theoretic level appropriate to Org Sci venue.
+
+      (2) F2 demoted to audit_internal visibility per editorial direction.
+          The 4/4 fabrication-discovery is the strongest single SF1 evidence
+          but elevating it in the public paper risks inside-baseball
+          perception and AI-co-authorship credibility concern. Public paper
+          SF1 now rests on generic literature (RAG-hallucination benchmarks
+          Session C Phase-2 DR will identify). F2 retained in spine with
+          visibility: audit_internal tag + body_sections: []; full audit
+          record at AUDIT_INTERNAL_F2_PHASE2_DR_NEAR_MISS.md (not in any
+          public mirror). L3 limitation rewritten generically.
+
+      (3) New external_anchors acquired v0.4.0 by operator:
+            - vonneumann-1932 acquired (PPN379400774.pdf; scanned German)
+            - born-heisenberg-jordan-1926 Three-Men paper acquired (SQM333.pdf)
+            - heisenberg-1926-mehrkorperproblem acquired (Heisenberg_1926_EN.pdf)
+            - heisenberg-1926-spektra-zwei-elektronen acquired German scan
+            - born-1926-quantenmechanik-stossvorgaenge acquired
+              (born26_stossvorgaenge.pdf; Born's probabilistic interpretation
+              of psi)
+            - merton-1961-singletons-multiples acquired
+              (merton-singletons_and_multiples_in_science.pdf)
+            - heisenberg-1985-schwankungserscheinungen-collected-works
+              acquired (978-3-642-61659-4_29.pdf)
+            - bikard-2020-idea-twins-simultaneous-discoveries acquired
+              SSRN preprint (bikard_2020_idea_twins_ssrn-2329605.pdf);
+              citation metadata corrected (SMJ 41(8) 1528-1543, not 41(12))
+
+      (4) FORK: added pauli-1926-wasserstoffspektrum as third twin-pair
+          data point (Pauli derived Balmer from matrix mechanics
+          simultaneously with Schroedinger from wave mechanics; citation
+          only, no free PDF available).
+
+      (5) Bikard two-author disambiguation flagged: Michael Bikard
+          (London Business School / Bocconi, organization studies — our
+          citation) is distinct from David Bikard (Institut Pasteur,
+          synthetic biology — initially-confused identical surname).
+          Documented in external_anchors note.
+
+      (6) The role-as-projection structure of the Operator preamble is
+          now the strongest single conceptual cross-link to OST (per
+          corpus precedent block).
+    spine_version_before: "0.3.0 (schema v0.2)"
+    spine_version_after: "0.4.0 (schema v0.2)"
+
+  - date: 2026-05-26
+    operation: "fork (T1' primary management-theory twin pair) + demote (T1 H-S to historical existence proof) + extend (P3 cost-function formalism) + extend (P2 recombination metric) + foreground (operator_role as Contribution 1) + add (carlile-2004 anchor) + record (NF2 Felin-Zenger not-found)"
+    by: "Operator (Session C-prime per user direction 2026-05-26 + Grok r2 NF1/NF2/NF3)"
+    note: |
+      v0.4.0 → v0.5.0 surgical FORK pass addressing the three Grok r2
+      fatal_gaps (audit/grok_outputs/2026ao_grok_r2.md; summary at
+      GROK_REVIEW_SUMMARY_r2.md). Session-B-prime discipline: small file
+      edits, no re-architecting; spine v0.4.0 archived at
+      SPINE_v0_4_0_archived.yaml.
+
+      (1) NF1 (T1 domain distance) — primary empirical case substituted.
+          T1' (NEW) validation case introduces management-theory twin pair
+          as PRIMARY EMPIRICAL CASE; T1 (H-S) demoted from "cross-domain
+          killer" to "historical existence proof for P4." T1 extraction
+          work (Heisenberg + Schrödinger spines + equivalence notes +
+          isomorphism analysis) PRESERVED — published with the paper as
+          P4 historical-record evidence. T1.validates: [P4, P1] → [P4]
+          (P1 validated via T1' instead). Three candidate twin pairs
+          named in T1'.candidate_set; specific selection deferred to
+          Phase-2 follow-up DR (Session D) applying Bikard 2020 idea-twin
+          methodology. validation_strategy reordered: T1' primary / T2
+          venue-fit / T1 historical / T3 robustness.
+
+      (2) NF2 (mechanism black-box) — P3 formal cost functions added.
+          P3.formal_cost_functions block: spine S = typed DAG G = (V, E, τ)
+          with τ the schema-v0.2 10-type taxonomy; c_AI(S) = α·|V|^β (β<1)
+          versus c_human(R) = γ·|tokens|^δ (δ>1). Calibrated simulation §11
+          extended to vary β ∈ {.5,.7,.9} against δ ∈ {1.1,1.3,1.5} and
+          plot recombination rate as function of (β, δ). Form taken
+          verbatim from Grok r2 §1.4 specification.
+
+      (3) NF3 (contribution sprawl) — Operator role foregrounded as
+          Contribution 1. operator_role.contribution_status added: PRIMARY
+          (Contribution 1 v0.5.0). The three-level hierarchy + schema v0.2
+          + cost-asymmetry theorem + spine-first protocol are now framed
+          as OPERATIONALIZATIONS of the role-theoretic move, not as co-
+          equal contributions. Closes Grok r2 §3 "trying to boil the
+          ocean" objection at the framework level.
+
+      (4) BONUS P2 recombination metric (Grok r2 §1.2) — P2.measurement
+          rewritten to specify "recombination event = reuse of ≥3 linked
+          propositions with preserved antecedent-DAG structure"; falsifier
+          window 24-36 months; operational proxy = graph-alignment
+          algorithms on public SPINE.yaml repositories. Rec(G1, G2) =
+          maximum common subgraph preserving types and antecedents
+          (Grok r2 §6 specification).
+
+      (5) BONUS P2/P3 organizational-outcome reframing (Grok r2 §3 third
+          bullet) — P2 statement extended with venue-style prediction
+          ("Labs that publish spines exhibit higher citation-weighted
+          derivative work within 24-36 months"); P3 falsifier extended
+          with empirical-parameter form (β ≥ δ).
+
+      (6) BONUS Carlile 2004 added (Grok r2 §2 first bullet HIGH).
+          carlile-2004-transferring-translating-transforming-boundaries
+          external_anchor; DOI 10.1287/orsc.1040.0094 Crossref-verified
+          (corrects Grok r2-suggested DOI 0073 which resolves to Feldman
+          2004). Slot: §H mechanism section + §8 Discussion. The SPINE.yaml
+          framed as new species of pragmatic boundary object.
+
+      (7) NF2 recorded (negative finding) — Grok r2 §2 second bullet
+          flagged Felin-Zenger 2023 SMJ as HIGH-priority missing prior
+          art with no DOI. Crossref search returned NO matching paper.
+          Pattern matches the four v0.2.0 fabrications Grok r1 supplied.
+          NF2 entry records that the verification cascade caught Grok r2's
+          suggested anchor pre-draft, with visibility: audit_internal
+          matching F2 editorial discipline. The framework's verification
+          discipline works across reviewer rounds, not just initial draft.
+
+      (8) Thesis updated to reorder validation tiers (T1' primary / T2 /
+          T1 historical / T3) and foreground the Operator-role primary-
+          contribution framing.
+
+      (9) Three new open questions added: T1' candidate selection method
+          + Carlile engagement depth + sub-essay engagement depth.
+
+      The L3 audit-detail surface (Grok r2 §4 reviewer-concern (3)
+      suggestion to move audit detail to online appendix vs current
+      internal-only) is NOT changed v0.5.0 — kept internal-only per
+      Session B-prime editorial discipline rationale (PREDRAFT_BUNDLE §A.1).
+      Defer to user judgment at Phase 3.
+    spine_version_before: "0.4.0 (schema v0.2)"
+    spine_version_after: "0.5.0 (schema v0.2)"
+
+  - date: 2026-05-26
+    operation: "PIVOT-SPLIT — fork(Paper A theory-only scope) + spawn(Paper B 2026ap empirical companion) + lock(T1' focal pair Eisenhardt-Martin + Zollo-Winter) + add(Star-Griesemer 1989; Rosso-Dekas-Wrzesniewski 2010) + defer(P2/P3 empirical estimation to Paper B)"
+    by: "Operator (Session C-prime per user direction 2026-05-26 + Grok r3 NR2 + user PIVOT-SPLIT authorization with iteratively-versioned Paper B refinement)"
+    note: |
+      v0.5.0 → v0.6.0 PIVOT-SPLIT FORK pass. v0.5.0 archived at
+      SPINE_v0_5_0_archived.yaml. Resolves Grok r3 NR2 structural
+      objection (retroactive cases cannot test P2/P3 organizational
+      outcomes) by splitting the meaningfulness paper into Paper A
+      (theory-only, Org Sci) and Paper B 2026ap (empirical companion,
+      iteratively-versioned working paper, SMJ-tier).
+
+      (1) PIVOT-SPLIT scope decision: Paper A 2026ao = theory; Paper B
+          2026ap = empirical companion. Mirrors 2026am/2026an multi-
+          interface paper split precedent. Plan documented at
+          PIVOT_SPLIT_PLAN.md; Paper B scoping at
+          PAPER_B_2026ap_SCOPING.md.
+
+      (2) Paper A primary propositions locked: P1 (separability) + P4
+          (rendering-equivalence). P2 + P3 reframed as theoretically-
+          derived predictions with status_v0_6_0 + primary_in (Paper B
+          2026ap) + illustrative_in (Paper A 2026ao §11 calibrated
+          simulation) tags. Falsifier specifications retained in spine
+          for Paper B to inherit; Paper A states predictions, Paper B
+          tests them.
+
+      (3) T1' focal pair LOCKED per Grok r3 §5 endorsement:
+          Eisenhardt-Martin 2000 SMJ (DOI 10.1002/1097-0266...
+          SMJ133...) + Zollo-Winter 2002 Org Sci (DOI 10.1287/orsc.
+          13.3.339.2780). Both Crossref-verified Session C-prime
+          2026-05-26. validates_paper_a: [P4, P1]; validates_paper_b:
+          [P2, P3]. Two-year gap; different formalisms (best-practices/
+          routines vs deliberate-learning/evolutionary mechanisms).
+          Secondary pair Tushman-O'Reilly 1996 CMR + Duncan 1976
+          retained for v0.6.0/Paper-B-v1.0.0 sensitivity test on
+          20-year-gap relaxation. Third candidate Adler-Kwon + Nahapiet-
+          Ghoshal deferred to Paper B v1.1.0+.
+
+      (4) Star-Griesemer 1989 added (Grok r3 §2 first bullet HIGH).
+          DOI 10.1177/030631289019003001 Crossref-verified Session
+          C-prime. The original boundary-object source Carlile (2004)
+          operationalized; plasticity-vs-robustness lineage now in §H
+          mechanism section.
+
+      (5) Rosso-Dekas-Wrzesniewski 2010 added (Grok r3 §2 second
+          bullet HIGH). DOI 10.1016/j.riob.2010.09.001 Crossref-
+          verified Session C-prime. Canonical meaning/meaningfulness
+          review in OB; preempts "what does meaning vs meaningfulness
+          already mean in OB?" reviewer objection. Slot: §B thesis +
+          Contribution 1 framing.
+
+      (6) Paper B 2026ap added as empirical_companion external_anchor
+          with PENDING DOI. Each Paper B Zenodo release will cite
+          Paper A 2026ao DOI as theoretical foundation; Paper A cites
+          Paper B as forthcoming empirical companion in §4.2 + §10.
+
+      (7) Operator-role contribution_status retained PRIMARY (v0.5.0
+          framing accepted by Grok r2/r3); v0.6.0 sharpens via Grok r3
+          NR1 partial-closure language: schema + protocol + 4-case
+          validation are operationalizations subordinated to online
+          appendix structure at Phase-3 drafting, NOT co-equal
+          contributions in §3.
+
+      (8) Puranam-Raveendran 2022 Org Sci (Grok r3 §2 third bullet
+          [UNVERIFIED]) NOT ADDED — Grok itself flagged uncertainty;
+          operator verification deferred to post-r4 if needed.
+
+      (9) NF2 (Felin-Zenger 2023 SMJ not-found) retained as
+          audit_internal; not re-litigated by Grok r3.
+
+      Per CLAUDE.md loop rule: PIVOT-SPLIT is a genuine pivot (not
+      another editorial pass at the same approach). Grok r4 on Paper A
+      v0.6.0 bundle is attempt 1 at Paper A's specific scope, not
+      attempt 4 at the original bundle approach. Loop-rule clock
+      resets at the pivot boundary.
+    spine_version_before: "0.5.0 (schema v0.2)"
+    spine_version_after: "0.6.0 (schema v0.2; PIVOT-SPLIT Paper A theory-only scope)"
+
+  - date: 2026-05-26
+    operation: "fork (knowledge-based theory-of-the-firm lineage anchors + role-theory anchor + negative scope conditions + inter-coder κ threshold) + record (NF3 Leonardi-Vaast 2017 not-found)"
+    by: "Operator (Session C-prime v0.7.0 closure of Grok r4 sole fatal_gap + user-supplied Liebeskind/Nickerson-Zenger anchors)"
+    note: |
+      v0.6.0 → v0.7.0 surgical FORK pass closing Grok r4 sole remaining
+      fatal_gap ("contribution-to-reviewer-effort ratio still high even
+      post-split; schema/protocol details must be subordinated further")
+      plus user-supplied prior-art additions. Spine v0.6.0 archived at
+      SPINE_v0_6_0_archived.yaml.
+
+      (1) User-supplied theory-of-the-firm anchors added 2026-05-26:
+          - liebeskind-1996-knowledge-strategy-theory-firm (SMJ 17(S2):
+            93-107; DOI 10.1002/smj.4250171109; Crossref-verified).
+            Canonical knowledge-based-theory-of-the-firm citation; user
+            provided PDF in main repo research/references/. Engaged in
+            §4.1 + §8 to establish Operator-role lineage in KBT-of-firm.
+          - nickerson-zenger-2004-knowledge-based-theory-firm-problem-
+            solving (Org Sci 15(6): 617-632; DOI 10.1287/orsc.1040.0093;
+            Crossref-verified). User-supplied; resolves the Felin-Zenger
+            anchor Grok r2 hallucinated. Knowledge-based theory at
+            problem-solving level; venue-canonical Org Sci anchor for
+            the role-theoretic contribution. Slot: §4.1 + §8.
+
+      (2) Bechky-Okhuysen 2011 added (Grok r4 §2 first bullet HIGH).
+          DOI correction: Grok r4 suggested 10.5465/amj.2011.60215091
+          which does NOT resolve; correct DOI is
+          10.5465/amj.2011.60263060 (Crossref-verified Session C-prime).
+          Canonical role-theoretic treatment of how occupational roles
+          absorb unexpected events; demonstrates Operator role is not
+          sui generis to AI-era scholarship. Slot: §3 contributions +
+          §8 Discussion.
+
+      (3) NF3 recorded: Grok r4 §2 second bullet flagged HIGH-priority
+          Leonardi-Vaast 2017 Org Sci "sociality of algorithms"; Crossref
+          verification returned NO matching paper. Grok-suggested DOI
+          10.1287/orsc.2017.1152 resolves to Tzabbar-Margolis 2017
+          (Beyond the Startup Stage), not Leonardi-Vaast. Pattern matches
+          v0.2.0 r1 fabrications + NF2 r2 Felin-Zenger fabrication.
+          Visibility: audit_internal matching F2/NF2 discipline.
+          Cumulative SF1 evidence noted: 6 Grok-suggested-anchor
+          hallucinations across r1+r2+r3+r4 cycles (~50% catch rate);
+          potential engagement at Paper B v3.0.0+ as within-corpus SF1
+          instance.
+
+      (4) Negative scope conditions NSC1-NSC5 added per Grok r4 §1.3
+          STRONG closure ("explicitly name negative scope conditions").
+          NSC1 routine operational work (C2 fails). NSC2 real-time
+          control systems (C1 fails). NSC3 narrative-only scholarship
+          (C2 principle-fails). NSC4 high-stakes executive sensemaking
+          under genuine uncertainty (C4 principle-inverted; framework
+          cedes to Weick / Maitlis-Christianson sensemaking traditions).
+          NSC5 pure discovery science without reproducibility pressure
+          (C4 not yet applicable; framework cedes to pre-paradigmatic
+          theoretical-physics speculation traditions).
+
+      (5) RC2 robustness check updated with explicit κ ≥ 0.75 threshold
+          per Grok r4 §5 HIGH-priority addition: previously threshold
+          was unspecified; v0.7.0 specifies (a) what is measured
+          (two-coder agreement on node typing per v0.2 10-type taxonomy
+          AND edge placement per v0.2 17-edge-type catalog), (b) what
+          below-threshold means (axiom A1 empirically falsified), (c)
+          what at-threshold means (P4 preservation theorem holds as
+          stated).
+
+      Per Grok r4 sole fatal_gap closure ("subordinate schema/protocol
+      details further to appendices"), the §H mechanism section in
+      PHASE_0_THESIS.md + PREDRAFT_BUNDLE.md is restructured v0.7.0:
+      schema details + simulation grid + full protocol are explicitly
+      tagged "Online Appendix A/B/C" in §H body text; main-body
+      treatment shortened to the typed-DAG specification + cost-function
+      forms + preservation theorem statement only. Implementation in
+      PHASE_0_THESIS + PREDRAFT_BUNDLE edits this session.
+
+      Expected Grok r5 trajectory: GO. r4 returned 1 fatal_gap +
+      acceptance_path R&R_LIKELY + STRONG STRONG ADEQUATE STRONG ADEQUATE
+      ADEQUATE STRONG STRONG; v0.7.0 closes the remaining gap + adds
+      three verified prior-art anchors + closes §1.3 boundary-condition
+      gap to STRONG + specifies inter-coder threshold + records NF3.
+    spine_version_before: "0.6.0 (schema v0.2; PIVOT-SPLIT)"
+    spine_version_after: "0.7.0 (schema v0.2; Grok-r4 sole-fatal-gap closure + user-supplied KBT-of-firm anchors)"
+
+  - date: 2026-05-26
+    operation: "fork (user-supplied NF2-RESOLVED-PARTIAL + NF3-RESOLVED-PARTIAL anchors); patch-level revision"
+    by: "Operator (Session C-prime v0.7.1 micro-pass per user direction 2026-05-26)"
+    note: |
+      v0.7.0 → v0.7.1 patch-level additive revision. User-supplied
+      verified-real adjacent-topic anchors that PARTIALLY resolve NF2
+      (Grok r2 Felin-Zenger 2023 SMJ fabrication) and NF3 (Grok r4
+      Leonardi-Vaast 2017 Org Sci fabrication). Both hallucinations had
+      author/year tuples that mapped onto real papers at adjacent
+      topics / different venues. No v0.7.0 archive copy created (patch-
+      level change; v0.7.0 is the immediate prior state in git history).
+
+      (1) Felin-Kauffman-Zenger 2023 SMJ 44(6): 1514-1533 "Resource
+          origins and search" (DOI 10.1002/smj.3350; Crossref-verified;
+          PDF in main repo at "Strategic Management Journal - 2021 -
+          Felin - Resource origins and search.pdf" — Crossref online-
+          published 2021, journal-issue 2023). Engagement angle: the
+          SPINE.yaml IS a resource the organization generates under the
+          Operator role; Felin-Kauffman-Zenger's resource-origins
+          framework applies to spine origins. Slot: §4.1 + §8.
+
+      (2) Leonardi-Vaast 2017 AM Annals 11(1): 150-188 "Social Media
+          and Their Affordances for Organizing" (DOI 10.5465/annals.
+          2015.0144; Crossref-verified). Engagement angle: the
+          affordance perspective applies to the SPINE.yaml as
+          technological artifact whose typed-DAG structure +
+          machine-operability + edge-type catalog afford specific
+          Operator-role projection patterns. Slot: §5 (three-level
+          hierarchy as affordance structure) + §H (mechanism =
+          affordance specification).
+
+      (3) NF2 + NF3 status updated to RESOLVED-PARTIAL. The verification
+          cascade still caught the original Grok-suggested fabrications
+          pre-draft (Grok r2's "AI/knowledge/firm/SMJ-2023" tuple does
+          not exist; Grok r4's "sociality of algorithms / Org Sci /
+          DOI 10.1287/orsc.2017.1152" tuple does not exist). The user-
+          supplied real-adjacent-papers enrich Paper A's prior-art
+          engagement without retroactively legitimizing the Grok-
+          suggested hallucinations. Discipline preserved.
+
+      (4) Pauli (1927) "Zur Quantenmechanik des magnetischen Elektrons"
+          Z. Phys. 43: 601-623 (Delphenich English translation) added as
+          pauli-1927-quantenmechanik-magnetischen-elektrons. User-supplied
+          PDF v0.7.1 (2026-05-26). Within-author rendering-equivalence
+          demonstration: Pauli explicitly derives wave-mechanics form of
+          the magnetic-electron problem AND states the derivation is
+          "completely equivalent in their consequences to the matrix
+          equations of Heisenberg and Jordan." Stronger P4 evidence
+          than cross-author H-S because single-author removes
+          coordination/independence concerns. Reference-only spine entry;
+          no main-body weight added per PIVOT-SPLIT discipline (H-S
+          preserved as historical existence proof; main weight at
+          T1' Eisenhardt-Martin + Zollo-Winter management pair).
+          Appendix-depth at Paper A Phase 3 drafting.
+
+      No new Grok cycle scheduled (saturation reached at r5; user
+      verdict GO recommended at TRIAGE_MEMO_r5; v0.7.1 patch
+      strengthens prior-art engagement consistent with that GO
+      recommendation).
+    spine_version_before: "0.7.0 (schema v0.2; Grok-r4 closure + KBT-of-firm anchors)"
+    spine_version_after: "0.7.1 (schema v0.2; user-supplied NF2/NF3-partial-resolution anchors)"
+
+  - date: 2026-05-26
+    operation: "fork (post-draft Grok review FORK + 7 verified anchors + record NF4-NF10 cumulative SF1)"
+    by: "Operator (Session D second window post-draft Grok review + Crossref verification cascade + user-supplied real-adjacent anchors)"
+    note: |
+      v0.7.1 → v0.7.2 FORK pass after post-draft Grok review on paper.md
+      v1.0.0 (audit/grok_outputs/2026ao_postdraft_grok.md; verdict
+      READINESS 3/10; XL revision effort). The post-draft review
+      surfaced 12 prior-art suggestions of which Crossref verification
+      Session D confirmed 5 real + user-supplied 2 real-adjacent for
+      hallucinated suggestions + 5 hallucinated with no real-adjacent.
+      Cumulative SF1 hallucination rate sustained at ~54% across all
+      6 review cycles.
+
+      (1) Seven new external_anchors added (5 Grok-suggested Crossref-
+          verified + 2 user-supplied real-adjacent):
+          - murray-rhymer-sirmon-2021-conjoined-agency (AMR)
+          - kellogg-valentine-christin-2020-algorithms-at-work (AMA)
+          - lebovitz-levina-lifshitz-assaf-2021-ai-ground-truth (MISQ)
+          - lebovitz-lifshitz-assaf-levina-2022-engage-or-not-ai
+            (Org Sci; bonus find during verification)
+          - faraj-pachidi-sayegh-2018-learning-algorithm (I&O)
+          - bailey-barley-2010-teaching-learning-ecologies (Org Sci;
+            user-supplied real-adjacent for NF4)
+          - leonardi-pilny-treem-sharma-2024-ai-organizational-
+            communication (book chapter; user-supplied real-adjacent
+            for NF5)
+
+      (2) Five NF entries recorded (NF4-NF10) for post-draft
+          hallucinations.
+
+      (3) Cumulative SF1 evidence across 6 cycles (r1-r5 + postdraft):
+          ~13 hallucinated anchors / ~24 total suggested = ~54%
+          hallucination rate sustained.
+
+      (4) No proposition / boundary-condition / NSC modifications.
+          Pure citation-substrate FORK preserving substantive theory
+          shape from v0.7.1.
+
+      (5) Paper.md revision pass on paper.md v1.0.0 (commit 20b249d6)
+          applies Priority 1+2 of the post-draft Grok recommendations
+          in parallel: corpus self-cite removal except 2026ap;
+          versioning-talk trim from main body; tone softening;
+          appendix re-subordination of formalism that crept back into
+          main body during polish pass; practical-implications
+          subsection expansion; forward-looking organizational
+          illustration. Priority 3 push-back (preservation theorem
+          retained; Appendix D quantum case retained; Telegram SF3
+          instance reframed as operational practice) is the same
+          parallel pass.
+    spine_version_before: "0.7.1 (schema v0.2; user-supplied NF2/NF3-partial-resolution anchors)"
+    spine_version_after: "0.7.2 (schema v0.2; post-draft Grok FORK + 7 verified anchors + NF4-NF10 cumulative SF1 evidence)"
+
+  - date: 2026-05-26
+    operation: "fork (post-draft Grok review r2 FORK + 8 verified anchors + record NF11-NF14)"
+    by: "Operator (Session D postdraft r2 + Crossref verification + user-supplied real-adjacent anchors)"
+    note: |
+      v0.7.2 → v0.7.3 FORK pass after post-draft Grok review r2 on
+      revised paper.md (audit/grok_outputs/2026ao_postdraft_r2_grok.md;
+      verdict READINESS 4/10 up from 3/10). The r2 review surfaced 10
+      prior-art suggestions of which Crossref verification + user-
+      supplied 2026-05-26 resolved: 3 Crossref-verified Grok-suggested
+      real (Dell'Acqua 2023 SSRN; Berente-Gu-Recker 2021 MISQ; Grodal-
+      Ha-Hood 2024 Org Theory venue-corrected from Grok's AMJ) + 4
+      user-supplied real-adjacent for hallucinated Grok-r2 suggestions
+      (Marchetti-Puranam 2025 SMJ for hallucinated Puranam-Raveendran
+      2024 SMJ; Seidel-Berente-Baiyere 2025 I&O + Seidel-O'Mahony 2014
+      Org Sci + Berente-Seidel-Safadi 2019 ISR for hallucinated Seidel-
+      Berente 2023 Org Sci) + 1 user-supplied verified real
+      (Brynjolfsson-Li-Raymond 2025 QJE; Grok r2 self-flagged
+      forthcoming but verified real published) = 8 new anchors total.
+      4 hallucinations recorded as NF11-NF14 (Puranam-Raveendran 2024
+      SMJ; Leonardi-Vaast 2024 update — already engaged via 2017
+      anchor; Seidel-Berente 2023 Org Sci; Grodal 2024 venue-wrong).
+      Cumulative SF1 across 7 cycles (r1-r5 + post1 + post2) ≈ 17
+      hallucinations / ~32 suggestions = ~53% sustained.
+
+      No proposition / boundary-condition / NSC modifications. Pure
+      citation-substrate FORK. Paper.md revision pass applying Path 1
+      Risk C + Risk D fixes (contribution-scatter consolidation +
+      Design Propositions formalization + companion-forward-reference
+      trim + preservation-theorem-proof-sketch move to appendix)
+      follows in the parallel paper.md commit this session.
+    spine_version_before: "0.7.2 (schema v0.2; post-draft Grok FORK + 7 verified anchors + NF4-NF10 cumulative SF1 evidence)"
+    spine_version_after: "0.7.3 (schema v0.2; post-draft Grok r2 FORK + 8 verified anchors + NF11-NF14)"

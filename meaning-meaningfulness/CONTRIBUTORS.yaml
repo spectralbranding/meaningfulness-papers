@@ -1,0 +1,53 @@
+---
+paper_key: 2026ao
+status: skeleton (Session D init; final values at Zenodo upload)
+contributors:
+  - name: "Dmitry Zharnikov"
+    orcid: "0009-0000-6893-9231"
+    credit_roles:
+      - conceptualization
+      - methodology
+      - investigation
+      - formal-analysis
+      - writing-original-draft
+      - writing-review-editing
+    note: "Sole human author. All theoretical claims, propositions, and interpretations are the author's sole responsibility."
+ai_assistants:
+  - name: "Claude Opus 4.7"
+    provider: "Anthropic"
+    role: >-
+      Spine extraction support; literature search; structural-coherence checking;
+      editorial refinement of prose; assistance with appendix drafting per the
+      spine-first drafting protocol's structural-substrate operation class.
+      All judgment operations (fork/rebase/merge; theoretical commitments;
+      cohort-specific rendering decisions) remained with the human author.
+    sessions_used: "Session D and prior Sessions A through C+C-prime (predraft + Phase 3 drafting)"
+  - name: "Grok 4.1"
+    provider: "xAI"
+    role: >-
+      Pre-draft critical-review applied to predraft bundle across five review
+      cycles (r1–r5; plateau reached r4→r5). No drafting authorship. Audit
+      record at audit/grok_outputs/2026ao_grok_r{1,2,3,4,5}.md.
+    sessions_used: "Sessions A through C-prime predraft"
+  - name: "Gemini 3.1"
+    provider: "Google"
+    role: >-
+      Auxiliary literature search and citation verification supplements;
+      no drafting authorship.
+    sessions_used: "As needed during predraft phase"
+ai_disclosure_text: >-
+  AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1) were used for initial
+  literature search and editorial refinement; all theoretical claims,
+  propositions, and interpretations are the author's sole responsibility.
+ai_co_authorship_policy: >-
+  AI tools are not listed as co-authors. Per AMA Generative AI Policy and the
+  corpus's editorial discipline, AI bots cannot be authors of scholarly
+  artifacts. AI use is disclosed in Acknowledgments and Method per AMA
+  guidance.
+human_reviewers_during_drafting:
+  - name: "Author self-review across five Grok pre-draft cycles"
+    note: "External pre-submission reviewer engagement deferred to post-draft Grok review pass (Session E) and venue R&R cycle."
+acknowledgment_placement: >-
+  Acknowledgments + CRediT contributions appear at END of paper, between
+  Conclusion and References — NOT on first page per reference_paper_first_page_defaults.
+---

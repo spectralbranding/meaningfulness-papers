@@ -296,7 +296,7 @@ We exhibit the framework reflexively by publishing the present paper's substrate
 
 ## Acknowledgments
 
-AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1) were used for initial literature search, spine extraction support, and editorial refinement; all theoretical claims, propositions, and interpretations are the author's sole responsibility.
+AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1, GPT-4o) were used for initial literature search, spine extraction support, editorial refinement, companion-code implementation, and running experiments (including the cost-asymmetry simulation harness in Online Appendix C and pre-draft critical-review cycles documented in the project's audit trail); all theoretical claims, propositions, and interpretations are the author's sole responsibility.
 
 *CRediT contributor statement.* Dmitry Zharnikov: conceptualization, methodology, investigation, formal analysis, writing — original draft, writing — review and editing.
 

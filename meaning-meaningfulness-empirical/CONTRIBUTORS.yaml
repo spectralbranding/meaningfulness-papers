@@ -1,12 +1,11 @@
 ---
-# Paper B 2026ap "Same Meaning, Different Prose: An Empirical Demonstration
-# of Rendering-Equivalence Under Spine-Preservation in Organizational
-# Knowledge Work" — Working Paper v1.0.0 (initial public Zenodo release;
-# consolidates internal drafting across Sessions E + F + G + H per
-# feedback_version_only_at_zenodo HARD RULE; see PROVENANCE.yaml for
-# internal drafting history).
+# Paper B 2026ap "Same Meaning, Different Prose: Spine Preservation and
+# Rendering Equivalence in Organizational Knowledge Work" — Working Paper
+# v1.0.0 (initial public Zenodo release; consolidates internal drafting
+# across Sessions E + F + G + H; see PROVENANCE.yaml for internal drafting
+# history).
 # CRediT contributor statement per CRediT taxonomy.
-# AI assistants are NOT listed as authors (per PAPER_QUALITY_STANDARDS item 57).
+# AI assistants are NOT listed as authors.
 
 contributors:
   - name: "Dmitry Zharnikov"

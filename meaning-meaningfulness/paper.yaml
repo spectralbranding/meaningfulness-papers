@@ -27,14 +27,14 @@ empirical_companion:
   paper_key: 2026ap
   concept_doi: "10.5281/zenodo.20409701"
   version_doi: "10.5281/zenodo.20409702"
-  public_mirror: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical"
+  scoping_doc: research/meaning_meaningfulness_paper/PAPER_B_2026ap_SCOPING.md
   trigger: Paper A Phase 3 GO + paper.md complete + post-draft review pass + Zenodo upload
   published: 2026-05-29 (joint Zenodo upload with Paper A)
 spine_artifact: research/meaning_meaningfulness_paper/SPINE.yaml
 spine_version: v0.7.1
 schema_version: v0.2
 spine_first_protocol: research/SPINE_FIRST_DRAFTING_PROTOCOL.md
-phase_1_5_grok_cycles_completed: "5 (r1 through r5; plateau reached r4→r5; GO recommendation issued; ~50% Grok-suggestion hallucination rate verified via 5-stage Crossref+SS+arXiv+OpenAlex+OpenLibrary cascade)"
+phase_1_5_grok_cycles_completed: 5 (r1 through r5; plateau reached r4→r5; GO recommendation issued TRIAGE_MEMO_r5_2026-05-26.md)
 appendices:
   A: appendix_A_schema.md (substrate schema + preservation theorem + κ threshold)
   B: appendix_B_protocol.md (spine-first drafting protocol operational specification)
@@ -91,20 +91,21 @@ ai_disclosure:
   default_format_used: true
   models_disclosed: "Claude Opus 4.7, Grok 4.1, Gemini 3.1"
 related_artifacts:
-  spine: SPINE.yaml (v0.7.3; published in this mirror)
-  appendices:
-    - appendix_A_schema.md (substrate schema + preservation theorem + κ threshold)
-    - appendix_B_protocol.md (spine-first drafting protocol)
-    - appendix_C_simulation.md (cost-asymmetry simulation harness)
-    - appendix_D_historical_existence_proof.md (Heisenberg-Schrödinger founding pair)
-  illustrative_validation:
-    - VALIDATION_CASE_T1_HEISENBERG_SPINE.yaml
-    - VALIDATION_CASE_T1_SCHRODINGER_SPINE.yaml
-    - VALIDATION_CASE_T1_SCHRODINGER_EQUIVALENCE_NOTES.md
-    - VALIDATION_CASE_T2_KULKARNI_2024_SPINE.yaml
-    - TWIN_PAIR_SPINE_ISOMORPHISM.md
-  empirical_companion:
-    paper_key: "2026ap"
-    concept_doi: "10.5281/zenodo.20409701"
-    public_mirror: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical"
+  thesis: PHASE_0_THESIS.md (v0.7.1; frozen)
+  bundle: PREDRAFT_BUNDLE.md (v0.7.1; frozen)
+  spine: SPINE.yaml (v0.7.1; frozen)
+  pivot_split_plan: PIVOT_SPLIT_PLAN.md
+  paper_b_scoping: PAPER_B_2026ap_SCOPING.md
+  grok_review_summaries:
+    - GROK_REVIEW_SUMMARY.md (r1)
+    - GROK_REVIEW_SUMMARY_r2.md
+    - GROK_REVIEW_SUMMARY_r3.md
+    - GROK_REVIEW_SUMMARY_r5.md
+  triage_memos:
+    - TRIAGE_MEMO_r2_2026-05-26.md
+    - TRIAGE_MEMO_r3_2026-05-26.md
+    - TRIAGE_MEMO_r5_2026-05-26.md
+  session_handoffs:
+    - SESSION_B_HANDOFF_TO_MAIN_2026-05-26.md
+    - SESSION_C_HANDOFF_TO_MAIN_2026-05-26.md
 ---

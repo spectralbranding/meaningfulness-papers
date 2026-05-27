@@ -1,6 +1,6 @@
 # Companion Computation Scripts — Paper B 2026ap v1.0.0
 
-These scripts reproduce the numerical figures cited in Paper B 2026ap "Same Meaning, Different Prose: An Empirical Demonstration of Rendering-Equivalence Under Spine-Preservation in Organizational Knowledge Work" v1.0.0 per `research/PAPER_QUALITY_STANDARDS.md` items 37a–37e (mandatory).
+These scripts reproduce the numerical figures cited in Paper B 2026ap "Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work" v1.0.0 per `research/PAPER_QUALITY_STANDARDS.md` items 37a–37e (mandatory).
 
 ## What each script reproduces
 

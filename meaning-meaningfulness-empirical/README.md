@@ -1,6 +1,6 @@
 # meaning-meaningfulness-empirical — Paper B 2026ap
 
-**Same Meaning, Different Prose: An Empirical Demonstration of Rendering-Equivalence Under Spine-Preservation in Organizational Knowledge Work**
+**Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work**
 
 Working Paper v1.0.0 — Dmitry Zharnikov ([ORCID 0009-0000-6893-9231](https://orcid.org/0009-0000-6893-9231))
 

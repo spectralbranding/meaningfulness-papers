@@ -17,7 +17,7 @@
 # operationalized — see thesis below).
 
 spine_version: "0.2"              # schema version (extended; see SPINE_FIRST_DRAFTING_PROTOCOL.md §"Schema v0.2")
-spine_doc_version: "0.7.3"        # document revision (v0.1.0 → v0.2.0 → v0.3.0 → v0.4.0 → v0.5.0 → v0.6.0 PIVOT-SPLIT → v0.7.0 r4 closure → v0.7.1 user-supplied NF2/NF3-partial-resolution anchors → v0.7.2 post-draft Grok review FORK + 7 verified anchors + NF4-NF10 → v0.7.3 post-draft Grok r2 FORK + 8 verified anchors + NF11-NF14)
+spine_doc_version: "0.8.0"        # document revision (v0.1.0 → … → v0.7.3 → v0.8.0 Session I Step 4.5c FORK + 4 verified anchors per Grok joint review 2026-05-27)
 paper_key: "2026ao"               # placeholder; verify CANONICAL_REFERENCES.md at Phase 5; Paper A only post-PIVOT-SPLIT
 paper_b_companion_key: "2026ap"   # empirical companion; scoping at research/meaning_meaningfulness_paper/PAPER_B_2026ap_SCOPING.md
 status: "Phase 0.5 + Phase 4 FORK x2 — locked under schema v0.2 (Paper A theory-only post-PIVOT-SPLIT; v0.7.3 FORK pass after post-draft Grok review r2 adds 8 verified external_anchors plus records NF11-NF14; cumulative SF1 hallucination rate across r1-r5 + post1 + post2 ≈ 17 catches / ~53%)"
@@ -2193,6 +2193,44 @@ external_anchors:
     spine_nodes: [P1, intervention]
     body_sections: ["Section 5 — Three-level hierarchy"]
 
+  # ----- v0.8.0 additions (Session I Step 4.5c per Grok joint review 2026-05-27) -----
+
+  - citation_key: cornelissen-hollerer-seidl-2021-theorizing-forms
+    role: theorizing-forms_positioning
+    venue: "Organization Theory 2(3)"
+    doi: "10.1177/26317877211020328"
+    doi_status: VERIFIED
+    spine_nodes: [P4, M1, M2]
+    body_sections: ["Section 3 — Theory positioning"]
+    note: "Theorizing-forms taxonomy locates the Operator-role contribution within organization-theory scholarship's typology of theory contributions; useful for Section-3 positioning per Grok r2 §1 ask."
+
+  - citation_key: grimes-vonKrogh-feuerriegel-rink-gruber-2023-scarcity-to-abundance
+    role: scholarship-in-genAI-era_framing
+    venue: "Academy of Management Journal 66(6)"
+    doi: "10.5465/amj.2023.4006"
+    doi_status: VERIFIED
+    spine_nodes: [P4, intervention, M3]
+    body_sections: ["Section 3 — Theory positioning", "Section 10 — Discussion / Implications"]
+    note: "Scarcity-to-abundance framing of scholarship in the GenAI era; supplies the field-level intervention this paper's Operator-role-as-projection move extends to the artifact level."
+
+  - citation_key: alavi-leidner-mousavi-2024-km-perspective-genai
+    role: km_foundational_lens
+    venue: "Journal of the Association for Information Systems 25(1)"
+    doi: "10.17705/1jais.00859"
+    doi_status: VERIFIED
+    spine_nodes: [P1, P4, M3]
+    body_sections: ["Section 3 — Theory positioning"]
+    note: "KM-perspective revisit of Alavi-Leidner 2001 in the GenAI era; substrate-vs-rendering decomposition this paper formalizes is consistent with the KM lens Alavi-Leidner identify and Alavi-Leidner-Mousavi 2024 update."
+
+  - citation_key: benbya-strich-tamm-2024-navigating-genai
+    role: genai-implications_taxonomy
+    venue: "Journal of the Association for Information Systems 25(1)"
+    doi: "10.17705/1jais.00861"
+    doi_status: VERIFIED
+    spine_nodes: [P4, intervention, M3]
+    body_sections: ["Section 3 — Theory positioning", "Section 10 — Discussion / Implications"]
+    note: "GenAI-promises-and-perils taxonomy for knowledge-and-creative work; supplies a taxonomy the Operator-role / three-layer L→S→R decomposition organizes around the structural asymmetry the cost-function specifies."
+
 # (Philosophy of language, formal ontology, NLP meaning representation, schema
 # theory anchors retained from SPINE_v0_2_0_archived.yaml — see archived file
 # for full list. Pruned here to keep v0.3.0 focused on additions/changes.)
@@ -2751,3 +2789,37 @@ changelog:
       follows in the parallel paper.md commit this session.
     spine_version_before: "0.7.2 (schema v0.2; post-draft Grok FORK + 7 verified anchors + NF4-NF10 cumulative SF1 evidence)"
     spine_version_after: "0.7.3 (schema v0.2; post-draft Grok r2 FORK + 8 verified anchors + NF11-NF14)"
+
+  - date: 2026-05-27
+    operation: FORK
+    by: "Operator (Session I Step 4.5c per Grok joint review 2026-05-27; Crossref-verified 4 anchors)"
+    note: |
+      v0.7.3 → v0.8.0 FORK pass per Grok joint review (post-PDF-render
+      tier-1 readiness evaluation): Priority 3 literature integration
+      adds 4 new verified external_anchors for Paper A theory + theory-
+      positioning grounding in recent GenAI / theorizing-forms / KM
+      scholarship.
+
+      New anchors (all Crossref-verified; PHASE4_5_ANCHOR_VERIFICATION
+      _2026-05-27.md records the verification pass; 0 hallucinations
+      this round — user pre-verified PDFs upstream):
+      1. cornelissen-hollerer-seidl-2021-theorizing-forms (Organization
+         Theory; DOI 10.1177/26317877211020328) — theory-positioning
+         taxonomy
+      2. grimes-vonKrogh-feuerriegel-rink-gruber-2023-scarcity-to-
+         abundance (AMJ; DOI 10.5465/amj.2023.4006) — scholarship-in-
+         GenAI-era framing
+      3. alavi-leidner-mousavi-2024-km-perspective-genai (JAIS; DOI
+         10.17705/1jais.00859) — KM foundational lens revisit
+      4. benbya-strich-tamm-2024-navigating-genai (JAIS; DOI
+         10.17705/1jais.00861) — GenAI implications taxonomy
+
+      No proposition / boundary-condition / NSC modifications. Pure
+      citation-substrate FORK supporting Phase 4.5d paper.md prose
+      revision (sharpened §Introduction contribution paragraph +
+      ~400-500w added to §Theory grounding in recent GenAI/KM lit +
+      reduced internal-cross-reference density + +2-3 §Discussion
+      Implications sentences naming "so what" for post-AI theory
+      construction / peer review / org knowledge governance).
+    spine_version_before: "0.7.3 (schema v0.2; post-draft Grok r2 FORK + 8 verified anchors + NF11-NF14)"
+    spine_version_after: "0.8.0 (schema v0.2; Session I Step 4.5c FORK + 4 verified anchors per Grok joint review 2026-05-27)"

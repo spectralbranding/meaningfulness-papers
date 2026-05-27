@@ -1,8 +1,10 @@
-# Same Meaning, Different Prose: An Empirical Demonstration of Rendering-Equivalence Under Spine-Preservation in Organizational Knowledge Work
+# Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work
 
 Dmitry Zharnikov
 
 ORCID: 0009-0000-6893-9231
+
+DOI: [10.5281/zenodo.20409701](https://doi.org/10.5281/zenodo.20409701)
 
 Working Paper v1.0.0 – May 2026
 
@@ -20,6 +22,8 @@ Generative AI shifts the cost structure of organizational knowledge work asymmet
 
 This paper extends the P4 demonstration from physics into contemporary management research. The central contribution is empirical evidence that two independently-authored management-theory papers, treated as two prose renderings of a shared underlying substrate, preserve the substrate's structural elements at the typed-DAG level Zharnikov (2026ao) Online Appendix A specifies. We report retroactive spine extractions of two such pairs. The focal pair is Eisenhardt and Martin (2000) *Strategic Management Journal* and Zollo and Winter (2002) *Organization Science* on the formation and evolution of dynamic capabilities. The knowledge-based-view (KBV) pair is Grant (1996) and Liebeskind (1996) in the same *Strategic Management Journal* Winter Special Issue "Knowledge and the Firm." On each pair, the recombination metric Rec(G₁, G₂) — defined as the size of the maximum common subgraph that preserves both node typing and antecedent edges — returns Rec = 4 on linked propositions with preserved antecedents. The Rec values do not measure organizational recombination rates (a separate proposition, P2 in the companion theory, deferred to large-N work). The Rec values measure structural-substrate preservation across two prose renderings: direct evidence for P4 at the contemporary management-research artifact level.
 
+The substantive contribution is twofold. *First*, this paper supplies the first rigorous structural test of rendering-equivalence in management theory — the typed-DAG isomorphism analysis on the focal pair and the KBV pair, with random-shadow null at the 99th+ percentile, demonstrates that the P4 preservation result Zharnikov (2026ao) Online Appendix D establishes on the Heisenberg–Schrödinger founding pair in physics also holds on contemporary management-research artifacts. The test is *structural* (typed-DAG node typing + antecedent-edge preservation) rather than lexical (vocabulary overlap) or topical (subject-matter coincidence), and the null baseline rules out chance attribution under a 1,000-shadow random-graph comparison. *Second*, the empirical demonstration carries operational implications for post-AI scholarly and organizational knowledge production: the structural substrate of a knowledge artifact is a first-class object distinct from its prose rendering; the substrate is comparable across renderings, reproducible at the typed-DAG level, and amenable to AI verification at the sub-linear cost the companion theory's β specification names. Grimes, von Krogh, Feuerriegel, Rink, and Gruber (2023) describe the field-level shift from scarcity to abundance in scholarship that this paper's empirical findings operationalize at the artifact level.
+
 Two secondary contributions accompany the central P4 demonstration. First, grid-anchored illustrative estimates of the cost-function exponents β (AI-projection substrate verification cost) and δ (human-projection rendering verification cost) across five available substrate spines and five renderings satisfy the companion theory's β < 1 < δ ordering. These are reported as supportive evidence for P3 (verification-cost asymmetry), a separate companion-theory proposition whose organizational-outcome-scale empirical test lives at v4.0.0 of this working-paper trajectory; this release does not claim to test P3 at recombination-rate scale. Second, a pre-registered iterative-cohort-growth protocol with Zenodo-version-DOI discipline turns the working-paper trajectory v1.0.0 → v4.0.0 into a longitudinal self-test of P4 — each release of this paper is itself a rendering of a growing structural substrate, and the trajectory across releases reads as a self-application of P4 to the paper's own production.
 
 Three additional pieces of evidence land at this release. A random-graph null-baseline computation shows that the observed Rec = 4 on each twin pair sits above the 99th percentile of a 1,000-shadow random-shadow distribution at the same node count and node-type distribution — the Rec values are not attributable to chance under the random null. A practitioner-register Substack rendering of the present paper's own substrate (1,615 words; different audience, prose conventions, length, tone) preserves 11 of 14 locked propositions at the strict typed-DAG level and 14 of 14 at the semantic level with zero contradictions, under same-operator re-extraction. A LinkedIn rendering of the focal-pair shared substrate (1,044 words; arrow-bullet structure; named antecedents in plain prose) preserves all four substrate items and their antecedent edges. Together these three pieces of evidence extend the P4 evidence base in this release from two twin pairs at small N to two twin pairs plus a random-shadow null comparison plus two self-application renderings of substrates already in the corpus.
@@ -30,7 +34,17 @@ The remainder of the paper unfolds as follows. The Theory section places the pap
 
 ## Theory
 
-This section restates only the elements of Zharnikov's (2026ao) Operator-role theory that Paper B's empirical demonstration directly extends. Full theoretical apparatus lives in the companion paper.
+This section restates only the elements of Zharnikov's (2026ao) Operator-role theory that Paper B's empirical demonstration directly extends, and grounds the empirical claims in recent GenAI / knowledge-management scholarship. Full theoretical apparatus lives in the companion paper.
+
+### *Grounding in GenAI and knowledge-management scholarship.*
+
+The empirical demonstration this paper reports sits at the intersection of three recent strands of GenAI / knowledge-management scholarship. Alavi, Leidner, and Mousavi (2024) revisit Alavi and Leidner's (2001) foundational lens in the generative-AI era and observe that the traditional KM dichotomy between codification and personalization strategies no longer organizes the field cleanly because the substrate becomes machine-tractable in ways neither strategy anticipated. Paper B's structural test of rendering-equivalence operationalizes that observation at the artifact level: two prose renderings of a shared underlying spine share Rec = 4 linked propositions with preserved antecedents on both available management-theory twin pairs; the substrate is what AI projection can verify, the rendering is what human projection retains responsibility for. The KM-perspective frame supplies the field-level reading; the typed-DAG isomorphism analysis supplies the artifact-level evidence.
+
+Benbya, Strich, and Tamm (2024) catalog GenAI promises (productivity, augmentation, novel knowledge creation) and perils (hallucination, deskilling, opaque provenance) for knowledge and creative work. Paper B's bibliographic-hallucination audit (~83% hallucination rate on 12 AI-suggested anchors; see §Method §Phase 1 anchor verification) is one concrete instantiation of the perils side of the taxonomy at the citation-substrate boundary. The cross-operator extraction discipline (Operator B Claude renderer ≠ Operator C GPT-4o extractor; see §Method §Cross-operator extraction discipline) is the methodological response: within-model memory contamination is empirically bounded at ~15 percentage-points strict / ~0 semantic when extraction is delegated to a different model than the one that produced the rendering. Both findings concretize the Benbya-Strich-Tamm taxonomy with measurable artifact-level evidence.
+
+The productivity-heterogeneity empirical work in Brynjolfsson, Li, and Raymond (2025) — generative AI raises productivity asymmetrically across worker skill levels, with the largest gains for less-experienced workers — supplies a complementary empirical template for the cost-asymmetry mechanism Paper A's P3 specifies. Where Brynjolfsson et al. measure productivity heterogeneity at the worker-task level, Paper B measures structural-substrate preservation at the artifact level: both report that the post-AI shift is unevenly distributed across the layers where AI projection is asked to operate, and both report that the partition between substrate-tractable operations and judgment operations matters for whether AI projection delivers on its promises.
+
+Kirchner, Bolisani, Kassaneh, Scarso, and Taraghi (2025) bring a technology-organization-environment (TOE) qualitative grounding from software-development practice: knowledge-management workflows under GenAI converge on a substrate-and-rendering split that mirrors the L → S → R decomposition Zharnikov (2026ao) formalizes. Their qualitative observations on how software development teams adopt GenAI tools — substrate maintenance (code as substrate; documentation as rendering; AI verification at substrate sub-linear cost; human judgment at rendering super-linear cost) — supply contextual triangulation for Paper B's claim that the substrate-vs-rendering distinction is operationally tractable beyond the academic-publishing case the validation cases illustrate. George, Storey, and Hong (2025) extend the knowledge-anchor framing to AI-mediated learning environments, observing that ChatGPT functions as a knowledge anchor whose substrate (the queried knowledge representation) shapes downstream cohort renderings; the framing reads cleanly through the Operator-role / three-layer apparatus this paper empirically demonstrates.
 
 ### *Three-level decomposition (inherited).*
 
@@ -126,23 +140,35 @@ Every numerical figure cited in this paper is reproducible from a script in the 
 
 ### *Focal-pair shared substrate (dynamic-capabilities; P4 demonstration).*
 
-The focal-pair spine-to-spine alignment yields four linked propositions with preserved antecedents — four nodes of a shared underlying substrate that both Eisenhardt and Martin (2000) and Zollo and Winter (2002) render in prose (full alignment table in `TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md` appendix). The four shared-substrate linkages are:
+The focal-pair spine-to-spine alignment yields four linked propositions with preserved antecedents — four nodes of a shared underlying substrate that both Eisenhardt and Martin (2000) and Zollo and Winter (2002) render in prose. The four shared-substrate linkages are summarized in Table 1; full per-proposition extraction matrices live in the isomorphism analysis at `TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md`.
 
-- **L1**: Eisenhardt and Martin (2000) EM_P1 ("DCs are specific identifiable processes") linked to Zollo and Winter (2002) ZW_P1 ("DCs are routinized activities directed at developing operating routines") via edge type *refines*, preserving antecedent Nelson and Winter (1982) routines.
-- **L2**: EM_P7 (learning mechanisms guide DC evolution) linked to ZW_P2 (three-mechanism co-evolution) via *refines*, preserving antecedent Levitt and March (1988) organizational learning.
-- **L3**: EM_P3 (cross-firm commonalities at best-practice level) linked to ZW_P3 (mix of learning behaviors) via *bridges*, preserving antecedent Teece, Pisano, and Shuen (1997) dynamic-capabilities framework.
-- **L4**: EM_P5+EM_P6 (market-velocity boundary condition) linked to ZW_P4 (task-feature contingencies) via *extends*, preserving antecedent Eisenhardt and Tabrizi (1995).
+Table 1: Focal-pair shared substrate (Eisenhardt-Martin 2000 + Zollo-Winter 2002; dynamic capabilities).
+
+| Linkage | EM 2000 proposition | ZW 2002 proposition | Edge type | Preserved antecedent |
+|---|---|---|---|---|
+| **L1** | EM_P1: DCs are specific identifiable processes | ZW_P1: DCs are routinized activities developing operating routines | refines | Nelson and Winter (1982) routines |
+| **L2** | EM_P7: learning mechanisms guide DC evolution | ZW_P2: three-mechanism co-evolution | refines | Levitt and March (1988) organizational learning |
+| **L3** | EM_P3: cross-firm commonalities at best-practice level | ZW_P3: mix of learning behaviors | bridges | Teece, Pisano, and Shuen (1997) DC framework |
+| **L4** | EM_P5+EM_P6: market-velocity boundary condition | ZW_P4: task-feature contingencies | extends | Eisenhardt and Tabrizi (1995) |
+
+*Notes*: Rec(G_EM, G_ZW) = 4 linked propositions with preserved antecedents. Edge types from the 17-edge taxonomy specified in Zharnikov (2026ao) Online Appendix A.
 
 Rec(G_EM, G_ZW) = **4** on linked propositions with preserved antecedents. Under the P4 reading, four distinct propositions appear in both prose renderings with matching node typing and preserved antecedent edges. The companion theory's deterministic threshold for "two renderings share a substrate" is Rec ≥ 3 with preserved antecedents; the focal-pair value of four satisfies the threshold and demonstrates substrate-sharing across two independently-produced prose renderings of dynamic-capabilities theory.
 
 ### *KBV-pair shared substrate (knowledge-based view; P4 demonstration).*
 
-The KBV-pair spine-to-spine alignment, drawn from the *Strategic Management Journal* Winter 1996 Special Issue "Knowledge and the Firm" (full alignment table in `TWIN_PAIR_ISOMORPHISM_PB_KBV.md` appendix), also yields four linked propositions with preserved antecedents:
+The KBV-pair spine-to-spine alignment, drawn from the *Strategic Management Journal* Winter 1996 Special Issue "Knowledge and the Firm," yields four linked propositions with preserved antecedents. Table 2 summarizes the alignment; full per-proposition extraction matrices live at `TWIN_PAIR_ISOMORPHISM_PB_KBV.md`.
 
-- **K1**: Grant (1996) G_P1 ("knowledge as the most strategically important resource") linked to Liebeskind (1996) L_P1+L_P2 ("institutional capabilities protect strategic-knowledge resources") via *bridges*, preserving antecedent RBV-tradition (Penrose 1959; Barney 1991).
-- **K2**: G_P4 (firm-as-knowledge-integrator under market-failure for knowledge transactions) linked to L_P3+L_P4 (firms use organizational arrangements not available in markets to protect knowledge) via *refines*, preserving antecedent Coase (1937) + Williamson (1975) markets-and-hierarchies.
-- **K3**: G_P2 (tacit-vs-explicit knowledge distinction central to integration argument) linked to L_P5 (legal protections exclude tacit knowledge; tacit-vs-explicit structures the protection-gap argument) via *bridges*, preserving antecedent Polanyi (1966) tacit knowledge.
-- **K4**: G_P7 (firm boundaries determined by efficient knowledge integration vs market alternatives) linked to L_F2 (internalization dominates where institutional protection costs are lower than market-contracting protection costs) via *refines*, preserving antecedent Coase (1937) + Williamson (1975).
+Table 2: KBV-pair shared substrate (Grant 1996 + Liebeskind 1996; knowledge-based view).
+
+| Linkage | Grant 1996 proposition | Liebeskind 1996 proposition | Edge type | Preserved antecedent |
+|---|---|---|---|---|
+| **K1** | G_P1: knowledge as the most strategically important resource | L_P1+L_P2: institutional capabilities protect strategic-knowledge resources | bridges | RBV (Penrose 1959; Barney 1991) |
+| **K2** | G_P4: firm-as-knowledge-integrator under market-failure | L_P3+L_P4: organizational arrangements not available in markets protect knowledge | refines | Coase (1937) + Williamson (1975) markets-and-hierarchies |
+| **K3** | G_P2: tacit-vs-explicit knowledge distinction central to integration | L_P5: legal protections exclude tacit knowledge; tacit-vs-explicit structures the protection-gap argument | bridges | Polanyi (1966) tacit knowledge |
+| **K4** | G_P7: firm boundaries determined by efficient knowledge integration vs market alternatives | L_F2: internalization dominates where institutional protection costs < market-contracting costs | refines | Coase (1937) + Williamson (1975) |
+
+*Notes*: Rec(G_Grant, G_Liebeskind) = 4 linked propositions with preserved antecedents. Both papers appear in the *Strategic Management Journal* Winter 1996 Special Issue; mutual non-citation gives strong Bikard-protocol independence.
 
 Rec(G_Grant, G_Liebeskind) = **4** on linked propositions with preserved antecedents. Under the P4 reading, four propositions of the knowledge-based view of the firm appear in both Grant's and Liebeskind's prose renderings with matching node typing and preserved antecedent edges. The KBV pair extends the P4 demonstration into a distinct theoretical sub-domain.
 
@@ -274,6 +300,8 @@ The central implication of the P4 demonstration is operational. If two prose ren
 
 The β/δ ordering reported above provides a secondary anchor for cost-channel discussions. Organizations operating under post-2023 generative-AI capability (Cell A in the boundary table; estimated β ∈ [.5, .9] from Paper B's small-N evidence) face the substrate-verification cost profile the companion theory predicts. Internal organizational extension of the β/δ calibration to a specific firm's substrate and rendering harnesses is more durable than the point estimates Paper B reports; the methodological contribution is how to instrument the calibration, not the specific values.
 
+The empirical evidence base carries three concrete implications for downstream empirical work. *First*, verification at scale and cohort selection: the cross-operator extraction discipline (Operator B ≠ Operator C) gives a methodological template for any future P4 testing across larger N. The within-vs-cross-operator preservation delta is the methodological finding that bounds within-model memory contamination at ~15 percentage-points strict / ~0 semantic; future work scaling beyond two twin pairs should report both within-operator and cross-operator preservation rates to make the comparison cumulative. *Second*, twin-pair selection criteria: the focal pair (EM 2000 + ZW 2002) has partial Bikard-protocol independence (EM cites a 1999 ZW working paper); the KBV pair (Grant 1996 + Liebeskind 1996) has strong Bikard independence (same SMJ Winter 1996 Special Issue; mutual non-citation). The next-release pair selection should target strong Bikard independence as the operational criterion to make the rendering-equivalence reading distinguishable from textual influence. *Third*, cross-LLM coordination in research workflows: the Benbya, Strich, and Tamm (2024) GenAI taxonomy resolves cleanly under this paper's reading — operators that route AI projection to substrate-tractable operations while reserving judgment for human projection (or for a different operator) capture the promises and avoid the perils; the cross-operator extraction discipline operationalizes this routing inside research workflows. The Brynjolfsson, Li, and Raymond (2025) productivity-heterogeneity findings supply the worker-task-level template for what a future Operator-role productivity study would measure.
+
 ---
 
 ## Companion Computation Script
@@ -328,7 +356,13 @@ AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1, GPT-4o) were used for init
 
 ## References
 
+Alavi, Maryam, Dorothy E. Leidner, and Reza Mousavi (2024), "Knowledge Management Perspective of Generative Artificial Intelligence," *Journal of the Association for Information Systems*, 25 (1). DOI: 10.17705/1jais.00859.
+
+Benbya, Hind, Franz Strich, and Tomas Tamm (2024), "Navigating Generative Artificial Intelligence Promises and Perils for Knowledge and Creative Work," *Journal of the Association for Information Systems*, 25 (1). DOI: 10.17705/1jais.00861.
+
 Bikard, Michaël (2000), "Idea twins: Simultaneous discoveries as a research tool," *Strategic Management Journal*, 41 (8), 1528–1543.
+
+Brynjolfsson, Erik, Danielle Li, and Lindsey R. Raymond (2025), "Generative AI at Work," *Quarterly Journal of Economics*, 140 (2), 889–942. DOI: 10.1093/qje/qjae044.
 
 Carlile, Paul R. (2004), "Transferring, Translating, and Transforming: An Integrative Framework for Managing Knowledge Across Boundaries," *Organization Science*, 15 (5), 555–568.
 
@@ -340,9 +374,15 @@ Eisenhardt, Kathleen M. and Behnam N. Tabrizi (1995), "Accelerating Adaptive Pro
 
 Felin, Teppo, Stuart Kauffman, and Todd R. Zenger (2023), "Resource origins and search," *Strategic Management Journal*, 44 (6), 1514–1533.
 
+George, Joey F., Veda C. Storey, and Soo Jin Hong (2025), "Unraveling the Impact of ChatGPT as a Knowledge Anchor in Business Education," *ACM Transactions on Management Information Systems*. DOI: 10.1145/3705734.
+
 Grant, Robert M. (1996), "Toward a Knowledge-Based Theory of the Firm," *Strategic Management Journal*, 17 (Winter Special Issue), 109–122.
 
+Grimes, Matthew G., Georg von Krogh, Stefan Feuerriegel, Floor Rink, and Marc Gruber (2023), "From Scarcity to Abundance: Scholars and Scholarship in an Age of Generative Artificial Intelligence," *Academy of Management Journal*, 66 (6), 1617–1624. DOI: 10.5465/amj.2023.4006.
+
 Kaplan, Sarah and Keyvan Vakili (2015), "The double-edged sword of recombination in breakthrough innovation," *Strategic Management Journal*, 36 (10), 1435–1457.
+
+Kirchner, Kathrin, Ettore Bolisani, Tilahun C. Kassaneh, Enrico Scarso, and Mona Taraghi (2025), "Generative AI Meets Knowledge Management: Insights From Software Development Practices," *Knowledge and Process Management*. DOI: 10.1002/kpm.70004.
 
 Liebeskind, Julia Porter (1996), "Knowledge, Strategy, and the Theory of the Firm," *Strategic Management Journal*, 17 (Winter Special Issue), 93–107.
 

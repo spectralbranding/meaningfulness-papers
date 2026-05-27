@@ -184,3 +184,15 @@ versioning_trajectory:
     description: "Submission-scale empirical companion; full P4 demonstration corpus + falsificational P3 test at organizational-outcome scale"
     estimated: "18-24 months post-v1.0.0"
 ---
+
+session_i_step_4_5_revisions:
+  date: "2026-05-27"
+  trigger: "Grok joint tier-1-readiness review of both papers"
+  outputs:
+    - "SPINE.yaml v0.4.0 → v0.5.0 fork (6 new external_anchors: Grimes 2023 + Brynjolfsson 2025 + George 2025 + Kirchner 2025 + Alavi 2024 + Benbya 2024)"
+    - "Title shortened from 15w to 12w"
+    - "paper.md sharpened §Introduction + new §Theory grounding-in-GenAI/KM-lit subsection (~600w) + L1-L4 + K1-K4 preservation tables converted to Markdown tables in §Results main text + new §Discussion §Practical implications so-what paragraph + 7 reference-list entries"
+    - "DOI line added to first page"
+    - "AI-disclosure Acknowledgments extended"
+  hallucination_audit_step_4_5b: "7/7 verified; 0 hallucinations this round"
+  paper_version_unchanged: "v1.0.0"

@@ -1,6 +1,6 @@
 # LLM-call logs — Paper B 2026ap v1.0.0 reproducibility artifacts
 
-This directory contains professionally-logged provenance for LLM/model API calls made during the **experimental research** for "Same Meaning, Different Prose: An Empirical Demonstration of Rendering-Equivalence Under Spine-Preservation in Organizational Knowledge Work" (Zharnikov 2026ap, Working Paper v1.0.0).
+This directory contains professionally-logged provenance for LLM/model API calls made during the **experimental research** for "Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work" (Zharnikov 2026ap, Working Paper v1.0.0).
 
 The logs are part of the paper's reproducibility artifact bundle, mirrored to the public GitHub mirror at Zenodo upload time. License: CC BY 4.0 (same as paper). DOI: shares the paper's Zenodo DOI; no separate DOI.
 

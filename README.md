@@ -18,7 +18,7 @@ Theory paper introducing the **Operator role** as the level-of-analysis above th
 
 ### Paper B — [meaning-meaningfulness-empirical/](meaning-meaningfulness-empirical/) (2026ap)
 
-**Same Meaning, Different Prose: An Empirical Demonstration of Rendering-Equivalence Under Spine-Preservation in Organizational Knowledge Work**
+**Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work**
 
 - Concept DOI: [10.5281/zenodo.20409701](https://doi.org/10.5281/zenodo.20409701)
 - v1.0.0 DOI: [10.5281/zenodo.20409702](https://doi.org/10.5281/zenodo.20409702)

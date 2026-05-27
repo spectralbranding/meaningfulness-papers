@@ -126,3 +126,13 @@ editorial_discipline_anchors:
   - rule: "default AI disclosure format (feedback_default_ai_disclosure)"
     enforcement: "Acknowledgments uses verbatim default text"
 ---
+
+session_i_step_4_5_revisions:
+  date: "2026-05-27"
+  trigger: "Grok joint tier-1-readiness review of both papers"
+  outputs:
+    - "SPINE.yaml v0.7.3 → v0.8.0 fork (4 new external_anchors: Cornelissen 2021 + Grimes 2023 + Alavi 2024 + Benbya 2024)"
+    - "paper.md sharpened §Introduction contribution paragraph + new §Theory grounding paragraphs (~700w) + new §Discussion §Implications so-what paragraph + 4 reference-list entries"
+    - "DOI line added to first page"
+    - "AI-disclosure Acknowledgments extended (companion-code + experiments + GPT-4o)"
+  paper_version_unchanged: "v1.0.0"

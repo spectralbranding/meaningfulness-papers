@@ -128,11 +128,17 @@ def render_with_gigachat(source_text: str, seed: int) -> str:
     """
     import httpx
 
-    auth = os.environ.get("GIGACHAT_AUTH", "").strip() or os.environ.get("GIGACHAT_API_KEY", "").strip()
+    auth = (
+        os.environ.get("GIGACHAT_AUTH", "").strip()
+        or os.environ.get("GIGACHAT_API_KEY", "").strip()
+    )
     if not auth:
-        raise RuntimeError("GIGACHAT_AUTH or GIGACHAT_API_KEY required (basic-auth credential)")
+        raise RuntimeError(
+            "GIGACHAT_AUTH or GIGACHAT_API_KEY required (basic-auth credential)"
+        )
     # OAuth2 token flow (RqUID must be a valid UUID v4)
     import uuid
+
     token_resp = httpx.post(
         "https://ngw.devices.sberbank.ru:9443/api/v2/oauth",
         headers={

@@ -53,8 +53,8 @@ At the grid-anchored β̂ = .7 calibrated in v1.0.0 §Results-cost-function-cali
 
 ## 5. Honest limitations of the v1.1.0 isomorphism analysis
 
-- **Single-coder extraction**: same as v1.0.0 (paper_a:axiom_A1 + PB_AA1); κ scheduled for v1.2.0.
-- **OCR dependency for Grant 1996**: the Grant 1996 PDF in references/ is image-only; OCR via ocrmypdf was required. OCR introduces small text-fidelity errors (e.g., footnote-number misreads, dropped diacriticals); the spine extraction draws on OCR'd output and may differ at the margin from a perfectly-transcribed source. v1.2.0 would benefit from a hand-verified transcription pass; v1.1.0 reports the OCR-based extraction with this disclosure.
+- **Single-coder extraction**: same as v1.0.0 (paper_a:axiom_A1 + PB_AA1); κ scheduled for v1.0.0.
+- **OCR dependency for Grant 1996**: the Grant 1996 PDF in references/ is image-only; OCR via ocrmypdf was required. OCR introduces small text-fidelity errors (e.g., footnote-number misreads, dropped diacriticals); the spine extraction draws on OCR'd output and may differ at the margin from a perfectly-transcribed source. v1.0.0 would benefit from a hand-verified transcription pass; v1.1.0 reports the OCR-based extraction with this disclosure.
 - **Strong Bikard independence not yet exploited**: the KBV pair is the cleanest Bikard twin in Paper B's corpus, but at N=2 the strength of independence cannot yet differentiate Rec values across independence levels. v2.0.0+ adds matched pairs at varying independence levels (partial, strong, full).
 - **Liebeskind has 7 propositions; only 4 link to Grant.** The unlinked L_P6 (resource-heterogeneity from protection capabilities) and L_P7 (innovation-investment heterogeneity) are Liebeskind-specific contributions that Grant does not state. Similarly, Grant's G_P5 (coordination mechanisms) and G_P6 (hierarchy emergence) are Grant-specific. These divergences are genuine theoretical heterogeneity within the KBV neighborhood, not extraction artifacts.
 

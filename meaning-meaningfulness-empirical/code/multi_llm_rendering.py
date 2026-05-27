@@ -16,8 +16,8 @@ Operators (target: 2-3 of these depending on API access):
   - GPT-4o (English-substrate; OPENAI_API_KEY env)
 
 Per Session H init prompt §Phase 3.5b stretch budget rule: execute ONLY when
-Phase 3.5a finishes with >2h remaining; otherwise mark as v1.4.0 backlog.
-This script is the EXECUTION-READY SKELETON for that v1.4.0 sub-task; it is
+Phase 3.5a finishes with >2h remaining; otherwise mark as v1.1.0 backlog.
+This script is the EXECUTION-READY SKELETON for that v1.1.0 sub-task; it is
 NOT fired in Session H.
 
 Run pattern (BWS-injected per fleet convention):
@@ -70,7 +70,7 @@ def get_source_extract(paper_md_path: Path, extract: str) -> str:
 
 # ============================================================================
 # Per-operator render functions. Each takes (source_english_text, seed) and
-# returns the operator's Russian rendering. Stubs for v1.4.0 execution.
+# returns the operator's Russian rendering. Stubs for v1.1.0 execution.
 # ============================================================================
 
 

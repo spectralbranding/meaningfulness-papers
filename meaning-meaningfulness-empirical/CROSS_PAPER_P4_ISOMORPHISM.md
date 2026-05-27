@@ -13,13 +13,13 @@ covers_stylized_fact: "SF4 (cross-medium conclusion-invariance under multi-rende
 
 ## Purpose
 
-Phase 2.5 (added per user direction mid-session) tests P4 at a boundary the Paper B v1.3.0 evidence base does not otherwise cross: **cross-paper rendering** of Paper A's structural substrate into a fresh practitioner-register article, with re-extraction and isomorphism check. This complements:
+Phase 2.5 (added per user direction mid-session) tests P4 at a boundary the Paper B v1.0.0 evidence base does not otherwise cross: **cross-paper rendering** of Paper A's structural substrate into a fresh practitioner-register article, with re-extraction and isomorphism check. This complements:
 
 - **Phase 2 Task α** (within-Paper-B self-application; same spine, two renderings of Paper B's own substrate)
 - **Phase 3 Task β** (within-focal-pair third rendering; same focal-pair-shared substrate, three renderings)
 - **Phase 2.5 cross-paper** (Paper A's whole substrate → fresh practitioner rendering; tests whether the framework's central theoretical apparatus survives the academic → practitioner register translation at full theory scale)
 
-The cross-paper test is the most demanding P4 test the v1.3.0 release lands: Paper A's substrate is the framework's full theoretical apparatus (Operator role + three-layer L→S→R + four propositions + four stylized facts + four boundary conditions + spine-first drafting protocol + cost-asymmetry mechanism). If a 2,102-word practitioner rendering preserves the core of this apparatus, the P4 demonstration at framework scale is stronger than what within-paper renderings can produce.
+The cross-paper test is the most demanding P4 test the v1.0.0 release lands: Paper A's substrate is the framework's full theoretical apparatus (Operator role + three-layer L→S→R + four propositions + four stylized facts + four boundary conditions + spine-first drafting protocol + cost-asymmetry mechanism). If a 2,102-word practitioner rendering preserves the core of this apparatus, the P4 demonstration at framework scale is stronger than what within-paper renderings can produce.
 
 ## Locked propositions in Paper A SPINE.yaml v0.7.3
 
@@ -83,15 +83,15 @@ The cross-paper P4 result is **stronger than the within-paper Phase 2 Task α re
 - **Not a P4 falsifier.** Zero contradictions; zero lost locked items.
 - **Above falsifier threshold; below strict-success threshold under strict reading; at strict-success threshold under semantic reading.** The three partial preservations (PA3 P2 organizational-outcome statement; PA4 cost-function functional forms; PA15 formal design-proposition structure) are the **same rendering-cost frontier elements** identified in the Phase 2 Task α analysis: organizational-outcome-scale formal claims, mathematical functional forms, and formal proposition-structure. The pattern is consistent across both within-paper and cross-paper renderings: at the academic → practitioner boundary, formal apparatus reliably compresses while semantic content reliably preserves. This is itself a methodological finding: the framework can predict in advance what compresses at each rendering boundary, and the prediction holds across two distinct substrates (Paper A's full apparatus + Paper B's empirical-companion apparatus).
 
-**The strongest single P4 evidence point in the v1.3.0 release** is the cross-paper result: a 2,102-word practitioner article carrying the framework's full theoretical apparatus at 80% strict preservation / 100% semantic preservation against the source academic paper's spine. This is the contemporary equivalent of the Heisenberg-Schrödinger historical existence proof — two prose renderings of the same theoretical substrate (one academic-formal; one practitioner-plain-English) converging on conclusions.
+**The strongest single P4 evidence point in the v1.0.0 release** is the cross-paper result: a 2,102-word practitioner article carrying the framework's full theoretical apparatus at 80% strict preservation / 100% semantic preservation against the source academic paper's spine. This is the contemporary equivalent of the Heisenberg-Schrödinger historical existence proof — two prose renderings of the same theoretical substrate (one academic-formal; one practitioner-plain-English) converging on conclusions.
 
 ## Cross-rendering consistency check (against Phase 2 + Phase 3 renderings)
 
 The three practitioner-tier renderings produced in Session H (Phase 2 Substack rendering of Paper B's own substrate; Phase 3 LinkedIn rendering of focal-pair shared substrate; Phase 2.5 Substack rendering of Paper A's whole substrate) all preserve the same core elements: substrate-vs-rendering distinction; cost-asymmetry direction; substrate-as-first-class-object operational implication; spine-first protocol; three-first-moves operational guidance. None of the three contradicts another. Cross-rendering consistency rate across all three renderings = 100%.
 
-## Integration into v1.3.0 paper.md (Phase 5 re-revision)
+## Integration into v1.0.0 paper.md (Phase 5 re-revision)
 
-Phase 5 paper.md v1.3.0 already lands the Substack (Phase 2) and LinkedIn (Phase 3) renderings as P4 evidence. The Phase 2.5 cross-paper rendering adds a fourth evidence point at a more demanding boundary. Phase 5 re-revision (next sub-step after Phases 2.5 / 3.5a complete) updates paper.md §Results §Self-application + §Discussion + §Conclusion to integrate Phase 2.5 as the **strongest single P4 evidence point at cross-paper full-framework scale**.
+Phase 5 paper.md v1.0.0 already lands the Substack (Phase 2) and LinkedIn (Phase 3) renderings as P4 evidence. The Phase 2.5 cross-paper rendering adds a fourth evidence point at a more demanding boundary. Phase 5 re-revision (next sub-step after Phases 2.5 / 3.5a complete) updates paper.md §Results §Self-application + §Discussion + §Conclusion to integrate Phase 2.5 as the **strongest single P4 evidence point at cross-paper full-framework scale**.
 
 ## Dual-purpose use as Article 1 raw material
 
@@ -99,10 +99,10 @@ The RENDERING_PA_PRACTITIONER.md article is publishable on Substack as Article 1
 
 ## Honest limitations
 
-- Same-operator re-extraction: the operator who wrote the Substack rendering re-extracted its spine and compared to Paper A's source. Cross-coder κ on Paper A's spine is pre-registered at v1.4.0 (separately from the Paper B sampling frame in PHASE4_KAPPA_MEASUREMENT_2026-05-27.md).
+- Same-operator re-extraction: the operator who wrote the Substack rendering re-extracted its spine and compared to Paper A's source. Cross-coder κ on Paper A's spine is pre-registered at v1.1.0 (separately from the Paper B sampling frame in PHASE4_KAPPA_MEASUREMENT_2026-05-27.md).
 - Paper A's spine v0.7.3 is itself author-extracted; the cross-paper preservation result inherits Paper A's single-coder-extraction limitation.
 - The 15-item locked-proposition sample is operator-selected; a different operator might select different elements as central. The 15 chosen are the framework's most-frequently-cited elements across Paper A's body sections, weighted toward what a practitioner Substack rendering can plausibly carry; an academic peer might select a different 15.
 
 ---
 
-*Phase 2.5 closes with the strongest single P4 evidence point of the v1.3.0 release: 12 of 15 strict / 15 of 15 semantic preservation across the academic → practitioner full-framework rendering boundary; zero contradictions. The rendering itself is dual-purpose: research artifact + Article 1 raw material for the forthcoming practitioner-tier Substack series.*
+*Phase 2.5 closes with the strongest single P4 evidence point of the v1.0.0 release: 12 of 15 strict / 15 of 15 semantic preservation across the academic → practitioner full-framework rendering boundary; zero contradictions. The rendering itself is dual-purpose: research artifact + Article 1 raw material for the forthcoming practitioner-tier Substack series.*

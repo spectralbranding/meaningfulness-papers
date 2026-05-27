@@ -103,19 +103,19 @@ GPT-4o extracted 9 nodes (DC_P1-P9) from `RENDERING_FOCAL_PAIR_THIRD_PROSE.md`. 
 
 ## Interpretation under the cross-operator HARD RULE
 
-The cross-operator results materially strengthen the v1.3.0 P4 evidence base:
+The cross-operator results materially strengthen the v1.0.0 P4 evidence base:
 
 1. **Zero contradictions across all three phases under cross-operator extraction**. The strict-vs-semantic gap is preserved (78.6% / 100% / 0 in Phase 2 → cross-operator 64% / 100% / 0; 80% / 100% / 0 in Phase 2.5 → cross-operator 67% / 93% / 0; 100% / 100% / 0 in Phase 3 → cross-operator 100% / 100% / 0 modulo edge-type granularity). The strict drop at cross-operator is small (~−2 items per phase) and concentrated in node-typing/edge-type granularity, not in proposition-presence.
 
 2. **Within-model memory contamination is bounded**. A reviewer's objection — "preservation could be a memory artifact, not a property of the prose" — is empirically addressed: a different-model extractor without spine context recovers ~67-100% of the locked items semantically. Memory contamination contributes at most ~15 percentage points to within-operator strict preservation (Phase 2 went 79% → 64%; Phase 2.5 went 80% → 67%) and contributes essentially 0 to semantic preservation. The prose IS the bottleneck, not the extractor's memory.
 
-3. **Edge-type granularity is operator-sensitive**. GPT-4o defaults to "extends" as the antecedent-edge-type more often than Claude does (which uses "refines"/"bridges"/"extends" appropriately to the structural relationship). This is a methodological observation about the appendix-A schema's edge-type catalog requiring operator-training to use the full 17-type palette rather than a default subset. v1.4.0 schema-refinement candidate: provide edge-type-disambiguation examples in the appendix-A codebook to align cross-operator edge typing.
+3. **Edge-type granularity is operator-sensitive**. GPT-4o defaults to "extends" as the antecedent-edge-type more often than Claude does (which uses "refines"/"bridges"/"extends" appropriately to the structural relationship). This is a methodological observation about the appendix-A schema's edge-type catalog requiring operator-training to use the full 17-type palette rather than a default subset. v1.1.0 schema-refinement candidate: provide edge-type-disambiguation examples in the appendix-A codebook to align cross-operator edge typing.
 
-4. **Cross-paper P4 result holds at cross-operator**. The Phase 2.5 cross-paper P4 test (the strongest single P4 evidence point at v1.3.0) sits at 10/15 strict / 14/15 semantic / 0 contradicted under cross-operator extraction (vs 12/15 / 15/15 / 0 within-operator). All four SF1-SF4 stylized facts and the four C1-C4 boundary conditions are preserved at cross-operator. The framework's substantive content survives the rendering→cross-operator-extraction round-trip.
+4. **Cross-paper P4 result holds at cross-operator**. The Phase 2.5 cross-paper P4 test (the strongest single P4 evidence point at v1.0.0) sits at 10/15 strict / 14/15 semantic / 0 contradicted under cross-operator extraction (vs 12/15 / 15/15 / 0 within-operator). All four SF1-SF4 stylized facts and the four C1-C4 boundary conditions are preserved at cross-operator. The framework's substantive content survives the rendering→cross-operator-extraction round-trip.
 
-## Integration into paper.md v1.3.0
+## Integration into paper.md
 
-Phase 5 paper.md §Results §Self-application of P4 is updated to report **all three preservation triples (within-operator + cross-operator) per phase**, with the cross-operator result foregrounded as the academic-grade evidence and the within-operator result presented as the methodological-finding companion. §Method gets a new §Cross-operator extraction discipline subsection (co-located with the §LLM-call provenance subsection) disclosing the three-operator pipeline (Operator A orchestrator + Operator B renderer + Operator C extractor) and the prose-only extraction protocol. §Discussion §Methodological refinement note is extended with the edge-type-disambiguation observation as a v1.4.0 schema-refinement candidate.
+Phase 5 paper.md §Results §Self-application of P4 is updated to report **all three preservation triples (within-operator + cross-operator) per phase**, with the cross-operator result foregrounded as the academic-grade evidence and the within-operator result presented as the methodological-finding companion. §Method gets a new §Cross-operator extraction discipline subsection (co-located with the §LLM-call provenance subsection) disclosing the three-operator pipeline (Operator A orchestrator + Operator B renderer + Operator C extractor) and the prose-only extraction protocol. §Discussion §Methodological refinement note is extended with the edge-type-disambiguation observation as a v1.1.0 schema-refinement candidate.
 
 ## Logs (cross-operator extractor calls)
 
@@ -129,9 +129,9 @@ Total cross-operator extraction cost: ~$0.04. Tokens: 8,239 in / 2,160 out. All 
 
 ## Limitations
 
-- **Single cross-operator extractor (GPT-4o only)**. Maximum-rigor pattern uses TWO extractors (GPT-4o + Gemini) and reports cross-extractor agreement. v1.4.0 stretch can add the Gemini extraction pass for cross-extractor robustness on Phase 2.5 (strongest single result).
+- **Single cross-operator extractor (GPT-4o only)**. Maximum-rigor pattern uses TWO extractors (GPT-4o + Gemini) and reports cross-extractor agreement. v1.1.0 stretch can add the Gemini extraction pass for cross-extractor robustness on Phase 2.5 (strongest single result).
 - **Same-rendering same-operator-as-renderer baseline retained**. The within-operator Claude-self-extracted spines are kept for comparison and reported alongside cross-operator results — not discarded. The within-vs-cross delta is itself a finding about within-model memory contribution to extraction.
-- **Edge-type catalog usage**. GPT-4o under-uses the 17-edge-type catalog at zero-shot. v1.4.0 codebook revision should supply edge-type-disambiguation worked examples.
+- **Edge-type catalog usage**. GPT-4o under-uses the 17-edge-type catalog at zero-shot. v1.1.0 codebook revision should supply edge-type-disambiguation worked examples.
 
 ---
 

@@ -116,7 +116,7 @@ findings:
 # ============================================================================
 provenance:
   extraction_method: "paper_a:M2 retroactive spine extraction"
-  coder: "author (single-coder at v1.1.0; κ scheduled v1.2.0)"
+  coder: "author (single-coder at v1.1.0; κ scheduled v1.0.0)"
   source_pdf_first_page_verified: "2026-05-27 via PyPDF2 (text-readable PDF, no OCR needed)"
   spine_node_count: 7  # propositions
   observation_count: 2

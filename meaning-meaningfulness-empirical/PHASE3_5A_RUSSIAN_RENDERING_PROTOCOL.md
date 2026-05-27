@@ -19,14 +19,14 @@ User direction (Session H addendum): "Phase 3.5a (NEW required) — Task γ Russ
 
 Two candidate source texts. User selects one before producing the human-native rendering.
 
-**Option A (recommended for SF3 evidence value): paper.md v1.3.0 §Abstract**
+**Option A (recommended for SF3 evidence value): paper.md v1.0.0 §Abstract**
 
 - Length: ~200 words in English
 - Audience: tier-1 academic readership
 - Density: highest information-per-word in the paper
 - Why preferred: maximum compression already; rendering preservation result is the cleanest SF3 demonstration; easy to compare under strict typed-DAG re-extraction; published-research-substrate-already
 
-**Option B: paper.md v1.3.0 §Theory §Positioning against adjacent strategy literatures**
+**Option B: paper.md v1.0.0 §Theory §Positioning against adjacent strategy literatures**
 
 - Length: ~700 words in English
 - Audience: strategy-literature-engaged academic readership
@@ -44,22 +44,22 @@ The user-produced Russian rendering must:
    - Random-graph null baseline showing Pr(Rec ≥ 3 by chance) ≈ .000
    - Two self-application renderings (Substack + LinkedIn) preserving 11/14 and 4/4 substrate items
    - Secondary β/δ ordering supporting P3
-   - Inter-coder κ pre-registered for v1.4.0
+   - Inter-coder κ pre-registered for v1.1.0
    - Engagement with recombinant-search and knowledge-representation scholarship
 2. **Render at Russian-native register** — formal academic Russian appropriate for an SMJ-tier Russian-language audience. Direct calque from English is NOT human-native; a native speaker re-renders for Russian academic conventions (which differ from English on hedging density, sentence-length conventions, narrative-arc cues, citation density).
 3. **Output as a single Markdown file**: `RENDERING_PB_ABSTRACT_RU.md` with frontmatter `rendering_language: ru`, `source_text_id: PB_v1_3_0_abstract`, `produced_by: human_native_russian_speaker`, `produced_at: 2026-MM-DD`.
 
 ## AI-draft starter
 
-Below is a Claude-Opus-produced Russian rendering of paper.md v1.3.0 §Abstract. **This is NOT a final artifact**. The user reviews this draft as a starting point and either (a) edits substantively to bring it to human-native register, OR (b) replaces it entirely with a fresh native rendering, OR (c) authorizes use of the draft as research artifact only (NOT as published rendering) with the explicit caveat that the rendering is AI-produced.
+Below is a Claude-Opus-produced Russian rendering of paper.md v1.0.0 §Abstract. **This is NOT a final artifact**. The user reviews this draft as a starting point and either (a) edits substantively to bring it to human-native register, OR (b) replaces it entirely with a fresh native rendering, OR (c) authorizes use of the draft as research artifact only (NOT as published rendering) with the explicit caveat that the rendering is AI-produced.
 
-### Source (English; from paper.md v1.3.0 §Abstract)
+### Source (English; from paper.md v1.0.0 §Abstract)
 
-> This paper supplies an empirical demonstration of Zharnikov's (2026ao) Proposition P4 — rendering-equivalence under spine-preservation — in management theory. P4 holds that two prose renderings of a locked structural substrate converge on conclusions when both renderings preserve the substrate's typed-graph structure. The paper extends the companion theory's Heisenberg–Schrödinger historical existence proof into contemporary strategy research via retroactive structural extractions of two pairs of independently-authored papers: a dynamic-capabilities pair (Eisenhardt and Martin 2000 + Zollo and Winter 2002) and a knowledge-based-view pair from the SMJ Winter 1996 Special Issue (Grant 1996 + Liebeskind 1996). The recombination metric Rec returns 4 linked propositions with preserved antecedents on each pair. A random-graph null baseline shows Pr(Rec ≥ 3 by chance) ≈ .000 across 1,000 size-matched shadows. Two additional renderings of substrates already in the corpus — a 1,615-word practitioner-register Substack rendering of the paper's own structure and a 1,044-word LinkedIn rendering of the focal-pair shared substrate — preserve 11 of 14 locked propositions and 4 of 4 substrate items respectively. Secondary β/δ estimates satisfy the cost-asymmetry ordering. Inter-coder reliability on axiom A1 is pre-registered for v1.4.0 execution. The paper engages recombinant-search and knowledge-representation scholarship as theoretical antecedents.
+> This paper supplies an empirical demonstration of Zharnikov's (2026ao) Proposition P4 — rendering-equivalence under spine-preservation — in management theory. P4 holds that two prose renderings of a locked structural substrate converge on conclusions when both renderings preserve the substrate's typed-graph structure. The paper extends the companion theory's Heisenberg–Schrödinger historical existence proof into contemporary strategy research via retroactive structural extractions of two pairs of independently-authored papers: a dynamic-capabilities pair (Eisenhardt and Martin 2000 + Zollo and Winter 2002) and a knowledge-based-view pair from the SMJ Winter 1996 Special Issue (Grant 1996 + Liebeskind 1996). The recombination metric Rec returns 4 linked propositions with preserved antecedents on each pair. A random-graph null baseline shows Pr(Rec ≥ 3 by chance) ≈ .000 across 1,000 size-matched shadows. Two additional renderings of substrates already in the corpus — a 1,615-word practitioner-register Substack rendering of the paper's own structure and a 1,044-word LinkedIn rendering of the focal-pair shared substrate — preserve 11 of 14 locked propositions and 4 of 4 substrate items respectively. Secondary β/δ estimates satisfy the cost-asymmetry ordering. Inter-coder reliability on axiom A1 is pre-registered for v1.1.0 execution. The paper engages recombinant-search and knowledge-representation scholarship as theoretical antecedents.
 
 ### AI-draft Russian rendering (Claude Opus 4.7; FOR USER QC ONLY)
 
-> Настоящая работа представляет эмпирическое подтверждение Положения P4 Жарникова (2026ao) — эквивалентности представлений при сохранении структурного остова (spine) — на материале теории менеджмента. P4 утверждает, что два прозаических представления одного зафиксированного структурного остова сходятся в выводах в том случае, когда оба представления сохраняют типизированную графовую структуру остова. Работа распространяет историческое доказательство существования из сопутствующей теории — пара Гейзенберга–Шрёдингера в основаниях квантовой механики — на современные стратегические исследования посредством ретроспективной структурной экстракции двух пар независимо написанных статей: пары по динамическим способностям (Eisenhardt and Martin 2000 + Zollo and Winter 2002) и пары по знаниецентричному взгляду на фирму из зимнего выпуска SMJ 1996 года (Grant 1996 + Liebeskind 1996). Метрика рекомбинации Rec возвращает 4 связанных предложения с сохранёнными предшественниками для каждой пары. Нулевой базовый уровень на случайных графах показывает, что Pr(Rec ≥ 3 случайно) ≈ .000 на 1 000 симулированных «теневых» остовах сопоставимого размера. Два дополнительных представления остовов, уже присутствующих в корпусе — Substack-представление в практическом регистре на 1 615 слов, отражающее собственную структуру работы, и LinkedIn-представление на 1 044 слова, отражающее общий остов фокальной пары, — сохраняют соответственно 11 из 14 зафиксированных предложений и 4 из 4 элементов остова. Дополнительные оценки β/δ соответствуют упорядочиванию ассимметрии затрат. Меж-кодировочная надёжность аксиомы A1 предзарегистрирована для исполнения в версии v1.4.0. Работа вступает в диалог с литературой по рекомбинантному поиску и репрезентации знаний как с теоретическими антецедентами.
+> Настоящая работа представляет эмпирическое подтверждение Положения P4 Жарникова (2026ao) — эквивалентности представлений при сохранении структурного остова (spine) — на материале теории менеджмента. P4 утверждает, что два прозаических представления одного зафиксированного структурного остова сходятся в выводах в том случае, когда оба представления сохраняют типизированную графовую структуру остова. Работа распространяет историческое доказательство существования из сопутствующей теории — пара Гейзенберга–Шрёдингера в основаниях квантовой механики — на современные стратегические исследования посредством ретроспективной структурной экстракции двух пар независимо написанных статей: пары по динамическим способностям (Eisenhardt and Martin 2000 + Zollo and Winter 2002) и пары по знаниецентричному взгляду на фирму из зимнего выпуска SMJ 1996 года (Grant 1996 + Liebeskind 1996). Метрика рекомбинации Rec возвращает 4 связанных предложения с сохранёнными предшественниками для каждой пары. Нулевой базовый уровень на случайных графах показывает, что Pr(Rec ≥ 3 случайно) ≈ .000 на 1 000 симулированных «теневых» остовах сопоставимого размера. Два дополнительных представления остовов, уже присутствующих в корпусе — Substack-представление в практическом регистре на 1 615 слов, отражающее собственную структуру работы, и LinkedIn-представление на 1 044 слова, отражающее общий остов фокальной пары, — сохраняют соответственно 11 из 14 зафиксированных предложений и 4 из 4 элементов остова. Дополнительные оценки β/δ соответствуют упорядочиванию ассимметрии затрат. Меж-кодировочная надёжность аксиомы A1 предзарегистрирована для исполнения в версии v1.1.0. Работа вступает в диалог с литературой по рекомбинантному поиску и репрезентации знаний как с теоретическими антецедентами.
 
 **~270 words in Russian** (Russian typically renders ~30% longer than English at academic register on the same content).
 
@@ -76,12 +76,12 @@ Below is a Claude-Opus-produced Russian rendering of paper.md v1.3.0 §Abstract.
 
 1. User produces or approves the final Russian rendering and saves as `RENDERING_PB_ABSTRACT_RU.md`.
 2. Operator (any subsequent session, Claude or human) re-extracts the spine from the Russian rendering using paper_a:appendix_B_protocol applied in reverse, using the same 10-node-type taxonomy + 17-edge-type catalog as for the English-source extraction. Output: `VALIDATION_CASE_PB_RUSSIAN_RENDERING_SPINE.yaml`.
-3. The re-extracted Russian-rendering spine is compared against the source-text spine (extracted from paper.md v1.3.0 §Abstract under the same schema) for preservation of locked propositions, with attention to:
+3. The re-extracted Russian-rendering spine is compared against the source-text spine (extracted from paper.md v1.0.0 §Abstract under the same schema) for preservation of locked propositions, with attention to:
    - Same-claim preservation (does each English locked claim have a Russian-rendering counterpart?)
    - Same-node-typing preservation (does each Russian counterpart receive the same node type?)
    - Same-antecedent-edge preservation (does each Russian counterpart preserve the antecedent edges its English source had?)
 4. Output: `CROSS_LANGUAGE_PRESERVATION_PB_RU.md` summarizing the preservation rate + per-claim verdict + any rendering-cost-frontier observations specific to the Russian-language register.
-5. The Russian-rendering preservation result is integrated into paper.md v1.4.0 (NOT v1.3.0) §Discussion §SF3 cross-language preservation evidence subsection.
+5. The Russian-rendering preservation result is integrated into paper.md v1.1.0 (NOT v1.0.0) §Discussion §SF3 cross-language preservation evidence subsection.
 
 ## Falsifier
 
@@ -98,10 +98,10 @@ Session H closes Phase 3.5a at:
 - **AI-draft starter provided** (above; Claude Opus 4.7 produced; flagged as not-human-native)
 - **User QC handoff** (user produces / edits / replaces / approves the final Russian rendering; user controls when re-extraction runs)
 
-## Integration into v1.3.0 paper.md
+## Integration into v1.0.0 paper.md
 
-The Phase 3.5a status (protocol locked + AI-draft + awaiting human-native pass) is disclosed honestly in paper.md v1.3.0 §Discussion §Cross-language preservation (NEW subsection) as the v1.4.0-scheduled SF3 evidence point. Actual cross-language preservation result lands in v1.4.0 once the human-native rendering exists.
+The Phase 3.5a status (protocol locked + AI-draft + awaiting human-native pass) is disclosed honestly in paper.md v1.0.0 §Discussion §Cross-language preservation (NEW subsection) as the v1.1.0-scheduled SF3 evidence point. Actual cross-language preservation result lands in v1.1.0 once the human-native rendering exists.
 
 ---
 
-*Phase 3.5a closes with Russian-rendering protocol locked + AI-draft starter + user-QC handoff. Cross-language preservation evidence lands at v1.4.0 with the human-native pass. Phase 3.5b (multi-LLM Russian-operator robustness) is a separate Session H scope item; see PHASE3_5B_MULTI_LLM_OPERATOR_PROTOCOL.md.*
+*Phase 3.5a closes with Russian-rendering protocol locked + AI-draft starter + user-QC handoff. Cross-language preservation evidence lands at v1.1.0 with the human-native pass. Phase 3.5b (multi-LLM Russian-operator robustness) is a separate Session H scope item; see PHASE3_5B_MULTI_LLM_OPERATOR_PROTOCOL.md.*

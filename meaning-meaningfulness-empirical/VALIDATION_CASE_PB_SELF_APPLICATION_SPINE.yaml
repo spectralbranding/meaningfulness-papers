@@ -1,7 +1,7 @@
 # VALIDATION_CASE_PB_SELF_APPLICATION_SPINE.yaml
 #
 # Spine re-extracted from RENDERING_PB_SUBSTACK_PRACTITIONER.md (1,615 words
-# Substack practitioner-register rendering of Paper B v1.2.0's substrate).
+# Substack practitioner-register rendering of Paper B v1.0.0's substrate).
 # This is the Task α self-application output: the same operator (author)
 # acting as a fresh coder reading the Substack rendering as if it were a
 # source paper, applying paper_a:appendix_B_protocol in reverse, and
@@ -20,7 +20,7 @@ extracted_from: "RENDERING_PB_SUBSTACK_PRACTITIONER.md"
 extraction_protocol: "paper_a:appendix_B_protocol applied in reverse by single coder (author)"
 extraction_session: "Session H Phase 2 — Task α self-application"
 extraction_date: "2026-05-27"
-target_for_isomorphism: "SPINE.yaml v0.3.1 (source spine of Paper B v1.2.0)"
+target_for_isomorphism: "SPINE.yaml v0.3.1 (source spine of Paper B v1.0.0)"
 
 # ============================================================================
 # Observations (raw material the rendering invokes)

@@ -121,7 +121,7 @@ findings:
 # ============================================================================
 provenance:
   extraction_method: "paper_a:M2 retroactive spine extraction; OCR-assisted via ocrmypdf --force-ocr"
-  coder: "author (single-coder at v1.1.0; κ scheduled v1.2.0)"
+  coder: "author (single-coder at v1.1.0; κ scheduled v1.0.0)"
   ocr_tool: "ocrmypdf 16.x + tesseract 5.5.2"
   source_pdf_first_page_verified: "2026-05-27 via OCR'd pdftotext output"
   spine_node_count: 7  # propositions

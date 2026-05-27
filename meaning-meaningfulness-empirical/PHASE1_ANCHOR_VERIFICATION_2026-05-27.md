@@ -31,7 +31,7 @@ Per CLAUDE.md feedback_grok_suggested_anchor_~57%_hallucination_rate: every Grok
 ### A01 — NF-NEAR-MATCH
 
 - **Grok claim**: Kaplan, S., & Vakili, K. (2015). The double-edged sword of recombination in breakthrough innovation. SMJ.
-- **Note**: Already cited in v1.2.0 (NF15-era verification); already in external_anchors v0.1.1
+- **Note**: Already cited in v1.0.0 (NF15-era verification); already in external_anchors v0.1.1
 - **Verdict**: NF-NEAR-MATCH
 - **DOI**: 10.1002/smj.2294
 - **Matched title**: The double‐edged sword of recombination in breakthrough innovation
@@ -179,7 +179,7 @@ For A10 (Levinthal-March 1993), the underlying 1993 paper IS verifiable (DOI 10.
 
 ### Integration-ready anchors (2 of 12)
 
-| ID | Citation | DOI | Integration scope in v1.3.0 |
+| ID | Citation | DOI | Integration scope in v1.0.0 |
 |---|---|---|---|
 | A01 | Kaplan, S., & Vakili, K. (2015). The double-edged sword of recombination in breakthrough innovation. *Strategic Management Journal*, 36(10), 1435–1457. | 10.1002/smj.2294 | Already in spine v0.2.0 external_anchors. Strengthen theoretical link in §Theory (recombinant search positioning of Rec metric); already referenced in Method §Rec metric construct-validity contrast. |
 | A10 | Levinthal, D. A., & March, J. G. (1993). The myopia of learning. *Strategic Management Journal*, 14(S2), 95–112. | 10.1002/smj.4250141009 | NEW external_anchor at v0.3.1. Integrate into §Theory as organizational-learning antecedent for the KBV pair's K1 / K3 substrate nodes (knowledge-integration / tacit-vs-explicit). Discard Grok's unverifiable "2025 retrospective" embellishment. |

@@ -108,4 +108,4 @@ Every experimental LLM call producing cited evidence in `paper.md` is logged in 
 | v3.0.0 | Multi-cohort prospective tracking + DiD identification on Zenodo spine-publication events | 12–18 months post-v1.0.0 |
 | v4.0.0 | Submission-scale; falsificational P3 test at organizational-outcome scale | 18–24 months post-v1.0.0 |
 
-Internal drafting versions v1.0.0 through v1.3.0 (Sessions E + F + G + H) were consolidated into this public v1.0.0 release per the project's version-only-at-Zenodo discipline. See [PROVENANCE.yaml](PROVENANCE.yaml) for phase-level drafting summary.
+Internal drafting across Sessions E + F + G + H was consolidated into this public v1.0.0 release per the project's version-only-at-Zenodo discipline. See [PROVENANCE.yaml](PROVENANCE.yaml) for phase-level drafting summary.

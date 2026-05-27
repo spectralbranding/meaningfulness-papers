@@ -1,6 +1,6 @@
-# Companion Computation Scripts — Paper B 2026ap v1.3.0
+# Companion Computation Scripts — Paper B 2026ap v1.0.0
 
-These scripts reproduce the numerical figures cited in Paper B 2026ap "Same Meaning, Different Prose: An Empirical Demonstration of Rendering-Equivalence Under Spine-Preservation in Organizational Knowledge Work" v1.3.0 per `research/PAPER_QUALITY_STANDARDS.md` items 37a–37e (mandatory).
+These scripts reproduce the numerical figures cited in Paper B 2026ap "Same Meaning, Different Prose: An Empirical Demonstration of Rendering-Equivalence Under Spine-Preservation in Organizational Knowledge Work" v1.0.0 per `research/PAPER_QUALITY_STANDARDS.md` items 37a–37e (mandatory).
 
 ## What each script reproduces
 
@@ -11,7 +11,7 @@ Reproduces the focal-pair recombination metric reported in paper.md §Results:
 
 Method: parses two YAML-encoded spines per Paper A's typed-DAG schema (10 node types; 17 edge types) and counts linked propositions where (a) the edge type is in the valid 17-type catalog and (b) at least one antecedent edge is preserved across both members of the pair. At v1.0.0 the linkage counts the rows of the operator-supplied alignment table in `TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md`; v1.1.0 adds inter-coder κ measurement on this alignment.
 
-### `null_baseline.py` (v1.3.0 addition)
+### `null_baseline.py` (v1.0.0 addition)
 
 Reproduces the random-graph null-baseline distribution reported in paper.md §Results §Null-baseline subsection. For each real twin-pair spine, generates `n_shadows = 1000` random "shadow spines" matched on node count and node-type distribution but with antecedent edges drawn at random from the pooled antecedent set across the five real Paper B spines. Computes Rec(real, shadow) for each shadow and reports the distribution.
 
@@ -66,12 +66,12 @@ This `code/` directory is a public mirror of the internal SSOT at `research/mean
 
 Paper B 2026ap Zenodo DOI: [reserved at joint Zenodo upload with Paper A 2026ao]
 
-## What v1.3.0 does NOT include
+## What v1.0.0 does NOT include
 
 - Bootstrap confidence intervals on β and δ (v2.0.0; requires multi-observation-per-target harness).
-- Inter-coder κ measurement on the spine alignment table (v1.4.0 execution; protocol pre-registered at `PHASE4_KAPPA_MEASUREMENT_2026-05-27.md`).
+- Inter-coder κ measurement on the spine alignment table (v1.1.0 execution; protocol pre-registered at `PHASE4_KAPPA_MEASUREMENT_2026-05-27.md`).
 - Third-party-coder substitution for δ (v2.0.0+).
-- Matched-non-twin Rec baseline (v2.0.0+; the v1.3.0 `null_baseline.py` is the random-shadow null comparison, not a real-non-twin discriminant-validity check).
+- Matched-non-twin Rec baseline (v2.0.0+; the v1.0.0 `null_baseline.py` is the random-shadow null comparison, not a real-non-twin discriminant-validity check).
 - Multi-pair Rec distribution (v2.0.0 N=15–20).
 - Prospective lab-cohort data (v2.0.0+).
 

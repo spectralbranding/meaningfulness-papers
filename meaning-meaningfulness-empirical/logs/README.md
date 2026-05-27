@@ -1,6 +1,6 @@
-# LLM-call logs — Paper B 2026ap v1.3.0 reproducibility artifacts
+# LLM-call logs — Paper B 2026ap v1.0.0 reproducibility artifacts
 
-This directory contains professionally-logged provenance for LLM/model API calls made during the **experimental research** for "Same Meaning, Different Prose: An Empirical Demonstration of Rendering-Equivalence Under Spine-Preservation in Organizational Knowledge Work" (Zharnikov 2026ap, Working Paper v1.3.0).
+This directory contains professionally-logged provenance for LLM/model API calls made during the **experimental research** for "Same Meaning, Different Prose: An Empirical Demonstration of Rendering-Equivalence Under Spine-Preservation in Organizational Knowledge Work" (Zharnikov 2026ap, Working Paper v1.0.0).
 
 The logs are part of the paper's reproducibility artifact bundle, mirrored to the public GitHub mirror at Zenodo upload time. License: CC BY 4.0 (same as paper). DOI: shares the paper's Zenodo DOI; no separate DOI.
 
@@ -15,14 +15,14 @@ Per user direction 2026-05-27, the public log includes ONLY calls that produce e
 - Phase 2 / 2.5 / 3 rendering operator-B calls (P4 evidence renderers)
 - Phase 2 / 2.5 / 3 within-operator extraction calls (within-operator baseline)
 - Phase 2-prime / 2.5-prime / 3-prime cross-operator extraction calls (Operator-C cross-operator P4 evidence)
-- Phase 3.5b v1.4.0 multi-LLM cross-family rendering + extraction (when executed)
+- Phase 3.5b v1.1.0 multi-LLM cross-family rendering + extraction (when executed)
 
 **Internal scope (drafting/research, not published):**
-- AI-draft Russian rendering starter (drafting helper for user's v1.4.0 human-native pass)
+- AI-draft Russian rendering starter (drafting helper for user's v1.1.0 human-native pass)
 - Grok review fire cycles (internal peer review of paper draft)
 - Any LLM-assisted paper drafting or editing
 
-## Per-phase JSONL files (v1.3.0 release; public scope)
+## Per-phase JSONL files (v1.0.0 release; public scope)
 
 | File | Calls | Operator | What it covers |
 |---|---|---|---|
@@ -78,7 +78,7 @@ Reconstruction script: `research/meaningfulness_empirical_companion/code/reconst
 2. For each phase, the JSONL log + the artifacts in the paper's main directory (`RENDERING_*.md`, `VALIDATION_CASE_*.yaml`, `*_ISOMORPHISM*.md`) together let an independent reader reproduce the result chain.
 3. For Phase 1 anchor verification: rerun `audit/scripts/verify_2026ap_postdraft_r1_anchors.py` against the live Crossref API to confirm the 2 VERIFIED / 10 NF classification (results may drift if Crossref metadata updates; the log preserves point-in-time provenance).
 4. For Phases 2, 2.5, 3 Claude renderings: the log captures the system prompt + user prompt + the response summary. Full rendered articles are at `research/meaningfulness_empirical_companion/RENDERING_*.md`. An independent reader can re-render with any AI operator using the same prompts to compare against this paper's renderings.
-5. For Phase 3.5b multi-LLM cross-family renderings (v1.4.0 execution): the script `research/meaningfulness_empirical_companion/code/multi_llm_rendering.py` uses `llm_call_logger.py` with real-time logging from invocation; results land in `phase_3.5b_*.jsonl` files at v1.4.0 release.
+5. For Phase 3.5b multi-LLM cross-family renderings (v1.1.0 execution): the script `research/meaningfulness_empirical_companion/code/multi_llm_rendering.py` uses `llm_call_logger.py` with real-time logging from invocation; results land in `phase_3.5b_*.jsonl` files at v1.1.0 release.
 6. For Phase 6 Grok r2 fire: `audit/scripts/run_grok_review.py` invocation captures raw output to `audit/grok_outputs/2026ap_grok_postdraft_r2.md`; structured JSONL logging lands at `phase_6_grok_r2_calls.jsonl` via the same `llm_call_logger.py` integration.
 
 ## Redaction audit
@@ -96,26 +96,26 @@ grep -iE "PENDING_UPDATES|SESSION_[A-Z]_(COMPLETION|HANDOFF)|TRIAGE_MEMO|AUDIT_I
 
 Post-redaction warnings (if any patterns matched internal-doc references) are written to `REDACTION_WARNINGS.log` in this directory; check there for items flagged for manual review before public-mirror push.
 
-## Cost summary across all logged phases (v1.3.0; public scope)
+## Cost summary across all logged phases (v1.0.0; public scope)
 
 | Phase | Operator | Calls | Cost USD (est) |
 |---|---|---|---|
 | 1 | crossref | 12 | 0.00 (Crossref REST API is free for non-commercial query) |
 | 2 / 2.5 / 3 | claude-via-harness Operator B + within-operator extraction | 6 | 0.00 (harness-internal; not separately metered) |
 | 2-prime / 2.5-prime / 3-prime | gpt-4o Operator C cross-operator extraction | 3 | ~0.04 (tokens: 8,239 in / 2,160 out at gpt-4o pricing) |
-| **Total v1.3.0 public scope** | | **21** | **~0.04** |
+| **Total v1.0.0 public scope** | | **21** | **~0.04** |
 
 Internal-only logs (not published): Phase 3.5a AI-draft Russian (drafting helper) + Phase 6 Grok r2 review (internal review). Internal cost: ~$0.15 (Grok r2 only; AI-draft Russian was harness-internal).
 
-## Deferred to v1.4.0 (logged at execution time)
+## Deferred to v1.1.0 (logged at execution time)
 
 - Phase 3.5b multi-LLM cross-family rendering: ~5 calls × ~$0.06 avg = ~$0.30 + per-operator spine extractions by claude-via-harness (~5 entries, internal)
 - Phase 4 inter-coder κ measurement: depends on independent second coder's tool stack; not LLM-operator-mediated; logging not required
-- Phase 3.5a human-native Russian rendering: NOT LLM-call (user-produced); no log entry; the AI-draft starter already logged in v1.3.0 phase_3.5a entries
+- Phase 3.5a human-native Russian rendering: NOT LLM-call (user-produced); no log entry; the AI-draft starter already logged in v1.0.0 phase_3.5a entries
 
 ## Related artifacts
 
 - `code/llm_call_logger.py` — logger utility (single-source schema + writer + redaction)
-- `code/reconstruct_session_h_logs.py` — post-hoc reconstruction for v1.3.0 release
-- `code/multi_llm_rendering.py` — v1.4.0 Phase 3.5b execution-ready script (uses logger from day one)
+- `code/reconstruct_session_h_logs.py` — post-hoc reconstruction for v1.0.0 release
+- `code/multi_llm_rendering.py` — v1.1.0 Phase 3.5b execution-ready script (uses logger from day one)
 - `code/null_baseline.py` + `rec_metric.py` + `cost_function_calibration.py` — Paper B's computation scripts (no LLM calls; deterministic Python; logged separately per PAPER_QUALITY_STANDARDS items 37a-37e)

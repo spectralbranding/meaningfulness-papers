@@ -12,9 +12,9 @@ Covers:
 - Phase 3: Claude harness rendering — focal-pair shared substrate → LinkedIn long-post
 - Phase 3.5a: Claude harness draft — Paper B abstract → Russian AI-draft starter
 
-Phase 3.5b execution is deferred to v1.4.0 (BWS keys verified; protocol locked;
+Phase 3.5b execution is deferred to v1.1.0 (BWS keys verified; protocol locked;
 script execution-ready); real-time logging via llm_call_logger.py will run at
-v1.4.0 execution.
+v1.1.0 execution.
 
 Phase 6 Grok r2 fire happens AFTER this reconstruction lands; it logs in real-time
 via llm_call_logger.py inside run_grok_review.py.
@@ -138,7 +138,7 @@ def reconstruct_phase_2() -> None:
         operator="claude-via-harness",
         model_version="claude-opus-4-7",
         system_prompt=(
-            "Session H Phase 2 Task α: render Paper B v1.2.0's SPINE.yaml v0.3.0 into a "
+            "Session H Phase 2 Task α: render Paper B v1.0.0's SPINE.yaml v0.3.0 into a "
             "1,500-word Substack practitioner-register article. Different audience (CMO/strategy-"
             "director tier; not tier-1 academic); different prose conventions (named-case "
             "anecdotes; no mathematical notation); different length (one-quarter the academic "
@@ -290,7 +290,7 @@ def reconstruct_phase_3_5a() -> None:
         operator="claude-via-harness",
         model_version="claude-opus-4-7",
         system_prompt=(
-            "Session H Phase 3.5a: produce an AI-draft Russian rendering of paper.md v1.3.0 "
+            "Session H Phase 3.5a: produce an AI-draft Russian rendering of paper.md v1.0.0 "
             "§Abstract as a starter for the user (native Russian speaker) to edit, replace, or "
             "approve for use as research artifact. This is NOT a final human-native rendering."
         ),
@@ -309,7 +309,7 @@ def reconstruct_phase_3_5a() -> None:
         parameters={
             "target_language": "ru",
             "target_register": "academic_smj_tier",
-            "source": "PB v1.3.0 abstract",
+            "source": "PB v1.0.0 abstract",
         },
         cost_usd_est=0.0,
         human_in_loop=True,

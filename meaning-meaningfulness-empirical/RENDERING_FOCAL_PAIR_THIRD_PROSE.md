@@ -70,4 +70,4 @@ This is part of a working paper on rendering-equivalence under spine-preservatio
 
 ---
 
-*This is a research-artifact rendering, not a publication. Posted to LinkedIn only as part of a controlled re-rendering experiment in Paper B 2026ap v1.3.0 Task β. Per Session H init prompt, this file is not pushed to live LinkedIn.*
+*This is a research-artifact rendering, not a publication. Posted to LinkedIn only as part of a controlled re-rendering experiment in Paper B 2026ap v1.0.0 Task β. Per Session H init prompt, this file is not pushed to live LinkedIn.*

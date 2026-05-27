@@ -11,7 +11,7 @@ pooled set of antecedents that appear across the five real spines). Computes
 Rec(real_spine, shadow_spine) for each shadow. Reports the distribution
 across 1,000 shadows.
 
-Result fed into paper.md v1.3.0 §Results §Null-baseline subsection:
+Result fed into paper.md v1.0.0 §Results §Null-baseline subsection:
 "the observed Rec=4 on the focal pair sits above the 99th percentile of the
 random-shadow distribution (Rec_chance_99 = ...); Rec=4 on the KBV pair
 sits above the same threshold."

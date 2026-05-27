@@ -1,14 +1,14 @@
 ---
-title: "Phase 3.5b multi-LLM cross-FAMILY robustness — Russian (Slavic) + Chinese (Sino-Tibetan) protocol + script + v1.4.0 execution-ready backlog"
+title: "Phase 3.5b multi-LLM cross-FAMILY robustness — Russian (Slavic) + Chinese (Sino-Tibetan) protocol + script + v1.1.0 execution-ready backlog"
 date: 2026-05-27
 session: Session H Phase 3.5b (NEW stretch per user mid-session addendum + Chinese expansion delta)
 covers_stylized_fact: "SF3 cross-language preservation — robustness check on operator-choice variation AND cross-FAMILY robustness (Slavic + Sino-Tibetan; maximally distant well-resourced language families)"
 purpose: "Reviewer-defense framing: preservation isn't an artifact of operator choice OR Russian-English linguistic proximity"
-status: "Protocol documented + script execution-ready (research/meaningfulness_empirical_companion/code/multi_llm_rendering.py); BWS keys verified (YANDEX_AI_API_KEY + GIGACHAT_API_KEY + DEEPSEEK_API_KEY + ANTHROPIC_API_KEY + OPENAI_API_KEY); EXECUTION DEFERRED to v1.4.0 stretch per Session H init prompt stretch budget rule (better clean v1.3.0 + Zenodo ship Fri AM than partial 3.5b that slips Zenodo)"
+status: "Protocol documented + script execution-ready (research/meaningfulness_empirical_companion/code/multi_llm_rendering.py); BWS keys verified (YANDEX_AI_API_KEY + GIGACHAT_API_KEY + DEEPSEEK_API_KEY + ANTHROPIC_API_KEY + OPENAI_API_KEY); EXECUTION DEFERRED to v1.1.0 stretch per Session H init prompt stretch budget rule (better clean v1.0.0 + Zenodo ship Fri AM than partial 3.5b that slips Zenodo)"
 academic_pattern: "LLM-as-evaluator robustness check (Chiang et al. 2023; Zheng et al. 2023) extended to rendering-operator level + cross-family linguistic-family robustness"
 ---
 
-# Phase 3.5b multi-LLM Russian-operator robustness — protocol + skeleton + v1.4.0 backlog placement
+# Phase 3.5b multi-LLM Russian-operator robustness — protocol + skeleton + v1.1.0 backlog placement
 
 ## Why this Phase exists
 
@@ -28,16 +28,16 @@ User-authorized expansion (Session H delta 2026-05-27): extend Phase 3.5b from R
 **Chinese-native operators (Sino-Tibetan family):**
 
 - **DeepSeek** (DeepSeek-V3 or DeepSeek-R1; high-quality Chinese-native; OpenAI-compatible API). BWS key: `DEEPSEEK_API_KEY` ✓ verified provisioned.
-- **Qwen** (通义千问 / Alibaba; Qwen-Plus or Qwen-Max; alternative Chinese corpus to DeepSeek). BWS key: ✗ NOT provisioned in BWS — operator drops out unless user adds key for v1.4.0 execution. Fallback options: Doubao (豆包 / ByteDance) or GLM (ZhipuAI 智谱); neither key currently in BWS.
+- **Qwen** (通义千问 / Alibaba; Qwen-Plus or Qwen-Max; alternative Chinese corpus to DeepSeek). BWS key: ✗ NOT provisioned in BWS — operator drops out unless user adds key for v1.1.0 execution. Fallback options: Doubao (豆包 / ByteDance) or GLM (ZhipuAI 智谱); neither key currently in BWS.
 
 **English-substrate operators (cross-substrate control):**
 
 - **Claude Opus 4.7** (Anthropic; English-substrate primary; renders into BOTH Russian and Chinese for cross-substrate comparison). BWS key: `ANTHROPIC_API_KEY` ✓ verified provisioned.
 - **GPT-4o** (OpenAI; English-substrate primary; alternative to Claude). BWS key: `OPENAI_API_KEY` ✓ verified provisioned.
 
-**Verified-executable subset (v1.4.0)**: YandexGPT + GigaChat + DeepSeek + Claude Opus = 4 operators (2 Russian-native Slavic + 1 Chinese-native Sino-Tibetan + 1 English-substrate control rendering into both Russian and Chinese). This covers within-Slavic-family agreement, cross-Slavic-vs-Sino-Tibetan invariance, and within-English-substrate-vs-native operator-substrate comparison.
+**Verified-executable subset (v1.1.0)**: YandexGPT + GigaChat + DeepSeek + Claude Opus = 4 operators (2 Russian-native Slavic + 1 Chinese-native Sino-Tibetan + 1 English-substrate control rendering into both Russian and Chinese). This covers within-Slavic-family agreement, cross-Slavic-vs-Sino-Tibetan invariance, and within-English-substrate-vs-native operator-substrate comparison.
 
-**Minimum-viable subset** (if time-or-budget short at v1.4.0 execution): YandexGPT + DeepSeek = 2 operators, 1 from each language family. The minimum cross-family preservation comparison; weaker on within-family agreement but preserves the cross-FAMILY robustness claim.
+**Minimum-viable subset** (if time-or-budget short at v1.1.0 execution): YandexGPT + DeepSeek = 2 operators, 1 from each language family. The minimum cross-family preservation comparison; weaker on within-family agreement but preserves the cross-FAMILY robustness claim.
 
 ## Execution-ready script
 
@@ -62,7 +62,7 @@ bws run -- uv run --with anthropic --with openai --with httpx \
 - `DEEPSEEK_API_KEY` ✓ — DeepSeek (OpenAI-compatible endpoint at https://api.deepseek.com/v1)
 - `ANTHROPIC_API_KEY` ✓ — for Claude Opus
 - `OPENAI_API_KEY` ✓ — for GPT-4o (if added)
-- `QWEN_API_KEY` ✗ NOT PROVISIONED — operator drops out unless user adds for v1.4.0
+- `QWEN_API_KEY` ✗ NOT PROVISIONED — operator drops out unless user adds for v1.1.0
 
 ### Expected outputs
 
@@ -103,7 +103,7 @@ Output: `CROSS_LANGUAGE_MULTI_OPERATOR_ROBUSTNESS.md`. Contents per user spec:
 - Cross-family preservation invariance rate (Slavic ∩ Sino-Tibetan preserved-proposition set / total locked propositions)
 - Falsifier: cross-family agreement < 70% on locked propositions = SF3 cross-family robustness fails
 
-Added to SPINE.yaml v0.4.1 if 3.5b lands at v1.4.0.
+Added to SPINE.yaml v0.4.1 if 3.5b lands at v1.1.0.
 
 ## Reviewer-defense framing (cross-family expansion)
 
@@ -118,13 +118,13 @@ The defense (per user spec):
 
 This is the LLM-as-evaluator robustness pattern formalized in Chiang et al. (2023) "Can Large Language Models Be an Alternative to Human Evaluations?" and Zheng et al. (2023) "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" — applied here at the rendering-operator level rather than the evaluation-judge level, AND extended across language-family boundaries (Slavic + Sino-Tibetan) for cross-family-invariance evidence.
 
-## v1.4.0 backlog placement (Session H stretch budget rule)
+## v1.1.0 backlog placement (Session H stretch budget rule)
 
 Per Session H init prompt:
 
-> Stretch budget rule: execute ONLY if Phase 3.5a finishes with >2h remaining in Thu PM window; otherwise record as v1.4.0 backlog. Better clean v1.3.0 with human-rendering SF3 than partial v1.3.0 that slips Zenodo.
+> Stretch budget rule: execute ONLY if Phase 3.5a finishes with >2h remaining in Thu PM window; otherwise record as v1.1.0 backlog. Better clean v1.0.0 with human-rendering SF3 than partial v1.0.0 that slips Zenodo.
 
-Phase 3.5a closed at the AI-draft + user-QC-handoff state (not human-native-rendering executed in Session H). The Session H budget cannot afford partial execution of 3.5b on top. **Phase 3.5b is marked v1.4.0 backlog**.
+Phase 3.5a closed at the AI-draft + user-QC-handoff state (not human-native-rendering executed in Session H). The Session H budget cannot afford partial execution of 3.5b on top. **Phase 3.5b is marked v1.1.0 backlog**.
 
 What Session H delivers under 3.5b:
 
@@ -141,19 +141,19 @@ What Session H does NOT deliver under 3.5b:
 - Cross-operator preservation matrix.
 - Integration of cross-operator robustness evidence into paper.md.
 
-## Cost estimate for v1.4.0 execution
+## Cost estimate for v1.1.0 execution
 
 - YandexGPT: ~$0.0005 per 1k chars × ~5k chars per rendering × 1 rendering = ~$0.0025 per pass
 - GigaChat: free-tier OK for single-rendering size; or ~$0.0001 per token if billed
 - Claude Opus: ~$15/M input + ~$75/M output × ~5k input + ~3k output = ~$0.30 per pass
 - Total per execution pass: ~$0.31 (Claude dominates; one-shot)
 
-Cost is not the constraint. Operator-attention budget for v1.4.0 user-QC of the human-native rendering (Phase 3.5a) + cross-operator analysis (3.5b) is the constraint.
+Cost is not the constraint. Operator-attention budget for v1.1.0 user-QC of the human-native rendering (Phase 3.5a) + cross-operator analysis (3.5b) is the constraint.
 
-## Integration into v1.3.0 paper.md
+## Integration into v1.0.0 paper.md
 
-Phase 3.5b status disclosed in paper.md v1.3.0 §Discussion §Cross-language preservation (NEW subsection; co-located with Phase 3.5a disclosure) as: "Cross-operator robustness check via multi-LLM Russian rendering is documented in the v1.4.0 protocol (PHASE3_5B_MULTI_LLM_OPERATOR_PROTOCOL.md). The Russian rendering preservation result therefore awaits both (a) the v1.4.0 human-native Russian rendering pass and (b) the v1.4.0 multi-operator robustness check before being integrated into the published paper."
+Phase 3.5b status disclosed in paper.md v1.0.0 §Discussion §Cross-language preservation (NEW subsection; co-located with Phase 3.5a disclosure) as: "Cross-operator robustness check via multi-LLM Russian rendering is documented in the v1.1.0 protocol (PHASE3_5B_MULTI_LLM_OPERATOR_PROTOCOL.md). The Russian rendering preservation result therefore awaits both (a) the v1.1.0 human-native Russian rendering pass and (b) the v1.1.0 multi-operator robustness check before being integrated into the published paper."
 
 ---
 
-*Phase 3.5b closes with documented protocol + execution-ready script skeleton + v1.4.0 backlog placement. Session H prioritizes clean v1.3.0 ship over partial 3.5b execution; the multi-LLM cross-operator robustness evidence lands at v1.4.0 alongside the human-native Russian pass.*
+*Phase 3.5b closes with documented protocol + execution-ready script skeleton + v1.1.0 backlog placement. Session H prioritizes clean v1.0.0 ship over partial 3.5b execution; the multi-LLM cross-operator robustness evidence lands at v1.1.0 alongside the human-native Russian pass.*

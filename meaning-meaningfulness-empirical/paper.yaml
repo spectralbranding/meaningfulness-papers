@@ -7,9 +7,17 @@ author:
 paper_key: "2026ap"
 companion_paper_key: "2026ao"
 companion_paper_concept_doi: "10.5281/zenodo.20409683"
-version: "1.0.0"
-status: "v1.0.0 public Zenodo release: integrative theory engagement with Carlile 2004 + Raisch-Krakowski 2021 + Kaplan-Vakili 2015 + Felin-Kauffman-Zenger 2023 + Levinthal-March 1993; random-graph null baseline (Pr(Rec ≥ 4 by chance) = .000); Phase 2 Task α Substack self-application (11/14 strict / 14/14 semantic preservation under within-operator extraction; 9/14 strict / 14/14 semantic under cross-operator GPT-4o extraction); Phase 2.5 cross-paper P4 rendering of Paper A's full theoretical apparatus (12/15 strict / 15/15 semantic within-operator; 10/15 / 14/15 cross-operator); Phase 3 Task β LinkedIn third rendering of focal-pair substrate (Rec=4); cross-operator extraction discipline (Operator B ≠ Operator C); LLM-call professional logging; Conclusion section; abstract at 195 words; Task δ inter-coder κ + Task γ cross-language Russian + Phase 3.5b multi-LLM cross-FAMILY pre-registered for v1.1.0. Internal drafting versions across four drafting Sessions (E + F + G + H) consolidated to public v1.0.0 per feedback_version_only_at_zenodo HARD RULE; see PROVENANCE.yaml for internal drafting history."
-date: "2026-05-27"
+version: "1.1.0"
+release_notes_v1_1_0: >
+  v1.1.0 additions: Phase 3.5c Russian-native LLM retry (GigaChat Rec=12, YandexGPT Rec=11);
+  Phase 3.5d Chinese cross-language P4 demonstration (DeepSeek Rec=12, Claude Opus Rec=11,
+  Qwen3.6:27b-Ollama Rec=12; cross-extractor robustness Rec=12); Method §Cross-language extension;
+  Results §Cross-language results Tables 6-7; Discussion §Cross-language and cross-deployment-tier;
+  Limitations: cross-language abstract-scale caveat; L0-L4 cascade structure (experiment/);
+  models.yaml single source of truth; prompts/ publication; HuggingFace dataset DOI 10.57967/hf/8971.
+zenodo_doi_v2: "10.5281/zenodo.20429174"
+status: "v1.1.0 public Zenodo release: integrative theory engagement with Carlile 2004 + Raisch-Krakowski 2021 + Kaplan-Vakili 2015 + Felin-Kauffman-Zenger 2023 + Levinthal-March 1993; random-graph null baseline (Pr(Rec ≥ 4 by chance) = .000); Phase 2 Task α Substack self-application (11/14 strict / 14/14 semantic preservation under within-operator extraction; 9/14 strict / 14/14 semantic under cross-operator GPT-4o extraction); Phase 2.5 cross-paper P4 rendering of Paper A's full theoretical apparatus (12/15 strict / 15/15 semantic within-operator; 10/15 / 14/15 cross-operator); Phase 3 Task β LinkedIn third rendering of focal-pair substrate (Rec=4); cross-operator extraction discipline (Operator B ≠ Operator C); LLM-call professional logging; Conclusion section; abstract at 195 words; Task γ cross-language (Russian + Chinese) + Phase 3.5b/c/d multi-LLM cross-FAMILY executed in v1.1.0; Task δ inter-coder κ remains pre-registered for a future release. Internal drafting versions across four drafting Sessions (E + F + G + H) consolidated to public v1.0.0 per feedback_version_only_at_zenodo HARD RULE; see PROVENANCE.yaml for internal drafting history."
+date: "2026-05-28"
 
 target_venue:
   primary: "Strategic Management Journal"

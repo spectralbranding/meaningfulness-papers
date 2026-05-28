@@ -1,0 +1,230 @@
+---
+# DATA_MANIFEST.yaml
+# Paper B 2026ap — Same Meaning, Different Prose
+# Single-source listing of all public data artifacts for this paper.
+# Mirrors the internal structure at the file level; internal-only artifacts
+# (session handoffs, triage memos, review summaries, AI orchestration logs)
+# are excluded per the transparency-docs-must-be-public discipline.
+
+paper_key: "2026ap"
+version: "1.1.0"
+date: "2026-05-28"
+zenodo_concept_doi: "10.5281/zenodo.20409701"
+public_repo: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical"
+
+# ── Spine and substrate artifacts ─────────────────────────────────────────────
+
+spine:
+  - path: "SPINE.yaml"
+    description: "Paper B structured substrate — propositions, evidence, external anchors, dependency graph"
+    version: "v0.4.x (final at v1.1.0)"
+
+source_paper_spines:
+  - path: "VALIDATION_CASE_PB_FOCAL_EISENHARDT_MARTIN_SPINE.yaml"
+    paper: "Eisenhardt and Martin (2000)"
+    nodes: "7 propositions + 3 observations + 2 findings"
+  - path: "VALIDATION_CASE_PB_FOCAL_ZOLLO_WINTER_SPINE.yaml"
+    paper: "Zollo and Winter (2002)"
+    nodes: "6 propositions + 2 observations + 2 findings"
+  - path: "VALIDATION_CASE_PB_KBV_GRANT_SPINE.yaml"
+    paper: "Grant (1996)"
+    notes: "KBV pair; OCR'd PDF source"
+  - path: "VALIDATION_CASE_PB_KBV_LIEBESKIND_SPINE.yaml"
+    paper: "Liebeskind (1996)"
+    notes: "KBV pair"
+  - path: "VALIDATION_CASE_PB_SECONDARY_PRECURSOR_TUSHMAN_OREILLY_SPINE.yaml"
+    paper: "Tushman and O'Reilly (1996)"
+    notes: "Standalone precursor"
+
+# ── Isomorphism and rendering artifacts ───────────────────────────────────────
+
+isomorphism_analyses:
+  - path: "TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md"
+    description: "Typed-DAG isomorphism analysis; Rec=4 with preserved antecedents L1-L4; extended §8 for third LinkedIn rendering"
+  - path: "TWIN_PAIR_ISOMORPHISM_PB_KBV.md"
+    description: "Typed-DAG isomorphism analysis; Rec=4 with preserved antecedents K1-K4"
+  - path: "SELF_APPLICATION_ISOMORPHISM_PB.md"
+    description: "Self-application Substack rendering isomorphism; 11/14 strict / 14/14 semantic / 0 contradicted"
+  - path: "CROSS_PAPER_P4_ISOMORPHISM.md"
+    description: "Cross-paper P4 demonstration isomorphism; 12/15 strict / 15/15 semantic within-operator"
+
+renderings:
+  - path: "RENDERING_PB_SUBSTACK_PRACTITIONER.md"
+    task: "alpha"
+    words: 1615
+    operator: "Claude Opus 4.7"
+    description: "Practitioner-register Substack rendering of Paper B's own substrate"
+  - path: "RENDERING_PA_PRACTITIONER.md"
+    task: "phase_2_5_cross_paper"
+    words: 2102
+    operator: "Claude Opus 4.7"
+    description: "Cross-paper Substack rendering of Paper A's full theoretical apparatus"
+  - path: "RENDERING_FOCAL_PAIR_THIRD_PROSE.md"
+    task: "beta"
+    words: 1044
+    operator: "Claude Opus 4.7"
+    description: "Third LinkedIn rendering of focal-pair shared substrate L1-L4"
+  - path: "RENDERING_PB_ABSTRACT_RUSSIAN.md"
+    task: "gamma_human_native"
+    words: 212
+    language: "Russian"
+    operator: "Dmitry Zharnikov (human native)"
+    description: "Human-native Russian rendering of Paper B §Abstract"
+  - path: "RENDERING_PB_THEORY_RUSSIAN.md"
+    task: "gamma_human_native"
+    words: 734
+    language: "Russian"
+    operator: "Dmitry Zharnikov (human native)"
+    description: "Human-native Russian rendering of Paper B §Theory §Positioning"
+
+extraction_spines:
+  - path: "VALIDATION_CASE_PB_SELF_APPLICATION_SPINE.yaml"
+    description: "Within-operator extraction of Task alpha Substack rendering (Claude Opus baseline)"
+  - path: "VALIDATION_CASE_PB_SELF_APPLICATION_GPT4_SPINE.yaml"
+    description: "Cross-operator GPT-4o extraction of Task alpha Substack rendering"
+  - path: "VALIDATION_CASE_PA_PRACTITIONER_SPINE.yaml"
+    description: "Within-operator extraction of Phase 2.5 cross-paper rendering (Claude Opus baseline)"
+  - path: "VALIDATION_CASE_PA_PRACTITIONER_GPT4_SPINE.yaml"
+    description: "Cross-operator GPT-4o extraction of Phase 2.5 cross-paper rendering"
+  - path: "VALIDATION_CASE_PB_FOCAL_THIRD_RENDERING_SPINE.yaml"
+    description: "Within-operator extraction of Task beta LinkedIn third rendering"
+  - path: "VALIDATION_CASE_PB_FOCAL_THIRD_GPT4_SPINE.yaml"
+    description: "Cross-operator GPT-4o extraction of Task beta LinkedIn third rendering"
+
+# ── Cross-language artifacts ───────────────────────────────────────────────────
+
+cross_language_results:
+  - path: "CROSS_LANGUAGE_FAMILY_ROBUSTNESS_PHASE3_5B.md"
+    description: "Phase 3.5b full per-locked-item classification matrix + Table 3 + Table 5 inter-judge"
+  - path: "phase_3_5c_runs/prompts/RENDER_RU_gigachat.md"
+    operator: "GigaChat"
+    phase: "3.5c"
+    language_out: "Russian"
+  - path: "phase_3_5c_runs/prompts/RENDER_RU_yandexgpt.md"
+    operator: "YandexGPT"
+    phase: "3.5c"
+    language_out: "Russian"
+  - path: "phase_3_5c_runs/prompts/EXTRACT_FROM_RU_via_GPT4o.md"
+    operator: "GPT-4o (extractor)"
+    phase: "3.5c"
+  - path: "phase_3_5d_runs/prompts/RENDER_ZH_deepseek.md"
+    operator: "DeepSeek"
+    phase: "3.5d"
+    language_out: "Simplified Chinese"
+  - path: "phase_3_5d_runs/prompts/RENDER_ZH_claude_opus.md"
+    operator: "Claude Opus"
+    phase: "3.5d"
+    language_out: "Simplified Chinese"
+  - path: "phase_3_5d_runs/prompts/RENDER_ZH_qwen36_27b_ollama.md"
+    operator: "Qwen3.6:27b@Ollama"
+    phase: "3.5d"
+    language_out: "Simplified Chinese"
+    deployment_tier: "open-weights local (Q4_K_M quantization)"
+  - path: "phase_3_5d_runs/prompts/EXTRACT_FROM_ZH_via_GPT4o.md"
+    operator: "GPT-4o (primary extractor)"
+    phase: "3.5d"
+  - path: "phase_3_5d_runs/prompts/EXTRACT_FROM_ZH_via_qwen36_27b_ollama.md"
+    operator: "Qwen3.6:27b@Ollama (cross-extractor robustness)"
+    phase: "3.5d"
+  - path: "phase_3_5d_runs/prompts/TRANSLATE_EN_TO_ZH_via_GPT4o.md"
+    operator: "GPT-4o (translation)"
+    phase: "3.5d"
+  - path: "phase_3_5d_runs/prompts/BACK_TRANSLATE_ZH_TO_EN_via_GPT4o.md"
+    operator: "GPT-4o (back-translation verification)"
+    phase: "3.5d"
+
+cross_language_summary:
+  phase_3_5c:
+    gigachat: {rec: 12, strict: 8, semantic: 4, missing: 0, contradicted: 0}
+    yandexgpt: {rec: 11, strict: 8, semantic: 3, missing: 1, contradicted: 0}
+  phase_3_5d:
+    deepseek_gpt4o_extractor: {rec: 12, strict: 9, semantic: 3, missing: 0, contradicted: 0}
+    claude_opus_gpt4o_extractor: {rec: 11, strict: 8, semantic: 3, missing: 1, contradicted: 0}
+    qwen_gpt4o_extractor: {rec: 12, strict: 8, semantic: 4, missing: 0, contradicted: 0}
+    deepseek_qwen_extractor_robustness: {rec: 12, strict: 7, semantic: 5, missing: 0, contradicted: 0}
+
+# ── Experimental cascade (L0-L4) ──────────────────────────────────────────────
+
+experiment_cascade:
+  l0_specification:
+    - path: "experiment/L0_specification/CROSS_OPERATOR_DISCIPLINE.md"
+      description: "B ≠ C HARD RULE with compliance table for all phases"
+    - path: "experiment/L0_specification/OLLAMA_SERIAL_DISCIPLINE.md"
+      description: "Qwen3.6:27b serial-only execution constraint (shared GPU hardware)"
+    - path: "experiment/L0_specification/PRE_REGISTRATION_PHASE_3_5.md"
+      description: "Retroactive pre-registration; EXPLORATORY status; all 4 phases"
+  l1_models:
+    - path: "experiment/L1_models/models.yaml"
+      description: "SSOT for all 6 operators; versions, endpoints, API-key env-var references"
+  l4_analysis:
+    - path: "experiment/L4_analysis/cross_phase_summary.md"
+      description: "Full hypothesis verdict table across all 12 cross-language renderings"
+  validation:
+    - path: "experiment/validation/session_record.schema.json"
+      description: "JSON Schema draft-07 for JSONL log records"
+    - path: "experiment/validation/validate.py"
+      description: "Validate all JSONL logs against schema; exit 0 on pass"
+
+# ── HuggingFace dataset ────────────────────────────────────────────────────────
+
+huggingface_dataset:
+  repo: "spectralbranding/meaningfulness-cross-language-rendering"
+  doi: "10.57967/hf/8971"
+  splits:
+    phase_3_5b: {rows: 36, description: "Phase 3.5b cross-FAMILY Russian renderings"}
+    phase_3_5c: {rows: 24, description: "Phase 3.5c Russian-native LLM retry"}
+    phase_3_5d: {rows: 48, description: "Phase 3.5d Chinese-language renderings + cross-extractor"}
+    combined: {rows: 108, description: "All cross-language phases combined"}
+  build_script: "experiment/hf_dataset/prepare_dataset.py"
+  readme: "experiment/hf_dataset/README.md"
+
+# ── Protocol documents ─────────────────────────────────────────────────────────
+
+protocols:
+  - path: "PHASE3_5A_RUSSIAN_RENDERING_PROTOCOL.md"
+    description: "Russian human-native rendering protocol (codebook + source-text + falsifier spec)"
+  - path: "PHASE3_5B_MULTI_LLM_OPERATOR_PROTOCOL.md"
+    description: "Multi-LLM cross-FAMILY operator-robustness protocol"
+  - path: "PHASE4_KAPPA_MEASUREMENT_2026-05-27.md"
+    description: "Inter-coder kappa measurement protocol (pre-registered for v1.2.0)"
+  - path: "PHASE1_ANCHOR_VERIFICATION_2026-05-27.md"
+    description: "Pre-draft bibliographic anchor verification (Crossref cascade)"
+
+# ── Companion computation code ────────────────────────────────────────────────
+
+code:
+  - path: "code/rec_metric.py"
+    run: "uv run python code/rec_metric.py --spine1 <yaml1> --spine2 <yaml2>"
+    description: "Computes Rec(G1, G2) — maximum common subgraph with typed-DAG constraints"
+  - path: "code/null_baseline.py"
+    run: "uv run python code/null_baseline.py --n-shadows 1000 --seed 42"
+    description: "Random-graph null baseline; 1,000 size-matched shadows; seed 42"
+  - path: "code/cost_function_calibration.py"
+    run: "uv run python code/cost_function_calibration.py --spines <paths> --renderings <paths>"
+    description: "Grid-anchored beta/delta cost-function exponent calibration"
+  - path: "code/multi_llm_rendering.py"
+    description: "Multi-LLM rendering harness (Phase 3.5b/c/d execution)"
+  - path: "code/cross_operator_extraction.py"
+    description: "Cross-operator extraction pipeline (Operator C extractor; prose-only input)"
+  - path: "code/llm_call_logger.py"
+    description: "Single-source JSONL logger schema; redaction at write time"
+  - path: "code/README.md"
+    description: "Code directory overview + run commands + reproducibility notes"
+
+# ── LLM-call provenance logs ──────────────────────────────────────────────────
+
+logs:
+  directory: "logs/"
+  description: "9 JSONL files; one per experimental phase; schema in experiment/validation/session_record.schema.json"
+  redaction: "API keys and credentials redacted at write time via llm_call_logger.py"
+  files:
+    - "phase_1_crossref_anchor_verification_calls.jsonl"
+    - "phase_2_render_PB_spine_to_substack_practitioner_calls.jsonl"
+    - "phase_2_extract_spine_from_substack_rendering_calls.jsonl"
+    - "phase_2_prime_extract_spine_from_substack_rendering_PB_via_GPT4_calls.jsonl"
+    - "phase_2.5_render_PA_spine_to_substack_practitioner_calls.jsonl"
+    - "phase_2.5_extract_spine_from_PA_practitioner_rendering_calls.jsonl"
+    - "phase_2.5_prime_extract_spine_from_PA_practitioner_rendering_via_GPT4_calls.jsonl"
+    - "phase_3_render_focal_pair_shared_substrate_to_linkedin_calls.jsonl"
+    - "phase_3_prime_extract_spine_from_focal_pair_third_rendering_via_GPT4_calls.jsonl"
+---

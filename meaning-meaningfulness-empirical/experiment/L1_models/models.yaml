@@ -1,0 +1,88 @@
+# models.yaml — Single Source of Truth for LLM Operators
+# Zharnikov (2026ap) Paper B empirical corpus
+# Version: 1.1.0 (2026-05-28)
+# Public mirror: https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical/experiment/L1_models/models.yaml
+
+models:
+  - operator_key: gpt4o
+    model_id: gpt-4o-2024-08-06
+    provider: OpenAI
+    family: GPT-4 generation
+    training_origin: Western (RLHF)
+    deployment_tier: proprietary_api
+    sdk_version: "openai>=1.51"
+    role_in_corpus: >
+      extractor (canonical Phase 3.5b/c/d) +
+      translator (Phase 3.5d EN->ZH reference translation, NOT input to renderers) +
+      back-translator (Phase 3.5d ZH->EN prompt sanity-check, task-isolated from translation step)
+
+  - operator_key: claude_opus
+    model_id: claude-opus-4-5
+    provider: Anthropic
+    family: Claude Opus
+    training_origin: Western (Constitutional AI)
+    deployment_tier: proprietary_api
+    sdk_version: "anthropic>=0.40"
+    role_in_corpus: >
+      renderer (Phase 3.5b RU: English-substrate control) +
+      renderer (Phase 3.5d ZH: English-substrate control)
+
+  - operator_key: deepseek
+    model_id: deepseek-chat
+    provider: DeepSeek
+    family: DeepSeek V3
+    training_origin: Chinese (open-source)
+    deployment_tier: proprietary_api
+    sdk_version: "openai>=1.51 (OpenAI-compatible endpoint: https://api.deepseek.com)"
+    role_in_corpus: >
+      renderer (Phase 3.5b RU: cross-family Sino-Tibetan control) +
+      renderer (Phase 3.5d ZH: Chinese-native proprietary API)
+
+  - operator_key: gigachat
+    model_id: GigaChat-Pro
+    provider: Sberbank
+    family: GigaChat
+    training_origin: Russian (Slavic)
+    deployment_tier: proprietary_api
+    sdk_version: "httpx + OAuth2 (https://ngw.devices.sberbank.ru:9443/api/v2/oauth)"
+    role_in_corpus: >
+      renderer (Phase 3.5b RU: Russian-native; 400-error run) +
+      renderer (Phase 3.5c RU: Russian-native; successful run resolving Phase 3.5b error)
+    notes: >
+      OAuth2 via ngw.devices.sberbank.ru self-signed cert; verify=False in dev/research.
+      Phase 3.5b GigaChat 400-error was an OAuth credential environment issue, not a prompt issue.
+      Phase 3.5c is the canonical successful GigaChat run.
+
+  - operator_key: yandexgpt
+    model_id: gpt://b1g894jalgr7i0op2s70/yandexgpt/latest
+    provider: Yandex
+    family: YandexGPT
+    training_origin: Russian (Slavic)
+    deployment_tier: proprietary_api
+    sdk_version: "httpx + Yandex Cloud REST (https://llm.api.cloud.yandex.net/foundationModels/v1/completion)"
+    role_in_corpus: >
+      renderer (Phase 3.5b RU: skipped — YANDEX_AI_FOLDER_ID not provisioned) +
+      renderer (Phase 3.5c RU: Russian-native; first successful run)
+    notes: >
+      folder_id b1g894jalgr7i0op2s70 provisioned for Phase 3.5c run.
+      Phase 3.5b YandexGPT skip was an environment-provisioning issue, not a prompt issue.
+
+  - operator_key: qwen36_27b_ollama
+    model_id: qwen3.6:27b
+    model_digest: a50eda8ed977ab48a12431878896b27ffd5cef552c17af3317d9623b939a7f1e
+    provider: Alibaba (open-weights, served via Ollama)
+    family: Qwen3 generation
+    training_origin: Chinese (Sino-Tibetan)
+    deployment_tier: open_weights_local
+    quantization: Q4_K_M
+    sdk_version: "ollama-local (HTTP /api/generate at localhost:11434)"
+    role_in_corpus: >
+      renderer (Phase 3.5d ZH: Chinese-native open-weights local) +
+      extractor (Phase 3.5d ZH cross-extractor robustness: applied to DeepSeek's rendering only; B=DeepSeek != C=Qwen; valid)
+    notes: >
+      Thinking model; /no_think directive + think:false option required to elicit non-thinking output
+      (otherwise reasoning tokens consume num_predict budget before final response).
+      num_predict=8000; seed=42; temperature=0.3.
+      Serial-only per OLLAMA_SERIAL_DISCIPLINE.md: all Ollama calls are sequential;
+      no concurrent Ollama invocations.
+      Hardware: fmini Apple M4 Pro 64GB unified memory.

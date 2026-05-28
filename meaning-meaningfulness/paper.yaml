@@ -4,12 +4,20 @@ author: "Dmitry Zharnikov"
 orcid: 0009-0000-6893-9231
 paper_key: 2026ao
 status: published
-version: 1.0.0
+version: 1.1.0
 date_draft_started: 2026-05-26
-date_published: 2026-05-27
+date_published: 2026-05-28
 zenodo:
   concept_doi: "10.5281/zenodo.20409683"
   version_doi: "10.5281/zenodo.20409684"
+  doi_v2: "10.5281/zenodo.20428832"
+  release_notes_v1_1_0: >
+    v1.1.0 additions: §7 Discussion §Cross-language and cross-deployment-tier validation extension
+    (Phase 3.5c Russian-native LLM retry + Phase 3.5d Chinese cross-language P4 demonstration;
+    5 new renderings all at Rec >= 11; cross-deployment-tier reproducibility; cross-extractor
+    robustness). Paper A note: companion Paper B v1.1.0 extends validation across
+    Russian-native LLM (GigaChat/YandexGPT) and Chinese (DeepSeek/Claude Opus/Qwen3.6:27b-Ollama)
+    with all five renderings at Rec >= 11 against locked abstract spine.
   url: "https://doi.org/10.5281/zenodo.20409683"
 companion_paper_concept_doi: "10.5281/zenodo.20409701"
 target_venue_primary: Organization Science

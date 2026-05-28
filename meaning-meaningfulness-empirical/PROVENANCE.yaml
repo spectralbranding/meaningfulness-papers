@@ -6,8 +6,8 @@
 
 paper_key: "2026ap"
 companion_paper: "2026ao"
-public_release_version: "1.0.0"
-date_published: "2026-05-27"
+public_release_version: "1.1.0"
+date_published: "2026-05-28"
 zenodo:
   concept_doi: "10.5281/zenodo.20409701"
   version_doi: "10.5281/zenodo.20409702"
@@ -102,13 +102,47 @@ phase_summary:
     description: "Russian human-native rendering protocol pre-registered for v1.1.0"
     artifacts_public:
       - "PHASE3_5A_RUSSIAN_RENDERING_PROTOCOL.md (codebook locked; source-text selection; falsifier specification)"
-  phase_3_5b_multi_llm_protocol_pre_registered:
-    description: "Multi-LLM cross-FAMILY operator-robustness protocol pre-registered for v1.1.0"
-    operators_planned: ["YandexGPT", "GigaChat", "DeepSeek", "Claude Opus (control)"]
-    language_families: ["Slavic", "Sino-Tibetan"]
+  phase_3_5b_multi_llm_cross_family:
+    description: "Multi-LLM cross-FAMILY operator-robustness execution (Russian output; 4 operator families)"
+    operators_executed: ["GigaChat", "YandexGPT", "DeepSeek", "Claude Opus 4.7"]
+    language_families: ["Slavic (GigaChat + YandexGPT)", "Sino-Tibetan (DeepSeek)", "English-substrate control (Claude Opus)"]
+    extractor: "gpt-4o-2024-08-06 (cross-operator B ≠ C)"
     artifacts_public:
       - "PHASE3_5B_MULTI_LLM_OPERATOR_PROTOCOL.md"
-      - "code/multi_llm_rendering.py (execution-ready)"
+      - "CROSS_LANGUAGE_FAMILY_ROBUSTNESS_PHASE3_5B.md (per-operator results + Table 3 + Table 5 inter-judge)"
+      - "code/multi_llm_rendering.py"
+    result: "All 4 operators: 0/12 contradicted; GigaChat 9/12 strict; YandexGPT 4/12 strict; DeepSeek 8/12 strict; Claude Opus 9/12 strict"
+  phase_3_5a_task_gamma_russian_human_native:
+    description: "Human-native Russian rendering of Paper B §Abstract + §Theory §Positioning (Task gamma)"
+    renderer: "Dmitry Zharnikov (Russian-native author)"
+    extractor: "gpt-4o-2024-08-06 (cross-operator B ≠ C)"
+    artifacts_public:
+      - "RENDERING_PB_ABSTRACT_RUSSIAN.md (212 Russian words)"
+      - "RENDERING_PB_THEORY_RUSSIAN.md (734 Russian words)"
+    result: "§Abstract: 10/12 strict / 2 semantic / 1 missing / 0 contradicted; §Theory: 11/12 strict / 1 semantic / 0 missing / 0 contradicted"
+  phase_3_5c_russian_native_llm_retry:
+    description: "Phase 3.5c resolves Phase 3.5b infrastructure failures; GigaChat 400-error + YandexGPT folder-id skip corrected"
+    operators_executed: ["GigaChat", "YandexGPT"]
+    extractor: "gpt-4o-2024-08-06 (cross-operator B ≠ C)"
+    prompt_reuse: "byte-identical to Phase 3.5b (reuse documented in phase_3_5c_runs/prompts/)"
+    artifacts_public:
+      - "phase_3_5c_runs/prompts/ (3 prompt files with frontmatter)"
+      - "phase_3_5c_runs/multi_llm_manifest.json"
+    result: "GigaChat Rec=12 (strict=8, semantic=4, missing=0, contradicted=0); YandexGPT Rec=11 (strict=8, semantic=3, missing=1, contradicted=0)"
+  phase_3_5d_chinese_language_p4:
+    description: "Phase 3.5d: first Chinese-language P4 demonstration; 3 renderer families + cross-extractor robustness check"
+    operators_executed: ["DeepSeek (Simplified Chinese)", "Claude Opus (English-substrate control)", "Qwen3.6:27b@Ollama (open-weights local)"]
+    extractor_primary: "gpt-4o-2024-08-06 (cross-operator B ≠ C)"
+    extractor_robustness: "qwen3.6:27b@Ollama (digest a50eda8ed977ab48a124; cross-family robustness check)"
+    ollama_serial_discipline: "Qwen3.6:27b calls executed strictly serial per OLLAMA_SERIAL_DISCIPLINE.md"
+    artifacts_public:
+      - "phase_3_5d_runs/prompts/ (7 prompt files with frontmatter)"
+      - "phase_3_5d_runs/multi_llm_manifest.json"
+      - "experiment/L0_specification/CROSS_OPERATOR_DISCIPLINE.md"
+      - "experiment/L0_specification/OLLAMA_SERIAL_DISCIPLINE.md"
+      - "experiment/L0_specification/PRE_REGISTRATION_PHASE_3_5.md"
+      - "experiment/L1_models/models.yaml"
+    result: "DeepSeek Rec=12; Claude Opus Rec=11; Qwen3.6:27b Rec=12; cross-extractor DeepSeek via Qwen Rec=12; zero contradictions across all four"
   phase_4_task_delta_kappa_protocol_pre_registered:
     description: "Inter-coder kappa measurement protocol pre-registered for v1.1.0"
     artifacts_public:
@@ -168,12 +202,13 @@ editorial_discipline_anchors:
 
 versioning_trajectory:
   v1_0_0:
-    description: "Public Zenodo initial release (this release)"
+    description: "Public Zenodo initial release"
     evidence: "Two twin pairs at Rec=4 + null baseline + 3 self-application renderings + cross-operator extraction + LLM-call provenance"
     date: "2026-05-27"
   v1_1_0:
-    description: "Task delta inter-coder kappa + Task gamma Russian human-native + Phase 3.5b multi-LLM cross-FAMILY"
-    estimated: "4-8 weeks post-v1.0.0"
+    description: "Phase 3.5c Russian-native LLM retry (GigaChat Rec=12, YandexGPT Rec=11) + Phase 3.5d Chinese-language P4 demonstration (DeepSeek Rec=12, Claude Opus Rec=11, Qwen3.6:27b Rec=12) + cross-extractor robustness (DeepSeek via Qwen Rec=12) + cross-deployment-tier evidence (open-weights local = proprietary API)"
+    date: "2026-05-28"
+    zenodo_doi_v2: "10.5281/zenodo.20429174"
   v2_0_0:
     description: "First prospective lab cohort + larger-N twin-pair extension + confidence intervals on beta/delta + third-party-coder substitution for delta"
     estimated: "6-12 months post-v1.0.0"

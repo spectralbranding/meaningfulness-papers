@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Meaningfulness — Research Papers"
+version: "1.0.0"
+authors:
+  - family-names: "Zharnikov"
+    given-names: "Dmitry"
+    orcid: "0009-0000-6893-9231"
+date-released: "2026-05-29"
+license: "MIT"
+license-url: "https://opensource.org/licenses/MIT"
+repository-code: "https://github.com/spectralbranding/meaningfulness-papers"
+abstract: >
+  Hub index for the meaningfulness research programme by Dmitry Zharnikov.
+  The programme theorizes how research-paper artifacts maintain meaning
+  across renderings under generative-AI cost-asymmetry, with empirical
+  demonstration on management-theory twin pairs. The hub aggregates two
+  paper-slug subdirectories: Paper A (meaning-meaningfulness) introduces
+  the Operator role and the L/S/R three-layer decomposition with the P4
+  rendering-equivalence preservation theorem; Paper B
+  (meaning-meaningfulness-empirical) provides empirical demonstration of
+  P4 on management-theory twin pairs at Rec = 4 with cross-operator
+  extraction discipline.
+keywords:
+  - "meaningfulness"
+  - "meaning"
+  - "rendering equivalence"
+  - "P4"
+  - "spectral brand theory"
+  - "organizational schema theory"
+references:
+  - type: article
+    title: "Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work"
+    authors:
+      - family-names: "Zharnikov"
+        given-names: "Dmitry"
+        orcid: "0009-0000-6893-9231"
+    doi: "10.5281/zenodo.20409683"
+    url: "https://doi.org/10.5281/zenodo.20409683"
+    year: 2026
+  - type: article
+    title: "Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work"
+    authors:
+      - family-names: "Zharnikov"
+        given-names: "Dmitry"
+        orcid: "0009-0000-6893-9231"
+    doi: "10.5281/zenodo.20409701"
+    url: "https://doi.org/10.5281/zenodo.20409701"
+    year: 2026

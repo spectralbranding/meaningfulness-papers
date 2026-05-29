@@ -1,0 +1,37 @@
+# Secrets + environment
+.env
+.env.*
+*.env
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# Hub run logs (paper-slug logs are committed by their own repos)
+output/logs/*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~

@@ -1,0 +1,20 @@
+[project]
+name = "meaningfulness-papers-hub"
+version = "0.1.0"
+description = "Hub index for meaningfulness research papers"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Dmitry Zharnikov", email = "fermeradar@gmail.com" },
+]
+keywords = ["meaningfulness", "meaning", "rendering equivalence", "P4"]
+
+[project.urls]
+"Homepage" = "https://github.com/spectralbranding/meaningfulness-papers"
+"Paper A (concept DOI)" = "https://doi.org/10.5281/zenodo.20409683"
+"Paper B (concept DOI)" = "https://doi.org/10.5281/zenodo.20409701"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -17,7 +17,7 @@ identifiers:
     value: "10.5281/zenodo.20409702"
     description: "Version DOI (v1.0.0); v1.1.0 DOI pending Zenodo upload"
 type: software
-repository-code: "https://github.com/spectralbranding/sbt-papers/tree/main/meaningfulness-empirical"
+repository-code: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical"
 abstract: |
   This paper supplies an empirical demonstration of Zharnikov's (2026ao)
   Proposition P4 (rendering-equivalence under spine-preservation) in

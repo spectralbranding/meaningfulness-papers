@@ -1,3 +1,7 @@
+[![MIT License](https://img.shields.io/badge/Code-MIT-blue.svg)](../LICENSE)
+[![CC-BY 4.0](https://img.shields.io/badge/Data-CC--BY_4.0-lightgrey.svg)](../LICENSE-data)
+![Last Updated](https://img.shields.io/badge/updated-2026--05--29-success)
+
 # meaning-meaningfulness-empirical — Paper B 2026ap
 
 **Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work**
@@ -12,7 +16,26 @@ Working Paper v1.0.0 — Dmitry Zharnikov ([ORCID 0009-0000-6893-9231](https://o
 
 This empirical paper supplements [**Paper A 2026ao**](../meaning-meaningfulness/) (concept DOI [10.5281/zenodo.20409683](https://doi.org/10.5281/zenodo.20409683)), which introduces the Operator role + three-layer L/S/R decomposition + preservation theorem P4 + axiom A1.
 
-## Headline empirical findings
+## 1 | Getting Started
+
+This is a paper-slug mirror under the hub at [`meaningfulness-papers/`](..). Hub-level discipline (LICENSE, LICENSE-data, .gitignore, repo-anchor) is inherited from the parent. Slug-level work focuses on the empirical artifacts (spines, renderings, isomorphism analyses, computation code, LLM-call logs).
+
+To work locally:
+
+```bash
+git clone https://github.com/spectralbranding/meaningfulness-papers.git
+cd meaningfulness-papers/meaning-meaningfulness-empirical
+```
+
+Computation scripts under `code/` use Python 3.12 + `uv`. Random seed `42` is fixed at the top of every computation script.
+
+## 2 | Project Layout
+
+### Companion dataset
+
+Cross-language experiment data is published as a Hugging Face dataset with DOI [`10.57967/hf/8971`](https://doi.org/10.57967/hf/8971) — `spectralbranding/meaningfulness-cross-language-rendering` (English + Russian + Chinese renderings across five LLMs from three training-corpus families).
+
+### Headline empirical findings
 
 | Evidence point | Result |
 |---|---|
@@ -26,7 +49,7 @@ This empirical paper supplements [**Paper A 2026ao**](../meaning-meaningfulness/
 | Bibliographic-hallucination audit (12 AI-suggested anchors) | 2 verified / 10 negative findings (~83% hallucination rate) |
 | β/δ ordering across 5 spines + 5 renderings | β < 1 < δ across all 10 estimates (supportive of Paper A P3 ordering) |
 
-## Repository layout
+### Repository layout
 
 ```
 meaning-meaningfulness-empirical/
@@ -76,7 +99,7 @@ meaning-meaningfulness-empirical/
     └── README.md
 ```
 
-## Reproducibility
+## 3 | Quick Start
 
 All numerical figures cited in `paper.md` are reproducible from companion scripts in `code/` against the published spines in this mirror. Random seed `42` is fixed at the top of every computation script.
 
@@ -94,11 +117,15 @@ uv run python code/cost_function_calibration.py --spines <paths> --renderings <p
 uv run python code/cross_operator_extraction.py --rendering RENDERING_PB_SUBSTACK_PRACTITIONER.md --codebook appendix_A_schema --extractor gpt-4o-2024-08-06
 ```
 
-## LLM-call provenance
+## 4 | Dependencies
+
+Python 3.12 + `uv` for package management. Cross-operator scripts require `OPENAI_API_KEY` (cross-operator extractor uses `gpt-4o-2024-08-06`); multi-LLM rendering uses additional provider keys per `code/multi_llm_rendering.py`. See per-script docstrings for full requirements.
+
+### LLM-call provenance
 
 Every experimental LLM call producing cited evidence in `paper.md` is logged in JSONL under `logs/` with operator identifier, model version, full prompts, parameters, response, tokens, latency, cost-USD estimate, git SHA, and a redaction pass that strips API keys before write. Internal authoring-process LLM calls (drafting assistance, internal peer-review cycles, AI-assisted literature exploration that does not produce a cited result) are NOT in the public log per the experiment-scope-only publication rule. See [`logs/README.md`](logs/README.md) for schema details and reproduction instructions.
 
-## Versioning trajectory (public)
+### Versioning trajectory (public)
 
 | Release | Scope addition | Estimated wall-clock |
 |---|---|---|
@@ -109,3 +136,13 @@ Every experimental LLM call producing cited evidence in `paper.md` is logged in 
 | v4.0.0 | Submission-scale; falsificational P3 test at organizational-outcome scale | 18–24 months post-v1.0.0 |
 
 Internal drafting across Sessions E + F + G + H was consolidated into this public v1.0.0 release per the project's version-only-at-Zenodo discipline. See [PROVENANCE.yaml](PROVENANCE.yaml) for phase-level drafting summary.
+
+## 5 | Citation
+
+Verbatim title: *Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work*. Concept DOI [10.5281/zenodo.20409701](https://doi.org/10.5281/zenodo.20409701); v1.0.0 version DOI [10.5281/zenodo.20409702](https://doi.org/10.5281/zenodo.20409702). Companion cross-language Hugging Face dataset DOI [10.57967/hf/8971](https://doi.org/10.57967/hf/8971). See [CITATION.cff](CITATION.cff) for machine-readable metadata.
+
+## 6 | Licence
+
+Code (if any): MIT — see hub-level [../LICENSE](../LICENSE). Data, figures, tables: CC BY 4.0 — see hub-level [../LICENSE-data](../LICENSE-data). Paper text: CC BY-NC-ND 4.0 (matches published Zenodo PDF; see [CITATION.cff](CITATION.cff)).
+
+*Last updated: 2026-05-29*

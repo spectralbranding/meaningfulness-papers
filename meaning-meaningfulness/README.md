@@ -1,3 +1,7 @@
+[![MIT License](https://img.shields.io/badge/Code-MIT-blue.svg)](../LICENSE)
+[![CC-BY 4.0](https://img.shields.io/badge/Data-CC--BY_4.0-lightgrey.svg)](../LICENSE-data)
+![Last Updated](https://img.shields.io/badge/updated-2026--05--29-success)
+
 # meaning-meaningfulness — Paper A 2026ao
 
 **Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work**
@@ -58,3 +62,36 @@ This paper introduces:
 ## Reproducibility
 
 The cost-asymmetry simulation Appendix C points to `code/cost_asymmetry_simulation.py` (scaffold; implementation lands at v1.1.0). Random seed `42` fixed at file top per project convention. The historical existence proof (Heisenberg + Schrödinger founding pair; Appendix D) is documented at illustrative extraction depth in `VALIDATION_CASE_T1_*` files for reviewer inspection.
+
+---
+
+## 1 | Paper
+
+See [paper.md](paper.md). Working Paper v1.1.0. Concept DOI [10.5281/zenodo.20409683](https://doi.org/10.5281/zenodo.20409683) (resolves to latest version); v1.0.0 version DOI [10.5281/zenodo.20409684](https://doi.org/10.5281/zenodo.20409684).
+
+## 2 | Companion Data
+
+No companion HuggingFace dataset for this paper. The machine-readable substrate ships in-repo as `SPINE.yaml` (v0.7.3; 52 verified external_anchors). The empirical companion paper 2026ap (concept DOI [10.5281/zenodo.20409701](https://doi.org/10.5281/zenodo.20409701)) lives in a separate slug directory.
+
+## 3 | Reproduction
+
+The `code/` directory is a scaffold at v1.0.0; the cost-asymmetry simulation script (`cost_asymmetry_simulation.py`, random seed `42`) lands at v1.1.0 per Appendix C. The substrate-level validation artifacts (`VALIDATION_CASE_T1_*`, `VALIDATION_CASE_T2_*`, `TWIN_PAIR_SPINE_ISOMORPHISM.md`) are directly inspectable in-repo.
+
+## 4 | Citation
+
+```bibtex
+@article{zharnikov2026meaning,
+  author = {Dmitry Zharnikov},
+  title  = {Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work},
+  year   = {2026},
+  doi    = {10.5281/zenodo.20409683}
+}
+```
+
+Machine-readable: [CITATION.cff](CITATION.cff).
+
+## 5 | Licence
+
+Code (if any): MIT — see hub-level [../LICENSE](../LICENSE). Data, figures, tables: CC BY 4.0 — see hub-level [../LICENSE-data](../LICENSE-data). Paper text: CC BY-NC-ND 4.0 (matches published Zenodo PDF; see [CITATION.cff](CITATION.cff)).
+
+*Last updated: 2026-05-29*

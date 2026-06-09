@@ -61,7 +61,7 @@ This paper introduces:
 
 ## Reproducibility
 
-The cost-asymmetry simulation Appendix C points to `code/cost_asymmetry_simulation.py` (scaffold; implementation lands at v1.1.0). Random seed `42` fixed at file top per project convention. The historical existence proof (Heisenberg + Schrödinger founding pair; Appendix D) is documented at illustrative extraction depth in `VALIDATION_CASE_T1_*` files for reviewer inspection.
+The P3 cost-asymmetry crossover chart is reproducible from `code/cost_asymmetry_crossover.py` (analytic, deterministic — `python cost_asymmetry_crossover.py` prints the crossover `x* ≈ 72.21` and writes the PNG + SVG; see [code/README.md](code/README.md)). The cost-asymmetry *simulation* Appendix C points to a separate Monte-Carlo harness `code/cost_asymmetry_simulation.py` (scaffold; implementation lands at v1.1.0, random seed `42`). The historical existence proof (Heisenberg + Schrödinger founding pair; Appendix D) is documented at illustrative extraction depth in `VALIDATION_CASE_T1_*` files for reviewer inspection.
 
 ---
 
@@ -75,7 +75,7 @@ No companion HuggingFace dataset for this paper. The machine-readable substrate 
 
 ## 3 | Reproduction
 
-The `code/` directory is a scaffold at v1.0.0; the cost-asymmetry simulation script (`cost_asymmetry_simulation.py`, random seed `42`) lands at v1.1.0 per Appendix C. The substrate-level validation artifacts (`VALIDATION_CASE_T1_*`, `VALIDATION_CASE_T2_*`, `TWIN_PAIR_SPINE_ISOMORPHISM.md`) are directly inspectable in-repo.
+The `code/` directory ships `cost_asymmetry_crossover.py` — the analytic P3 cost-asymmetry crossover chart (deterministic; `python cost_asymmetry_crossover.py` → crossover `x* ≈ 72.21` + PNG/SVG; [code/README.md](code/README.md) has the full script map). The cost-asymmetry *simulation* script (`cost_asymmetry_simulation.py`, random seed `42`) is a separate Monte-Carlo harness that lands at v1.1.0 per Appendix C. The substrate-level validation artifacts (`VALIDATION_CASE_T1_*`, `VALIDATION_CASE_T2_*`, `TWIN_PAIR_SPINE_ISOMORPHISM.md`) are directly inspectable in-repo.
 
 ## 4 | Citation
 
@@ -94,4 +94,4 @@ Machine-readable: [CITATION.cff](CITATION.cff).
 
 Code (if any): MIT — see hub-level [../LICENSE](../LICENSE). Data, figures, tables: CC BY 4.0 — see hub-level [../LICENSE-data](../LICENSE-data). Paper text: CC BY-NC-ND 4.0 (matches published Zenodo PDF; see [CITATION.cff](CITATION.cff)).
 
-*Last updated: 2026-05-29*
+*Last updated: 2026-06-09*

@@ -1,119 +1,484 @@
----
-title: "Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work"
-author: "Dmitry Zharnikov"
-orcid: 0009-0000-6893-9231
-paper_key: 2026ao
-status: published
-version: 1.1.0
-date_draft_started: 2026-05-26
-date_published: 2026-05-28
-zenodo:
-  concept_doi: "10.5281/zenodo.20409683"
-  version_doi: "10.5281/zenodo.20409684"
-  doi_v2: "10.5281/zenodo.20428832"
-  release_notes_v1_1_0: >
-    v1.1.0 additions: §7 Discussion §Cross-language and cross-deployment-tier validation extension
-    (Phase 3.5c Russian-native LLM retry + Phase 3.5d Chinese cross-language P4 demonstration;
-    5 new renderings all at Rec >= 11; cross-deployment-tier reproducibility; cross-extractor
-    robustness). Paper A note: companion Paper B v1.1.0 extends validation across
-    Russian-native LLM (GigaChat/YandexGPT) and Chinese (DeepSeek/Claude Opus/Qwen3.6:27b-Ollama)
-    with all five renderings at Rec >= 11 against locked abstract spine.
-  url: "https://doi.org/10.5281/zenodo.20409683"
-companion_paper_concept_doi: "10.5281/zenodo.20409701"
-target_venue_primary: Organization Science
-target_venue_secondary: Journal of Management Inquiry
-target_venue_tertiary: AI & Society
-paper_type: theoretical
-primary_contribution: "The Operator role and era-dependent projection of structural-substrate vs judgment operations in knowledge-work artifact production"
-primary_propositions:
-  - P1 (separability)
-  - P4 (rendering-equivalence under spine-preservation)
-deferred_propositions:
-  - P2 (recombination — empirical estimation in 2026ap companion working paper)
-  - P3 (verification-cost asymmetry β/δ — empirical estimation in 2026ap companion working paper)
-empirical_companion:
-  paper_key: 2026ap
-  concept_doi: "10.5281/zenodo.20409701"
-  version_doi: "10.5281/zenodo.20409702"
-  scoping_doc: research/meaning_meaningfulness_paper/PAPER_B_2026ap_SCOPING.md
-  trigger: Paper A Phase 3 GO + paper.md complete + post-draft review pass + Zenodo upload
-  published: 2026-05-27 (joint Zenodo upload with Paper A)
-spine_artifact: research/meaning_meaningfulness_paper/SPINE.yaml
-spine_version: v0.7.1
-schema_version: v0.2
-spine_first_protocol: research/SPINE_FIRST_DRAFTING_PROTOCOL.md
-phase_1_5_grok_cycles_completed: 5 (r1 through r5; plateau reached r4→r5; GO recommendation issued TRIAGE_MEMO_r5_2026-05-26.md)
-appendices:
-  A: appendix_A_schema.md (substrate schema + preservation theorem + κ threshold)
-  B: appendix_B_protocol.md (spine-first drafting protocol operational specification)
-  C: appendix_C_simulation.md (calibrated cost-asymmetry simulation harness)
-  D: appendix_D_historical_existence_proof.md (Heisenberg-Schrödinger T1 + Telegram T3 supplementary)
-companion_code:
-  expected_path: sbt-papers/meaningfulness/code/cost_asymmetry_simulation.py
-  status: scaffold (full implementation post-Zenodo-mirror-creation)
-  random_seed: 42
-key_external_anchors_verified:
-  - kulkarni-2024-future-of-research-in-ai-driven-world (DOI 10.1177/10564926231219622)
-  - kocak-levinthal-puranam-2023-dual-challenge-search-coordination (DOI 10.1287/orsc.2022.1601)
-  - raisch-2021-artificial-intelligence-management (DOI 10.5465/amr.2018.0072)
-  - carlile-2004-transferring-translating-transforming-boundaries (DOI 10.1287/orsc.1040.0094)
-  - star-griesemer-1989-boundary-objects-museum-vertebrate (DOI 10.1177/030631289019003001)
-  - rosso-dekas-wrzesniewski-2010-meaning-of-work (DOI 10.1016/j.riob.2010.09.001)
-  - liebeskind-1996-knowledge-strategy-theory-firm (DOI 10.1002/smj.4250171109)
-  - nickerson-zenger-2004-knowledge-based-theory-firm-problem-solving (DOI 10.1287/orsc.1040.0093)
-  - bechky-okhuysen-2011-expecting-unexpected-swat-film (DOI 10.5465/amj.2011.60263060)
-  - felin-kauffman-zenger-2023-resource-origins-search (DOI 10.1002/smj.3350)
-  - leonardi-vaast-2017-social-media-affordances-organizing (DOI 10.5465/annals.2015.0144)
-  - eisenhardt-martin-2000-dynamic-capabilities-what-are-they (DOI 10.1002/1097-0266(200010/11)21:10/11<1105::AID-SMJ133>3.0.CO;2-E)
-  - zollo-winter-2002-deliberate-learning-dynamic-capabilities (DOI 10.1287/orsc.13.3.339.2780)
-  - bikard-2020-idea-twins-simultaneous-discoveries-research-tool (DOI 10.1002/smj.3162)
-  - schrodinger-1926-equivalence-heisenberg-wave-mechanics
-  - vonneumann-1932-mathematical-foundations-quantum-mechanics
-  - pauli-1927-quantenmechanik-magnetischen-elektrons
-  - cover-2006-elements-information-theory (DOI 10.1002/047174882X)
-boundary_conditions:
-  - C1 (version-controlled authoring)
-  - C2 (propositional claims)
-  - C3 (non-trivial audience-schema divergence)
-  - C4 (volume exceeds unaided human verification capacity)
-negative_scope_conditions:
-  - NSC1 (routine operational work)
-  - NSC2 (real-time control systems)
-  - NSC3 (narrative-only scholarship)
-  - NSC4 (high-stakes executive sensemaking)
-  - NSC5 (pure discovery science without reproducibility pressure)
-word_count_body_target: 11000-12000
-word_count_body_current: 8826 (Session D init draft pre-polish-pass)
-draft_phase_completion:
-  end_to_end_skeleton: complete (Session D first window)
-  main_body_full_prose: pending (Session D second window)
-  appendices_full_prose: appendix_D complete; A/B/C at skeleton+key-content
-  qc_pass: pending
-  post_draft_grok_review: pending
-  zenodo_upload: pending
-double_anonymous_prep:
-  status: not_applied
-  notes: "Apply at submission step — remove byline; change self-citations to [Author, 2026X]; redact DOIs to [DOI withheld for anonymous review]; keep DOIs in separate title page file"
-ai_disclosure:
-  acknowledged_in_paper: true
-  default_format_used: true
-  models_disclosed: "Claude Opus 4.7, Grok 4.1, Gemini 3.1"
-related_artifacts:
-  thesis: PHASE_0_THESIS.md (v0.7.1; frozen)
-  bundle: PREDRAFT_BUNDLE.md (v0.7.1; frozen)
-  spine: SPINE.yaml (v0.7.1; frozen)
-  pivot_split_plan: PIVOT_SPLIT_PLAN.md
-  paper_b_scoping: PAPER_B_2026ap_SCOPING.md
-  grok_review_summaries:
-    - GROK_REVIEW_SUMMARY.md (r1)
-    - GROK_REVIEW_SUMMARY_r2.md
-    - GROK_REVIEW_SUMMARY_r3.md
-    - GROK_REVIEW_SUMMARY_r5.md
-  triage_memos:
-    - TRIAGE_MEMO_r2_2026-05-26.md
-    - TRIAGE_MEMO_r3_2026-05-26.md
-    - TRIAGE_MEMO_r5_2026-05-26.md
-  session_handoffs:
-    - SESSION_B_HANDOFF_TO_MAIN_2026-05-26.md
-    - SESSION_C_HANDOFF_TO_MAIN_2026-05-26.md
----
+# paper.yaml -- Paper Spec v0.1.0
+# paper_key: 2026ao
+# citation_key: zharnikov-2026ao-spec-based-research-post-ai
+# concept DOI: 10.5281/zenodo.20409683
+# AI disclosure: AI assistants were used for literature search and editorial refinement; all theoretical claims are the author's sole responsibility.
+# Generated by [internal path removed] FROM SPINE.yaml (do not hand-edit; regenerate).
+spec_version: 0.1.0
+meta:
+  title: 'Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness
+    in Organizational Knowledge Work'
+  authors:
+  - name: Dmitry Zharnikov
+    orcid: 0009-0000-6893-9231
+    affiliation: Independent Researcher
+  doi: 10.5281/zenodo.20409683
+  date: '2026-06-01'
+  venue: Organization Science
+  license: CC-BY-NC-ND-4.0
+  keywords:
+  - generative AI
+  - role theory
+  - knowledge-based view of the firm
+  - boundary objects
+  - automation-augmentation
+  - cost asymmetry
+  - organizational design
+  - rendering-equivalence
+  - spec-based research
+  - cross-language demonstration.
+  abstract: 'Generative AI shifts the cost structure of organizational knowledge work asymmetrically across
+    the layers of the artifact it produces. The structural substrate — the typed graph of propositions,
+    dependencies, and evidence anchors — becomes cheap to construct, verify, and recombine; the cohort-conditional
+    prose rendering does not, and may become relatively more costly. This paper introduces the Operator
+    as the role-level abstraction that absorbs the shift: a role with intrinsic structural-substrate operations
+    and intrinsic judgment operations, whose human-versus-AI projection composition varies by era. The
+    role-as-projection move extends the automation-augmentation paradox from task allocation to role-level
+    division of operations. Two propositions follow. P1 (separability): structural substrate and rendering
+    are independently optimizable. P4 (rendering-equivalence under spine-preservation): two renderings
+    of a locked substrate converge on conclusions if and only if (iff) both preserve its structural elements,
+    under a faithful extraction axiom. The paper illustrates the framework on a management-theory twin
+    pair (dynamic capabilities) and applies it reflexively to its own production. Empirical estimation
+    of two additional predictions about recombination and cost-asymmetry parameters is reserved for a
+    companion paper. The companion empirical paper extends the validation set across Russian and Chinese
+    with five LLMs from three training-corpus families spanning proprietary APIs and open-weights local
+    deployment, with extractor-invariant preservation verdicts. Three Design Propositions follow for organizational
+    governance, role and incentive design, and editorial-process decoupling.'
+claims:
+- id: P1
+  type: proposition
+  statement: 'Meaning and meaningfulness are separately optimizable: σ takes L → S without consulting
+    any R; ρ takes (S, cohort, language, medium) → R without altering S.'
+  testable: true
+  tested_in_paper: true
+  status: not_tested
+- id: P2
+  type: proposition
+  statement: 'Organizations (research labs, consulting firms, standards bodies) that publish the semantic
+    substrate (S) of their knowledge artifacts as a first-class artifact achieve higher rates of knowledge
+    recombination than organizations that publish only the rendering (R), under boundary conditions C1–C4.
+    v0.5.0 organizational-outcome reframing per Grok r2 NF-grain gap: "Labs that publish spines exhibit
+    higher citation-weighted derivative work (extension, contradiction, or refinement of locked propositions)
+    within 24–36 months than matched labs that publish renderings only."'
+  testable: true
+  tested_in_paper: true
+  status: not_tested
+  depends_on:
+  - P1
+- id: P3
+  type: proposition
+  statement: Under conditions C1–C4, generative-AI verification cost on S scales sub-linearly with claim
+    volume while verification cost on R scales super-linearly. Knowledge-work organizations that allocate
+    AI to S-layer verification and reserve human attention for R-layer sensemaking realize lower total
+    verification cost than organizations that allocate AI uniformly across the artifact.
+  testable: true
+  tested_in_paper: true
+  status: not_tested
+  depends_on:
+  - P1
+  - P2
+- id: P4
+  type: proposition
+  statement: For any artifact whose SPINE.yaml is locked (propositions + dependencies + evidence-anchors
+    + boundary conditions all explicit), two prose renderings of the same spine arrive at the same set
+    of conclusions iff both preserve the spine's structural elements. Renderings may differ on every surface
+    dimension (language, audience register, structural ordering, tone, formatting, length, medium) and
+    still converge on conclusions. When two renderings DISAGREE on any locked proposition, boundary condition,
+    stylized fact, antecedent DAG edge, recommended intervention, or scope claim, at least one has broken
+    the spine.
+  testable: true
+  tested_in_paper: true
+  status: not_tested
+  depends_on:
+  - P1
+  - P3
+methodology:
+  type: mixed
+  design: 5-stage citation verification cascade (Crossref → Semantic Scholar → arXiv → OpenAlex → OpenLibrary
+    → Perplexity). Retroactive spine extraction from external paper.md (or PDF) via Q1 context-capture
+    pipeline + manual proposition coding. Calibrated simulation of recombination advantage under semantic-substrate
+    vs. rendering-only publication.
+  analysis:
+    software: [internal path removed]
+    method: Python 3.12 + uv-managed dependencies
+acceptance:
+- claim_id: P1
+  criterion: 'Holds if meaning and meaningfulness are separately optimizable: σ takes L → S without consulting
+    any R; ρ takes (S, cohort, language, medium) → R without altering S.'
+  falsification: If σ requires inspecting any R(S, c, ℓ, m) to produce S, the middle layer is a projection
+    from rendering rather than from log, and the hierarchy collapses to two-level.
+- claim_id: P2
+  criterion: Holds if organizations (research labs, consulting firms, standards bodies) that publish the
+    semantic substrate (S) of their knowledge artifacts as a first-class artifact achieve higher rates
+    of knowledge recombination than organizations that publish only the rendering (R), under boundary
+    conditions C1–C4.
+  falsification: Under C1–C4, an organization that publishes only R achieves recombination rates indistinguishable
+    from a matched organization that publishes S over a 24–36 month observation window. Empirical test
+    in Paper B v2.0.0+ once prospective lab-cohort data is available; v1.0.0 illustration only.
+- claim_id: P3
+  criterion: Holds if under conditions C1–C4, generative-AI verification cost on S scales sub-linearly
+    with claim volume while verification cost on R scales super-linearly.
+  falsification: Under C1–C4, AI verification cost on R scales at or below the rate on S (empirically
+    β ≥ δ) — which would invert the cost-allocation prescription. Paper B v1.0.0 supplies illustrative
+    β/δ point estimates from N=2 twin-pair extractions; v2.0.0+ supplies confidence intervals; v4.0.0
+    supplies SMJ-scale falsification test.
+- claim_id: P4
+  criterion: Holds if for any artifact whose SPINE.
+  falsification: Two faithful renderings of the same locked spine arrive at DIFFERENT conclusions on a
+    load-bearing proposition without either one having broken the spine. (If found, the renderings would
+    need a hidden spine-layer difference, which contradicts the spine-lock hypothesis.)
+dependencies:
+- relationship: extends
+  claim: builds on zharnikov-2026l
+  critical: false
+  reference: Zharnikov (zharnikov-2026l), this corpus.
+- relationship: extends
+  claim: builds on zharnikov-2026w
+  critical: false
+  reference: Zharnikov (zharnikov-2026w), this corpus.
+- relationship: extends
+  claim: builds on zharnikov-2026d
+  critical: false
+  reference: Zharnikov (zharnikov-2026d), this corpus.
+- relationship: extends
+  claim: builds on zharnikov-2026e
+  critical: false
+  reference: Zharnikov (zharnikov-2026e), this corpus.
+- relationship: extends
+  claim: builds on zharnikov-2026al
+  critical: false
+  reference: Zharnikov (zharnikov-2026al), this corpus.
+- relationship: extends
+  claim: builds on zharnikov-2026am
+  critical: false
+  reference: Zharnikov (zharnikov-2026am), this corpus.
+- relationship: extends
+  claim: builds on zharnikov-r15-ai-search-metamerism
+  critical: false
+  reference: Zharnikov (zharnikov-r15-ai-search-metamerism), this corpus.
+- relationship: extends
+  claim: builds on zharnikov-2026u
+  critical: false
+  reference: Zharnikov (zharnikov-2026u), this corpus.
+- relationship: extends
+  claim: Replaces fabricated Puranam-Raveendran 2024 AMR per Session B Phase-2 DR finding F2.
+  reference: kulkarni-2024-future-of-research-in-ai-driven-world
+- relationship: extends
+  claim: Real Puranam-co-authored Org Sci paper; substitutes the fabricated Puranam-Raveendran 2024 AMR
+    with a related theoretical predecessor.
+  reference: kocak-levinthal-puranam-2023-dual-challenge-search-coordination
+- relationship: extends
+  claim: Real O'Mahony AMJ paper; substitutes the fabricated Seidel-O'Mahony 2023 AMJ.
+  reference: grodal-omahony-2017-grand-challenge-displaced
+- relationship: extends
+  claim: Canonical AMR anchor; verified Session A.
+  doi: 10.5465/amr.2018.0072
+- relationship: extends
+  claim: 'anchor: vonkrogh-2023-recognizing-research-opportunities-ai'
+  reference: vonkrogh-2023-recognizing-research-opportunities-ai
+- relationship: extends
+  claim: 'Canonical Org Sci treatment of syntactic / semantic / pragmatic knowledge-boundary types. The
+    SPINE.yaml is a new species of pragmatic boundary object: machine-operable, version-controlled, typed-DAG-structured.
+    The paper engages Carlile in the mechanism section (§H) to show how a machine-operable DAG addresses
+    the ''transforming'' problem Carlile argues requires collective negotiation — under AI mediation,
+    the negotiation moves into spine-edit operations and FORK/REBASE/MERGE governance, not opaque human
+    deliberation.'
+  reference: carlile-2004-transferring-translating-transforming-boundaries
+- relationship: extends
+  claim: 'The original boundary-object paper Carlile (2004) operationalized for organizations. Star-Griesemer''s
+    plasticity-vs-robustness tradeoff is the load-bearing concept: boundary objects are simultaneously
+    plastic enough to adapt to local needs and robust enough to maintain common identity across sites.
+    The SPINE.yaml''s typed-DAG structure preserves both: the typed-edge catalog supplies robustness;
+    FORK operations supply plasticity. Engaged in §H immediately after Carlile to establish the lineage.'
+  reference: star-griesemer-1989-boundary-objects-museum-vertebrate
+- relationship: extends
+  claim: 'Canonical review distinguishing ''meaning'' (cognitive significance of work) from ''meaningfulness''
+    (personal significance) in organizational behavior. The Operator-role framework reframes where meaningfulness
+    is generated in post-AI research; engaging Rosso-Dekas-Wrzesniewski preempts the "but what does meaning
+    vs meaningfulness already mean in OB?" reviewer objection at Org Sci. Slot: §B thesis statement +
+    Contribution 1 framing.'
+  reference: rosso-dekas-wrzesniewski-2010-meaning-of-work
+- relationship: extends
+  claim: 'Canonical knowledge-based-theory-of-the-firm citation. Establishes knowledge as the firm''s
+    primary strategic asset. The Operator role generalizes Liebeskind''s knowledge-as-firm-asset framing
+    one level up: knowledge is intrinsically substrate (S) + rendering (R); the Operator is the role that
+    maintains the substrate/rendering split. Engaging Liebeskind directly addresses Grok r4 §4 predicted
+    reviewer concern (Operator-role-as-fundamental-OT-advance vs AI-era-domain-framework).'
+  reference: liebeskind-1996-knowledge-strategy-theory-firm
+- relationship: extends
+  claim: Knowledge-based theory of the firm at the problem-solving level. Co-authored by Zenger; resolves
+    the search for "the Felin-Zenger anchor" Grok r2 hallucinated. Nickerson-Zenger frames the firm as
+    a knowledge-coordination apparatus for problem-solving; the Operator role v0.7.0 specifies the role-level
+    structure within that coordination apparatus under generative AI. Engaging Nickerson-Zenger in §4.1
+    + §8 supplies a venue-canonical Org Sci anchor for the role-theoretic contribution.
+  reference: nickerson-zenger-2004-knowledge-based-theory-firm-problem-solving
+- relationship: extends
+  claim: 'Grok r4 §2 first bullet HIGH-priority: "canonical role-theoretic treatment of how occupational
+    roles absorb unexpected events… your Operator role must engage it in §B/§J to show how the structural/judgment
+    split generalizes (or differs from) classic OST role theory rather than appearing sui generis to AI."
+    Bechky-Okhuysen documents how SWAT officers and film crews maintain role-coherence under surprise
+    via ''trading zones'' and coordination; the Operator role v0.7.0 generalizes their role- coordination
+    move to substrate/rendering coordination under AI projection. Engaging Bechky-Okhuysen demonstrates
+    the Operator role is not sui generis to AI-era scholarship.'
+  reference: bechky-okhuysen-2011-expecting-unexpected-swat-film
+- relationship: extends
+  claim: 'Resolves NF2 partially. Grok r2 hallucinated a Felin-Zenger 2023 SMJ on "AI, bounded rationality,
+    and limits of organizational design"; that title does not exist. User-supplied (2026-05-26): the real
+    Felin-Kauffman-Zenger 2023 SMJ is "Resource origins and search" — about where resources come from
+    + how organizations search for them. Engagement angle: the SPINE.yaml IS a resource the organization
+    generates under the Operator role; Felin- Kauffman-Zenger''s framework for resource origins applies
+    directly to spine origins. Operator''s structural substrate operations (extract / maintain DAG / generate
+    drafts) are the search activities that produce the spine-as-resource; the Operator''s judgment operations
+    (FORK / REBASE / MERGE / cohort-specific rendering) are the strategic choices about which resources
+    to generate. The role-theoretic contribution sits at the intersection of KBT-of-firm (Liebeskind 1996;
+    Nickerson-Zenger 2004) and resource-origin theory (Felin-Kauffman-Zenger 2023). NF2 updated to RESOLVED-PARTIAL:
+    original Grok-suggested citation does not exist; real Felin-Zenger collaboration on adjacent topic
+    engaged. Discipline preserved: the verification cascade still caught the original Grok hallucination
+    pre-draft.'
+  reference: felin-kauffman-zenger-2023-resource-origins-search
+- relationship: extends
+  claim: 'Resolves NF3 partially. Grok r4 hallucinated a Leonardi-Vaast 2017 Org Sci "sociality of algorithms";
+    that title/venue does not exist. User-supplied (2026-05-26): the real Leonardi-Vaast 2017 paper is
+    in AM Annals — "Social Media and Their Affordances for Organizing: A Review and Agenda for Research."
+    Different topic (social media affordances vs sociality of algorithms) but from the same authors in
+    the same year. Engagement angle: the affordance perspective is directly applicable to the SPINE.yaml.
+    Leonardi-Vaast theorize how technological artifacts (social media) afford specific organizing patterns
+    through their material properties; the SPINE.yaml is a technological artifact whose typed-DAG structure
+    + machine-operability + edge-type catalog affords specific Operator-role projection patterns (structural
+    substrate operations via AI; judgment operations via human). Strong venue-canonical anchor for §5
+    (three-level hierarchy as affordance structure) and §H (mechanism = affordance specification). AM
+    Annals is a venue-credible review journal that Org Sci reviewers will recognize as theoretical-foundation
+    literature. NF3 updated to RESOLVED-PARTIAL: original Grok-suggested citation does not exist; real
+    Leonardi-Vaast 2017 collaboration on adjacent topic engaged. Discipline preserved: the verification
+    cascade still caught the original Grok hallucination pre-draft.'
+  reference: leonardi-vaast-2017-social-media-affordances-organizing
+- relationship: extends
+  claim: Murray-Rhymer-Sirmon 2021 introduces conjoined-agency forms in organizations. The Operator role
+    extends conjoined-agency from pairing forms to structural-substrate-versus-judgment-class pairing
+    at the role level.
+  reference: murray-rhymer-sirmon-2021-conjoined-agency
+- relationship: extends
+  claim: Kellogg-Valentine-Christin 2020 documents algorithmic control as contested terrain — humans retain
+    judgment via resistance. The framework specifies the role architecture under which judgment retention
+    is structurally rather than politically necessary.
+  reference: kellogg-valentine-christin-2020-algorithms-at-work
+- relationship: extends
+  claim: Lebovitz-Levina-Lifshitz-Assaf 2021 documents AI tools producing verification-cost asymmetries
+    on expert ground truth. Direct empirical grounding for SF1 and P3.
+  reference: lebovitz-levina-lifshitz-assaf-2021-ai-ground-truth
+- relationship: extends
+  claim: Companion to Lebovitz et al. 2021 MISQ. Documents professionals engaging (or not) with AI for
+    critical judgments — exactly the judgment-stays-with-human pattern the framework predicts. Strong
+    Org Sci anchor. Bonus find during Crossref verification.
+  reference: lebovitz-lifshitz-assaf-levina-2022-engage-or-not-ai
+- relationship: extends
+  claim: Faraj-Pachidi-Sayegh 2018 supplies the early call for role reconfiguration under learning-algorithm
+    mediation the framework answers at Operator level six years later under capable generative AI.
+  reference: faraj-pachidi-sayegh-2018-learning-algorithm
+- relationship: extends
+  claim: User-supplied 2026-05-26 as real-adjacent paper resolving NF4 (post-draft Grok hallucinated Bailey-Barley
+    2023 Org Sci role- evolution under AI). Bailey-Barley 2010 examines how environments shape role structure
+    through teaching-learning episodes; the Operator's era-dependent projection extends this environment-
+    shaping logic to operator-internal operation-class projection.
+  reference: bailey-barley-2010-teaching-learning-ecologies
+- relationship: extends
+  claim: User-supplied 2026-05-26 as real-adjacent paper resolving NF5 (post-draft Grok hallucinated Leonardi
+    2024 Org Sci AI-future-of- work). Leonardi-Pilny-Treem-Sharma 2024 surveys AI's effects on organizational
+    communication including meaning-construction processes the framework theorizes at the substrate-rendering
+    layer cut. Book chapter not journal article; topic match direct.
+  reference: leonardi-pilny-treem-sharma-2024-ai-organizational-communication
+- relationship: extends
+  claim: 'Field-experimental evidence of generative AI''s effect on knowledge-work productivity (N=5,172
+    customer-support agents; 15% average productivity gain with substantial heterogeneity). Directly empirically
+    grounds the framework''s cost-asymmetry claim at the practitioner-task level and supplies SF1 with
+    a QJE-anchor. Heterogeneity result (less-experienced workers gain most; most-experienced see small
+    gains/declines) is itself consistent with the framework''s structural-substrate / judgment split:
+    AI projection helps where structural-substrate operations are the binding constraint (less-experienced
+    workers) less where judgment operations are (most-experienced workers).'
+  reference: brynjolfsson-li-raymond-2025-generative-ai-at-work
+- relationship: extends
+  claim: Dell'Acqua-McFowland-Mollick 2023 supply field-experimental evidence of AI's "jagged technological
+    frontier" — knowledge- worker tasks the AI improves on versus tasks it impairs are not pre-predictable
+    from the task's surface features. Adjacent empirical anchor for SF1; the framework's structural-substrate
+    / judgment partition supplies a principled basis for predicting the jagged pattern Dell'Acqua et al.
+    document descriptively.
+  reference: dell-acqua-mcfowland-mollick-2023-jagged-technological-frontier
+- relationship: extends
+  claim: Berente-Gu-Recker 2021 supplies the management-of-AI editorial- framing piece anchoring MIS Quarterly's
+    AI special issue. Engaged in Discussion as a venue-canonical anchor for the organizational-management
+    dimension of the framework's practical-implications subsection.
+  reference: berente-gu-recker-2021-managing-artificial-intelligence
+- relationship: extends
+  claim: Grodal-Ha-Hood 2024 documents the social construction of the generative AI category through human-machine
+    boundary-making. Engaged in Discussion as theoretical predecessor for how the Operator role itself
+    can be understood as a new role category emerging through the human-AI boundary-making process the
+    paper formalizes structurally.
+  reference: grodal-ha-hood-2024-humans-machines-generative-ai-category
+- relationship: extends
+  claim: User-supplied 2026-05-26 as real-adjacent paper resolving NF11 (post-draft Grok r2 hallucinated
+    Puranam-Raveendran 2024 SMJ AI-theory-firm-revisited; pattern recurring across r1 + r2 cycles). Marchetti-Puranam
+    2025 documents that less-hierarchical firms exhibit stronger cultures via big-data analysis — speaks
+    directly to the framework's claim that the Operator-role restructure (substrate published; rendering
+    decoupled) is a lower-hierarchy organizational form that strengthens coordination via shared substrate-as-culture.
+    Engaged in Discussion KBV-positioning subsection.
+  reference: marchetti-puranam-2025-less-hierarchical-stronger-cultures
+- relationship: extends
+  claim: User-supplied 2026-05-26 as real-adjacent paper resolving NF13 (post-draft Grok r2 hallucinated
+    Seidel-Berente 2023 Org Sci AI- knowledge-boundaries). Seidel-Berente-Baiyere 2025 develops a repertoire
+    model of institutionally embedded affordances during digital transformation — the framework's typed-DAG
+    substrate is a worked instance of an institutionally-embedded affordance repertoire under the AI-projection
+    era. Engaged in Discussion spine-as-affordance subsection.
+  reference: seidel-berente-baiyere-2025-stability-change-digital-transformation
+- relationship: extends
+  claim: User-supplied 2026-05-26 as real-adjacent paper resolving the Seidel-X hallucination shape (Grok
+    r1 hallucinated Seidel- O'Mahony 2023 AMJ; Grok r2 hallucinated Seidel-Berente 2023 Org Sci; user
+    found the real Seidel-O'Mahony 2014 Org Sci paper Grok was approximating). Seidel-O'Mahony 2014 documents
+    how product-design teams coordinate via stories / metaphors / prototypes — three types of concept
+    representations the framework's substrate / rendering decomposition supplies a principled architecture
+    for.
+  doi: 10.1287/orsc.2013.0879
+- relationship: extends
+  claim: User-supplied 2026-05-26 as bonus real-adjacent paper surfaced during NF13 verification. Berente-Seidel-Safadi
+    2019 develops a grounded-theory-from-trace-data method (sampling / synchronic / lexical-framing /
+    diachronic) that parallels the framework's spine-first protocol at the methods layer — the substrate
+    is the trace-data layer; the framework's intervention prescribes similar discipline at the rendering-from-substrate
+    cycle.
+  reference: berente-seidel-safadi-2019-data-driven-theory-development
+- relationship: extends
+  claim: Paper B 2026ap takes the empirical estimation of P2 (recombination) and P3 (verification-cost
+    asymmetry β/δ) at growing-N twin-pair cohort. v1.0.0 ships with N=2 focal pair (Eisenhardt-Martin
+    2000 SMJ + Zollo-Winter 2002 Org Sci) per Grok r3 §5 endorsement, plus N=2 secondary pair (Tushman-O'Reilly
+    1996 CMR + Duncan 1976 Kilmann-ed.) for 20-year-gap sensitivity. v2.0.0+ adds prospective lab-cohort
+    data. v4.0.0 targets SMJ submission scale. Each version cites Paper A 2026ao DOI as theoretical foundation.
+    Scoping doc at [internal path removed]
+  reference: zharnikov-2026ap-meaningfulness-empirical-companion
+- relationship: extends
+  claim: 'Multiple-discovery hypothesis: independent discovery of the same idea is structurally inevitable
+    under shared substrate conditions.'
+  reference: merton-1961-singletons-multiples-scientific-discovery
+- relationship: extends
+  claim: 'Title correction at v0.3.0: actual title is ''...Zeitgeist, genius, or chance?'' not ''...Zuckerman''s
+    theory revisited'' (Crossref-confirmed). Quantitative model of multiple-discovery frequency.'
+  reference: simonton-1979-multiple-discovery-zeitgeist-genius-chance
+- relationship: extends
+  claim: 'Michaël Bikard (not David Bikard the microbiologist — common-name disambiguation: there are
+    two D./M. Bikards in the literature). Bikard 2020 cites Merton 1963 (book version, not the 1961 PAPS
+    paper); both should be cited. Idea-twins as research-tool in strategy: closest prior art for using
+    twin pairs as natural experiments in management theory. Bikard 2020 also supplies a method for systematically
+    identifying recent simultaneous discoveries from open data sources, plus a dataset; both are relevant
+    for any Phase-3 extension of the meaningfulness paper.'
+  reference: bikard-2020-idea-twins-simultaneous-discoveries-research-tool
+- relationship: extends
+  claim: 'anchor: heisenberg-1925-quantum-theoretical-reinterpretation'
+  reference: heisenberg-1925-quantum-theoretical-reinterpretation
+- relationship: extends
+  claim: 'anchor: born-jordan-1925-zur-quantenmechanik'
+  doi: 10.1007/BF01328531
+- relationship: extends
+  claim: 'anchor: born-heisenberg-jordan-1926-three-men-paper'
+  reference: born-heisenberg-jordan-1926-three-men-paper
+- relationship: extends
+  claim: Heisenberg's multi-body quantum mechanics paper; demonstrates matrix-mechanics generalization
+    beyond one-electron systems.
+  reference: heisenberg-1926-mehrkorperproblem-resonanz
+- relationship: extends
+  claim: Two-electron spectra; demonstrates matrix-mechanics application to helium and other multi-electron
+    atoms.
+  reference: heisenberg-1926-spektra-zwei-elektronen
+- relationship: extends
+  claim: 'Pauli derived the Balmer hydrogen-atom spectrum from matrix mechanics in the same week (early
+    1926) that Schrödinger derived it from wave mechanics. This is a *third* twin-pair data point: independent
+    derivation of the same empirical predictions via the matrix-mechanics formalism, simultaneous with
+    Schrödinger''s wave-mechanics derivation. Strengthens T1''s natural-experiment status. Cited without
+    PDF acquisition; metadata-defensible at academic standard.'
+  reference: pauli-1926-wasserstoffspektrum-neue-quantenmechanik
+- relationship: extends
+  claim: 'Pauli 1927 "Zur Quantenmechanik des magnetischen Elektrons" (Delphenich English: "On the quantum
+    mechanics of magnetic electrons"). User- supplied PDF v0.7.1 (2026-05-26). Pauli explicitly derives
+    the Schrödinger wave-mechanics form of the magnetic-electron problem AND states the derivation produces
+    results "completely equivalent in their consequences to the matrix equations of Heisenberg and Jordan"
+    (abstract; verbatim Delphenich translation). This is a *within- author rendering-equivalence demonstration*:
+    same operator (Pauli) explicitly performs both renderings (matrix-mechanics treatment of spin in Heisenberg-Jordan
+    + Schrödinger wave-mechanics method in Pauli 1927) and explicitly notes their equivalence. Stronger
+    P4 evidence than the cross-author H-S equivalence because it removes possible coordination/cross-influence
+    concerns: a single author doing both renderings within one paper cannot have coordinated with himself
+    or been influenced by external bias. Auxiliary T1 supporting evidence; appendix-depth at Paper A Phase
+    3 drafting ("Online Appendix D — Historical Existence Proof (Non-Management Domain)"). Per PIVOT-SPLIT
+    discipline (H-S preserved as historical existence proof for P4; main body weight at Eisenhardt-Martin
+    + Zollo- Winter management twin pair), Pauli 1927 strengthens the historical- record evidence without
+    expanding main-body weight Grok r5 asked to reduce.'
+  reference: pauli-1927-quantenmechanik-magnetischen-elektrons
+- relationship: extends
+  claim: Born's probabilistic interpretation of ψ (the ψψ̄ ≡ probability density reading that Schrödinger's
+    S3 proposition does NOT adopt). Relevant because the spine extraction of Schrödinger 1926 must note
+    that S3 (charge-density interpretation) was later superseded by Born's probability interpretation
+    — schema v0.2's L_S2 limitation in the Schrödinger spine names this.
+  reference: born-1926-quantenmechanik-stossvorgaenge
+- relationship: extends
+  claim: Heisenberg's collected-works archival reprint of 'Schwankungserscheinungen und Quantenmechanik';
+    auxiliary historical reference.
+  reference: heisenberg-1985-schwankungserscheinungen-collected-works
+- relationship: extends
+  claim: 'anchor: schrodinger-1926-quantisierung-als-eigenwertproblem'
+  reference: schrodinger-1926-quantisierung-als-eigenwertproblem
+- relationship: extends
+  claim: 'The critical document for P4: Schrödinger himself shows matrix mechanics and wave mechanics
+    are mathematically equivalent — the natural-experiment confirmation of rendering-equivalence.'
+  reference: schrodinger-1926-equivalence-heisenberg-wave-mechanics
+- relationship: extends
+  claim: Acquired v0.4.0 by operator. The rigorous Hilbert-space functional-analytic foundation of the
+    matrix-vs-wave-mechanics equivalence; canonical formal-equivalence citation.
+  reference: vonneumann-1932-mathematical-foundations-quantum-mechanics
+- relationship: extends
+  claim: Acquired v0.4.0 by operator. Multiple-discovery hypothesis canonical source. Merton 1961 PAPS
+    paper; later expanded in Merton 1973 Sociology of Science book that Bikard 2020 cites.
+  reference: merton-1961-singletons-multiples-scientific-discovery-acquired
+- relationship: extends
+  claim: 'anchor: cover-2006-elements-information-theory'
+  doi: 10.1002/047174882x
+- relationship: extends
+  claim: 'anchor: nakajima-2026-log-is-the-agent'
+  reference: nakajima-2026-log-is-the-agent
+- relationship: extends
+  claim: Theorizing-forms taxonomy locates the Operator-role contribution within organization-theory scholarship's
+    typology of theory contributions; useful for Section-3 positioning per Grok r2 §1 ask.
+  reference: cornelissen-hollerer-seidl-2021-theorizing-forms
+- relationship: extends
+  claim: Scarcity-to-abundance framing of scholarship in the GenAI era; supplies the field-level intervention
+    this paper's Operator-role-as-projection move extends to the artifact level.
+  reference: grimes-vonKrogh-feuerriegel-rink-gruber-2023-scarcity-to-abundance
+- relationship: extends
+  claim: KM-perspective revisit of Alavi-Leidner 2001 in the GenAI era; substrate-vs-rendering decomposition
+    this paper formalizes is consistent with the KM lens Alavi-Leidner identify and Alavi-Leidner-Mousavi
+    2024 update.
+  reference: alavi-leidner-mousavi-2024-km-perspective-genai
+- relationship: extends
+  claim: GenAI-promises-and-perils taxonomy for knowledge-and-creative work; supplies a taxonomy the Operator-role
+    / three-layer L→S→R decomposition organizes around the structural asymmetry the cost-function specifies.
+  doi: 10.17705/1jais.00861
+contradictions: []
+limitations:
+- description: Corpus-internal SF1 evidence (F1) is based on a single-session aggregate observation; statistical
+    generalization from corpus-internal observations alone is not warranted. Public-paper SF1 evidence
+    prioritizes published RAG-hallucination benchmarks identified in Session C Phase-2 DR.
+  severity: moderate
+  addressable: true
+- description: T1 (Heisenberg-Schrödinger) extraction is necessarily a retroactive reconstruction; the
+    papers' authors had no concept of SPINE.yaml. Reviewers may dispute whether what we extract is 'their
+    spine' or 'our projection of their spine.'
+  severity: moderate
+  addressable: true
+- description: Early drafts of this paper contained external references that did not verify under the
+    verification cascade prescribed by the framework. The protocol resolved the discrepancies pre-publication.
+    The audit record is maintained internally; the public paper does not foreground this incident as evidence,
+    treating it as standard operational hygiene rather than as a self-referential SF1 demonstration.
+  severity: moderate
+  addressable: true
+repositories:
+- platform: GitHub
+  url: https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness
+  notes: machine-readable source bundle (canonical SSOT)
+- platform: Zenodo
+  url: https://doi.org/10.5281/zenodo.20409683
+  doi: 10.5281/zenodo.20409683
+submission_history: []

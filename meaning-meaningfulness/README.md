@@ -1,97 +1,39 @@
 [![MIT License](https://img.shields.io/badge/Code-MIT-blue.svg)](../LICENSE)
 [![CC-BY 4.0](https://img.shields.io/badge/Data-CC--BY_4.0-lightgrey.svg)](../LICENSE-data)
-![Last Updated](https://img.shields.io/badge/updated-2026--05--29-success)
+![Last Updated](https://img.shields.io/badge/updated-2026--06--16-success)
 
-# meaning-meaningfulness — Paper A 2026ao
-
-**Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work**
-
-Working Paper v1.0.0 — Dmitry Zharnikov ([ORCID 0009-0000-6893-9231](https://orcid.org/0009-0000-6893-9231))
-
-- **Concept DOI**: [10.5281/zenodo.20409683](https://doi.org/10.5281/zenodo.20409683) — always resolves to latest version
-- **v1.0.0 DOI**: [10.5281/zenodo.20409684](https://doi.org/10.5281/zenodo.20409684)
-- **License**: CC BY 4.0 (paper) + MIT (code)
-
-## Citation
-
-If you use this work, please cite the v1.0.0 DOI [10.5281/zenodo.20409684](https://doi.org/10.5281/zenodo.20409684) or use the [CITATION.cff](CITATION.cff) machine-readable companion.
-
-## Companion empirical paper
-
-This theory paper is supplemented by [**Paper B 2026ap**](../meaning-meaningfulness-empirical/) (concept DOI [10.5281/zenodo.20409701](https://doi.org/10.5281/zenodo.20409701)), which empirically demonstrates P4 (rendering-equivalence under spine-preservation) on two management-theory twin pairs plus three self-application renderings.
-
-## Repository layout
-
-```
-meaning-meaningfulness/
-├── README.md                                              # this file
-├── paper.md                                                # main body, ~10,560 words
-├── paper.yaml                                              # frontmatter (paper-spec)
-├── CITATION.cff                                            # citation metadata
-├── CONTRIBUTORS.yaml                                       # CRediT roles + AI disclosure
-├── PROVENANCE.yaml                                         # public provenance trail
-├── appendix_A_schema.md                                    # substrate schema + preservation theorem + κ threshold
-├── appendix_B_protocol.md                                  # spine-first drafting protocol
-├── appendix_C_simulation.md                                # cost-asymmetry simulation harness
-├── appendix_D_historical_existence_proof.md                # Heisenberg-Schrödinger founding pair
-├── SPINE.yaml                                              # v0.7.3; 52 verified external_anchors; 14 NF entries
-├── VALIDATION_CASE_T1_HEISENBERG_SPINE.yaml                # founding-pair illustrative extraction (T1)
-├── VALIDATION_CASE_T1_SCHRODINGER_SPINE.yaml
-├── VALIDATION_CASE_T1_SCHRODINGER_EQUIVALENCE_NOTES.md
-├── VALIDATION_CASE_T2_KULKARNI_2024_SPINE.yaml             # contemporary AI-research-policy extraction (T2)
-├── TWIN_PAIR_SPINE_ISOMORPHISM.md                          # T1 isomorphism analysis
-└── code/                                                   # companion computation scaffold
-```
-
-## Theoretical contribution
-
-This paper introduces:
-
-1. **The Operator role** — a role-level abstraction above the human-vs-AI instance distinction. The Operator has intrinsic structural-substrate operations (allocated to AI projection in the post-AI era) and intrinsic judgment operations (retained by human projection). The projection composition is era-dependent.
-
-2. **The three-layer L → S → R decomposition** — every knowledge artifact has a log substrate L (append-only authoring events), a semantic spine S = σ(L) (typed directed graph; 10 node types + 17 edge types), and a rendering R = ρ(S, audience, language, medium) (cohort-conditional prose).
-
-3. **P1 (separability)** — structural substrate and rendering are independently optimizable under boundary conditions C1-C4.
-
-4. **P4 (rendering-equivalence under spine-preservation)** — two renderings of a locked substrate converge on conclusions if and only if both renderings preserve the substrate's structural elements, under axiom A1 (σ-faithfulness on locked subsets).
-
-5. **P2 (recombination)** + **P3 (verification-cost asymmetry β/δ)** — stated as theoretically-derived predictions with explicit falsifiers; empirical estimation in Paper B 2026ap.
-
-6. **Three Design Propositions DP1/DP2/DP3** — for organizational governance, role and incentive design, and editorial-process decoupling.
-
-## Reproducibility
-
-The P3 cost-asymmetry crossover chart is reproducible from `code/cost_asymmetry_crossover.py` (analytic, deterministic — `python cost_asymmetry_crossover.py` prints the crossover `x* ≈ 72.21` and writes the PNG + SVG; see [code/README.md](code/README.md)). The cost-asymmetry *simulation* Appendix C points to a separate Monte-Carlo harness `code/cost_asymmetry_simulation.py` (scaffold; implementation lands at v1.1.0, random seed `42`). The historical existence proof (Heisenberg + Schrödinger founding pair; Appendix D) is documented at illustrative extraction depth in `VALIDATION_CASE_T1_*` files for reviewer inspection.
-
----
+# Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work
 
 ## 1 | Paper
 
-See [paper.md](paper.md). Working Paper v1.1.0. Concept DOI [10.5281/zenodo.20409683](https://doi.org/10.5281/zenodo.20409683) (resolves to latest version); v1.0.0 version DOI [10.5281/zenodo.20409684](https://doi.org/10.5281/zenodo.20409684).
+- Manuscript: [paper.md](paper.md)
+- Version: 1.0.0
+- DOI: [10.5281/zenodo.20409683](https://doi.org/10.5281/zenodo.20409683)
+- Machine-readable bundle: [paper.yaml](paper.yaml) (Paper Spec), [SPINE.yaml](SPINE.yaml), [ONTOLOGY.yaml](ONTOLOGY.yaml), [GLOSSARY.md](GLOSSARY.md)
 
-## 2 | Companion Data
+## 2 | Citations
 
-No companion HuggingFace dataset for this paper. The machine-readable substrate ships in-repo as `SPINE.yaml` (v0.7.3; 52 verified external_anchors). The empirical companion paper 2026ap (concept DOI [10.5281/zenodo.20409701](https://doi.org/10.5281/zenodo.20409701)) lives in a separate slug directory.
+`paper.md` is the source artifact; inline citations use the `[@citation_key]` form. The full bibliography lives in the companion `.bib` file; see [CITATIONS.md](CITATIONS.md) for how to resolve and render them.
 
-## 3 | Reproduction
-
-The `code/` directory ships `cost_asymmetry_crossover.py` — the analytic P3 cost-asymmetry crossover chart (deterministic; `python cost_asymmetry_crossover.py` → crossover `x* ≈ 72.21` + PNG/SVG; [code/README.md](code/README.md) has the full script map). The cost-asymmetry *simulation* script (`cost_asymmetry_simulation.py`, random seed `42`) is a separate Monte-Carlo harness that lands at v1.1.0 per Appendix C. The substrate-level validation artifacts (`VALIDATION_CASE_T1_*`, `VALIDATION_CASE_T2_*`, `TWIN_PAIR_SPINE_ISOMORPHISM.md`) are directly inspectable in-repo.
-
-## 4 | Citation
+## 3 | Citation
 
 ```bibtex
-@article{zharnikov2026meaning,
-  author = {Dmitry Zharnikov},
-  title  = {Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work},
-  year   = {2026},
-  doi    = {10.5281/zenodo.20409683}
+@article{Zharnikov2026,
+  author  = {Zharnikov, Dmitry},
+  title   = {Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work},
+  year    = {2026},
+  doi     = {10.5281/zenodo.20409683},
+  url     = {https://doi.org/10.5281/zenodo.20409683},
+  version = {1.0.0},
 }
 ```
 
 Machine-readable: [CITATION.cff](CITATION.cff).
 
-## 5 | Licence
+## 4 | Licence
 
-Code (if any): MIT — see hub-level [../LICENSE](../LICENSE). Data, figures, tables: CC BY 4.0 — see hub-level [../LICENSE-data](../LICENSE-data). Paper text: CC BY-NC-ND 4.0 (matches published Zenodo PDF; see [CITATION.cff](CITATION.cff)).
+Code (if any): MIT — see hub-level [../LICENSE](../LICENSE). Data, figures, tables: CC BY 4.0 — see hub-level [../LICENSE-data](../LICENSE-data).
 
-*Last updated: 2026-06-09*
+---
+
+*Last updated: 2026-06-16*

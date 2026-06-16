@@ -1,68 +1,37 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it as below."
-type: article
-title: "Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work"
+message: "If you use this paper, please cite it as below."
 authors:
-  - family-names: "Zharnikov"
-    given-names: "Dmitry"
+  - family-names: Zharnikov
+    given-names: Dmitry
+    affiliation: "Independent Researcher"
     orcid: "https://orcid.org/0009-0000-6893-9231"
-date-released: "2026-05-27"
+title: "Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work"
 version: 1.0.0
-keywords:
-  - generative AI
-  - knowledge work
-  - operator role
-  - automation-augmentation
-  - boundary objects
-  - knowledge-based theory of the firm
-  - cost asymmetry
-  - rendering equivalence
-  - spine-first drafting
-  - organization theory
-status: working-paper (Phase 3 drafting; pre-Zenodo)
-abstract: >-
-  Generative AI shifts the cost structure of scholarly knowledge work
-  asymmetrically across the layers of the artifact: structural substrate
-  becomes cheap to construct, verify, and recombine at scale; cohort-
-  conditional rendering does not. This paper introduces the Operator as
-  the role-level abstraction whose intrinsic structural-substrate and
-  judgment operations partition the work the way the cost asymmetry
-  prescribes. P1 (separability) and P4 (rendering-equivalence under
-  spine-preservation as a graph-theoretic preservation theorem under a
-  faithful-extraction axiom) are the primary propositions. P2 (recombination)
-  and P3 (verification-cost asymmetry parameters β and δ) are stated
-  as theoretically-derived predictions with explicit falsifiers; their
-  empirical estimation is the scope of a companion empirical working paper.
-  Illustrative validation on a contemporary management-theory twin pair
-  (Eisenhardt-Martin 2000 + Zollo-Winter 2002); historical existence proof
-  on the Heisenberg-Schrödinger founding papers of quantum mechanics;
-  self-application by construction.
-doi: "10.5281/zenodo.20409684"
+date-released: 2026-06-14
+url: "https://doi.org/10.5281/zenodo.20409683"
+repository-code: "https://github.com/spectralbranding/meaningfulness-papers"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.20409683"
-    description: "Concept DOI (resolves to latest version)"
-  - type: doi
-    value: "10.5281/zenodo.20409684"
-    description: "Version DOI (v1.0.0)"
-  - type: other
-    value: "internal: 2026ao"
-    description: "Internal paper key per CANONICAL_REFERENCES.md"
-license: "CC-BY-4.0"
-url: "https://doi.org/10.5281/zenodo.20409683"
-repository-code: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness"
-references:
-  - type: article
-    authors:
-      - family-names: Zharnikov
-        given-names: Dmitry
-    title: "Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work"
-    year: 2026
-    notes: "Empirical companion paper; Paper B 2026ap"
-    doi: "10.5281/zenodo.20409701"
-  - type: software
-    title: "Cost-asymmetry simulation companion script"
-    repository-code: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness/code"
-  - type: dataset
-    title: "Paper substrate (SPINE.yaml) as machine-readable companion"
-    repository: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness"
+    description: "Zenodo concept DOI (all versions)"
+keywords:
+  - generative AI
+  - role theory
+  - knowledge-based view of the firm
+  - boundary objects
+  - automation-augmentation
+  - cost asymmetry
+  - organizational design
+  - rendering-equivalence
+  - spec-based research
+  - cross-language demonstration.
+license: MIT
+type: article
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Zharnikov
+      given-names: Dmitry
+  title: "Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work"
+  year: 2026
+  url: "https://doi.org/10.5281/zenodo.20409683"

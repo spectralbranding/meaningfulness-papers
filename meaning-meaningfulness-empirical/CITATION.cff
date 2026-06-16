@@ -1,44 +1,19 @@
 cff-version: 1.2.0
-message: "If you use this paper or its data, please cite it as below."
+message: "If you use this paper, please cite it as below."
 authors:
   - family-names: Zharnikov
     given-names: Dmitry
+    affiliation: "Independent Researcher"
     orcid: "https://orcid.org/0009-0000-6893-9231"
 title: "Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work"
-version: "1.1.0"
-date-released: "2026-05-28"
+version: 1.1.0
+date-released: 2026-06-14
 url: "https://doi.org/10.5281/zenodo.20409701"
-doi: "10.5281/zenodo.20409702"
+repository-code: "https://github.com/spectralbranding/meaningfulness-papers"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.20409701"
-    description: "Concept DOI (resolves to latest version)"
-  - type: doi
-    value: "10.5281/zenodo.20409702"
-    description: "Version DOI (v1.0.0); v1.1.0 DOI pending Zenodo upload"
-type: software
-repository-code: "https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical"
-abstract: |
-  This paper supplies an empirical demonstration of Zharnikov's (2026ao)
-  Proposition P4 (rendering-equivalence under spine-preservation) in
-  management theory. The paper extends the companion theory's
-  Heisenberg-Schrödinger historical existence proof into contemporary
-  strategy research via retroactive structural extractions of two pairs
-  of independently-authored papers: a dynamic-capabilities pair
-  (Eisenhardt and Martin 2000 + Zollo and Winter 2002) and a knowledge-
-  based-view pair from the SMJ Winter 1996 Special Issue (Grant 1996 +
-  Liebeskind 1996). The recombination metric Rec returns 4 linked
-  propositions with preserved antecedents on each pair. A random-graph
-  null baseline shows Pr(Rec >= 3 by chance) ~ .000 across 1,000 size-
-  matched shadows. Two additional renderings of substrates already in
-  the corpus — a 1,615-word practitioner-register Substack rendering of
-  the paper's own structure and a 1,044-word LinkedIn rendering of the
-  focal-pair shared substrate — preserve 11 of 14 locked propositions
-  and 4 of 4 substrate items respectively. Secondary β/δ estimates
-  satisfy the cost-asymmetry ordering. Inter-coder reliability on axiom
-  A1 is pre-registered for v1.1.0 execution. The paper engages
-  recombinant-search and knowledge-representation scholarship as
-  theoretical antecedents.
+    description: "Zenodo concept DOI (all versions)"
 keywords:
   - generative AI
   - rendering-equivalence
@@ -48,12 +23,17 @@ keywords:
   - knowledge-based view
   - working-paper format
   - organizational knowledge work
-references:
-  - type: article
-    authors:
-      - family-names: Zharnikov
-        given-names: Dmitry
-    title: "Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of Meaning and Meaningfulness in Organizational Knowledge Work"
-    year: 2026
-    notes: "Companion theory paper; Paper A 2026ao"
-    doi: "10.5281/zenodo.20409683"
+  - cross-language demonstration
+  - multi-LLM evaluation
+  - open-weights local deployment
+  - cross-extractor robustness.
+license: MIT
+type: article
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Zharnikov
+      given-names: Dmitry
+  title: "Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work"
+  year: 2026
+  url: "https://doi.org/10.5281/zenodo.20409701"

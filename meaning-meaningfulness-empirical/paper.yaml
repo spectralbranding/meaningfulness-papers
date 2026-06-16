@@ -1,108 +1,161 @@
----
-title: "Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work"
-short_title: "Rendering-Equivalence Demonstration (Paper B 2026ap)"
-author:
-  name: "Dmitry Zharnikov"
-  orcid: "0009-0000-6893-9231"
-paper_key: "2026ap"
-companion_paper_key: "2026ao"
-companion_paper_concept_doi: "10.5281/zenodo.20409683"
-version: "1.1.0"
-release_notes_v1_1_0: >
-  v1.1.0 additions: Phase 3.5c Russian-native LLM retry (GigaChat Rec=12, YandexGPT Rec=11);
-  Phase 3.5d Chinese cross-language P4 demonstration (DeepSeek Rec=12, Claude Opus Rec=11,
-  Qwen3.6:27b-Ollama Rec=12; cross-extractor robustness Rec=12); Method §Cross-language extension;
-  Results §Cross-language results Tables 6-7; Discussion §Cross-language and cross-deployment-tier;
-  Limitations: cross-language abstract-scale caveat; L0-L4 cascade structure (experiment/);
-  models.yaml single source of truth; prompts/ publication; HuggingFace dataset DOI 10.57967/hf/8971.
-zenodo_doi_v2: "10.5281/zenodo.20429174"
-status: "v1.1.0 public Zenodo release: integrative theory engagement with Carlile 2004 + Raisch-Krakowski 2021 + Kaplan-Vakili 2015 + Felin-Kauffman-Zenger 2023 + Levinthal-March 1993; random-graph null baseline (Pr(Rec ≥ 4 by chance) = .000); Phase 2 Task α Substack self-application (11/14 strict / 14/14 semantic preservation under within-operator extraction; 9/14 strict / 14/14 semantic under cross-operator GPT-4o extraction); Phase 2.5 cross-paper P4 rendering of Paper A's full theoretical apparatus (12/15 strict / 15/15 semantic within-operator; 10/15 / 14/15 cross-operator); Phase 3 Task β LinkedIn third rendering of focal-pair substrate (Rec=4); cross-operator extraction discipline (Operator B ≠ Operator C); LLM-call professional logging; Conclusion section; abstract at 195 words; Task γ cross-language (Russian + Chinese) + Phase 3.5b/c/d multi-LLM cross-FAMILY executed in v1.1.0; Task δ inter-coder κ remains pre-registered for a future release. Internal drafting versions across four drafting Sessions (E + F + G + H) consolidated to public v1.0.0 per feedback_version_only_at_zenodo HARD RULE; see PROVENANCE.yaml for internal drafting history."
-date: "2026-05-28"
-
-target_venue:
-  primary: "Strategic Management Journal"
-  secondary: "Organization Science"
-  tertiary: "Journal of Management Studies"
-
-paper_type: "empirical"
-sub_canon: "empirical-companion (paired with Paper A 2026ao theoretical foundation; central engagement is paper_a:P4 rendering-equivalence under spine-preservation)"
-
-zenodo:
-  concept_doi: "10.5281/zenodo.20409701"
-  version_doi: "10.5281/zenodo.20409702"
-  upload_status: "v1.0.0 jointly uploaded with Paper A 2026ao on 2026-05-27 per SESSION_I 13-step procedure"
-
-body_word_count_approx: 11878
-abstract_word_count: 195
-title_word_count: 12
-references_count: 26
-
-contributions:
-  - "Empirical demonstration of paper_a:P4 (rendering-equivalence under spine-preservation) on two independently-authored management-theory twin pairs: focal dynamic-capabilities pair (Eisenhardt-Martin 2000 + Zollo-Winter 2002) at Rec = 4 linked propositions with preserved antecedents; KBV pair (Grant 1996 + Liebeskind 1996) at Rec = 4 linked propositions with preserved antecedents. Each Rec value measures structural-substrate preservation across two prose renderings — direct paper_a:P4 evidence extending the companion theory's Online Appendix D Heisenberg-Schrödinger historical existence proof from physics into contemporary management research."
-  - "Cross-pair convergence at Rec = 4 across two distinct theoretical sub-domains (dynamic capabilities + knowledge-based view) at small N: suggestive small-N P4 evidence that substrate-sharing is observable at the typed-DAG isomorphism level in management theory."
-  - "SECONDARY (supportive of paper_a:P3 ordering): grid-anchored illustrative point estimates of β and δ across five available spines and renderings; joint ordering β < 1 < δ holds across all observations. NOT a falsificational test of paper_a:P3 at the organizational-outcome scale (reserved for v4.0.0)."
-  - "SECONDARY (methodological): pre-registered iterative-cohort-growth protocol v1.0.0 → v4.0.0 with Zenodo-version-DOI discipline; the working-paper trajectory itself is a longitudinal self-test of paper_a:P4. v1.0.0 task α (self-application of P4 to Paper B's own substrate via Substack practitioner-register re-rendering), task β (third rendering of focal-pair shared substrate), task γ (cross-language re-rendering into Russian), and task δ (inter-coder κ measurement on axiom A1) extend the P4 evidence base."
-
-propositions_tested:
-  - "Zharnikov 2026ao P4 (rendering-equivalence under spine-preservation): PRIMARY ENGAGEMENT. P4 demonstration at N=2 twin pairs (= 4 prose renderings) with cross-sub-domain convergence at Rec = 4; v1.0.0 task α + β + γ extend with three additional self-application renderings."
-  - "Zharnikov 2026ao P3 (verification-cost asymmetry): SECONDARY supportive engagement. β < 1 < δ ordering across 5 spines + 5 renderings is consistent with P3 ordering but NOT a falsificational test at organizational-outcome scale."
-  - "Zharnikov 2026ao P2 (organizational recombination rates): NOT TESTED at v1.0.0. P2 is a separate organizational-outcome proposition requiring large-N prospective cohort design at v3.0.0+ scale."
-  - "Zharnikov 2026ao axiom A1 (σ-faithfulness on locked subsets): tested directly by v1.0.0 task δ inter-coder κ measurement on two of the five extracted spines; κ ≥ .75 threshold determines whether P4 holds as preservation result or degrades to probabilistic tendency on the affected subdomain."
-
-new_proposition_paper_b:
-  - id: "Rec_star_beta"
-    statement: "Rec*(β) = ⌈3 · 2^(1−β)⌉ as β-conditional minimum-threshold (Discussion-level cross-tie footnote under v1.0.0 reframe; DEMOTED from contribution-2 level under v1.0.1 to footnote-level cross-tie under v1.0.0 per feedback_paper_b_p4_reframe.md — Rec*(β) is a P3-conditional cross-tie note not a primary Paper B contribution under the P4-centered scope)."
-    falsifier: "Observed Rec below Rec*(β) on a substrate-sharing twin OR systematic misprediction in prospective lab cohort at v3.0.0+ (P3-conditional, not central to Paper B v1.0.0)"
-
-versioning_trajectory:
-  v1_0_0: "Public Zenodo initial release: two twin pairs (focal EM2000+ZW2002 + KBV Grant1996+Liebeskind1996) at Rec=4 + TO1996 standalone precursor + integrative theory engagement (Carlile 2004 + Raisch-Krakowski 2021 + Kaplan-Vakili 2015 + Felin-Kauffman-Zenger 2023 + Levinthal-March 1993) + random-graph null baseline + Task α Substack self-application + Task β LinkedIn third rendering + Phase 2.5 cross-paper P4 (Paper A practitioner rendering) + cross-operator extraction discipline (GPT-4o) + LLM-call provenance logging + Conclusion. Consolidates internal drafting across Sessions E + F + G + H per feedback_version_only_at_zenodo HARD RULE."
-  v1_1_0: "Task δ inter-coder κ on axiom A1 (protocol pre-registered at PHASE4_KAPPA_MEASUREMENT_2026-05-27.md) + Task γ cross-language Russian re-rendering (human-native) + Phase 3.5b multi-LLM cross-FAMILY operator robustness (Slavic + Sino-Tibetan; YandexGPT + GigaChat + DeepSeek + Claude Opus control)"
-  v2_0_0: "First prospective lab cohort (substrate-publish vs rendering-only condition); larger-N twin-pair extension; first non-trivial confidence intervals on β/δ; third-party-coder substitution for δ"
-  v3_0_0: "Multi-cohort prospective tracking; pre-registered identification (DiD on Zenodo spine-publication events) for P3 ordering and P2 organizational-recombination claim"
-  v4_0_0: "Submission-scale empirical companion; full P4 demonstration corpus + falsificational P3 test at organizational-outcome scale"
-
-spine_doc_version: "0.4.2"
-predraft_bundle_version: "1.0.2"
-phase_1_5_grok_verdicts:
-  r1: "MEDIUM / R&R_LIKELY (3 WEAK ratings) — fired against internal-drafting P2/P3 framing; superseded by internal-drafting P4 reframe (Session F)"
-  r2: "MEDIUM / R&R_LIKELY (1 WEAK rating; 3 STRONG ratings) — fired against internal-drafting P2/P3 framing; superseded by internal-drafting P4 reframe (Session F)."
-phase_4_grok_verdicts:
-  postdraft_r1: "3/10 SMJ-tier readiness at internal-drafting P4 reframe; reframe coherence VERIFIED (Grok reads paper.md as P4 demonstration not P2/P3 test); 11 must-fix items elevated (3 addressable in v1.0.0 release window; 8 deferred to v2.0.0+); fired Session G; raw at audit/grok_outputs/2026ap_grok_postdraft_r1.md"
-  postdraft_r2: "4/10 (+1 improvement from postdraft_r1); substantive credit for Phase 5 work; plateau-and-ship at 4/10 per Session H user authorization; raw at audit/grok_outputs/2026ap_postdraft_r2_grok.md"
-
-ai_disclosure: "AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1) were used for initial literature search and editorial refinement; all theoretical claims, propositions, and interpretations are the author's sole responsibility."
-
-related_artifacts_internal:
-  phase_0_thesis: "research/meaningfulness_empirical_companion/PHASE_0_THESIS.md (internal drafting trail; not public-mirrored)"
-  spine: "research/meaningfulness_empirical_companion/SPINE.yaml (v0.4.0 Phase 5 integrative + null-baseline + self-application FORK)"
-  predraft_bundle: "research/meaningfulness_empirical_companion/PREDRAFT_BUNDLE.md (v1.0.2 §M-prime reframe header)"
-  phase1_anchor_verification: "research/meaningfulness_empirical_companion/PHASE1_ANCHOR_VERIFICATION_2026-05-27.md (Session H Phase 1 Crossref-verify 12 Grok postdraft r1 anchors)"
-  self_application_isomorphism: "research/meaningfulness_empirical_companion/SELF_APPLICATION_ISOMORPHISM_PB.md (Session H Phase 2 Task α Substack rendering 11/14 strict / 14/14 semantic)"
-  third_rendering_isomorphism: "research/meaningfulness_empirical_companion/TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md §8 (Session H Phase 3 Task β LinkedIn third rendering Rec=4)"
-  phase4_kappa_protocol: "research/meaningfulness_empirical_companion/PHASE4_KAPPA_MEASUREMENT_2026-05-27.md (Session H Phase 4 Task δ protocol + recruitment status + v1.1.0 execution-deferred)"
-  grok_review_summaries:
-    - "research/meaningfulness_empirical_companion/GROK_REVIEW_SUMMARY_r1.md (pre-draft r1, v1.0.0)"
-    - "research/meaningfulness_empirical_companion/GROK_REVIEW_SUMMARY_r2.md (pre-draft r2, v1.0.0)"
-    - "research/meaningfulness_empirical_companion/GROK_REVIEW_SUMMARY_postdraft_r1.md (post-draft r1, v1.0.0; Session G)"
-  triage_memos:
-    - "research/meaningfulness_empirical_companion/TRIAGE_MEMO_r1_2026-05-26.md"
-    - "research/meaningfulness_empirical_companion/TRIAGE_MEMO_r2_2026-05-26.md"
-    - "research/meaningfulness_empirical_companion/TRIAGE_MEMO_postdraft_r1_2026-05-27.md"
-  validation_cases:
-    - "research/meaningfulness_empirical_companion/VALIDATION_CASE_PB_FOCAL_EISENHARDT_MARTIN_SPINE.yaml"
-    - "research/meaningfulness_empirical_companion/VALIDATION_CASE_PB_FOCAL_ZOLLO_WINTER_SPINE.yaml"
-    - "research/meaningfulness_empirical_companion/VALIDATION_CASE_PB_SECONDARY_PRECURSOR_TUSHMAN_OREILLY_SPINE.yaml"
-    - "research/meaningfulness_empirical_companion/VALIDATION_CASE_PB_KBV_GRANT_SPINE.yaml"
-    - "research/meaningfulness_empirical_companion/VALIDATION_CASE_PB_KBV_LIEBESKIND_SPINE.yaml"
-    - "research/meaningfulness_empirical_companion/VALIDATION_CASE_PB_SELF_APPLICATION_SPINE.yaml (NEW Phase 2)"
-    - "research/meaningfulness_empirical_companion/VALIDATION_CASE_PB_FOCAL_THIRD_RENDERING_SPINE.yaml (NEW Phase 3)"
-  renderings:
-    - "research/meaningfulness_empirical_companion/RENDERING_PB_SUBSTACK_PRACTITIONER.md (Phase 2 Substack 1,615w; research artifact NOT published)"
-    - "research/meaningfulness_empirical_companion/RENDERING_FOCAL_PAIR_THIRD_PROSE.md (Phase 3 LinkedIn 1,044w; research artifact NOT published)"
-  twin_pair_isomorphism:
-    - "research/meaningfulness_empirical_companion/TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md (extended §8 Phase 3 third-rendering preservation analysis)"
-    - "research/meaningfulness_empirical_companion/TWIN_PAIR_ISOMORPHISM_PB_KBV.md"
-  companion_code: "research/meaningfulness_empirical_companion/code/ (rec_metric.py + cost_function_calibration.py + null_baseline.py NEW v1.0.0 + README.md updated)"
-  audit_scripts:
-    - "audit/scripts/verify_2026ap_postdraft_r1_anchors.py (Session H Phase 1 Crossref-verify 12 Grok postdraft r1 anchors)"
----
+# paper.yaml -- Paper Spec v0.1.0
+# paper_key: 2026ap
+# citation_key: zharnikov-2026ap-same-meaning-different-prose
+# concept DOI: 10.5281/zenodo.20409701
+# AI disclosure: AI assistants were used for literature search and editorial refinement; all theoretical claims are the author's sole responsibility.
+# Generated by [internal path removed] FROM SPINE.yaml (do not hand-edit; regenerate).
+spec_version: 0.1.0
+meta:
+  title: 'Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational
+    Knowledge Work'
+  authors:
+  - name: Dmitry Zharnikov
+    orcid: 0009-0000-6893-9231
+    affiliation: Independent Researcher
+  doi: 10.5281/zenodo.20409701
+  date: '2026-06-01'
+  venue: Strategic Management Journal
+  license: CC-BY-NC-ND-4.0
+  keywords:
+  - generative AI
+  - rendering-equivalence
+  - spine-preservation
+  - structural substrate
+  - dynamic capabilities
+  - knowledge-based view
+  - working-paper format
+  - organizational knowledge work
+  - cross-language demonstration
+  - multi-LLM evaluation
+  - open-weights local deployment
+  - cross-extractor robustness.
+  abstract: 'This paper empirically demonstrates Zharnikov''s [-@zharnikov-2026ao-spec-based-research-post-ai]
+    Proposition P4 — rendering-equivalence under spine-preservation — in management theory. The paper
+    extends the companion theory''s Heisenberg–Schrödinger historical existence proof into contemporary
+    strategy research via structural extractions of two independently-authored pairs: a dynamic-capabilities
+    pair [@eisenhardt-2000-dynamic-capabilities-what; @zollo-winter-2002-deliberate-learning] and a knowledge-based-view
+    pair from the *Strategic Management Journal* (SMJ) Winter 1996 Special Issue [@grant-1996-toward-knowledgebased-theory;
+    @liebeskind-1996-knowledge-strategy]. The recombination metric Rec returns 4 linked propositions with
+    preserved antecedents on each pair. A random-graph null baseline shows Pr(Rec ≥ 3 by chance) ≈ .000
+    across 1,000 size-matched shadows. Three additional renderings of substrates already in the corpus
+    — a practitioner-register rendering of the paper''s own structure, a third rendering of the focal-pair
+    shared substrate, and a cross-paper rendering of the companion theory''s full theoretical apparatus
+    — preserve 11/14, 4/4, and 12/15 items strictly; 14/14, 4/4, and 15/15 semantically; zero contradictions.
+    A bibliographic-hallucination audit of twelve AI-suggested anchors finds two verified and ten negative
+    findings. Secondary β/δ estimates satisfy the cost-asymmetry ordering. Cross-language demonstrations
+    span Russian renderings across multiple LLMs (including Russian-native GigaChat Rec = 12 and YandexGPT
+    Rec = 11) and Chinese renderings across five LLMs from three training-corpus families including an
+    open-weights model running locally on a single Mac mini (DeepSeek Rec = 12, Claude Opus Rec = 11,
+    Qwen3.6:27b Rec = 12), with cross-extractor robustness (DeepSeek''s Chinese rendering re-extracted
+    by Qwen3.6 instead of GPT-4o: Rec = 12). Inter-coder reliability tests are pre-registered for a future
+    release. The paper engages recombinant-search and knowledge-representation scholarship as theoretical
+    antecedents.'
+methodology:
+  type: empirical
+  design: 'Retroactive spine extraction per Paper A Online Appendix B applied in reverse to each available
+    source paper at v1.1.0. Rec(G1, G2) metric computation as the size of the maximum common subgraph
+    preserving node typing and antecedent edges per paper_a:recombination_operator. Under the v1.0.0 P4
+    reframe, Rec(G1, G2) measures structural-substrate preservation across two prose renderings — the
+    central operationalization of paper_a:P4 at the artifact level. A Rec ≥ 3 value on a twin pair is
+    direct evidence that the two prose renderings share an underlying substrate (P4 demonstration), independent
+    of whether the authors knew each other''s drafts (which is Bikard-protocol independence — relevant
+    for P2 organizational recombination-rate work but NOT essential for P4 substrate-sharing claims).
+    Cost-function exponent calibration: β fit from substrate-graph traversal cost as function of |V| across
+    five spines; δ fit from rendering verification cost as function of token count across five source-paper
+    renderings. Under v1.0.0 P4 reframe, this is a SECONDARY contribution providing supportive evidence
+    for the paper_a:P3 ordering (β < 1 < δ) — NOT Paper B''s central contribution. The β/δ apparatus is
+    retained because the joint ordering across five observations is a small supporting piece of evidence
+    that the cost-asymmetry mechanism Paper A predicts holds in the management-theory artifacts Paper
+    B''s P4 demonstration uses; but the paper''s central argument no longer rests on this calibration.'
+  analysis:
+    software: [internal path removed] + manual proposition coding (single-coder at
+      v1.0.0)
+dependencies:
+- relationship: extends
+  claim: Paper A is Paper B's theoretical predecessor. Paper B does not modify Paper A's spine; all Paper-A
+    content enters Paper B by namespaced reference.
+  critical: false
+  doi: 10.5281/zenodo.20409683
+- relationship: extends
+  claim: 2026am Specification Readiness theory paper used the same Paper-A-theory + Paper-B-empirical-companion
+    split pattern (with 2026an the empirical companion). The split pattern Paper B inherits is precedented
+    in the corpus.
+  critical: false
+  doi: 10.5281/zenodo.20379981
+- relationship: extends
+  claim: 2026an Specification Readiness Empirical Companion is the direct precedent for the iteratively-versioned-working-paper
+    format Paper B adopts. 2026an at v1.0.0 was reframed as construct + measurement + identification toolkit
+    when initial Grok cycles plateaued at 3/10; Paper B's design pre-empts that plateau by scoping v1.0.0
+    explicitly to small-N existence proofs.
+  critical: false
+  doi: 10.5281/zenodo.20384084
+- relationship: extends
+  claim: 'anchor: bikard-2020-idea-twins'
+  doi: 10.1002/smj.3162
+- relationship: extends
+  claim: 'anchor: eisenhardt-martin-2000-dynamic-capabilities'
+  reference: eisenhardt-martin-2000-dynamic-capabilities
+- relationship: extends
+  claim: 'anchor: zollo-winter-2002-deliberate-learning'
+  doi: 10.1287/orsc.13.3.339.2780
+- relationship: extends
+  claim: 'anchor: tushman-oreilly-1996-ambidextrous-organizations'
+  doi: 10.2307/41165852
+- relationship: extends
+  claim: 'anchor: kaplan-vakili-2015-double-edged-sword-recombination'
+  reference: kaplan-vakili-2015-double-edged-sword-recombination
+- relationship: extends
+  claim: 'anchor: oreilly-tushman-2013-organizational-ambidexterity-past-present-future'
+  reference: oreilly-tushman-2013-organizational-ambidexterity-past-present-future
+- relationship: extends
+  claim: 'anchor: grant-1996-knowledge-based-theory-firm'
+  reference: grant-1996-knowledge-based-theory-firm
+- relationship: extends
+  claim: 'anchor: liebeskind-1996-knowledge-strategy-theory-firm'
+  reference: liebeskind-1996-knowledge-strategy-theory-firm
+- relationship: extends
+  claim: 'anchor: levinthal-march-1993-myopia-of-learning'
+  reference: levinthal-march-1993-myopia-of-learning
+- relationship: extends
+  claim: 'anchor: grimes-vonKrogh-feuerriegel-rink-gruber-2023-scarcity-to-abundance'
+  reference: grimes-vonKrogh-feuerriegel-rink-gruber-2023-scarcity-to-abundance
+- relationship: extends
+  claim: 'anchor: brynjolfsson-li-raymond-2025-genai-at-work'
+  reference: brynjolfsson-li-raymond-2025-genai-at-work
+- relationship: extends
+  claim: 'anchor: george-storey-hong-2025-chatgpt-knowledge-anchor'
+  doi: 10.1145/3705734
+- relationship: extends
+  claim: 'anchor: kirchner-bolisani-kassaneh-scarso-taraghi-2025-genai-km-software-dev'
+  reference: kirchner-bolisani-kassaneh-scarso-taraghi-2025-genai-km-software-dev
+- relationship: extends
+  claim: 'anchor: alavi-leidner-mousavi-2024-km-perspective-genai'
+  reference: alavi-leidner-mousavi-2024-km-perspective-genai
+- relationship: extends
+  claim: 'anchor: benbya-strich-tamm-2024-navigating-genai'
+  doi: 10.17705/1jais.00861
+contradictions: []
+limitations:
+- description: N=2 twin pairs is illustration, not falsification; β/δ estimates are point estimates without
+    confidence intervals.
+  severity: moderate
+  addressable: true
+- description: Single-coder extraction by author at v1.0.0; inter-coder reliability not yet measured.
+  severity: moderate
+  addressable: true
+- description: Retroactive twin-pair design tests Rec / β / δ at the artifact level rather than at the
+    organizational-outcome level paper_a:P2 specifies.
+  severity: moderate
+  addressable: true
+- description: The four twin-pair source papers concentrate in management theory; cross-discipline generalization
+    is out of scope.
+  severity: moderate
+  addressable: true
+repositories:
+- platform: GitHub
+  url: https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical
+  notes: machine-readable source bundle (canonical SSOT)
+- platform: Zenodo
+  url: https://doi.org/10.5281/zenodo.20409701
+  doi: 10.5281/zenodo.20409701
+submission_history: []

@@ -27,7 +27,9 @@ keywords:
   - multi-LLM evaluation
   - open-weights local deployment
   - cross-extractor robustness.
-license: MIT
+license:
+  - CC-BY-4.0
+  - MIT
 type: article
 preferred-citation:
   type: article
@@ -36,4 +38,5 @@ preferred-citation:
       given-names: Dmitry
   title: "Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work"
   year: 2026
+  doi: "10.5281/zenodo.20409701"
   url: "https://doi.org/10.5281/zenodo.20409701"

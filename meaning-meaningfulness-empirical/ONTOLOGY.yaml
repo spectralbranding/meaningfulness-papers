@@ -1,0 +1,22 @@
+# ONTOLOGY.yaml module - 2026ap
+#
+# Per-paper ontology module per [internal path removed]
+# §"ONTOLOGY.yaml schema (v0.1)". owns = terms THIS paper introduces (unique
+# authority); imports = terms owned by other modules it uses (reference only).
+# Linked into the substrate `terms` graph by build_ontology.py; rendered per-paper
+# by render_paper_glossary.py. Bootstrapped 2026-06-13 from per-paper term
+# extraction; definitions paraphrase each paper's own definitional text.
+
+paper_key: 2026ap
+schema_version: 0.1
+
+owns: []
+
+imports:
+  - {term_key: spine}
+  - {term_key: rendering-equivalence}
+  - {term_key: spine-first-drafting-protocol}
+  - {term_key: meaning-vs-meaningfulness}
+
+refines: []
+

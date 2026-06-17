@@ -1,0 +1,43 @@
+# ONTOLOGY.yaml module - 2026ao
+#
+# Per-paper ontology module per [internal path removed]
+# §"ONTOLOGY.yaml schema (v0.1)". owns = terms THIS paper introduces (unique
+# authority); imports = terms owned by other modules it uses (reference only).
+# Linked into the substrate `terms` graph by build_ontology.py; rendered per-paper
+# by render_paper_glossary.py. Bootstrapped 2026-06-13 from per-paper term
+# extraction; definitions paraphrase each paper's own definitional text.
+
+paper_key: 2026ao
+schema_version: 0.1
+
+owns:
+  - term_key: operator-role
+    label: "Operator (role-level abstraction)"
+    canonical_form: "Operator"
+    definition: "A role-level abstraction above the human-versus-AI instance distinction whose intrinsic structural-substrate and judgment operations are performed by a human/AI projection composition that varies by era."
+    first_section: "Introduction / The Operator role and era-dependent projection"
+  - term_key: meaning-vs-meaningfulness
+    label: "Meaning vs Meaningfulness (structural)"
+    canonical_form: "meaning and meaningfulness"
+    definition: "A structural distinction in which meaning is a property of the typed-graph substrate (transferable across renderings) and meaningfulness is a property of a specific cohort-conditional rendering."
+    first_section: "Abstract / The three-layer decomposition"
+  - term_key: spine
+    label: "Spine (semantic substrate)"
+    canonical_form: "spine"
+    definition: "The semantic substrate S = sigma(L): a typed directed acyclic graph extracted from the log substrate whose vertices are claims, observations, methods, findings, propositions, derivations, and rivals, with typed edges among them."
+    first_section: "Theory / The three-layer decomposition"
+  - term_key: rendering-equivalence
+    label: "Rendering-Equivalence under Spine-Preservation"
+    canonical_form: "rendering-equivalence under spine-preservation"
+    definition: "P4: two prose renderings of a locked substrate arrive at the same conclusions if and only if both preserve the spine's structural elements, under the sigma-faithfulness axiom."
+    first_section: "Propositions / P4"
+  - term_key: spine-first-drafting-protocol
+    label: "Spine-First Drafting Protocol"
+    canonical_form: "spine-first drafting protocol"
+    definition: "The cost-minimizing intervention of locking the substrate before drafting prose, tracing every prose claim to a substrate entry, resolving orphan claims as fork or rebase, and evaluating substrate coherence and prose craft separately."
+    first_section: "The cost asymmetry"
+
+imports: []
+
+refines: []
+

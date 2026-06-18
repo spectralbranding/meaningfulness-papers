@@ -23,10 +23,10 @@ NOT fired in Session H.
 Run pattern (BWS-injected per fleet convention):
     bws run -- uv run --with openai --with anthropic --with httpx \\
         python audit/scripts/dr_phase3_5b_multi_llm_russian_robustness.py \\
-        --source-text research/meaningfulness_empirical_companion/paper.md \\
+        --source-text [internal path removed] \\
         --source-extract abstract \\
         --operators yandexgpt gigachat claude_opus \\
-        --output-dir research/meaningfulness_empirical_companion/multi_llm_russian/ \\
+        --output-dir [internal path removed] \\
         --seed 42
 
 The `bws run` wrapper injects API keys from Bitwarden Secrets Manager into
@@ -87,12 +87,15 @@ def render_with_yandexgpt(source_text: str, seed: int) -> str:
     folder_id = os.environ.get("YANDEXGPT_FOLDER_ID", "").strip()
     if not api_key or not folder_id:
         raise RuntimeError("YANDEXGPT_API_KEY and YANDEXGPT_FOLDER_ID required")
+    # Prompt is in Russian per feedback_native_language_prompts.md HARD RULE:
+    # non-English prompts must be fully native, not mixed-language.
+    # YandexGPT is a Russian-native LLM; its instruction prompt is in Russian.
     prompt = (
-        "Render the following English academic abstract into native Russian "
-        "appropriate for an SMJ-tier Russian academic readership. Preserve all "
-        "propositional claims, numerical figures, and citation references. Use "
-        "formal academic Russian register. Do not translate verbatim; render "
-        "naturally:\n\n"
+        "Преобразуй следующий английский академический абстракт в естественный "
+        "русский академический текст, подходящий для русскоязычной аудитории "
+        "уровня журнала SMJ. Сохрани все пропозициональные утверждения, "
+        "числовые величины и библиографические ссылки. Не переводи дословно; "
+        "создай органичный академический текст на русском языке:\n\n"
         f"{source_text}"
     )
     resp = httpx.post(

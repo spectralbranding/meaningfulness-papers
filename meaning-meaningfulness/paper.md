@@ -6,7 +6,7 @@ ORCID: 0009-0000-6893-9231
 
 DOI: [10.5281/zenodo.20409683](DOI: 10.5281/zenodo.20409683)
 
-Working Paper v1.1.0 – May 2026 (revised June 2026)
+Working Paper v1.2.0 – May 2026 (revised June 2026)
 
 ---
 
@@ -206,9 +206,9 @@ The three-level hierarchy explains the pattern directly: medium is a parameter o
 
 ---
 
-## 6. Validation: Three Cases at Theory-Paper Depth
+## 6. Validation: Five Cases at Theory-Paper Depth
 
-Three validation cases together illustrate P1 and P4 at the depth a theoretical paper requires. The primary case is a contemporary management-theory twin pair; the historical existence proof is the founding papers of quantum mechanics; the robustness check is the self-application of the framework to this paper's own production. Full empirical estimation of P2 and P3 at large N is the scope of Zharnikov [-@zharnikov-2026ap-same-meaning-different-prose].
+Five validation cases together illustrate P1 and P4 at the depth a theoretical paper requires. The primary case is a contemporary management-theory twin pair (T1′); a venue-fit contemporary anchor is a multi-author position essay on AI in research (T2); the historical existence proof is the founding papers of quantum mechanics (T1); a forward-looking application to an external organizational artifact is specified prospectively (T3); and the robustness check is the reflexive self-application of the framework to this paper's own production (T3-prime). Full empirical estimation of P2 and P3 at large N is the scope of Zharnikov [-@zharnikov-2026ap-same-meaning-different-prose].
 
 ### *T1′ — A management-theory twin pair (primary illustrative case).*
 
@@ -232,7 +232,7 @@ The contemporary management-research anchor is Kulkarni and colleagues [-@kulkar
 
 ### *T1 — Historical existence proof (non-management domain; appendix depth).*
 
-The Heisenberg–Schrödinger founding papers of quantum mechanics are the framework's existence proof for P4 in the historical record. Heisenberg [-@heisenberg-1925-quantentheoretische] introduced matrix mechanics; Born and Jordan [-@born-jordan-1925-zur-quantenmechanik] and Born, Heisenberg, and Jordan [-@born-heisenberg-jordan-1926-zur-quantenmechanik-ii] extended it. Schrödinger [-@schrodinger-1926-verhaltnis-heisenberg-born] introduced wave mechanics through the Quantisierung-als-Eigenwertproblem papers. Schrödinger [-@schrodinger-1926-verhaltnis-heisenberg-born] himself proved that matrix mechanics and wave mechanics are mathematically equivalent in the equivalence paper *Über das Verhältnis der Heisenberg-Born-Jordanschen Quantenmechanik zu der meinen*; von Neumann [-@von-neumann-1932-mathematische-grundlagen] supplied the rigorous Hilbert-space functional-analytic foundation. Pauli [-@pauli-1927-quantenmechanik-magnetischen], in his magnetic-electron paper, performed both renderings of the spin-electron problem himself within a single paper and stated explicitly that the wave-mechanics treatment was "completely equivalent in its consequences to the matrix equations of Heisenberg and Jordan" — a within-author rendering-equivalence demonstration stronger than the cross-author H–S equivalence because it removes coordination concerns.
+The Heisenberg–Schrödinger founding papers of quantum mechanics are the framework's existence proof for P4 in the historical record. Heisenberg [-@heisenberg-1925-quantentheoretische] introduced matrix mechanics; Born and Jordan [-@born-jordan-1925-zur-quantenmechanik] and Born, Heisenberg, and Jordan [-@born-heisenberg-jordan-1926-zur-quantenmechanik-ii] extended it. Schrödinger introduced wave mechanics through the Quantisierung-als-Eigenwertproblem papers earlier in 1926. Schrödinger [-@schrodinger-1926-verhaltnis-heisenberg-born] himself then proved that matrix mechanics and wave mechanics are mathematically equivalent in the equivalence paper *Über das Verhältnis der Heisenberg-Born-Jordanschen Quantenmechanik zu der meinen*; von Neumann [-@von-neumann-1932-mathematische-grundlagen] supplied the rigorous Hilbert-space functional-analytic foundation. Pauli [-@pauli-1927-quantenmechanik-magnetischen], in his magnetic-electron paper, performed both renderings of the spin-electron problem himself within a single paper and stated explicitly that the wave-mechanics treatment was "completely equivalent in its consequences to the matrix equations of Heisenberg and Jordan" — a within-author rendering-equivalence demonstration stronger than the cross-author H–S equivalence because it removes coordination concerns.
 
 *Why retained as existence proof.* The H–S twin pair is the cleanest historical-record demonstration that two renderings of (what was later shown to be) the same underlying spine, in incompatible formalisms, can converge on conclusions. The framework's P4 claim is precisely the structural claim Schrödinger [-@schrodinger-1926-verhaltnis-heisenberg-born] and von Neumann [-@von-neumann-1932-mathematische-grundlagen] demonstrated for that case. Retaining the case at appendix depth (Online Appendix D) supplies historical-record evidence that the rendering-equivalence claim is not a methodological artifact of contemporary management research; the empirical anchor in management research is T1′.
 
@@ -252,7 +252,7 @@ In parallel with T3, the present paper exhibits the framework reflexively by pub
 
 ### *What the validation strategy is not.*
 
-The four cases together illustrate P1 and P4 at the depth a theoretical contribution requires — proportionate to the propositions' explanatory range, not to a publication target's empirical-density expectations. P2 and P3 are stated as theoretically-derived predictions with falsifier specifications and operational metrics; their empirical estimation at organizational outcome scale is the primary scope of the companion empirical working paper. The split between theoretical contribution (this paper) and empirical estimation (companion paper) addresses the standing concern that retroactive spine extraction tests only P4 and cannot credibly test P2 and P3 at organizational outcome scale within a single paper.
+The five cases together illustrate P1 and P4 at the depth a theoretical contribution requires — proportionate to the propositions' explanatory range, not to a publication target's empirical-density expectations. P2 and P3 are stated as theoretically-derived predictions with falsifier specifications and operational metrics; their empirical estimation at organizational outcome scale is the primary scope of the companion empirical working paper. The split between theoretical contribution (this paper) and empirical estimation (companion paper) addresses the standing concern that retroactive spine extraction tests only P4 and cannot credibly test P2 and P3 at organizational outcome scale within a single paper.
 
 ---
 
@@ -314,9 +314,9 @@ We exhibit the framework reflexively by publishing the present paper's substrate
 
 ---
 
-## 9. Acknowledgments
+## Acknowledgments
 
-AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1, GPT-4o) were used for initial literature search, spine extraction support, companion-code implementation, and running experiments (including the cost-asymmetry simulation harness in Online Appendix C); all theoretical claims, propositions, and interpretations are the author's sole responsibility.
+AI assistants (Claude Opus 4.8, Grok 4.20, Gemini 2.5 Pro, GPT-4o) were used for initial literature search, for software development — implementing and running the companion computation script(s) that reproduce the paper's reported numerical and simulation results — and for editorial refinement; all theoretical claims, propositions, and interpretations are the author's sole responsibility.
 
 *CRediT contributor statement.* Dmitry Zharnikov: conceptualization, methodology, investigation, formal analysis, writing — original draft, writing — review and editing.
 

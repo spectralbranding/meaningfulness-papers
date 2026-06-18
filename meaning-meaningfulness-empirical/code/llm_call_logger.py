@@ -23,8 +23,19 @@ Pattern:
     # On exit: writes JSONL row to logs/3.5b_render_PB_abstract_to_chinese_calls.jsonl
 
 Schema (per feedback_llm_call_professional_logging.md):
-- log_format_version + phase + operation + operator + model_version
+- log_format_version + phase + operation + operator + operator_role + model_version
 - timestamp_utc + system_prompt + user_prompt + parameters
+
+operator_role (added v1.1 for Brand Spectrometer T4-RE pipeline + Paper B cross-operator
+discipline): one of {"renderer", "extractor", "orchestrator"} or None for unspecified.
+Renderer infers structured output from inputs; extractor recovers a structured
+representation from rendered prose; orchestrator coordinates the pipeline.
+
+cost_usd_est auto-population (added v1.2): when the caller does not call
+set_cost_estimate, _build_row computes a fallback estimate from PRICE_TABLE[model_version]
+and the captured token counts. Callers should still override via set_cost_estimate
+when actual billed cost differs from list (promotional discounts, prompt caching
+credits, batch-API rates).
 - request_id + endpoint + sdk_version
 - response + response_metadata + tokens + latency_seconds + cost_usd_est
 - errors + retries + git_sha_caller + python_env_hash + human_in_loop +
@@ -36,7 +47,7 @@ Redaction discipline enforced at write time:
 - Authorization headers stripped
 - Internal-file references (PENDING_UPDATES, SESSION_*_COMPLETION, etc.) flagged
 
-Logs land at <repo>/research/meaningfulness_empirical_companion/logs/<jsonl-file>.
+Logs land at <repo>/[internal path removed]<jsonl-file>.
 """
 
 from __future__ import annotations
@@ -54,10 +65,70 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterator
 
-LOG_FORMAT_VERSION = "1.0"
+LOG_FORMAT_VERSION = "1.2"
 
 # Default logs directory relative to this script.
 DEFAULT_LOGS_DIR = Path(__file__).resolve().parent.parent / "logs"
+
+# Per-provider price table (USD per 1M tokens). Used to auto-populate
+# cost_usd_est at write time when the caller did not call set_cost_estimate.
+# Prices reflect May 2026 list-price tiers; promotional discounts (e.g.,
+# DeepSeek V4 Pro 75% off through 2026-05-31) are NOT applied here — the
+# caller should override via set_cost_estimate when actual billed cost
+# differs from list. Keys are exact model-version strings as passed to
+# `operator` or `model_version`.
+PRICE_TABLE: dict[str, dict[str, float]] = {
+    # Anthropic
+    "claude-opus-4-7": {"input": 5.00, "output": 25.00},
+    "claude-sonnet-4-6": {"input": 3.00, "output": 15.00},
+    "claude-haiku-4-5-20251001": {"input": 1.00, "output": 5.00},
+    "claude-haiku-4-5": {"input": 1.00, "output": 5.00},
+    # OpenAI
+    "gpt-5.5-2026-04-23": {"input": 5.00, "output": 30.00},
+    "gpt-5.5": {"input": 5.00, "output": 30.00},
+    "gpt-5.4-mini-2026-03-17": {"input": 0.55, "output": 2.20},
+    "gpt-5.4-mini": {"input": 0.55, "output": 2.20},
+    "gpt-4o-2024-11-20": {"input": 2.50, "output": 10.00},
+    "gpt-4o": {"input": 2.50, "output": 10.00},
+    "gpt-4o-mini-2024-07-18": {"input": 0.15, "output": 0.60},
+    "gpt-4o-mini": {"input": 0.15, "output": 0.60},
+    # Alibaba DashScope (Qwen)
+    "qwen3.7-max": {"input": 2.50, "output": 7.50},
+    "qwen-max": {"input": 2.50, "output": 7.50},
+    "qwen-plus": {"input": 0.50, "output": 1.50},
+    "qwen-turbo": {"input": 0.10, "output": 0.30},
+    # DeepSeek (cache-miss list pricing; promo windows applied by caller)
+    "deepseek-v4-flash": {"input": 0.14, "output": 0.28},
+    "deepseek-v4-pro": {"input": 1.74, "output": 3.48},
+    "deepseek-chat": {"input": 0.27, "output": 1.10},
+    "deepseek-coder": {"input": 0.27, "output": 1.10},
+    # Perplexity (May 2026 list; discovery operator_role only per
+    # reference_perplexity_role_in_t4_re). Excludes per-request search
+    # surcharges, which the caller should add via set_cost_estimate.
+    "sonar": {"input": 1.00, "output": 1.00},
+    "sonar-pro": {"input": 3.00, "output": 15.00},
+    "sonar-reasoning": {"input": 1.00, "output": 5.00},
+    # xAI Grok (June 2026 list; OpenAI-compatible endpoint)
+    "grok-4.3": {"input": 1.25, "output": 2.50},
+}
+
+
+def _compute_cost_from_tokens(model_version: str, tokens: dict[str, int]) -> float:
+    """Compute cost_usd_est from token counts using PRICE_TABLE.
+
+    Returns 0.0 if model_version is unknown or token counts are missing.
+    Callers should override via set_cost_estimate when billed cost differs
+    from list (e.g., promotional discounts, prompt caching credits).
+    """
+    if not model_version or model_version not in PRICE_TABLE:
+        return 0.0
+    prices = PRICE_TABLE[model_version]
+    input_tokens = tokens.get("input", 0) if isinstance(tokens, dict) else 0
+    output_tokens = tokens.get("output", 0) if isinstance(tokens, dict) else 0
+    return (
+        input_tokens * prices["input"] + output_tokens * prices["output"]
+    ) / 1_000_000.0
+
 
 # Patterns to redact from any prompt / response / parameters field before writing.
 REDACT_PATTERNS = [
@@ -161,6 +232,7 @@ class _CallLogger:
     phase: str
     operation: str
     operator: str
+    operator_role: str | None = None
     endpoint: str = ""
     sdk_version: str = ""
     logs_dir: Path = field(default_factory=lambda: DEFAULT_LOGS_DIR)
@@ -246,7 +318,7 @@ class _CallLogger:
                 pass
             return
 
-        # Dict-shaped response (raw HTTP fallback)
+        # Dict-shaped response (raw HTTP fallback, e.g. Perplexity via httpx)
         if isinstance(response, dict):
             self._response_metadata = {
                 k: v for k, v in response.items() if k != "choices"
@@ -260,6 +332,20 @@ class _CallLogger:
                     ]
                 except Exception:
                     self._response = json.dumps(response)
+            # Extract usage / id / model from the OpenAI-compatible shape so
+            # tokens + cost_usd_est populate for raw-HTTP callers too.
+            usage = response.get("usage")
+            if isinstance(usage, dict):
+                self._tokens = {
+                    "input": usage.get("prompt_tokens", usage.get("input_tokens", 0)),
+                    "output": usage.get(
+                        "completion_tokens", usage.get("output_tokens", 0)
+                    ),
+                }
+            if response.get("id") and self._request_id is None:
+                self._request_id = response.get("id")
+            if response.get("model") and not self._model_version:
+                self._model_version = response.get("model")
             return
 
         # String / unknown — capture as-is
@@ -279,6 +365,7 @@ class _CallLogger:
             "phase": self.phase,
             "operation": self.operation,
             "operator": self.operator,
+            "operator_role": self.operator_role,
             "model_version": self._model_version,
             "timestamp_utc": dt.datetime.now(dt.timezone.utc)
             .isoformat()
@@ -293,7 +380,11 @@ class _CallLogger:
             "response_metadata": resp_meta,
             "tokens": self._tokens,
             "latency_seconds": round(latency, 3),
-            "cost_usd_est": round(self._cost_usd_est, 5),
+            "cost_usd_est": round(
+                self._cost_usd_est
+                or _compute_cost_from_tokens(self._model_version, self._tokens),
+                5,
+            ),
             "errors": self._errors,
             "retries": self._retries,
             "git_sha_caller": _git_sha(),
@@ -329,6 +420,7 @@ def log_call(
     phase: str,
     operation: str,
     operator: str,
+    operator_role: str | None = None,
     endpoint: str = "",
     sdk_version: str = "",
     logs_dir: Path | None = None,
@@ -340,6 +432,7 @@ def log_call(
         phase=phase,
         operation=operation,
         operator=operator,
+        operator_role=operator_role,
         endpoint=endpoint,
         sdk_version=sdk_version,
         logs_dir=logs_dir or DEFAULT_LOGS_DIR,
@@ -365,6 +458,7 @@ def log_call_post_hoc(
     system_prompt: str,
     user_prompt: str,
     response: str,
+    operator_role: str | None = None,
     parameters: dict[str, Any] | None = None,
     endpoint: str = "harness-internal",
     sdk_version: str = "claude-code-harness",
@@ -384,6 +478,7 @@ def log_call_post_hoc(
         phase=phase,
         operation=operation,
         operator=operator,
+        operator_role=operator_role,
         endpoint=endpoint,
         sdk_version=sdk_version,
         logs_dir=logs_dir or DEFAULT_LOGS_DIR,

@@ -1,6 +1,6 @@
 # Companion Computation Scripts — Paper B 2026ap v1.0.0
 
-These scripts reproduce the numerical figures cited in Paper B 2026ap "Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work" v1.0.0 per `research/PAPER_QUALITY_STANDARDS.md` items 37a–37e (mandatory).
+These scripts reproduce the numerical figures cited in Paper B 2026ap "Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work" v1.0.0 per `[internal path removed]` items 37a–37e (mandatory).
 
 ## What each script reproduces
 
@@ -62,7 +62,7 @@ Fixed at `SEED = 42` in both scripts per `PAPER_QUALITY_STANDARDS.md` item 37a d
 
 ## Provenance
 
-This `code/` directory is a public mirror of the internal SSOT at `research/meaningfulness_empirical_companion/code/` in the corpus repository. The two directories are kept synchronized at each Zenodo release per `PAPER_QUALITY_STANDARDS.md` item 37e (Mirror obligation).
+This `code/` directory is a public mirror of the internal SSOT at `[internal path removed]` in the corpus repository. The two directories are kept synchronized at each Zenodo release per `PAPER_QUALITY_STANDARDS.md` item 37e (Mirror obligation).
 
 Paper B 2026ap Zenodo DOI: [reserved at joint Zenodo upload with Paper A 2026ao]
 

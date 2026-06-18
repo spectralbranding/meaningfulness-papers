@@ -150,7 +150,7 @@ def reconstruct_phase_2() -> None:
             "practitioner register. Output: RENDERING_PB_SUBSTACK_PRACTITIONER.md."
         ),
         response=(
-            "Output saved to research/meaningfulness_empirical_companion/"
+            "Output saved to [internal path removed]"
             "RENDERING_PB_SUBSTACK_PRACTITIONER.md (1,615 words; frontmatter with source-spine "
             "pointer + expected-preservation-set; ~80 paragraphs; named-case examples GitLab + "
             "Stripe + audit-memo; three first-moves section)."

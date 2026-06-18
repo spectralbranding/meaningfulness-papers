@@ -28,7 +28,7 @@ experiment that produces cited P4 evidence):
 
 Run (BWS-injected; OPENAI_API_KEY required):
     bws run -- uv run --with openai \\
-        python research/meaningfulness_empirical_companion/code/cross_operator_extraction.py
+        python [internal path removed]
 """
 
 from __future__ import annotations

@@ -606,12 +606,6 @@ external_anchors:
 # ============================================================================
 # Open questions / boundary edges
 # ============================================================================
-open:
-  - "Does the focal-pair Rec / β / δ ordering reproduce on the secondary 20-year-gap pair? If not, what boundary condition fails?"
-  - "Are there twin-pair candidates in the Bikard 2020 dataset that would qualify for v1.1.0 inclusion under the same independence + temporal-window criteria as the focal pair?"
-  - "When inter-coder κ is measured at v1.1.0, does the threshold .75 hold on management-theory twin-pair extractions or does the κ regression require methodological refinement?"
-  - "At what cohort N does the parameter-grid location of (β, δ) stabilize sufficiently to claim a non-trivial confidence interval? v2.0.0 design depends on this answer."
-  - "Does Paper B's own version-trajectory satisfy paper_a:P4? Specifically: does the v1.0.0 → v4.0.0 sequence preserve all locked propositions and antecedent edges across versions while only adding extension nodes?"
 
 # ============================================================================
 # Negative findings (Grok-suggested-anchor hallucinations caught at verification)

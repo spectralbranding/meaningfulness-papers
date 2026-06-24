@@ -2121,18 +2121,6 @@ external_anchors:
 # ============================================================================
 # Open questions / boundary edges (deferred to Phase 3 fix-pass)
 # ============================================================================
-open:
-  - "How is σ extraction effort measured at organizational scale, and what is the empirical cost function on N (number of artifacts)?"
-  - "Who owns the published semantic graph — author, journal, community? Governance question deferred to Section 8 Discussion."
-  - "How is strategic manipulation of edge typing prevented? Body-spine reconciliation check named; full mitigation deferred."
-  - "Does the framework apply to multimodal artifacts (papers + video + interactive visualizations) without modification? Conjecture yes; scope statement excludes."
-  - "Empirical estimation of P2 (recombination) and P3 (verification-cost asymmetry) is deferred to a companion paper targeting SMJ."
-  - "Self-application is structurally circular; addressed by pairing with T1 + T2 but requires explicit defense in Section 6.1."
-  - "T1 retroactive spine extraction may surface artifacts the schema v0.2 still cannot represent (e.g., visual diagrams, geometric reasoning); v0.2.1 schema may be needed."
-  - "Schema v0.2 inter-coder reliability untested (AA2); RC2 planned."
-  - "v0.5.0 OPEN: T1' management-theory twin pair selection from the three candidates (Tushman-O'Reilly 1996 + Duncan 1976 / Eisenhardt-Martin 2000 + Zollo-Winter 2002 / Adler-Kwon 2002 + Nahapiet-Ghoshal 1998) pending Phase-2 follow-up DR ([session]) applying Bikard 2020 idea-twin methodology. Selection criterion: cleanest mutual-independence at original-draft time + accessible primary sources + ≤2-year gap preferred (Bikard 2020 threshold)."
-  - "v0.5.0 OPEN: depth of Carlile 2004 engagement in §H mechanism section — minimum is one paragraph naming the spine as a new pragmatic boundary object; maximum would be a full Carlile-section dialogue. Decide at Phase 3 drafting."
-  - "v0.5.0 OPEN: Mantere-Vaara, Lindebaum, Cameron-Rahman, van den Broek sub-essay engagement in §10 (Discussion) per the review §2 fourth bullet — depth to be calibrated against Org Sci page-limit constraints at Phase 3."
 
 # ============================================================================
 # Spine changelog — append-only

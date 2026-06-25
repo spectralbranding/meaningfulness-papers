@@ -2,8 +2,7 @@
 title: "Twin-Pair Spine Isomorphism: Heisenberg ↔ Schrödinger (T1 analysis)"
 author: Dmitry Zharnikov
 date: 2026-05-26
-session: 168 Session B
-status: Phase-2 analysis; ready for Session C Grok review
+status: Phase-2 analysis
 related:
   - research/meaning_meaningfulness_paper/SPINE.yaml (v0.3.0 schema v0.2 — the meaningfulness paper's own spine; P4 + T1 anchor here)
   - research/meaning_meaningfulness_paper/VALIDATION_CASE_T1_HEISENBERG_SPINE.yaml (Heisenberg-path spine; 45 typed nodes)
@@ -170,4 +169,4 @@ The Schrödinger-Heisenberg twin pair is the cleanest historical instance of ren
 
 ---
 
-*Document version 1.0. Phase-2 T1 isomorphism analysis. Ready for Session C Grok review.*
+*Document version 1.0. Phase-2 T1 isomorphism analysis.*

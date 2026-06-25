@@ -27,16 +27,10 @@ contributors:
 ai_assistance_disclosure: |
   AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1) were used during
   the drafting of this paper for initial literature search and editorial
-  refinement. The Phase 1.5 pre-draft Grok HARD-GATE review process and
-  the Phase 4 post-draft Grok review cycle are documented in the
-  project's audit trail (audit/grok_outputs/2026ap_r1_grok.md +
-  2026ap_r2_grok.md + 2026ap_grok_postdraft_r1.md) with each round
-  surfaced to the author for GO/REVISE/DROP verdict per the
-  R_PAPER_PREDRAFT_WORKFLOW HARD GATE discipline. Grok-suggested
-  citation anchors are subject to the project's Crossref-verification
-  discipline (audit/scripts/verify_2026ap_postdraft_r1_anchors.py +
-  PHASE1_ANCHOR_VERIFICATION_2026-05-27.md document the verification of
-  12 anchors with 10 negative findings recorded). All theoretical
-  claims, propositions, methodology specifications, calibration choices,
-  and interpretations are the author's sole responsibility.
+  refinement. The paper was subjected to internal pre-draft and post-draft
+  critical-review cycles. Grok-suggested citation anchors are subject to the
+  project's Crossref-verification discipline (verification of 12 anchors with
+  10 negative findings recorded). All theoretical claims, propositions,
+  methodology specifications, calibration choices, and interpretations are
+  the author's sole responsibility.
 ---

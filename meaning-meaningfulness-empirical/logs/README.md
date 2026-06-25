@@ -19,7 +19,7 @@ Per user direction 2026-05-27, the public log includes ONLY calls that produce e
 
 **Internal scope (drafting/research, not published):**
 - AI-draft Russian rendering starter (drafting helper for user's v1.1.0 human-native pass)
-- Grok review fire cycles (internal peer review of paper draft)
+- Internal critical-review cycles (peer review of paper draft)
 - Any LLM-assisted paper drafting or editing
 
 ## Per-phase JSONL files (v1.0.0 release; public scope)
@@ -79,7 +79,7 @@ Reconstruction script: `research/meaningfulness_empirical_companion/code/reconst
 3. For Phase 1 anchor verification: rerun `audit/scripts/verify_2026ap_postdraft_r1_anchors.py` against the live Crossref API to confirm the 2 VERIFIED / 10 NF classification (results may drift if Crossref metadata updates; the log preserves point-in-time provenance).
 4. For Phases 2, 2.5, 3 Claude renderings: the log captures the system prompt + user prompt + the response summary. Full rendered articles are at `research/meaningfulness_empirical_companion/RENDERING_*.md`. An independent reader can re-render with any AI operator using the same prompts to compare against this paper's renderings.
 5. For Phase 3.5b multi-LLM cross-family renderings (v1.1.0 execution): the script `research/meaningfulness_empirical_companion/code/multi_llm_rendering.py` uses `llm_call_logger.py` with real-time logging from invocation; results land in `phase_3.5b_*.jsonl` files at v1.1.0 release.
-6. For Phase 6 Grok r2 fire: `audit/scripts/run_grok_review.py` invocation captures raw output to `audit/grok_outputs/2026ap_grok_postdraft_r2.md`; structured JSONL logging lands at `phase_6_grok_r2_calls.jsonl` via the same `llm_call_logger.py` integration.
+6. Internal critical-review cycles are logged via `llm_call_logger.py` integration; those review logs are internal-only (see Internal scope above) and are not published.
 
 ## Redaction audit
 
@@ -105,7 +105,7 @@ Post-redaction warnings (if any patterns matched internal-doc references) are wr
 | 2-prime / 2.5-prime / 3-prime | gpt-4o Operator C cross-operator extraction | 3 | ~0.04 (tokens: 8,239 in / 2,160 out at gpt-4o pricing) |
 | **Total v1.0.0 public scope** | | **21** | **~0.04** |
 
-Internal-only logs (not published): Phase 3.5a AI-draft Russian (drafting helper) + Phase 6 Grok r2 review (internal review). Internal cost: ~$0.15 (Grok r2 only; AI-draft Russian was harness-internal).
+Internal-only logs (not published): Phase 3.5a AI-draft Russian (drafting helper) + Phase 6 internal critical-review. Internal cost: ~$0.15 (review only; AI-draft Russian was harness-internal).
 
 ## Deferred to v1.1.0 (logged at execution time)
 

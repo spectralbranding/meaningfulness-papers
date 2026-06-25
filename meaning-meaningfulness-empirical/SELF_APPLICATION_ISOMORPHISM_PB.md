@@ -95,7 +95,7 @@ The Phase 5 integrative-theory rewrite uses this Task α result as the second co
 
 - **Coding-time observation**: the operator who re-extracted the spine knows the source spine. This is the inter-coder reliability concern that Task δ is designed to address — without an independent second coder, the strict-preservation rate of 78.6% may be optimistically biased by author familiarity. Task δ (κ measurement by independent coder on 2 of 5 spines) is the appropriate next test.
 - **Schema-refinement candidate**: the three partial-preservation cases (L12, L13, L14) all involve metadata-vs-substantive-content distinctions that the current schema does not formally mark. A v0.3 spine-schema extension could add a "preservation_class" tag per node: {formal-required, semantic-sufficient, optional}.
-- **Phase 5 inheritance**: the L1-L11 strict preservation result is the highest-information-value piece of evidence the v1.0.0 paper revision can use to address Grok r1's "N=2 thin" critique without expanding the empirical base in ways that would require v2.0.0+ prospective-cohort work.
+- **Phase 5 inheritance**: the L1-L11 strict preservation result is the highest-information-value piece of evidence the v1.0.0 paper revision can use to address the "N=2 thin" critique without expanding the empirical base in ways that would require v2.0.0+ prospective-cohort work.
 
 ---
 

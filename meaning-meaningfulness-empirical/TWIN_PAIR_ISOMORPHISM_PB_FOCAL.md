@@ -69,7 +69,7 @@ Focal-pair observed Rec = 4 satisfies Rec*(β) at β = .7 or β = .9 but is just
 
 - **Partial Bikard independence** (§1 above): EM2000 cites ZW1999 WP in its reference list, weakening but not eliminating independence. Acceptable for v1.0.0 existence proof; v1.1.0 adds fully-independent pair.
 - **Single-coder extraction** (paper_a:axiom_A1 + PB_AA1): the spine-to-spine alignment table reflects one coder's typing decisions. Inter-coder κ measurement scheduled for v1.1.0; current alignments at v1.0.0 are author-reported.
-- **No matched-non-twin baseline** (Grok r2 §5 ask, deferred to v2.0.0+): the Rec = 4 value cannot be compared against a placebo non-twin baseline at v1.0.0. The threshold-comparison Rec ≥ 3 is anchored to Paper A's deterministic spec, not to a sampling distribution.
+- **No matched-non-twin baseline** (reviewer ask, deferred to v2.0.0+): the Rec = 4 value cannot be compared against a placebo non-twin baseline at v1.0.0. The threshold-comparison Rec ≥ 3 is anchored to Paper A's deterministic spec, not to a sampling distribution.
 - **Edge-type judgment calls**: L3 (bridges) is the closest edge-type-decision call; "bridges" was chosen over "extends" because both EM_P3 and ZW_P3 posit cross-firm commonality without one being a strict extension of the other.
 - **Linked propositions not exhaustive**: L5-L7 catalog unlinked propositions; the per-paper unique propositions (EM_P2, ZW_P5, ZW_P6) are not artifacts of incomplete spine extraction but real theoretical divergences between the twin members.
 
@@ -113,4 +113,4 @@ Task β per SESSION_F_COMPLETION_2026-05-27.md spec and Session H init prompt: r
 
 **Honest limitation**: same-operator re-extraction risk applies here as it does for Task α — the coder who extracted the third-rendering spine wrote the third rendering and knows the source. Task δ (independent second-coder κ on 2 of 5 spines) is the appropriate test of the cross-coder reliability.
 
-**Integration into paper.md**: cite as a second P4 evidence point at the focal-pair-shared-substrate boundary (complementing the original Rec=4 on the EM-vs-ZW pair). The Phase 2 Task α result is the P4 evidence point at the Paper-B-own-spine boundary; the Phase 3 Task β result is the P4 evidence point at the focal-pair-shared-substrate boundary. Both are below the v2.0.0+ prospective-cohort empirical scale Grok r1 asks for, but both meaningfully extend the v1.0.0 N=2-twin-pairs evidence base.
+**Integration into paper.md**: cite as a second P4 evidence point at the focal-pair-shared-substrate boundary (complementing the original Rec=4 on the EM-vs-ZW pair). The Phase 2 Task α result is the P4 evidence point at the Paper-B-own-spine boundary; the Phase 3 Task β result is the P4 evidence point at the focal-pair-shared-substrate boundary. Both are below the v2.0.0+ prospective-cohort empirical scale reviewers ask for, but both meaningfully extend the v1.0.0 N=2-twin-pairs evidence base.

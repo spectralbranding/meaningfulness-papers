@@ -21,14 +21,13 @@ ai_assistants:
       spine-first drafting protocol's structural-substrate operation class.
       All judgment operations (fork/rebase/merge; theoretical commitments;
       cohort-specific rendering decisions) remained with the human author.
-    sessions_used: "Session D and prior Sessions A through C+C-prime (predraft + Phase 3 drafting)"
+    sessions_used: "predraft + Phase 3 drafting"
   - name: "Grok 4.1"
     provider: "xAI"
     role: >-
-      Pre-draft critical-review applied to predraft bundle across five review
-      cycles (r1–r5; plateau reached r4→r5). No drafting authorship. Audit
-      record at audit/grok_outputs/2026ao_grok_r{1,2,3,4,5}.md.
-    sessions_used: "Sessions A through C-prime predraft"
+      Pre-draft critical-review applied to the predraft bundle across five
+      review cycles (r1–r5). No drafting authorship.
+    sessions_used: "predraft phase"
   - name: "Gemini 3.1"
     provider: "Google"
     role: >-
@@ -45,8 +44,8 @@ ai_co_authorship_policy: >-
   artifacts. AI use is disclosed in Acknowledgments and Method per AMA
   guidance.
 human_reviewers_during_drafting:
-  - name: "Author self-review across five Grok pre-draft cycles"
-    note: "External pre-submission reviewer engagement deferred to post-draft Grok review pass (Session E) and venue R&R cycle."
+  - name: "Author self-review across five pre-draft critical-review cycles"
+    note: "External pre-submission reviewer engagement deferred to a post-draft critical-review pass."
 acknowledgment_placement: >-
   Acknowledgments + CRediT contributions appear at END of paper, between
   Conclusion and References — NOT on first page per reference_paper_first_page_defaults.

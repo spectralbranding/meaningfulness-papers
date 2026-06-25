@@ -57,7 +57,7 @@ claims:
   statement: 'Organizations (research labs, consulting firms, standards bodies) that publish the semantic
     substrate (S) of their knowledge artifacts as a first-class artifact achieve higher rates of knowledge
     recombination than organizations that publish only the rendering (R), under boundary conditions C1–C4.
-    v0.5.0 organizational-outcome reframing per Grok r2 NF-grain gap: "Labs that publish spines exhibit
+    v0.5.0 organizational-outcome reframing: "Labs that publish spines exhibit
     higher citation-weighted derivative work (extension, contradiction, or refinement of locked propositions)
     within 24–36 months than matched labs that publish renderings only."'
   testable: true
@@ -202,7 +202,7 @@ dependencies:
   claim: 'Canonical knowledge-based-theory-of-the-firm citation. Establishes knowledge as the firm''s
     primary strategic asset. The Operator role generalizes Liebeskind''s knowledge-as-firm-asset framing
     one level up: knowledge is intrinsically substrate (S) + rendering (R); the Operator is the role that
-    maintains the substrate/rendering split. Engaging Liebeskind directly addresses Grok r4 §4 predicted
+    maintains the substrate/rendering split. Engaging Liebeskind directly addresses a predicted
     reviewer concern (Operator-role-as-fundamental-OT-advance vs AI-era-domain-framework).'
   reference: liebeskind-1996-knowledge-strategy-theory-firm
 - relationship: extends
@@ -213,9 +213,9 @@ dependencies:
     + §8 supplies a venue-canonical Org Sci anchor for the role-theoretic contribution.
   reference: nickerson-zenger-2004-knowledge-based-theory-firm-problem-solving
 - relationship: extends
-  claim: 'Grok r4 §2 first bullet HIGH-priority: "canonical role-theoretic treatment of how occupational
-    roles absorb unexpected events… your Operator role must engage it in §B/§J to show how the structural/judgment
-    split generalizes (or differs from) classic OST role theory rather than appearing sui generis to AI."
+  claim: 'A canonical role-theoretic treatment of how occupational roles absorb unexpected events; the
+    Operator role engages it in §B/§J to show how the structural/judgment split generalizes (or differs
+    from) classic OST role theory rather than appearing sui generis to AI.
     Bechky-Okhuysen documents how SWAT officers and film crews maintain role-coherence under surprise
     via ''trading zones'' and coordination; the Operator role v0.7.0 generalizes their role- coordination
     move to substrate/rendering coordination under AI projection. Engaging Bechky-Okhuysen demonstrates
@@ -247,7 +247,7 @@ dependencies:
     + machine-operability + edge-type catalog affords specific Operator-role projection patterns (structural
     substrate operations via AI; judgment operations via human). Strong venue-canonical anchor for §5
     (three-level hierarchy as affordance structure) and §H (mechanism = affordance specification). AM
-    Annals is a venue-credible review journal that Org Sci reviewers will recognize as theoretical-foundation
+    Annals is a venue-credible review journal that reviewers will recognize as theoretical-foundation
     literature. NF3 updated to RESOLVED-PARTIAL: original Grok-suggested citation does not exist; real
     Leonardi-Vaast 2017 collaboration on adjacent topic engaged. Discipline preserved: the verification
     cascade still caught the original Grok hallucination pre-draft.'
@@ -347,9 +347,9 @@ dependencies:
 - relationship: extends
   claim: Paper B 2026ap takes the empirical estimation of P2 (recombination) and P3 (verification-cost
     asymmetry β/δ) at growing-N twin-pair cohort. v1.0.0 ships with N=2 focal pair (Eisenhardt-Martin
-    2000 SMJ + Zollo-Winter 2002 Org Sci) per Grok r3 §5 endorsement, plus N=2 secondary pair (Tushman-O'Reilly
+    2000 SMJ + Zollo-Winter 2002 Org Sci), plus N=2 secondary pair (Tushman-O'Reilly
     1996 CMR + Duncan 1976 Kilmann-ed.) for 20-year-gap sensitivity. v2.0.0+ adds prospective lab-cohort
-    data. v4.0.0 targets SMJ submission scale. Each version cites Paper A 2026ao DOI as theoretical foundation.
+    data. v4.0.0 targets large-N submission scale. Each version cites Paper A 2026ao DOI as theoretical foundation.
     Scoping doc at [internal path removed]
   reference: zharnikov-2026ap-meaningfulness-empirical-companion
 - relationship: extends
@@ -406,7 +406,7 @@ dependencies:
     3 drafting ("Online Appendix D — Historical Existence Proof (Non-Management Domain)"). Per PIVOT-SPLIT
     discipline (H-S preserved as historical existence proof for P4; main body weight at Eisenhardt-Martin
     + Zollo- Winter management twin pair), Pauli 1927 strengthens the historical- record evidence without
-    expanding main-body weight Grok r5 asked to reduce.'
+    expanding main-body weight.'
   reference: pauli-1927-quantenmechanik-magnetischen-elektrons
 - relationship: extends
   claim: Born's probabilistic interpretation of ψ (the ψψ̄ ≡ probability density reading that Schrödinger's
@@ -441,7 +441,7 @@ dependencies:
   reference: nakajima-2026-log-is-the-agent
 - relationship: extends
   claim: Theorizing-forms taxonomy locates the Operator-role contribution within organization-theory scholarship's
-    typology of theory contributions; useful for Section-3 positioning per Grok r2 §1 ask.
+    typology of theory contributions; useful for Section-3 positioning.
   reference: cornelissen-hollerer-seidl-2021-theorizing-forms
 - relationship: extends
   claim: Scarcity-to-abundance framing of scholarship in the GenAI era; supplies the field-level intervention

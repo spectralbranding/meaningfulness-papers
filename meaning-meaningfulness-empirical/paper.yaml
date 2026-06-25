@@ -88,7 +88,7 @@ dependencies:
 - relationship: extends
   claim: 2026an Specification Readiness Empirical Companion is the direct precedent for the iteratively-versioned-working-paper
     format Paper B adopts. 2026an at v1.0.0 was reframed as construct + measurement + identification toolkit
-    when initial Grok cycles plateaued at 3/10; Paper B's design pre-empts that plateau by scoping v1.0.0
+    when initial drafts plateaued; Paper B's design pre-empts that plateau by scoping v1.0.0
     explicitly to small-N existence proofs.
   critical: false
   doi: 10.5281/zenodo.20384084

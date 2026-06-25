@@ -14,9 +14,9 @@ artifact_lineage:
     output: pre-draft bundle (internal; not public-mirrored)
     completion: 2026-05-26
   - phase: 1.5
-    output: 5 Grok pre-draft critical-review cycles (summaries internal; not public-mirrored)
+    output: 5 pre-draft critical-review cycles (internal; not public-mirrored)
     completion: 2026-05-26
-    note: 5 cycles; plateau reached r4→r5; GO recommendation issued; cumulative Grok-suggestion hallucination rate ~50% documented
+    note: cumulative Grok-suggestion hallucination rate ~50% documented
   - phase: 2
     output: Validation case extractions
     sub_artifacts:
@@ -48,13 +48,13 @@ artifact_lineage:
     started: 2026-05-26
     estimated_finish: 2-3 weeks (multi-session)
   - phase: 4
-    output: Post-draft Grok review pass + author fix-pass
+    output: Post-draft critical-review pass + author fix-pass
     status: BLOCKED on Phase 3 paper.md full prose completion
   - phase: 5
     output: Zenodo upload (v1.0.0; first DOI mint); public mirror creation
     status: BLOCKED on Phase 4
   - phase: 6
-    output: Organization Science submission
+    output: Journal submission
     status: BLOCKED on Phase 5
 
 drafting_protocol:
@@ -69,12 +69,12 @@ verification_cascade_state:
   cascade_doc: research/code/verify_citations.py
   cascade_stages: 5 (Crossref → Semantic Scholar → arXiv → OpenAlex → OpenLibrary → Perplexity)
   external_anchors_verified: 17 (all in SPINE.yaml v0.7.1 external_anchors)
-  fabricated_anchors_caught_pre_draft: 6 (across r1–r5 Grok review cycles; ~50% Grok-suggested-anchor catch rate)
+  fabricated_anchors_caught_pre_draft: 6 (across r1–r5 pre-draft cycles; ~50% Grok-suggested-anchor catch rate)
   negative_findings_recorded: NF1, NF2 (RESOLVED-PARTIAL v0.7.1), NF3 (RESOLVED-PARTIAL v0.7.1)
 
 session_lineage:
   - session: A
-    output: v0.1.0 → v0.2.0 thesis + bundle + spine + Grok r1
+    output: v0.1.0 → v0.2.0 thesis + bundle + spine + critical-review cycle
     date: 2026-05-26
   - session: B
     output: v0.3.0 + V0.4.0 — schema v0.1→v0.2, P4 added, four fabricated anchors rebased, T1 H-S extractions
@@ -83,10 +83,10 @@ session_lineage:
     output: v0.4.0 editorial — Operator generalization, F2 audit_internal demotion
     date: 2026-05-26
   - session: C
-    output: Grok r2 fire on v0.4.0
+    output: critical-review cycle on v0.4.0
     date: 2026-05-26
   - session: C-prime
-    output: v0.5.0 (NF1/2/3 closures), v0.6.0 (PIVOT-SPLIT), v0.7.0 (schema/protocol appendix subordination + KBT anchors), v0.7.1 patch (NF2/3 partial-resolution + Pauli 1927); Grok r3/r4/r5
+    output: v0.5.0 (NF1/2/3 closures), v0.6.0 (PIVOT-SPLIT), v0.7.0 (schema/protocol appendix subordination + KBT anchors), v0.7.1 patch (NF2/3 partial-resolution + Pauli 1927); critical-review cycles r3-r5
     date: 2026-05-26
   - session: D
     output: paper.md + appendices + frontmatter (this session)
@@ -129,7 +129,7 @@ editorial_discipline_anchors:
 
 session_i_step_4_5_revisions:
   date: "2026-05-27"
-  trigger: "Grok joint tier-1-readiness review of both papers"
+  trigger: "joint critical-review of both papers"
   outputs:
     - "SPINE.yaml v0.7.3 → v0.8.0 fork (4 new external_anchors: Cornelissen 2021 + Grimes 2023 + Alavi 2024 + Benbya 2024)"
     - "paper.md sharpened §Introduction contribution paragraph + new §Theory grounding paragraphs (~700w) + new §Discussion §Implications so-what paragraph + 4 reference-list entries"

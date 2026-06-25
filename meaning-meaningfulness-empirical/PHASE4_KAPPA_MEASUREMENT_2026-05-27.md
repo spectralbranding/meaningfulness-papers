@@ -12,7 +12,7 @@ status: "Protocol documented + recruitment status surfaced + EXECUTION DEFERRED 
 
 Paper A 2026ao's P4 (rendering-equivalence under spine-preservation) holds as a preservation result under axiom A1 (σ-faithfulness on locked subsets). A1's operational threshold is **κ ≥ .75 on both node typing AND antecedent-edge placement**, measured via inter-coder reliability on retroactive spine extractions. Below threshold on either dimension, A1 fails empirically on the affected subdomain and P4 degrades from a preservation result to a probabilistic tendency on that subdomain.
 
-Grok r1 (postdraft) elevated κ measurement from a v1.0.0 Limitations item to a "must-fix before any submission" item (Priority-1 in §5 Major Revision Roadmap). The v1.0.0 release explicitly schedules κ measurement as Task δ; this document is the execution-readiness pass per Session H init prompt.
+Post-draft critical review elevated κ measurement from a v1.0.0 Limitations item to a priority item (Priority-1 in §5 Major Revision Roadmap). The v1.0.0 release explicitly schedules κ measurement as Task δ; this document is the execution-readiness pass.
 
 ## Protocol specification (operational, ready for execution)
 
@@ -125,7 +125,7 @@ Candidates 1 and 2 are the recommended options for v1.1.0 execution. Candidate 4
 - Actual κ values on either spine.
 - Second-coder extractions.
 - Empirical anchoring of axiom A1 on the Paper B subdomain.
-- The Priority-1 Grok r1 must-fix item is documented + protocolized + deferred — not closed.
+- The Priority-1 item is documented + protocolized + deferred — not closed.
 
 ## Integration into v1.0.0 paper.md (Phase 5 5a)
 
@@ -133,10 +133,10 @@ The Phase 5 integrative-theory rewrite and the §Limitations / §Method-extracti
 
 ## Cross-reference
 
-- Source: Session H init prompt §Phase 4 Task δ + SESSION_F_COMPLETION_2026-05-27.md §v1.0.0 task α/β/γ/δ — DEFERRED + Paper A 2026ao §Method-single-coder-reliability + paper_a:axiom_A1.
+- Source: Phase 4 Task δ + Paper A 2026ao §Method-single-coder-reliability + paper_a:axiom_A1.
 - Companion: PHASE1_ANCHOR_VERIFICATION_2026-05-27.md (Phase 1 sister artifact); SELF_APPLICATION_ISOMORPHISM_PB.md (Phase 2 sister artifact); TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md §8 (Phase 3 sister artifact).
 - Successor: PHASE4_KAPPA_RESULTS_v1.1.0.md (to be created at v1.1.0 execution).
 
 ---
 
-*Phase 4 closes with full protocol documentation + recruitment status surfaced + execution deferred to v1.1.0. The Priority-1 must-fix item Grok r1 elevated remains pre-registered and tractable; what is missing is operator-attention-budget for second-coder onboarding, not framework-design clarity.*
+*Phase 4 closes with full protocol documentation + recruitment status surfaced + execution deferred to v1.1.0. The Priority-1 item remains pre-registered and tractable; what is missing is operator-attention-budget for second-coder onboarding, not framework-design clarity.*

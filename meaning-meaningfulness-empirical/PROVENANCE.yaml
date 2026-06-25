@@ -18,8 +18,8 @@ companion_paper_zenodo:
 
 drafting_protocol:
   spine_first: "Per SPINE_FIRST_DRAFTING_PROTOCOL (Paper A 2026ao Online Appendix B)"
-  pre_draft_gate: "Grok pre-draft critical-review HARD GATE applied (2 cycles)"
-  post_draft_review: "Grok post-draft critical-review applied (2 cycles; readiness 3/10 -> 4/10 working-paper tier; plateau-and-ship per Paper A 2026am precedent)"
+  pre_draft_gate: "Pre-draft critical-review applied (2 cycles)"
+  post_draft_review: "Post-draft critical-review applied (2 cycles)"
 
 # v1.0.0 release consolidates 4 internal drafting phases (collapsed per
 # feedback_version_only_at_zenodo HARD RULE). Each phase summarized below
@@ -40,7 +40,7 @@ phase_summary:
     artifacts_public:
       - "Theoretical-antecedent anchors verified via Crossref (PHASE1_ANCHOR_VERIFICATION_2026-05-27.md)"
   phase_1_5_pre_draft_review:
-    description: "Pre-draft critical-review cycles (2 rounds; MEDIUM/R&R_LIKELY plateau)"
+    description: "Pre-draft critical-review cycles (2 rounds)"
     cycles: 2
     plateau_at_round: 2
     hallucination_rate_round: "~57% across r1+r2 anchor suggestions"
@@ -222,7 +222,7 @@ versioning_trajectory:
 
 session_i_step_4_5_revisions:
   date: "2026-05-27"
-  trigger: "Grok joint tier-1-readiness review of both papers"
+  trigger: "joint critical-review of both papers"
   outputs:
     - "SPINE.yaml v0.4.0 → v0.5.0 fork (6 new external_anchors: Grimes 2023 + Brynjolfsson 2025 + George 2025 + Kirchner 2025 + Alavi 2024 + Benbya 2024)"
     - "Title shortened from 15w to 12w"

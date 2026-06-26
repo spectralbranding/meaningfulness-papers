@@ -33,9 +33,6 @@ theoretical_predecessor:
     - "Preservation theorem under strict K-as-typed-DAG reading (paper_a:preservation_theorem)"
     - "Spine-first drafting protocol (paper_a:appendix_B_protocol)"
 status: "Phase 0.5 — locked under schema v0.2 (Paper B v1.0.0 P4-reframed empirical companion; central contribution is empirical demonstration of paper_a:P4 rendering-equivalence under spine-preservation; β/δ calibration demoted to supportive evidence for paper_a:P3 ordering)"
-target_venue_primary: "Strategic Management Journal"
-target_venue_secondary: "Organization Science"
-target_venue_tertiary: "Journal of Management Studies"
 
 title: >-
   Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work

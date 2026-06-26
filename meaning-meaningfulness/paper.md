@@ -8,8 +8,6 @@ DOI: [10.5281/zenodo.20409683](DOI: 10.5281/zenodo.20409683)
 
 Working Paper v1.2.0 – May 2026 (revised June 2026)
 
----
-
 ## Abstract
 
 Generative AI shifts the cost structure of organizational knowledge work asymmetrically across the layers of the artifact it produces. The structural substrate — the typed graph of propositions, dependencies, and evidence anchors — becomes cheap to construct, verify, and recombine; the cohort-conditional prose rendering does not, and may become relatively more costly. This paper introduces the **Operator** as the role-level abstraction that absorbs the shift: a role with intrinsic structural-substrate operations and intrinsic judgment operations, whose human-versus-AI projection composition varies by era. The role-as-projection move extends the automation-augmentation paradox from task allocation to role-level division of operations. Two propositions follow. P1 (separability): structural substrate and rendering are independently optimizable. P4 (rendering-equivalence under spine-preservation): two renderings of a locked substrate converge on conclusions if and only if (iff) both preserve its structural elements, under a faithful extraction axiom. The paper illustrates the framework on a management-theory twin pair (dynamic capabilities) and applies it reflexively to its own production. Empirical estimation of two additional predictions about recombination and cost-asymmetry parameters is reserved for a companion paper. The companion empirical paper extends the validation set across Russian and Chinese with five LLMs from three training-corpus families spanning proprietary APIs and open-weights local deployment, with extractor-invariant preservation verdicts. Three Design Propositions follow for organizational governance, role and incentive design, and editorial-process decoupling.
@@ -33,8 +31,6 @@ We position the contribution against five close neighbors. Carlile [-@carlile-20
 The framework applies under joint sufficient boundary conditions: authoring is version-controlled (C1); claims are propositional rather than purely narrative (C2); audience-schema divergence is non-trivial (C3); and artifact volume exceeds unaided human reviewer verification capacity (C4). Five domains where the conditions are principle-failed or principle-inverted — routine operational work, real-time control systems, narrative-only scholarship, high-stakes executive sensemaking under genuine uncertainty, and pure discovery science without reproducibility pressure — are excluded explicitly and ceded to prior traditions (operations research; control theory; interpretive scholarship; sensemaking theory; pre-paradigmatic science studies).
 
 The remainder of the paper develops the theory, states the propositions, illustrates the framework on three validation cases at the depth a theory paper requires, applies the framework to one organizational artifact prospectively and to the present paper reflexively, and discusses theoretical implications, organizational Design Propositions, and limitations.
-
----
 
 ## 1. Theory
 
@@ -74,8 +70,6 @@ The cost asymmetry has a second observable consequence at the schema level. A su
 
 The intervention that follows from the cost asymmetry is the spine-first drafting protocol (Online Appendix B). The protocol prescribes locking the substrate before drafting prose; tracing every prose claim to a substrate entry; surfacing orphan claims as fork (extend the substrate) or rebase (drop the claim) operations; and evaluating substrate coherence and prose craft separately. Under cost symmetry the protocol is neutral; under the cost asymmetry the protocol is the cost-minimizing arrangement of Operator operations at the artifact-production scale.
 
----
-
 ## 2. The Three-Level Hierarchy: Formal Apparatus
 
 This section makes the three-layer decomposition precise enough for the propositions to be formally stated and falsified. The full substrate schema (10 node types, 17 edge types) and the full simulation parameter grid live in Online Appendices A and C; the main body specifies only what reviewers need to attack the propositions.
@@ -101,8 +95,6 @@ The recombination operator measures the structural reuse of one substrate by ano
 The substrate-as-typed-DAG framing aligns with the affordance perspective on organizational technology [@leonardi-vaast-2017-social-media-affordances]. Where Leonardi and Vaast theorize how technological artifacts afford specific organizing patterns through their material properties, the framework here treats the spine as a technological artifact whose typed-DAG structure, machine-operability, and edge-type catalog afford specific Operator-role projection patterns: structural-substrate operations afforded to AI projection (the graph is computationally tractable); judgment operations afforded to human projection (fork-rebase-merge decisions require theoretical commitment the graph cannot itself supply). The spine is a new species of boundary object in the Star–Griesemer–Carlile lineage: machine-operable, version-controlled, typed, and traceable end-to-end from log event to proposition.[^cs-argument-graph]
 
 [^cs-argument-graph]: The substrate's typed-DAG representation has an adjacent lineage in computational argumentation studies, where argument graphs and claim graphs [@toulmin-1958-uses-of-argument; @walton-2008-argumentation-schemes] represent propositional structure for argument analysis. Our framework's substrate differs in three respects: it types nodes by role in the inferential chain (observation, method, finding, proposition, derivation, rival, robustness check, limitation, negative finding, assumption atom) rather than by argument role (claim, warrant, data); it makes provenance a required per-node field anchoring each node to a specific log-layer event; and it is designed for operator-internal coordination across the substrate-judgment partition rather than for inter-personal argument adjudication.
-
----
 
 ## 3. Propositions
 
@@ -142,8 +134,6 @@ Under boundary conditions C1–C4, generative-AI verification cost on the spine 
 
 *Status.* Stated here with explicit falsifier and formal cost-function specification. Online Appendix C reports a calibrated simulation that varies $\beta$ and $\delta$ over a $3 \times 3$ grid and shows the cost-allocation prescription dominates across the grid without estimating the parameters empirically. Brynjolfsson, Li, and Raymond [-@brynjolfsson-2025-generative-ai-at] supply empirical anchor at the practitioner level. Large-N organizational-outcome estimation is reserved for the empirical companion.
 
----
-
 ## 4. Boundary Conditions and Negative Scope
 
 The framework applies under four joint sufficient boundary conditions and explicitly does not apply in five domains where one or more condition is principle-failed or principle-inverted.
@@ -174,8 +164,6 @@ The framework applies under four joint sufficient boundary conditions and explic
 
 The explicit negative scope counterbalances the positive scope and addresses the standing concern that framework papers risk over-claiming. The Operator-role contribution applies where the boundary conditions hold; the prior traditions named above retain authority where they do not.
 
----
-
 ## 5. Stylized Facts
 
 Four stylized facts the framework explains. Each is a pattern existing two-level frameworks of meaning struggle to distinguish from generic AI error or generic translation difficulty; the three-level decomposition locates each precisely.
@@ -203,8 +191,6 @@ The three-level hierarchy predicts this directly: $\rho$ is cohort-conditional a
 Properly specified scholarly artifacts exhibit conclusion-invariance across rendering medium — prose, podcast, slide deck, infographic, video — that neither pure philosophy of meaning, nor translation studies focused on sentence equivalence, nor AI-generated-text research focused on single-medium production can explain. The pattern is observable in scientific communication practice: a conference talk and the journal paper it presents reach the same conclusions on the same propositions, despite using different rendering parameters (visual versus prose; spoken cadence versus reading pace; slide compression versus full-text exposition); a textbook chapter and its associated video lecture rendering exhibit the same invariance.
 
 The three-level hierarchy explains the pattern directly: medium is a parameter of $\rho$; the spine is medium-invariant. P4 formalizes the invariance and supplies the falsifier — when two renderings disagree on conclusions, at least one has broken the spine. The Heisenberg–Schrödinger founding papers of quantum mechanics supply the historical existence proof at extreme formalism distance (Appendix D); the present paper's own multi-rendering self-application set supplies the contemporary existence proof at narrower medium distance.
-
----
 
 ## 6. Validation: Five Cases at Theory-Paper Depth
 
@@ -254,8 +240,6 @@ In parallel with T3, the present paper exhibits the framework reflexively by pub
 
 The five cases together illustrate P1 and P4 at the depth a theoretical contribution requires — proportionate to the propositions' explanatory range, not to a publication target's empirical-density expectations. P2 and P3 are stated as theoretically-derived predictions with falsifier specifications and operational metrics; their empirical estimation at organizational outcome scale is the primary scope of the companion empirical working paper. The split between theoretical contribution (this paper) and empirical estimation (companion paper) addresses the standing concern that retroactive spine extraction tests only P4 and cannot credibly test P2 and P3 at organizational outcome scale within a single paper.
 
----
-
 ## 7. Discussion
 
 ### *Primary theoretical contribution.*
@@ -304,23 +288,17 @@ The companion empirical paper [@zharnikov-2026ap-same-meaning-different-prose] v
 
 Three directions are immediate. *First*, inter-coder reliability programs (the $\kappa \geq .75$ threshold on extraction protocol) across multiple twin-pair cases — the empirical-companion paper's iterative cohort growth is one such program, but parallel programs in other disciplines (clinical-trials methodology; legal-precedent analysis; standards-body deliberation) would broaden the empirical reach. *Second*, AI-projection cost-function estimation across model families — the cost functions $c_{AI}(S) = \alpha \cdot |V|^\beta$ and $c_{human}(R) = \gamma \cdot |\text{tokens}|^\delta$ admit empirical fitting once spine corpora exist; the parameter estimates across models would test whether the cost asymmetry is robust to AI-architecture variation. *Third*, governance and incentive design for spine-publication — the cost-asymmetry result is necessary but not sufficient for organizational adoption; the political economy of publishing the substrate (who owns it; how is it credited; how is strategic manipulation of edge typing prevented) is a research program in its own right that the framework does not address but its adoption requires.
 
----
-
 ## 8. Conclusion
 
 The arrival of capable generative AI inside scholarly knowledge production has surfaced a cost asymmetry across the layers of the artifact: structural substrate becomes cheap to construct, verify, and recombine at AI projection scale; cohort-conditional rendering does not, and may become more costly relative to the new equilibrium because rendering is precisely where human attention remains the comparative advantage. The role-theoretic contribution this paper develops — the Operator with intrinsic structural-substrate and judgment operations, whose human-versus-AI projection composition varies by era — absorbs the shift at the layer of role architecture rather than at the layer of task allocation. Two propositions are primary: meaning and meaningfulness are separately optimizable (P1); rendering-equivalence under spine-preservation is provable as a graph-theoretic preservation theorem under one explicit faithfulness axiom (P4). Two further propositions — recombination advantage for substrate-publishing organizations (P2) and verification-cost asymmetry with $\beta < 1 < \delta$ exponents (P3) — are stated as theoretically-derived predictions with explicit falsifiers and operational metrics, with empirical estimation at organizational outcome scale deferred to a companion working paper. The framework applies under four joint sufficient boundary conditions and explicitly does not apply in five domains where one or more condition is principle-failed or principle-inverted; the explicit negative scope counterbalances the positive scope and addresses the standing concern that role-theoretic framework papers over-claim by ceding five named domains to the prior traditions that already characterize them.
 
 We exhibit the framework reflexively by publishing the present paper's substrate as a Zenodo companion artifact, by tracing every prose claim to a substrate entry through the spine-first drafting protocol, and by producing companion renderings of the same substrate across language and register boundaries. The contemporary management-theory twin pair is the primary illustrative case; the founding papers of quantum mechanics are the historical existence proof at extreme formalism distance; the reflexive self-application is the robustness check. The empirical estimation of the recombination metric and the cost-asymmetry parameters at organizational outcome scale is the scope of a companion empirical working paper. The split between theoretical contribution and empirical estimation preserves a falsification path the framework would not otherwise have: P2 and P3 cannot be tested at the organizational outcome scale a tier-one management journal expects within the page budget of a single theory paper, and the companion path supplies the empirical reach without compressing the theoretical contribution. The reader who accepts P1 and P4 as developed here and wishes to interrogate P2 and P3 empirically has the companion paper as the starting point and a documented trajectory toward large-N falsification.
 
----
-
 ## Acknowledgments
 
 AI assistants (Claude Opus 4.8, Grok 4.20, Gemini 2.5 Pro, GPT-4o) were used for initial literature search, for software development — implementing and running the companion computation script that reproduces the paper's reported numerical and simulation results — and for editorial refinement; all theoretical claims, propositions, and interpretations are the author's sole responsibility.
 
 *CRediT contributor statement.* Dmitry Zharnikov: conceptualization, methodology, investigation, formal analysis, writing — original draft, writing — review and editing.
-
----
 
 ## References
 

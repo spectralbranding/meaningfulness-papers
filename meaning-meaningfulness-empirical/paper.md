@@ -8,8 +8,6 @@ DOI: [10.5281/zenodo.20409701](DOI: 10.5281/zenodo.20409701)
 
 Working Paper v1.2.0 – May 2026 (revised June 2026)
 
----
-
 ## Abstract
 
 This paper empirically demonstrates Zharnikov's [-@zharnikov-2026ao-spec-based-research-post-ai] Proposition P4 — rendering-equivalence under spine-preservation — in management theory. The paper extends the companion theory's Heisenberg–Schrödinger historical existence proof into contemporary strategy research via structural extractions of two independently-authored pairs: a dynamic-capabilities pair [@eisenhardt-2000-dynamic-capabilities-what; @zollo-winter-2002-deliberate-learning] and a knowledge-based-view pair from the *Strategic Management Journal* (SMJ) Winter 1996 Special Issue [@grant-1996-toward-knowledgebased-theory; @liebeskind-1996-knowledge-strategy]. The recombination metric Rec returns 4 linked propositions with preserved antecedents on each pair. A random-graph null baseline shows $\Pr(\mathrm{Rec} \ge 3 \text{ by chance}) \approx .000$ across 1,000 size-matched shadows. Three additional renderings of substrates already in the corpus — a practitioner-register rendering of the paper's own structure, a third rendering of the focal-pair shared substrate, and a cross-paper rendering of the companion theory's full theoretical apparatus — preserve 11/14, 4/4, and 12/15 items strictly under within-operator extraction; 14/14, 4/4, and 15/15 semantically; zero contradictions. Under the methodologically stronger cross-operator extraction (renderer and extractor in different model families), strict preservation is 9/14 and 10/15 on the two formal-apparatus renderings (4/4 on the focal-pair rendering) with 14/14, 4/4, and 14/15 semantically and still zero contradictions. A bibliographic-hallucination audit of twelve AI-suggested anchors finds two verified and ten negative findings. Secondary β/δ estimates satisfy the cost-asymmetry ordering. Cross-language demonstrations span Russian renderings across multiple LLMs (including Russian-native GigaChat Rec = 12 and YandexGPT Rec = 11) and Chinese renderings across five LLMs from three training-corpus families including an open-weights model running locally on a single Mac mini (DeepSeek Rec = 12, Claude Opus Rec = 11, Qwen3.6:27b Rec = 12), with cross-extractor robustness (DeepSeek's Chinese rendering re-extracted by Qwen3.6 instead of GPT-4o: Rec = 12). Inter-coder reliability tests are pre-registered for a future release. The paper engages recombinant-search and knowledge-representation scholarship as theoretical antecedents.
@@ -29,8 +27,6 @@ Two secondary contributions accompany the central P4 demonstration. First, grid-
 Three additional pieces of evidence land at this release. A random-graph null-baseline computation shows that the observed Rec = 4 on each twin pair sits above the 99th percentile of a 1,000-shadow random-shadow distribution at the same node count and node-type distribution — the Rec values are not attributable to chance under the random null. A practitioner-register Substack rendering of the present paper's own substrate (1,615 words; different audience, prose conventions, length, tone) preserves 11 of 14 locked propositions at the strict typed-DAG level and 14 of 14 at the semantic level with zero contradictions, under same-operator re-extraction. A LinkedIn rendering of the focal-pair shared substrate (1,044 words; arrow-bullet structure; named antecedents in plain prose) preserves all four substrate items and their antecedent edges. Together these three pieces of evidence extend the P4 evidence base in this release from two twin pairs at small N to two twin pairs plus a random-shadow null comparison plus two self-application renderings of substrates already in the corpus.
 
 The remainder of the paper unfolds as follows. The Theory section places the paper's framework in conversation with adjacent literatures on recombinant search [@kaplan-vakili-2015-double-edged-sword], boundary objects [@carlile-2004-transferring-translating-transforming], automation–augmentation in management [@raisch-2021-artificial-intelligence-management], resource origins [@felin-2023-441021212146-httpsdoiorg101002smj3350], and organizational learning [@levinthal-march-1993-myopia-learning; @levitt-march-1988-organizational-learning], before stating the elements of Zharnikov [-@zharnikov-2026ao-spec-based-research-post-ai] that Paper B directly extends. The Method section specifies the retroactive spine-extraction procedure, the typed-DAG maximum-common-subgraph recombination metric, the random-graph null baseline, and the cost-function calibration procedure. The Results section reports the Rec values on both twin pairs as the central P4 demonstration, the null-baseline comparison, the supportive β/δ ordering as the P3 cross-tie, and the two self-application rendering results. The Discussion section locates the empirical evidence in the boundary-condition table the companion theory specifies, surfaces the iterative-cohort-growth protocol as a longitudinal P4 self-test, and notes the β-conditional $\mathrm{Rec}^*(\beta)$ cross-tie as a footnote rather than a primary contribution. A Companion Computation Script subsection names the public-mirror code paths and run commands for reproducibility. A Conclusion section, Limitations, and Acknowledgments close the paper.
-
----
 
 ## 1. Theory
 
@@ -83,8 +79,6 @@ The rendering-equivalence claim Paper B demonstrates sits at the intersection of
 *Organizational learning antecedents*. Levitt and March [-@levitt-march-1988-organizational-learning] supply the organizational-learning antecedent that both Eisenhardt-Martin and Zollo-Winter inherit at the proposition level of the focal twin pair (L2 in §Results). Levinthal and March [-@levinthal-march-1993-myopia-learning] extend the learning-myopia analysis to the strategic-search regime where exploration and exploitation trade off, and supply the antecedent positioning that bridges to the knowledge-based-view pair's K1/K3 substrate elements on knowledge integration and tacit-vs-explicit knowledge.
 
 The framework's core constructs — the Operator role, the era-dependent projection composition table, the typed-DAG node-and-edge-type catalog, the preservation theorem under axiom A1, the spine-first drafting protocol — are developed at depth in the companion paper [@zharnikov-2026ao-spec-based-research-post-ai]. Paper B inherits each by namespaced reference (paper_a:operator_role, paper_a:appendix_A_schema, paper_a:appendix_B_protocol, paper_a:P1, paper_a:P4, paper_a:axiom_A1) and extends the framework empirically.
-
----
 
 ## 2. Method
 
@@ -150,15 +144,13 @@ Cross-language experiment data is also available as a structured HuggingFace dat
 
 Every numerical figure cited in this paper is reproducible from a script in the public mirror at `https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical/code/`. The two scripts are `rec_metric.py` and `cost_function_calibration.py`; the directory contains a `README.md` documenting run commands and the fixed random seed (`SEED = 42`). The run command for the recombination metric is `uv run python rec_metric.py --spine1 <path> --spine2 <path>`; the run command for the cost-function calibration is `uv run python cost_function_calibration.py --spines <paths> --renderings <paths> --output cost_calibration.csv`.
 
----
-
 ## 3. Results
 
 ### *Focal-pair shared substrate (dynamic-capabilities; P4 demonstration).*
 
 The focal-pair spine-to-spine alignment yields four linked propositions with preserved antecedents — four nodes of a shared underlying substrate that both Eisenhardt and Martin [-@eisenhardt-2000-dynamic-capabilities-what] and Zollo and Winter [-@zollo-winter-2002-deliberate-learning] render in prose. The four shared-substrate linkages are summarized in Table 1; full per-proposition extraction matrices live in the isomorphism analysis at `TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md`.
 
-Table 1: Focal-pair shared substrate (Eisenhardt-Martin [-@eisenhardt-2000-dynamic-capabilities-what] + Zollo-Winter [-@zollo-winter-2002-deliberate-learning]; dynamic capabilities).
+**Table 1.** Focal-pair shared substrate (Eisenhardt-Martin [-@eisenhardt-2000-dynamic-capabilities-what] + Zollo-Winter [-@zollo-winter-2002-deliberate-learning]; dynamic capabilities).
 
 | Linkage | EM 2000 proposition | ZW 2002 proposition | Edge type | Preserved antecedent |
 |---|---|---|---|---|
@@ -175,7 +167,7 @@ $\mathrm{Rec}(G_{\mathrm{EM}}, G_{\mathrm{ZW}}) =$ **4** on linked propositions 
 
 The KBV-pair spine-to-spine alignment, drawn from the *Strategic Management Journal* Winter 1996 Special Issue "Knowledge and the Firm," yields four linked propositions with preserved antecedents. Table 2 summarizes the alignment; full per-proposition extraction matrices live at `TWIN_PAIR_ISOMORPHISM_PB_KBV.md`.
 
-Table 2: KBV-pair shared substrate (Grant [-@grant-1996-toward-knowledgebased-theory] + Liebeskind [-@liebeskind-1996-knowledge-strategy]; knowledge-based view).
+**Table 2.** KBV-pair shared substrate (Grant [-@grant-1996-toward-knowledgebased-theory] + Liebeskind [-@liebeskind-1996-knowledge-strategy]; knowledge-based view).
 
 | Linkage | Grant [-@grant-1996-toward-knowledgebased-theory] proposition | Liebeskind [-@liebeskind-1996-knowledge-strategy] proposition | Edge type | Preserved antecedent |
 |---|---|---|---|---|
@@ -248,7 +240,7 @@ The P4 evidence base at this release is: two twin-pair Rec = 4 results above ran
 
 Phase 3.5c resolves Phase 3.5b infrastructure failures and confirms Russian-native LLM preservation; Phase 3.5d adds the first Chinese-language P4 demonstration in the corpus.
 
-Table 3: Phase 3.5c Russian-native LLM results (locked set L1–L12).
+**Table 3.** Phase 3.5c Russian-native LLM results (locked set L1–L12).
 
 | Renderer | Strict | Semantic | Missing | Contradicted | Rec | Notes |
 |---|---|---|---|---|---|---|
@@ -257,7 +249,7 @@ Table 3: Phase 3.5c Russian-native LLM results (locked set L1–L12).
 
 *Notes*: Extractor for both renderings: GPT-4o-2024-08-06 (cross-operator B ≠ C). Russian rendering prompt byte-identical to Phase 3.5b (reuse documented in `phase_3_5c_runs/prompts/`). Rec = strict + semantic; $\mathrm{Rec} \ge 3$ is the P4 threshold.
 
-Table 4: Phase 3.5d Chinese-language P4 results (locked set L1–L12).
+**Table 4.** Phase 3.5d Chinese-language P4 results (locked set L1–L12).
 
 | Renderer | Extractor | Strict | Semantic | Missing | Contradicted | Rec |
 |---|---|---|---|---|---|---|
@@ -267,8 +259,6 @@ Table 4: Phase 3.5d Chinese-language P4 results (locked set L1–L12).
 | DeepSeek (cross-extractor robustness) | Qwen3.6:27b | 7 | 5 | 0 | 0 | 12 |
 
 *Notes*: All renderings into Simplified Chinese. Row 4 is a cross-extractor robustness check: the same DeepSeek Chinese rendering from Row 1 is re-extracted by Qwen3.6:27b (a different model family) to test whether the Rec=12 result is extractor-invariant. The Rec=12 verdict is unchanged when the extractor changes from GPT-4o to Qwen3.6:27b; 2-proposition STRICT→SEMANTIC shift is within judge-noise range (consistent with the inter-judge robustness finding in Table 7). Zero contradictions across all four rows.
-
----
 
 ## 4. Discussion
 
@@ -288,7 +278,7 @@ The companion theory's SF3 (cross-language collaboration preserving meaning whil
 
 *Phase 3.5b execution*. The §Abstract source (12 locked propositions L1–L12; 1,459 characters; 189 words) was rendered into Russian by four LLM operators trained on independent corpora across two language families. All four operators were instructed to produce Russian-language prose; the "language family" column in Table 5 identifies each operator's primary training-corpus language family, not the rendering output language. GigaChat (Sberbank Russian corpus; Slavic training family), YandexGPT (Yandex Russian corpus; Slavic training family — second operator for within-Slavic-family triangulation), DeepSeek (primarily-Chinese training corpus; Sino-Tibetan training family), and Claude Opus 4.7 (English-substrate training control) each rendered the same English §Abstract into Russian. The cross-FAMILY claim concerns renderer diversity across training corpora (Slavic + Sino-Tibetan + English-substrate), not output language diversity (all outputs are Russian). The four-operator design additionally tests within-Slavic-family operator variance (GigaChat-Sberbank vs YandexGPT-Yandex; two independent Russian-language corpora). Each rendering was re-extracted by GPT-4o (Operator C; prose-only input; no source spine context; cross-operator separation per §Method §Cross-operator extraction discipline) and per-operator preservation against the locked-set L1–L12 was classified as STRICT / SEMANTIC / MISSING / CONTRADICTED via a separate judge call (GPT-4o; temperature 0; JSON-mode; seed 42).
 
-Table 5: Phase 3.5b cross-FAMILY operator preservation (Paper B §Abstract locked set L1–L12).
+**Table 5.** Phase 3.5b cross-FAMILY operator preservation (Paper B §Abstract locked set L1–L12).
 
 | Operator | Training-corpus language family | Strict | Semantic | Missing | Contradicted |
 |---|---|---|---|---|---|
@@ -303,7 +293,7 @@ Table 5: Phase 3.5b cross-FAMILY operator preservation (Paper B §Abstract locke
 
 *Task γ execution (human-native Russian rendering)*. The author, as the available native Russian speaker, produced two human-native Russian renderings of Paper B: the §Abstract (212 Russian words) and the §Theory §Positioning subsection (734 Russian words). LLM-produced renderings were explicitly excluded from this task because Russian academic register conventions — hedging density, sentence-length norms, narrative-arc cues — require human-native discipline to render faithfully. The renderings landed at `RENDERING_PB_ABSTRACT_RUSSIAN.md` and `RENDERING_PB_THEORY_RUSSIAN.md`. Each rendering was re-extracted by GPT-4o (Operator C; prose-only input; no source English original; cross-operator separation per §Method §Cross-operator extraction discipline) and per-locked-proposition preservation was classified via a separate GPT-4o judge call (temperature 0; JSON-mode; seed 42).
 
-Table 6: Task γ human-native Russian rendering preservation against source locked sets.
+**Table 6.** Task γ human-native Russian rendering preservation against source locked sets.
 
 | Source | Source language | Russian words | Strict | Semantic | Missing | Contradicted |
 |---|---|---|---|---|---|---|
@@ -316,7 +306,7 @@ The cross-comparison between Task γ (human-native; Table 6) and Phase 3.5b (mac
 
 *Inter-judge robustness on preservation classifications*. The STRICT/SEMANTIC/MISSING/CONTRADICTED labels reported in Tables 3 and 4 are produced by GPT-4o under temperature 0 + JSON-mode + fixed seed. A second-judge robustness pass via Claude Opus 4.7 on the same six (operator × source) renderings — four Phase 3.5b machine renderings on §Abstract + two Task γ human-native renderings on §Abstract and §Theory — tests whether the preservation finding is judge-sensitive.
 
-Table 7: Inter-judge agreement (Claude Opus 4.7 second-judge vs GPT-4o first-judge) on preservation classifications.
+**Table 7.** Inter-judge agreement (Claude Opus 4.7 second-judge vs GPT-4o first-judge) on preservation classifications.
 
 | Rendering | Source | Exact 4-class agreement | Merged 3-class (PRESERVED/MISSING/CONTRADICTED) | GPT-4o summary | Claude summary |
 |---|---|---|---|---|---|
@@ -399,8 +389,6 @@ The empirical evidence base carries three concrete implications for downstream e
 
 The Rec = 4 values this paper reports at the research-artifact level find a population-level analogue in Peng, Gui, Brucks, et al. [-@peng-2025-digital-twins-funhouse], who document systematic substrate-collapse in LLM-based person rendering: when individual substrate features are absent from the input, the rendering defaults to population-mean representations ("insufficient individuation"), producing the same rank-collapse pattern Paper B's Rec null baseline identifies against random shadows. The mechanism is the same at a different scale: rendering fidelity is bounded by what the substrate supplies. Park, Zou, Kamphorst, et al. [-@park-2024-generative-agent-simulations] provide the complementary empirical anchor on substrate-richness as a driver of rendering fidelity: N = 1,052 Americans given two-hour structured interview substrates are simulated at 83% behavioral fidelity versus 74% under demographics-only substrate — a 9 percentage-point gain that is the person-level analogue of the strict-versus-semantic preservation gap Paper B's cross-operator extraction results reveal. The cross-operator extraction discipline (Operator B ≠ Operator C) this paper operationalizes is methodologically motivated by the same substrate-richness mechanism: richer substrate input to the extraction operator raises the probability that the preserved spine survives the rendering round-trip.
 
----
-
 ## 5. Companion Computation Script
 
 The numerical figures reported above are reproducible from scripts published at `https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical/code/`. The three scripts are:
@@ -413,8 +401,6 @@ The `code/` directory contains a `README.md` documenting the inputs, run command
 
 The full reproducibility chain for the central P4 demonstration (Rec values + null-baseline) and the self-application renderings runs end-to-end from the published spines: `VALIDATION_CASE_PB_FOCAL_EISENHARDT_MARTIN_SPINE.yaml` + `VALIDATION_CASE_PB_FOCAL_ZOLLO_WINTER_SPINE.yaml` → `code/rec_metric.py` → Rec = 4 (focal); `VALIDATION_CASE_PB_KBV_GRANT_SPINE.yaml` + `VALIDATION_CASE_PB_KBV_LIEBESKIND_SPINE.yaml` → `code/rec_metric.py` → Rec = 4 (KBV); the four real spines → `code/null_baseline.py` → null-baseline distribution; `RENDERING_PB_SUBSTACK_PRACTITIONER.md` + `VALIDATION_CASE_PB_SELF_APPLICATION_SPINE.yaml` → `SELF_APPLICATION_ISOMORPHISM_PB.md` (11/14 strict within-operator, 9/14 strict cross-operator, 14/14 semantic, 0 contradicted); `RENDERING_FOCAL_PAIR_THIRD_PROSE.md` + `VALIDATION_CASE_PB_FOCAL_THIRD_RENDERING_SPINE.yaml` → `TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md` §8 (Rec = 4 on third rendering).
 
----
-
 ## 6. Conclusion
 
 The central claim of this paper is empirically supported at this release: two independently-authored prose renderings of a shared underlying structural substrate share four linked propositions with preserved antecedents on both available pairs (Eisenhardt and Martin [-@eisenhardt-2000-dynamic-capabilities-what] + Zollo and Winter [-@zollo-winter-2002-deliberate-learning] on dynamic capabilities; Grant [-@grant-1996-toward-knowledgebased-theory] + Liebeskind [-@liebeskind-1996-knowledge-strategy] on the knowledge-based view of the firm). The observed Rec = 4 values sit above the 99th percentile of a 1,000-shadow random null distribution; the rendering-equivalence pattern is not attributable to chance under that null. Two additional renderings of substrates already in the corpus — a practitioner-register Substack rendering of the paper's own structure and a LinkedIn rendering of the focal-pair shared substrate — preserve the substrate across the academic → practitioner register boundary at 79% strict / 100% semantic and 100% / 100% respectively, with zero contradictions across renderings.
@@ -426,8 +412,6 @@ The paper places its framework in conversation with recombinant-search scholarsh
 An inter-coder κ measurement on axiom A1 with $\kappa \ge .75$ the operational threshold (codebook and sampling frame locked at `PHASE4_KAPPA_MEASUREMENT_2026-05-27.md`) remains pre-registered for a future release as the next-release commitment. The cross-language re-rendering tests of the paper's abstract (Russian and Chinese) have been executed at this release as described in §Results. Below the κ threshold, P4 degrades from a preservation result to a probabilistic tendency on the affected subdomain — an honest empirical boundary the framework names in advance.
 
 The paper's broader argument is that rendering-equivalence under spine-preservation is operationally tractable on real management-theory artifacts and, by extension, on the propositional knowledge artifacts organizations produce at volume in a generative-AI era. The structural substrate of a knowledge artifact is a first-class object distinct from its prose rendering; the substrate is comparable across renderings, reproducible at the typed-DAG level, and amenable to AI verification at the sub-linear cost the framework's β specification names. Organizations that maintain explicit, version-controlled substrates of their decision-relevant knowledge artifacts can route AI to the substrate and reserve human judgment for the rendering, capturing both the cost-asymmetry advantage P3 names and the conclusion-convergence guarantee P4 names. The methodological apparatus this paper develops at the level of strategy theory's own historical record is the same apparatus organizations can instrument internally on their own artifacts.
-
----
 
 ## 7. Limitations
 
@@ -443,15 +427,11 @@ This release is honest about scope. Seven limitations carry forward to future ve
 - Alignment-induced distortion in the extraction operator is an uncontrolled noise source in the cross-operator extraction results. Bao, Huang, Wang, et al. [-@bao-2026-ai-alignment-breaks] demonstrate that LLM alignment fine-tuning introduces systematic edge distortions — biases in how models respond at the semantic periphery of their training distribution — that are structurally distinct from hallucination. Under this framing, the ~15 percentage-point within-vs-cross-operator strict-preservation gap Paper B reports may reflect both within-model memory effects (the primary concern the cross-operator discipline addresses) and alignment-induced edge distortion in GPT-4o's extraction behavior. Separating the two sources requires a multi-extractor design (GPT-4o + additional extractor families); this is pre-registered for a future release.
 - Cross-language preservation is demonstrated on abstract-length renderings (~1,500 characters). Body-text-length renderings (full paper at ~12,000 words) and the resulting Rec values at full-paper scale remain to be tested at v1.2.0 and beyond. The abstract-level results are internally consistent with the companion theory's claim that the substrate-as-language-invariant prediction scales with text length, but direct body-text evidence is not available at this release.
 
----
-
 ## Acknowledgments
 
 AI assistants (Claude Opus 4.8, Grok 4.20, Gemini 2.5 Pro, GPT-4o) were used for initial literature search, for software development — authoring the experiment harness and the analysis and scoring scripts — and for orchestrating and running the reported experiments through those scripts, as well as for editorial refinement; all theoretical claims, propositions, and interpretations are the author's sole responsibility. Operator separation discipline (the rendering operator and the extraction operator are different models) was applied to all P4 evidence per the §Method §Cross-operator extraction discipline subsection.
 
 **CRediT contributions.** Dmitry Zharnikov: conceptualization, methodology, formal analysis, investigation, data curation, writing — original draft, writing — review & editing.
-
----
 
 ## References
 

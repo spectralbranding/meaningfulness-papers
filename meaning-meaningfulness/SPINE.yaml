@@ -21,9 +21,6 @@ spine_doc_version: "0.8.0"
 paper_key: "2026ao"               # placeholder; verify CANONICAL_REFERENCES.md at Phase 5; Paper A only post-PIVOT-SPLIT
 paper_b_companion_key: "2026ap"   # empirical companion; scoping at [internal path removed]
 status: "Phase 0.5 + Phase 4 FORK x2 — locked under schema v0.2 (Paper A theory-only post-PIVOT-SPLIT; v0.7.3 revision after review adds 8 verified external_anchors plus records NF11-NF14; cumulative SF1 hallucination rate across r1-r5 + post1 + post2 ≈ 17 catches / ~53%)"
-target_venue_primary: "Organization Science"
-target_venue_secondary: "Journal of Management Inquiry"
-target_venue_tertiary: "AI & Society"
 
 title: >-
   Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of
@@ -836,7 +833,7 @@ robustness_checks:
     body_sections: ["Section 4.1 — Robustness", "Section 8 — Discussion (future work)"]
 
   - id: RC2
-    statement: "Second-coder Cohen's κ ≥ 0.75 on node typing AND edge placement on 20% subsample of T1' + T1 + T2 spine extractions (v0.7.0 threshold per the review §5 HIGH-priority addition; previously unspecified threshold)."
+    statement: "Second-coder Cohen's κ ≥ 0.75 on node typing AND edge placement on 20% subsample of T1' + T1 + T2 spine extractions (v0.7.0 threshold per pre-submission revisions; previously unspecified threshold)."
     varied_parameter: "coder"
     range_explored: "PLANNED — Paper B v1.0.0 supplies first measurement at N=2 twin pairs; Paper A appendix supplies threshold criterion"
     result_stability: "planned"
@@ -859,7 +856,7 @@ robustness_checks:
 # ============================================================================
 limitations:
   - id: L1
-    statement: "Corpus-internal SF1 evidence (F1) is based on a single-[session] observation; statistical generalization from corpus-internal observations alone is not warranted. Public-paper SF1 evidence prioritizes published RAG-hallucination benchmarks identified in [session] Phase-2 DR."
+    statement: "Corpus-internal SF1 evidence (F1) is based on a single-[session] observation; statistical generalization from corpus-internal observations alone is not warranted. Public-paper SF1 evidence prioritizes published RAG-hallucination benchmarks."
     affects: [F1, SF1]
     severity: "medium"
     mitigation: "RC1 planned (additional sessions); NF1 motivates publication of a benchmark by future work; [session] DR for published-literature anchors."
@@ -941,7 +938,7 @@ propositions:
       as a first-class artifact achieve higher rates of knowledge
       recombination than organizations that publish only the rendering
       (R), under boundary conditions C1–C4. v0.5.0 organizational-outcome
-      reframing per the review NF-grain gap: "Labs that publish spines exhibit
+      reframing: "Labs that publish spines exhibit
       higher citation-weighted derivative work (extension, contradiction,
       or refinement of locked propositions) within 24–36 months than
       matched labs that publish renderings only."
@@ -1050,7 +1047,7 @@ propositions:
     assumptions: [AA2]
     falsifier: >-
       Two faithful renderings of the same locked spine arrive at
-      DIFFERENT conclusions on a load-bearing proposition without either
+      DIFFERENT conclusions on an essential proposition without either
       one having broken the spine. (If found, the renderings would need
       a hidden spine-layer difference, which contradicts the spine-lock
       hypothesis.)
@@ -1369,7 +1366,7 @@ external_anchors:
     pdf_local: "[internal path removed] (text fragment; PDF acquisition needed)"
     spine_nodes: [P3, T2, P2]
     body_sections: ["Section 7.2 — Validation Case T2"]
-    note: "Replaces fabricated Puranam-Raveendran 2024 AMR per [session] Phase-2 DR finding F2."
+    note: "Replaces fabricated Puranam-Raveendran 2024 AMR."
 
   - citation_key: kocak-levinthal-puranam-2023-dual-challenge-search-coordination
     role: theoretical_predecessor
@@ -1398,7 +1395,7 @@ external_anchors:
     doi_status: VERIFIED
     spine_nodes: [P3]
     body_sections: ["Section 2 — Theory"]
-    note: "Canonical AMR anchor; verified [session]."
+    note: "Canonical AMR anchor."
 
   - citation_key: vonkrogh-2023-recognizing-research-opportunities-ai
     role: motivating_problem
@@ -1438,7 +1435,7 @@ external_anchors:
     note: >-
       The original boundary-object paper Carlile (2004) operationalized
       for organizations. Star-Griesemer's plasticity-vs-robustness tradeoff
-      is the load-bearing concept: boundary objects are simultaneously
+      is the central concept: boundary objects are simultaneously
       plastic enough to adapt to local needs and robust enough to maintain
       common identity across sites. The SPINE.yaml's typed-DAG structure
       preserves both: the typed-edge catalog supplies robustness; FORK
@@ -1459,8 +1456,7 @@ external_anchors:
       organizational behavior. The Operator-role framework reframes
       where meaningfulness is generated in post-AI research; engaging
       Rosso-Dekas-Wrzesniewski preempts the "but what does meaning vs
-      meaningfulness already mean in OB?" reviewer objection at Org Sci.
-      Slot: §B thesis statement + Contribution 1 framing.
+      meaningfulness already mean in OB?" objection.
 
   # v0.7.0 NEW — user-supplied theory-of-the-firm anchors (2026-05-26).
   # §4 predicted_reviewer_lead_objection points to ("does the Operator role
@@ -1480,9 +1476,9 @@ external_anchors:
       generalizes Liebeskind's knowledge-as-firm-asset framing one level
       up: knowledge is intrinsically substrate (S) + rendering (R); the
       Operator is the role that maintains the substrate/rendering split.
-      Engaging Liebeskind directly addresses the review §4 predicted
-      reviewer concern (Operator-role-as-fundamental-OT-advance vs
-      AI-era-domain-framework).
+      Engaging Liebeskind directly addresses whether the Operator role
+      is a fundamental organization-theory advance or an AI-era domain
+      framework.
 
   - citation_key: nickerson-zenger-2004-knowledge-based-theory-firm-problem-solving
     role: theoretical_predecessor
@@ -1494,12 +1490,12 @@ external_anchors:
     body_sections: ["Section 4.1 — Theoretical foundations (knowledge-based theory of the firm lineage)", "Section 8 — Discussion"]
     note: >-
       Knowledge-based theory of the firm at the problem-solving level.
-      Co-authored by Zenger; resolves the search for "the Felin-Zenger
-      anchor" the review hallucinated. Nickerson-Zenger frames the firm as
+      Co-authored by Zenger; resolves the search for the "Felin-Zenger
+      anchor" an AI tool had hallucinated. Nickerson-Zenger frames the firm as
       a knowledge-coordination apparatus for problem-solving; the
       Operator role v0.7.0 specifies the role-level structure within
       that coordination apparatus under generative AI. Engaging
-      Nickerson-Zenger in §4.1 + §8 supplies a venue-canonical Org Sci
+      Nickerson-Zenger in §4.1 + §8 supplies a canonical Org Sci
       anchor for the role-theoretic contribution.
 
   # NOT resolve; correct DOI is 10.5465/amj.2011.60263060 (Crossref-verified).
@@ -1511,11 +1507,10 @@ external_anchors:
     spine_nodes: [operator_role, P4]
     body_sections: ["Section 3 — Contributions (role-theoretic lineage)", "Section 8 — Discussion: Operator role vs occupational role theory"]
     note: >-
-      the review §2 first bullet HIGH-priority: "canonical role-theoretic
-      treatment of how occupational roles absorb unexpected events…
-      your Operator role must engage it in §B/§J to show how the
-      structural/judgment split generalizes (or differs from) classic
-      OST role theory rather than appearing sui generis to AI."
+      A canonical role-theoretic treatment of how occupational roles
+      absorb unexpected events; the Operator role engages it in §B/§J
+      to show how the structural/judgment split generalizes (or differs
+      from) classic OST role theory rather than appearing sui generis to AI.
       Bechky-Okhuysen documents how SWAT officers and film crews
       maintain role-coherence under surprise via 'trading zones' and
       coordination; the Operator role v0.7.0 generalizes their role-
@@ -1539,10 +1534,10 @@ external_anchors:
     spine_nodes: [operator_role, P2, intervention]
     body_sections: ["Section 4.1 — Theoretical foundations (resource origins + search lineage)", "Section 8 — Discussion: spine generation as resource origins"]
     note: >-
-      Resolves NF2 partially. the review hallucinated a Felin-Zenger 2023
-      SMJ on "AI, bounded rationality, and limits of organizational
-      design"; that title does not exist. User-supplied (2026-05-26):
-      the real Felin-Kauffman-Zenger 2023 SMJ is "Resource origins and
+      Partially resolves a fabricated-citation gap. An AI tool suggested
+      a non-existent Felin-Zenger 2023 SMJ on "AI, bounded rationality,
+      and limits of organizational design"; that title does not exist.
+      The real Felin-Kauffman-Zenger 2023 SMJ is "Resource origins and
       search" — about where resources come from + how organizations
       search for them. Engagement angle: the SPINE.yaml IS a resource
       the organization generates under the Operator role; Felin-
@@ -1555,10 +1550,10 @@ external_anchors:
       generate. The role-theoretic contribution sits at the
       intersection of KBT-of-firm (Liebeskind 1996; Nickerson-Zenger
       2004) and resource-origin theory (Felin-Kauffman-Zenger 2023).
-      NF2 updated to RESOLVED-PARTIAL: original Grok-suggested
-      citation does not exist; real Felin-Zenger collaboration on
-      adjacent topic engaged. Discipline preserved: the verification
-      cascade still caught the original a review-flagged hallucination review-stage.
+      The originally suggested citation does not exist; a real
+      Felin-Zenger collaboration on an adjacent topic is engaged
+      instead. The verification cascade caught the fabrication before
+      drafting.
 
   # v0.7.1 NEW — user-supplied 2026-05-26 NF3-partial-resolution.
   # not exist with the suggested title/venue. But Leonardi-Vaast 2017 AM
@@ -1574,9 +1569,9 @@ external_anchors:
     spine_nodes: [operator_role, P1, intervention]
     body_sections: ["Section 5 — Three-Level Hierarchy (affordances framing for SPINE.yaml)", "Section 8 — Discussion: spine-as-affordance for the Operator role"]
     note: >-
-      Resolves NF3 partially. the review hallucinated a Leonardi-Vaast
-      2017 Org Sci "sociality of algorithms"; that title/venue does
-      not exist. User-supplied (2026-05-26): the real Leonardi-Vaast
+      Partially resolves a fabricated-citation gap. An AI tool suggested
+      a non-existent Leonardi-Vaast 2017 Org Sci "sociality of
+      algorithms"; that title/venue does not exist. The real Leonardi-Vaast
       2017 paper is in AM Annals — "Social Media and Their Affordances
       for Organizing: A Review and Agenda for Research." Different
       topic (social media affordances vs sociality of algorithms) but
@@ -1588,14 +1583,14 @@ external_anchors:
       typed-DAG structure + machine-operability + edge-type catalog
       affords specific Operator-role projection patterns (structural
       substrate operations via AI; judgment operations via human).
-      Strong venue-canonical anchor for §5 (three-level hierarchy as
+      Strong anchor for §5 (three-level hierarchy as
       affordance structure) and §H (mechanism = affordance specification).
-      AM Annals is a venue-credible review journal that Org Sci
-      reviewers will recognize as theoretical-foundation literature.
-      NF3 updated to RESOLVED-PARTIAL: original Grok-suggested citation
-      does not exist; real Leonardi-Vaast 2017 collaboration on adjacent
-      topic engaged. Discipline preserved: the verification cascade
-      still caught the original a review-flagged hallucination review-stage.
+      AM Annals is a review journal recognized as theoretical-foundation
+      literature.
+      The originally suggested citation does not exist; a real
+      Leonardi-Vaast 2017 collaboration on an adjacent topic is engaged
+      instead. The verification cascade caught the fabrication before
+      drafting.
 
   # real-adjacent anchors. 7 anchors total: 5 Crossref-verified Grok
   # suggestions + 2 user-supplied real-adjacent for NF4/NF5 hallucinations.
@@ -1671,9 +1666,9 @@ external_anchors:
     spine_nodes: [operator_role, C1, C3]
     body_sections: ["Theory — Operator role and era-dependent projection", "Discussion — Operator role versus role-coordination scholarship"]
     note: >-
-      User-supplied 2026-05-26 as real-adjacent paper resolving NF4
-      (an external review hallucinated Bailey-Barley 2023 Org Sci role-
-      evolution under AI). Bailey-Barley 2010 examines how environments
+      A real-adjacent paper engaged in place of a fabricated citation
+      (an AI tool suggested a non-existent Bailey-Barley 2023 Org Sci
+      role-evolution-under-AI paper). Bailey-Barley 2010 examines how environments
       shape role structure through teaching-learning episodes; the
       Operator's era-dependent projection extends this environment-
       shaping logic to operator-internal operation-class projection.
@@ -1687,9 +1682,9 @@ external_anchors:
     spine_nodes: [operator_role, P1, intervention]
     body_sections: ["Discussion — spine as affordance + AI in organizational communication"]
     note: >-
-      User-supplied 2026-05-26 as real-adjacent paper resolving NF5
-      (an external review hallucinated Leonardi 2024 Org Sci AI-future-of-
-      work). Leonardi-Pilny-Treem-Sharma 2024 surveys AI's effects on
+      A real-adjacent paper engaged in place of a fabricated citation
+      (an AI tool suggested a non-existent Leonardi 2024 Org Sci
+      AI-future-of-work paper). Leonardi-Pilny-Treem-Sharma 2024 surveys AI's effects on
       organizational communication including meaning-construction
       processes the framework theorizes at the substrate-rendering
       layer cut. Book chapter not journal article; topic match direct.
@@ -1748,7 +1743,7 @@ external_anchors:
     note: >-
       Berente-Gu-Recker 2021 supplies the management-of-AI editorial-
       framing piece anchoring MIS Quarterly's AI special issue.
-      Engaged in Discussion as a venue-canonical anchor for the
+      Engaged in Discussion as a canonical anchor for the
       organizational-management dimension of the framework's
       practical-implications subsection.
 
@@ -1776,10 +1771,9 @@ external_anchors:
     spine_nodes: [operator_role, P2]
     body_sections: ["Discussion — KBV organizational-form positioning"]
     note: >-
-      User-supplied 2026-05-26 as real-adjacent paper resolving NF11
-      (review-stage the review hallucinated Puranam-Raveendran 2024 SMJ
-      AI-theory-firm-revisited; pattern recurring across r1 + r2
-      cycles). Marchetti-Puranam 2025 documents that less-hierarchical
+      A real-adjacent paper engaged in place of a fabricated citation
+      (an AI tool suggested a non-existent Puranam-Raveendran 2024 SMJ
+      "AI theory of the firm revisited"). Marchetti-Puranam 2025 documents that less-hierarchical
       firms exhibit stronger cultures via big-data analysis — speaks
       directly to the framework's claim that the Operator-role
       restructure (substrate published; rendering decoupled) is a
@@ -1795,9 +1789,9 @@ external_anchors:
     spine_nodes: [operator_role, intervention, P1]
     body_sections: ["Discussion — spine as affordance + repertoire-model engagement"]
     note: >-
-      User-supplied 2026-05-26 as real-adjacent paper resolving NF13
-      (review-stage the review hallucinated Seidel-Berente 2023 Org Sci AI-
-      knowledge-boundaries). Seidel-Berente-Baiyere 2025 develops a
+      A real-adjacent paper engaged in place of a fabricated citation
+      (an AI tool suggested a non-existent Seidel-Berente 2023 Org Sci
+      AI-knowledge-boundaries paper). Seidel-Berente-Baiyere 2025 develops a
       repertoire model of institutionally embedded affordances during
       digital transformation — the framework's typed-DAG substrate
       is a worked instance of an institutionally-embedded affordance
@@ -1813,11 +1807,11 @@ external_anchors:
     spine_nodes: [operator_role, intervention, P1]
     body_sections: ["Discussion — concept-coherence and substrate-rendering engagement"]
     note: >-
-      User-supplied 2026-05-26 as real-adjacent paper resolving the
-      Seidel-X hallucination shape (the review hallucinated Seidel-
-      O'Mahony 2023 AMJ; the review hallucinated Seidel-Berente 2023
-      Org Sci; user found the real Seidel-O'Mahony 2014 Org Sci paper
-      Grok was approximating). Seidel-O'Mahony 2014 documents how
+      A real-adjacent paper engaged in place of fabricated citations
+      (an AI tool suggested a Seidel-O'Mahony 2023 AMJ and a
+      Seidel-Berente 2023 Org Sci, neither of which exists; the real
+      Seidel-O'Mahony 2014 Org Sci paper is the one being
+      approximated). Seidel-O'Mahony 2014 documents how
       product-design teams coordinate via stories / metaphors /
       prototypes — three types of concept representations the
       framework's substrate / rendering decomposition supplies a
@@ -1832,8 +1826,8 @@ external_anchors:
     spine_nodes: [intervention, M2]
     body_sections: ["Discussion — computationally-intensive theory development as substrate-discipline parallel"]
     note: >-
-      User-supplied 2026-05-26 as bonus real-adjacent paper surfaced
-      during NF13 verification. Berente-Seidel-Safadi 2019 develops a
+      A real-adjacent paper surfaced during citation verification.
+      Berente-Seidel-Safadi 2019 develops a
       grounded-theory-from-trace-data method (sampling / synchronic /
       lexical-framing / diachronic) that parallels the framework's
       spine-first protocol at the methods layer — the substrate is
@@ -1852,7 +1846,7 @@ external_anchors:
       Paper B 2026ap takes the empirical estimation of P2 (recombination)
       and P3 (verification-cost asymmetry β/δ) at growing-N twin-pair
       cohort. v1.0.0 ships with N=2 focal pair (Eisenhardt-Martin 2000
-      SMJ + Zollo-Winter 2002 Org Sci) per the review §5 endorsement, plus
+      SMJ + Zollo-Winter 2002 Org Sci), plus
       N=2 secondary pair (Tushman-O'Reilly 1996 CMR + Duncan 1976
       Kilmann-ed.) for 20-year-gap sensitivity. v2.0.0+ adds prospective
       lab-cohort data. v4.0.0 targets SMJ submission scale. Each version
@@ -1993,8 +1987,7 @@ external_anchors:
       Domain)"). Per PIVOT-SPLIT discipline (H-S preserved as historical
       existence proof for P4; main body weight at Eisenhardt-Martin + Zollo-
       Winter management twin pair), Pauli 1927 strengthens the historical-
-      record evidence without expanding main-body weight the review asked
-      to reduce.
+      record evidence without expanding main-body weight.
 
   - citation_key: born-1926-quantenmechanik-stossvorgaenge
     role: theoretical_predecessor
@@ -2085,7 +2078,7 @@ external_anchors:
     doi_status: VERIFIED
     spine_nodes: [P4, M1, M2]
     body_sections: ["Section 3 — Theory positioning"]
-    note: "Theorizing-forms taxonomy locates the Operator-role contribution within organization-theory scholarship's typology of theory contributions; useful for Section-3 positioning per the review §1 ask."
+    note: "Theorizing-forms taxonomy locates the Operator-role contribution within organization-theory scholarship's typology of theory contributions; useful for Section-3 positioning."
 
   - citation_key: grimes-vonKrogh-feuerriegel-rink-gruber-2023-scarcity-to-abundance
     role: scholarship-in-genAI-era_framing

@@ -28,22 +28,21 @@ meta:
   - spec-based research
   - cross-language demonstration.
   abstract: 'Generative AI shifts the cost structure of organizational knowledge work asymmetrically across
-    the layers of the artifact it produces. The structural substrate — the typed graph of propositions,
-    dependencies, and evidence anchors — becomes cheap to construct, verify, and recombine; the cohort-conditional
-    prose rendering does not, and may become relatively more costly. This paper introduces the Operator
-    as the role-level abstraction that absorbs the shift: a role with intrinsic structural-substrate operations
-    and intrinsic judgment operations, whose human-versus-AI projection composition varies by era. The
-    role-as-projection move extends the automation-augmentation paradox from task allocation to role-level
-    division of operations. Two propositions follow. P1 (separability): structural substrate and rendering
-    are independently optimizable. P4 (rendering-equivalence under spine-preservation): two renderings
-    of a locked substrate converge on conclusions if and only if (iff) both preserve its structural elements,
-    under a faithful extraction axiom. The paper illustrates the framework on a management-theory twin
-    pair (dynamic capabilities) and applies it reflexively to its own production. Empirical estimation
-    of two additional predictions about recombination and cost-asymmetry parameters is reserved for a
-    companion paper. The companion empirical paper extends the validation set across Russian and Chinese
-    with five LLMs from three training-corpus families spanning proprietary APIs and open-weights local
-    deployment, with extractor-invariant preservation verdicts. Three Design Propositions follow for organizational
-    governance, role and incentive design, and editorial-process decoupling.'
+    an artifact''s layers. The structural substrate — the typed graph of propositions, dependencies, and
+    evidence anchors — becomes cheap to construct, verify, and recombine; the cohort-conditional prose
+    rendering does not, and may grow costlier. This paper introduces the Operator: a role-level abstraction
+    with intrinsic structural-substrate and judgment operations, whose human-versus-AI projection composition
+    varies by era. The role-as-projection move extends the automation-augmentation paradox from task allocation
+    to role-level division of operations. Two propositions follow. P1 (separability): structural substrate
+    and rendering are independently optimizable. P4 (rendering-equivalence under spine-preservation):
+    two renderings of a locked substrate converge on conclusions if and only if both preserve its structural
+    elements, under a faithful extraction axiom. The paper illustrates the framework on a management-theory
+    twin pair (dynamic capabilities) and applies it reflexively to its own production. Empirical estimation
+    of two further predictions about recombination and cost-asymmetry parameters is reserved for a companion
+    paper that extends the validation set across Russian and Chinese with five LLMs from three training-corpus
+    families spanning proprietary APIs and open-weights local deployment, with extractor-invariant preservation
+    verdicts. Three Design Propositions follow for organizational governance, role and incentive design,
+    and editorial-process decoupling.'
 claims:
 - id: P1
   type: proposition

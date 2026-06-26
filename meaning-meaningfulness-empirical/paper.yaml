@@ -29,30 +29,23 @@ meta:
   - multi-LLM evaluation
   - open-weights local deployment
   - cross-extractor robustness.
-  abstract: 'This paper empirically demonstrates Zharnikov''s [-@zharnikov-2026ao-spec-based-research-post-ai]
-    Proposition P4 — rendering-equivalence under spine-preservation — in management theory. The paper
-    extends the companion theory''s Heisenberg–Schrödinger historical existence proof into contemporary
-    strategy research via structural extractions of two independently-authored pairs: a dynamic-capabilities
-    pair [@eisenhardt-2000-dynamic-capabilities-what; @zollo-winter-2002-deliberate-learning] and a knowledge-based-view
-    pair from the *Strategic Management Journal* (SMJ) Winter 1996 Special Issue [@grant-1996-toward-knowledgebased-theory;
-    @liebeskind-1996-knowledge-strategy]. The recombination metric Rec returns 4 linked propositions with
-    preserved antecedents on each pair. A random-graph null baseline shows $\Pr(\mathrm{Rec} \ge 3 \text{
-    by chance}) \approx .000$ across 1,000 size-matched shadows. Three additional renderings of substrates
-    already in the corpus — a practitioner-register rendering of the paper''s own structure, a third rendering
-    of the focal-pair shared substrate, and a cross-paper rendering of the companion theory''s full theoretical
-    apparatus — preserve 11/14, 4/4, and 12/15 items strictly under within-operator extraction; 14/14,
-    4/4, and 15/15 semantically; zero contradictions. Under the methodologically stronger cross-operator
-    extraction (renderer and extractor in different model families), strict preservation is 9/14 and 10/15
-    on the two formal-apparatus renderings (4/4 on the focal-pair rendering) with 14/14, 4/4, and 14/15
-    semantically and still zero contradictions. A bibliographic-hallucination audit of twelve AI-suggested
-    anchors finds two verified and ten negative findings. Secondary β/δ estimates satisfy the cost-asymmetry
-    ordering. Cross-language demonstrations span Russian renderings across multiple LLMs (including Russian-native
-    GigaChat Rec = 12 and YandexGPT Rec = 11) and Chinese renderings across five LLMs from three training-corpus
-    families including an open-weights model running locally on a single Mac mini (DeepSeek Rec = 12,
-    Claude Opus Rec = 11, Qwen3.6:27b Rec = 12), with cross-extractor robustness (DeepSeek''s Chinese
-    rendering re-extracted by Qwen3.6 instead of GPT-4o: Rec = 12). Inter-coder reliability tests are
-    pre-registered for a future release. The paper engages recombinant-search and knowledge-representation
-    scholarship as theoretical antecedents.'
+  abstract: 'This paper demonstrates Zharnikov''s [-@zharnikov-2026ao-spec-based-research-post-ai] Proposition
+    P4 — rendering-equivalence under spine-preservation — in management theory, extending its Heisenberg–Schrödinger
+    proof into strategy research. Two independently-authored pairs — a dynamic-capabilities pair [@eisenhardt-2000-dynamic-capabilities-what;
+    @zollo-winter-2002-deliberate-learning] and a knowledge-based-view pair from the *Strategic Management
+    Journal* Winter 1996 Special Issue [@grant-1996-toward-knowledgebased-theory; @liebeskind-1996-knowledge-strategy]
+    — each return recombination metric $\mathrm{Rec} = 4$; a random-graph null gives $\Pr(\mathrm{Rec}
+    \ge 3) \approx .000$ across 1,000 size-matched shadows. Three corpus-substrate renderings preserve
+    11/14, 4/4, and 12/15 items strictly within-operator and 14/14, 4/4, and 15/15 semantically, zero
+    contradictions; under stronger cross-operator extraction (different model families), strict preservation
+    is 9/14 and 10/15 on the two formal-apparatus renderings (4/4 on the focal-pair) and 14/14, 4/4, and
+    14/15 semantically, none. A bibliographic-hallucination audit of twelve AI-suggested anchors finds
+    two verified, ten negative. Secondary $\beta/\delta$ estimates satisfy the cost-asymmetry ordering.
+    Cross-language demonstrations span Russian (GigaChat Rec = 12, YandexGPT Rec = 11) and Chinese renderings
+    across five LLMs from three training-corpus families, including an open-weights model run locally
+    on a Mac mini (DeepSeek Rec = 12, Claude Opus Rec = 11, Qwen3.6:27b Rec = 12), with cross-extractor
+    robustness (DeepSeek''s Chinese rendering re-extracted by Qwen3.6: Rec = 12). Inter-coder reliability
+    is pre-registered for a future release.'
 methodology:
   type: empirical
   design: 'Retroactive spine extraction per Paper A Online Appendix B applied in reverse to each available

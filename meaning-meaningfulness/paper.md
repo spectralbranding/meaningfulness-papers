@@ -302,7 +302,9 @@ The paper's machine-first bundle (the spine-first substrate and the companion co
 
 AI assistants (Claude Opus 4.8, Grok 4.20, Gemini 2.5 Pro, GPT-4o) were used for initial literature search, for software development — implementing and running the companion computation script that reproduces the paper's reported numerical and simulation results — and for editorial refinement; all theoretical claims, propositions, and interpretations are the author's sole responsibility.
 
-*CRediT contributor statement.* Dmitry Zharnikov: conceptualization, methodology, investigation, formal analysis, writing — original draft, writing — review and editing.
+## Author Contributions (CRediT)
+
+Dmitry Zharnikov: conceptualization, methodology, investigation, formal analysis, writing — original draft, writing — review and editing.
 
 ## References
 

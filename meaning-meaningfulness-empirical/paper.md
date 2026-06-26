@@ -431,7 +431,9 @@ This release is honest about scope. Seven limitations carry forward to future ve
 
 AI assistants (Claude Opus 4.8, Grok 4.20, Gemini 2.5 Pro, GPT-4o) were used for initial literature search, for software development — authoring the experiment harness and the analysis and scoring scripts — and for orchestrating and running the reported experiments through those scripts, as well as for editorial refinement; all theoretical claims, propositions, and interpretations are the author's sole responsibility. Operator separation discipline (the rendering operator and the extraction operator are different models) was applied to all P4 evidence per the §Method §Cross-operator extraction discipline subsection.
 
-**CRediT contributions.** Dmitry Zharnikov: conceptualization, methodology, formal analysis, investigation, data curation, writing — original draft, writing — review & editing.
+## Author Contributions (CRediT)
+
+Dmitry Zharnikov: conceptualization, methodology, formal analysis, investigation, data curation, writing — original draft, writing — review & editing.
 
 ## References
 

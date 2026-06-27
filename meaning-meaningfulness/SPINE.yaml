@@ -76,7 +76,7 @@ thesis: |
 # ============================================================================
 
 # ============================================================================
-# Boundary conditions (closes Grok F1) — joint sufficient for the framework
+# Boundary conditions — joint sufficient for the framework
 # ============================================================================
 boundary_conditions:
   - id: C1
@@ -365,7 +365,7 @@ findings:
     body_sections: ["Section 4.2 — Corpus parallels", "Section 5 — Three-Level Hierarchy"]
 
 # ============================================================================
-# Stylized facts (closes Grok F2) — aggregated patterns over findings;
+# Stylized facts — aggregated patterns over findings;
 # competing two-level frameworks cannot distinguish them.
 # ============================================================================
 stylized_facts:

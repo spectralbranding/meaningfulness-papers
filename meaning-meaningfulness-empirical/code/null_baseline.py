@@ -1,6 +1,6 @@
 """Random-graph null-baseline for the Rec metric.
 
-Addresses Grok r1 (postdraft, 2026ap) §5 Priority-1 must-fix:
+Provides the random-graph / textual-similarity null baseline for Rec:
 "random-graph / textual-similarity null baselines for Rec... Rec=4 is reported
 as deterministic but reviewers want comparison to chance."
 

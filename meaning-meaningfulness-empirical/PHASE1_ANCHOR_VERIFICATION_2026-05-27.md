@@ -1,25 +1,24 @@
 ---
-title: "Phase 1 anchor verification — 12 Grok-suggested anchors from 2026ap postdraft r1"
+title: "Phase 1 anchor verification — 12 AI-suggested anchors"
 date: 2026-05-27
-session: Session H Phase 1
 method: Crossref Stage-1 query.title+query.author bibliographic match, rows=5
 ---
 
-# Phase 1 anchor verification — 2026ap postdraft r1
+# Phase 1 anchor verification
 
-Per CLAUDE.md feedback_grok_suggested_anchor_~57%_hallucination_rate: every Grok-suggested anchor must be Crossref-verified before integration into paper.md or external_anchors.
+Every AI-suggested anchor must be Crossref-verified before integration into paper.md or external_anchors.
 
 ## Verification verdict table
 
-| ID | Grok claim | Verdict | DOI | Best Crossref match |
+| ID | AI-suggested claim | Verdict | DOI | Best Crossref match |
 |---|---|---|---|---|
 | A01 | Kaplan, S., & Vakili, K. (2015). The double-edged sword of recombination in breakthrough innovation. SMJ.… | **NF-NEAR-MATCH** | 10.1002/smj.2294 | The double‐edged sword of recombination in breakthrough innovation (2014) in Strategic Management Journal |
-| A02 | Felin, T., & Zenger, T. R. (2023). The theory of the firm and AI: Beyond black boxes. Strategy Science. [Grok flagged VE… | **NF-FABRICATED** | 10.2139/ssrn.2156951 | Open Innovation, Problem Solving, and the Theory of the (Innovative) Firm (2012) in SSRN Electronic Journal |
-| A03 | Raisch, S., & Furr, N. (2024). The generative lens: AI as a catalyst for new theory. Academy of Management Review. [Grok… | **NF-FABRICATED** | 10.5465/amproc.2024.21431abstract | Collaboration Between Humans and AI: Complementarities Within and Across Skill (2024) in Academy of Management Proceedings |
+| A02 | Felin, T., & Zenger, T. R. (2023). The theory of the firm and AI: Beyond black boxes. Strategy Science. [flagged for verification… | **NF-FABRICATED** | 10.2139/ssrn.2156951 | Open Innovation, Problem Solving, and the Theory of the (Innovative) Firm (2012) in SSRN Electronic Journal |
+| A03 | Raisch, S., & Furr, N. (2024). The generative lens: AI as a catalyst for new theory. Academy of Management Review. [flagged for verification… | **NF-FABRICATED** | 10.5465/amproc.2024.21431abstract | Collaboration Between Humans and AI: Complementarities Within and Across Skill (2024) in Academy of Management Proceedings |
 | A04 | Puranam, P., et al. (2024). Generative AI and the future of organizational theory. Organization Science.… | **NF-FABRICATED** | 10.2139/ssrn.6028034 | The Impact of Generative AI Adoption on Organizational Networks: Evidence From A Field Experiment (2026) in SSRN Electronic Journal |
 | A05 | Girotra, K., Meincke, L., Terwiesch, C., & Ulrich, K. T. (2023). Ideas are dimes a dozen: The value of ideation in innov… | **NF-NEAR-MATCH** | 10.2139/ssrn.4526071 | Ideas are Dimes a Dozen: Large Language Models for Idea Generation in Innovation (2023) in SSRN Electronic Journal |
 | A06 | Lifshitz-Assaf, H., et al. (2024). AI and the transformation of R&D. Research Policy.… | **NF-FABRICATED** | 10.5465/amproc.2025.12158symposium | Innovating with AI: Exploring the Impact of Generative AI on Creative Processes (2025) in Academy of Management Proceedings |
-| A07 | Bingham, C. B., & Eisenhardt, K. M. (2024). The search for simplicity in strategy. SMJ. [Grok flagged VERIFY; audit flag… | **NF-FABRICATED** | 10.1093/acrefore/9780190224851.013.458 | Simple Rules and Other Heuristics in Strategy and Organizational Research (2025) in Oxford Research Encyclopedia of Business and Management |
+| A07 | Bingham, C. B., & Eisenhardt, K. M. (2024). The search for simplicity in strategy. SMJ. [flagged for verification; audit flag… | **NF-FABRICATED** | 10.1093/acrefore/9780190224851.013.458 | Simple Rules and Other Heuristics in Strategy and Organizational Research (2025) in Oxford Research Encyclopedia of Business and Management |
 | A08 | Teece, D. J. (2023). Dynamic capabilities in the age of AI. Industrial and Corporate Change.… | **NF-NEAR-MATCH** | 10.1017/9781009562713 | Dynamic Capabilities (2025) in — |
 | A09 | von Krogh, G., et al. (2024). Artificial intelligence in management: A review and research agenda. Journal of Management… | **NF-FABRICATED** | 10.5465/amj.2023.4002 | Recognizing and Utilizing Novel Research Opportunities with Artificial Intelligence (2023) in Academy of Management Journal |
 | A10 | Levinthal, D., & March, J. G. (1993/2025 retrospective). The myopia of learning [updated commentary].… | **VERIFIED** | 10.1002/smj.4250141009 | The myopia of learning (1993) in Strategic Management Journal |
@@ -30,7 +29,7 @@ Per CLAUDE.md feedback_grok_suggested_anchor_~57%_hallucination_rate: every Grok
 
 ### A01 — NF-NEAR-MATCH
 
-- **Grok claim**: Kaplan, S., & Vakili, K. (2015). The double-edged sword of recombination in breakthrough innovation. SMJ.
+- **AI-suggested claim**: Kaplan, S., & Vakili, K. (2015). The double-edged sword of recombination in breakthrough innovation. SMJ.
 - **Note**: Already cited in v1.0.0 (NF15-era verification); already in external_anchors v0.1.1
 - **Verdict**: NF-NEAR-MATCH
 - **DOI**: 10.1002/smj.2294
@@ -38,100 +37,100 @@ Per CLAUDE.md feedback_grok_suggested_anchor_~57%_hallucination_rate: every Grok
 - **Matched authors**: sarah kaplan keyvan vakili
 - **Matched year / venue**: 2014 / Strategic Management Journal
 - **Jaccard+year score**: 0.85
-- **Rationale**: Adjacent paper found: 'The double‐edged sword of recombination in breakthrough innovation' (2014) by sarah kaplan keyvan vakili in 'Strategic Management Journal'. Year/title diverges from Grok's claim (2015 / 'The double-edged sword of recombination in breakthrough innovation').
+- **Rationale**: Adjacent paper found: 'The double‐edged sword of recombination in breakthrough innovation' (2014) by sarah kaplan keyvan vakili in 'Strategic Management Journal'. Year/title diverges from the AI-suggested claim (2015 / 'The double-edged sword of recombination in breakthrough innovation').
 
 ### A02 — NF-FABRICATED
 
-- **Grok claim**: Felin, T., & Zenger, T. R. (2023). The theory of the firm and AI: Beyond black boxes. Strategy Science. [Grok flagged VERIFY]
+- **AI-suggested claim**: Felin, T., & Zenger, T. R. (2023). The theory of the firm and AI: Beyond black boxes. Strategy Science. [flagged for verification]
 - **Verdict**: NF-FABRICATED
 - **DOI**: 10.2139/ssrn.2156951
 - **Matched title**: Open Innovation, Problem Solving, and the Theory of the (Innovative) Firm
 - **Matched authors**: teppo felin todd r. zenger
 - **Matched year / venue**: 2012 / SSRN Electronic Journal
 - **Jaccard+year score**: 0.25
-- **Rationale**: Best Crossref hit 'Open Innovation, Problem Solving, and the Theory of the (Innovative) Firm' (2012) by teppo felin todd r. zenger does not match Grok's claim (2023 / 'The theory of the firm and AI: Beyond black boxes'). Likely hallucination.
+- **Rationale**: Best Crossref hit 'Open Innovation, Problem Solving, and the Theory of the (Innovative) Firm' (2012) by teppo felin todd r. zenger does not match the AI-suggested claim (2023 / 'The theory of the firm and AI: Beyond black boxes'). Likely hallucination.
 
 ### A03 — NF-FABRICATED
 
-- **Grok claim**: Raisch, S., & Furr, N. (2024). The generative lens: AI as a catalyst for new theory. Academy of Management Review. [Grok flagged VERIFY]
+- **AI-suggested claim**: Raisch, S., & Furr, N. (2024). The generative lens: AI as a catalyst for new theory. Academy of Management Review. [flagged for verification]
 - **Verdict**: NF-FABRICATED
 - **DOI**: 10.5465/amproc.2024.21431abstract
 - **Matched title**: Collaboration Between Humans and AI: Complementarities Within and Across Skill
 - **Matched authors**: kateryna fomina sebastian raisch
 - **Matched year / venue**: 2024 / Academy of Management Proceedings
 - **Jaccard+year score**: 0.339
-- **Rationale**: Best Crossref hit 'Collaboration Between Humans and AI: Complementarities Within and Across Skill' (2024) by kateryna fomina sebastian raisch does not match Grok's claim (2024 / 'The generative lens: AI as a catalyst for new theory'). Likely hallucination.
+- **Rationale**: Best Crossref hit 'Collaboration Between Humans and AI: Complementarities Within and Across Skill' (2024) by kateryna fomina sebastian raisch does not match the AI-suggested claim (2024 / 'The generative lens: AI as a catalyst for new theory'). Likely hallucination.
 
 ### A04 — NF-FABRICATED
 
-- **Grok claim**: Puranam, P., et al. (2024). Generative AI and the future of organizational theory. Organization Science.
+- **AI-suggested claim**: Puranam, P., et al. (2024). Generative AI and the future of organizational theory. Organization Science.
 - **Verdict**: NF-FABRICATED
 - **DOI**: 10.2139/ssrn.6028034
 - **Matched title**: The Impact of Generative AI Adoption on Organizational Networks: Evidence From A Field Experiment
 - **Matched authors**: ralf buechsenschuss irmela koch-bayram dr. torsten biemann phanish puranam
 - **Matched year / venue**: 2026 / SSRN Electronic Journal
 - **Jaccard+year score**: 0.356
-- **Rationale**: Best Crossref hit 'The Impact of Generative AI Adoption on Organizational Networks: Evidence From A Field Experiment' (2026) by ralf buechsenschuss irmela koch-bayram dr. torsten biemann phanish puranam does not match Grok's claim (2024 / 'Generative AI and the future of organizational theory'). Likely hallucination.
+- **Rationale**: Best Crossref hit 'The Impact of Generative AI Adoption on Organizational Networks: Evidence From A Field Experiment' (2026) by ralf buechsenschuss irmela koch-bayram dr. torsten biemann phanish puranam does not match the AI-suggested claim (2024 / 'Generative AI and the future of organizational theory'). Likely hallucination.
 
 ### A05 — NF-NEAR-MATCH
 
-- **Grok claim**: Girotra, K., Meincke, L., Terwiesch, C., & Ulrich, K. T. (2023). Ideas are dimes a dozen: The value of ideation in innovation contests. Management Science.
+- **AI-suggested claim**: Girotra, K., Meincke, L., Terwiesch, C., & Ulrich, K. T. (2023). Ideas are dimes a dozen: The value of ideation in innovation contests. Management Science.
 - **Verdict**: NF-NEAR-MATCH
 - **DOI**: 10.2139/ssrn.4526071
 - **Matched title**: Ideas are Dimes a Dozen: Large Language Models for Idea Generation in Innovation
 - **Matched authors**: karan girotra lennart meincke christian terwiesch karl t. ulrich
 - **Matched year / venue**: 2023 / SSRN Electronic Journal
 - **Jaccard+year score**: 0.572
-- **Rationale**: Adjacent paper found: 'Ideas are Dimes a Dozen: Large Language Models for Idea Generation in Innovation' (2023) by karan girotra lennart meincke christian terwiesch karl t. ulrich in 'SSRN Electronic Journal'. Year/title diverges from Grok's claim (2023 / 'Ideas are dimes a dozen: The value of ideation in innovation contests').
+- **Rationale**: Adjacent paper found: 'Ideas are Dimes a Dozen: Large Language Models for Idea Generation in Innovation' (2023) by karan girotra lennart meincke christian terwiesch karl t. ulrich in 'SSRN Electronic Journal'. Year/title diverges from the AI-suggested claim (2023 / 'Ideas are dimes a dozen: The value of ideation in innovation contests').
 
 ### A06 — NF-FABRICATED
 
-- **Grok claim**: Lifshitz-Assaf, H., et al. (2024). AI and the transformation of R&D. Research Policy.
+- **AI-suggested claim**: Lifshitz-Assaf, H., et al. (2024). AI and the transformation of R&D. Research Policy.
 - **Verdict**: NF-FABRICATED
 - **DOI**: 10.5465/amproc.2025.12158symposium
 - **Matched title**: Innovating with AI: Exploring the Impact of Generative AI on Creative Processes
 - **Matched authors**: moran lazar deborah mateja lebogang nthoiwa hila lifshitz-assaf sebastian raisch rembrand michael koning
 - **Matched year / venue**: 2025 / Academy of Management Proceedings
 - **Jaccard+year score**: 0.3
-- **Rationale**: Best Crossref hit 'Innovating with AI: Exploring the Impact of Generative AI on Creative Processes' (2025) by moran lazar deborah mateja lebogang nthoiwa hila lifshitz-assaf sebastian raisch rembrand michael koning does not match Grok's claim (2024 / 'AI and the transformation of R&D'). Likely hallucination.
+- **Rationale**: Best Crossref hit 'Innovating with AI: Exploring the Impact of Generative AI on Creative Processes' (2025) by moran lazar deborah mateja lebogang nthoiwa hila lifshitz-assaf sebastian raisch rembrand michael koning does not match the AI-suggested claim (2024 / 'AI and the transformation of R&D'). Likely hallucination.
 
 ### A07 — NF-FABRICATED
 
-- **Grok claim**: Bingham, C. B., & Eisenhardt, K. M. (2024). The search for simplicity in strategy. SMJ. [Grok flagged VERIFY; audit flagged prior hallucination NF15-adjacent]
+- **AI-suggested claim**: Bingham, C. B., & Eisenhardt, K. M. (2024). The search for simplicity in strategy. SMJ. [flagged for verification; audit flagged prior hallucination NF15-adjacent]
 - **Verdict**: NF-FABRICATED
 - **DOI**: 10.1093/acrefore/9780190224851.013.458
 - **Matched title**: Simple Rules and Other Heuristics in Strategy and Organizational Research
 - **Matched authors**: kathleen m. eisenhardt christopher b. bingham
 - **Matched year / venue**: 2025 / Oxford Research Encyclopedia of Business and Management
 - **Jaccard+year score**: 0.258
-- **Rationale**: Best Crossref hit 'Simple Rules and Other Heuristics in Strategy and Organizational Research' (2025) by kathleen m. eisenhardt christopher b. bingham does not match Grok's claim (2024 / 'The search for simplicity in strategy'). Likely hallucination.
+- **Rationale**: Best Crossref hit 'Simple Rules and Other Heuristics in Strategy and Organizational Research' (2025) by kathleen m. eisenhardt christopher b. bingham does not match the AI-suggested claim (2024 / 'The search for simplicity in strategy'). Likely hallucination.
 
 ### A08 — NF-NEAR-MATCH
 
-- **Grok claim**: Teece, D. J. (2023). Dynamic capabilities in the age of AI. Industrial and Corporate Change.
+- **AI-suggested claim**: Teece, D. J. (2023). Dynamic capabilities in the age of AI. Industrial and Corporate Change.
 - **Verdict**: NF-NEAR-MATCH
 - **DOI**: 10.1017/9781009562713
 - **Matched title**: Dynamic Capabilities
 - **Matched authors**: david j. teece
 - **Matched year / venue**: 2025 / —
 - **Jaccard+year score**: 0.35
-- **Rationale**: Adjacent paper found: 'Dynamic Capabilities' (2025) by david j. teece in ''. Year/title diverges from Grok's claim (2023 / 'Dynamic capabilities in the age of AI').
+- **Rationale**: Adjacent paper found: 'Dynamic Capabilities' (2025) by david j. teece in ''. Year/title diverges from the AI-suggested claim (2023 / 'Dynamic capabilities in the age of AI').
 
 ### A09 — NF-FABRICATED
 
-- **Grok claim**: von Krogh, G., et al. (2024). Artificial intelligence in management: A review and research agenda. Journal of Management.
+- **AI-suggested claim**: von Krogh, G., et al. (2024). Artificial intelligence in management: A review and research agenda. Journal of Management.
 - **Verdict**: NF-FABRICATED
 - **DOI**: 10.5465/amj.2023.4002
 - **Matched title**: Recognizing and Utilizing Novel Research Opportunities with Artificial Intelligence
 - **Matched authors**: georg von krogh quinetta roberson marc gruber
 - **Matched year / venue**: 2023 / Academy of Management Journal
 - **Jaccard+year score**: 0.35
-- **Rationale**: Best Crossref hit 'Recognizing and Utilizing Novel Research Opportunities with Artificial Intelligence' (2023) by georg von krogh quinetta roberson marc gruber does not match Grok's claim (2024 / 'Artificial intelligence in management: A review and research agenda'). Likely hallucination.
+- **Rationale**: Best Crossref hit 'Recognizing and Utilizing Novel Research Opportunities with Artificial Intelligence' (2023) by georg von krogh quinetta roberson marc gruber does not match the AI-suggested claim (2024 / 'Artificial intelligence in management: A review and research agenda'). Likely hallucination.
 
 ### A10 — VERIFIED
 
-- **Grok claim**: Levinthal, D., & March, J. G. (1993/2025 retrospective). The myopia of learning [updated commentary].
-- **Note**: Grok claimed a 2025 retrospective commentary; 1993 original is verifiable
+- **AI-suggested claim**: Levinthal, D., & March, J. G. (1993/2025 retrospective). The myopia of learning [updated commentary].
+- **Note**: the AI reviewer claimed a 2025 retrospective commentary; 1993 original is verifiable
 - **Verdict**: VERIFIED
 - **DOI**: 10.1002/smj.4250141009
 - **Matched title**: The myopia of learning
@@ -142,25 +141,25 @@ Per CLAUDE.md feedback_grok_suggested_anchor_~57%_hallucination_rate: every Grok
 
 ### A11 — NF-FABRICATED
 
-- **Grok claim**: Camuffo, A., et al. (2024). Scientific decision-making and the replication crisis in management. SMJ.
+- **AI-suggested claim**: Camuffo, A., et al. (2024). Scientific decision-making and the replication crisis in management. SMJ.
 - **Verdict**: NF-FABRICATED
 - **DOI**: 10.1002/smj.3580
 - **Matched title**: A scientific approach to entrepreneurial decision‐making: Large‐scale replication and extension
 - **Matched authors**: arnaldo camuffo alfonso gambardella danilo messinese elena novelli emilio paolucci chiara spina
 - **Matched year / venue**: 2024 / Strategic Management Journal
 - **Jaccard+year score**: 0.5
-- **Rationale**: Best Crossref hit 'A scientific approach to entrepreneurial decision‐making: Large‐scale replication and extension' (2024) by arnaldo camuffo alfonso gambardella danilo messinese elena novelli emilio paolucci chiara spina does not match Grok's claim (2024 / 'Scientific decision-making and the replication crisis in management'). Likely hallucination.
+- **Rationale**: Best Crossref hit 'A scientific approach to entrepreneurial decision‐making: Large‐scale replication and extension' (2024) by arnaldo camuffo alfonso gambardella danilo messinese elena novelli emilio paolucci chiara spina does not match the AI-suggested claim (2024 / 'Scientific decision-making and the replication crisis in management'). Likely hallucination.
 
 ### A12 — NF-FABRICATED
 
-- **Grok claim**: Ethiraj, S. K., et al. (2024). The next frontier in strategy research: Computational approaches. Strategic Management Journal.
+- **AI-suggested claim**: Ethiraj, S. K., et al. (2024). The next frontier in strategy research: Computational approaches. Strategic Management Journal.
 - **Verdict**: NF-FABRICATED
 - **DOI**: 10.2514/6.1989-129
 - **Matched title**: Computational studies of hard-body and 3-D effects in plume flows
 - **Matched authors**: ethiraj venkatapathy william feiereisen shigeru obayashi
 - **Matched year / venue**: 1989 / 27th Aerospace Sciences Meeting
 - **Jaccard+year score**: 0.087
-- **Rationale**: Best Crossref hit 'Computational studies of hard-body and 3-D effects in plume flows' (1989) by ethiraj venkatapathy william feiereisen shigeru obayashi does not match Grok's claim (2024 / 'The next frontier in strategy research: Computational approaches'). Likely hallucination.
+- **Rationale**: Best Crossref hit 'Computational studies of hard-body and 3-D effects in plume flows' (1989) by ethiraj venkatapathy william feiereisen shigeru obayashi does not match the AI-suggested claim (2024 / 'The next frontier in strategy research: Computational approaches'). Likely hallucination.
 
 ## Aggregate
 
@@ -169,26 +168,26 @@ Per CLAUDE.md feedback_grok_suggested_anchor_~57%_hallucination_rate: every Grok
 - NF-FABRICATED: 8/12
 - ERROR: 0/12
 
-Hallucination rate (NF-FABRICATED + NF-NEAR-MATCH): 92% — corpus precedent ~57%. The unusually high rate this round reflects Grok r1's tendency to retrofit citation patterns for tier-1 management venues (SMJ / AMR / Org Sci / JoM / MS) where authoritative-sounding 2023-2024 titles get fabricated to fit the requested integration-with-strategy-literature gap.
+Hallucination rate (NF-FABRICATED + NF-NEAR-MATCH): 92% — corpus precedent ~57%. The unusually high rate this round reflects the AI reviewer's tendency to retrofit citation patterns for tier-1 management venues (SMJ / AMR / Org Sci / JoM / MS) where authoritative-sounding 2023-2024 titles get fabricated to fit the requested integration-with-strategy-literature gap.
 
-## Session H final integration verdict (post-script human review)
+## Final integration verdict (post-script human review)
 
 The raw classifier flags A01 as NF-NEAR-MATCH on a year mismatch (Crossref's metadata records 2014 early-view publication; the paper IS in SMJ 36(10) 2015 with DOI 10.1002/smj.2294 — Wiley's early-view-vs-issue date convention). Human override: A01 is **VERIFIED** and is already in SPINE.yaml v0.2.0 external_anchors as `kaplan-vakili-2015-double-edged-sword-recombination`.
 
-For A10 (Levinthal-March 1993), the underlying 1993 paper IS verifiable (DOI 10.1002/smj.4250141009; SMJ 14(S2):95-112), but Grok's "2025 retrospective commentary" component is unverified and is dropped from the integration claim. The integration claim becomes: cite Levinthal & March 1993 myopia-of-learning original as antecedent for the dynamic-capabilities pair's learning-mechanism nodes (L2 in TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md already names "Levitt and March (1988) organizational learning" as antecedent — Levinthal-March 1993 is the adjacent extension applicable to the KBV pair's K1/K3 knowledge-integration nodes).
+For A10 (Levinthal-March 1993), the underlying 1993 paper IS verifiable (DOI 10.1002/smj.4250141009; SMJ 14(S2):95-112), but the AI-suggested "2025 retrospective commentary" component is unverified and is dropped from the integration claim. The integration claim becomes: cite Levinthal & March 1993 myopia-of-learning original as antecedent for the dynamic-capabilities pair's learning-mechanism nodes (L2 in TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md already names "Levitt and March (1988) organizational learning" as antecedent — Levinthal-March 1993 is the adjacent extension applicable to the KBV pair's K1/K3 knowledge-integration nodes).
 
 ### Integration-ready anchors (2 of 12)
 
 | ID | Citation | DOI | Integration scope in v1.0.0 |
 |---|---|---|---|
 | A01 | Kaplan, S., & Vakili, K. (2015). The double-edged sword of recombination in breakthrough innovation. *Strategic Management Journal*, 36(10), 1435–1457. | 10.1002/smj.2294 | Already in spine v0.2.0 external_anchors. Strengthen theoretical link in §Theory (recombinant search positioning of Rec metric); already referenced in Method §Rec metric construct-validity contrast. |
-| A10 | Levinthal, D. A., & March, J. G. (1993). The myopia of learning. *Strategic Management Journal*, 14(S2), 95–112. | 10.1002/smj.4250141009 | NEW external_anchor at v0.3.1. Integrate into §Theory as organizational-learning antecedent for the KBV pair's K1 / K3 substrate nodes (knowledge-integration / tacit-vs-explicit). Discard Grok's unverifiable "2025 retrospective" embellishment. |
+| A10 | Levinthal, D. A., & March, J. G. (1993). The myopia of learning. *Strategic Management Journal*, 14(S2), 95–112. | 10.1002/smj.4250141009 | NEW external_anchor at v0.3.1. Integrate into §Theory as organizational-learning antecedent for the KBV pair's K1 / K3 substrate nodes (knowledge-integration / tacit-vs-explicit). Discard the unverifiable "2025 retrospective" embellishment. |
 
 ### NF entries to add to SPINE.yaml v0.3.1 (10 of 12)
 
 NF19 through NF28 record each non-integrating anchor with the actual adjacent Crossref hit (where one was found) so future cycles do not re-suggest the same hallucination:
 
-| New NF ID | Grok claim | Real adjacent paper (or "no adjacent") |
+| New NF ID | AI-suggested claim | Real adjacent paper (or "no adjacent") |
 |---|---|---|
 | NF19 (A02) | Felin & Zenger 2023 *Strategy Science* "The theory of the firm and AI: Beyond black boxes" | Felin & Zenger 2012 SSRN "Open Innovation, Problem Solving, and the Theory of the (Innovative) Firm" — different topic, 11 years off |
 | NF20 (A03) | Raisch & Furr 2024 *AMR* "The generative lens: AI as a catalyst for new theory" | Fomina & Raisch 2024 *AMP* "Collaboration Between Humans and AI" — Raisch is author but Furr is not; title/venue differ |
@@ -206,5 +205,5 @@ NF19 through NF28 record each non-integrating anchor with the actual adjacent Cr
 - INTEGRATE A01 and A10 only (2 anchors); add A10 as new external_anchor in SPINE.yaml v0.3.1.
 - DO NOT integrate A02-A09, A11, A12.
 - Record NF19-NF28 in SPINE.yaml v0.3.1 negative_findings.
-- Phase 5b jargon-translation pass may engage the broader recombinant-search / cognitive-frames / knowledge-representation literature using verified anchors already in the corpus or already in SPINE v0.2.0 external_anchors (Carlile 2004, Raisch & Krakowski 2021, Nickerson & Zenger 2004, Felin-Kauffman-Zenger 2023, Kaplan & Vakili 2015) without relying on Grok's hallucinated suggestions.
+- Phase 5b jargon-translation pass may engage the broader recombinant-search / cognitive-frames / knowledge-representation literature using verified anchors already in the corpus or already in SPINE v0.2.0 external_anchors (Carlile 2004, Raisch & Krakowski 2021, Nickerson & Zenger 2004, Felin-Kauffman-Zenger 2023, Kaplan & Vakili 2015) without relying on the AI reviewer's hallucinated suggestions.
 

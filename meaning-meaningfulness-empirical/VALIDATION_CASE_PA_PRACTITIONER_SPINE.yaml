@@ -2,7 +2,7 @@
 #
 # Spine re-extracted from RENDERING_PA_PRACTITIONER.md (2,102-word Substack
 # practitioner-register rendering of PAPER A 2026ao's substrate). This is the
-# Session H Phase 2.5 output: cross-paper P4 evidence — Paper A's spine
+# Phase 2.5 output: cross-paper P4 evidence — Paper A's spine
 # (v0.7.3) rendered into a fresh practitioner article, re-extracted, and
 # compared to the source spine.
 #
@@ -14,9 +14,9 @@ spine_version: "0.2"
 spine_doc_version: "0.1.0"
 extracted_from: "RENDERING_PA_PRACTITIONER.md"
 extraction_protocol: "paper_a:appendix_B_protocol applied in reverse by single coder (author)"
-extraction_session: "Session H Phase 2.5 — Cross-paper P4 (Paper A → practitioner rendering)"
+extraction_session: "Phase 2.5 — Cross-paper P4 (Paper A → practitioner rendering)"
 extraction_date: "2026-05-27"
-target_for_isomorphism: "Paper A SPINE.yaml v0.7.3 at /Users/d/projects/spectral-branding-meaningfulness/research/meaning_meaningfulness_paper/SPINE.yaml"
+target_for_isomorphism: "Paper A SPINE.yaml v0.7.3"
 dual_purpose: "research artifact + Article 1 raw material for forthcoming practitioner-tier Substack series"
 
 # ============================================================================
@@ -87,7 +87,7 @@ stylized_facts:
     statement: "Cross-language collaboration preserves meaning while losing meaningfulness; Mathematical Reviews + clinical-trials registries institutionalize the pattern. ρ is cohort-conditional and reconstructed per language; σ produces a language-invariant spine."
     node_typing: "stylized_fact"
     maps_to_paper_a: ["SF3 cross-language collaboration"]
-    map_quality: "PRESERVED — Mathematical Reviews and clinical-trials anchors retained; the existing Russian-channel self-application instance from Paper A §SF3 (t.me/spectralbranding) DROPPED at practitioner register (self-referential audit incident per feedback_audit_record_discipline_in_public_papers.md)"
+    map_quality: "PRESERVED — Mathematical Reviews and clinical-trials anchors retained; the existing Russian-channel self-application instance from Paper A §SF3 (t.me/spectralbranding) DROPPED at practitioner register (self-referential audit detail omitted from public renderings)"
 
   - id: PA_R_SF4
     statement: "Scholarly artifacts exhibit conclusion-invariance across rendering media (conference talk vs journal paper; textbook vs video lecture). Medium is a parameter of ρ; the spine is medium-invariant; P4 formalizes the invariance."
@@ -162,9 +162,9 @@ rendering_choices:
     rendering: "σ named once for substrate-from-rendering direction (SF1 failure mode explanation); ρ named once for cohort-dependent reconstruction; α/γ scale constants dropped; β/δ exponents replaced with 'sub-linear / super-linear' plain English"
     notes: "Greek symbols selectively retained where they ARE the explanation (SF1 σ-direction; SF3 ρ-reconstruction); dropped where plain English suffices"
   self_referential_audit_incidents:
-    spine: "F2 fabrication-discovery audit + Russian-channel self-application instance"
-    rendering: "F2 audit DROPPED entirely per feedback_audit_record_discipline_in_public_papers.md; Russian-channel reference DROPPED (kept as separate Task γ Phase 3.5a artifact)"
-    notes: "self-referential audit incidents kept internal in public-tier renderings; Substack rendering instead uses Heisenberg-Schrödinger as historical anchor"
+    spine: "an audit-internal fabrication-discovery record + Russian-channel self-application instance"
+    rendering: "Audit-internal record DROPPED entirely per the audit-record discipline; Russian-channel reference DROPPED (kept as separate Task γ Phase 3.5a artifact)"
+    notes: "self-referential audit detail is omitted from public renderings; Substack rendering instead uses Heisenberg-Schrödinger as historical anchor"
   mathematical_notation:
     spine: "G = (V, E, τ); σ : L → G; ρ : (G, audience, language, medium) → R; |V|^β; |tokens|^δ"
     rendering: "all mathematical notation dropped; replaced with plain-English description ('typed graph of claims and dependencies'; 'sub-linear scaling'; 'super-linear scaling')"

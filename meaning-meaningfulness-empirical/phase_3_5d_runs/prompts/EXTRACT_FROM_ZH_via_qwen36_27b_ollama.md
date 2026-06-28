@@ -8,7 +8,7 @@ audit_trail: "Qwen3.6:27b serves as cross-extractor on DeepSeek's Chinese render
 sha256_of_prompt_body: "see EXTRACT_FROM_ZH_via_GPT4o.md (codebook system prompt byte-identical; user prompt byte-identical)"
 purity_status: CLEAN
 cross_operator_compliance: "B != C verified — Qwen3.6:27b extractor applied ONLY to DeepSeek rendering (different from Qwen renderer which rendered its own Chinese text)"
-ollama_discipline: "Serial-only per feedback_ollama_serial_only.md; executed AFTER Qwen rendering step (sequential)"
+ollama_discipline: "Serial-only per the Ollama serial-only rule; executed AFTER Qwen rendering step (sequential)"
 model_digest: "a50eda8ed977ab48a12431878896b27ffd5cef552c17af3317d9623b939a7f1e"
 quantization: "Q4_K_M"
 ---

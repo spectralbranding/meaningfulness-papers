@@ -4,7 +4,7 @@
 # LinkedIn long-post rendering of the focal-pair shared substrate L1-L4
 # from TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md §2).
 #
-# Task β output (Session H Phase 3). The third rendering operationalizes
+# Task β output (Phase 3). The third rendering operationalizes
 # paper_a:P4 at the focal-pair-shared-substrate boundary: same substrate as
 # the Eisenhardt-Martin and Zollo-Winter prose renderings, third independent
 # rendering, isomorphism check on substrate preservation.
@@ -17,7 +17,7 @@ spine_version: "0.2"
 spine_doc_version: "0.1.0"
 extracted_from: "RENDERING_FOCAL_PAIR_THIRD_PROSE.md"
 extraction_protocol: "paper_a:appendix_B_protocol applied in reverse by single coder (author)"
-extraction_session: "Session H Phase 3 — Task β third rendering of focal-pair shared substrate"
+extraction_session: "Phase 3 — Task β third rendering of focal-pair shared substrate"
 extraction_date: "2026-05-27"
 target_for_isomorphism: "TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md §2 alignment table (focal-pair shared substrate L1-L4)"
 

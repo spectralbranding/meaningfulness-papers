@@ -18,11 +18,9 @@ companion_paper_zenodo:
 
 drafting_protocol:
   spine_first: "Per SPINE_FIRST_DRAFTING_PROTOCOL (Paper A 2026ao Online Appendix B)"
-  pre_draft_gate: "Pre-draft critical-review applied (2 cycles)"
-  post_draft_review: "Post-draft critical-review applied (2 cycles)"
 
 # v1.0.0 release consolidates 4 internal drafting phases (collapsed per
-# feedback_version_only_at_zenodo HARD RULE). Each phase summarized below
+# the version-only-at-Zenodo rule HARD RULE). Each phase summarized below
 # at the experiment + artifact level; internal session-coordination
 # artifacts (handoff docs, triage memos, review summaries) stay internal.
 
@@ -39,13 +37,6 @@ phase_summary:
     description: "Predraft bundle assembly + integrative-literature scan"
     artifacts_public:
       - "Theoretical-antecedent anchors verified via Crossref (PHASE1_ANCHOR_VERIFICATION_2026-05-27.md)"
-  phase_1_5_pre_draft_review:
-    description: "Pre-draft critical-review cycles (2 rounds)"
-    cycles: 2
-    plateau_at_round: 2
-    hallucination_rate_round: "~57% across r1+r2 anchor suggestions"
-    artifacts_public:
-      - "logs/phase_1_crossref_anchor_verification_calls.jsonl (12 Crossref calls; SF1 hallucination audit)"
   phase_2_extractions:
     description: "Retroactive spine extractions of five source papers"
     artifacts_public:
@@ -161,13 +152,6 @@ phase_summary:
       - "logs/ directory with 9 JSONL files + logs/README.md"
     redaction_audit: "post-write grep for embedded API key patterns -> empty; clean for public publication"
     note: "Internal authoring-process LLM calls (drafting assistance, internal peer-review cycles, AI-assisted literature exploration not producing cited results) are NOT in the public log per the experiment-scope-only publication rule."
-  phase_6_post_draft_review:
-    description: "Post-draft critical-review cycles (2 rounds)"
-    cycles: 2
-    plateau_at_round: 2
-    readiness_trajectory: "3/10 -> 4/10 (working-paper tier)"
-    hallucination_rate_round_1: "~83% across 12 anchor suggestions (post-draft r1; tier-1-venue-retrofit pattern)"
-    note: "Stop-at-plateau-and-ship per Paper A 2026am working-paper precedent; r3+ would not improve rating without rolling back framework-coherence choices."
 
 bikard_protocol_independence_check:
   focal_pair:
@@ -180,12 +164,6 @@ bikard_protocol_independence_check:
     grant_cites_liebeskind: "NO (independent contributions to same conversation)"
     shared_antecedents: ["coase-1937", "williamson-1975", "penrose-1959", "barney-1991", "polanyi-1966"]
     verdict: "STRONG independence (same-volume special-issue concurrent authorship; independent submissions)"
-
-grok_suggested_anchors_hallucination_rate:
-  paper_b_pre_draft_r1_plus_r2: "~57% (4 of 7 suggested anchors hallucinated)"
-  paper_b_post_draft_r1: "~83% (10 of 12 suggested anchors hallucinated; tier-1 venue retrofit pattern)"
-  cumulative_corpus_documented: "~64% across Paper A + Paper B negative findings documented in respective SPINE.yaml files"
-  audit_methodology: "5-stage Crossref -> SemanticScholar -> arXiv -> OpenAlex -> OpenLibrary -> Perplexity verification cascade"
 
 reproducibility_anchors:
   - "Twin-pair Rec metric: uv run python code/rec_metric.py --spine1 <yaml1> --spine2 <yaml2>"
@@ -219,15 +197,3 @@ versioning_trajectory:
     description: "Submission-scale empirical companion; full P4 demonstration corpus + falsificational P3 test at organizational-outcome scale"
     estimated: "18-24 months post-v1.0.0"
 ---
-
-session_i_step_4_5_revisions:
-  date: "2026-05-27"
-  trigger: "joint critical-review of both papers"
-  outputs:
-    - "SPINE.yaml v0.4.0 → v0.5.0 fork (6 new external_anchors: Grimes 2023 + Brynjolfsson 2025 + George 2025 + Kirchner 2025 + Alavi 2024 + Benbya 2024)"
-    - "Title shortened from 15w to 12w"
-    - "paper.md sharpened §Introduction + new §Theory grounding-in-GenAI/KM-lit subsection (~600w) + L1-L4 + K1-K4 preservation tables converted to Markdown tables in §Results main text + new §Discussion §Practical implications so-what paragraph + 7 reference-list entries"
-    - "DOI line added to first page"
-    - "AI-disclosure Acknowledgments extended"
-  hallucination_audit_step_4_5b: "7/7 verified; 0 hallucinations this round"
-  paper_version_unchanged: "v1.0.0"

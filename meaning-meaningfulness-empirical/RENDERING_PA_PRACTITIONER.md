@@ -1,6 +1,6 @@
 ---
 title: "The structure your work has is not the prose you wrote — why the AI era separates meaning from meaningfulness"
-source_spine_pointer: "/Users/d/projects/spectral-branding-meaningfulness/research/meaning_meaningfulness_paper/SPINE.yaml v0.7.3 (Paper A 2026ao)"
+source_spine_pointer: "SPINE.yaml v0.7.3 (Paper A 2026ao)"
 rendering_target_audience: "senior practitioners and academic-adjacent readers (strategy directors, organization-design consultants, knowledge-management heads, partner-track consultants, scholarly editors, journal reviewers)"
 rendering_medium_spec: "Substack standalone article; ~2,300 words; practitioner register with light academic anchors; named-case examples; explicit three first moves; first-person plural where natural"
 rendering_register_shift_from_source: "Paper A academic-paper.md (third-person, formal apparatus, mathematical notation, Greek symbols, citation density, AMA structure) → Substack practitioner article (declarative, named-case anecdotes, plain English, no equations, light citation)"
@@ -18,7 +18,6 @@ expected_preservation_set:
   - "Heisenberg-Schrödinger as historical existence proof for cross-formalism convergence on shared substrate"
   - "spine-first drafting protocol as the cost-asymmetry-driven cost-minimizing arrangement"
 date: 2026-05-27
-session: Session H Phase 2.5 — Cross-paper P4 (Paper A spine → practitioner rendering)
 status: research artifact + Article 1 raw material; NOT published; awaits user authorization to derive a final Substack article
 dual_purpose:
   - "P4 evidence at cross-paper boundary (Paper A substrate → Substack practitioner rendering → re-extracted spine → preservation rate)"

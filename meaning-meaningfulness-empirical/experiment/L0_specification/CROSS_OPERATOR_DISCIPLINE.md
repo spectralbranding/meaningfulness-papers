@@ -1,8 +1,8 @@
 # Cross-Operator Extraction Discipline
 
-**HARD RULE — feedback_cross_operator_extraction_separation.md**
+**HARD RULE — the cross-operator extraction separation rule**
 
-**First introduced**: Session H 2026-05-27 (Paper B v1.0.0)
+**First introduced**: 2026-05-27 (Paper B v1.0.0)
 **Formalized in L0 cascade**: v1.1.0 2026-05-28
 
 ---
@@ -71,5 +71,5 @@ Each phase manifest (`*_manifest.json`) records a `cross_operator_discipline` bl
 
 ---
 
-*Source rule*: `feedback_cross_operator_extraction_separation.md` (HARD RULE; Session H 2026-05-27)
+*Source rule*: cross-operator extraction separation (2026-05-27)
 *Companion document*: `PROMPT_PURITY_PROTOCOL.md` §Cross-references

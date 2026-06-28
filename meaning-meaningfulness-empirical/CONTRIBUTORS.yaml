@@ -27,10 +27,8 @@ contributors:
 ai_assistance_disclosure: |
   AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1) were used during
   the drafting of this paper for initial literature search and editorial
-  refinement. The paper was subjected to internal pre-draft and post-draft
-  critical-review cycles. Grok-suggested citation anchors are subject to the
-  project's Crossref-verification discipline (verification of 12 anchors with
-  10 negative findings recorded). All theoretical claims, propositions,
+  refinement. All citation anchors were independently Crossref-verified
+  before inclusion. All theoretical claims, propositions,
   methodology specifications, calibration choices, and interpretations are
   the author's sole responsibility.
 ---

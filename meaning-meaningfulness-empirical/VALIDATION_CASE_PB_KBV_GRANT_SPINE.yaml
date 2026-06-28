@@ -1,10 +1,10 @@
 # VALIDATION_CASE_PB_KBV — Grant (1996) SMJ
 # Second twin pair (KBV neighborhood); v1.1.0 addition per Path A.
-# OCR-extracted from /Users/d/projects/spectral-branding/research/references/Toward_A_Knowledge-Based_Theory_of_the_Firm.pdf
-# via ocrmypdf --force-ocr at Session E continuation; original PDF was image-only.
+# OCR-extracted from source PDF
+# via ocrmypdf --force-ocr at a later extraction pass; original PDF was image-only.
 
 extraction_version: "1.1.0"
-extraction_session: "Session E continuation post-Path-A"
+extraction_session: "a later extraction pass"
 extraction_date: "2026-05-27"
 schema_version: "0.2"
 
@@ -14,7 +14,7 @@ source_paper:
   doi: "10.1002/smj.4250171110"
   publication_date: "1996 (Winter Special Issue: Knowledge and the Firm)"
   venue: "Strategic Management Journal (Winter 1996 Special Issue 'Knowledge and the Firm')"
-  source_pdf: "research/references/Toward_A_Knowledge-Based_Theory_of_the_Firm.pdf (14 pages; image-only — OCR'd via ocrmypdf --force-ocr Session E continuation)"
+  source_pdf: "research/references/Toward_A_Knowledge-Based_Theory_of_the_Firm.pdf (14 pages; image-only — OCR'd via ocrmypdf --force-ocr a later extraction pass)"
 
 paper_thesis: |
   The firm exists primarily as an institution for the integration of

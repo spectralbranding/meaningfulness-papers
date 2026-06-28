@@ -5,7 +5,7 @@
 # paired with a twin at v1.0.0; no Rec computation against a partner.
 
 extraction_version: "1.0.0"
-extraction_session: "Session E Phase 2"
+extraction_session: "Phase 2"
 extraction_date: "2026-05-27"
 schema_version: "0.2"
 

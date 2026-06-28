@@ -4,11 +4,11 @@ This directory contains professionally-logged provenance for LLM/model API calls
 
 The logs are part of the paper's reproducibility artifact bundle, mirrored to the public GitHub mirror at Zenodo upload time. License: CC BY 4.0 (same as paper). DOI: shares the paper's Zenodo DOI; no separate DOI.
 
-Source rules: `feedback_llm_call_professional_logging.md` (logging discipline HARD RULE) + `feedback_cross_operator_extraction_separation.md` (three-operator pipeline discipline HARD RULE).
+Source rules: `the LLM-call professional-logging discipline` (logging discipline HARD RULE) + `the cross-operator extraction separation rule` (three-operator pipeline discipline HARD RULE).
 
 ## Scope: experiments vs drafting
 
-Per user direction 2026-05-27, the public log includes ONLY calls that produce empirical evidence cited as a result in `paper.md`. Internal authoring-process calls (drafting assistance, internal peer-review cycles, AI-assisted literature exploration that does not produce a cited result) are NOT in the public log; those entries are kept locally at `logs/internal_only/` and excluded from public-mirror sync.
+By design, the public log includes ONLY calls that produce empirical evidence cited as a result in `paper.md`. Internal authoring-process calls (drafting assistance, internal peer-review cycles, AI-assisted literature exploration that does not produce a cited result) are NOT in the public log; those entries are kept locally at `logs/internal_only/` and excluded from public-mirror sync.
 
 **Public scope (experimental evidence):**
 - Phase 1 Crossref anchor verification (SF1 hallucination audit)
@@ -19,14 +19,14 @@ Per user direction 2026-05-27, the public log includes ONLY calls that produce e
 
 **Internal scope (drafting/research, not published):**
 - AI-draft Russian rendering starter (drafting helper for user's v1.1.0 human-native pass)
-- Internal critical-review cycles (peer review of paper draft)
+- Internal review activity (review of the paper draft)
 - Any LLM-assisted paper drafting or editing
 
 ## Per-phase JSONL files (v1.0.0 release; public scope)
 
 | File | Calls | Operator | What it covers |
 |---|---|---|---|
-| `phase_1_crossref_anchor_verification_calls.jsonl` | 12 | crossref | Each of the 12 Grok-suggested anchor verifications against the Crossref REST API; resolves DOIs for 2 (A01, A10) and classifies 10 as NF |
+| `phase_1_crossref_anchor_verification_calls.jsonl` | 12 | crossref | Each of the 12 AI-suggested anchor verifications against the Crossref REST API; resolves DOIs for 2 (A01, A10) and classifies 10 as NF |
 | `phase_2_render_PB_spine_to_substack_practitioner_calls.jsonl` | 1 | claude-via-harness (Operator B) | Substack practitioner-register rendering of Paper B's own substrate (1,615w; for Task α self-application) |
 | `phase_2_extract_spine_from_substack_rendering_calls.jsonl` | 1 | claude-via-harness (Operator B; within-operator baseline) | Within-operator re-extraction of spine from Substack rendering |
 | `phase_2_prime_extract_spine_from_substack_rendering_PB_via_GPT4_calls.jsonl` | 1 | gpt-4o (Operator C; cross-operator) | Cross-operator re-extraction of spine from Substack rendering (prose-only input; no source spine context) |
@@ -68,7 +68,7 @@ Per user direction 2026-05-27, the public log includes ONLY calls that produce e
 
 ## Reconstructed-post-hoc entries
 
-Logs marked `"reconstructed_post_hoc": true` were assembled from the Claude Code session transcript after the LLM-call professional logging HARD RULE arrived mid-session (Phase 5 of Session H). They reflect honest disclosure of the gap between when the work executed and when structured logging was added. Reconstructed entries lack tokens / latency / cost values for the harness-internal Claude rendering operations (claude-via-harness operator); the Crossref calls in Phase 1 have full reconstruction fidelity because the calling script `audit/scripts/verify_2026ap_postdraft_r1_anchors.py` recorded the requests it made.
+Logs marked `"reconstructed_post_hoc": true` were assembled from the Claude Code session transcript after the LLM-call professional logging HARD RULE arrived mid-session (a later phase). They reflect honest disclosure of the gap between when the work executed and when structured logging was added. Reconstructed entries lack tokens / latency / cost values for the harness-internal Claude rendering operations (claude-via-harness operator); the Crossref calls in Phase 1 have full reconstruction fidelity because the calling script `audit/scripts/verify_2026ap_postdraft_r1_anchors.py` recorded the requests it made.
 
 Reconstruction script: `research/meaningfulness_empirical_companion/code/reconstruct_session_h_logs.py`. Future research-pass calls use real-time logging via `research/meaningfulness_empirical_companion/code/llm_call_logger.py`.
 
@@ -79,7 +79,7 @@ Reconstruction script: `research/meaningfulness_empirical_companion/code/reconst
 3. For Phase 1 anchor verification: rerun `audit/scripts/verify_2026ap_postdraft_r1_anchors.py` against the live Crossref API to confirm the 2 VERIFIED / 10 NF classification (results may drift if Crossref metadata updates; the log preserves point-in-time provenance).
 4. For Phases 2, 2.5, 3 Claude renderings: the log captures the system prompt + user prompt + the response summary. Full rendered articles are at `research/meaningfulness_empirical_companion/RENDERING_*.md`. An independent reader can re-render with any AI operator using the same prompts to compare against this paper's renderings.
 5. For Phase 3.5b multi-LLM cross-family renderings (v1.1.0 execution): the script `research/meaningfulness_empirical_companion/code/multi_llm_rendering.py` uses `llm_call_logger.py` with real-time logging from invocation; results land in `phase_3.5b_*.jsonl` files at v1.1.0 release.
-6. Internal critical-review cycles are logged via `llm_call_logger.py` integration; those review logs are internal-only (see Internal scope above) and are not published.
+6. Internal review activity is logged via `llm_call_logger.py` integration; those review logs are internal-only (see Internal scope above) and are not published.
 
 ## Redaction audit
 

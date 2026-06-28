@@ -33,7 +33,7 @@ venue: "Journal of Management Inquiry, 33(3), 207-229"
 publication_date: "2024-02-22"  # accepted manuscript date from ORA record
 paper_type: "curated_discussion"  # multi-author position essay; not single-thesis paper
 status: "T2 validation case for 2026ao; coding pass 1"
-extractor: "Claude Opus 4.7 (1M context) via meaningfulness-paper Session 168 parallel-session"
+extractor: "Claude Opus 4.7 (1M context) via meaningfulness-paper [session] parallel-session"
 extraction_date: "2026-05-26"
 source_pdfs:
   - "https://ora.ox.ac.uk/objects/uuid:87eaa659-177b-4fc6-9372-5ab78223be03/files/rk643b218x"
@@ -117,7 +117,7 @@ boundary_conditions:
     provenance:
       created_by: "extractor"
       created_at: "2026-05-26"
-      source_log_event: "extraction Session 168 parallel — PDF reading pass 1"
+      source_log_event: "extraction [session] parallel — PDF reading pass 1"
   - id: C2
     statement: "AI tools under discussion are generative LLMs (ChatGPT, Bard, GPT-4) as commercially available in 2023-early-2024."
     observable: "All contributors anchor on ChatGPT / GPT-4 / Bard; arXiv prepublication cites through mid-2023."
@@ -125,7 +125,7 @@ boundary_conditions:
     provenance:
       created_by: "extractor"
       created_at: "2026-05-26"
-      source_log_event: "extraction Session 168"
+      source_log_event: "extraction [session]"
   - id: C3
     statement: "Research process is decomposable into phases: ideation, literature review, data collection, analysis, writing, peer review, authorship attribution."
     observable: "Multiple contributors discuss AI's role in named research phases; van den Broek and Pachidi enumerate explicitly."
@@ -133,7 +133,7 @@ boundary_conditions:
     provenance:
       created_by: "extractor"
       created_at: "2026-05-26"
-      source_log_event: "extraction Session 168"
+      source_log_event: "extraction [session]"
 
 # ============================================================================
 # Observations: events / cases / artifacts the paper grounds itself in
@@ -244,7 +244,7 @@ methods:
     provenance:
       created_by: "extractor"
       created_at: "2026-05-26"
-      source_log_event: "extraction Session 168"
+      source_log_event: "extraction [session]"
     body_sections: ["Intro p.5-6; Acknowledgments p.53"]
   - id: M2
     statement: "Contributor-level method: practice-based reflection on personal AI-tool encounters; no shared empirical protocol."
@@ -254,7 +254,7 @@ methods:
     provenance:
       created_by: "extractor"
       created_at: "2026-05-26"
-      source_log_event: "extraction Session 168"
+      source_log_event: "extraction [session]"
 
 # ============================================================================
 # Findings: 'what is the case' claims grounded in observations
@@ -327,7 +327,7 @@ propositions:
     provenance:
       created_by: "extractor"
       created_at: "2026-05-26"
-      source_log_event: "extraction Session 168 — synthesis across essays"
+      source_log_event: "extraction [session] — synthesis across essays"
   - id: K2
     statement: "AI is double-edged: it can serve as collaborator (streamlining research) OR adversary (impoverishing learning, fabricating evidence, biasing outputs). The valence is contingent on use, governance, and researcher skill."
     type: "ontological"
@@ -373,7 +373,7 @@ propositions:
     provenance:
       created_by: "extractor (synthetic synthesis across essays)"
       created_at: "2026-05-26"
-      source_log_event: "extraction Session 168 — most theoretically load-bearing extracted proposition"
+      source_log_event: "extraction [session] — most theoretically central extracted proposition"
   - id: K4
     statement: "Research activities decompose into three agentic modes under AI mediation: research-assistant (simple prompting, citation-and-verification governance), data-analyst (complex prompting/tuning, transparency-and-trustworthiness governance), co-author (generative agents, IRB-level governance)."
     type: "ontological"
@@ -644,7 +644,7 @@ limitations:
     mitigation: "not addressed"
     provenance:
       created_by: "extractor"
-      source_log_event: "extraction Session 168 — affiliation pattern"
+      source_log_event: "extraction [session] — affiliation pattern"
   - id: L4
     statement: "No empirical workflow data; all contributions are reflective essays grounded in personal trials or secondary literature. Cameron-Rahman's 'qualitative researchers' frame is partly autoethnographic."
     affects: [F1, F2, F3, K11]
@@ -652,7 +652,7 @@ limitations:
     mitigation: "Explicit in genre choice (essay, not empirical study)"
     provenance:
       created_by: "extractor"
-      source_log_event: "extraction Session 168"
+      source_log_event: "extraction [session]"
 
 # ============================================================================
 # Negative findings: discoveries of absence
@@ -666,7 +666,7 @@ negative_findings:
     motivates: [K12]
     provenance:
       created_by: "extractor"
-      source_log_event: "extraction Session 168"
+      source_log_event: "extraction [session]"
   - id: NF2
     statement: "The paper does NOT propose a quantitative measurement framework for AI's impact on research output, novelty, or quality."
     expected_observation: "Empirical measurement design (e.g., bibliometric novelty score, replication-rate change, citation-network shift)."
@@ -675,7 +675,7 @@ negative_findings:
     motivates: []
     provenance:
       created_by: "extractor"
-      source_log_event: "extraction Session 168"
+      source_log_event: "extraction [session]"
 
 # ============================================================================
 # Assumption atoms (assumed-without-test premises)
@@ -707,7 +707,7 @@ assumption_atoms:
     affects: [K5, K8, K9]
     provenance:
       created_by: "extractor (synthesized across Mantere-Vaara, Lindebaum, Cameron-Rahman)"
-      source_log_event: "extraction Session 168"
+      source_log_event: "extraction [session]"
 
 # ============================================================================
 # Stylized facts (aggregated patterns)
@@ -720,7 +720,7 @@ stylized_facts:
     body_sections: ["distributed across essays"]
     provenance:
       created_by: "extractor"
-      source_log_event: "extraction Session 168"
+      source_log_event: "extraction [session]"
 
 # ============================================================================
 # External anchors (the paper's reference list)

@@ -13,7 +13,7 @@ latin_tokens_in_prompt_body: ["SMJ"]
 english_structural_framing: []
 native_register: "学术体 (academic register), Simplified Chinese"
 back_translation_path: "phase_3_5d_runs/PROMPT_BACK_TRANSLATION_zh_v1.md"
-ollama_discipline: "Serial-only per feedback_ollama_serial_only.md; num_predict=8000; seed=42; think=false"
+ollama_discipline: "Serial-only per the Ollama serial-only rule; num_predict=8000; seed=42; think=false"
 model_digest: "a50eda8ed977ab48a12431878896b27ffd5cef552c17af3317d9623b939a7f1e"
 quantization: "Q4_K_M"
 ---

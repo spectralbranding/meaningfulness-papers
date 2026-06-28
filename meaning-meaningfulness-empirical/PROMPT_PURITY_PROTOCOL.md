@@ -20,7 +20,7 @@ This protocol specifies the discipline that prevents that contamination at the p
 
 **Non-English prompts must be fully native, not mixed-language.**
 
-This rule was established in the broader research program after the Session 89-90 R15 H10 incident, where mixed-language prompt templates (English structural framing inside what were nominally Russian-language prompts) produced renderings whose contamination signal was confounded with the perceptual signal the experiment was meant to measure.
+This rule was established in the broader research program after an earlier mixed-language prompt incident, where mixed-language prompt templates (English structural framing inside what were nominally Russian-language prompts) produced renderings whose contamination signal was confounded with the perceptual signal the experiment was meant to measure.
 
 The rule extends across every language used in this program: Russian, Chinese, and any future addition.
 
@@ -148,7 +148,7 @@ Paper B `paper.md` §Method §Cross-language extension cites the `prompts/` dire
 https://github.com/spectralbranding/meaningfulness-papers/tree/main/meaning-meaningfulness-empirical/phase_3_5d_runs/prompts
 ```
 
-This satisfies `feedback_transparency_docs_must_be_public.md` HARD RULE: every academically-required transparency artifact cited by name in paper.md is reachable from the public mirror via a working GitHub URL.
+This satisfies `the transparency-docs-must-be-public rule` HARD RULE: every academically-required transparency artifact cited by name in paper.md is reachable from the public mirror via a working GitHub URL.
 
 ### Symmetry across phases
 
@@ -168,7 +168,7 @@ Each phase's `multi_llm_manifest.json` includes a `prompts_publication` field th
 
 ## How this protocol is published
 
-Per `feedback_transparency_docs_must_be_public.md` HARD RULE, this document is included in the public mirror of Paper B (`meaningfulness-papers/meaning-meaningfulness-empirical/PROMPT_PURITY_PROTOCOL.md`) and cited from `paper.md` Methods (§Cross-language extension) by full GitHub URL. Reviewers and replicators can inspect the prompt-purity discipline as part of the experimental record.
+Per `the transparency-docs-must-be-public rule` HARD RULE, this document is included in the public mirror of Paper B (`meaningfulness-papers/meaning-meaningfulness-empirical/PROMPT_PURITY_PROTOCOL.md`) and cited from `paper.md` Methods (§Cross-language extension) by full GitHub URL. Reviewers and replicators can inspect the prompt-purity discipline as part of the experimental record.
 
 Each phase's certification snippet (template above) is recorded in the phase's `*_manifest.json` and is therefore inspectable alongside the rendering and extraction outputs.
 
@@ -192,8 +192,8 @@ This constraint is methodological hygiene, not a methodology claim — it does n
 
 ## Cross-references
 
-- Source rule: `feedback_native_language_prompts.md` (HARD RULE; R15 H10 Session 89-90 incident origin)
-- Cross-operator extraction discipline: `feedback_cross_operator_extraction_separation.md` (HARD RULE; the B ≠ C rule for renderer vs extractor)
-- LLM-call professional logging: `feedback_llm_call_professional_logging.md` (HARD RULE; the JSONL schema all calls land in)
-- Transparency-doc publication: `feedback_transparency_docs_must_be_public.md` (HARD RULE; this document is included per that rule)
+- Source rule: native-language prompt discipline (HARD RULE; established after an earlier mixed-language prompt incident)
+- Cross-operator extraction discipline: `the cross-operator extraction separation rule` (HARD RULE; the B ≠ C rule for renderer vs extractor)
+- LLM-call professional logging: `the LLM-call professional-logging discipline` (HARD RULE; the JSONL schema all calls land in)
+- Transparency-doc publication: `the transparency-docs-must-be-public rule` (HARD RULE; this document is included per that rule)
 - Paper B Methods §Cross-language extension (cites this document by GitHub URL)

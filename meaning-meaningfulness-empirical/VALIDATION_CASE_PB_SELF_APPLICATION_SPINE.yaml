@@ -18,7 +18,7 @@ spine_version: "0.2"
 spine_doc_version: "0.1.0"        # first extraction
 extracted_from: "RENDERING_PB_SUBSTACK_PRACTITIONER.md"
 extraction_protocol: "paper_a:appendix_B_protocol applied in reverse by single coder (author)"
-extraction_session: "Session H Phase 2 — Task α self-application"
+extraction_session: "Phase 2 — Task α self-application"
 extraction_date: "2026-05-27"
 target_for_isomorphism: "SPINE.yaml v0.3.1 (source spine of Paper B v1.0.0)"
 

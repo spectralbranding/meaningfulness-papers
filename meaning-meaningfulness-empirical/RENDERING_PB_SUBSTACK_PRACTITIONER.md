@@ -16,8 +16,8 @@ expected_preservation_set:
   - "boundary conditions where this applies (version-controlled artifacts, propositional content, audience divergence, volume exceeding human review capacity)"
   - "self-application: the Substack article you are reading is itself a worked instance of the framework — same idea, different rendering, conclusions preserved"
 date: 2026-05-27
-session: Session H Phase 2 (Task α self-application — P4 evidence at the Paper-B-own-spine boundary)
-status: research artifact NOT publication candidate; do not post to spectralbranding.substack.com (per Session H init prompt restriction)
+session: Phase 2 (Task α self-application — P4 evidence at the Paper-B-own-spine boundary)
+status: research artifact NOT publication candidate; do not post to spectralbranding.substack.com (per this work init prompt restriction)
 ---
 
 # When two strategy papers say the same thing in different words — and what that tells you about AI in your organization

@@ -1,6 +1,6 @@
 # Ollama Serial-Only Discipline
 
-**HARD RULE — feedback_ollama_serial_only.md**
+**HARD RULE — the Ollama serial-only rule**
 
 **First introduced**: Phase 3.5d 2026-05-28 (Qwen3.6:27b first use)
 **Formalized in L0 cascade**: v1.1.0 2026-05-28
@@ -57,5 +57,5 @@ This rule applies to all current and future Ollama-served models in this researc
 
 ---
 
-*Source rule*: `feedback_ollama_serial_only.md` (HARD RULE; Phase 3.5d 2026-05-28)
+*Source rule*: `the Ollama serial-only rule` (HARD RULE; Phase 3.5d 2026-05-28)
 *Companion document*: `PROMPT_PURITY_PROTOCOL.md` §Local-model serialization constraint

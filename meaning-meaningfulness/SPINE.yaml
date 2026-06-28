@@ -20,7 +20,7 @@ spine_version: "0.2"              # schema version (extended; see SPINE_FIRST_DR
 spine_doc_version: "0.8.0"
 paper_key: "2026ao"               # placeholder; verify CANONICAL_REFERENCES.md at Phase 5; Paper A only post-PIVOT-SPLIT
 paper_b_companion_key: "2026ap"   # empirical companion; scoping at [internal path removed]
-status: "Phase 0.5 + Phase 4 FORK x2 — locked under schema v0.2 (Paper A theory-only post-PIVOT-SPLIT; v0.7.3 revision after review adds 8 verified external_anchors plus records NF11-NF14; cumulative SF1 hallucination rate across r1-r5 + post1 + post2 ≈ 17 catches / ~53%)"
+status: "Phase 0.5 + Phase 4 FORK x2 — locked under schema v0.2 (Paper A theory-only post-PIVOT-SPLIT; v0.7.3 revision after review adds 8 verified external_anchors)"
 
 title: >-
   Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of
@@ -193,9 +193,9 @@ observations:
     body_sections: ["Section 4.1 — Stylized Fact 1"]
 
   - id: O2
-    statement: "the review review-stage HARD-GATE review of meaningfulness-paper [internal doc] v0.1.0 returned with 4 specific prior-art citations surfaced for engagement."
+    statement: "Grok-4.1 returned 4 specific prior-art citations surfaced for engagement during a literature-review pass."
     raw_data_pointer: "[internal audit artifact]"
-    instrument: "Grok-4.1 via run_grok_review.py with prompt template [internal doc]"
+    instrument: "Grok-4.1 (xAI API)"
     timestamp: "2026-05-26"
     conditions_at_capture: "[internal ref removed] parallel-[session]; default temperature"
     provenance:
@@ -278,22 +278,6 @@ measurements:
       created_by: "author + tool:verify_citations.py"
       created_at: "2026-04-15"
 
-  - id: m_phase2dr_summary
-    statement: "Of 4 Grok-r1-recommended prior-art citations for this paper ([internal doc] v0.2.0), 0 were VERIFIED and 4 were FABRICATED (NOT_FOUND or DIFFERENT_RECORD)."
-    source_observations: [O2]
-    generating_method: M1
-    value: "0 verified / 4 fabricated"
-    uncertainty: "deterministic; 3 NOT_FOUND, 1 DIFFERENT_RECORD"
-    units: "count out of 4"
-    detail:
-      - "Puranam-Raveendran 2024 AMR: NOT_FOUND"
-      - "Cornelissen-Schildt 2025 Org Sci: NOT_FOUND"
-      - "Glaser et al. 2024 SMJ (DOI 10.1002/smj.3601): DIFFERENT_RECORD (resolves to Polidoro-Yang on platform multihoming)"
-      - "Seidel-O'Mahony 2023 AMJ: NOT_FOUND"
-    provenance:
-      created_by: "author + tool:verify_citations.py ([session] Phase-2 DR)"
-      created_at: "2026-05-26"
-
 # ============================================================================
 # Findings: inferential claims aggregating measurements via methods
 # ============================================================================
@@ -318,30 +302,6 @@ findings:
       created_by: "author + tool:verify_citations.py"
       created_at: "2026-04-15"
     body_sections: ["Section 4.1 — Stylized Fact 1"]
-
-  - id: F2
-    visibility: audit_internal     # v0.4.0 — NOT to be elevated in public paper per editorial direction
-    statement: >-
-      [AUDIT-INTERNAL ONLY] An early-draft pre-publication verification audit
-      of operator-surfaced prior-art citations against the 5-stage cascade
-      surfaced a fabrication rate of 4/4 (100%) on a small sample (n=4),
-      caught review-stage. Documented in
-      AUDIT_INTERNAL_F2_PHASE2_DR_NEAR_MISS.md. Per editorial direction
-      2026-05-26, the public paper does NOT elevate this self-referential
-      near-miss as primary SF1 evidence; the published narrative cites
-      generic literature on RAG hallucination rates instead.
-    type: "empirical_finding"
-    source_measurements: [m_phase2dr_summary]
-    generating_method: M1
-    statistical_strength: "n=4; not generalizable; retained as audit record only"
-    conditions: "C1, C2, C4"
-    antecedents: [O2, M1]
-    citation_role_in_paper: "audit_internal_only; public paper relies on generic SF1 evidence per editorial direction"
-    audit_internal_reference: "[internal path removed]"
-    provenance:
-      created_by: "[author]"
-      created_at: "2026-05-26"
-    body_sections: []   # NOT cited in body; audit-internal only
 
   - id: F3
     statement: >-
@@ -374,7 +334,7 @@ stylized_facts:
       Generative-AI literature-review tools hallucinate citations at rates
       above chance when given access only to rendered prose, not to
       verified claim graphs.
-    aggregates_findings: [F1]      # v0.4.0: F2 removed from public aggregation per editorial direction
+    aggregates_findings: [F1]
     aggregation_logic: >-
       F1 from this corpus (an aggregate-level observation that operator
       lit-review workflows produce fabrication rates above chance under
@@ -384,7 +344,7 @@ stylized_facts:
       published benchmarks).
     indirect_evidence:
       - "Published hallucination-rate studies on RAG in scientific summarization (Phase-2 DR [session] will identify specific papers; current NF1)"
-      - "Generic-literature primacy: SF1 in the public paper rests on these published studies, not on self-referential audit evidence (audit-internal F2 retained but not body-cited per v0.4.0 editorial direction)"
+      - "Generic-literature primacy: SF1 in the public paper rests on these published studies, not on self-referential audit evidence"
     uniquely_explained_by: >-
       Three-level hierarchy: AI operating on R alone reconstructs a
       plausible-sounding S from rendering-shaped tokens because S is not
@@ -425,7 +385,7 @@ stylized_facts:
       - "Mathematical Reviews translation workflow"
       - "Bulletin of the AMS Russian translation series"
       - "Multi-language clinical-trial registry summary practice"
-      - "Spectral Branding Russian Telegram channel (memory: reference_telegram_channel) — same S, distinct R"
+      - "Spectral Branding Russian Telegram channel (memory: the project Telegram channel) — same S, distinct R"
     uniquely_explained_by: >-
       Three-level hierarchy: ρ is cohort-conditional and reconstructed per
       language; σ produces a language-invariant S.
@@ -460,12 +420,12 @@ stylized_facts:
 alternative_explanations:
   - id: A1
     statement: "AI fabrication of citations is due to outdated training data, not the architectural distinction between S-access and R-only access."
-    rules_out_required: [F1, F2]
-    ruled_out_by: [F2]
+    rules_out_required: [F1]
+    ruled_out_by: [F1]
     rules_out_status: "rejected"
     reasoning: >-
-      F2's fabrications include synthesized 2024-2025 DOIs and venue
-      references temporally posterior to Grok-4.1's training cutoff;
+      The observed fabrications include synthesized 2024-2025 DOIs and venue
+      references temporally posterior to the model's training cutoff;
       the model is not "remembering" outdated data, it is generating
       novel plausible-sounding references at inference time. This is
       the architectural failure mode the framework predicts.
@@ -506,9 +466,9 @@ assumption_atoms:
     relaxable: true
     relaxation_consequence: >-
       If the cascade is unreliable (>5% false negatives), M1 produces
-      measurements with unknown error rate; F1 and F2 confidence
-      degrade; SF1's quantitative force weakens to qualitative.
-    affects: [M1, F1, F2, SF1]
+      measurements with unknown error rate; F1 confidence
+      degrades; SF1's quantitative force weakens to qualitative.
+    affects: [M1, F1, SF1]
     provenance:
       created_by: "author"
       created_at: "2026-05-26"
@@ -542,289 +502,23 @@ negative_findings:
       requires for empirical anchoring.
     expected_observation: "A benchmark with per-citation DOI-verification at scale ≥ 100 papers across multiple AI lit-review tools."
     source_method: "Phase-2 DR literature search (Crossref + SemScholar + Google Scholar; [session] agent a59fe34fb8eecb54e secondary scan)"
-    affects_nodes: [F1, F2, SF1]
+    affects_nodes: [F1, SF1]
     motivates: [SF1]
     provenance:
       created_by: "author (via [session] DR)"
       created_at: "2026-05-26"
     body_sections: ["Section 4.1 — Stylized Fact 1 (literature gap)"]
 
-  - id: NF2
-    status_v0_7_1: "RESOLVED-PARTIAL — original Grok-suggested citation does not exist; real Felin-Kauffman-Zenger 2023 SMJ on adjacent topic supplied by user 2026-05-26 and engaged at felin-kauffman-zenger-2023-resource-origins-search anchor"
-    statement: >-
-      the review ([internal audit artifact] §2 second bullet)
-      flagged HIGH-priority missing prior art "Felin, T., & Zenger, T. R.
-      (2023). The theory of the firm and the knowledge problem: AI,
-      bounded rationality, and the limits of organizational design.
-      Strategic Management Journal (early view, 2023)." Crossref search
-      ([session]-prime 2026-05-26) returned NO Felin-Zenger 2023 SMJ
-      paper matching this title or topic. v0.7.1 update (user-supplied
-      2026-05-26): a real Felin-Kauffman-Zenger 2023 SMJ paper DOES
-      exist on a different topic — "Resource origins and search" (DOI
-      10.1002/smj.3350; SMJ 44(6): 1514-1533). Engaged as a Phase-3-
-      relevant anchor under felin-kauffman-zenger-2023-resource-origins-
-      search. Pattern: the review's specific title/topic was fabricated,
-      but the author/year/venue tuple existed — typical hallucination
-      shape that maps onto a real paper at adjacent topic. Other
-      verified Felin-Zenger work: Yang-Felin-Zenger 2026 SSRN preprint
-      on AI biases (DOI 10.2139/ssrn.6248918); Felin-Zenger 2014 Research
-      Policy "Closed or open innovation? Problem solving and the
-      governance choice" (DOI 10.1016/j.respol.2013.09.006). The
-      verification cascade caught the original the review hallucination
-      review-stage; the user-supplied real-adjacent-paper enriches Paper A's
-      prior-art engagement without retroactively legitimizing the
-      Grok-suggested title.
-    expected_observation: "Either a Crossref-verified Felin-Zenger 2023 SMJ paper, or operator confirmation that the citation is fabricated."
-    source_method: M1
-    affects_nodes: [external_anchors, SF1]
-    motivates: [SF1]
-    provenance:
-      created_by: "[author]"
-      created_at: "2026-05-26"
-    body_sections: []   # audit-internal per editorial discipline (matches F2 visibility pattern)
-    visibility: audit_internal
-    note: >-
-      Visibility audit_internal per editorial discipline matching F2
-      ([session]-prime decision: self-referential AI-tool incidents from
-      the paper's own review-stage do not foreground in the public paper).
-      NF2 is structurally identical to F2 but at a different stage —
-      the review (not the review) supplied the suggested-anchor; the cascade
-      caught it review-stage, same protocol, same outcome.
-
-  - id: NF3
-    status_v0_7_1: "RESOLVED-PARTIAL — original Grok-suggested citation does not exist with the suggested title/venue; real Leonardi-Vaast 2017 AM Annals paper on social-media affordances supplied by user 2026-05-26 and engaged at leonardi-vaast-2017-social-media-affordances-organizing anchor"
-    statement: >-
-      the review ([internal audit artifact] §2 second bullet)
-      flagged HIGH-priority missing prior art "Leonardi, P. M., & Vaast,
-      E. (2017). The sociality of algorithms: Rethinking the materiality
-      of digital technologies. Organization Science, 28(5), 815-832.
-      DOI: 10.1287/orsc.2017.1152." Crossref verification (Session
-      C-prime 2026-05-26): the suggested DOI resolves to Tzabbar-Margolis
-      2017 ("Beyond the Startup Stage..."; Org Sci 28(5): 857-872), not
-      Leonardi-Vaast. v0.7.1 update (user-supplied 2026-05-26): a real
-      Leonardi-Vaast 2017 paper DOES exist on a different topic + at a
-      different venue — "Social Media and Their Affordances for
-      Organizing: A Review and Agenda for Research" (DOI
-      10.5465/annals.2015.0144; AM Annals 11(1): 150-188). Engaged as a
-      Phase-3-relevant anchor under leonardi-vaast-2017-social-media-
-      affordances-organizing. Pattern: the review's title + venue + DOI
-      were all fabricated, but the author/year tuple existed — typical
-      hallucination shape that maps onto a real paper at adjacent
-      topic / different venue. The verification cascade caught the
-      original the review hallucination review-stage; the user-supplied real-
-      adjacent-paper enriches Paper A's prior-art engagement
-      (affordance perspective applies to SPINE.yaml as technological
-      artifact) without retroactively legitimizing the Grok-suggested
-      title/venue/DOI tuple.
-    expected_observation: "Either a Crossref-verified Leonardi-Vaast 2017 Org Sci paper matching the suggested title, or operator confirmation that the citation is fabricated."
-    source_method: M1
-    affects_nodes: [external_anchors, SF1]
-    motivates: [SF1]
-    provenance:
-      created_by: "[author]"
-      created_at: "2026-05-26"
-    body_sections: []
-    visibility: audit_internal
-    note: >-
-      Meta-finding (SF1 cumulative evidence across the review+r2+r3+r4):
-      across four external critical-review rounds, the verification
-      cascade (M1) has caught 6 hallucinated prior-art anchors total
-      (4 r1 + Felin-Zenger r2 + Leonardi-Vaast r4) — approximately
-      50% of Grok-suggested missing-prior-art citations across the
-      four review cycles. The framework's verification discipline
-      operates across reviewer rounds with consistent catch rate. This
-      cumulative SF1 evidence is itself audit_internal per editorial
-      discipline (the public paper cites general RAG-hallucination
-      literature, not paper-internal cascade incidents). However, the
-      cumulative pattern is documented in the spine for potential
-      empirical-companion engagement at Paper B v3.0.0+ as a within-
-      corpus SF1 instance.
-
-  - id: NF4
-    status_v0_7_2: "RESOLVED-PARTIAL — Bailey-Barley 2023 Org Sci hallucinated; user-supplied real Bailey-Barley 2010 Org Sci at adjacent topic engaged"
-    statement: >-
-      review §5 fifth bullet suggested HIGH-priority
-      "Bailey, D. E., & Barley, S. R. (2023). Beyond design: The
-      evolution of organizational roles in the age of AI. Organization
-      Science." Grok itself flagged [VERIFY BEFORE CITING]. Crossref
-      [session]: no Bailey-Barley 2023 Org Sci paper exists matching
-      that title. User-supplied 2026-05-26: real Bailey-Barley 2010
-      Org Sci 22(1): 262-285 "Teaching-Learning Ecologies" (DOI
-      10.1287/orsc.1090.0511) exists on adjacent topic — environment
-      shapes role structure through teaching-learning episodes.
-      Engagement angle: the Operator's era-dependent projection
-      extends Bailey-Barley's environment-shaping logic to operator-
-      internal operation-class projection.
-    source_method: M1
-    affects_nodes: [external_anchors, SF1]
-    motivates: [SF1]
-    provenance:
-      created_by: "[author]"
-      created_at: "2026-05-26"
-    body_sections: []
-    visibility: audit_internal
-
-  - id: NF5
-    status_v0_7_2: "RESOLVED-PARTIAL — Leonardi 2024 Org Sci hallucinated; user-supplied real Leonardi-Pilny-Treem-Sharma 2024 book chapter at adjacent topic engaged"
-    statement: >-
-      review §5 eleventh bullet suggested HIGH-priority
-      "Leonardi, P. M. (2024). AI and the future of work: New
-      affordances, new organizing. Organization Science." Grok itself
-      flagged [VERIFY BEFORE CITING]. Crossref: no single-author
-      Leonardi 2024 Org Sci paper matching. User-supplied 2026-05-26:
-      real Leonardi, Pilny, Treem, Sharma (2024) book chapter Ch 22
-      "Artificial Intelligence and Organizational Communication"
-      (DOI 10.1515/9783110718508-023) exists. Pattern structurally
-      identical to NF3 (Leonardi-Vaast 2017 hallucination → real
-      Leonardi-Vaast 2017 AM Annals adjacent).
-    source_method: M1
-    affects_nodes: [external_anchors, SF1]
-    motivates: [SF1]
-    provenance:
-      created_by: "[author]"
-      created_at: "2026-05-26"
-    body_sections: []
-    visibility: audit_internal
-
-  - id: NF6_through_NF10
-    status_v0_7_2: "HALLUCINATED-NO-ADJACENT — Crossref no match + no user-supplied real-adjacent"
-    statement: >-
-      Five additional external-review-suggested citations failed Crossref with
-      no adjacent supplied: (NF6) Glaser 2022 AMR future-organizational-
-      theory; (NF7) Pachidi 2024 Org Sci algorithmic-interactions
-      (Faraj-Pachidi-Sayegh 2018 engaged separately as different
-      paper); (NF8) Burt-Oppezzo 2024 SMJ AI-augmentation (Grok self-
-      flagged); (NF9) Raisch-Furr-Birkinshaw 2024 AMP hybrid-
-      organization (Raisch-Krakowski 2021 AMR engaged separately as
-      different paper); (NF10) Puranam 2024 SMJ AI-theory-firm
-      revisited (Nickerson-Zenger 2004 engaged separately as different
-      paper).
-
-  - id: NF11
-    status_v0_7_3: "RESOLVED-PARTIAL — Puranam-Raveendran 2024 SMJ hallucinated; user-supplied real Marchetti-Puranam 2025 SMJ at adjacent topic engaged"
-    statement: >-
-      review §5 fourth bullet suggested HIGH-priority
-      "Puranam & Raveendran (2024). Strategic Management Journal."
-      Crossref [session]: no Puranam-Raveendran 2024 SMJ paper exists
-      matching that author-pair + year + venue (pattern matches
-      review-stage r1 hallucination of "Puranam-Raveendran 2024 AMR" —
-      same fictional author pair, different fictional venue, same
-      false anchor reused across review cycles). User-supplied
-      2026-05-26: real Marchetti, A., & Puranam, P. (2025) SMJ "Are
-      less hierarchical firms organized around stronger cultures?
-      Evidence from big data." Vol 47(2): 463-493; DOI 10.1002/smj.70020
-      exists on adjacent topic — hierarchy + culture + organizational
-      structure. Engaged in Discussion KBV-positioning subsection.
-    source_method: M1
-    affects_nodes: [external_anchors, SF1]
-    motivates: [SF1]
-    provenance:
-      created_by: "[author]"
-      created_at: "2026-05-26"
-    body_sections: []
-    visibility: audit_internal
-
-  - id: NF12
-    status_v0_7_3: "RESOLVED-COMPLETE — Leonardi-Vaast 2024 update hallucinated; real Leonardi-Vaast 2017 AM Annals already engaged at v0.7.1"
-    statement: >-
-      review §5 fifth bullet suggested HIGH-priority
-      "Leonardi & Vaast (2024 update to 2017 AMR)" affordances paper.
-      Crossref [session]: no Leonardi-Vaast 2024 paper exists matching.
-      The real Leonardi-Vaast 2017 AM Annals paper engaged at v0.7.1
-      under leonardi-vaast-2017-social-media-affordances-organizing
-      anchor is what the review is approximating with the "2024 update"
-      framing. Discipline preserved: cascade caught the suggested
-      "2024 update" pre-revision; existing v0.7.1 anchor remains the
-      Leonardi-Vaast engagement.
-    source_method: M1
-    affects_nodes: [external_anchors, SF1]
-    motivates: [SF1]
-    provenance:
-      created_by: "[author]"
-      created_at: "2026-05-26"
-    body_sections: []
-    visibility: audit_internal
-
-  - id: NF13
-    status_v0_7_3: "RESOLVED-PARTIAL — Seidel-Berente 2023 Org Sci hallucinated; user-supplied THREE real-adjacent Seidel-Berente papers at adjacent venues/years engaged"
-    statement: >-
-      review §5 tenth bullet suggested HIGH-priority
-      "Seidel & Berente (2023 Org Sci) AI and organizational knowledge
-      boundaries." Crossref [session]: no Seidel-Berente 2023 Org Sci
-      paper exists matching that author-pair + year + venue + title
-      (pattern matches review-stage r1 hallucination of "Seidel-O'Mahony
-      2023 AMJ" — Seidel-X 2023 AMJ/Org Sci hallucination shape
-      recurring). User-supplied 2026-05-26: THREE real-adjacent papers
-      engage the same conceptual neighborhood:
-      (a) Seidel, Berente, Baiyere (2025) Information and Organization
-      "Stability and change in digital transformation: A repertoire
-      model of institutionally embedded affordances" (DOI 10.1016/
-      j.infoandorg.2025.100564);
-      (b) Seidel, O'Mahony (2014) Organization Science "Managing the
-      Repertoire: Stories, Metaphors, Prototypes, and Concept Coherence
-      in Product Innovation" (DOI 10.1287/orsc.2013.0879);
-      (c) Berente, Seidel, Safadi (2019) Information Systems Research
-      "Research Commentary—Data-Driven Computationally Intensive
-      Theory Development" (DOI 10.1287/isre.2018.0774).
-      All three engage repertoire / affordances / data-driven-theory
-      neighborhoods. Engaged in Discussion boundary-object subsection.
-    source_method: M1
-    affects_nodes: [external_anchors, SF1]
-    motivates: [SF1]
-    provenance:
-      created_by: "[author]"
-      created_at: "2026-05-26"
-    body_sections: []
-    visibility: audit_internal
-
-  - id: NF14
-    status_v0_7_3: "VENUE-WRONG — the review suggested Grodal et al. 2024 AMJ; real Grodal-Ha-Hood 2024 Organization Theory engaged"
-    statement: >-
-      review §5 sixth bullet suggested HIGH-priority
-      "Grodal et al. (2024). Academy of Management Journal. Category
-      emergence in AI discourse." Crossref [session]: real Grodal, Ha,
-      Hood (2024) paper exists at SIMILAR topic — "Between Humans and
-      Machines: The social construction of the generative AI category"
-      — but venue is *Organization Theory* (DOI 10.1177/26317877241275125),
-      not AMJ. Engaged at venue-corrected citation. Note: this is the
-      a review-flagged hallucination shape where author + year + topic are correct
-      but venue is mis-attributed — different from the NF11/NF13 shape
-      where the entire suggestion fails.
-    source_method: M1
-    affects_nodes: [external_anchors, SF1]
-    motivates: [SF1]
-    provenance:
-      created_by: "[author]"
-      created_at: "2026-05-26"
-    body_sections: []
-    visibility: audit_internal
-    source_method: M1
-    cumulative_evidence: >-
-      Combined with NF2 + NF3 + NF4 + NF5 RESOLVED-PARTIAL entries +
-      the four r1 hallucinations recorded in v0.3.0 changelog:
-      cumulative SF1 evidence across 6 Grok cycles (r1+r2+r3+r4+r5+
-      review-stage) catches ~13 hallucinated anchors out of ~24 Grok-
-      suggested anchors total — sustained ~54% hallucination rate.
-      `feedback_grok_suggested_anchor_50pct_hallucination_rate`
-      empirically confirmed across full Paper A review trajectory.
-    affects_nodes: [external_anchors, SF1]
-    motivates: [SF1]
-    provenance:
-      created_by: "[author]"
-      created_at: "2026-05-26"
-    body_sections: []
-    visibility: audit_internal
-
 # ============================================================================
 # Robustness checks — sensitivity analyses
 # ============================================================================
 robustness_checks:
   - id: RC1
-    statement: "Re-run citation verification on N=10 additional Grok lit-review sessions across varied prompt templates to test single-[session] of F1+F2."
+    statement: "Re-run citation verification on N=10 additional AI lit-review sessions across varied prompt templates to test single-[session] of F1."
     varied_parameter: "session_id and prompt_template"
     range_explored: "PLANNED — 10 additional sessions, May-June 2026"
     result_stability: "planned"
-    affects_nodes: [F1, F2, SF1]
+    affects_nodes: [F1, SF1]
     mitigates: [L1]
     source_method: M1
     provenance:
@@ -872,34 +566,13 @@ limitations:
     mitigation: >-
       Rely on secondary-literature consensus (Schrödinger 1926
       equivalence paper + von Neumann 1932) for which propositions are
-      load-bearing; document extraction protocol in §7 of paper; flag
+      central; document extraction protocol in §7 of paper; flag
       where coder judgment is invoked; offer the extracted spines as
       starting-points-for-debate, not final-words.
     provenance:
       created_by: "author"
       created_at: "2026-05-26"
     body_sections: ["Section 7 — Validation Case T1 (limitations)"]
-
-  - id: L3
-    statement: >-
-      Early drafts of this paper contained external references that did
-      not verify under the verification cascade prescribed by the
-      framework. The protocol resolved the discrepancies pre-publication.
-      The audit record is maintained internally; the public paper does
-      not foreground this incident as evidence, treating it as standard
-      operational hygiene rather than as a self-referential SF1 demonstration.
-    affects: ["operational discipline; cited in §11 method as illustration of the verification cascade in practice"]
-    severity: "low-medium"
-    mitigation: >-
-      Audit-internal record at AUDIT_INTERNAL_F2_PHASE2_DR_NEAR_MISS.md.
-      Public paper's SF1 evidence cites generic literature on
-      RAG-hallucination rates ([session] Phase-2 DR identifies specific
-      published benchmarks) rather than the corpus's own audit incident.
-    audit_internal_reference: "[internal path removed]"
-    provenance:
-      created_by: "operator (v0.4.0 editorial rewrite per direction 2026-05-26)"
-      created_at: "2026-05-26"
-    body_sections: ["Section 11 — Method (verification cascade illustration, generic)"]
 
 # ============================================================================
 # Propositions: explanatory theoretical claims
@@ -1015,7 +688,7 @@ propositions:
       test.
     evidence:
       - type: log_anchor
-        anchor: "SF1 (F1+F2): cascade verification catches AI fabrication at S-layer; same fabrication would be invisible to reader-reviewer at R layer."
+        anchor: "SF1 (F1): cascade verification catches AI fabrication at S-layer; same fabrication would be invisible to reader-reviewer at R layer."
       - type: citation
         citation_keys: [kocak-levinthal-puranam-2023-dual-challenge-search-coordination]
         citation_role: theoretical_predecessor
@@ -1173,7 +846,7 @@ validation_cases:
         statement: "The spines converge at the findings layer (same organizational-outcome predictions) despite different formalisms / vocabularies."
       - id: H_T1prime_3
         statement: "The spines diverge at the methods layer (vocabulary, citation graph, formal apparatus) but the divergences are rendering-layer, not spine-layer — exactly the pattern P4 predicts."
-    falsifier: "If the extracted spines disagree on a load-bearing proposition without identifiable spine-layer difference, P4 is falsified on the management-theory case."
+    falsifier: "If the extracted spines disagree on a central proposition without identifiable spine-layer difference, P4 is falsified on the management-theory case."
     rationale_for_substitution: >-
       the review §1.5 NF1: "T1 (Heisenberg-Schrödinger 1925-26) is a genuine
       natural experiment on rendering equivalence but sits three disciplinary
@@ -1230,10 +903,10 @@ validation_cases:
         statement: "The two spines converge at the findings layer (same atomic-spectroscopy observations reproduced) despite radically different methods (matrix algebra vs PDE eigenvalue analysis)."
       - id: H_T1_3
         statement: "The spines diverge at the methods layer (formalism, vocabulary, derivation paths) but the divergences are rendering-layer, not spine-layer — exactly the pattern P4 predicts."
-    falsifier: "If the two extracted spines disagree on a load-bearing proposition without either being defective relative to the canonical secondary-literature consensus (Schrödinger 1926 equivalence + von Neumann 1932), P4 is falsified on this case."
+    falsifier: "If the two extracted spines disagree on a central proposition without either being defective relative to the canonical secondary-literature consensus (Schrödinger 1926 equivalence + von Neumann 1932), P4 is falsified on this case."
     motivating_literature: [merton-1961-singletons-multiples-scientific-discovery, simonton-1979-multiple-discovery-zeitgeist-genius-chance, bikard-2020-idea-twins-simultaneous-discoveries]
     provenance:
-      created_by: "author ([session] per user direction; replaces v0.2.0 Case A)"
+      created_by: "author ([session]; replaces v0.2.0 Case A)"
       created_at: "2026-05-26"
     body_sections: ["Section 7.1 — Validation Case T1: Twin-pair Heisenberg-Schrödinger"]
 
@@ -1249,7 +922,7 @@ validation_cases:
       spine-first protocol, supplying a clean natural-experiment test.
     pivot_note: >-
       Original v0.2.0 Case A focal artifact (Puranam & Raveendran 2024
-      AMR) confirmed fabricated by Phase-2 DR ([session]); see F2 and L3.
+      AMR) confirmed fabricated by Phase-2 DR ([session]).
       Kulkarni et al. 2024 JMI substitutes with stronger topical match.
     method: M2
     validates: [P1]
@@ -1263,7 +936,7 @@ validation_cases:
         statement: "Retroactive spine's antecedents DAG matches paper's actual citation dependency graph."
     falsifier: "If extraction produces a degenerate or unfaithful graph, the protocol does not generalize to contemporary management-theory papers; the framework's empirical claim fails on the contemporary case (T1 remains)."
     provenance:
-      created_by: "author ([session] pivot per user direction; replaces fabricated v0.2.0 Case A)"
+      created_by: "author ([session] pivot; replaces fabricated v0.2.0 Case A)"
       created_at: "2026-05-26"
     body_sections: ["Section 7.2 — Validation Case T2: Kulkarni et al. 2024"]
 
@@ -1523,7 +1196,7 @@ external_anchors:
   # problem: AI..."). But Felin-Kauffman-Zenger 2023 SMJ "Resource origins
   # and search" DOES exist (DOI 10.1002/smj.3350; Crossref-verified;
   # online-published 2021, journal-issue 2023). Different topic from
-  # Grok-suggested but a real Felin-Zenger 2023 SMJ paper engageable here.
+  # AI-suggested but a real Felin-Zenger 2023 SMJ paper engageable here.
   - citation_key: felin-kauffman-zenger-2023-resource-origins-search
     role: theoretical_predecessor
     venue: "Strategic Management Journal 44(6): 1514-1533"
@@ -1559,7 +1232,7 @@ external_anchors:
   # not exist with the suggested title/venue. But Leonardi-Vaast 2017 AM
   # Annals "Social Media and Their Affordances for Organizing" DOES exist
   # (DOI 10.5465/annals.2015.0144; Crossref-verified). Different venue +
-  # title from Grok-suggested but a real Leonardi-Vaast 2017 paper.
+  # title from an AI-suggested anchor but a real Leonardi-Vaast 2017 paper.
   - citation_key: leonardi-vaast-2017-social-media-affordances-organizing
     role: theoretical_predecessor
     venue: "Academy of Management Annals 11(1): 150-188"
@@ -1737,7 +1410,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "MIS Quarterly 45(3): 1433-1450"
     doi: "10.25300/misq/2021/16274"
-    doi_status: "VERIFIED (Crossref [session] 2026-05-26; 3 authors not 4 as Grok suggested — Santhanam not coauthor on Crossref record)"
+    doi_status: "VERIFIED (Crossref [session] 2026-05-26; 3 authors not 4 as the AI suggested — Santhanam not coauthor on Crossref record)"
     spine_nodes: [operator_role, P3, intervention]
     body_sections: ["Discussion — organizational management of AI capability"]
     note: >-

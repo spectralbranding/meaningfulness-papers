@@ -2,7 +2,7 @@
 # Second twin pair partner (KBV neighborhood); v1.1.0 addition.
 
 extraction_version: "1.1.0"
-extraction_session: "Session E continuation post-Path-A"
+extraction_session: "a later extraction pass"
 extraction_date: "2026-05-27"
 schema_version: "0.2"
 

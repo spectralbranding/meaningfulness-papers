@@ -1,7 +1,7 @@
 ---
 title: "Phase 3.5a Russian human-native rendering — protocol + AI-draft starter + user QC handoff"
 date: 2026-05-27
-session: Session H Phase 3.5a (NEW required per user mid-session addendum)
+session: Phase 3.5a (NEW required per user mid-session addendum)
 covers_stylized_fact: "SF3 — cross-language collaboration preserving meaning while losing meaningfulness (Paper A 2026ao §SF3)"
 status: "AI-drafted starter provided; AWAITS user human-native Russian-language pass before re-extraction and isomorphism computation"
 human_native_required: true
@@ -13,7 +13,7 @@ human_native_required: true
 
 Paper A 2026ao's SF3 states that "ρ is cohort-conditional and reconstructed per language; σ produces a language-invariant S." The framework's strongest single test of SF3 is to produce a Russian-language rendering of the paper's substrate by a Russian-native operator and verify whether the re-extracted spine preserves the locked propositions of the source.
 
-User direction (Session H addendum): "Phase 3.5a (NEW required) — Task γ Russian human-native rendering." The "human-native" qualifier means the Russian rendering should be produced by a native Russian speaker (user) rather than by an LLM operating in Russian. (Phase 3.5b is the separate stretch task that tests cross-LLM Russian-operator robustness; the two phases are distinct.)
+User direction (a mid-work addendum): "Phase 3.5a (NEW required) — Task γ Russian human-native rendering." The "human-native" qualifier means the Russian rendering should be produced by a native Russian speaker (user) rather than by an LLM operating in Russian. (Phase 3.5b is the separate stretch task that tests cross-LLM Russian-operator robustness; the two phases are distinct.)
 
 ## Source-text selection (recommended)
 
@@ -89,11 +89,11 @@ Below is a Claude-Opus-produced Russian rendering of paper.md v1.0.0 §Abstract.
 - **70-90% strict preservation, ≥ 95% semantic preservation**: SF3 holds with rendering-cost-frontier observations specific to Russian (analogous to Phase 2 / Phase 2.5 findings).
 - **< 70% strict / < 95% semantic preservation**: SF3 weakens at this rendering boundary; trigger schema-refinement or honest disclosure that cross-language preservation requires register-specific operator discipline beyond what a single-pass rendering supplies.
 
-## Why Session H stops here without computing the isomorphism
+## Why this phase stops here without computing the isomorphism
 
-Per Session H init prompt's design ("If only ONE task lands: do α") and the human-native requirement, computing an isomorphism on an AI-drafted Russian rendering would be lower-quality SF3 evidence than the human-native pass produces. The AI-draft is offered as Russian-rendering accelerant for user QC; the isomorphism computation waits for the human-native text.
+Per this work init prompt's design ("If only ONE task lands: do α") and the human-native requirement, computing an isomorphism on an AI-drafted Russian rendering would be lower-quality SF3 evidence than the human-native pass produces. The AI-draft is offered as Russian-rendering accelerant for user QC; the isomorphism computation waits for the human-native text.
 
-Session H closes Phase 3.5a at:
+this phase closes Phase 3.5a at:
 - **Protocol documented** (this file)
 - **AI-draft starter provided** (above; Claude Opus 4.7 produced; flagged as not-human-native)
 - **User QC handoff** (user produces / edits / replaces / approves the final Russian rendering; user controls when re-extraction runs)
@@ -104,4 +104,4 @@ The Phase 3.5a status (protocol locked + AI-draft + awaiting human-native pass) 
 
 ---
 
-*Phase 3.5a closes with Russian-rendering protocol locked + AI-draft starter + user-QC handoff. Cross-language preservation evidence lands at v1.1.0 with the human-native pass. Phase 3.5b (multi-LLM Russian-operator robustness) is a separate Session H scope item; see PHASE3_5B_MULTI_LLM_OPERATOR_PROTOCOL.md.*
+*Phase 3.5a closes with Russian-rendering protocol locked + AI-draft starter + user-QC handoff. Cross-language preservation evidence lands at v1.1.0 with the human-native pass. Phase 3.5b (multi-LLM Russian-operator robustness) is a separate scope item; see PHASE3_5B_MULTI_LLM_OPERATOR_PROTOCOL.md.*

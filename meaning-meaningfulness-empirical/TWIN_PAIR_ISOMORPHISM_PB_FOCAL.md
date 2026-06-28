@@ -2,7 +2,7 @@
 title: "Twin-Pair Isomorphism Analysis — Focal Pair (Eisenhardt-Martin 2000 + Zollo-Winter 2002)"
 author: Dmitry Zharnikov
 version: v1.0.0
-session: Session E Phase 2
+session: Phase 2
 date: 2026-05-27
 schema: paper_a:appendix_A_schema (typed-DAG; 10 node types; 17 edge types)
 spine_extractions:
@@ -88,9 +88,9 @@ Paper A's P4 was illustrated at appendix-D depth on the Heisenberg-Schrödinger 
 - Existence proof for P2 at v1.0.0 N=1 focal pair: **HOLDS**.
 - Secondary-pair 20-year-gap sensitivity check on P4 robustness: **DEFERRED to v1.1.0** (Tushman-O'Reilly 1996 spine released standalone; partner extraction + isomorphism deferred).
 
-## 8. Third-rendering preservation analysis (Session H Phase 3 Task β)
+## 8. Third-rendering preservation analysis (Phase 3 Task β)
 
-Task β per SESSION_F_COMPLETION_2026-05-27.md spec and Session H init prompt: render the focal-pair shared substrate (L1-L4 above) into a third independent prose form, re-extract the spine from the third rendering, and compute Rec(G_third, G_shared_spine). Success criterion: ≥ 4 substrate items preserved (i.e., the full L1-L4 substrate persists across the third rendering). Falsifier: < 3 preserved (substrate degrades on re-rendering; P4 weakens at the focal-pair-substrate boundary).
+Task β per SESSION_F_COMPLETION_2026-05-27.md spec and this work init prompt: render the focal-pair shared substrate (L1-L4 above) into a third independent prose form, re-extract the spine from the third rendering, and compute Rec(G_third, G_shared_spine). Success criterion: ≥ 4 substrate items preserved (i.e., the full L1-L4 substrate persists across the third rendering). Falsifier: < 3 preserved (substrate degrades on re-rendering; P4 weakens at the focal-pair-substrate boundary).
 
 **Third rendering**: `RENDERING_FOCAL_PAIR_THIRD_PROSE.md` — 1,044-word LinkedIn long-post in practitioner register, arrow-bullet structure for the L1-L4 substrate, named antecedents in plain text, no equations. Medium selected by user from three options (textbook synthesis / LinkedIn / review abstract); LinkedIn chosen to cover a SECOND practitioner register distinct from the Phase 2 Substack rendering (LinkedIn = professional-network register; Substack = consumer-essay register).
 

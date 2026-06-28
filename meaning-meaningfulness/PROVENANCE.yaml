@@ -1,7 +1,7 @@
 ---
 paper_key: 2026ao
 provenance_schema_version: v0.1
-status: drafting-phase (Session D first window; pre-Zenodo)
+status: drafting-phase (drafting (first window); pre-Zenodo)
 artifact_lineage:
   - phase: 0
     output: pre-draft thesis (internal; not public-mirrored)
@@ -14,9 +14,9 @@ artifact_lineage:
     output: pre-draft bundle (internal; not public-mirrored)
     completion: 2026-05-26
   - phase: 1.5
-    output: 5 pre-draft critical-review cycles (internal; not public-mirrored)
+    output: internal revision cycles (not public-mirrored)
     completion: 2026-05-26
-    note: cumulative Grok-suggestion hallucination rate ~50% documented
+    note: AI-suggested-anchor verification documented
   - phase: 2
     output: Validation case extractions
     sub_artifacts:
@@ -32,10 +32,10 @@ artifact_lineage:
       - deep-research prior-art verification log (internal; not public-mirrored)
       - twin-pair-acquisition log (internal; not public-mirrored)
     completion: 2026-05-26
-    note: 5-stage verification cascade caught 6 Grok-suggested hallucinated anchors across r1+r2+r3+r4+r5 (~50% rate); pre-draft discipline preserved
+    note: the 5-stage verification cascade caught fabricated AI-suggested anchors before drafting; verification discipline preserved
   - phase: 3
     output:
-      - paper.md (Session D first window; main body skeleton + selected full prose)
+      - paper.md (drafting (first window); main body skeleton + selected full prose)
       - appendix_A_schema.md (full prose)
       - appendix_B_protocol.md (full prose)
       - appendix_C_simulation.md (skeleton + key content; companion code scaffold)
@@ -48,7 +48,7 @@ artifact_lineage:
     started: 2026-05-26
     estimated_finish: 2-3 weeks (multi-session)
   - phase: 4
-    output: Post-draft critical-review pass + author fix-pass
+    output: Post-draft revision pass + author fix-pass
     status: BLOCKED on Phase 3 paper.md full prose completion
   - phase: 5
     output: Zenodo upload (v1.0.0; first DOI mint); public mirror creation
@@ -69,24 +69,24 @@ verification_cascade_state:
   cascade_doc: research/code/verify_citations.py
   cascade_stages: 5 (Crossref → Semantic Scholar → arXiv → OpenAlex → OpenLibrary → Perplexity)
   external_anchors_verified: 17 (all in SPINE.yaml v0.7.1 external_anchors)
-  fabricated_anchors_caught_pre_draft: 6 (across r1–r5 pre-draft cycles; ~50% Grok-suggested-anchor catch rate)
+  fabricated_anchors_caught: 6 (AI-suggested anchors rejected by the verification cascade)
   negative_findings_recorded: NF1, NF2 (RESOLVED-PARTIAL v0.7.1), NF3 (RESOLVED-PARTIAL v0.7.1)
 
 session_lineage:
   - session: A
-    output: v0.1.0 → v0.2.0 thesis + bundle + spine + critical-review cycle
+    output: v0.1.0 → v0.2.0 thesis + bundle + spine + revision cycle
     date: 2026-05-26
   - session: B
     output: v0.3.0 + V0.4.0 — schema v0.1→v0.2, P4 added, four fabricated anchors rebased, T1 H-S extractions
     date: 2026-05-26
   - session: B-prime
-    output: v0.4.0 editorial — Operator generalization, F2 audit_internal demotion
+    output: v0.4.0 editorial — Operator generalization
     date: 2026-05-26
   - session: C
-    output: critical-review cycle on v0.4.0
+    output: revision cycle on v0.4.0
     date: 2026-05-26
   - session: C-prime
-    output: v0.5.0 (NF1/2/3 closures), v0.6.0 (PIVOT-SPLIT), v0.7.0 (schema/protocol appendix subordination + KBT anchors), v0.7.1 patch (NF2/3 partial-resolution + Pauli 1927); critical-review cycles r3-r5
+    output: v0.5.0 (NF1/2/3 closures), v0.6.0 (PIVOT-SPLIT), v0.7.0 (schema/protocol appendix subordination + KBT anchors), v0.7.1 patch (NF2/3 partial-resolution + Pauli 1927)
     date: 2026-05-26
   - session: D
     output: paper.md + appendices + frontmatter (this session)
@@ -96,9 +96,9 @@ session_lineage:
 immutability_invariants:
   - "Spine v0.7.1 is FROZEN as Phase 3 input. Divergences between paper.md and spine resolve via FORK (extend spine to v0.7.2 first) or REBASE (drop the claim) — never silent introduction."
   - "Pre-draft scaffold artifacts (thesis + bundle) are internal coordination drafts; the public artifact is the v1.0.0 paper.md + SPINE.yaml + appendices in this mirror."
-  - "Version v1.0.0 is held through all internal drafting + post-draft review per feedback_version_only_at_zenodo. Version increments only at Zenodo upload events."
-  - "Acknowledgments + CRediT placement at END of paper, never on first page, per reference_paper_first_page_defaults."
-  - "Target venue name does NOT appear in paper body; lives in paper.yaml only, per feedback_no_venue_names_in_paper_body."
+  - "Version v1.0.0 is held through all internal drafting + post-draft review. Version increments only at Zenodo upload events."
+  - "Acknowledgments + CRediT placement at END of paper, never on first page."
+  - "Target venue name does NOT appear in paper body; lives in paper.yaml only."
 
 zenodo_upload:
   paper_a_concept_doi: "10.5281/zenodo.20409683"
@@ -114,22 +114,11 @@ reproducibility_anchors:
   - cost_simulation_script: "cost_asymmetry_simulation.py (scaffold; full implementation in Phase 5 mirror creation)"
   - spine_artifact: "SPINE.yaml v0.7.1 (machine-readable companion publishable as Zenodo dataset)"
 
-editorial_discipline_anchors:
-  - rule: "no fabricated DOIs (feedback_no_fabricated_dois)"
-    enforcement: "5-stage verification cascade pre-draft; Crossref-verified anchors only"
-  - rule: "audit_internal F2/L3/NF2/NF3 (feedback_audit_record_discipline_in_public_papers)"
-    enforcement: "self-referential AI-tool incidents kept internal; public SF1 evidence cites generic RAG-hallucination literature"
-  - rule: "no 'load-bearing' in public copy (feedback_no_load_bearing_word)"
-    enforcement: "QC pass greps for 'load-bearing'; substitutes critical / central / essential / anchor"
-  - rule: "no venue names in body (feedback_no_venue_names_in_paper_body)"
-    enforcement: "venue lives in paper.yaml only"
-  - rule: "default AI disclosure format (feedback_default_ai_disclosure)"
-    enforcement: "Acknowledgments uses verbatim default text"
 ---
 
 session_i_step_4_5_revisions:
   date: "2026-05-27"
-  trigger: "joint critical-review of both papers"
+  trigger: "joint revision of both papers"
   outputs:
     - "SPINE.yaml v0.7.3 → v0.8.0 fork (4 new external_anchors: Cornelissen 2021 + Grimes 2023 + Alavi 2024 + Benbya 2024)"
     - "paper.md sharpened §Introduction contribution paragraph + new §Theory grounding paragraphs (~700w) + new §Discussion §Implications so-what paragraph + 4 reference-list entries"

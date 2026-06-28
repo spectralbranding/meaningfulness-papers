@@ -17,8 +17,8 @@ expected_preservation_set:
   - "node typing preserved: each substrate item rendered as a proposition with explicit antecedent edge"
   - "edge types preserved (refines / refines / bridges / extends)"
 date: 2026-05-27
-session: Session H Phase 3 — Task β third rendering
-status: research artifact NOT publication candidate; not posted to LinkedIn (per Session H init prompt)
+session: Phase 3 — Task β third rendering
+status: research artifact NOT publication candidate; not posted to LinkedIn (per this work init prompt)
 ---
 
 # What two famous dynamic-capabilities papers actually agree on — a structural read
@@ -70,4 +70,4 @@ This is part of a working paper on rendering-equivalence under spine-preservatio
 
 ---
 
-*This is a research-artifact rendering, not a publication. Posted to LinkedIn only as part of a controlled re-rendering experiment in Paper B 2026ap v1.0.0 Task β. Per Session H init prompt, this file is not pushed to live LinkedIn.*
+*This is a research-artifact rendering, not a publication. Posted to LinkedIn only as part of a controlled re-rendering experiment in Paper B 2026ap v1.0.0 Task β. Per this work init prompt, this file is not pushed to live LinkedIn.*

@@ -2,7 +2,7 @@
 title: "Twin-Pair Isomorphism Analysis — KBV Pair (Grant 1996 + Liebeskind 1996)"
 author: Dmitry Zharnikov
 version: v1.1.0
-session: Session E continuation post-Path-A
+session: a later extraction pass
 date: 2026-05-27
 schema: paper_a:appendix_A_schema (typed-DAG; 10 node types; 17 edge types)
 spine_extractions:

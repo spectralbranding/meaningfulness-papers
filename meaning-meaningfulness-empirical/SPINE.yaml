@@ -12,7 +12,7 @@
 
 spine_version: "0.2"              # schema version (per Paper A; observations/methods/measurements/findings/derivations first-class)
 spine_doc_version: "0.5.3"
-paper_key: "2026ap"               # placeholder; verify CANONICAL_REFERENCES.md at joint Zenodo upload (post-Session-E)
+paper_key: "2026ap"               # placeholder; verify CANONICAL_REFERENCES.md at joint Zenodo upload (at joint upload)
 paper_a_companion_key: "2026ao"   # theoretical-foundation paper
 theoretical_predecessor:
   paper_key: "2026ao"
@@ -190,7 +190,7 @@ methods:
     reproducibility:
       seed: "42 (fixed; per paper_a default)"
       version: "[session] Phase 3 + v1.1.0 KBV-pair FORK"
-    note: "v1.1.0 reports point estimates without confidence intervals; statistical-power claims are out of scope. v1.0.0 reframe demotes β/δ from primary to secondary contribution per feedback_paper_b_p4_reframe.md."
+    note: "v1.1.0 reports point estimates without confidence intervals; statistical-power claims are out of scope. v1.0.0 reframe demotes β/δ from primary to secondary contribution per the Paper B P4-reframe."
     provenance:
       created_by: "author + tool:cost_function_calibration.py"
       created_at: "2026-05-26"
@@ -320,7 +320,7 @@ findings:
     conditions: ["paper_a:C1", "paper_a:C2", "paper_a:C3", "paper_a:C4", "PB_BC1"]
     antecedents: ["PB_m_rec_focal", "PB_m_rec_kbv", "code/null_baseline.py"]
     falsifier_at_v1_3_0: "Random-shadow Rec distribution producing Pr(Rec ≥ 4 by chance) > .05 — would indicate the observed Rec = 4 is attributable to chance under the random null. Observed Pr = .000 across n = 1,000 shadows comfortably rejects the chance hypothesis."
-    citation_role_in_paper: "addresses_grok_r1_must_fix_random_graph_null_baseline"
+    citation_role_in_paper: "addresses_random_graph_null_baseline"
     related_paper_a_proposition: "paper_a:P4 (strengthens central P4 demonstration)"
     provenance:
       created_by: "author + tool:null_baseline.py"
@@ -429,7 +429,7 @@ propositions:
   inheritance:
     from: ["paper_a:P1", "paper_a:P2", "paper_a:P3", "paper_a:P4"]
     relationship: "inherited_unchanged"
-    note: "Paper B's v1.0.0 central empirical contribution is on paper_a:P4 (rendering-equivalence under spine-preservation). paper_a:P3 receives supportive evidence via the β/δ ordering. paper_a:P2 (organizational recombination rates) is acknowledged in Paper A as deferred to large-N work at v4.0.0 scale and is NOT tested at v1.0.0. paper_a:P1 (separability) is inherited unchanged. Under v0.3.0 P4 reframe per feedback_paper_b_p4_reframe.md, Paper B does not introduce new propositions; the Rec*(β) β-conditional threshold (introduced at v1.0.1 Phase 2 FORK) is retained in Discussion as a P3-conditional cross-tie footnote, demoted from contribution-2 level to secondary observation."
+    note: "Paper B's v1.0.0 central empirical contribution is on paper_a:P4 (rendering-equivalence under spine-preservation). paper_a:P3 receives supportive evidence via the β/δ ordering. paper_a:P2 (organizational recombination rates) is acknowledged in Paper A as deferred to large-N work at v4.0.0 scale and is NOT tested at v1.0.0. paper_a:P1 (separability) is inherited unchanged. Under v0.3.0 P4 reframe per the Paper B P4-reframe, Paper B does not introduce new propositions; the Rec*(β) β-conditional threshold (introduced at v1.0.1 Phase 2 FORK) is retained in Discussion as a P3-conditional cross-tie footnote, demoted from contribution-2 level to secondary observation."
   primary_engagement: "paper_a:P4"
   secondary_engagement: "paper_a:P3"
 
@@ -499,7 +499,7 @@ external_anchors:
     doi: "10.1002/smj.2294"
     role: "recombination_measurement_contrast"
     verified_at: "2026-05-26"
-    verification_method: "Crossref Stage 1 verified [session] Phase 2 (post-Grok-r1; page-range corrected from Grok-suggested 1437-1457 to Crossref-canonical 1435-1457)"
+    verification_method: "Crossref Stage 1 verified [session] Phase 2 (page-range corrected from AI-suggested 1437-1457 to Crossref-canonical 1435-1457)"
     spine_nodes: ["PB_M2"]
     body_sections: ["Method — Rec metric construct-validity contrast", "Discussion — Theoretical Implications of Calibration (§M)"]
 
@@ -508,7 +508,7 @@ external_anchors:
     doi: "10.5465/amp.2013.0025"
     role: "secondary_pair_bridging_review (engagement deferred to v2.0.0 alongside secondary-pair partner extraction)"
     verified_at: "2026-05-26"
-    verification_method: "Crossref Stage 1 verified [session] Phase 2 (post-Grok-r1; DOI corrected from Grok-suggested 10.5465/amp.2012.0085 which 404s)"
+    verification_method: "Crossref Stage 1 verified [session] Phase 2 (DOI corrected from AI-suggested 10.5465/amp.2012.0085 which 404s)"
     spine_nodes: ["PB_O3"]
     body_sections: ["Method — secondary pair (v2.0.0)", "Results — secondary-pair isomorphism (v2.0.0)"]
 
@@ -538,7 +538,7 @@ external_anchors:
     verification_method: "Crossref Stage-1 verified [session] Phase 1 via [internal audit artifact]; DOI confirmed 10.1002/smj.4250141009 SMJ 14(S2):95-112"
     spine_nodes: ["PB_M1", "PB_M2"]
     body_sections: ["Theory — organizational-learning antecedent positioning"]
-    grok_suggested_anchor_provenance: "anchor A10 in PHASE1_ANCHOR_VERIFICATION_2026-05-27.md; 1 of 2 verified out of 12 Grok-suggested; underlying 1993 paper verified, Grok's '2025 retrospective commentary' component unverified and dropped"
+    ai_suggested_anchor_provenance: "anchor A10 in PHASE1_ANCHOR_VERIFICATION_2026-05-27.md; 1 of 2 verified out of 12 AI-suggested; underlying 1993 paper verified, the '2025 retrospective commentary' component unverified and dropped"
 
   - citation_key: grimes-vonKrogh-feuerriegel-rink-gruber-2023-scarcity-to-abundance
     full_citation: "Grimes, M., von Krogh, G., Feuerriegel, S., Rink, F., & Gruber, M. (2023). From scarcity to abundance: Scholars and scholarship in an age of generative artificial intelligence. Academy of Management Journal 66(6): 1617–1624."
@@ -548,7 +548,7 @@ external_anchors:
     verification_method: "Crossref REST API DOI lookup ([session]; title + authors + year + venue match expected; user pre-verified PDF authentic upstream"
     spine_nodes: ["PB_M3", "PB_F4"]
     body_sections: ["Theory — GenAI-era scholarship framing", "Discussion — Implications"]
-    grok_suggested_anchor_provenance: "anchor A2 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified; 0 hallucinations this round"
+    ai_suggested_anchor_provenance: "anchor A2 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified; 0 hallucinations this round"
 
   - citation_key: brynjolfsson-li-raymond-2025-genai-at-work
     full_citation: "Brynjolfsson, E., Li, D., & Raymond, L. (2025). Generative AI at Work. Quarterly Journal of Economics 140(2)."
@@ -558,7 +558,7 @@ external_anchors:
     verification_method: "Crossref REST API DOI lookup; title + authors + year + venue match expected"
     spine_nodes: ["PB_M3", "PB_F2"]
     body_sections: ["Theory — productivity-heterogeneity grounding", "Discussion — Implications"]
-    grok_suggested_anchor_provenance: "anchor A3 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified"
+    ai_suggested_anchor_provenance: "anchor A3 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified"
 
   - citation_key: george-storey-hong-2025-chatgpt-knowledge-anchor
     full_citation: "George, J. F., Storey, V. C., & Hong, S. J. (2025). Unraveling the impact of ChatGPT as a knowledge anchor in business education. ACM Transactions on Management Information Systems."
@@ -568,7 +568,7 @@ external_anchors:
     verification_method: "Crossref REST API title-search (no DOI provided initially; resolved to DOI 10.1145/3705734); user provided local PDF (3705734.pdf) and bib file (acm_3705734.bib) confirming"
     spine_nodes: ["PB_M3"]
     body_sections: ["Theory — knowledge-anchor framing"]
-    grok_suggested_anchor_provenance: "anchor A4 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified; DOI surfaced via Crossref title-search"
+    ai_suggested_anchor_provenance: "anchor A4 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified; DOI surfaced via Crossref title-search"
 
   - citation_key: kirchner-bolisani-kassaneh-scarso-taraghi-2025-genai-km-software-dev
     full_citation: "Kirchner, K., Bolisani, E., Kassaneh, T. C., Scarso, E., & Taraghi, M. (2025). Generative AI meets knowledge management: Insights from software development practices. Knowledge and Process Management."
@@ -578,7 +578,7 @@ external_anchors:
     verification_method: "Crossref REST API DOI lookup; title + authors + year + venue match expected"
     spine_nodes: ["PB_M3"]
     body_sections: ["Theory — TOE qualitative grounding"]
-    grok_suggested_anchor_provenance: "anchor A5 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified"
+    ai_suggested_anchor_provenance: "anchor A5 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified"
 
   - citation_key: alavi-leidner-mousavi-2024-km-perspective-genai
     full_citation: "Alavi, M., Leidner, D. E., & Mousavi, R. (2024). Knowledge management perspective of generative artificial intelligence. Journal of the Association for Information Systems 25(1)."
@@ -588,7 +588,7 @@ external_anchors:
     verification_method: "Crossref REST API DOI lookup; title + authors + year + venue match expected"
     spine_nodes: ["PB_M3", "PB_F4"]
     body_sections: ["Theory — KM foundational lens"]
-    grok_suggested_anchor_provenance: "anchor A6 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified"
+    ai_suggested_anchor_provenance: "anchor A6 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified"
 
   - citation_key: benbya-strich-tamm-2024-navigating-genai
     full_citation: "Benbya, H., Strich, F., & Tamm, T. (2024). Navigating generative artificial intelligence promises and perils for knowledge and creative work. Journal of the Association for Information Systems 25(1)."
@@ -598,109 +598,109 @@ external_anchors:
     verification_method: "Crossref REST API DOI lookup; title + authors + year + venue match expected"
     spine_nodes: ["PB_M3", "PB_F4"]
     body_sections: ["Theory — GenAI-implications taxonomy", "Discussion — Implications"]
-    grok_suggested_anchor_provenance: "anchor A7 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified"
+    ai_suggested_anchor_provenance: "anchor A7 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified"
 
 # ============================================================================
 # Open questions / boundary edges
 # ============================================================================
 
 # ============================================================================
-# Negative findings (Grok-suggested-anchor hallucinations caught at verification)
+# Negative findings (AI-suggested-anchor hallucinations caught at verification)
 # ============================================================================
 negative_findings:
   - id: NF15
-    statement: "the review §2 HIGH-priority suggested 'Bingham, C. B., Heimeriks, K. H., & Eisenhardt, K. M. (2024). Dynamic capabilities in the age of AI: New empirical approaches. Strategic Management Journal forthcoming.' Grok self-flagged [UNVERIFIED]. Verification at [session] Phase 2: Crossref + Semantic Scholar searches return no match. Closest real paper is Bingham-Heimeriks-Meyer-Doyle 2024 Strategy Science 'How Firms Cultivate Collaboration During Postmerger Integration' (DOI 10.1287/stsc.2022.0094) — different third author, different topic. No SMJ special issue on 'Dynamic capabilities in the age of AI' surfaces in Crossref. Recorded as hallucination; cumulative ~54% Grok-suggested-anchor hallucination rate continues."
-    pattern: "matches Paper A NF1..NF14 + corpus's empirically-documented ~54% rate"
+    statement: "an AI-suggested anchor: 'Bingham, C. B., Heimeriks, K. H., & Eisenhardt, K. M. (2024). Dynamic capabilities in the age of AI: New empirical approaches. Strategic Management Journal forthcoming.' The AI reviewer self-flagged [UNVERIFIED]. Verification at [session] Phase 2: Crossref + Semantic Scholar searches return no match. Closest real paper is Bingham-Heimeriks-Meyer-Doyle 2024 Strategy Science 'How Firms Cultivate Collaboration During Postmerger Integration' (DOI 10.1287/stsc.2022.0094) — different third author, different topic. No SMJ special issue on 'Dynamic capabilities in the age of AI' surfaces in Crossref. Recorded as hallucination."
+    pattern: "matches the corpus's documented AI-suggested-anchor hallucination pattern"
     provenance:
       created_by: "author + tool:Crossref + Semantic Scholar manual search"
       created_at: "2026-05-26"
 
   - id: NF16
-    statement: "the review §2 HIGH-priority suggested 'Felin, T., & Zenger, T. R. (2024). The economic theory of the firm in the age of AI. SMJ 45(4): 721–752. DOI: 10.1002/smj.3612.' Grok claimed 'verified via Semantic Scholar 2024 entry.' Verification at [session] Phase 2.5: DOI 10.1002/smj.3612 resolves to Neckebrouck-Kryscynski 2024 'Empirically exploring the veracity of the new stakeholder perspective in strategy: Documenting workforce rents' SMJ 45(10): 2159-2188 — NOT a Felin-Zenger 2024 paper on AI. HALLUCINATED."
-    pattern: "matches NF15 + Paper A NF1..NF14; cumulative ~50% rate across the review+r2 on Paper B"
+    statement: "an AI-suggested anchor: 'Felin, T., & Zenger, T. R. (2024). The economic theory of the firm in the age of AI. SMJ 45(4): 721–752. DOI: 10.1002/smj.3612.' The AI reviewer claimed 'verified via Semantic Scholar 2024 entry.' Verification at [session] Phase 2.5: DOI 10.1002/smj.3612 resolves to Neckebrouck-Kryscynski 2024 'Empirically exploring the veracity of the new stakeholder perspective in strategy: Documenting workforce rents' SMJ 45(10): 2159-2188 — NOT a Felin-Zenger 2024 paper on AI. HALLUCINATED."
+    pattern: "matches NF15; AI-suggested-anchor hallucination pattern"
     provenance:
       created_by: "author + tool:Crossref manual verification"
       created_at: "2026-05-27"
 
   - id: NF17
-    statement: "the review §2 HIGH-priority suggested 'Raisch, S., Furr, N., & Birkinshaw, J. (2025). Generative AI and the search for novel strategy. Organization Science 36(2): 412–438. DOI: 10.1287/orsc.2024.1234.' Grok self-flagged '[UNVERIFIED] exact page range; title and existence confirmed via OS 2025 special issue.' Verification at [session] Phase 2.5: DOI 10.1287/orsc.2024.1234 returns 'Resource not found' from Crossref. Title + author search in Crossref returns no matching paper. HALLUCINATED."
-    pattern: "matches NF15 + NF16 + Paper A NF1..NF14"
+    statement: "an AI-suggested anchor: 'Raisch, S., Furr, N., & Birkinshaw, J. (2025). Generative AI and the search for novel strategy. Organization Science 36(2): 412–438. DOI: 10.1287/orsc.2024.1234.' The AI reviewer self-flagged '[UNVERIFIED] exact page range; title and existence confirmed via OS 2025 special issue.' Verification at [session] Phase 2.5: DOI 10.1287/orsc.2024.1234 returns 'Resource not found' from Crossref. Title + author search in Crossref returns no matching paper. HALLUCINATED."
+    pattern: "matches NF15 + NF16"
     provenance:
       created_by: "author + tool:Crossref manual verification"
       created_at: "2026-05-27"
 
   - id: NF18
-    statement: "the review §2 MEDIUM-priority claimed Bingham-Heimeriks-Meyer-Doyle 2024 Strategy Science is on 'Post-merger integration in the age of AI: Capability recombination and verification costs.' Verification at [session] Phase 2.5: the paper exists at DOI 10.1287/stsc.2022.0094 with VERIFIED authors and year, but the ACTUAL TITLE is 'How Firms Cultivate Collaboration During Postmerger Integration of Technology Acquisitions' — the AI / capability-recombination / verification-cost framing is Grok's retrofit, not the actual paper's topic. The paper does discuss postmerger integration of TECHNOLOGY acquisitions which has some overlap with AI-adjacent themes; but Grok's specific 'capability recombination and verification costs' framing is invented. Engagement at Paper B v1.0.0 is appropriate only insofar as the paper relates substantively to recombination; Grok's claim about its primary topic must NOT be repeated."
+    statement: "an AI-suggested anchor claimed Bingham-Heimeriks-Meyer-Doyle 2024 Strategy Science is on 'Post-merger integration in the age of AI: Capability recombination and verification costs.' Verification at [session] Phase 2.5: the paper exists at DOI 10.1287/stsc.2022.0094 with VERIFIED authors and year, but the ACTUAL TITLE is 'How Firms Cultivate Collaboration During Postmerger Integration of Technology Acquisitions' — the AI / capability-recombination / verification-cost framing is the AI reviewer's retrofit, not the actual paper's topic. The paper does discuss postmerger integration of TECHNOLOGY acquisitions which has some overlap with AI-adjacent themes; but the AI reviewer's specific 'capability recombination and verification costs' framing is invented. Engagement at Paper B v1.0.0 is appropriate only insofar as the paper relates substantively to recombination; the AI-suggested claim about its primary topic must NOT be repeated."
     pattern: "topic-retrofit half-hallucination; cite-exists-but-topic-fabricated; less severe than NF15-NF17 but worth recording"
     provenance:
       created_by: "author + tool:Crossref direct DOI fetch including abstract"
       created_at: "2026-05-27"
 
   - id: NF19
-    statement: "an external review r1 §5 HIGH-priority suggested 'Felin, T., & Zenger, T. R. (2023). The theory of the firm and AI: Beyond black boxes. Strategy Science.' Grok self-flagged [VERIFY BEFORE CITING]. Verification at [session] Phase 1 via Crossref Stage-1: no matching 2023 Strategy Science paper. Closest hit is Felin & Zenger 2012 SSRN 'Open Innovation, Problem Solving, and the Theory of the (Innovative) Firm' (DOI 10.2139/ssrn.2156951) — different topic, 11 years off, never published in Strategy Science. HALLUCINATED."
+    statement: "an AI-suggested anchor: 'Felin, T., & Zenger, T. R. (2023). The theory of the firm and AI: Beyond black boxes. Strategy Science.' The AI reviewer self-flagged [VERIFY BEFORE CITING]. Verification at [session] Phase 1 via Crossref Stage-1: no matching 2023 Strategy Science paper. Closest hit is Felin & Zenger 2012 SSRN 'Open Innovation, Problem Solving, and the Theory of the (Innovative) Firm' (DOI 10.2139/ssrn.2156951) — different topic, 11 years off, never published in Strategy Science. HALLUCINATED."
     pattern: "tier-1-venue retrofit; classic NF (cf NF15-NF17 pattern)"
     provenance:
       created_by: "author + tool:[verification script] (Crossref Stage 1)"
       created_at: "2026-05-27"
 
   - id: NF20
-    statement: "an external review r1 §5 HIGH-priority suggested 'Raisch, S., & Furr, N. (2024). The generative lens: AI as a catalyst for new theory. Academy of Management Review.' Grok self-flagged [VERIFY BEFORE CITING]. Verification at [session] Phase 1: no matching 2024 AMR paper. Closest hit is Fomina & Raisch 2024 Academy of Management Proceedings 'Collaboration Between Humans and AI: Complementarities Within and Across Skill' (DOI 10.5465/amproc.2024.21431abstract) — Raisch is co-author but Furr is not; AMP not AMR; title/topic differ. HALLUCINATED."
+    statement: "an AI-suggested anchor: 'Raisch, S., & Furr, N. (2024). The generative lens: AI as a catalyst for new theory. Academy of Management Review.' The AI reviewer self-flagged [VERIFY BEFORE CITING]. Verification at [session] Phase 1: no matching 2024 AMR paper. Closest hit is Fomina & Raisch 2024 Academy of Management Proceedings 'Collaboration Between Humans and AI: Complementarities Within and Across Skill' (DOI 10.5465/amproc.2024.21431abstract) — Raisch is co-author but Furr is not; AMP not AMR; title/topic differ. HALLUCINATED."
     pattern: "author-real-coauthor-fabricated + venue-uplift (AMP → AMR)"
     provenance:
       created_by: "author + tool:[verification script]"
       created_at: "2026-05-27"
 
   - id: NF21
-    statement: "an external review r1 §5 suggested 'Puranam, P., et al. (2024). Generative AI and the future of organizational theory. Organization Science.' Verification at [session] Phase 1: no matching 2024 Org Sci paper. Closest hit is Buechsenschuss-Koch-Bayram-Biemann-Puranam 2026 SSRN 'The Impact of Generative AI Adoption on Organizational Networks: Evidence From A Field Experiment' (DOI 10.2139/ssrn.6028034) — Puranam is co-author but venue (SSRN preprint not Org Sci) / year / title differ. HALLUCINATED."
+    statement: "an AI-suggested anchor: 'Puranam, P., et al. (2024). Generative AI and the future of organizational theory. Organization Science.' Verification at [session] Phase 1: no matching 2024 Org Sci paper. Closest hit is Buechsenschuss-Koch-Bayram-Biemann-Puranam 2026 SSRN 'The Impact of Generative AI Adoption on Organizational Networks: Evidence From A Field Experiment' (DOI 10.2139/ssrn.6028034) — Puranam is co-author but venue (SSRN preprint not Org Sci) / year / title differ. HALLUCINATED."
     pattern: "author-real-rest-fabricated"
     provenance:
       created_by: "author + tool:[verification script]"
       created_at: "2026-05-27"
 
   - id: NF22
-    statement: "an external review r1 §5 suggested 'Girotra, K., Meincke, L., Terwiesch, C., & Ulrich, K. T. (2023). Ideas are dimes a dozen: The value of ideation in innovation contests. Management Science.' Verification at [session] Phase 1: the same author quartet has SSRN preprint 'Ideas are Dimes a Dozen: Large Language Models for Idea Generation in Innovation' (DOI 10.2139/ssrn.4526071, 2023) — author + half-title match. Grok partially-hallucinated: real preprint exists but subtitle differs and the paper is NOT in Management Science as of Crossref query time. Marked PARTIALLY-HALLUCINATED — the preprint is citable as Girotra et al. 2023 SSRN if needed, but Grok's MS placement is wrong."
+    statement: "an AI-suggested anchor: 'Girotra, K., Meincke, L., Terwiesch, C., & Ulrich, K. T. (2023). Ideas are dimes a dozen: The value of ideation in innovation contests. Management Science.' Verification at [session] Phase 1: the same author quartet has SSRN preprint 'Ideas are Dimes a Dozen: Large Language Models for Idea Generation in Innovation' (DOI 10.2139/ssrn.4526071, 2023) — author + half-title match. The AI reviewer partially-hallucinated: real preprint exists but subtitle differs and the paper is NOT in Management Science as of Crossref query time. Marked PARTIALLY-HALLUCINATED — the preprint is citable as Girotra et al. 2023 SSRN if needed, but the AI-suggested MS placement is wrong."
     pattern: "preprint-exists-venue-uplift-and-subtitle-retrofit (cf NF18 partial-hallucination)"
     provenance:
       created_by: "author + tool:[verification script]"
       created_at: "2026-05-27"
 
   - id: NF23
-    statement: "an external review r1 §5 suggested 'Lifshitz-Assaf, H., et al. (2024). AI and the transformation of R&D. Research Policy.' Verification at [session] Phase 1: no matching 2024 RP paper. Closest hit is Lazar-Mateja-Nthoiwa-Lifshitz-Assaf-Raisch-Bommasani et al. 2025 Academy of Management Proceedings 'Innovating with AI: Exploring the Impact of Generative AI on Creative Processes' (DOI 10.5465/amproc.2025.12158symposium) — Lifshitz-Assaf is co-author but venue/year/title differ. HALLUCINATED."
+    statement: "an AI-suggested anchor: 'Lifshitz-Assaf, H., et al. (2024). AI and the transformation of R&D. Research Policy.' Verification at [session] Phase 1: no matching 2024 RP paper. Closest hit is Lazar-Mateja-Nthoiwa-Lifshitz-Assaf-Raisch-Bommasani et al. 2025 Academy of Management Proceedings 'Innovating with AI: Exploring the Impact of Generative AI on Creative Processes' (DOI 10.5465/amproc.2025.12158symposium) — Lifshitz-Assaf is co-author but venue/year/title differ. HALLUCINATED."
     pattern: "author-real-rest-fabricated"
     provenance:
       created_by: "author + tool:[verification script]"
       created_at: "2026-05-27"
 
   - id: NF24
-    statement: "an external review r1 §5 suggested 'Bingham, C. B., & Eisenhardt, K. M. (2024). The search for simplicity in strategy. SMJ.' Grok self-flagged [VERIFY BEFORE CITING; audit flagged prior hallucination]. Verification at [session] Phase 1: no matching 2024 SMJ paper. Closest hit is Eisenhardt & Bingham 2025 Oxford Research Encyclopedia 'Simple Rules and Other Heuristics in Strategy and Organizational Research' (DOI 10.1093/acrefore/9780190224851.013.458) — author pair real, simplicity-in-strategy topic real, but venue (ORE not SMJ) / year (2025 not 2024) differ. HALLUCINATED. NF15-adjacent (prior r1 Bingham-related hallucination)."
+    statement: "an AI-suggested anchor: 'Bingham, C. B., & Eisenhardt, K. M. (2024). The search for simplicity in strategy. SMJ.' The AI reviewer self-flagged [VERIFY BEFORE CITING; audit flagged prior hallucination]. Verification at [session] Phase 1: no matching 2024 SMJ paper. Closest hit is Eisenhardt & Bingham 2025 Oxford Research Encyclopedia 'Simple Rules and Other Heuristics in Strategy and Organizational Research' (DOI 10.1093/acrefore/9780190224851.013.458) — author pair real, simplicity-in-strategy topic real, but venue (ORE not SMJ) / year (2025 not 2024) differ. HALLUCINATED. NF15-adjacent (prior r1 Bingham-related hallucination)."
     pattern: "author-real-topic-real-venue/year-fabricated (cf NF15)"
     provenance:
       created_by: "author + tool:[verification script]"
       created_at: "2026-05-27"
 
   - id: NF25
-    statement: "an external review r1 §5 suggested 'Teece, D. J. (2023). Dynamic capabilities in the age of AI. Industrial and Corporate Change.' Verification at [session] Phase 1: no matching 2023 ICC paper. Closest hit is Teece 2025 Cambridge book 'Dynamic Capabilities' (DOI 10.1017/9781009562713) — Teece + DC topic real, but no AI-DC 2023 ICC paper exists. HALLUCINATED."
+    statement: "an AI-suggested anchor: 'Teece, D. J. (2023). Dynamic capabilities in the age of AI. Industrial and Corporate Change.' Verification at [session] Phase 1: no matching 2023 ICC paper. Closest hit is Teece 2025 Cambridge book 'Dynamic Capabilities' (DOI 10.1017/9781009562713) — Teece + DC topic real, but no AI-DC 2023 ICC paper exists. HALLUCINATED."
     pattern: "author-real-topic-real-venue/year-fabricated"
     provenance:
       created_by: "author + tool:[verification script]"
       created_at: "2026-05-27"
 
   - id: NF26
-    statement: "an external review r1 §5 suggested 'von Krogh, G., et al. (2024). Artificial intelligence in management: A review and research agenda. Journal of Management.' Verification at [session] Phase 1: no matching 2024 JoM paper. Closest hit is von Krogh-Roberson-Gruber 2023 Academy of Management Journal 'Recognizing and Utilizing Novel Research Opportunities with Artificial Intelligence' (DOI 10.5465/amj.2023.4002) — von Krogh + AI-research-opportunities topic real, but venue (AMJ not JoM) / year (2023 not 2024) / title differ. HALLUCINATED."
+    statement: "an AI-suggested anchor: 'von Krogh, G., et al. (2024). Artificial intelligence in management: A review and research agenda. Journal of Management.' Verification at [session] Phase 1: no matching 2024 JoM paper. Closest hit is von Krogh-Roberson-Gruber 2023 Academy of Management Journal 'Recognizing and Utilizing Novel Research Opportunities with Artificial Intelligence' (DOI 10.5465/amj.2023.4002) — von Krogh + AI-research-opportunities topic real, but venue (AMJ not JoM) / year (2023 not 2024) / title differ. HALLUCINATED."
     pattern: "author-real-topic-real-venue/year-fabricated"
     provenance:
       created_by: "author + tool:[verification script]"
       created_at: "2026-05-27"
 
   - id: NF27
-    statement: "an external review r1 §5 suggested 'Camuffo, A., et al. (2024). Scientific decision-making and the replication crisis in management. SMJ.' Verification at [session] Phase 1: Camuffo et al. DO have a 2024 SMJ paper at DOI 10.1002/smj.3580 — 'A scientific approach to entrepreneurial decision-making: Large-scale replication and extension' — but the topic is entrepreneurial decision-making not the broader 'replication crisis in management,' and the title differs substantively. The real paper is citable on its own terms if it serves a substantive purpose, but Grok's title and topic framing are retrofitted. PARTIALLY-HALLUCINATED (real paper at correct venue/year, but title/topic distorted)."
+    statement: "an AI-suggested anchor: 'Camuffo, A., et al. (2024). Scientific decision-making and the replication crisis in management. SMJ.' Verification at [session] Phase 1: Camuffo et al. DO have a 2024 SMJ paper at DOI 10.1002/smj.3580 — 'A scientific approach to entrepreneurial decision-making: Large-scale replication and extension' — but the topic is entrepreneurial decision-making not the broader 'replication crisis in management,' and the title differs substantively. The real paper is citable on its own terms if it serves a substantive purpose, but the AI-suggested title and topic framing are retrofitted. PARTIALLY-HALLUCINATED (real paper at correct venue/year, but title/topic distorted)."
     pattern: "real-paper-title-retrofit (cf NF18)"
     provenance:
       created_by: "author + tool:[verification script]"
       created_at: "2026-05-27"
 
   - id: NF28
-    statement: "an external review r1 §5 suggested 'Ethiraj, S. K., et al. (2024). The next frontier in strategy research: Computational approaches. Strategic Management Journal.' Verification at [session] Phase 1: no adjacent paper found. Closest Crossref hit is a 1989 aerospace engineering paper by an unrelated 'Ethiraj Venkatapathy' (DOI 10.2514/6.1989-129). Fully HALLUCINATED."
+    statement: "an AI-suggested anchor: 'Ethiraj, S. K., et al. (2024). The next frontier in strategy research: Computational approaches. Strategic Management Journal.' Verification at [session] Phase 1: no adjacent paper found. Closest Crossref hit is a 1989 aerospace engineering paper by an unrelated 'Ethiraj Venkatapathy' (DOI 10.2514/6.1989-129). Fully HALLUCINATED."
     pattern: "fully-fabricated (no adjacent paper at any venue)"
     provenance:
       created_by: "author + tool:[verification script]"

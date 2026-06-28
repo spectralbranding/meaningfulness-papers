@@ -1,20 +1,20 @@
 ---
 title: "Cross-operator extraction results — Phase 2-prime + 2.5-prime + 3-prime retroactive re-extraction via GPT-4o"
 date: 2026-05-27
-session: Session H Phase 2-prime / 2.5-prime / 3-prime (cross-operator extraction discipline HARD RULE applied retroactively per user direction 2026-05-27)
-rule_source: feedback_cross_operator_extraction_separation.md
+session: Phase 2-prime / 2.5-prime / 3-prime (cross-operator extraction discipline HARD RULE applied retroactively)
+rule_source: the cross-operator extraction separation rule
 extraction_operator: gpt-4o-2024-08-06 (Operator C; received prose-only input; no source spine context; appendix-A codebook as system prompt)
 extractor_script: research/meaningfulness_empirical_companion/code/cross_operator_extraction.py
 extractor_call_logs: research/meaningfulness_empirical_companion/logs/phase_2_prime_extract_*_calls.jsonl + logs/phase_2.5_prime_extract_*_calls.jsonl + logs/phase_3_prime_extract_*_calls.jsonl
 ---
 
-# Cross-operator extraction results — Session H Phase 2-prime + 2.5-prime + 3-prime
+# Cross-operator extraction results — Phase 2-prime + 2.5-prime + 3-prime
 
 ## Why this analysis exists
 
-Phases 2, 2.5, and 3 of Session H executed with **Claude as both renderer and extractor** in the same session — the "within-operator" pattern that confounds rendering→extraction with within-model context memory (Claude recalls the spine it just wrote about). Per feedback_cross_operator_extraction_separation.md HARD RULE (user direction 2026-05-27), academic-grade P4 evidence requires that the rendering operator and the extraction operator be DIFFERENT models, with the extraction operator receiving only the prose and the appendix-A codebook — never the source spine.
+Phases 2, 2.5, and 3 of this work executed with **Claude as both renderer and extractor** in the same session — the "within-operator" pattern that confounds rendering→extraction with within-model context memory (Claude recalls the spine it just wrote about). Academic-grade P4 evidence requires that the rendering operator and the extraction operator be DIFFERENT models, with the extraction operator receiving only the prose and the appendix-A codebook — never the source spine.
 
-This document reports the retroactive cross-operator re-extraction of the three Session H rendering artifacts using GPT-4o as Operator C. The GPT-4o extractor was given the appendix-A codebook (10 node types + 17 edge types) as system prompt, and the prose-only body of each rendering (frontmatter stripped) as user prompt; no source spine context. The within-operator preservation results (Claude self-extracted spines) are retained alongside the cross-operator results so reviewers can compare both and judge whether the within-model memory contamination materially affects the preservation finding.
+This document reports the retroactive cross-operator re-extraction of the three this work rendering artifacts using GPT-4o as Operator C. The GPT-4o extractor was given the appendix-A codebook (10 node types + 17 edge types) as system prompt, and the prose-only body of each rendering (frontmatter stripped) as user prompt; no source spine context. The within-operator preservation results (Claude self-extracted spines) are retained alongside the cross-operator results so reviewers can compare both and judge whether the within-model memory contamination materially affects the preservation finding.
 
 ## Cross-operator preservation summary
 
@@ -135,4 +135,4 @@ Total cross-operator extraction cost: ~$0.04. Tokens: 8,239 in / 2,160 out. All 
 
 ---
 
-*Cross-operator extraction analysis closes the retroactive Phase 2-prime + 2.5-prime + 3-prime work per feedback_cross_operator_extraction_separation.md HARD RULE. Within-model memory contamination is empirically bounded; the P4 evidence base survives the cross-operator round-trip with zero contradictions across all three phases.*
+*Cross-operator extraction analysis closes the retroactive Phase 2-prime + 2.5-prime + 3-prime work per the cross-operator extraction separation rule HARD RULE. Within-model memory contamination is empirically bounded; the P4 evidence base survives the cross-operator round-trip with zero contradictions across all three phases.*

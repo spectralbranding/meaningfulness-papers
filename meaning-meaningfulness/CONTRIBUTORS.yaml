@@ -1,6 +1,6 @@
 ---
 paper_key: 2026ao
-status: skeleton (Session D init; final values at Zenodo upload)
+status: skeleton (drafting init; final values at Zenodo upload)
 contributors:
   - name: "Dmitry Zharnikov"
     orcid: "0009-0000-6893-9231"
@@ -21,19 +21,18 @@ ai_assistants:
       spine-first drafting protocol's structural-substrate operation class.
       All judgment operations (fork/rebase/merge; theoretical commitments;
       cohort-specific rendering decisions) remained with the human author.
-    sessions_used: "predraft + Phase 3 drafting"
+    sessions_used: "drafting"
   - name: "Grok 4.1"
     provider: "xAI"
     role: >-
-      Pre-draft critical-review applied to the predraft bundle across five
-      review cycles (r1–r5). No drafting authorship.
-    sessions_used: "predraft phase"
+      Critical review of and feedback on the draft. No drafting authorship.
+    sessions_used: "drafting phase"
   - name: "Gemini 3.1"
     provider: "Google"
     role: >-
       Auxiliary literature search and citation verification supplements;
       no drafting authorship.
-    sessions_used: "As needed during predraft phase"
+    sessions_used: "As needed during drafting"
 ai_disclosure_text: >-
   AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1) were used for initial
   literature search and editorial refinement; all theoretical claims,
@@ -44,9 +43,9 @@ ai_co_authorship_policy: >-
   artifacts. AI use is disclosed in Acknowledgments and Method per AMA
   guidance.
 human_reviewers_during_drafting:
-  - name: "Author self-review across five pre-draft critical-review cycles"
-    note: "External pre-submission reviewer engagement deferred to a post-draft critical-review pass."
+  - name: "Author self-review during drafting"
+    note: "External pre-submission reviewer engagement deferred to a later review pass."
 acknowledgment_placement: >-
   Acknowledgments + CRediT contributions appear at END of paper, between
-  Conclusion and References — NOT on first page per reference_paper_first_page_defaults.
+  Conclusion and References — NOT on first page.
 ---

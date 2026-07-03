@@ -40,9 +40,9 @@ Schrödinger discloses his prior exposure in a footnote on p. 46:
 
 > "My theory was inspired by L. de Broglie… and by brief, but infinitely far-seeing remarks of A. Einstein… **I did not at all suspect any relation to Heisenberg's theory at the beginning. I naturally knew about his theory, but was discouraged, if not repelled, by the very difficult methods of transcendental algebra, and by the want of perspicuity (Anschaulichkeit).**" (footnote 1, p. 46)
 
-This is the load-bearing biographical attestation that the two formulations were authored **without coordination on framework or notation** — i.e., that any structural coincidence between them is a discovery, not a construction.
+This is the central biographical attestation that the two formulations were authored **without coordination on framework or notation** — i.e., that any structural coincidence between them is a discovery, not a construction.
 
-## 4. Why this paper is load-bearing for P4 of the meaningfulness paper
+## 4. Why this paper is central for P4 of the meaningfulness paper
 
 P4 of the meaningfulness paper claims **rendering-equivalence under spine-preservation**: two artifacts authored from different rendering vocabularies, on different presentation surfaces, can converge on identical conclusions when their underlying claim-graphs (S-layer) coincide. The Schrödinger 1926 equivalence paper supplies the strongest possible historical instance of this claim, because:
 

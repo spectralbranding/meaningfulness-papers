@@ -16,7 +16,7 @@
 # comparison of two independently-built spines — that the meaning graph
 # converges across two radically different mathematical formalisms whose
 # rendering vocabularies share almost no surface tokens. That convergence
-# is the load-bearing existence-proof for P4 (rendering-equivalence
+# is the central existence-proof for P4 (rendering-equivalence
 # under spine-preservation) of the meaningfulness paper.
 #
 # Sources extracted from:
@@ -935,7 +935,7 @@ changelog:
 # ============================================================================
 # NOTES:
 #
-# Five-to-seven most load-bearing propositions of the Heisenberg path
+# Five-to-seven most central propositions of the Heisenberg path
 # (in order of dependency depth, shallowest first):
 #
 #   H1 — Observable-quantities-only methodological commitment. The

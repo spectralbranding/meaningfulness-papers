@@ -1355,7 +1355,7 @@ external_anchors:
     venue_tier: popular
     cited_in_proposition: [K4, K12]
     dependency_role: confirming
-  # ~14 additional non-load-bearing references in the paper bibliography
+  # ~14 additional non-central references in the paper bibliography
   # (Bender 2021 cited above; Mollick, Long, Christiano, Ouyang, Wei,
   # Xie & Min, Li 2023, Lightman 2023, Spataro 2023, Suzman 2020,
   # Kennedy-Phillips 2023, Murray 2021, Buchholtz-Rosenthal 2008,
@@ -1534,7 +1534,7 @@ changelog:
 #   than reflective-trial reports — propositions K5, K10 are anchored more
 #   in citation than in observation, which the spine reflects honestly
 #
-# 5-7 MOST LOAD-BEARING PROPOSITIONS (ranked by cross-contributor endorsement
+# 5-7 MOST CENTRAL PROPOSITIONS (ranked by cross-contributor endorsement
 # + downstream antecedent-density):
 # 1. K3 (cost-asymmetry across research activities) — 5 contributors endorse;
 #    HIGHEST overlap with meaningfulness-P3; THIS IS THE PAYOFF
@@ -1545,7 +1545,7 @@ changelog:
 #    1 dissenter (Petriglieri); maps to division-of-labor section
 # 5. K4 (3 agentic modes) + K12 (3 governance principles) — Glaser-Gehman's
 #    Table 1; the most operationalizable contribution
-# 6. K7 (LLMs are performative) — Pachidi's load-bearing claim with strongest
+# 6. K7 (LLMs are performative) — Pachidi's central claim with strongest
 #    citation depth in STS
 # 7. K10 (seductive mediation blurs moral agency) — Islam-Greenwood's
 #    contribution; the most explicitly ethical proposition

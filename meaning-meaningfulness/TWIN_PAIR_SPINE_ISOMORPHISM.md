@@ -19,7 +19,7 @@ This document presents the structural diff between the two T1 validation-case sp
 
 The analysis proceeds in five sections:
 
-- §1 — Schrödinger's attestation that the discovery was independent (the load-bearing natural-experiment evidence)
+- §1 — Schrödinger's attestation that the discovery was independent (the central natural-experiment evidence)
 - §2 — Three-layer convergence: observations ↔ propositions ↔ findings
 - §3 — Where the spines diverge and why the divergences are rendering-layer, not spine-layer
 - §4 — What the isomorphism tells us about P4 (and what it tells us about schema v0.2)

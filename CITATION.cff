@@ -7,9 +7,12 @@ authors:
     given-names: "Dmitry"
     orcid: "0009-0000-6893-9231"
 date-released: "2026-05-29"
-license: "MIT"
+license:
+  - MIT
+  - CC-BY-4.0
 license-url: "https://opensource.org/licenses/MIT"
 repository-code: "https://github.com/spectralbranding/meaningfulness-papers"
+url: "https://github.com/spectralbranding/meaningfulness-papers"
 abstract: >
   Hub index for the meaningfulness research programme by Dmitry Zharnikov.
   The programme theorizes how research-paper artifacts maintain meaning

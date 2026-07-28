@@ -1,0 +1,43 @@
+# DEMONSTRATION MODULE — Author X (NOT a corpus paper; a companion artifact for
+# the invention-as-structure paper, P7 existence proof). Deliberately NOT named
+# ONTOLOGY.yaml and NOT under [internal path removed], so the live build_ontology.py
+# linker never picks it up. Loaded explicitly by ../four_moves_demo.py.
+#
+# Author X exercises the four invention moves as ontology operations, designed to
+# collide with Author Y on exactly the interaction classes the four-move account
+# predicts:
+#   invention-move       : SAME key, IDENTICAL def with Y  -> AGREEMENT
+#   representation       : SAME key, DIFFERENT def with Y  -> CONFLICT (incompatible adjoin)
+#   glue-move            : owned by X, imported by Y        -> CROSS_IMPORT (glue across domains)
+#   selection-functional : owned by X, refined by Y         -> CROSS_REFINE (re-specify/rescale)
+#   adjoin-dimension     : owned by X only                  -> no interaction (a pure adjunction)
+
+paper_key: authorX-invention-2026
+schema_version: 0.1
+
+owns:
+  - term_key: invention-move
+    label: "invention move"
+    canonical_form: "invention move"
+    definition: "A structure-changing operation on a representation, as opposed to an observation collected within a fixed representation."
+    first_section: "X.1"
+  - term_key: representation
+    label: "representation"
+    canonical_form: "representation"
+    definition: "A typed structure over which a domain's regularities are stated."
+    first_section: "X.2"
+  - term_key: glue-move
+    label: "glue across domains"
+    canonical_form: "glue across domains"
+    definition: "The move that identifies a shared substructure of two representations and forms their fibered combination."
+    first_section: "X.3"
+  - term_key: selection-functional
+    label: "selection functional"
+    canonical_form: "selection functional"
+    definition: "The criterion combining description length of the axioms, symmetry, closure, and an empirical term to score a candidate move."
+    first_section: "X.4"
+  - term_key: adjoin-dimension
+    label: "adjoin a dimension"
+    canonical_form: "adjoin a dimension"
+    definition: "The move that makes a latent degree of freedom explicit, adding an independent axis to a representation."
+    first_section: "X.5"

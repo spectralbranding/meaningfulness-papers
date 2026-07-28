@@ -1,0 +1,29 @@
+# DEMONSTRATION MODULE — Author Y (NOT a corpus paper; companion artifact for P7).
+# Loaded explicitly by ../four_moves_demo.py. Collides with Author X on the four
+# interaction classes the four-move account predicts (see authorX/module.yaml).
+#
+#   invention-move  : SAME key, IDENTICAL def to X   -> AGREEMENT (exactMatch)
+#   representation  : SAME key, DIFFERENT def to X    -> CONFLICT (incompatible adjoin)
+#   glue-move       : imports X's owned term           -> CROSS_IMPORT (clean glue edge)
+#   selection-functional : refines X's term (narrows_to) -> CROSS_REFINE (re-specify)
+
+paper_key: authorY-invention-2026
+schema_version: 0.1
+
+owns:
+  - term_key: invention-move
+    label: "invention move"
+    canonical_form: "invention move"
+    definition: "A structure-changing operation on a representation, as opposed to an observation collected within a fixed representation."
+    first_section: "Y.1"
+  - term_key: representation
+    label: "representation"
+    canonical_form: "representation"
+    definition: "A fixed coordinate frame in which measurements are recorded, held constant across observations."
+    first_section: "Y.2"
+
+imports:
+  - {term_key: glue-move}          # owned by X -> clean CROSS_IMPORT
+
+refines:
+  - {term_key: selection-functional, narrows_to: "the selection functional restricted to a decidable-compatibility domain, where the empirical term is dropped", note: "scope narrowing to the formal case"}

@@ -1,0 +1,448 @@
+# SPINE.yaml — Invention as a Structural Operation
+#
+# GENERATIVE spine (SPINE_FIRST_DRAFTING_PROTOCOL.md Phase 0.5). Locked BEFORE
+# paper.md prose, per the HARD rule: no drafting begins until this file exists
+# and every prose claim traces to a node here. PURE-THEORY / position paper: no
+# author-collected data, no simulation, no computed table values. The only
+# empirical element is a scoped existence proof via the corpus's running
+# ontology-negotiation code (build_ontology.py / negotiate_modules.py), whose
+# public test-suite hardening is pre-registered future work, not executed here.
+#
+# The thesis is REFRAMED relative to the Phase-0 seed to absorb the two
+# converging internal findings (see the dropped internal blocks below): (a) the
+# clean generate/validate split is historically false — invention is search
+# under JOINT intrinsic + (often weak) empirical constraints, the empirical term
+# sometimes active during generation; (b) the mechanizability + closure claims
+# are SCOPED to representational systems with a decidable compatibility
+# predicate, and make no claim over open-ended empirical discovery.
+
+spine_version: "0.1"
+spine_doc_version: "0.2.0"
+paper_key: "invention-as-structure"
+provenance: generative
+title: >-
+  Invention as a Structural Operation: Why the Abductive Jump Is a
+  Re-Coordinatization of the Space of Description, Not a Sensory Leap
+status: >-
+  LOCKED v0.2.0 — generative spine with joint-constraint selection, a
+  decidable-domain scope condition, and the evolution boundary object (P9).
+  paper.md is drafted and every claim traces to a node here. Sibling:
+  tier-bundle-algebra (same four-move set over a deal representation).
+
+thesis: >-
+  Invention is a typed structural operation on a representation — a change of
+  the description itself — realized by four atomic moves: adjoin a dimension,
+  rescale or requantize, re-topologize or re-specify, and glue (pull back)
+  across domains. These moves are selected by a functional combining intrinsic
+  structural signals (minimum description length of the axioms, symmetry and
+  invariance, and consistency or closure) with, when a substrate exists, an
+  often-weak empirical constraint that can be active during generation rather
+  than only downstream. Within representational systems whose compatibility
+  predicate is decidable — formalized and specification domains — the operator
+  set is enumerable and the selection functional is computable, so the
+  generative act is mechanizable, as demonstrated by a running artifact that
+  performs and classifies cross-domain structural recombination. This relocates
+  the "abductive jump" that a prevailing position holds to require embodied
+  sensory grounding: the jump is a re-coordinatization under joint constraints,
+  substrate-independent in its content though frequently embodied in its human
+  rendering. The claim is bounded — outside decidable-compatibility domains,
+  where the adjacent possible is not finitely prestatable, the account
+  characterizes the operator types without asserting the space is enumerable or
+  the selection complete.
+
+# ============================================================================
+# Propositions — the argument backbone.
+#   SF: motivating stylized fact. P1-P8: definitional + substantive claims.
+#   C: explicit boundary conditions. A: rivals ruled out. L: limitations.
+#   Every external_anchor below is UNVERIFIED model/first-pass provenance and
+#   MUST be Crossref-verified before it enters the substrate (rule 5c).
+# ============================================================================
+propositions:
+  - id: SF1
+    statement: >-
+      A prevailing position holds that generative AI has mastered induction
+      (statistical pattern-fit) and is conquering deduction (formal proof) but
+      is structurally incapable of the abductive "jump" from sensory experience
+      to new axioms, which is said to require embodied simulation and physically
+      grounded world models; the surrounding discourse frames such invention as
+      the frontier test for general intelligence. Yet the same position concedes
+      that in formal domains the substrate of study is the abstract landscape of
+      formal systems, requiring no external world.
+    antecedents: []
+    body_sections: ["Introduction"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Zahavy (2026) position paper on the abductive jump [UNVERIFIED — the
+          target; verify venue/DOI]; the "Einstein Test" framing attributed to
+          Hassabis (2026) [UNVERIFIED — may be interview/non-citable].
+
+  - id: P1
+    statement: >-
+      A representation is a typed structure over which a domain's regularities
+      are stated; an invention is a morphism that changes the representation
+      itself, not a datum obtained within a fixed representation. The unit of
+      analysis is the representation-changing operation, not the observation.
+    antecedents: [SF1]
+    body_sections: ["A structural account of invention"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Category-theoretic knowledge representation and theories-as-structures
+          (Spivak & Kent 2012, ologs; Friedman 2001, relativized a priori)
+          [UNVERIFIED]; positioned as prior art the account builds on, not
+          displaces.
+
+  - id: P2
+    statement: >-
+      Invention's atomic moves form a small set: (1) ADJOIN A DIMENSION — make a
+      latent degree of freedom explicit; (2) RESCALE / REQUANTIZE — change the
+      unit or granularity of measurement; (3) RE-TOPOLOGIZE / RE-SPECIFY — change
+      connectivity or the admissible morphisms; (4) GLUE / PULL BACK ACROSS
+      DOMAINS — identify a shared substructure of two representations and form
+      their fibered combination. Falsifiable closure claim (scoped by C1): within
+      a decidable-compatibility domain, an invention whose minimal description
+      requires an operation outside this set refutes closure.
+    antecedents: [P1]
+    body_sections: ["The four moves"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Moves (1) and (3) anticipated by Boden (1990) transformational
+          creativity (adjoin/drop a conceptual-space dimension); (4) by
+          Fauconnier & Turner (2002) conceptual blending (generic space as
+          pullback apex); dimension-adjunction by Gärdenfors conceptual spaces
+          [all UNVERIFIED]. Cited as prior art; the contribution is the closed
+          set + selection functional + running adjudicator, not the individual
+          moves.
+
+  - id: P3
+    statement: >-
+      The general-relativity move — promoting the measured coincidence of
+      inertial and gravitational mass from a contingent numerical equality to a
+      structural identity (a quotient / geometric re-topologization on the
+      existing representation) — is a composition of re-topologize and
+      adjoin-dimension moves, not a fresh percept. HOWEVER, the empirical
+      constraint was active during generation: the correct curvature structure
+      was found early and abandoned for roughly three years because it failed the
+      Newtonian limit. Generation is therefore search under joint intrinsic and
+      empirical constraints; the embodied "elevator" thought experiment is the
+      human rendering of the structural move, not its content.
+    antecedents: [P1, P2]
+    body_sections: ["Case: the general-relativity move, corrected"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Zurich-Notebook historiography (Janssen, Norton, Renn, Sauer & Stachel
+          2007) [UNVERIFIED] — the empirical-pruning-during-generation evidence
+          that corrects any clean generate-then-validate reading; Norton (2020)
+          pathway [UNVERIFIED].
+
+  - id: P4
+    statement: >-
+      Move selection is governed by a functional combining intrinsic structural
+      signals — minimum description length of the AXIOMS (not of the data),
+      symmetry / invariance, and consistency / closure — with, when a substrate
+      exists, an often-weak empirical adequacy term. Within any domain whose
+      compatibility predicate is decidable, the operator algebra is enumerable
+      and this functional is computable; outside such domains the paper makes no
+      enumerability or completeness claim. This replaces both the pure-data-
+      compression account and any appeal to unscoped heuristic search.
+    antecedents: [P2, P3]
+    body_sections: ["Selection under joint constraints"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Intrinsic-selection existence proof: Udrescu & Tegmark (2020) AI
+          Feynman recovers physical laws from intrinsic signals (dimensional
+          analysis = rescale; symmetry; separability) with no sensory grounding
+          [UNVERIFIED]. Compression-of-data contrast: Schmidhuber (2008).
+
+  - id: P5
+    statement: >-
+      Symbol grounding constrains knowing WHICH structural hypothesis is true of
+      an external world, not the GENERATION of a well-typed structural
+      hypothesis. But grounding is not wholly downstream: in empirical domains
+      the "which move is domain-coherent" filter is exactly the weak empirical
+      term of P4 and can co-select during generation; in formal domains it is
+      absent and invention is fully intrinsic. This reconciles the symbol-
+      grounding critique with mechanizability without positing a clean
+      generate-then-validate pipeline.
+    antecedents: [P3, P4]
+    body_sections: ["Grounding, relocated not eliminated"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Harnad (1990) symbol grounding; Bender & Koller (2020) form-vs-meaning
+          [UNVERIFIED] — the strongest statements of the grounding constraint,
+          engaged rather than dismissed.
+
+  - id: P6
+    statement: >-
+      Apparently novel primitives (imaginary numbers; entropy; the field
+      concept) are structural completions under a consistency demand — a special
+      case of adjoin-dimension in which an element is adjoined to make an
+      operation total or to close a structure under a required law. Bounded to
+      formalized systems, this dissolves the "creation ex nihilo" objection
+      without claiming the space of completions is prestatable.
+    antecedents: [P2]
+    body_sections: ["Primitives as completions"]
+    evidence:
+      - type: reasoning
+        anchor: >-
+          Algebraic closure / completion (adjoining a root; a forced macro-
+          coordinate) as the formal template for "new primitive"; scoped by C1.
+
+  - id: P7
+    statement: >-
+      The corpus's ontology-negotiation machinery performs AND classifies cross-
+      domain structural recombination over typed specification modules
+      (AGREEMENT / CONFLICT / CROSS_REFINE / CROSS_IMPORT / INCOMPATIBLE_REFINE),
+      with a decidable compatibility predicate — a running artifact that
+      mechanizes the glue, adjoin, and refine moves inside a specification
+      domain. RESIDUAL EXPLANATORY GAIN: the four-move account predicts the
+      classification of a given cross-owner module interaction and the
+      admissibility of a proposed combination — a phenomenon that the embodied-
+      abduction position (no account of formal-domain invention mechanics), pure
+      recombination theories (no compatibility predicate, no running
+      adjudicator), and data-compression accounts do not predict.
+    antecedents: [P2, P4]
+    body_sections: ["A running existence proof, scoped"]
+    evidence:
+      - type: artifact
+        anchor: >-
+          build_ontology.py (owns/imports/refines link-time compatibility) +
+          negotiate_modules.py (federated cross-owner classification +
+          lock/fork/rebase/merge reconciliation); fixture at
+          [internal path removed] Public auditable test suite
+          reproducing the four move types = pre-registered future work (L2).
+
+  - id: P8
+    statement: >-
+      The market instance of the account: category creation is an adjoin-
+      dimension move (a demand coordinate the market had no name for), and owning
+      a category is adoption / lock-in of that coordinate — a meaning-side
+      phenomenon — not a cognitive monopoly. This unifies the "invention wall" of
+      the science discourse and the "category wall" of the strategy discourse as
+      a single authoring-versus-optimizing distinction.
+    antecedents: [P1, P2]
+    body_sections: ["The same move in markets"]
+    evidence:
+      - type: reasoning
+        anchor: >-
+          Boundary object #2 (a second domain the four-move account covers);
+          the strategy-discourse "own the category, not the execution" claim
+          reread as authoring-vs-optimizing. Recombinant-novelty background
+          (Weitzman; Arthur, The Nature of Technology) [UNVERIFIED].
+
+  - id: P9
+    statement: >-
+      Evolution is invention without cognition, body, or intent, and it runs on
+      the same four moves — the strongest existence proof that structural
+      invention is substrate- AND mind-independent. Mapping: ADJOIN A DIMENSION =
+      gene/genome duplication then neofunctionalization (a redundant copy is a
+      new degree of freedom free to diverge); RESCALE / REQUANTIZE = polyploidy /
+      whole-genome duplication and heterochrony (change of copy-number and of
+      developmental timing/size); RE-TOPOLOGIZE / RE-SPECIFY = exaptation and
+      regulatory rewiring (an existing structure's admissible role is changed
+      without changing the structure); GLUE / PULL BACK ACROSS DOMAINS =
+      symbiogenesis / endosymbiosis (two independent lineages fused into one
+      composite — the mitochondrion as a biological pullback). Selection is the
+      JOINT functional of P4: fitness-in-environment is the empirical term and it
+      is active DURING variation, not downstream — evolution is the paradigm case
+      that "generation and validation are the same module" (supporting the P3
+      correction) — while developmental constraint / evolvability is the intrinsic
+      term. Because the biological adjacent possible is not finitely prestatable,
+      evolution operates OUTSIDE a decidable-compatibility domain (C1), which is
+      exactly why its search is blind, slow, and wasteful rather than the fast
+      computable selection of P4 — an honest illustration of L3, not a
+      counterexample to it. RESIDUAL REACH: the four moves recur in a domain with
+      no mind at all, which the embodied-abduction position (invention needs
+      simulation), creativity-of-minds accounts (Boden/Fauconnier), and
+      data-compression accounts neither predict nor explain. The corpus's own
+      fork / rebase / merge module operators are the computational cognates of
+      duplication-divergence and symbiogenesis.
+    antecedents: [P2, P3, P4]
+    body_sections: ["The same moves without a mind: evolution"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Gene duplication as the chief source of novelty (Ohno 1970);
+          endosymbiosis / symbiogenesis (Sagan/Margulis 1967); exaptation (Gould
+          & Vrba 1982). All Crossref-VERIFIED (VERIFIED_ANCHORS.md); Ohno/Gould
+          likely already in substrate — reuse.
+
+  - id: C1
+    statement: >-
+      BOUNDARY CONDITION. The mechanizability and closure claims (P2, P4, P6, P7)
+      hold ONLY within representational systems whose compatibility predicate is
+      decidable — formalized and specification domains. For open-ended empirical
+      science, where the adjacent possible is not finitely prestatable, the
+      account claims only that the four operator TYPES describe the observed
+      moves; it does not assert the move-space is enumerable or the selection
+      functional complete.
+    antecedents: [P4, P7]
+    body_sections: ["Scope and boundary conditions"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Kauffman (2000) non-prestatable adjacent possible; Fodor (2000) global
+          character of abduction [UNVERIFIED] — the constraints that force the
+          scope restriction rather than defeat the account.
+
+  - id: A1
+    statement: >-
+      RIVAL RULED OUT (embodiment necessity). The strongest embodied-cognition
+      claim — that "dimension", "topology", and "gluing" are irreducibly
+      sensorimotor — explains the human DISCOVERY rendering, not the substrate-
+      independence of the FORMALIZED operation. Once formalized, the move is
+      substrate-neutral, as demonstrated by intrinsic-selection discovery systems
+      that use no body.
+    antecedents: [P4, P5]
+    body_sections: ["Rivals"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Lakoff & Núñez (2000) Where Mathematics Comes From [UNVERIFIED] — the
+          rival, answered via the meaning/rendering distinction + Udrescu &
+          Tegmark existence proof.
+
+  - id: A2
+    statement: >-
+      RIVAL RULED OUT (creativity as data compression). The compression account
+      measures loss on DATA; the inventions at issue compress the AXIOMS while
+      data-loss is already near-zero (the general-relativity case), so
+      description-length reduction of the theory, not of the observations, is the
+      operative signal.
+    antecedents: [P3, P4]
+    body_sections: ["Rivals"]
+    evidence:
+      - type: citation
+        anchor: "Schmidhuber (2008) creativity-as-compression [UNVERIFIED]."
+
+  - id: L1
+    statement: >-
+      LIMITATION. "AI can invent" is a capacity-and-mechanism claim, scoped to
+      decidable-compatibility domains and partly demonstrated by a running
+      artifact; it is NOT a track-record claim that a current large language
+      model has autonomously produced a paradigm-scale invention. Evidence of
+      out-of-distribution abstraction failure bounds the empirical reach.
+    antecedents: [P7, C1]
+    body_sections: ["Limitations"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Chollet (2019) On the Measure of Intelligence; ARC-AGI [UNVERIFIED] —
+          the skill-vs-intelligence gap the paper must not overclaim past.
+
+  - id: L2
+    statement: >-
+      LIMITATION. The existence proof requires a public, auditable test suite
+      reproducing the four move types and the cross-owner classification, plus a
+      robustness check on the selection functional's MDL weighting; this
+      hardening is pre-registered future work, not executed in this paper.
+    antecedents: [P7]
+    body_sections: ["Limitations"]
+    evidence:
+      - type: reasoning
+        anchor: >-
+          An internal reproducibility requirement: a public test suite across
+          more move compositions plus a robustness check on the weighting of the
+          selection functional.
+
+  - id: L3
+    statement: >-
+      LIMITATION. The non-prestatability of the adjacent possible means the
+      account does not extend to open-ended empirical discovery without an
+      external oracle; the joint-constraint reframe (P4, P5) bounds but does not
+      eliminate this, and C1 marks exactly where the claim stops.
+    antecedents: [C1]
+    body_sections: ["Limitations"]
+    evidence:
+      - type: citation
+        anchor: "Kauffman (2000); Fodor (2000) [UNVERIFIED]."
+
+# ============================================================================
+# Corpus precedents — self-citations (cap 3). Exact keys to CONFIRM against
+# CANONICAL_REFERENCES.md before substrate registration; the meaning/
+# meaningfulness ownership module must be resolved in the ontology pass.
+corpus_precedents:
+  - paper_key: 2026a
+    relationship: extends          # SBT: meaning-vs-meaningfulness lever (P1,P5,P8)
+    spine_nodes: [P1, P5, P8]
+  - paper_key: 2026i
+    relationship: extends          # OST: specification-DAG substrate; category=tier (P7,P8)
+    spine_nodes: [P7, P8]
+  - paper_key: tier-bundle-algebra
+    relationship: applies          # sibling: the same four-move set over a deal representation
+    spine_nodes: [P2, P7]
+
+# ============================================================================
+# External anchors — ALL UNVERIFIED first-pass; Crossref/DOI-verify EACH before
+# it enters the substrate (rule 5c, anti-fabrication). Roles are positioning
+# only. "Cao & Yang 2026" from the Gemini DR is deliberately EXCLUDED pending
+# confirmation it exists.
+external_anchors:
+  - citation_key: zahavy-2026-llms-cant-jump
+    role: primary_opponent
+    spine_nodes: [SF1, P3, P5]
+  - citation_key: boden-1990-creative-mind
+    role: theoretical_predecessor
+    spine_nodes: [P2]
+  - citation_key: fauconnier-turner-2002-the-way-we-think
+    role: theoretical_predecessor
+    spine_nodes: [P2]
+  - citation_key: gardenfors-conceptual-spaces
+    role: theoretical_predecessor
+    spine_nodes: [P2]
+  - citation_key: spivak-kent-2012-ologs
+    role: theoretical_predecessor
+    spine_nodes: [P1]
+  - citation_key: friedman-2001-dynamics-of-reason
+    role: theoretical_predecessor
+    spine_nodes: [P1]
+  - citation_key: udrescu-tegmark-2020-ai-feynman
+    role: supporting_evidence
+    spine_nodes: [P4, A1]
+  - citation_key: janssen-2007-genesis-general-relativity
+    role: corrective_evidence
+    spine_nodes: [P3]
+  - citation_key: bender-koller-2020-climbing-towards-nlu
+    role: rival_argument
+    spine_nodes: [P5]
+  - citation_key: harnad-1990-symbol-grounding
+    role: rival_argument
+    spine_nodes: [P5]
+  - citation_key: lakoff-nunez-2000-where-mathematics-comes-from
+    role: rival_argument
+    spine_nodes: [A1]
+  - citation_key: chollet-2019-measure-of-intelligence
+    role: limitation_anchor
+    spine_nodes: [L1]
+  - citation_key: kauffman-2000-investigations
+    role: limitation_anchor
+    spine_nodes: [C1, L3]
+  - citation_key: fodor-2000-mind-doesnt-work-that-way
+    role: limitation_anchor
+    spine_nodes: [C1, L3]
+  - citation_key: schmidhuber-2008-driven-by-compression
+    role: rival_argument
+    spine_nodes: [A2]
+  - citation_key: magnani-2009-abductive-cognition
+    role: background
+    spine_nodes: [SF1]
+  - citation_key: ohno-1970-evolution-by-gene-duplication
+    role: boundary_object_evidence
+    spine_nodes: [P9]
+  - citation_key: sagan-1967-origin-of-mitosing-cells
+    role: boundary_object_evidence
+    spine_nodes: [P9]
+  - citation_key: gould-vrba-1982-exaptation
+    role: boundary_object_evidence
+    spine_nodes: [P9]
+
+# ============================================================================
+# INTERNAL ONLY — dropped on public export (scrub_spine_ontology.py) and never
+# rendered into paper.yaml. Internal authoring/provenance/venue meta lives ONLY
+# here per rule 0aб.
+

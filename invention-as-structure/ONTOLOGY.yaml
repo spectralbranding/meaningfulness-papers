@@ -1,0 +1,104 @@
+# ONTOLOGY.yaml module — invention-as-structure
+#
+# Per [internal path removed] ontology schema v0.1. This
+# module OWNS the terms this paper introduces (its unique authority). Linked
+# into the substrate `terms` graph by build_ontology.py; rendered per-paper by
+# render_paper_glossary.py. The meaning / meaningfulness pair this paper leans
+# on is OWNED elsewhere (SBT root) — import/refine to be resolved in the next
+# ontology pass once the owning module is confirmed; kept out of `owns` here to
+# avoid a duplicate-owner collision.
+
+paper_key: invention-as-structure
+schema_version: 0.1
+
+owns:
+  - term_key: representation-morphism
+    label: "representation morphism"
+    canonical_form: "representation morphism"
+    definition: >-
+      An invention modeled as a structure-changing map on a representation: it
+      alters the typed description within which a domain's regularities are
+      stated, rather than adding an observation inside a fixed description. The
+      unit of analysis for the account.
+    replaces: []
+    first_section: "§2"
+
+  - term_key: adjoin-dimension
+    label: "adjoin a dimension"
+    canonical_form: "adjoin a dimension"
+    definition: >-
+      The atomic invention move that makes a previously latent degree of freedom
+      explicit, adding an independent axis to the representation (for example,
+      observer-indexed time, or the metric treated as a dynamical field).
+    replaces: []
+    first_section: "§3"
+
+  - term_key: rescale-requantize
+    label: "rescale or requantize"
+    canonical_form: "rescale or requantize"
+    definition: >-
+      The atomic invention move that changes the unit or granularity of a
+      measurement — including quantizing a quantity previously treated as
+      continuous, or moving to a logarithmic or renormalized scale.
+    replaces: []
+    first_section: "§3"
+
+  - term_key: re-topologize
+    label: "re-topologize or re-specify"
+    canonical_form: "re-topologize or re-specify"
+    definition: >-
+      The atomic invention move that changes the connectivity of a
+      representation or the class of admissible morphisms over it — for example,
+      replacing a flat description with a curved one, or promoting a measured
+      coincidence to a structural identity via a quotient.
+    replaces: []
+    first_section: "§3"
+
+  - term_key: glue-pullback
+    label: "glue (pull back) across domains"
+    canonical_form: "glue across domains"
+    definition: >-
+      The atomic invention move that identifies a shared substructure of two
+      representations and forms their fibered combination (a pullback / pushout),
+      yielding a description that spans what neither domain saw alone. The formal
+      content of "combining approaches from different domains."
+    replaces: []
+    first_section: "§3"
+
+  - term_key: intrinsic-selection-functional
+    label: "intrinsic selection functional"
+    canonical_form: "intrinsic selection functional"
+    definition: >-
+      The criterion that selects among candidate structural moves by combining
+      description length of the axioms, symmetry and invariance, and consistency
+      or closure, together with an often-weak empirical adequacy term when a
+      substrate exists. Computable within a decidable-compatibility domain.
+    replaces: []
+    first_section: "§4"
+
+  - term_key: structural-completion
+    label: "structural completion"
+    canonical_form: "structural completion"
+    definition: >-
+      An apparently new primitive obtained by adjoining what a consistency or
+      closure demand forces (for example, adjoining a root to make an operation
+      total). A special case of adjoin-dimension that dissolves the
+      "creation ex nihilo" reading of novel primitives, bounded to formalized
+      systems.
+    replaces: []
+    first_section: "§5"
+
+  - term_key: decidable-compatibility-domain
+    label: "decidable-compatibility domain"
+    canonical_form: "decidable-compatibility domain"
+    definition: >-
+      A representational system whose predicate for whether two structural moves
+      are compatible is decidable — formalized and specification domains. The
+      scope within which the account's mechanizability and closure claims are
+      asserted; outside it, only the operator types are claimed to describe the
+      moves.
+    replaces: []
+    first_section: "§6"
+
+imports: []
+refines: []

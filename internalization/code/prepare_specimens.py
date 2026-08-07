@@ -16,7 +16,7 @@ Run:
         code/prepare_specimens.py
 
 Outputs:
-    [internal path removed]<id>.txt
+    specimens/<id>.txt
     specimens/MANIFEST.json
 """
 

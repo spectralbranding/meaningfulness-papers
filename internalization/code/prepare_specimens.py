@@ -76,10 +76,16 @@ PILOT_PDF: dict[str, str] = {}
 PILOT_LOCAL_MD = {
     # A spine-first-drafted corpus paper: the one pilot document for which an
     # authored reference spine exists, which is why it is in the pilot set.
-    # An authoring-tree sibling. The pilot rounds were DISCARDED and no reported
-    # number depends on this file, so a clone that does not hold it skips the
-    # specimen and loses nothing; its public copy is the 2026ao Zenodo record.
-    "pilot_2026ao": PAPER_DIR.parent / "2026ao" / "paper.md",
+    # Resolved in the authoring tree OR in the public mirror, where the same
+    # paper is a sibling slug. Keeping it reachable in BOTH matters: the
+    # random-graph null draws from one stream across all documents, so a run
+    # that silently skips a document produces different null summaries. Gate
+    # verdicts and reported statistics are unaffected either way, but a
+    # reproduction should not diverge at all when it does not have to.
+    "pilot_2026ao": [
+        PAPER_DIR.parent / "2026ao" / "paper.md",
+        PAPER_DIR.parent / "meaning-meaningfulness" / "paper.md",
+    ],
 }
 
 
@@ -267,9 +273,12 @@ def main() -> int:
             {"source": url, "kind": "essay"},
             manifest,
         )
-    for name, path in PILOT_LOCAL_MD.items():
-        if not path.is_file():
-            print(f"  skip {name}: not present in this checkout (discarded pilot round)")
+    for name, candidates in PILOT_LOCAL_MD.items():
+        path = next((c for c in candidates if c.is_file()), None)
+        if path is None:
+            print(
+                f"  skip {name}: not present in this checkout (discarded pilot round)"
+            )
             continue
         emit(
             name,

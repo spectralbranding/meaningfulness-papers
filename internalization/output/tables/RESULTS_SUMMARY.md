@@ -29,11 +29,13 @@ Thresholds: α ≥ .65 (Layer 1), F1 ≥ .60 and above the null's 99th percentil
 |---|---|---|---|---|---|---|---|---|---|
 | pilot_dijkstra | 81 | 29 | 17 | .817 | .100 | .200 | .100 | no | .398 |
 | pilot_thompson | 33 | 30 | 17 | .382 | .500 | .700 | .100 | yes | .297 |
+| pilot_2026ao | 82 | 25 | 11 | .682 | .167 | .500 | .167 | no | .811 |
 
 Thresholds: α ≥ .65 (Layer 1), F1 ≥ .60 and above the null's 99th percentile (Layer 2, the gate), ρ ≥ .50 (Layer 3, reported not gated).
 
 - **pilot_dijkstra** — Layer 1 passes; Layer 2 FAILS (1 shared of 10/10 triples); boundary precision .210, recall .586.
 - **pilot_thompson** — Layer 1 FAILS; Layer 2 FAILS (5 shared of 11/9 triples); boundary precision .515, recall .567.
+- **pilot_2026ao** — Layer 1 passes; Layer 2 FAILS (1 shared of 3/9 triples); boundary precision .134, recall .440.
 
 ## VC3 — the ladder
 

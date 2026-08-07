@@ -33,7 +33,7 @@
    },
    "shared_triples": 1,
    "null": {
-    "mean": 0.00926,
+    "mean": 0.009800000000000001,
     "p99": 0.1,
     "max": 0.2,
     "draws": 10000
@@ -120,7 +120,7 @@
    },
    "shared_triples": 5,
    "null": {
-    "mean": 0.013319999999999999,
+    "mean": 0.0145,
     "p99": 0.1,
     "max": 0.3,
     "draws": 10000
@@ -171,6 +171,93 @@
    "words_raw": 1731,
    "words_math_collapsed": 1731,
    "math_tokens": 0
+  }
+ },
+ {
+  "document": "pilot_2026ao",
+  "operators": {
+   "OP_A": "claude-opus-5",
+   "OP_B": "gemini-3.1-pro-preview"
+  },
+  "nodes": {
+   "OP_A": 82,
+   "OP_B": 25
+  },
+  "edges": {
+   "OP_A": 106,
+   "OP_B": 45
+  },
+  "spans_located": {
+   "OP_A": 80,
+   "OP_B": 24
+  },
+  "layer1": {
+   "alpha_nominal": 0.6818181818181819,
+   "matched_nodes": 11,
+   "boundary_precision": 0.13414634146341464,
+   "boundary_recall": 0.44,
+   "threshold": 0.65,
+   "passes": true
+  },
+  "layer2": {
+   "triple_f1": 0.16666666666666666,
+   "triples": {
+    "OP_A": 3,
+    "OP_B": 9
+   },
+   "shared_triples": 1,
+   "null": {
+    "mean": 0.00785,
+    "p99": 0.16666666666666666,
+    "max": 0.3333333333333333,
+    "draws": 10000
+   },
+   "threshold": 0.6,
+   "beats_null_p99": false,
+   "passes": false,
+   "triple_f1_untyped_diagnostic": 0.5,
+   "edge_retention": {
+    "OP_A": 0.02830188679245283,
+    "OP_B": 0.2
+   }
+  },
+  "layer3": {
+   "spearman_rho": 0.8113620320396417,
+   "n": 11,
+   "threshold": 0.5,
+   "meets_threshold": true,
+   "gated": false
+  },
+  "rc2_centrality_sensitivity": {
+   "OP_A": {
+    "rho_support_mass_vs_reverse_pagerank": 0.9587965823499175,
+    "n": 82
+   },
+   "OP_B": {
+    "rho_support_mass_vs_reverse_pagerank": 0.9411259082644636,
+    "n": 25
+   }
+  },
+  "status_counts": {
+   "OP_A": {
+    "derived": 40,
+    "verified_only": 41,
+    "miracle": 1
+   },
+   "OP_B": {
+    "derived": 8,
+    "verified_only": 17,
+    "miracle": 0
+   }
+  },
+  "miracle_count": {
+   "OP_A": 1,
+   "OP_B": 0
+  },
+  "prose_mass": {
+   "words_raw": 11062,
+   "words_math_collapsed": 10936,
+   "math_tokens": 99
   }
  }
 ]

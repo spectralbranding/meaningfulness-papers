@@ -203,8 +203,13 @@ def random_graph_null(
     rng = np.random.default_rng(seed)
     if len(nodes) < 2 or not ta or not tb:
         return {"mean": 0.0, "p99": 0.0, "draws": 0}
-    types_a = [t for _, t, _ in ta]
-    types_b = [t for _, t, _ in tb]
+    # ta/tb are SETS, so iterating them directly makes the order of the drawn
+    # types a function of Python's per-process string hashing. The null's
+    # DISTRIBUTION is unaffected -- same types, same counts -- but individual
+    # draws are not, so the reported mean moved between runs while the gate
+    # percentile did not. Sorting makes the whole computation reproducible.
+    types_a = [t for _, t, _ in sorted(ta)]
+    types_b = [t for _, t, _ in sorted(tb)]
     n = len(nodes)
     scores = np.empty(draws)
     for d in range(draws):

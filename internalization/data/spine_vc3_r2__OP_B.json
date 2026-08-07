@@ -1,0 +1,299 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "proposition",
+   "statement": "Let d_1(P) be the number of pairs of points in P whose distance is exactly 1.",
+   "para": 1,
+   "span": "Let ${d_1(P)}$ denote the number of unit distances determined by these points",
+   "explanatory_status": "verified_only",
+   "status_reason": "definition of the central quantity"
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "There exist point sets P of size n with d_1(P) bounded below by n^{1 + c / \\log\\log n}.",
+   "para": 6,
+   "span": "There exists point sets ${P}$ of arbitrarily large cardinality ${n}$ such that ${d_1(P) \\gg n^{1 +c / \\log\\log n}}$",
+   "explanatory_status": "derived",
+   "status_reason": "derived later in the text via the Gaussian integers"
+  },
+  {
+   "id": "n3",
+   "type": "proposition",
+   "statement": "There exist point sets P of size n with d_1(P) bounded below by n^{1 + c}.",
+   "para": 11,
+   "span": "There exists point sets ${P}$ of arbitrarily large cardinality ${n}$ such that ${d_1(P) \\gg n^{1 + c}}$",
+   "explanatory_status": "miracle",
+   "status_reason": "relies on Golod-Shafarevich towers which the reader does not hold"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "There exist point sets P of size n with d_1(P) bounded below by n^{1 + c / \\log\\log\\log n}.",
+   "para": 14,
+   "span": "There exists point sets ${P}$ of arbitrarily large cardinality ${n}$ such that ${d_1(P) \\gg n^{1 + c / \\log\\log\\log n}}$",
+   "explanatory_status": "derived",
+   "status_reason": "derived in the text via quadratic extensions"
+  },
+  {
+   "id": "n5",
+   "type": "method",
+   "statement": "A point set with a given number of pairs at distance m can be rescaled to yield the same number of unit distances.",
+   "para": 19,
+   "span": "any construction of a point set ${P}$ with a given value of ${d_m(P)}$ can be rescaled to another point set",
+   "explanatory_status": "verified_only",
+   "status_reason": "basic geometric scaling"
+  },
+  {
+   "id": "n6",
+   "type": "method",
+   "statement": "The constructions use elements of a ring of algebraic integers B up to a certain height.",
+   "para": 20,
+   "span": "involve taking all the elements of a certain ring ${B}$ of algebraic integers up to some height",
+   "explanatory_status": "verified_only",
+   "status_reason": "general strategy stated by the author"
+  },
+  {
+   "id": "n7",
+   "type": "assumption",
+   "statement": "Assume m is the product of t primes of size roughly T, where T is proportional to t log t.",
+   "para": 21,
+   "span": "assume to all have comparable magnitude, thus ${p_i \\asymp T}$ for some ${T}$",
+   "explanatory_status": "verified_only",
+   "status_reason": "parameter choice for the construction"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "If m splits into Dt primes in B, conjugate pairs generate 2^{Dt/2} solutions to the distance equation.",
+   "para": 22,
+   "span": "By selecting one element from each pair and multiplying, this generates ${2^{Dt/2}}$ solutions to (3) in ${B}$",
+   "explanatory_status": "derived",
+   "status_reason": "follows from prime splitting and conjugation symmetry"
+  },
+  {
+   "id": "n9",
+   "type": "proposition",
+   "statement": "The number of points n in B of height O(m^{1/2}) is approximately T^{Dt/2}.",
+   "para": 24,
+   "span": "n \\approx (m^{1/2})^D \\approx T^{D t / 2}",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the rank D of B and the height bound"
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "The number of distance-m pairs is heuristically bounded below by n^{1 + \\log 2 / \\log t}.",
+   "para": 26,
+   "span": "d_m(P) \\gtrapprox n 2^{Dt/2} \\approx n^{1 + \\frac{\\log 2}{\\log T}} \\approx n^{1 + \\frac{\\log 2}{\\log t}}",
+   "explanatory_status": "derived",
+   "status_reason": "combines the number of solutions with the size of n"
+  },
+  {
+   "id": "n11",
+   "type": "method",
+   "statement": "Instead of exact distance, weaken the condition to a congruence modulo mB.",
+   "para": 33,
+   "span": "weaken the target equation (3) to a congruence equation",
+   "explanatory_status": "verified_only",
+   "status_reason": "methodological shift to avoid unique factorization issues"
+  },
+  {
+   "id": "n12",
+   "type": "assumption",
+   "statement": "Let m be the product of t primes congruent to 1 mod 4, with T proportional to t log t.",
+   "para": 40,
+   "span": "product ${m = p_1 \\dots p_t}$ of ${t}$ (rational) primes of size ${\\asymp T}$",
+   "explanatory_status": "verified_only",
+   "status_reason": "specific parameter choice for Theorem 3"
+  },
+  {
+   "id": "n13",
+   "type": "assumption",
+   "statement": "Let q_1 to q_g be g primes of size G, with G proportional to g log g.",
+   "para": 41,
+   "span": "distinct medium-sized (rational) primes ${q_1,\\dots,q_g}$ of size ${\\asymp G}$",
+   "explanatory_status": "verified_only",
+   "status_reason": "specific parameter choice for Theorem 3"
+  },
+  {
+   "id": "n14",
+   "type": "method",
+   "statement": "Work in the number field generated by i and the square roots of the g primes.",
+   "para": 42,
+   "span": "work in the number field \\displaystyle {\\bf Q}(i, \\sqrt{q_1}, \\dots, \\sqrt{q_g})",
+   "explanatory_status": "verified_only",
+   "status_reason": "definition of the field for Theorem 3"
+  },
+  {
+   "id": "n15",
+   "type": "proposition",
+   "statement": "The covolume of the lattice B is bounded by G^{O(gD)}.",
+   "para": 47,
+   "span": "covolume of the lattice, which up to lower order terms is basically ${(\\sqrt{q_1} \\dots \\sqrt{q_g})^D}$",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the Walsh-Fourier transform embedding"
+  },
+  {
+   "id": "n16",
+   "type": "proposition",
+   "statement": "Any sublattice of B of index I contains a vector of height O(I^{1/D} G^{O(g)}).",
+   "para": 48,
+   "span": "any sublattice of ${B}$ of index ${I}$ will contain a vector of length ${O(I^{1/D} G^{O(g)})}$",
+   "explanatory_status": "miracle",
+   "status_reason": "relies on a specific form of Minkowski's convex body theorem not held by the reader"
+  },
+  {
+   "id": "n17",
+   "type": "proposition",
+   "statement": "A sublattice of index m^{D/2} satisfying the congruence condition contains an element of height O(m^{1/2} G^{O(g)}).",
+   "para": 51,
+   "span": "contain a non-zero element ${w}$ of height ${O(m^{1/2} G^{O(g)})}$",
+   "explanatory_status": "derived",
+   "status_reason": "applies the Minkowski bound to the specific index"
+  },
+  {
+   "id": "n18",
+   "type": "proposition",
+   "statement": "There are at least 2^{tD/4} sublattices of index m^{D/2} that satisfy the congruence condition.",
+   "para": 52,
+   "span": "find at least ${2^{tD/4}}$ different sublattices ${\\Lambda}$ of index ${m^{D/2}}$ that obey (9)",
+   "explanatory_status": "derived",
+   "status_reason": "derived via the Chinese remainder theorem and local structure"
+  },
+  {
+   "id": "n19",
+   "type": "proposition",
+   "statement": "The structure of B/pB allows generating 2^{D/4} subspaces per prime that satisfy the condition.",
+   "para": 58,
+   "span": "generate either ${2^{D/2}}$ or ${2^{D/4}}$ different subspaces ${V}$ of dimension ${D/2}$",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the isomorphism of B/pB to products of finite fields"
+  },
+  {
+   "id": "n20",
+   "type": "proposition",
+   "statement": "Pigeonholing yields at least 2^{tD/4} / O(G)^{O(gD)} solutions to the exact distance equation.",
+   "para": 59,
+   "span": "by pigeonholing one can now also get at least at least ${2^{tD/4} / O(G)^{O(gD)}}$ solutions",
+   "explanatory_status": "derived",
+   "status_reason": "pigeonholes the congruence solutions into exact solutions"
+  },
+  {
+   "id": "n21",
+   "type": "proposition",
+   "statement": "Choosing g proportional to t / log t recovers the bound in Theorem 3.",
+   "para": 62,
+   "span": "choose ${g}$ to be a small multiple of ${t / \\log t}$ , then we soon calculate that ${\\log t \\asymp \\log\\log\\log n}$",
+   "explanatory_status": "derived",
+   "status_reason": "optimizes parameters to yield the final asymptotic"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n2",
+   "to": "n10",
+   "type": "derives"
+  },
+  {
+   "from": "n4",
+   "to": "n21",
+   "type": "derives"
+  },
+  {
+   "from": "n8",
+   "to": "n7",
+   "type": "assumes"
+  },
+  {
+   "from": "n9",
+   "to": "n7",
+   "type": "assumes"
+  },
+  {
+   "from": "n10",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n10",
+   "to": "n9",
+   "type": "depends_on"
+  },
+  {
+   "from": "n15",
+   "to": "n13",
+   "type": "assumes"
+  },
+  {
+   "from": "n15",
+   "to": "n14",
+   "type": "depends_on"
+  },
+  {
+   "from": "n16",
+   "to": "n15",
+   "type": "depends_on"
+  },
+  {
+   "from": "n17",
+   "to": "n16",
+   "type": "derives"
+  },
+  {
+   "from": "n17",
+   "to": "n11",
+   "type": "depends_on"
+  },
+  {
+   "from": "n18",
+   "to": "n19",
+   "type": "derives"
+  },
+  {
+   "from": "n19",
+   "to": "n14",
+   "type": "depends_on"
+  },
+  {
+   "from": "n20",
+   "to": "n17",
+   "type": "depends_on"
+  },
+  {
+   "from": "n20",
+   "to": "n18",
+   "type": "depends_on"
+  },
+  {
+   "from": "n21",
+   "to": "n20",
+   "type": "derives"
+  },
+  {
+   "from": "n21",
+   "to": "n12",
+   "type": "assumes"
+  },
+  {
+   "from": "n21",
+   "to": "n13",
+   "type": "assumes"
+  },
+  {
+   "from": "n21",
+   "to": "n5",
+   "type": "depends_on"
+  }
+ ],
+ "_meta": {
+  "document": "vc3_r2",
+  "operator": "OP_B",
+  "model": "gemini-3.1-pro-preview",
+  "family": "google",
+  "reader_model": "M-nt",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

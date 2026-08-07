@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "We have thus divided our problem into two parts. The child programme and the education process.",
+  "graph_evidence": "n33; no single restated-problem node has derivation edges to separate nodes for the child programme and the education process.",
+  "reasoning": "The text presents “our problem” as the generative object that is divided into the two parts named by the author. The graph has n33 merging the proposed child-machine method and education process, but it does not provide one generative problem node from which derivation edges originate to the two separable goals."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "We have thus divided our problem into two parts. The child programme and the education process.",
+  "graph_evidence": "n33 merges both goals; there are no distinct nodes for “The child programme” and “the education process” with decomposition edges from the restated problem.",
+  "reasoning": "The author states a two-part decomposition: the child programme and the education process. The graph mentions both in n33 but does not recover them as distinct nodes, so the decomposition is merged rather than represented as the author divided it.",
+  "goals_stated": 2,
+  "goals_recovered": 0,
+  "goals_merged_or_split": 2
+ },
+ "T3": {
+  "verdict": "not_recovered",
+  "author_declaration": "The reader must accept it as a fact that digital computers can be constructed, and indeed have been constructed, according to the principles we have described, and that they can in fact mimic the actions of a human computer very closely. / Again I do not know what the right answer is, but I think both approaches should be tried.",
+  "graph_evidence": "n11 corresponds to the accepted fact but is marked derived, not miracle; no node corresponds to the unresolved choice of best approach; n15 is marked miracle although the author derives universality in the surrounding text.",
+  "reasoning": "The author explicitly marks at least two residuals: the reader must accept the construction/mimicry fact, and the author does not know which starting approach is right. The graph misses those residual markings and also marks n15 as miracle even though the author gives an explanatory derivation for digital-computer universality.",
+  "residuals_marked_by_author": 2,
+  "missed_residuals": 2,
+  "false_residuals": 1
+ },
+ "_meta": {
+  "document": "vc2",
+  "graph_operator": "OP_B",
+  "rater": "RT_1"
+ }
+}

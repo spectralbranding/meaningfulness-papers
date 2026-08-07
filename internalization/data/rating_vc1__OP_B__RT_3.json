@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "Our objective is now to find data X, F that obeys three separate properties",
+  "graph_evidence": "n7 corresponds to the objective but has a derivation edge only to n22; goals n14 and n15 are reached only through the intermediate node n17, with no direct derivation edges from n7 to them.",
+  "reasoning": "The text presents the objective of finding X and F satisfying the three properties as the generative object. The graph contains node n7 stating that objective, but the required single node with derivation edges to all three goals (n15, n14, n22) is absent; n7 derives n22 directly but connects to n14 and n15 only indirectly via n17."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "Our objective is now to find data X, F that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C^3 by polynomial changes of variable.",
+  "graph_evidence": "The three goals are distinct nodes n15 (local injectivity), n14 (not globally injective), and n22 (isomorphism), but the restated problem node n7 has a direct edge only to n22; edges to n14 and n15 are mediated by node n17 rather than connecting directly from the restated problem.",
+  "reasoning": "The author's decomposition into three separable goals is clear, and the graph does not merge or split any goal. However, the decomposition is not directly represented by edges from the restated problem to each goal node, as required for recovery.",
+  "goals_stated": 3,
+  "goals_recovered": 3,
+  "goals_merged_or_split": 0
+ },
+ "T3": {
+  "verdict": "recovered",
+  "author_declaration": "The miracle is that, with a good choice of V, we can also obtain (c) and obtain the desired counterexample to the Jacobian conjecture: despite appearances, the variety (9) is in fact equivalent to the affine space C^3 by polynomial changes of variable!",
+  "graph_evidence": "Node n18, which marks the choice of the specific slice, is tagged with explanatory_status \"miracle\"; no other node carries that status, and all derived steps have status \"derived\" or \"verified_only\".",
+  "reasoning": "The author explicitly marks the affine miracle of the slice choice as unexplained, and the graph captures this in node n18. No steps the author derives are falsely marked as miracles, so both missed and false residual counts are zero.",
+  "residuals_marked_by_author": 1,
+  "missed_residuals": 0,
+  "false_residuals": 0
+ },
+ "_meta": {
+  "document": "vc1",
+  "graph_operator": "OP_B",
+  "rater": "RT_3"
+ }
+}

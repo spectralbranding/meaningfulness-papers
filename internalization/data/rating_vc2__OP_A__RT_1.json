@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "Our problem then is to find out how to programme these machines to play the game.",
+  "graph_evidence": "n98, n101, n103; no single node has derivation edges to distinct child-programme and education-process goal nodes",
+  "reasoning": "The text presents the programming problem as the object that is then divided into separable parts. The graph has nodes related to the problem and its proposed child-machine strategy, but it does not contain one generative problem node from which derivation edges to the two stated goals originate."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "We have thus divided our problem into two parts. The child programme and the education process.",
+  "graph_evidence": "n103 merges both stated parts in one node; n101 also combines simulating the child and subjecting it to education rather than separating them",
+  "reasoning": "The author states exactly two separable parts: the child programme and the education process. The graph mentions both, but it does not recover them as distinct goal nodes with decomposition edges from the restated problem.",
+  "goals_stated": 2,
+  "goals_recovered": 0,
+  "goals_merged_or_split": 2
+ },
+ "T3": {
+  "verdict": "not_recovered",
+  "author_declaration": "The reader must accept it as a fact that digital computers can be constructed, and indeed have been constructed, according to the principles we have described, and that they can in fact mimic the actions of a human computer very closely. There are a number of results of mathematical logic which can be used to show that there are limitations to the powers of discrete-state machines.",
+  "graph_evidence": "n53 and n54 have explanatory_status \"miracle\"; n29 is marked \"derived\" rather than \"miracle\"",
+  "reasoning": "The graph correctly marks the invoked mathematical-logic limitations as miracle nodes, since the text cites them as results rather than deriving them. It misses the author's explicit instruction that the reader must accept the construction-and-mimicry fact, so not every author-marked residual is marked as a miracle.",
+  "residuals_marked_by_author": 3,
+  "missed_residuals": 1,
+  "false_residuals": 0
+ },
+ "_meta": {
+  "document": "vc2",
+  "graph_operator": "OP_A",
+  "rater": "RT_1"
+ }
+}

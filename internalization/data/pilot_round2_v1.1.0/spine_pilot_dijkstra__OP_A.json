@@ -1,0 +1,1037 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "boundary_condition",
+   "statement": "The talk is structured so that the first part defines \"radical\" and gives evidence for the assumption that computers are a radical novelty, and the second part draws scientific and educational consequences.",
+   "para": 4,
+   "span": "The second part of this talk pursues some of the scientific and educational consequences of the assumption that computers represent a radical novelty.",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stated plan of the text, checkable but not derived from anything the reader holds"
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "People habitually plan for the future using the vocabulary and concepts inherited from past experience, stretching them to fit.",
+   "para": 5,
+   "span": "The usual way in which we plan today for tomorrow is in yesterday's vocabulary.",
+   "explanatory_status": "verified_only",
+   "status_reason": "an observation about ordinary practice, checkable against the reader's general experience but not derived"
+  },
+  {
+   "id": "n3",
+   "type": "evidence",
+   "statement": "Linguists observe that word meanings evolve only slowly and gradually.",
+   "para": 5,
+   "span": "the meanings of words evolve over time, but also know that this is a slow and gradual process",
+   "explanatory_status": "verified_only",
+   "status_reason": "appeal to linguistic observation; not derivable from held terms"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "Coping with novelty by metaphor and analogy works under gradual change but breaks down under sharp discontinuity, where past experience is irrelevant and metaphors mislead.",
+   "para": 6,
+   "span": "in the case of a sharp discontinuity, however, the method breaks down",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the account of borrowed vocabulary and the slowness of meaning-change in n2 and n3"
+  },
+  {
+   "id": "n5",
+   "type": "proposition",
+   "statement": "A \"radical\" novelty is defined as one for which the analogical method breaks down.",
+   "para": 6,
+   "span": "This is the situation that is characteristic for the \"radical\" novelty.",
+   "explanatory_status": "derived",
+   "status_reason": "definition fixed by the breakdown case identified in n4"
+  },
+  {
+   "id": "n6",
+   "type": "method",
+   "statement": "Radical novelty must be approached with a deliberately blank mind, treated as a dissociated topic and learned like a foreign language untranslatable into one's mother tongue.",
+   "para": 7,
+   "span": "one has to approach the radical novelty with a blank mind, consciously refusing to try to link it with what is already familiar",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n5: if the familiar is inadequate, linking to it must be refused"
+  },
+  {
+   "id": "n7",
+   "type": "proposition",
+   "statement": "Because coping with radical novelty demands hard work, both the adjustment and the novelties themselves are unwelcome.",
+   "para": 7,
+   "span": "adjusting to radical novelties is not a very popular activity, for it requires hard work",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the effort demanded by the method in n6"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "Radical novelties are so disturbing that they tend to be suppressed or ignored, and even the possibility of their existence is commonly denied.",
+   "para": 8,
+   "span": "radical novelties are so disturbing that they tend to be suppressed or ignored",
+   "explanatory_status": "derived",
+   "status_reason": "extends the unwelcomeness claim n7, and is backed by the historical and contemporary cases that follow"
+  },
+  {
+   "id": "n9",
+   "type": "evidence",
+   "statement": "Gauss suppressed his discovery of non-Euclidean geometry out of fear of the reception it would meet.",
+   "para": 9,
+   "span": "he decided to suppress his discovery of non-Euclidean geometry, thus leaving it to Bolyai and Lobatchewsky to receive the flak",
+   "explanatory_status": "verified_only",
+   "status_reason": "historical anecdote offered as evidence; not derived"
+  },
+  {
+   "id": "n10",
+   "type": "evidence",
+   "statement": "The Middle Ages combined rampant reasoning by analogy with near-total intellectual stagnation, and the two go together.",
+   "para": 9,
+   "span": "\"reasoning by analogy\" was rampant; another characteristic was almost total intellectual stagnation",
+   "explanatory_status": "derived",
+   "status_reason": "the pairing is explained by n4's account of analogy's failure"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "A very large fraction of the population treats gradual change as the only paradigm of history.",
+   "para": 10,
+   "span": "the fraction of the population for which gradual change seems to be all but the only paradigm of history is very large",
+   "explanatory_status": "verified_only",
+   "status_reason": "supported only by the author's reported personal observation"
+  },
+  {
+   "id": "n12",
+   "type": "evidence",
+   "statement": "The author's own observation found the number of such people much larger than he had expected.",
+   "para": 10,
+   "span": "when I started to observe it, their number turned out to be much larger than I had expected",
+   "explanatory_status": "verified_only",
+   "status_reason": "personal testimony offered as evidence"
+  },
+  {
+   "id": "n13",
+   "type": "evidence",
+   "statement": "The mathematical community tacitly assumes that mathematical activity, teaching and discovery will remain essentially unchanged, as illustrated by Robbins's argument that the human mind is at its capacity limit.",
+   "para": 11,
+   "span": "the vast majority of the mathematical community has never challenged its tacit assumption that doing mathematics will remain very much the same",
+   "explanatory_status": "verified_only",
+   "status_reason": "a reported attitude plus a quotation; checkable but not derived"
+  },
+  {
+   "id": "n14",
+   "type": "proposition",
+   "statement": "Robbins escapes the possibility of radical novelty by defining \"doing mathematics\" so as to exclude any alternative to traditional brain usage.",
+   "para": 13,
+   "span": "thus exorcizing the danger of radical novelty by the simple device of adjusting his definitions to his needs",
+   "explanatory_status": "derived",
+   "status_reason": "reads Robbins's quoted argument (n13) against the definition of radical novelty n5"
+  },
+  {
+   "id": "n15",
+   "type": "evidence",
+   "statement": "Prevailing educational practice takes almost imperceptible gradual change as its exclusive paradigm, disguising new material as familiar from arithmetic teaching up to tailored calculus courses.",
+   "para": 14,
+   "span": "the prevailing educational practice, for which gradual, almost imperceptible, change seems to be the exclusive paradigm",
+   "explanatory_status": "verified_only",
+   "status_reason": "illustrations from ordinary schooling, checkable by the reader but not derived"
+  },
+  {
+   "id": "n16",
+   "type": "proposition",
+   "statement": "An educational practice that fails to prepare the next generation for radical novelties is a serious shortcoming.",
+   "para": 14,
+   "span": "I consider the failure of an educational practice to prepare the next generation for the phenomenon of radical novelties a serious shortcoming",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n15 together with the need for the special method n6"
+  },
+  {
+   "id": "n17",
+   "type": "proposition",
+   "statement": "Radical novelties matter now because science and technology keep inflicting them while we remain ill-prepared, as relativity, quantum mechanics, the atom bomb and the pill show.",
+   "para": 15,
+   "span": "while we are ill-prepared to cope with them, science and technology have now shown themselves expert at inflicting them upon us",
+   "explanatory_status": "derived",
+   "status_reason": "combines the unpreparedness claims n8/n11 with cited cases"
+  },
+  {
+   "id": "n18",
+   "type": "proposition",
+   "statement": "Automatic computers embody not one but two radical novelties, and only by identifying them as such can the surrounding mythology be recognized.",
+   "para": 16,
+   "span": "automatic computers embody not only one radical novelty but two of them",
+   "explanatory_status": "verified_only",
+   "status_reason": "the central contention, announced here and only argued in the following paragraphs"
+  },
+  {
+   "id": "n19",
+   "type": "proposition",
+   "statement": "We cope with size and complexity by hierarchical decomposition, whose depth is roughly the logarithm of the ratio of the sizes of whole and smallest part.",
+   "para": 17,
+   "span": "the depth of a hierarchical decomposition is some sort of logarithm of the ratio of the \"sizes\" of the whole and the ultimate smallest parts",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted general principle illustrated by the town example; the logarithm relation is stated, not derived"
+  },
+  {
+   "id": "n20",
+   "type": "proposition",
+   "statement": "Computing spans a size ratio, from bit to hundreds of megabytes and microsecond to half an hour, that utterly baffles the imagination.",
+   "para": 17,
+   "span": "From a bit to a few hundred megabytes, from a microsecond to a half an hour of computing",
+   "explanatory_status": "verified_only",
+   "status_reason": "a factual comparison of magnitudes the reader can check from ordinary computing vocabulary"
+  },
+  {
+   "id": "n21",
+   "type": "proposition",
+   "statement": "The first radical novelty is that the programmer alone must bridge this gigantic ratio with one technology, thinking in conceptual hierarchies deeper than any mind faced before.",
+   "para": 18,
+   "span": "He has to be able to think in terms of conceptual hierarchies that are much deeper than a single mind ever needed to face before.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the decomposition principle n19 applied to the ratio n20"
+  },
+  {
+   "id": "n22",
+   "type": "proposition",
+   "statement": "The familiar analogy of the computer as a bigger, faster cash register is ridiculously shallow compared with the actual magnitude gap.",
+   "para": 19,
+   "span": "the analogy is ridiculously shallow: it is orders of magnitude worse than comparing, as a means of transportation",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the ratio in n20 contrasted with the thousand-fold speed ratio cited"
+  },
+  {
+   "id": "n23",
+   "type": "proposition",
+   "statement": "Almost all familiar mechanisms, and our self-image as mechanisms, are analogue: behaviour is a continuous and often monotonic function of parameters.",
+   "para": 20,
+   "span": "the vast majority of our mechanisms are viewed as analogue devices whose behaviour is over a large range a continuous function",
+   "explanatory_status": "verified_only",
+   "status_reason": "everyday illustrations (pencil, violin, hammer) checkable by the reader"
+  },
+  {
+   "id": "n24",
+   "type": "proposition",
+   "statement": "The second radical novelty is that the automatic computer is our first large-scale digital device.",
+   "para": 20,
+   "span": "The second radical novelty is that the automatic computer is our first large-scale digital device.",
+   "explanatory_status": "derived",
+   "status_reason": "contrast with the analogue majority n23 establishes the novelty"
+  },
+  {
+   "id": "n25",
+   "type": "proposition",
+   "statement": "In digitally encoded information the smallest perturbation, a single bit, can have drastic consequences, so no meaningful metric makes small changes give small effects.",
+   "para": 21,
+   "span": "there is no meaningful metric in which \"small\" changes and \"small\" effects go hand in hand",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the digital character n24 contrasted with continuity n23"
+  },
+  {
+   "id": "n26",
+   "type": "proposition",
+   "statement": "Viewing a program as a device analogous to familiar analogue mechanisms is tempting but highly dangerous.",
+   "para": 21,
+   "span": "To do so, however, is highly dangerous: the analogy is too shallow because a program is, as a mechanism, totally different",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n25's discontinuity together with n23's analogue expectations"
+  },
+  {
+   "id": "n27",
+   "type": "boundary_condition",
+   "statement": "Introducing redundancy or error correction does not essentially change the discontinuity picture.",
+   "para": 21,
+   "span": "the picture is not essentially changed by the introduction of redundancy or error correction",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted parenthetically without argument"
+  },
+  {
+   "id": "n28",
+   "type": "method",
+   "statement": "The evidence that computing's novelties are radical will be supplied by explaining a range of otherwise strange phenomena as efforts at hiding or denying the unfamiliar.",
+   "para": 23,
+   "span": "I shall do so by explaining a number of otherwise strange phenomena as frantic",
+   "explanatory_status": "verified_only",
+   "status_reason": "a declared argumentative strategy"
+  },
+  {
+   "id": "n29",
+   "type": "evidence",
+   "statement": "\"Software Engineering\" is a doomed discipline whose de facto charter is \"How to program if you cannot\", making its goal self-contradictory.",
+   "para": 24,
+   "span": "software engineering has accepted as its charter \"How to program if you cannot.\"",
+   "explanatory_status": "verified_only",
+   "status_reason": "an interpretive charge about a field; offered as a phenomenon, not derived"
+  },
+  {
+   "id": "n30",
+   "type": "evidence",
+   "statement": "The choice of the safe, familiar name \"engineering\" is a primitive naming superstition, shown to be purely symbolic when a manufacturer promoted all its programmers to \"software engineers\" overnight.",
+   "para": 26,
+   "span": "it hired, one night, hundreds of new \"software engineers\" by the simple device of elevating all its programmers",
+   "explanatory_status": "verified_only",
+   "status_reason": "an anecdote used as illustration of denial"
+  },
+  {
+   "id": "n31",
+   "type": "evidence",
+   "statement": "Measuring programmer productivity as lines of code produced per month reflects the illusion that programs are ordinary devices; lines should be booked as spent, not produced.",
+   "para": 27,
+   "span": "we should not regard them as \"lines produced\" but as \"lines spent\"",
+   "explanatory_status": "derived",
+   "status_reason": "instance of the device-illusion diagnosed in n26"
+  },
+  {
+   "id": "n32",
+   "type": "evidence",
+   "statement": "Quality control by testing persists although it was pointed out two decades ago that testing can show the presence of bugs but never their absence.",
+   "para": 28,
+   "span": "program testing may convincingly demonstrate the presence of bugs, but can never demonstrate their absence",
+   "explanatory_status": "derived",
+   "status_reason": "the persistence is explained as the device-illusion n26 at work"
+  },
+  {
+   "id": "n33",
+   "type": "evidence",
+   "statement": "The term \"software maintenance\" makes people believe programs and languages wear out, as with the oil company that thought its PASCAL programs did not last.",
+   "para": 29,
+   "span": "many people continue to believe that programs —and even programming languages themselves— are subject to wear and tear",
+   "explanatory_status": "derived",
+   "status_reason": "another instance of the device analogy n26"
+  },
+  {
+   "id": "n34",
+   "type": "evidence",
+   "statement": "The eager acceptance that software's pains are due to missing \"programming tools\" rests on an analogy as shallow as medieval reasoning.",
+   "para": 30,
+   "span": "the shallowness of the underlying analogy is worthy of the Middle Ages",
+   "explanatory_status": "derived",
+   "status_reason": "links the tool metaphor to the analogy failure n4/n26"
+  },
+  {
+   "id": "n35",
+   "type": "evidence",
+   "statement": "The popularity of Artificial Intelligence is explained by the frightening computer becoming less frightening when used to simulate a familiar noncomputer.",
+   "para": 31,
+   "span": "the frightening computer becomes less frightening if it is used only to simulate a familiar noncomputer",
+   "explanatory_status": "derived",
+   "status_reason": "applies the denial-of-novelty mechanism n8 to a new case, though the author admits it is contested"
+  },
+  {
+   "id": "n36",
+   "type": "proposition",
+   "statement": "All a computer can do is manipulate symbols and produce the results, in a discrete world whose numbers of symbols and manipulations are beyond imagining.",
+   "para": 34,
+   "span": "the only thing computers can do for us is to manipulate symbols and produce results of such manipulations",
+   "explanatory_status": "derived",
+   "status_reason": "rests on the discreteness n24 and the magnitude claim n20"
+  },
+  {
+   "id": "n37",
+   "type": "proposition",
+   "statement": "A program is best described as an abstract symbol manipulator that becomes concrete when a computer is supplied to it.",
+   "para": 35,
+   "span": "the program is an abstract symbol manipulator, which can be turned into a concrete one by supplying a computer",
+   "explanatory_status": "derived",
+   "status_reason": "a reformulation warranted by n36's account of what computers do"
+  },
+  {
+   "id": "n38",
+   "type": "proposition",
+   "statement": "It helps to view a program as a formula in a formal system, which puts the programmer's task as deriving that formula and explains why mathematics ignored programming.",
+   "para": 36,
+   "span": "It really helps to view a program as a formula.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n37's abstract manipulator, with the two stated benefits as its warrant"
+  },
+  {
+   "id": "n39",
+   "type": "proposition",
+   "statement": "The only reliable way to derive a program is by human symbol manipulation, so we build mechanical symbol manipulators by manipulating symbols ourselves.",
+   "para": 36,
+   "span": "We know of only one reliable way of doing that, viz. by means of symbol manipulation.",
+   "explanatory_status": "verified_only",
+   "status_reason": "the uniqueness of the reliable way is asserted, not argued"
+  },
+  {
+   "id": "n40",
+   "type": "proposition",
+   "statement": "Computing science is the study of the interplay between mechanized and human symbol manipulation, which places it beyond formal mathematics and applied logic and makes \"automatic programming\" a contradiction in terms.",
+   "para": 37,
+   "span": "computing science is —and will always be— concerned with the interplay between mechanized and human symbol manipulation",
+   "explanatory_status": "derived",
+   "status_reason": "closes the circle drawn by n36, n38 and n39"
+  },
+  {
+   "id": "n41",
+   "type": "proposition",
+   "statement": "In the long run computing science will transcend mathematics and logic by realizing part of Leibniz's Dream of symbolic calculation as an alternative to human reasoning.",
+   "para": 38,
+   "span": "by effectively realizing a significant part of Leibniz's Dream of providing symbolic calculation as an alternative to human reasoning",
+   "explanatory_status": "verified_only",
+   "status_reason": "a forward-looking expectation resting on an unheld historical reference"
+  },
+  {
+   "id": "n42",
+   "type": "evidence",
+   "statement": "This vision meets widespread opposition from mathematicians, business, compulsive programmers, computer engineering, the military, the soft sciences and the educational business.",
+   "para": 39,
+   "span": "it has met widespread —and sometimes even violent— opposition from all sorts of directions",
+   "explanatory_status": "derived",
+   "status_reason": "each listed group's motive is an instance of the denial mechanism n8"
+  },
+  {
+   "id": "n43",
+   "type": "proposition",
+   "statement": "Educational policy is determined almost entirely by extra-scientific circumstances rather than by scientific considerations from the subject taught.",
+   "para": 48,
+   "span": "it is hardly influenced by scientific considerations derived from the topics taught, and almost entirely determined by extra-scientific circumstances",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted diagnosis, illustrated only by rhetorical questions"
+  },
+  {
+   "id": "n44",
+   "type": "evidence",
+   "statement": "Flaherty's statement that the Canadian business elite dismisses academics as irrelevant and powerless illustrates doubts about academic rhetoric's reassuring answers.",
+   "para": 49,
+   "span": "the business elite dismisses traditional academics and intellectuals as largely irrelevant and powerless",
+   "explanatory_status": "verified_only",
+   "status_reason": "a quoted external claim used as illustration"
+  },
+  {
+   "id": "n45",
+   "type": "proposition",
+   "statement": "The predicted future of computing science education is business as usual: universities lacking courage to teach hard science and each infantilization of the curriculum hailed as progress.",
+   "para": 50,
+   "span": "The universities will continue to lack the courage to teach hard science, they will continue to misguide the students",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the extra-scientific determination of policy n43 and the illustration n44"
+  },
+  {
+   "id": "n46",
+   "type": "method",
+   "statement": "First suggestion: stop calling a bug a bug and call it an error, which puts blame on the programmer and turns an \"almost correct\" program into a wrong one.",
+   "para": 52,
+   "span": "no longer calling a bug a bug but by calling it an error",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the general injunction n6 against misleading familiar metaphors"
+  },
+  {
+   "id": "n47",
+   "type": "method",
+   "statement": "Second suggestion: never refer to parts of programs or equipment in anthropomorphic terminology, and forbid students to do so.",
+   "para": 53,
+   "span": "never\n refer to parts of programs or pieces of equipment in an anthropomorphic terminology",
+   "explanatory_status": "derived",
+   "status_reason": "an application of the refusal-to-link method n6"
+  },
+  {
+   "id": "n48",
+   "type": "proposition",
+   "statement": "The anthropomorphic metaphor is a handicap that has repeatedly caused avoidable confusion, being both misleading and paralyzing.",
+   "para": 54,
+   "span": "the anthropomorphic metaphor —for whose introduction we can blame John von Neumann— is an enormous handicap",
+   "explanatory_status": "derived",
+   "status_reason": "grounds the ban n47 in the shallow-analogy diagnosis n26 plus reported experience"
+  },
+  {
+   "id": "n49",
+   "type": "proposition",
+   "statement": "The metaphor is misleading because it treats the unfamiliar discrete in terms of the familiar continuous, and paralyzing because, persons acting in time, it forces operational reasoning about computational behaviours.",
+   "para": 55,
+   "span": "because persons exist and act \nin time\n, its adoption effectively prevents a departure from operational semantics",
+   "explanatory_status": "derived",
+   "status_reason": "spells out n48 using the discrete/continuous contrast n23-n25"
+  },
+  {
+   "id": "n50",
+   "type": "proposition",
+   "statement": "Operational reasoning is a tremendous waste of mental effort.",
+   "para": 55,
+   "span": "This is bad, because operational reasoning is a tremendous waste of mental effort.",
+   "explanatory_status": "derived",
+   "status_reason": "asserted here and then argued by the domino example and its transfer to programs"
+  },
+  {
+   "id": "n51",
+   "type": "proposition",
+   "statement": "To demonstrate something about all elements of a large set it is hopelessly inefficient to treat elements individually; the efficient argument uses the set's definition.",
+   "para": 56,
+   "span": "the efficient argument does not refer to individual elements at all and is carried out in terms of the set's definition",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated as the point to be illustrated; its warrant is the example that follows"
+  },
+  {
+   "id": "n52",
+   "type": "method",
+   "statement": "Define the figure Q as an 8 by 8 square with two opposite 1 by 1 corner squares removed, of area 62, and state the theorem that Q cannot be covered by 31 dominos.",
+   "para": 57,
+   "span": "The theorem is that the figure \nQ\n cannot be covered by 31 of such dominos.",
+   "explanatory_status": "verified_only",
+   "status_reason": "a constructed example, checkable by the reader without domain results"
+  },
+  {
+   "id": "n53",
+   "type": "method",
+   "statement": "The theorem can equivalently be stated as: no placement of 31 dominos on adjacent square pairs yields the figure Q.",
+   "para": 58,
+   "span": "no placement of 31 dominos will yield the figure \nQ",
+   "explanatory_status": "derived",
+   "status_reason": "a restatement of the construction n52 in placement terms"
+  },
+  {
+   "id": "n54",
+   "type": "method",
+   "statement": "One possible proof generates all possible placements and checks each, which is tremendously laborious.",
+   "para": 59,
+   "span": "generating all possible placements of dominos and verifying for each placement that it does not yield the figure",
+   "explanatory_status": "derived",
+   "status_reason": "the individual-element approach described in n51 applied to n53"
+  },
+  {
+   "id": "n55",
+   "type": "method",
+   "statement": "The simple proof colours the squares like a chessboard: each domino covers one white and one black square, but Q's white and black counts differ by two, so no placement yields Q.",
+   "para": 60,
+   "span": "each placement covers as many white squares as it covers black squares",
+   "explanatory_status": "derived",
+   "status_reason": "argues from the definition of Q n52, exactly as prescribed by n51"
+  },
+  {
+   "id": "n56",
+   "type": "proposition",
+   "statement": "The colouring argument is not only vastly shorter but strictly more powerful, since it proves the generalization to any rectangle with even sides, an infinite family exhaustion cannot handle.",
+   "para": 61,
+   "span": "it is also essentially more powerful, for it covers the generalization of",
+   "explanatory_status": "derived",
+   "status_reason": "compares n54 with n55 on the generalized case"
+  },
+  {
+   "id": "n57",
+   "type": "proposition",
+   "statement": "The moral is: deal with all elements of a set by ignoring them and working with the set's definition.",
+   "para": 62,
+   "span": "deal with all elements of a set by ignoring them and working with the set's definition",
+   "explanatory_status": "derived",
+   "status_reason": "generalized from the worked comparison n55-n56, confirming n51"
+  },
+  {
+   "id": "n58",
+   "type": "proposition",
+   "statement": "Since a program defines the set of its possible computations, meeting a specification must be shown by working with the program text while ignoring that it can be executed.",
+   "para": 63,
+   "span": "deal with all computations possible under control of a given program by ignoring them and working with the program",
+   "explanatory_status": "derived",
+   "status_reason": "the moral n57 applied to the set of computations defined by a program"
+  },
+  {
+   "id": "n59",
+   "type": "proposition",
+   "statement": "A programming language with formal syntax and proof rules is a formal system for which execution is only a model, and formal systems should be treated in their own right, so programs should be reasoned about without mentioning behaviours.",
+   "para": 64,
+   "span": "a formal system for which program execution provides only a model",
+   "explanatory_status": "verified_only",
+   "status_reason": "relies on the formal-system/model distinction, which this reader does not hold"
+  },
+  {
+   "id": "n60",
+   "type": "evidence",
+   "statement": "A demonstrated \"educational\" system visualized features of computations under the student's program, reinforcing precisely what the student must unlearn and thus causing lasting mental damage.",
+   "para": 66,
+   "span": "The system highlighted precisely what the student has to learn to ignore, it reinforced precisely what the student has to unlearn",
+   "explanatory_status": "derived",
+   "status_reason": "the harm is diagnosed using the ignore-the-computations principle n58"
+  },
+  {
+   "id": "n61",
+   "type": "proposition",
+   "statement": "A program by itself is only half a conjecture; the other half is the functional specification, and the programmer's task is to present such conjectures as proven theorems.",
+   "para": 67,
+   "span": "a program is no more than half a conjecture. The other half of the conjecture is the functional specification",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the formula view n38 and the specification-as-statement-about-all-computations claim n58"
+  },
+  {
+   "id": "n62",
+   "type": "method",
+   "statement": "Curriculum proposal part one: teach predicate calculus as boolean algebra to train manipulation of uninterpreted formulae, renaming {true,false} as {black,white} to sever links to intuition.",
+   "para": 69,
+   "span": "To further sever the links to intuition, we rename the values {true, false} of the boolean domain as {black, white}.",
+   "explanatory_status": "derived",
+   "status_reason": "implements the blank-mind method n6 and the formula view n38"
+  },
+  {
+   "id": "n63",
+   "type": "method",
+   "statement": "Curriculum proposal part two: teach a simple imperative language with few constructs and data types, whose semantics is defined entirely by the accompanying proof rules.",
+   "para": 70,
+   "span": "for whatever we introduce, the corresponding semantics is defined by the proof rules that go with it",
+   "explanatory_status": "derived",
+   "status_reason": "implements the formal-system view n59 in a teaching language"
+  },
+  {
+   "id": "n64",
+   "type": "method",
+   "statement": "Curriculum proposal part three: stress throughout that the programmer's main task is a formal proof that the program meets the formal specification, and use a language not implemented on campus so students cannot test.",
+   "para": 71,
+   "span": "we see to it that the programming language in question has not been implemented on campus",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n61's proof obligation and n58's injunction to ignore execution"
+  },
+  {
+   "id": "n65",
+   "type": "proposition",
+   "statement": "The objection that the author is out of touch with the real world fails, because real-world problems are mainly those left when effective solutions are refused.",
+   "para": 73,
+   "span": "the problems of the real world are primarily those you are left with when you refuse to apply their effective solutions",
+   "explanatory_status": "verified_only",
+   "status_reason": "a rebuttal by assertion rather than by derivation"
+  },
+  {
+   "id": "n66",
+   "type": "evidence",
+   "statement": "The objection that freshmen cannot learn such material is refuted by the fact that since the early 80's such a course has been given successfully to hundreds of freshmen each year.",
+   "para": 74,
+   "span": "since the early 80's, such an introductory programming course has successfully been given to hundreds of college freshmen each year",
+   "explanatory_status": "verified_only",
+   "status_reason": "reported experience offered as counter-evidence"
+  },
+  {
+   "id": "n67",
+   "type": "proposition",
+   "statement": "The objection that the course would frustrate students fails, because the manipulation rules are so few and simple that students soon discover a power surpassing their expectations.",
+   "para": 75,
+   "span": "the rules of manipulation are in this case so few and simple that very soon thereafter he makes the exciting discovery",
+   "explanatory_status": "verified_only",
+   "status_reason": "rests on the author's teaching experience rather than a derivation"
+  },
+  {
+   "id": "n68",
+   "type": "proposition",
+   "statement": "Universities should welcome rather than fear teaching radical novelties, since this willingness is the main safeguard against dictatorships.",
+   "para": 76,
+   "span": "it is their calling to welcome the opportunity to do so",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n16's shortcoming charge together with the rewarding results reported"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n4",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n3",
+   "to": "n4",
+   "type": "supports"
+  },
+  {
+   "from": "n5",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n6",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n7",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n8",
+   "to": "n7",
+   "type": "depends_on"
+  },
+  {
+   "from": "n9",
+   "to": "n8",
+   "type": "supports"
+  },
+  {
+   "from": "n10",
+   "to": "n4",
+   "type": "supports"
+  },
+  {
+   "from": "n12",
+   "to": "n11",
+   "type": "supports"
+  },
+  {
+   "from": "n13",
+   "to": "n11",
+   "type": "supports"
+  },
+  {
+   "from": "n14",
+   "to": "n13",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n15",
+   "to": "n11",
+   "type": "supports"
+  },
+  {
+   "from": "n16",
+   "to": "n15",
+   "type": "depends_on"
+  },
+  {
+   "from": "n16",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n17",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n18",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n21",
+   "to": "n19",
+   "type": "depends_on"
+  },
+  {
+   "from": "n21",
+   "to": "n20",
+   "type": "depends_on"
+  },
+  {
+   "from": "n21",
+   "to": "n18",
+   "type": "supports"
+  },
+  {
+   "from": "n22",
+   "to": "n20",
+   "type": "depends_on"
+  },
+  {
+   "from": "n22",
+   "to": "n21",
+   "type": "supports"
+  },
+  {
+   "from": "n24",
+   "to": "n23",
+   "type": "depends_on"
+  },
+  {
+   "from": "n24",
+   "to": "n18",
+   "type": "supports"
+  },
+  {
+   "from": "n25",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n26",
+   "to": "n25",
+   "type": "depends_on"
+  },
+  {
+   "from": "n26",
+   "to": "n23",
+   "type": "depends_on"
+  },
+  {
+   "from": "n27",
+   "to": "n25",
+   "type": "bounds"
+  },
+  {
+   "from": "n28",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n29",
+   "to": "n28",
+   "type": "supports"
+  },
+  {
+   "from": "n30",
+   "to": "n28",
+   "type": "supports"
+  },
+  {
+   "from": "n31",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n31",
+   "to": "n28",
+   "type": "supports"
+  },
+  {
+   "from": "n32",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n32",
+   "to": "n28",
+   "type": "supports"
+  },
+  {
+   "from": "n33",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n33",
+   "to": "n28",
+   "type": "supports"
+  },
+  {
+   "from": "n34",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n34",
+   "to": "n28",
+   "type": "supports"
+  },
+  {
+   "from": "n35",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n35",
+   "to": "n28",
+   "type": "supports"
+  },
+  {
+   "from": "n36",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n36",
+   "to": "n20",
+   "type": "depends_on"
+  },
+  {
+   "from": "n37",
+   "to": "n36",
+   "type": "depends_on"
+  },
+  {
+   "from": "n38",
+   "to": "n37",
+   "type": "depends_on"
+  },
+  {
+   "from": "n39",
+   "to": "n38",
+   "type": "depends_on"
+  },
+  {
+   "from": "n40",
+   "to": "n39",
+   "type": "depends_on"
+  },
+  {
+   "from": "n40",
+   "to": "n36",
+   "type": "depends_on"
+  },
+  {
+   "from": "n41",
+   "to": "n40",
+   "type": "depends_on"
+  },
+  {
+   "from": "n42",
+   "to": "n40",
+   "type": "depends_on"
+  },
+  {
+   "from": "n42",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n44",
+   "to": "n43",
+   "type": "supports"
+  },
+  {
+   "from": "n45",
+   "to": "n43",
+   "type": "depends_on"
+  },
+  {
+   "from": "n46",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n47",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n48",
+   "to": "n47",
+   "type": "supports"
+  },
+  {
+   "from": "n48",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n49",
+   "to": "n48",
+   "type": "derives"
+  },
+  {
+   "from": "n49",
+   "to": "n23",
+   "type": "depends_on"
+  },
+  {
+   "from": "n50",
+   "to": "n49",
+   "type": "depends_on"
+  },
+  {
+   "from": "n53",
+   "to": "n52",
+   "type": "depends_on"
+  },
+  {
+   "from": "n54",
+   "to": "n53",
+   "type": "depends_on"
+  },
+  {
+   "from": "n55",
+   "to": "n52",
+   "type": "depends_on"
+  },
+  {
+   "from": "n56",
+   "to": "n54",
+   "type": "depends_on"
+  },
+  {
+   "from": "n56",
+   "to": "n55",
+   "type": "depends_on"
+  },
+  {
+   "from": "n57",
+   "to": "n56",
+   "type": "depends_on"
+  },
+  {
+   "from": "n57",
+   "to": "n51",
+   "type": "supports"
+  },
+  {
+   "from": "n58",
+   "to": "n57",
+   "type": "depends_on"
+  },
+  {
+   "from": "n58",
+   "to": "n50",
+   "type": "supports"
+  },
+  {
+   "from": "n59",
+   "to": "n58",
+   "type": "supports"
+  },
+  {
+   "from": "n60",
+   "to": "n58",
+   "type": "depends_on"
+  },
+  {
+   "from": "n61",
+   "to": "n58",
+   "type": "depends_on"
+  },
+  {
+   "from": "n61",
+   "to": "n38",
+   "type": "depends_on"
+  },
+  {
+   "from": "n62",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n62",
+   "to": "n38",
+   "type": "depends_on"
+  },
+  {
+   "from": "n63",
+   "to": "n59",
+   "type": "depends_on"
+  },
+  {
+   "from": "n64",
+   "to": "n61",
+   "type": "depends_on"
+  },
+  {
+   "from": "n64",
+   "to": "n58",
+   "type": "depends_on"
+  },
+  {
+   "from": "n66",
+   "to": "n64",
+   "type": "supports"
+  },
+  {
+   "from": "n67",
+   "to": "n62",
+   "type": "depends_on"
+  },
+  {
+   "from": "n68",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n68",
+   "to": "n67",
+   "type": "depends_on"
+  }
+ ],
+ "_meta": {
+  "document": "pilot_dijkstra",
+  "operator": "OP_A",
+  "model": "claude-opus-5",
+  "family": "anthropic",
+  "reader_model": "M-gen",
+  "prompt_version": "internalization/1.1.0",
+  "schema_problems": []
+ }
+}

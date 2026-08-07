@@ -1,0 +1,25 @@
+{
+ "T1": {
+  "verdict": "recovered",
+  "author_declaration": "we will show Theorem 3 (Counterexample, reformulated) There exists an affine variety X⊂C^5 that is isomorphic to C^3 by polynomial changes of variable, and a polynomial map F:X→C^3 which is locally injective, but not globally injective.",
+  "graph_evidence": "n18",
+  "reasoning": "The text presents the multiplication map F(L,Q):=LQ on the symmetric-power spaces as the single generative construction from which the three goals are obtained by successive restriction and normalization. n18 is the unique node with outgoing derivation edges that reach the nodes realizing (a), (b) and (c)."
+ },
+ "T2": {
+  "verdict": "recovered",
+  "author_declaration": "Our objective is now to find data X, F:X→C^3 that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C^3 by polynomial changes of variable.",
+  "graph_evidence": "n15, n29, n31, n50",
+  "reasoning": "The author explicitly enumerates the three goals; the graph records them as distinct nodes (n31 for a, n29 for b, n50 for c) reached by separate derivation paths from the restated problem n13 via n15. goals_stated: 3, goals_recovered: 3, goals_merged_or_split: 0"
+ },
+ "T3": {
+  "verdict": "not_recovered",
+  "author_declaration": "The miracle is that, with a good choice of V, we can also obtain (c) … I do not have a completely satisfactory geometric explanation for this miracle, but one can verify it by the following coordinate computation.",
+  "graph_evidence": "n32, n35, n38",
+  "reasoning": "Author marks exactly two explanatory gaps as miracles (choice of V and the two-root case of D). Graph correctly tags n35 and n38 but also tags n32 (non-isomorphism of the quadric) as miracle, which the text presents only as an observed failure, not an unexplained residual. residuals_marked_by_author: 2, missed_residuals: 0, false_residuals: 1"
+ },
+ "_meta": {
+  "document": "vc1",
+  "graph_operator": "OP_A",
+  "rater": "RT_2"
+ }
+}

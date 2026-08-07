@@ -1,0 +1,29 @@
+{
+ "pairs": [
+  {
+   "a": "n1",
+   "b": "n3",
+   "confidence": "high"
+  },
+  {
+   "a": "n2",
+   "b": "n5",
+   "confidence": "medium"
+  },
+  {
+   "a": "n5",
+   "b": "n9",
+   "confidence": "medium"
+  },
+  {
+   "a": "n3",
+   "b": "n6",
+   "confidence": "high"
+  },
+  {
+   "a": "n6",
+   "b": "n11",
+   "confidence": "low"
+  }
+ ]
+}

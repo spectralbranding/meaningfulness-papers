@@ -1,0 +1,390 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "proposition",
+   "statement": "The Jacobian Conjecture states that a polynomial map with a non-zero constant Jacobian is invertible.",
+   "para": 2,
+   "span": "Let F: C^n -> C^n be a polynomial map in n complex variables, whose Jacobian det DF is a non-zero constant. Then F is invertible",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated as a known conjecture"
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "A polynomial map having a non-zero constant Jacobian is equivalent to it being locally invertible.",
+   "para": 3,
+   "span": "The condition that the Jacobian det DF is non-zero is equivalent to F being locally invertible.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the inverse function theorem and fundamental theorem of algebra, which the reader holds"
+  },
+  {
+   "id": "n3",
+   "type": "proposition",
+   "statement": "There exists a polynomial map in three variables with a non-zero constant Jacobian that is not invertible.",
+   "para": 5,
+   "span": "There exists a polynomial F : C^3 -> C^3 which has non-zero constant Jacobian, but is not invertible.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the explicit construction and verification provided later in the text"
+  },
+  {
+   "id": "n4",
+   "type": "method",
+   "statement": "An explicit polynomial map F is defined in three variables.",
+   "para": 8,
+   "span": "F(z_1,z_2,z_3) = \\Big((1+z_1 z_2)^3 z_3 + z_2^2 (1+z_1z_2) (4+3z_1z_2),",
+   "explanatory_status": "verified_only",
+   "status_reason": "explicit formula given"
+  },
+  {
+   "id": "n5",
+   "type": "evidence",
+   "statement": "The Jacobian determinant of the explicit map F is -2.",
+   "para": 12,
+   "span": "\\mathrm{det} DF = -2",
+   "explanatory_status": "verified_only",
+   "status_reason": "can be checked by direct calculation, which the reader can perform"
+  },
+  {
+   "id": "n6",
+   "type": "evidence",
+   "statement": "The explicit map F maps three distinct points to the same value, proving it is not injective.",
+   "para": 14,
+   "span": "F(0,0,-1/4) = F(1,-3/2, 13/2) = F(-1,3/2,13/2)",
+   "explanatory_status": "verified_only",
+   "status_reason": "can be checked by direct calculation"
+  },
+  {
+   "id": "n7",
+   "type": "proposition",
+   "statement": "There is an affine variety isomorphic to C^3 and a polynomial map from it to C^3 that is locally but not globally injective.",
+   "para": 31,
+   "span": "There exists an affine variety X \\subset C^5 that is isomorphic to C^3 by polynomial changes of variable, and a polynomial map F : X \\rightarrow C^3 which is locally injective, but not globally injective.",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the step-by-step construction of X and F"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "Theorem 3 implies Theorem 2 by composing the map with the isomorphism and using the equivalence of local injectivity and non-zero constant Jacobian.",
+   "para": 32,
+   "span": "Clearly one can get from Theorem 3 to Theorem 2 by composing with the isomorphism X \\cong C^3 and using the previously mentioned fact",
+   "explanatory_status": "derived",
+   "status_reason": "follows from standard composition of maps and the equivalence established in n2"
+  },
+  {
+   "id": "n9",
+   "type": "method",
+   "statement": "A multiplication map F is defined from pairs of linear and quadratic polynomials to cubic polynomials.",
+   "para": 56,
+   "span": "F(L,Q) := LQ.",
+   "explanatory_status": "verified_only",
+   "status_reason": "definition of a map"
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "The multiplication map F is not injective because of a scaling symmetry.",
+   "para": 69,
+   "span": "the map F clearly cannot be injective. This can already be seen from the scaling symmetry",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the explicit scaling symmetry shown"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "Even after quotienting by the scaling symmetry, the multiplication map is generically three-to-one.",
+   "para": 97,
+   "span": "the multiplication map F is generically non-injective in a three-to-one fashion.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the factorization of a cubic into three linear factors"
+  },
+  {
+   "id": "n12",
+   "type": "method",
+   "statement": "The resultant of a linear and quadratic polynomial is defined as a specific determinant.",
+   "para": 99,
+   "span": "\\mathrm{Res}(L,Q) = \\begin{vmatrix} a & b & 0 \\\\ 0 & a & b \\\\ c & d & e \\end{vmatrix} = a^2 e - abd + c b^2.",
+   "explanatory_status": "verified_only",
+   "status_reason": "standard definition"
+  },
+  {
+   "id": "n13",
+   "type": "method",
+   "statement": "The multiplication map is restricted to the subvariety where the resultant is 1.",
+   "para": 149,
+   "span": "\\{ (L,Q) \\in \\mathrm{Sym}^1(C^2) \\times \\mathrm{Sym}^2(C^2) : \\mathrm{Res}(L,Q) = 1\\}",
+   "explanatory_status": "verified_only",
+   "status_reason": "definition of a restricted domain"
+  },
+  {
+   "id": "n14",
+   "type": "proposition",
+   "statement": "The restricted map F is still not globally injective.",
+   "para": 153,
+   "span": "This map F is still not globally injective, as we can take the three pairs in (4) from before and apply the scaling",
+   "explanatory_status": "derived",
+   "status_reason": "follows from applying the scaling symmetry to the three factorizations"
+  },
+  {
+   "id": "n15",
+   "type": "proposition",
+   "statement": "The restricted map F is locally injective.",
+   "para": 163,
+   "span": "This establishes the local injectivity property (a).",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the perturbation argument on the roots of the polynomials"
+  },
+  {
+   "id": "n16",
+   "type": "method",
+   "statement": "The map is further restricted to a three-dimensional affine slice V of the cubic polynomials.",
+   "para": 166,
+   "span": "F(L,Q) \\in V\\}",
+   "explanatory_status": "verified_only",
+   "status_reason": "definition of a further restriction"
+  },
+  {
+   "id": "n17",
+   "type": "proposition",
+   "statement": "The map restricted to V retains local injectivity and global non-injectivity.",
+   "para": 182,
+   "span": "So we have retained properties (a) and (b).",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the properties of the previous restriction and the genericity of V"
+  },
+  {
+   "id": "n18",
+   "type": "method",
+   "statement": "By choosing a specific slice corresponding to a differential operator with two identical roots, the variety is described explicitly in coordinates.",
+   "para": 212,
+   "span": "\\{ (a,b,c,d,e) \\in C^5 : a^2 e - abd + cb^2 = 1; ad + bc = 1 \\}.",
+   "explanatory_status": "miracle",
+   "status_reason": "the choice of differential operator and its geometric meaning is beyond the reader's held terms"
+  },
+  {
+   "id": "n19",
+   "type": "proposition",
+   "statement": "For a non-zero, the variety is birationally equivalent to C^3.",
+   "para": 237,
+   "span": "Thus we have a nice birational equivalence",
+   "explanatory_status": "derived",
+   "status_reason": "follows from algebraic substitution solving for d and e"
+  },
+  {
+   "id": "n20",
+   "type": "proposition",
+   "statement": "The fiber at a=0 is also affine, having a unique solution for b and c.",
+   "para": 272,
+   "span": "So the fiber here is also affine:",
+   "explanatory_status": "derived",
+   "status_reason": "follows from solving the equations cb^2=1 and bc=1"
+  },
+  {
+   "id": "n21",
+   "type": "method",
+   "statement": "An asymptotic analysis yields a global polynomial change of variables parameterizing the variety.",
+   "para": 350,
+   "span": "which completely parameterizes the variety (10) by polynomial combinations of three coordinates a,y,z.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the big-O expansion and algebraic manipulation"
+  },
+  {
+   "id": "n22",
+   "type": "proposition",
+   "statement": "The variety is isomorphic to C^3, establishing property (c) and completing Theorem 3.",
+   "para": 354,
+   "span": "This already gives (c) and thus completes the proof of Theorem",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the global polynomial parameterization"
+  },
+  {
+   "id": "n23",
+   "type": "method",
+   "statement": "The parameterization yields an explicit polynomial map from (a,y,z) to C^3.",
+   "para": 371,
+   "span": "(a,y,z) \\mapsto (G_1(a,y,z), G_2(a,y,z), G_3(a,y,z))",
+   "explanatory_status": "derived",
+   "status_reason": "follows from substituting the parameterization into the restricted map F"
+  },
+  {
+   "id": "n24",
+   "type": "evidence",
+   "statement": "The Jacobian of the resulting map is -1.",
+   "para": 374,
+   "span": "one can calculate that the Jacobian is -1.",
+   "explanatory_status": "verified_only",
+   "status_reason": "can be checked by direct calculation"
+  },
+  {
+   "id": "n25",
+   "type": "proposition",
+   "statement": "The constructed map matches the original explicit example up to trivial changes of variable.",
+   "para": 376,
+   "span": "This is essentially the original example up to trivial changes of variable;",
+   "explanatory_status": "verified_only",
+   "status_reason": "can be checked by comparing the formulas"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n2",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n3",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n3",
+   "to": "n5",
+   "type": "supports"
+  },
+  {
+   "from": "n3",
+   "to": "n6",
+   "type": "supports"
+  },
+  {
+   "from": "n8",
+   "to": "n7",
+   "type": "derives"
+  },
+  {
+   "from": "n8",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n10",
+   "to": "n9",
+   "type": "depends_on"
+  },
+  {
+   "from": "n11",
+   "to": "n9",
+   "type": "depends_on"
+  },
+  {
+   "from": "n13",
+   "to": "n9",
+   "type": "depends_on"
+  },
+  {
+   "from": "n13",
+   "to": "n12",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n13",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n11",
+   "type": "depends_on"
+  },
+  {
+   "from": "n15",
+   "to": "n13",
+   "type": "depends_on"
+  },
+  {
+   "from": "n16",
+   "to": "n13",
+   "type": "depends_on"
+  },
+  {
+   "from": "n17",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n17",
+   "to": "n14",
+   "type": "depends_on"
+  },
+  {
+   "from": "n17",
+   "to": "n15",
+   "type": "depends_on"
+  },
+  {
+   "from": "n18",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n19",
+   "to": "n18",
+   "type": "derives"
+  },
+  {
+   "from": "n20",
+   "to": "n18",
+   "type": "derives"
+  },
+  {
+   "from": "n21",
+   "to": "n18",
+   "type": "derives"
+  },
+  {
+   "from": "n22",
+   "to": "n21",
+   "type": "derives"
+  },
+  {
+   "from": "n22",
+   "to": "n19",
+   "type": "depends_on"
+  },
+  {
+   "from": "n22",
+   "to": "n20",
+   "type": "depends_on"
+  },
+  {
+   "from": "n7",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n7",
+   "to": "n17",
+   "type": "depends_on"
+  },
+  {
+   "from": "n23",
+   "to": "n21",
+   "type": "derives"
+  },
+  {
+   "from": "n24",
+   "to": "n23",
+   "type": "depends_on"
+  },
+  {
+   "from": "n25",
+   "to": "n23",
+   "type": "depends_on"
+  },
+  {
+   "from": "n25",
+   "to": "n4",
+   "type": "depends_on"
+  }
+ ],
+ "_meta": {
+  "document": "vc1",
+  "operator": "OP_B",
+  "model": "gemini-3.1-pro-preview",
+  "family": "google",
+  "reader_model": "M-alg",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

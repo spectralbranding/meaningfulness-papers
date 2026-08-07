@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "All the constructions of good point sets P basically involve taking all the elements of a certain ring B of algebraic integers up to some height.",
+  "graph_evidence": "n6 (no outgoing derivation edges to n2/n3/n4)",
+  "reasoning": "The text presents the ring B (or number-field construction varying t and D) as the single generative object. The graph contains no node that originates derivation edges to all three stated goals."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "Theorem 1 (Erdös construction) ... Theorem 2 (OpenAI construction) ... Theorem 3 (Mythos construction)",
+  "graph_evidence": "n2,n3,n4 (edges only from n2 to n10 and n4 to n21; n3 isolated)",
+  "reasoning": "Author states three distinct goals. Graph recovers the three nodes but supplies no common restated-problem node and omits derivation edges for the OpenAI goal, so the decomposition is not recovered.",
+  "goals_stated": 3,
+  "goals_recovered": 2,
+  "goals_merged_or_split": 0
+ },
+ "T3": {
+  "verdict": "not_recovered",
+  "author_declaration": "it came as some surprise recently when a team from OpenAI resolved the question of Erdös",
+  "graph_evidence": "n3 (miracle) and n16 (miracle)",
+  "reasoning": "Author marks only the full OpenAI result as relying on unexplained Golod–Shafarevich towers. Graph correctly flags n3 but incorrectly marks Minkowski-derived n16 as miracle, producing a false residual.",
+  "residuals_marked_by_author": 1,
+  "missed_residuals": 0,
+  "false_residuals": 1
+ },
+ "_meta": {
+  "document": "vc3_r2",
+  "graph_operator": "OP_B",
+  "rater": "RT_2"
+ }
+}

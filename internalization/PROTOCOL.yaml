@@ -1,0 +1,248 @@
+# Pre-declared run protocol -- Internalization (2026bk)
+#
+# STATUS: PRE-DECLARED 2026-08-09, BEFORE any extraction call was made.
+# Everything a result could be tuned against is fixed here: the operators, the
+# reader models, the centrality definition M3 pre-commits to, the counting
+# rules, and the way each pre-declared quantity is computed. Nothing in this
+# file may be revised in the light of a result. Thresholds live in
+# DECISION_RULE.md and are NOT restated here as editable values -- they are
+# read from that document by the scorer.
+#
+# Companion documents:
+#   DECISION_RULE.md   thresholds and stopping rules (pre-declared 2026-08-06)
+#   READER_MODEL.md    the three declared reader models (pre-declared 2026-08-09)
+#   SECOND_SPECIMEN.md specimen selection and the contamination threat
+
+protocol_version: "2026bk/1.0.0"
+prompt_version: "internalization/1.0.0"
+seed: 20260809
+declared_on: "2026-08-09"
+
+# ---------------------------------------------------------------------------
+# Operators. RC1 requires TWO INDEPENDENT operators. The corpus rule is that
+# two arms of the same model family are one operator run twice, so the arms are
+# drawn from different families and neither arm is the session that authored
+# the protocol.
+# ---------------------------------------------------------------------------
+extraction_operators:
+  - {id: OP_A, family: anthropic, model: claude-opus-5}
+  # Identifier corrected 2026-08-09 during the pilot smoke test, before any
+  # specimen was extracted: the served id on this endpoint is the -preview one.
+  - {id: OP_B, family: google, model: gemini-3.1-pro-preview}
+
+# Raters for the T1-T3 recovery targets. Blind to which operator produced the
+# graph they score, and drawn from families that did NOT produce it, so that no
+# arm grades its own extraction.
+target_raters:
+  - {id: RT_1, family: openai, model: gpt-5.5-2026-04-23}
+  - {id: RT_2, family: xai, model: grok-4.3}
+third_rater: {id: RT_3, family: deepseek, model: deepseek-v4-pro}
+
+# Cross-rendering node alignment for the ladder's preservation checks. A fourth
+# family again, and it never sees rung labels or rung order.
+ladder_aligner: {id: AL_1, family: xai, model: grok-4.3}
+
+replacement_rule: >-
+  A family substitutes only on hard API unavailability (endpoint or model
+  retired, or all retries exhausted on every call), and the substitution is
+  recorded in the run log and reported. A poor result is never a reason to
+  substitute an operator.
+
+# ---------------------------------------------------------------------------
+# Documents. Pilot material is neither specimen, per DECISION_RULE.md section 1.
+# ---------------------------------------------------------------------------
+pilot_documents:
+  pilot_dijkstra: {reader_model: M-gen}
+  pilot_thompson: {reader_model: M-gen}
+  pilot_2026ao:   {reader_model: M-gen}
+specimens:
+  vc1:    {reader_model: M-alg, chain: VC1, score_targets: true}
+  vc2:    {reader_model: M-phil, chain: VC2, score_targets: true}
+  vc3_r0: {reader_model: M-nt, chain: VC3, rung: R0, score_targets: false}
+  vc3_r1: {reader_model: M-nt, chain: VC3, rung: R1, score_targets: false}
+  vc3_r2: {reader_model: M-nt, chain: VC3, rung: R2, score_targets: true}
+
+# T1-T3 are scored only where the author states a decomposition and marks
+# residuals -- the expert rung and VC2, plus VC1. Not on R0 or R1.
+
+# ---------------------------------------------------------------------------
+# M3 pre-commitment. The paper says M3 "pre-commits to one centrality
+# definition and reports sensitivity across at least one alternative". This is
+# that commitment, made before any graph existed.
+# ---------------------------------------------------------------------------
+centrality:
+  primary:
+    id: support_mass
+    definition: >-
+      The number of distinct nodes that depend on v, directly or transitively,
+      in the dependency DAG -- the count of nodes that would lose their
+      derivation if v were removed. Computed on the transitive closure of the
+      depends_on relation with edges oriented dependent -> depended-upon, so
+      support_mass(v) = |ancestors(v)|. Cycles, which the schema forbids but an
+      extraction may produce, are broken by condensing each strongly connected
+      component to a single node and reporting the count of condensed nodes.
+    rationale: >-
+      Structural load is defined in the paper as the extent to which a node
+      carries the argument. The number of claims that stand on a node is the
+      most direct available reading of that definition, and unlike a
+      similarity-graph centrality it cannot be inflated by prose mass.
+  alternative:
+    id: reverse_pagerank
+    definition: >-
+      PageRank with damping 0.85 on the edge set reversed (depended-upon ->
+      dependent), so weight flows toward nodes that are depended upon. Reported
+      as the RC2 sensitivity.
+  tie_handling: "average ranks"
+
+# ---------------------------------------------------------------------------
+# Counting rules, fixed in advance because each of them could otherwise be
+# chosen after the fact to produce a preferred ordering.
+# ---------------------------------------------------------------------------
+counting_rules:
+  prose_mass: >-
+    Whitespace-delimited tokens of the prepared specimen text, with each inline
+    mathematical expression counted as ONE token regardless of its internal
+    length. Rationale: a rendering must not be credited with prose mass for
+    notation, and the rungs differ sharply in how much notation they carry.
+    Computed by prepare_specimens.py's manifest plus the math-token collapse in
+    score_ladder.py; both counts are reported.
+  structural_load_of_a_rendering: >-
+    Reported as three numbers, not one: node count, edge count, and mean
+    support_mass over the graph. P2's prediction is that these stay
+    approximately constant across the rungs while prose mass does not.
+  miracle_count: >-
+    MC(R | M) is the number of extracted nodes whose explanatory_status is
+    `miracle` under the declared reader model M, computed per operator. The
+    monotonic ordering MC(R0) > MC(R1) > MC(R2) is evaluated separately on each
+    operator's counts, and the ordering claim is treated as surviving ONLY if
+    it holds on BOTH arms. Declared this way in advance because a rule that
+    accepted "holds on one arm" would be unfalsifiable with two arms.
+  node_prose_mass: >-
+    The prose mass attributable to one node is the word count of the paragraph
+    it is anchored in, divided by the number of nodes that operator anchored in
+    that paragraph. Declared before scoring because any other split -- span
+    length, sentence count -- would give a different correlation, and choosing
+    among them after seeing the numbers is the failure mode this file exists to
+    prevent.
+  node_matching_within_a_document: >-
+    Two operators' nodes are the same node when their evidence spans overlap in
+    the source text with Jaccard >= 0.5 over character offsets, matched
+    one-to-one by maximum overlap. Span offsets are located by exact string
+    match, falling back to a normalized fuzzy match at ratio >= 0.90.
+  node_matching_across_renderings: >-
+    Spans cannot match across renderings, because the texts differ. The ladder
+    aligner proposes a one-to-one correspondence between two node lists given
+    only the node statements, shuffled, with no rung labels and no indication
+    of which list came from which rendering. A deterministic lexical alignment
+    (TF-IDF cosine with a Hungarian assignment, threshold 0.25) is computed as
+    a sensitivity check and both are reported.
+
+# ---------------------------------------------------------------------------
+# Quantities computed. Pre-declared, including the descriptive ones, so that
+# nothing appears in the results that was chosen after seeing a number.
+# ---------------------------------------------------------------------------
+quantities:
+  gated:
+    - "RC1 Layer 1: nominal Krippendorff alpha over node types on matched spans, with node-boundary precision and recall."
+    - "RC1 Layer 2: triple-overlap F1 over the agreed node set, against a random-graph null at the 99th percentile."
+    - "VC3: pairwise spine preservation R0-R1, R1-R2, R0-R2 at the Layer-2 threshold."
+    - "VC3: monotonic miracle ordering MC(R0) > MC(R1) > MC(R2), on both arms."
+    - "VC1, VC2, VC3-R2: recovery targets T1, T2, T3; success rule T2 and T3 both."
+  reported_not_gated:
+    - >-
+      RC1 Layer 2, UNTYPED variant: the same triple overlap with the edge type
+      erased, so that disagreement about whether an edge exists is separated
+      from disagreement about what to call it. Added 2026-08-09 after the pilot
+      showed the two arms drawing the same edge under different type names.
+      DIAGNOSTIC ONLY -- the gate remains the typed statistic at the threshold
+      DECISION_RULE.md declares, and this variant is never substituted for it.
+    - >-
+      RC1 Layer 2, EDGE RETENTION: the share of each operator's edges whose both
+      endpoints survive the restriction to the agreed node set. Declared
+      2026-08-09 during the pilot, before the specimen run. Diagnostic only: it
+      bounds how much of a low F1 can be read as disagreement about edges rather
+      than as a small denominator.
+    - "RC1 Layer 3: Spearman rank correlation of support_mass over the agreed node set."
+    - "RC2: rank stability between support_mass and reverse_pagerank."
+    - "VC3: prose mass against structural load across the rungs."
+    - "Per-node prose mass against support_mass within each specimen, Spearman. DESCRIPTIVE ONLY: this is NOT the corpus-level P2 correlation, which DECISION_RULE.md section 4 leaves un-pre-declared and which is therefore NOT run."
+  not_run:
+    - "M5 acceptance test. It requires actual readers; none were recruited. No clause of it is scored, and no comprehension claim is made."
+    - "M4 re-rendering. Downstream of a measurement stage whose result gates it."
+    - "The corpus-level prose-mass / structural-load correlation for P2. Its sampling frame is an open question in the spine and DECISION_RULE.md section 4 forbids declaring a threshold before it is settled."
+
+# ---------------------------------------------------------------------------
+# Run order. Fixed so that no later stage can inform an earlier one.
+# ---------------------------------------------------------------------------
+run_order:
+  - "1. prepare_specimens.py -- inputs fixed and hashed."
+  - "2. extract_spines.py --set pilot -- the pilot. May refine annotation guidelines, size the main run, or abort the study. May NOT move a threshold."
+  - "3. Pilot report written and the guideline version frozen."
+  - "4. extract_spines.py --set main -- both arms, all five specimen documents."
+  - "5. score_agreement.py, score_ladder.py, score_targets.py."
+  - "6. Results reported, including failure."
+
+# ---------------------------------------------------------------------------
+# Harness defects found while running, and what was done about them. Recorded
+# because a run that only reports its final configuration is indistinguishable
+# from one that was tuned until it worked. None of these touched a threshold,
+# a guideline, or a scored quantity.
+# ---------------------------------------------------------------------------
+run_notes:
+  - date: "2026-08-09"
+    defect: "One provider counts reasoning tokens against the output cap; a call spent its entire budget reasoning and returned an empty response."
+    fix: "Output cap raised to 48,000 and reasoning depth bounded at that provider's middle effort level."
+    affects: "Whether a call returns at all. No scored quantity."
+  - date: "2026-08-09"
+    defect: "Verbatim spans quoting mathematics are not valid JSON as emitted -- a span containing a LaTeX control sequence breaks the parse, and the operator has no way to know that while quoting faithfully."
+    fix: >-
+      The response parser repairs invalid escape sequences before parsing, and
+      prefers the literal reading over the control-character one when a
+      backslash is followed by letters: `\binom` is VALID JSON that parses to a
+      backspace and silently loses the macro's first letter, after which the
+      span can no longer be located in the source. The cost is at most a line
+      break, and line breaks are normalized away before matching. The raw
+      response is preserved verbatim in the call log either way, so this changes
+      what can be parsed, not what the operator said. Every saved graph was
+      checked for control-character corruption; none was found.
+    affects: "Whether a mathematical specimen can be extracted at all. No scored quantity."
+  - date: "2026-08-09"
+    defect: >-
+      On a dense mathematical document the google arm spent 62,912 tokens
+      reasoning and was truncated mid-graph with 2,620 tokens left to write in.
+      A token budget for reasoning is advisory on that provider and was ignored;
+      the level control is what binds.
+    fix: >-
+      Reasoning bounded at that provider's low level. DISCLOSED ASYMMETRY: the
+      bound reduces that arm's node counts, and two ladder rungs had already
+      been extracted unbounded. Because the ladder's ordering claim must not be
+      confounded with a configuration change, ALL THREE rungs were re-extracted
+      on that arm under the bounded configuration; the unbounded extractions are
+      retained under data/superseded_unbounded_armB/ rather than deleted. The
+      two non-ladder specimens on that arm remain as first extracted, which is
+      sound because no quantity is compared across specimens.
+    affects: "Node counts on the google arm. Disclosed rather than repaired away."
+
+reproducibility:
+  determinism: >-
+    Analysis is deterministic under seed 20260809. Extraction is not: the
+    operators are hosted models whose behaviour is epoch-pinned, so a re-run
+    yields a new epoch rather than a byte-identical replication. Every call is
+    logged to logs/*.jsonl with prompt hash, parameters, model version and
+    response, so the analysis is reproducible from the committed extractions
+    without any API access.
+  temperature: >-
+    Set to 0 where the provider honours it; omitted where the provider rejects
+    sampling parameters. Recorded per call in the log.
+  output_budget: >-
+    Both arms are given a 48,000-token output cap. On the anthropic arm that cap
+    covers reasoning AND answer together, so reasoning depth is additionally
+    bounded at the "medium" effort level; on the google arm reasoning also counts
+    against the cap, which is therefore doubled for that provider. Fixed during
+    the pilot after a call spent its entire budget reasoning and returned an
+    empty response. Recorded per call in the log.
+  prompt_version_freeze: >-
+    Guidelines are frozen at internalization/1.2.0. The pilot produced two
+    revisions (grain, then edge completeness and typing); no further revision is
+    permitted, because iterating on pilot material until a number improves would
+    convert a pre-declaration into a search. See PILOT_REPORT.md.

@@ -1,0 +1,191 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "boundary_condition",
+   "statement": "The framework applies only when authoring is version-controlled, claims are propositional, audience schemas diverge, and artifact volume exceeds human verification capacity.",
+   "span": "authoring is version-controlled (C1); claims are propositional rather than purely narrative (C2); audience-schema divergence is non-trivial (C3)",
+   "explanatory_status": "verified_only",
+   "status_reason": "The boundary conditions can be checked as stated but do not follow from earlier nodes or the reader's held terms."
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "Generative AI introduces a cost asymmetry where verifying the structural substrate is sub-linear in cost, while verifying the prose rendering is super-linear.",
+   "span": "AI verification cost on the spine scales sub-linearly with claim volume while verification cost on the rendering scales super-linearly with token count.",
+   "explanatory_status": "miracle",
+   "status_reason": "Relies on formal mathematical scaling functions and parameters that the reader model explicitly does not hold."
+  },
+  {
+   "id": "n3",
+   "type": "proposition",
+   "statement": "The Operator role must be split into structural-substrate operations performed by AI and judgment operations performed by humans.",
+   "span": "The Operator's intrinsic operations split into two classes with qualitatively different projection patterns.",
+   "explanatory_status": "derived",
+   "status_reason": "Derived from the cost asymmetry which makes this division of labor economically dominant."
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "The structural substrate and the prose rendering of a knowledge artifact can be optimized independently of one another.",
+   "span": "Meaning and meaningfulness are separately optimizable: $\\sigma : L \\to S$ without consulting any R",
+   "explanatory_status": "miracle",
+   "status_reason": "Relies on the formal extraction operator sigma stated in symbols, which the reader model does not hold."
+  },
+  {
+   "id": "n5",
+   "type": "proposition",
+   "statement": "Two different prose renderings of the same structural substrate will reach the same conclusions as long as both preserve the underlying structural elements.",
+   "span": "two prose renderings of the same spine arrive at the same set of conclusions iff both renderings preserve the spine's structural elements.",
+   "explanatory_status": "derived",
+   "status_reason": "Derived as a preservation result from the faithful extraction axiom."
+  },
+  {
+   "id": "n6",
+   "type": "assumption",
+   "statement": "A faithful extraction operator can successfully recover the locked structural elements of a spine from its rendering.",
+   "span": "when a rendering preserves the locked elements of the spine, the $\\sigma$ extraction operator recovers them.",
+   "explanatory_status": "miracle",
+   "status_reason": "Assumes the existence and reliability of the formal sigma extraction operator not held by the reader."
+  },
+  {
+   "id": "n7",
+   "type": "proposition",
+   "statement": "Organizations that publish the structural substrate of their work achieve higher rates of knowledge recombination than those that only publish prose.",
+   "span": "Organizations that publish the substrate of their knowledge artifacts as a first-class artifact achieve higher rates of knowledge recombination",
+   "explanatory_status": "derived",
+   "status_reason": "Derived from the sub-linear cost of AI querying the published substrate."
+  },
+  {
+   "id": "n8",
+   "type": "evidence",
+   "statement": "The Eisenhardt & Martin and Zollo & Winter papers on dynamic capabilities yield the same underlying substrate propositions despite using different vocabularies.",
+   "span": "The two formalisms yield the same substrate proposition: dynamic capabilities exist as a separable construct above operating routines.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Can be checked against the historical record of the cited management papers."
+  },
+  {
+   "id": "n9",
+   "type": "evidence",
+   "statement": "The Kulkarni et al. paper demonstrates independent authors arriving at the same underlying substrate propositions through different prose renderings.",
+   "span": "independent operators arriving at the same underlying substrate through different rendering choices.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Can be checked against the text of the Kulkarni et al. paper."
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "Organizations should govern and publish the structural substrate of their knowledge artifacts as a primary asset alongside the prose renderings.",
+   "span": "publish the substrate of their knowledge artifacts as a first-class governed asset alongside renderings.",
+   "explanatory_status": "derived",
+   "status_reason": "Derived from the recombination and verification capacity advantages of queryable substrates."
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "Organizations should redesign roles and incentives to reflect the partition between structural-substrate operations and judgment operations.",
+   "span": "redesign Operator roles around the structural-substrate / judgment partition rather than around the legacy task-level workflow.",
+   "explanatory_status": "derived",
+   "status_reason": "Derived from the cost asymmetry that makes the substrate-judgment partition economically dominant."
+  },
+  {
+   "id": "n12",
+   "type": "proposition",
+   "statement": "Academic peer review should evaluate the coherence of the structural substrate separately from the craft of the prose rendering.",
+   "span": "evaluate substrate coherence and prose craft as separate inputs rather than as a single rolled-up review verdict.",
+   "explanatory_status": "derived",
+   "status_reason": "Derived from the cost asymmetry which makes substrate review cheap for AI but prose review expensive for humans."
+  }
+ ],
+ "edges": [
+  {
+   "from": "n2",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n4",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n5",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n7",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n10",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n11",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n12",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n3",
+   "to": "n2",
+   "type": "derives"
+  },
+  {
+   "from": "n5",
+   "to": "n6",
+   "type": "assumes"
+  },
+  {
+   "from": "n5",
+   "to": "n8",
+   "type": "supports"
+  },
+  {
+   "from": "n5",
+   "to": "n9",
+   "type": "supports"
+  },
+  {
+   "from": "n7",
+   "to": "n2",
+   "type": "derives"
+  },
+  {
+   "from": "n7",
+   "to": "n3",
+   "type": "derives"
+  },
+  {
+   "from": "n10",
+   "to": "n7",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n3",
+   "type": "derives"
+  },
+  {
+   "from": "n12",
+   "to": "n2",
+   "type": "derives"
+  }
+ ],
+ "_meta": {
+  "document": "pilot_2026ao",
+  "operator": "OP_B",
+  "model": "gemini-3.1-pro-preview",
+  "family": "google",
+  "reader_model": "M-gen",
+  "prompt_version": "internalization/1.0.0",
+  "schema_problems": []
+ }
+}

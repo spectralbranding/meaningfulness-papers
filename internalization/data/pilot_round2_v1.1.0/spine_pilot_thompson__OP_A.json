@@ -1,0 +1,431 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "proposition",
+   "statement": "A self-reproducing program is defined as a source program that, when compiled and executed, outputs an exact copy of its own source.",
+   "para": 6,
+   "span": "source program that, when compiled and executed, will produce as output",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stipulated definition stated in plain terms, not derived from anything the reader holds"
+  },
+  {
+   "id": "n2",
+   "type": "evidence",
+   "statement": "Figure 1 exhibits an actual self-reproducing program written in C.",
+   "para": 7,
+   "span": "Figure 1 shows a self-reproducing program in the C programming",
+   "explanatory_status": "miracle",
+   "status_reason": "the demonstration lives in C source code, symbolic apparatus this reader does not hold, so no account of how it works is available"
+  },
+  {
+   "id": "n3",
+   "type": "proposition",
+   "statement": "Such a self-reproducing program can itself easily be written by another program.",
+   "para": 7,
+   "span": "This program can be easily written by another program",
+   "explanatory_status": "miracle",
+   "status_reason": "asserted as a property of the unreadable Figure 1 listing, with no argument the reader can follow"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "A self-reproducing program can carry an arbitrary amount of extra payload that is reproduced along with the reproducing algorithm.",
+   "para": 7,
+   "span": "will be reproduced along with the main algorithm",
+   "explanatory_status": "verified_only",
+   "status_reason": "the prose observation that even the comment is reproduced can be taken as stated, but no derivation is given"
+  },
+  {
+   "id": "n5",
+   "type": "assumption",
+   "statement": "The C compiler is itself written in C, so it must be compiled by an existing binary of itself.",
+   "para": 8,
+   "span": "C compiler is written in C",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stated fact about the tool; 'compiler' is held vocabulary but the fact is simply asserted"
+  },
+  {
+   "id": "n6",
+   "type": "proposition",
+   "statement": "C strings allow escape sequences so that unprintable characters such as newline can be written in source.",
+   "para": 8,
+   "span": "C allows a string construct to specify an",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stated language feature, checkable as described but not derivable from held terms"
+  },
+  {
+   "id": "n7",
+   "type": "proposition",
+   "statement": "The compiler's escape-interpreting code knows the machine's newline code in a portable way and perpetuates that knowledge each time it recompiles itself.",
+   "para": 11,
+   "span": "It \"knows\" in a completely portable way what character code is",
+   "explanatory_status": "miracle",
+   "status_reason": "the self-referential portability rests on Figure 2's code, which this reader cannot inspect"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "Adding a new escape '\\v' to the compiler source in portable form fails to compile, because the existing binary compiler does not yet know '\\v'.",
+   "para": 12,
+   "span": "we get a diagnostic. Obviously, since the binary version of the",
+   "explanatory_status": "derived",
+   "status_reason": "follows by ordinary logic from the compiler being compiled by its own prior binary and from the escape mechanism"
+  },
+  {
+   "id": "n9",
+   "type": "method",
+   "statement": "The compiler is 'trained' by writing the vertical tab as its literal ASCII value, decimal 11, which the old binary already accepts.",
+   "para": 12,
+   "span": "We look up on an ASCII chart that a",
+   "explanatory_status": "derived",
+   "status_reason": "is the direct remedy for the failure just established"
+  },
+  {
+   "id": "n10",
+   "type": "method",
+   "statement": "The binary produced from the trained source is installed as the official compiler, after which the source can be rewritten in the portable self-referencing form.",
+   "para": 12,
+   "span": "Now the old compiler accepts the new source. We install the resulting",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the training step once the new binary knows the escape"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "A compiler can thus be taught a fact once, after which a self-referencing definition in source suffices and the knowledge lives in the binary.",
+   "para": 13,
+   "span": "You simply tell it once, then you can use this",
+   "explanatory_status": "derived",
+   "status_reason": "generalizes the bootstrapping steps just carried out"
+  },
+  {
+   "id": "n12",
+   "type": "proposition",
+   "statement": "The compiler's high-level control is a loop that calls a routine 'compile' on each line of source.",
+   "para": 14,
+   "span": "the routine \"compile\" is called to compile the next line",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated as the content of Figure 5; taken on the author's word"
+  },
+  {
+   "id": "n13",
+   "type": "method",
+   "statement": "A small modification to that control routine makes the compiler deliberately miscompile any source matching a chosen pattern — a Trojan horse rather than a bug.",
+   "para": 14,
+   "span": "will deliberately miscompile source whenever a particular pattern is",
+   "explanatory_status": "verified_only",
+   "status_reason": "an intelligible modification of the stated compile loop, but presented via a figure rather than derived"
+  },
+  {
+   "id": "n14",
+   "type": "proposition",
+   "statement": "The planted pattern matched the UNIX login command and made the compiled login accept a particular known password, giving the author access as any user.",
+   "para": 15,
+   "span": "so that it would accept either the intended encrypted password",
+   "explanatory_status": "derived",
+   "status_reason": "an instance of the pattern-matching miscompilation just described"
+  },
+  {
+   "id": "n15",
+   "type": "proposition",
+   "statement": "Such blatant Trojan code left in the compiler source would be spotted by even casual inspection.",
+   "para": 15,
+   "span": "perusal of the source of the C compiler would raise suspicions.",
+   "explanatory_status": "verified_only",
+   "status_reason": "a plausible judgment asserted without argument"
+  },
+  {
+   "id": "n16",
+   "type": "method",
+   "statement": "A second Trojan horse is added whose pattern matches the C compiler itself and whose replacement code is a self-reproducing program that reinserts both Trojans.",
+   "para": 16,
+   "span": "self-reproducing program that inserts both Trojan horses into the",
+   "explanatory_status": "derived",
+   "status_reason": "combines the pattern-matching Trojan with the self-reproducing program's ability to carry payload"
+  },
+  {
+   "id": "n17",
+   "type": "method",
+   "statement": "The modified source is compiled once with the normal compiler to produce a bugged binary, which is installed as the official compiler — the learning phase of Stage II.",
+   "para": 16,
+   "span": "First we compile the modified source with the normal C compiler to",
+   "explanatory_status": "derived",
+   "status_reason": "applies the Stage II bootstrapping procedure to the Trojan"
+  },
+  {
+   "id": "n18",
+   "type": "proposition",
+   "statement": "The Trojan code can then be deleted from the compiler source, yet every future compilation of the compiler reinserts both Trojans, leaving login bugged with no trace in any source.",
+   "para": 16,
+   "span": "binary will reinsert the bugs whenever it is compiled.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the installed bugged binary plus the self-reproducing payload"
+  },
+  {
+   "id": "n19",
+   "type": "proposition",
+   "statement": "You cannot trust code you did not totally create yourself.",
+   "para": 17,
+   "span": "You can't trust code that you did not totally create",
+   "explanatory_status": "derived",
+   "status_reason": "drawn as the moral of the demonstrated source-invisible attack"
+  },
+  {
+   "id": "n20",
+   "type": "proposition",
+   "statement": "No amount of source-level verification or scrutiny protects a user from untrusted code.",
+   "para": 17,
+   "span": "No amount of source-level verification or scrutiny will protect you",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the attack leaving no trace in source anywhere"
+  },
+  {
+   "id": "n21",
+   "type": "proposition",
+   "statement": "The same attack could be mounted from any program-handling program, such as an assembler, a loader, or hardware microcode, not just a compiler.",
+   "para": 17,
+   "span": "program-handling program such as an assembler, a loader, or even",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted by analogy without a stated derivation for the other cases"
+  },
+  {
+   "id": "n22",
+   "type": "proposition",
+   "statement": "The lower the level at which such a bug is planted, the harder it is to detect, with microcode bugs nearly undetectable.",
+   "para": 17,
+   "span": "As the level of program gets lower, these bugs will",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted as a graded claim; no mechanism given for the difficulty of detection"
+  },
+  {
+   "id": "n23",
+   "type": "proposition",
+   "statement": "The acts of the celebrated 'hackers' are vandalism at best and probably trespass and theft at worst.",
+   "para": 17,
+   "span": "The acts performed by these kids are vandalism at best and",
+   "explanatory_status": "verified_only",
+   "status_reason": "a moral judgment stated outright, not derived from the technical argument"
+  },
+  {
+   "id": "n24",
+   "type": "proposition",
+   "statement": "Only the inadequacy of current criminal law spares these intruders serious prosecution, and companies are pressing to close that gap.",
+   "para": 17,
+   "span": "criminal code that saves the hackers from very serious prosecution.",
+   "explanatory_status": "verified_only",
+   "status_reason": "an assertion about the legal situation, checkable in principle but not argued here"
+  },
+  {
+   "id": "n25",
+   "type": "proposition",
+   "statement": "An explosive situation is brewing between public glamorization of intruders and the coming severity of punishment.",
+   "para": 18,
+   "span": "There is an explosive situation brewing.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the two stated trends set against each other"
+  },
+  {
+   "id": "n26",
+   "type": "proposition",
+   "statement": "Press, television and movies make heroes of vandals by calling them whiz kids.",
+   "para": 18,
+   "span": "television, and movies make heroes of vandals by calling them whiz",
+   "explanatory_status": "verified_only",
+   "status_reason": "an observation about media coverage offered without supporting instances"
+  },
+  {
+   "id": "n27",
+   "type": "proposition",
+   "statement": "The same acts will soon be punishable by years in prison.",
+   "para": 18,
+   "span": "the acts performed by these kids will soon be",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the stated legislative movement to toughen the criminal code"
+  },
+  {
+   "id": "n28",
+   "type": "evidence",
+   "statement": "Watching kids testify before Congress showed they are completely unaware of the seriousness of their acts.",
+   "para": 18,
+   "span": "It is clear that they are completely unaware of the",
+   "explanatory_status": "verified_only",
+   "status_reason": "first-hand observation reported by the author, not derivable from anything else here"
+  },
+  {
+   "id": "n29",
+   "type": "proposition",
+   "statement": "Breaking into a computer system must carry the same social stigma as breaking into a neighbour's house, regardless of whether the door was locked.",
+   "para": 18,
+   "span": "of breaking into a computer system has to have the same social stigma",
+   "explanatory_status": "derived",
+   "status_reason": "prescription drawn from the vandalism judgment and the observed cultural gap"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n2",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n3",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n4",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n7",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n7",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n8",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n8",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n8",
+   "to": "n7",
+   "type": "depends_on"
+  },
+  {
+   "from": "n9",
+   "to": "n8",
+   "type": "derives"
+  },
+  {
+   "from": "n10",
+   "to": "n9",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n10",
+   "type": "derives"
+  },
+  {
+   "from": "n13",
+   "to": "n12",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n13",
+   "type": "derives"
+  },
+  {
+   "from": "n15",
+   "to": "n13",
+   "type": "depends_on"
+  },
+  {
+   "from": "n16",
+   "to": "n13",
+   "type": "depends_on"
+  },
+  {
+   "from": "n16",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n16",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n15",
+   "to": "n16",
+   "type": "supports"
+  },
+  {
+   "from": "n17",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n17",
+   "to": "n11",
+   "type": "depends_on"
+  },
+  {
+   "from": "n18",
+   "to": "n17",
+   "type": "derives"
+  },
+  {
+   "from": "n19",
+   "to": "n18",
+   "type": "derives"
+  },
+  {
+   "from": "n20",
+   "to": "n18",
+   "type": "derives"
+  },
+  {
+   "from": "n21",
+   "to": "n19",
+   "type": "depends_on"
+  },
+  {
+   "from": "n22",
+   "to": "n21",
+   "type": "depends_on"
+  },
+  {
+   "from": "n24",
+   "to": "n23",
+   "type": "depends_on"
+  },
+  {
+   "from": "n27",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n25",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n25",
+   "to": "n27",
+   "type": "depends_on"
+  },
+  {
+   "from": "n28",
+   "to": "n29",
+   "type": "supports"
+  },
+  {
+   "from": "n23",
+   "to": "n29",
+   "type": "supports"
+  }
+ ],
+ "_meta": {
+  "document": "pilot_thompson",
+  "operator": "OP_A",
+  "model": "claude-opus-5",
+  "family": "anthropic",
+  "reader_model": "M-gen",
+  "prompt_version": "internalization/1.1.0",
+  "schema_problems": []
+ }
+}

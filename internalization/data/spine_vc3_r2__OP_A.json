@@ -1,0 +1,878 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "boundary_condition",
+   "statement": "The setting is a set P of n points in the plane identified with C, and d_1(P) counts ordered pairs whose displacement w satisfies w·conj(w)=1.",
+   "para": 1,
+   "span": "Suppose that one has a set ${P}$ of ${n}$ points in the plane, which we will think of as the complex plane",
+   "explanatory_status": "derived",
+   "status_reason": "reader holds the plane as C and Euclidean distance"
+  },
+  {
+   "id": "n2",
+   "type": "boundary_condition",
+   "statement": "Ordered pairs (p,q) and (q,p) are counted separately, which does not affect asymptotics.",
+   "para": 3,
+   "span": "we will count the pair ${(q,p)}$ separately from ${(p,q)}$ here",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stated counting convention, checkable but not derived"
+  },
+  {
+   "id": "n3",
+   "type": "proposition",
+   "statement": "The Erdős unit distance problem asks for the maximum of d_1(P) over n-point sets.",
+   "para": 4,
+   "span": "what is the largest possible value of ${d_1(P)}$ amongst all sets ${P}$ of cardinality ${n}$",
+   "explanatory_status": "derived",
+   "status_reason": "reader holds the unit-distance problem as a statement"
+  },
+  {
+   "id": "n4",
+   "type": "evidence",
+   "statement": "n equally spaced collinear points with unit spacing give the linear lower bound d_1(P)=2n-2.",
+   "para": 5,
+   "span": "one can obtain a linear construction with ${d_1(P) = 2n-2}$",
+   "explanatory_status": "derived",
+   "status_reason": "immediate count from held elementary notions"
+  },
+  {
+   "id": "n5",
+   "type": "proposition",
+   "statement": "Theorem 1: there are arbitrarily large point sets with d_1(P) ≫ n^{1+c/log log n}.",
+   "para": 6,
+   "span": "such that ${d_1(P) \\gg n^{1 +c / \\log\\log n}}$ for some absolute constant ${c > 0}$",
+   "explanatory_status": "derived",
+   "status_reason": "later derived from the heuristic numerology with fixed degree D"
+  },
+  {
+   "id": "n6",
+   "type": "proposition",
+   "statement": "The best known upper bound is d_1(P) ≪ n^{4/3}, due to Spencer, Szemerédi and Trotter.",
+   "para": 7,
+   "span": "with the best known upper bound being ${d_1(P) \\ll n^{4/3}}$ , established by by Spencer, Szemerédi, and Trotter",
+   "explanatory_status": "derived",
+   "status_reason": "reader holds the n^{4/3} upper bound as a known result"
+  },
+  {
+   "id": "n7",
+   "type": "evidence",
+   "statement": "For the parabola equation Im w = (Re w)^2, the n^{4/3} bound is attained by a Gaussian-integer rectangle of width ≍n^{1/3} and height ≍n^{2/3}.",
+   "para": 9,
+   "span": "as can be seen by taking ${P}$ to be a rectangle in the Gaussian integers of width ${\\asymp n^{1/3}}$",
+   "explanatory_status": "verified_only",
+   "status_reason": "an example the reader can check but whose count is not derived here"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "Any improvement of the n^{4/3} bound must use a property of the unit circle not shared by the parabola.",
+   "para": 9,
+   "span": "any improvement of the ${n^{4/3}}$ bound would have to exploit some special property of the unit circle",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the parabola extremal example"
+  },
+  {
+   "id": "n9",
+   "type": "proposition",
+   "statement": "Theorem 2 (OpenAI): there are arbitrarily large point sets with d_1(P) ≫ n^{1+c} for an absolute constant c>0.",
+   "para": 11,
+   "span": "such that ${d_1(P) \\gg n^{1 + c}}$ for some absolute constant ${c > 0}$",
+   "explanatory_status": "miracle",
+   "status_reason": "rests on the Golod–Shafarevich tower construction, not held and not derived in the text"
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "The Theorem 2 construction modifies Erdős's and relies on Golod–Shafarevich towers of field extensions.",
+   "para": 13,
+   "span": "uses some non-trivial amount of algebraic number theory, in particular the device of Golod–Shafarevich towers of field extensions",
+   "explanatory_status": "miracle",
+   "status_reason": "Golod–Shafarevich towers are explicitly not held and unexplained"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "Theorem 3 (Mythos): there are arbitrarily large point sets with d_1(P) ≫ n^{1+c/log log log n}.",
+   "para": 14,
+   "span": "such that ${d_1(P) \\gg n^{1 + c / \\log\\log\\log n}}$ for some absolute constant ${c > 0}$",
+   "explanatory_status": "derived",
+   "status_reason": "derived in section 1 from the quadratic-tower construction and final parameter choice"
+  },
+  {
+   "id": "n12",
+   "type": "proposition",
+   "statement": "Reinserting Golod–Shafarevich towers into the Mythos construction recovers Theorem 2.",
+   "para": 15,
+   "span": "by inserting Golod–Shafarevich towers back into the Mythos construction, one can recover the full strength of Theorem 2",
+   "explanatory_status": "miracle",
+   "status_reason": "asserted with no account of the tower mechanism, which the reader does not hold"
+  },
+  {
+   "id": "n13",
+   "type": "boundary_condition",
+   "statement": "The exposition's aim is to place the constructions on a common footing using as little algebraic number theory as possible.",
+   "para": 16,
+   "span": "an emphasis on trying to find the minimal route to either heuristically or rigorously recovering these results",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stated scope choice, not derived"
+  },
+  {
+   "id": "n14",
+   "type": "method",
+   "statement": "Rescaling by m^{-1/2} converts a set with d_m(P) pairs at squared distance m into one of equal cardinality with the same count of unit distances.",
+   "para": 19,
+   "span": "can be rescaled to another point set ${m^{-1/2} \\cdot P}$ of the same cardinality with the corresponding value of ${d_1(P)}$",
+   "explanatory_status": "derived",
+   "status_reason": "elementary scaling from held Euclidean distance"
+  },
+  {
+   "id": "n15",
+   "type": "method",
+   "statement": "It is convenient to take m asymptotically large, e.g. a product of several large primes.",
+   "para": 19,
+   "span": "convenient to work with values of ${m}$ that are asymptotically large, for instance the product of several large primes",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stated convenience choice, justified only retrospectively"
+  },
+  {
+   "id": "n16",
+   "type": "method",
+   "statement": "All the constructions take P to be all elements of a ring B of algebraic integers up to some height.",
+   "para": 20,
+   "span": "basically involve taking all the elements of a certain ring ${B}$ of algebraic integers up to some height",
+   "explanatory_status": "derived",
+   "status_reason": "uses held notions of ring of integers and counting"
+  },
+  {
+   "id": "n17",
+   "type": "proposition",
+   "statement": "Any ring of integers in a nontrivial bounded-degree extension of Q suffices for Theorem 1, always with c at most log 2.",
+   "para": 20,
+   "span": "any ring of integers in a non-trivial bounded degree field extension of ${{\\bf Q}}$ would suffice to recover Theorem 1",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the fixed-D branch of the numerology"
+  },
+  {
+   "id": "n18",
+   "type": "proposition",
+   "statement": "Going beyond Theorem 1 requires number fields of unbounded degree.",
+   "para": 20,
+   "span": "To go beyond this, one has to start considering number fields of unbounded degree",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the log n ≍ D t log t relation with D fixed"
+  },
+  {
+   "id": "n19",
+   "type": "method",
+   "statement": "Number fields generated by many square roots of medium-sized primes are an elementary substitute for Golod–Shafarevich towers, sufficient for Theorem 3.",
+   "para": 20,
+   "span": "one can work with the more elementary construction of number fields generated by many square roots of medium-sized primes",
+   "explanatory_status": "derived",
+   "status_reason": "carried out explicitly in section 1"
+  },
+  {
+   "id": "n20",
+   "type": "assumption",
+   "statement": "Take B a ring of integers of degree D and m a product of t rational primes p_i all of comparable size ≍T, so m ≈ T^t.",
+   "para": 21,
+   "span": "suppose for sake of argument that ${m}$ is the product of ${t}$ (rational) primes ${p_1,\\dots,p_t}$",
+   "explanatory_status": "derived",
+   "status_reason": "built from held notions of degree and primes"
+  },
+  {
+   "id": "n21",
+   "type": "proposition",
+   "statement": "Prime number theorem and Chebotarev-type density results suggest T can be kept as small as ≍ t log t, so log T ≍ log t.",
+   "para": 21,
+   "span": "if we select primes greedily then we can have ${T \\asymp t \\log t}$ . In particular we expect to have ${\\log T \\asymp \\log t}$",
+   "explanatory_status": "verified_only",
+   "status_reason": "invokes prime number theorem/Chebotarev, not among held results"
+  },
+  {
+   "id": "n22",
+   "type": "proposition",
+   "statement": "Optimistically m splits into Dt primes in B, which pair into Dt/2 conjugate pairs, and selecting one from each pair yields 2^{Dt/2} solutions of w·conj(w)=m in B of height O(m^{1/2}).",
+   "para": 22,
+   "span": "By selecting one element from each pair and multiplying, this generates ${2^{Dt/2}}$ solutions to (3) in ${B}$",
+   "explanatory_status": "verified_only",
+   "status_reason": "an optimistic hope stated without derivation from held splitting facts"
+  },
+  {
+   "id": "n23",
+   "type": "method",
+   "statement": "Take P to be the set of points of B of height O(m^{1/2}), whose size is n ≈ (m^{1/2})^D ≈ T^{Dt/2}.",
+   "para": 23,
+   "span": "take ${P}$ to be the set of points in ${B}$ of height ${O(m^{1/2})}$ . As ${B}$ has rank ${D}$",
+   "explanatory_status": "derived",
+   "status_reason": "lattice counting from held lattice/packing notions"
+  },
+  {
+   "id": "n24",
+   "type": "proposition",
+   "statement": "Combining the solutions with P gives d_m(P) ⪆ n·2^{Dt/2} ≈ n^{1+log2/log t}.",
+   "para": 26,
+   "span": "$\\displaystyle  d_m(P) \\gtrapprox n 2^{Dt/2} \\approx n^{1 + \\frac{\\log 2}{\\log T}}",
+   "explanatory_status": "derived",
+   "status_reason": "combines the solution count with the size estimate and log T ≍ log t"
+  },
+  {
+   "id": "n25",
+   "type": "proposition",
+   "statement": "Taking logarithms of the size heuristic gives log n ≍ D t log T ≍ D t log t.",
+   "para": 28,
+   "span": "$\\displaystyle  \\log n \\asymp D t \\log T \\asymp D t \\log t",
+   "explanatory_status": "derived",
+   "status_reason": "logarithm of the counting estimate"
+  },
+  {
+   "id": "n26",
+   "type": "proposition",
+   "statement": "With D fixed, t grows logarithmically in n, and inserting this into the count heuristically recovers Theorem 1 with c = log 2.",
+   "para": 29,
+   "span": "we thus expect ${t}$ to exhibit logarithmic type growth in ${n}$ , and on inserting this back into (5)",
+   "explanatory_status": "derived",
+   "status_reason": "algebra from log n ≍ D t log t and the count"
+  },
+  {
+   "id": "n27",
+   "type": "method",
+   "statement": "Setting B = Z[i] and choosing all p_i ≡ 1 mod 4 makes them split completely by Fermat's two-square theorem, turning the heuristic into a rigorous proof of Theorem 1.",
+   "para": 29,
+   "span": "selecting all the primes ${p_1,\\dots,p_t}$ to be ${1 \\hbox{ mod } 4}$ , so that they split completely",
+   "explanatory_status": "derived",
+   "status_reason": "uses held prime-splitting in quadratic fields"
+  },
+  {
+   "id": "n28",
+   "type": "proposition",
+   "statement": "Allowing D to grow superpolynomially in t improves on Theorem 1, and letting D→∞ with t fixed reaches Theorem 2.",
+   "para": 30,
+   "span": "if we can make the degree go to infinity while keeping the number of primes ${t}$ fixed",
+   "explanatory_status": "derived",
+   "status_reason": "read off from the numerology relations"
+  },
+  {
+   "id": "n29",
+   "type": "proposition",
+   "statement": "Naively forcing complete splitting in very high degree fields runs into Chebotarev error-term difficulties tied to GRH and Siegel zeros, and to the failure of unique factorization measured by the class group, whose size is controlled by the discriminant via Minkowski.",
+   "para": 31,
+   "span": "one runs into significant technical difficulties, not least of which is the need to obtain good error terms in the Chebotarev density theorem",
+   "explanatory_status": "miracle",
+   "status_reason": "cites Chebotarev error terms, class-group/discriminant bounds not held by the reader"
+  },
+  {
+   "id": "n30",
+   "type": "method",
+   "statement": "Weaken the target equation to the congruence w·conj(w) ≡ 0 mod mB, tolerating limited failure of unique factorization.",
+   "para": 32,
+   "span": "which is to weaken the target equation (3) to a congruence equation",
+   "explanatory_status": "derived",
+   "status_reason": "a stated reformulation motivated by n29"
+  },
+  {
+   "id": "n31",
+   "type": "proposition",
+   "statement": "Provided w has height not much larger than m^{1/2}, the congruence restricts w·conj(w) to few values so pigeonholing recovers a fixed value.",
+   "para": 34,
+   "span": "it does restrict ${w \\overline{w}}$ to a sufficiently small set of possible values that a simple application of the pigeonhole principle",
+   "explanatory_status": "derived",
+   "status_reason": "uses held pigeonhole principle plus a height bound"
+  },
+  {
+   "id": "n32",
+   "type": "proposition",
+   "statement": "One needs high-degree fields of controlled discriminant with easy partial splitting; a tower structure with complex multiplication (containing i) suffices, and a tower of quadratic extensions gives adequate discriminant control for Theorem 3.",
+   "para": 35,
+   "span": "requiring the field to have a tower structure and admit complex multiplication ... is already sufficient to get a satisfactory amount of splitting",
+   "explanatory_status": "miracle",
+   "status_reason": "the sufficiency of tower plus CM for splitting and discriminant control is asserted, CM not held"
+  },
+  {
+   "id": "n33",
+   "type": "proposition",
+   "statement": "The three constructions differ only in the choice of t and D: Erdős fixes D and sends t→∞, OpenAI fixes t and sends D→∞, Mythos couples both.",
+   "para": 36,
+   "span": "The Erdös construction keeps the degree fixed and sends the number of primes to infinity",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the numerology parameters already established"
+  },
+  {
+   "id": "n34",
+   "type": "boundary_condition",
+   "statement": "Section 1 sketches only how the quadratic extension approach recovers Theorem 3.",
+   "para": 39,
+   "span": "Here we sketch how the quadratic extension approach can recover Theorem 3",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated scope of the detailed argument"
+  },
+  {
+   "id": "n35",
+   "type": "assumption",
+   "statement": "Take m = p_1…p_t with the p_i distinct primes ≡1 mod 4 of size ≍T, splitting in Z[i], with T ≍ t log t and log T ≍ log t.",
+   "para": 40,
+   "span": "they are distinct and equal to ${1}$ mod ${4}$ , so that they split in the Gaussian integers",
+   "explanatory_status": "derived",
+   "status_reason": "held splitting criterion, plus PNT in APs for the size"
+  },
+  {
+   "id": "n36",
+   "type": "method",
+   "statement": "Choose g distinct medium-sized primes q_1..q_g of size ≍G with G ≍ g log g and T > G, eventually taking g a small multiple of t/log t.",
+   "para": 41,
+   "span": "we start by taking ${g}$ distinct medium-sized (rational) primes ${q_1,\\dots,q_g}$ of size ${\\asymp G}$",
+   "explanatory_status": "verified_only",
+   "status_reason": "parameter choice justified only by later optimization"
+  },
+  {
+   "id": "n37",
+   "type": "method",
+   "statement": "Work in the field Q(i, √q_1,…,√q_g), and use the naive ring of integers B generated by i and the square roots, with height defined as the max coefficient.",
+   "para": 45,
+   "span": "Let us define the (naive) height of such a ring element to be ${\\max_I |a_I|}$",
+   "explanatory_status": "derived",
+   "status_reason": "explicit construction from held quadratic-field notions"
+  },
+  {
+   "id": "n38",
+   "type": "proposition",
+   "statement": "The number of elements of B of height at most H is ≈ H^D for H sufficiently large.",
+   "para": 45,
+   "span": "the number of elements of ${B}$ of height at most ${H}$ is ${\\approx H^D}$",
+   "explanatory_status": "derived",
+   "status_reason": "counting integer coefficient tuples in the constructed ring"
+  },
+  {
+   "id": "n39",
+   "type": "method",
+   "statement": "Via the Minkowski embedding, B is viewed as a lattice in C^{D/2}, there being no real embeddings because i lies in the field.",
+   "para": 46,
+   "span": "it is convenient to think of ${B}$ as a lattice in a ${D}$ -dimensional vector space",
+   "explanatory_status": "verified_only",
+   "status_reason": "Minkowski embedding in this form is not held, though checkable in the example"
+  },
+  {
+   "id": "n40",
+   "type": "proposition",
+   "statement": "The embedding is essentially a Walsh–Fourier transform weighted by the square roots, reflecting the Galois group (Z/2Z)^{g+1}.",
+   "para": 47,
+   "span": "the embedding of ${B}$ into ${{\\bf C}^{D/2}}$ is essentially the Walsh–Fourier transform",
+   "explanatory_status": "verified_only",
+   "status_reason": "identification asserted; Walsh transform not among held terms though Galois group is"
+  },
+  {
+   "id": "n41",
+   "type": "proposition",
+   "statement": "The lattice covolume is essentially (√q_1…√q_g)^D, crudely bounded by G^{O(gD)}, which is a lower-order term provided g is small compared to t/log t.",
+   "para": 47,
+   "span": "one can readily compute the covolume of the lattice, which up to lower order terms is basically",
+   "explanatory_status": "derived",
+   "status_reason": "computed from the Walsh-type embedding and the prime sizes"
+  },
+  {
+   "id": "n42",
+   "type": "proposition",
+   "statement": "Minkowski's theorem in crude form: a lattice of covolume V in D dimensions has a nonzero vector of length O(V^{1/D}); hence a sublattice of B of index I has a vector of height O(I^{1/D} G^{O(g)}).",
+   "para": 48,
+   "span": "any lattice ${\\Lambda}$ in a ${D}$ -dimensional space of covolume ${V}$ will contain a non-zero lattice vector of length ${O(V^{1/D})}$",
+   "explanatory_status": "miracle",
+   "status_reason": "Minkowski's convex body theorem in this form is explicitly not held"
+  },
+  {
+   "id": "n43",
+   "type": "method",
+   "statement": "Seek sublattices Λ of B with Λ·conj(Λ) ⊂ mB, so every element of Λ satisfies the congruence (7).",
+   "para": 51,
+   "span": "any element ${w}$ of ${\\Lambda}$ will obey the congruence (7)",
+   "explanatory_status": "derived",
+   "status_reason": "immediate from the inclusion (9) and the definition of (7)"
+  },
+  {
+   "id": "n44",
+   "type": "proposition",
+   "statement": "Λ = mB is too sparse (index m^D gives shortest vectors of height O(m G^{O(g)})), so one wants index m^{D/2}, the smallest compatible with (9), giving w of height O(m^{1/2}G^{O(g)}) and w·conj(w) = m times an element of height O(G^{O(g)}).",
+   "para": 51,
+   "span": "we would like ${\\Lambda}$ to have index ${m^{D/2}}$ (which is the smallest it can be while still yielding the inclusion (9) )",
+   "explanatory_status": "derived",
+   "status_reason": "index-to-height computation via the Minkowski bound"
+  },
+  {
+   "id": "n45",
+   "type": "proposition",
+   "statement": "Claim: there are at least 2^{tD/4} sublattices Λ of index m^{D/2} obeying (9).",
+   "para": 52,
+   "span": "We claim that we can find at least ${2^{tD/4}}$ different sublattices ${\\Lambda}$ of index ${m^{D/2}}$ that obey (9)",
+   "explanatory_status": "derived",
+   "status_reason": "obtained from the prime-by-prime count and CRT"
+  },
+  {
+   "id": "n46",
+   "type": "method",
+   "statement": "By the Chinese remainder theorem it suffices, for each prime p | m, to find 2^{D/4} sublattices Λ_p of index p^{D/2} with Λ_p·conj(Λ_p) ⊂ pB.",
+   "para": 52,
+   "span": "it is a straightforward matter to use the Chinese remainder theorem to work “prime by prime”",
+   "explanatory_status": "verified_only",
+   "status_reason": "CRT reduction stated without proof and CRT for rings is not listed as held"
+  },
+  {
+   "id": "n47",
+   "type": "method",
+   "statement": "Descend to B/pB, a D-dimensional F_p-vector space with an involution from complex conjugation, and seek 2^{D/4} subspaces V of dimension D/2 with V·conj(V)=0.",
+   "para": 53,
+   "span": "We can descend now to the finite ring ${B/pB}$ , which is a ${D}$ -dimensional vector space over the finite field",
+   "explanatory_status": "derived",
+   "status_reason": "reformulation of the sublattice problem mod p"
+  },
+  {
+   "id": "n48",
+   "type": "proposition",
+   "statement": "B/pB embeds into a product of copies of F_p and F_{p^2} according to how square roots of -1 and the q_i are assigned.",
+   "para": 55,
+   "span": "we can also embed ${B/pB}$ into a product of copies of ${{\\mathbb F}_p}$ and ${{\\mathbb F}_{p^2}}$",
+   "explanatory_status": "derived",
+   "status_reason": "explicitly constructed by assigning square roots, checked in the example"
+  },
+  {
+   "id": "n49",
+   "type": "evidence",
+   "statement": "The running example g=1, q_1=3 exhibits the explicit embeddings into F_p^4 or F_{p^2}^2, shown to be isomorphisms by counting elements.",
+   "para": 56,
+   "span": "By counting elements we see that this embedding is in fact an isomorphism",
+   "explanatory_status": "derived",
+   "status_reason": "explicit maps plus counting, both available to the reader"
+  },
+  {
+   "id": "n50",
+   "type": "proposition",
+   "statement": "In general B/pB ≅ F_p^D or F_{p^2}^{D/2}, with D/2 or D/4 conjugate pairs of factors respectively.",
+   "para": 58,
+   "span": "${B/pB}$ is isomorphic to either ${{\\mathbb F}_p^D}$ (if all the ${q_1,\\dots,q_g}$ split in ${{\\mathbb F}_p}$ )",
+   "explanatory_status": "derived",
+   "status_reason": "generalizes the explicitly verified example embeddings"
+  },
+  {
+   "id": "n51",
+   "type": "proposition",
+   "statement": "Taking joint kernels of one factor from each conjugate pair yields 2^{D/2} or 2^{D/4} subspaces V of dimension D/2 with V·conj(V)=0, giving via CRT the 2^{tD/4} lattices Λ.",
+   "para": 58,
+   "span": "By selecting one element from each conjugate pair, and taking ${V}$ to be the joint kernel of such elements",
+   "explanatory_status": "derived",
+   "status_reason": "constructed from the factor decomposition and conjugate pairing"
+  },
+  {
+   "id": "n52",
+   "type": "proposition",
+   "statement": "Minkowski's theorem applied to these lattices generates 2^{tD/4} nonzero vectors w of height O(m^{1/2}G^{O(g)}) satisfying (7).",
+   "para": 59,
+   "span": "this now generates ${2^{tD/4}}$ non-zero vectors ${w}$ of height ${O( m^{1/2} G^{O(g)})}$ obeying (7)",
+   "explanatory_status": "derived",
+   "status_reason": "combines the lattice count with the Minkowski height bound"
+  },
+  {
+   "id": "n53",
+   "type": "proposition",
+   "statement": "An omitted CRT argument shows each w lies in at most O(G^{O(gD)}) of the lattices, so at least 2^{tD/4}/O(G)^{O(gD)} distinct w arise.",
+   "para": 59,
+   "span": "any such ${w}$ can belong to at most ${O(G^{O(gD)})}$ such lattices",
+   "explanatory_status": "miracle",
+   "status_reason": "the argument is explicitly omitted, so nothing derives the multiplicity bound"
+  },
+  {
+   "id": "n54",
+   "type": "proposition",
+   "statement": "Pigeonholing over the few possible values yields at least 2^{tD/4}/O(G)^{O(gD)} solutions of w·conj(w)=am of height O(m^{1/2}G^{O(g)}) for a single a of height O(G^{O(g)}).",
+   "para": 59,
+   "span": "by pigeonholing one can now also get at least at least ${2^{tD/4} / O(G)^{O(gD)}}$ solutions to the equation",
+   "explanatory_status": "derived",
+   "status_reason": "held pigeonhole applied to the distinct-w count and small value set"
+  },
+  {
+   "id": "n55",
+   "type": "assumption",
+   "statement": "Choose parameters so that g log G is much smaller than t, making the G^{O(gD)} factors negligible.",
+   "para": 61,
+   "span": "$\\displaystyle  g \\log G \\asymp g \\log G \\lll t,",
+   "explanatory_status": "verified_only",
+   "status_reason": "a parameter constraint imposed, not derived"
+  },
+  {
+   "id": "n56",
+   "type": "proposition",
+   "statement": "With these parameters n ≈ T^{Dt/2} and d_{am}(P) ⪆ n·2^{Dt/4} ≈ n^{1+log2/(4 log t)}.",
+   "para": 62,
+   "span": "n \\approx T^{D t / 2}, \\quad d_{am}(P) \\gtrapprox n 2^{Dt/4} \\approx n^{1 + \\frac{\\log 2}{4 \\log T}}",
+   "explanatory_status": "derived",
+   "status_reason": "combines the height-ball count with the solution count"
+  },
+  {
+   "id": "n57",
+   "type": "proposition",
+   "statement": "Choosing g a small multiple of t/log t gives log t ≍ log log log n, recovering Theorem 3.",
+   "para": 62,
+   "span": "we soon calculate that ${\\log t \\asymp \\log\\log\\log n}$ , and we recover Theorem 3",
+   "explanatory_status": "derived",
+   "status_reason": "parameter substitution into the exponent formula"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n3",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n4",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n5",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n8",
+   "to": "n7",
+   "type": "supports"
+  },
+  {
+   "from": "n7",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n9",
+   "to": "n10",
+   "type": "depends_on"
+  },
+  {
+   "from": "n11",
+   "to": "n19",
+   "type": "depends_on"
+  },
+  {
+   "from": "n12",
+   "to": "n11",
+   "type": "depends_on"
+  },
+  {
+   "from": "n12",
+   "to": "n10",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n15",
+   "to": "n14",
+   "type": "depends_on"
+  },
+  {
+   "from": "n16",
+   "to": "n15",
+   "type": "depends_on"
+  },
+  {
+   "from": "n17",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n17",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n18",
+   "to": "n25",
+   "type": "derives"
+  },
+  {
+   "from": "n19",
+   "to": "n18",
+   "type": "depends_on"
+  },
+  {
+   "from": "n20",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n21",
+   "to": "n20",
+   "type": "depends_on"
+  },
+  {
+   "from": "n22",
+   "to": "n20",
+   "type": "assumes"
+  },
+  {
+   "from": "n23",
+   "to": "n22",
+   "type": "depends_on"
+  },
+  {
+   "from": "n24",
+   "to": "n23",
+   "type": "derives"
+  },
+  {
+   "from": "n24",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n24",
+   "to": "n21",
+   "type": "depends_on"
+  },
+  {
+   "from": "n25",
+   "to": "n23",
+   "type": "derives"
+  },
+  {
+   "from": "n25",
+   "to": "n21",
+   "type": "depends_on"
+  },
+  {
+   "from": "n26",
+   "to": "n25",
+   "type": "derives"
+  },
+  {
+   "from": "n26",
+   "to": "n24",
+   "type": "derives"
+  },
+  {
+   "from": "n5",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n27",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n28",
+   "to": "n25",
+   "type": "derives"
+  },
+  {
+   "from": "n28",
+   "to": "n24",
+   "type": "derives"
+  },
+  {
+   "from": "n30",
+   "to": "n29",
+   "type": "depends_on"
+  },
+  {
+   "from": "n31",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n32",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n32",
+   "to": "n29",
+   "type": "depends_on"
+  },
+  {
+   "from": "n33",
+   "to": "n25",
+   "type": "depends_on"
+  },
+  {
+   "from": "n34",
+   "to": "n13",
+   "type": "depends_on"
+  },
+  {
+   "from": "n35",
+   "to": "n20",
+   "type": "depends_on"
+  },
+  {
+   "from": "n36",
+   "to": "n34",
+   "type": "bounds"
+  },
+  {
+   "from": "n37",
+   "to": "n36",
+   "type": "depends_on"
+  },
+  {
+   "from": "n37",
+   "to": "n32",
+   "type": "depends_on"
+  },
+  {
+   "from": "n38",
+   "to": "n37",
+   "type": "derives"
+  },
+  {
+   "from": "n39",
+   "to": "n37",
+   "type": "depends_on"
+  },
+  {
+   "from": "n40",
+   "to": "n39",
+   "type": "depends_on"
+  },
+  {
+   "from": "n41",
+   "to": "n40",
+   "type": "derives"
+  },
+  {
+   "from": "n41",
+   "to": "n36",
+   "type": "depends_on"
+  },
+  {
+   "from": "n42",
+   "to": "n41",
+   "type": "depends_on"
+  },
+  {
+   "from": "n43",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n44",
+   "to": "n43",
+   "type": "depends_on"
+  },
+  {
+   "from": "n44",
+   "to": "n42",
+   "type": "derives"
+  },
+  {
+   "from": "n45",
+   "to": "n46",
+   "type": "depends_on"
+  },
+  {
+   "from": "n45",
+   "to": "n51",
+   "type": "derives"
+  },
+  {
+   "from": "n46",
+   "to": "n35",
+   "type": "depends_on"
+  },
+  {
+   "from": "n47",
+   "to": "n46",
+   "type": "depends_on"
+  },
+  {
+   "from": "n48",
+   "to": "n47",
+   "type": "depends_on"
+  },
+  {
+   "from": "n49",
+   "to": "n48",
+   "type": "supports"
+  },
+  {
+   "from": "n50",
+   "to": "n49",
+   "type": "supports"
+  },
+  {
+   "from": "n51",
+   "to": "n50",
+   "type": "derives"
+  },
+  {
+   "from": "n52",
+   "to": "n45",
+   "type": "derives"
+  },
+  {
+   "from": "n52",
+   "to": "n42",
+   "type": "derives"
+  },
+  {
+   "from": "n52",
+   "to": "n44",
+   "type": "depends_on"
+  },
+  {
+   "from": "n53",
+   "to": "n52",
+   "type": "depends_on"
+  },
+  {
+   "from": "n54",
+   "to": "n53",
+   "type": "derives"
+  },
+  {
+   "from": "n54",
+   "to": "n31",
+   "type": "depends_on"
+  },
+  {
+   "from": "n56",
+   "to": "n54",
+   "type": "derives"
+  },
+  {
+   "from": "n56",
+   "to": "n38",
+   "type": "derives"
+  },
+  {
+   "from": "n56",
+   "to": "n55",
+   "type": "assumes"
+  },
+  {
+   "from": "n57",
+   "to": "n56",
+   "type": "derives"
+  },
+  {
+   "from": "n57",
+   "to": "n36",
+   "type": "depends_on"
+  },
+  {
+   "from": "n11",
+   "to": "n57",
+   "type": "depends_on"
+  }
+ ],
+ "_meta": {
+  "document": "vc3_r2",
+  "operator": "OP_A",
+  "model": "claude-opus-5",
+  "family": "anthropic",
+  "reader_model": "M-nt",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

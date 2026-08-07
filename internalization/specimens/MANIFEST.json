@@ -1,0 +1,77 @@
+{
+  "retrieved": "2026-08-06",
+  "items": {
+    "vc1": {
+      "source": "https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/",
+      "kind": "weblog post",
+      "sha256": "75e73051912c805f0081525c2cadca574b3d16b515e23f57a5ec7fcb35c76726",
+      "chars": 23179,
+      "words": 3807,
+      "short_line_share": 0.3
+    },
+    "vc3_r2": {
+      "source": "https://terrytao.wordpress.com/2026/07/03/a-digestion-of-unit-distance-constructions/",
+      "kind": "weblog post",
+      "sha256": "c4748c7d1a1dfa3aa9a1d8d7a883c790c621413f7aa4ab898570751a1ce26cd3",
+      "chars": 22479,
+      "words": 3820,
+      "short_line_share": 0.0
+    },
+    "vc2": {
+      "source": "https://courses.cs.umbc.edu/471/papers/turing.pdf",
+      "doi": "10.1093/mind/LIX.236.433",
+      "kind": "journal article (public teaching mirror)",
+      "sha256": "ffa9125952ce512a4a7c2cc2ab16550de766a4cff7075657916f6c9f1a0d506e",
+      "chars": 67369,
+      "words": 11754,
+      "short_line_share": 0.053
+    },
+    "vc3_r0": {
+      "source": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "kind": "verbatim automated output (stated provenance)",
+      "cut": [
+        "Final Response from Internal Model.",
+        "The remainder of the paper explains the above proof in more detail."
+      ],
+      "sha256": "22570961cf3466bfe4f7798268f4035e8ea80c37488300777fb3078aecc55799",
+      "chars": 6393,
+      "words": 1386,
+      "short_line_share": 0.252
+    },
+    "vc3_r1": {
+      "source": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "kind": "human-edited exposition of the same result",
+      "cut": [
+        "document minus the verbatim block and bibliography"
+      ],
+      "sha256": "3252a040c395a6ec1cf7b5db78a970063e13aa0531e6d877112598e393264656",
+      "chars": 37032,
+      "words": 7012,
+      "short_line_share": 0.163
+    },
+    "pilot_dijkstra": {
+      "source": "https://www.cs.utexas.edu/~EWD/transcriptions/EWD10xx/EWD1036.html",
+      "kind": "essay",
+      "sha256": "33310f5cb8c76a762e24144ac9036800adaba46af396d8de871fc01028203d3d",
+      "chars": 37097,
+      "words": 6167,
+      "short_line_share": 0.246
+    },
+    "pilot_thompson": {
+      "source": "https://www.win.tue.nl/~aeb/linux/hh/thompson/trust.html",
+      "kind": "essay",
+      "sha256": "a0f0625897865f83d37da33429be287aefb63dbdec8f4a34fd5657016e0dd581",
+      "chars": 9907,
+      "words": 1731,
+      "short_line_share": 0.237
+    },
+    "pilot_2026ao": {
+      "source": "https://doi.org/10.5281/zenodo.20409683",
+      "kind": "spine-first-drafted corpus paper",
+      "sha256": "3b619c4eec0a3a809e75c3c330aa9f25841bbe844776fce5a392b49039ac0c9c",
+      "chars": 88195,
+      "words": 11062,
+      "short_line_share": 0.153
+    }
+  }
+}

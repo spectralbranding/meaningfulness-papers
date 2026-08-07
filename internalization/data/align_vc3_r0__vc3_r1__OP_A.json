@@ -1,0 +1,69 @@
+{
+ "pairs": [
+  {
+   "a": "n5",
+   "b": "n54",
+   "confidence": "high"
+  },
+  {
+   "a": "n3",
+   "b": "n52",
+   "confidence": "high"
+  },
+  {
+   "a": "n4",
+   "b": "n53",
+   "confidence": "high"
+  },
+  {
+   "a": "n15",
+   "b": "n55",
+   "confidence": "high"
+  },
+  {
+   "a": "n21",
+   "b": "n73",
+   "confidence": "high"
+  },
+  {
+   "a": "n42",
+   "b": "n33",
+   "confidence": "high"
+  },
+  {
+   "a": "n27",
+   "b": "n58",
+   "confidence": "high"
+  },
+  {
+   "a": "n16",
+   "b": "n64",
+   "confidence": "high"
+  },
+  {
+   "a": "n33",
+   "b": "n15",
+   "confidence": "high"
+  },
+  {
+   "a": "n40",
+   "b": "n27",
+   "confidence": "high"
+  },
+  {
+   "a": "n35",
+   "b": "n19",
+   "confidence": "high"
+  },
+  {
+   "a": "n44",
+   "b": "n37",
+   "confidence": "high"
+  },
+  {
+   "a": "n46",
+   "b": "n43",
+   "confidence": "high"
+  }
+ ]
+}

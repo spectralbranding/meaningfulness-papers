@@ -1,0 +1,833 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "proposition",
+   "statement": "The Jacobian conjecture states that a polynomial map of C^n with non-zero constant Jacobian is invertible with polynomial inverse.",
+   "para": 2,
+   "span": "whose Jacobian ${\\mathrm{det} DF}$ is a non-zero constant. Then ${F}$ is invertible (with polynomial inverse)",
+   "explanatory_status": "verified_only",
+   "status_reason": "held by the reader as a statement of the conjecture"
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "Non-vanishing Jacobian is equivalent to local invertibility of F.",
+   "para": 3,
+   "span": "The condition that the Jacobian ${\\mathrm{det} DF}$ is non-zero is equivalent to ${F}$ being locally invertible.",
+   "explanatory_status": "derived",
+   "status_reason": "forward direction from the inverse function theorem the reader holds; converse cited to Weierstrass preparation, omitted"
+  },
+  {
+   "id": "n3",
+   "type": "proposition",
+   "statement": "A non-vanishing Jacobian polynomial must be constant, by the fundamental theorem of algebra.",
+   "para": 3,
+   "span": "once the Jacobian polynomial ${\\mathrm{det} DF}$ is non-zero, it must be constant",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted from the fundamental theorem of algebra without the argument being given"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "The hypothesis of non-zero constant Jacobian may be replaced by local invertibility, so the conjecture says local invertibility implies global invertibility.",
+   "para": 3,
+   "span": "the hypothesis “Jacobian ${\\mathrm{det} DF}$ is a non-zero constant” can be replaced with “ ${F}$ is locally invertible”",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the equivalence and the constancy claim"
+  },
+  {
+   "id": "n5",
+   "type": "boundary_condition",
+   "statement": "The discussion is set over the complex numbers, though other characteristic-zero fields would do via the Lefschetz principle.",
+   "para": 3,
+   "span": "I prefer to work in the concrete setting of the complex numbers",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated scope choice, not derived"
+  },
+  {
+   "id": "n6",
+   "type": "proposition",
+   "statement": "There exists a polynomial map F:C^3→C^3 with non-zero constant Jacobian that is not invertible, refuting the conjecture in dimension three and above.",
+   "para": 5,
+   "span": "There exists a polynomial ${F : {\\bf C}^3 \\rightarrow {\\bf C}^3}$ which has non-zero constant Jacobian, but is not invertible",
+   "explanatory_status": "derived",
+   "status_reason": "obtained later from Theorem 3 plus the reduction, and verified explicitly"
+  },
+  {
+   "id": "n7",
+   "type": "boundary_condition",
+   "statement": "The conjecture is still open in two dimensions and easy in one.",
+   "para": 6,
+   "span": "The conjecture remains open in two dimensions, and is easy to establish in one dimension.",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated fact bounding the result's scope"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "An explicit degree-seven polynomial map in three variables is exhibited as the counterexample.",
+   "para": 8,
+   "span": "F(z_1,z_2,z_3) = \\Big((1+z_1 z_2)^3 z_3 + z_2^2 (1+z_1z_2) (4+3z_1z_2)",
+   "explanatory_status": "verified_only",
+   "status_reason": "given explicitly; no account of its origin at this point"
+  },
+  {
+   "id": "n9",
+   "type": "method",
+   "statement": "Direct calculation verifies that the Jacobian determinant of the explicit map equals -2.",
+   "para": 12,
+   "span": "\\mathrm{det} DF = -2",
+   "explanatory_status": "verified_only",
+   "status_reason": "checkable by the reader's Jacobian computation but not derived"
+  },
+  {
+   "id": "n10",
+   "type": "evidence",
+   "statement": "Three distinct points of C^3 have the same image under the explicit map, so it is not injective.",
+   "para": 14,
+   "span": "F(0,0,-1/4) = F(1,-3/2, 13/2) = F(-1,3/2,13/2)",
+   "explanatory_status": "verified_only",
+   "status_reason": "a direct evaluation check"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "A priori the Jacobian of a degree seven map in three variables would have degree 18, so the vanishing of 1329 coefficients against 360 degrees of freedom makes the example look like a massive cancellation unreachable by brute force.",
+   "para": 28,
+   "span": "degrees of freedom for a generic degree seven polynomial map of three variables. So finding such a polynomial looks highly unlikely to be located by brute force.",
+   "explanatory_status": "derived",
+   "status_reason": "counting derived from degree and monomial counts the reader can do"
+  },
+  {
+   "id": "n12",
+   "type": "boundary_condition",
+   "statement": "The exposition aims to explain the example with little algebraic geometry, minimizing but not eliminating miracles.",
+   "para": 29,
+   "span": "I sought to write this explanation with relatively little use of algebraic geometry",
+   "explanatory_status": "verified_only",
+   "status_reason": "declared aim, not derived"
+  },
+  {
+   "id": "n13",
+   "type": "proposition",
+   "statement": "Reformulated counterexample: there is an affine variety X in C^5 polynomially isomorphic to C^3 and a locally injective but not globally injective polynomial map F:X→C^3.",
+   "para": 31,
+   "span": "There exists an affine variety ${X \\subset {\\bf C}^5}$ that is isomorphic to ${{\\bf C}^3}$ by polynomial changes of variable",
+   "explanatory_status": "verified_only",
+   "status_reason": "uses affine variety, a notion the reader does not hold"
+  },
+  {
+   "id": "n14",
+   "type": "proposition",
+   "statement": "Theorem 3 implies Theorem 2 by composing with the isomorphism X≅C^3 and using that local injectivity gives non-zero constant Jacobian.",
+   "para": 32,
+   "span": "Clearly one can get from Theorem 3 to Theorem 2 by composing with the isomorphism",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n13 and the equivalence n4"
+  },
+  {
+   "id": "n15",
+   "type": "method",
+   "statement": "The construction is split into three separate goals (a) local injectivity, (b) failure of global injectivity, (c) polynomial isomorphism of X with C^3.",
+   "para": 33,
+   "span": "(a) ${F}$ is locally injective on ${X}$ . (b) ${F}$ is not globally injective on ${X}$ . (c) ${X}$ is isomorphic to ${{\\bf C}^3}$",
+   "explanatory_status": "derived",
+   "status_reason": "restates the requirements of n13 as a plan"
+  },
+  {
+   "id": "n16",
+   "type": "boundary_condition",
+   "statement": "The range C^3 is also replaced by an equivalent variety V, a hyperplane in Sym^3(C^2), but only via a linear isomorphism.",
+   "para": 35,
+   "span": "we not only replace the domain ${{\\bf C}^3}$ of ${F}$ by an equivalent variety ${X}$ , but also replace the range",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated caveat; Sym^3 not held by the reader"
+  },
+  {
+   "id": "n17",
+   "type": "method",
+   "statement": "Introduce the spaces of homogeneous linear, quadratic and cubic polynomials in two variables, isomorphic to C^2, C^3, C^4.",
+   "para": 37,
+   "span": "The space ${\\mathrm{Sym}^1({\\bf C}^2)}$ of linear homogeneous polynomials ${L(z,w) = az + bw}$ of two complex variables",
+   "explanatory_status": "verified_only",
+   "status_reason": "definitions using symmetric powers, a notion not held"
+  },
+  {
+   "id": "n18",
+   "type": "method",
+   "statement": "Define F(L,Q):=LQ as a multiplication map from Sym^1×Sym^2 to Sym^3.",
+   "para": 56,
+   "span": "F(L,Q) := LQ.",
+   "explanatory_status": "derived",
+   "status_reason": "construction built directly on n17"
+  },
+  {
+   "id": "n19",
+   "type": "proposition",
+   "statement": "In coordinates the multiplication map is the polynomial map (a,b),(c,d,e)↦(ac, ad+bc, ae+bd, be).",
+   "para": 61,
+   "span": "F( (a,b), (c,d,e) ) = (ac, ad + bc, ae + bd, be)",
+   "explanatory_status": "derived",
+   "status_reason": "direct expansion of the product in n18"
+  },
+  {
+   "id": "n20",
+   "type": "proposition",
+   "statement": "F is equivariant under scaling of L and Q and under linear change of variables by SL_2.",
+   "para": 65,
+   "span": "F( \\lambda_1 L, \\lambda_2 Q) = \\lambda_1 \\lambda_2 F(L,Q)",
+   "explanatory_status": "derived",
+   "status_reason": "immediate from the definition of multiplication, though SL_2 action is not a held notion"
+  },
+  {
+   "id": "n21",
+   "type": "proposition",
+   "statement": "The scaling (L,Q)↦(λL,λ^{-1}Q) leaves the product unchanged, so F cannot be injective on the five-dimensional domain.",
+   "para": 69,
+   "span": "the map ${F}$ clearly cannot be injective. This can already be seen from the scaling symmetry",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the scaling equivariance n20"
+  },
+  {
+   "id": "n22",
+   "type": "proposition",
+   "statement": "A generic cubic splits into three independent linear factors, giving three pairs (L,Q) with the same product and not related by the scaling symmetry, so F is generically three-to-one even modulo scaling.",
+   "para": 97,
+   "span": "the multiplication map ${F}$ is generically non-injective in a three-to-one fashion",
+   "explanatory_status": "derived",
+   "status_reason": "derived from factorization of cubics and the definition of F"
+  },
+  {
+   "id": "n23",
+   "type": "method",
+   "statement": "Define the homogeneous resultant Res(L,Q)=a^2e-abd+cb^2 as a 3x3 determinant.",
+   "para": 99,
+   "span": "\\mathrm{Res}(L,Q) = \\begin{vmatrix} a & b & 0 \\\\ 0 & a & b \\\\ c & d & e \\end{vmatrix} = a^2 e - abd + c b^2",
+   "explanatory_status": "verified_only",
+   "status_reason": "a definition given by determinant, computable by the reader but not motivated"
+  },
+  {
+   "id": "n24",
+   "type": "proposition",
+   "statement": "In factored form Res(L,Q)=a^2c(α-β_1)(α-β_2), so the resultant detects a common root of L and Q.",
+   "para": 103,
+   "span": "\\mathrm{Res}(L,Q) = a^2 c (\\alpha - \\beta_1) (\\alpha - \\beta_2)",
+   "explanatory_status": "derived",
+   "status_reason": "algebraic identity obtainable from n23 by substitution"
+  },
+  {
+   "id": "n25",
+   "type": "proposition",
+   "statement": "The resultant is SL_2-invariant.",
+   "para": 113,
+   "span": "\\mathrm{Res}(L \\circ T, Q \\circ T) = \\mathrm{Res}(L,Q).",
+   "explanatory_status": "derived",
+   "status_reason": "argued by checking translations and inversions which generate SL_2"
+  },
+  {
+   "id": "n26",
+   "type": "method",
+   "statement": "The invariance is checked on translations and inversions and then extended by noting these generate SL_2(C).",
+   "para": 134,
+   "span": "noting that these transformations generate all of",
+   "explanatory_status": "verified_only",
+   "status_reason": "generation of SL_2 asserted without proof and the group is not a held notion"
+  },
+  {
+   "id": "n27",
+   "type": "proposition",
+   "statement": "Res scales as λ_1^2λ_2 Res, so the symmetry (3) multiplies the resultant by λ.",
+   "para": 145,
+   "span": "\\mathrm{Res}(\\lambda L, \\lambda^{-1} Q) = \\lambda \\mathrm{Res}(L,Q).",
+   "explanatory_status": "derived",
+   "status_reason": "from the homogeneity of the determinant formula n23"
+  },
+  {
+   "id": "n28",
+   "type": "method",
+   "statement": "Normalize away the scaling symmetry by imposing Res(L,Q)=1, giving a four-dimensional domain variety.",
+   "para": 147,
+   "span": "we can (generically) normalize away this scaling symmetry by imposing the condition",
+   "explanatory_status": "derived",
+   "status_reason": "licensed by the scaling law n27"
+  },
+  {
+   "id": "n29",
+   "type": "proposition",
+   "statement": "The restricted map on {Res=1} is still not globally injective, since the three pairs can each be rescaled into the normalization, so property (b) is retained.",
+   "para": 160,
+   "span": "apply the scaling (3) separately to each of the three pairs to obtain the normalization",
+   "explanatory_status": "derived",
+   "status_reason": "from n22 and the normalization n28"
+  },
+  {
+   "id": "n30",
+   "type": "proposition",
+   "statement": "The restricted map retains SL_2-equivariance and one residual scaling symmetry.",
+   "para": 162,
+   "span": "this map retains the ${SL_2}$ -equivariance (and also one remaining scaling symmetry",
+   "explanatory_status": "derived",
+   "status_reason": "from n20 and the SL_2-invariance of the constraint n25"
+  },
+  {
+   "id": "n31",
+   "type": "proposition",
+   "statement": "On {Res=1} the map is locally injective, because after moving the root of L to infinity by SL_2 one can, from the product alone, tell which perturbed root belongs to L and reconstruct L and Q.",
+   "para": 163,
+   "span": "This establishes the local injectivity property (a).",
+   "explanatory_status": "derived",
+   "status_reason": "argued from n24, n27, n28, but uses the SL_2/Möbius normalization the reader does not hold"
+  },
+  {
+   "id": "n32",
+   "type": "proposition",
+   "statement": "The quadric hypersurface {Res=1} is not isomorphic to affine space C^4, so condition (c) fails at four dimensions.",
+   "para": 164,
+   "span": "the quadric hypersurface (8) is not isomorphic to the affine space ${{\\bf C}^4}$",
+   "explanatory_status": "miracle",
+   "status_reason": "asserted with no argument and requires variety isomorphism theory not held"
+  },
+  {
+   "id": "n33",
+   "type": "method",
+   "statement": "Restrict F to the preimage of a three-dimensional affine plane V of Sym^3(C^2) avoiding the origin, giving the variety (9).",
+   "para": 164,
+   "span": "But we can try to get around this by passing to a three-dimensional slice.",
+   "explanatory_status": "derived",
+   "status_reason": "construction motivated by the failure n32"
+  },
+  {
+   "id": "n34",
+   "type": "proposition",
+   "statement": "After restriction to V, local injectivity and generic three-to-one non-injectivity both persist, so (a) and (b) are retained.",
+   "para": 185,
+   "span": "this continues to be the case after restricting to (9)",
+   "explanatory_status": "derived",
+   "status_reason": "from n31 and n22, though the claim that V cannot be too degenerate is asserted"
+  },
+  {
+   "id": "n35",
+   "type": "proposition",
+   "statement": "For a good choice of V the variety (9) is nevertheless polynomially equivalent to C^3, giving (c) and the counterexample.",
+   "para": 185,
+   "span": "The miracle is that, with a good choice of",
+   "explanatory_status": "miracle",
+   "status_reason": "the text itself labels it a miracle with no conceptual account"
+  },
+  {
+   "id": "n36",
+   "type": "proposition",
+   "statement": "Affine hyperplanes of Sym^3(C^2) avoiding the origin correspond bijectively to non-zero third order homogeneous differential operators D via {C: D(C)=1}.",
+   "para": 192,
+   "span": "every such operator ${D}$ generates an affine hyperplane ${\\{ C \\in \\mathrm{Sym}^3({\\bf C}^2) : D(C) = 1\\}}$ that avoids the origin",
+   "explanatory_status": "verified_only",
+   "status_reason": "duality argument stated but differential operators as dual space are not held notions"
+  },
+  {
+   "id": "n37",
+   "type": "proposition",
+   "statement": "Such operators factor into three linear differential operators, and since the SL_2 action is 3-transitive on the roots only the pattern of root coincidences matters, giving three equivalence classes of V.",
+   "para": 204,
+   "span": "there are in fact just three different equivalence classes of differential operator",
+   "explanatory_status": "verified_only",
+   "status_reason": "relies on 3-transitivity of Möbius action, not held"
+  },
+  {
+   "id": "n38",
+   "type": "proposition",
+   "statement": "The affine miracle for (9) occurs precisely in the case where D has exactly two coincident roots.",
+   "para": 210,
+   "span": "the affine miracle for (9) occurs precisely in the second case, when ${D}$ has two identical roots",
+   "explanatory_status": "miracle",
+   "status_reason": "author explicitly disclaims a satisfactory explanation, offering only verification"
+  },
+  {
+   "id": "n39",
+   "type": "method",
+   "statement": "Normalizing D = (1/2)∂_z^2∂_w makes V the hyperplane g=1, and (9) becomes the explicit variety {a^2e-abd+cb^2=1; ad+bc=1} in C^5.",
+   "para": 212,
+   "span": "\\{ (a,b,c,d,e) \\in {\\bf C}^5 : a^2 e - abd + cb^2 = 1; ad + bc = 1 \\}",
+   "explanatory_status": "derived",
+   "status_reason": "from coordinates (2) and (5) plus the normalization of D"
+  },
+  {
+   "id": "n40",
+   "type": "proposition",
+   "statement": "For a≠0 the two equations can be solved for d and e, so (a,b,c,d,e) is determined by (a,b,c) by a change of variables Laurent in a.",
+   "para": 233,
+   "span": "is uniquely determined by ${(a,b,c)}$ by a change of variables which is Laurent in",
+   "explanatory_status": "derived",
+   "status_reason": "direct algebraic solving of the equations in n39"
+  },
+  {
+   "id": "n41",
+   "type": "proposition",
+   "statement": "Hence (9) is birationally equivalent to C^3 once the a=0 locus is removed, and each fixed non-zero fiber is polynomially equivalent to C^2.",
+   "para": 248,
+   "span": "for each fixed non-zero value ${a_0}$ of ${a}$ , the corresponding fiber",
+   "explanatory_status": "derived",
+   "status_reason": "immediate from n40 with a fixed"
+  },
+  {
+   "id": "n42",
+   "type": "proposition",
+   "statement": "The a=0 fiber is cut out by cb^2=1 and bc=1.",
+   "para": 265,
+   "span": "\\{ (0,b,c,d,e) \\in {\\bf C}^5 : cb^2 = 1; bc = 1 \\}",
+   "explanatory_status": "derived",
+   "status_reason": "substitute a=0 into n39"
+  },
+  {
+   "id": "n43",
+   "type": "proposition",
+   "statement": "Those two equations have the unique affine solution b=c=1, rather than the six solutions Bezout might suggest, so the a=0 fiber is also an affine plane in d,e.",
+   "para": 272,
+   "span": "have a unique affine solution ${b=c=1}$ (as opposed to the six possible solutions that Bezout’s theorem might suggest",
+   "explanatory_status": "derived",
+   "status_reason": "solvable directly; the reader holds Bezout's statement, though 'line at infinity' is not held"
+  },
+  {
+   "id": "n44",
+   "type": "proposition",
+   "statement": "These fiber facts suggest (10) is a C^2-bundle over C^1, close to C^3, leaving only the a→0 limit and a global chart to handle.",
+   "para": 282,
+   "span": "The main remaining task is to make sure that nothing singular happens in the limit",
+   "explanatory_status": "derived",
+   "status_reason": "inference from n41 and n43, but bundle language is not held"
+  },
+  {
+   "id": "n45",
+   "type": "method",
+   "statement": "Use big-O notation on (10), with O(X) meaning a polynomial multiple of X, to study the a→0 limit by hand instead of ideal-theoretic machinery.",
+   "para": 291,
+   "span": "let us use ${O(X)}$ to denote any multiple of ${X}$ by a polynomial expression in",
+   "explanatory_status": "derived",
+   "status_reason": "a stated notational device replacing the machinery not held"
+  },
+  {
+   "id": "n46",
+   "type": "proposition",
+   "statement": "The defining equations give bc=1+O(a), cb^2=1+O(a) and the refined cb^2=1+abd+O(a^2).",
+   "para": 298,
+   "span": "cb^2 = 1 + abd + O(a^2).",
+   "explanatory_status": "derived",
+   "status_reason": "direct rearrangement of the equations under n45"
+  },
+  {
+   "id": "n47",
+   "type": "proposition",
+   "statement": "Combining these gives b=1+O(a) and c=1+O(a).",
+   "para": 312,
+   "span": "b = 1 + O(a)",
+   "explanatory_status": "derived",
+   "status_reason": "algebraic elimination from n46"
+  },
+  {
+   "id": "n48",
+   "type": "proposition",
+   "statement": "Writing b=1+ay and using the refined estimate yields 2cb^2=1+b+O(a^2) and hence c=1-(3/2)ay+O(a^2).",
+   "para": 329,
+   "span": "c = 1 - \\frac{3}{2} ay + O(a^2)",
+   "explanatory_status": "derived",
+   "status_reason": "algebra from n46 and n47"
+  },
+  {
+   "id": "n49",
+   "type": "proposition",
+   "statement": "Substituting gives d=(1/2)y+O(a) and e=O(1).",
+   "para": 337,
+   "span": "=\\frac{1}{2} y + O(a).",
+   "explanatory_status": "derived",
+   "status_reason": "substitution of n48 into the formulas (11),(12)"
+  },
+  {
+   "id": "n50",
+   "type": "proposition",
+   "statement": "Writing the O(a^2) error as a^2 z yields an explicit polynomial parameterization of (10) by three coordinates a,y,z, establishing (c) and completing the proof.",
+   "para": 344,
+   "span": "Expanding the ${O(a^2)}$ error term in (16) as ${a^2 z}$ , and doing a little more algebra",
+   "explanatory_status": "derived",
+   "status_reason": "assembled from n48, n49 and the solving formulas"
+  },
+  {
+   "id": "n51",
+   "type": "proposition",
+   "statement": "The change of variables has explicit polynomial inverse maps in a,y,z.",
+   "para": 356,
+   "span": "The previous computations, when expanded out, also gives polynomial inverse maps",
+   "explanatory_status": "derived",
+   "status_reason": "obtained by expanding the computations of n50"
+  },
+  {
+   "id": "n52",
+   "type": "proposition",
+   "statement": "Composing the parameterization with the coefficient map gives an explicit polynomial map G with Jacobian -1.",
+   "para": 374,
+   "span": "which theory predicts to have a constant Jacobian, and indeed one can calculate that the Jacobian is",
+   "explanatory_status": "derived",
+   "status_reason": "predicted by the local injectivity result and confirmed by calculation"
+  },
+  {
+   "id": "n53",
+   "type": "proposition",
+   "statement": "Up to trivial changes of variable G coincides exactly with the original explicit map (1).",
+   "para": 376,
+   "span": "is exactly the map ${F}$ given in",
+   "explanatory_status": "derived",
+   "status_reason": "checked by substitution against n8"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n2",
+   "to": "n5",
+   "bounds": "",
+   "type": "bounds"
+  },
+  {
+   "from": "n4",
+   "to": "n2",
+   "type": "derives"
+  },
+  {
+   "from": "n4",
+   "to": "n3",
+   "type": "derives"
+  },
+  {
+   "from": "n4",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n6",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n6",
+   "to": "n14",
+   "type": "derives"
+  },
+  {
+   "from": "n9",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n10",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n6",
+   "to": "n9",
+   "type": "supports"
+  },
+  {
+   "from": "n6",
+   "to": "n10",
+   "type": "supports"
+  },
+  {
+   "from": "n11",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n13",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n15",
+   "to": "n13",
+   "type": "derives"
+  },
+  {
+   "from": "n13",
+   "to": "n16",
+   "type": "bounds"
+  },
+  {
+   "from": "n18",
+   "to": "n17",
+   "type": "depends_on"
+  },
+  {
+   "from": "n19",
+   "to": "n18",
+   "type": "derives"
+  },
+  {
+   "from": "n20",
+   "to": "n18",
+   "type": "derives"
+  },
+  {
+   "from": "n21",
+   "to": "n20",
+   "type": "derives"
+  },
+  {
+   "from": "n22",
+   "to": "n18",
+   "type": "derives"
+  },
+  {
+   "from": "n24",
+   "to": "n23",
+   "type": "derives"
+  },
+  {
+   "from": "n25",
+   "to": "n24",
+   "type": "derives"
+  },
+  {
+   "from": "n25",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n27",
+   "to": "n23",
+   "type": "derives"
+  },
+  {
+   "from": "n28",
+   "to": "n27",
+   "type": "derives"
+  },
+  {
+   "from": "n29",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n29",
+   "to": "n28",
+   "type": "depends_on"
+  },
+  {
+   "from": "n30",
+   "to": "n20",
+   "type": "derives"
+  },
+  {
+   "from": "n30",
+   "to": "n25",
+   "type": "depends_on"
+  },
+  {
+   "from": "n31",
+   "to": "n28",
+   "type": "depends_on"
+  },
+  {
+   "from": "n31",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n31",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n33",
+   "to": "n32",
+   "type": "depends_on"
+  },
+  {
+   "from": "n33",
+   "to": "n28",
+   "type": "depends_on"
+  },
+  {
+   "from": "n34",
+   "to": "n31",
+   "type": "derives"
+  },
+  {
+   "from": "n34",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n34",
+   "to": "n33",
+   "type": "depends_on"
+  },
+  {
+   "from": "n35",
+   "to": "n33",
+   "type": "depends_on"
+  },
+  {
+   "from": "n36",
+   "to": "n17",
+   "type": "depends_on"
+  },
+  {
+   "from": "n37",
+   "to": "n36",
+   "type": "depends_on"
+  },
+  {
+   "from": "n38",
+   "to": "n37",
+   "type": "depends_on"
+  },
+  {
+   "from": "n39",
+   "to": "n38",
+   "type": "depends_on"
+  },
+  {
+   "from": "n39",
+   "to": "n19",
+   "type": "derives"
+  },
+  {
+   "from": "n39",
+   "to": "n23",
+   "type": "derives"
+  },
+  {
+   "from": "n40",
+   "to": "n39",
+   "type": "derives"
+  },
+  {
+   "from": "n41",
+   "to": "n40",
+   "type": "derives"
+  },
+  {
+   "from": "n42",
+   "to": "n39",
+   "type": "derives"
+  },
+  {
+   "from": "n43",
+   "to": "n42",
+   "type": "derives"
+  },
+  {
+   "from": "n44",
+   "to": "n41",
+   "type": "depends_on"
+  },
+  {
+   "from": "n44",
+   "to": "n43",
+   "type": "depends_on"
+  },
+  {
+   "from": "n46",
+   "to": "n45",
+   "type": "depends_on"
+  },
+  {
+   "from": "n46",
+   "to": "n39",
+   "type": "derives"
+  },
+  {
+   "from": "n47",
+   "to": "n46",
+   "type": "derives"
+  },
+  {
+   "from": "n48",
+   "to": "n47",
+   "type": "derives"
+  },
+  {
+   "from": "n48",
+   "to": "n46",
+   "type": "derives"
+  },
+  {
+   "from": "n49",
+   "to": "n48",
+   "type": "derives"
+  },
+  {
+   "from": "n49",
+   "to": "n40",
+   "type": "depends_on"
+  },
+  {
+   "from": "n50",
+   "to": "n48",
+   "type": "derives"
+  },
+  {
+   "from": "n50",
+   "to": "n49",
+   "type": "derives"
+  },
+  {
+   "from": "n50",
+   "to": "n44",
+   "type": "depends_on"
+  },
+  {
+   "from": "n35",
+   "to": "n50",
+   "type": "supports"
+  },
+  {
+   "from": "n13",
+   "to": "n50",
+   "type": "depends_on"
+  },
+  {
+   "from": "n13",
+   "to": "n34",
+   "type": "depends_on"
+  },
+  {
+   "from": "n51",
+   "to": "n50",
+   "type": "derives"
+  },
+  {
+   "from": "n52",
+   "to": "n50",
+   "type": "derives"
+  },
+  {
+   "from": "n52",
+   "to": "n31",
+   "type": "depends_on"
+  },
+  {
+   "from": "n53",
+   "to": "n52",
+   "type": "derives"
+  },
+  {
+   "from": "n53",
+   "to": "n8",
+   "type": "depends_on"
+  }
+ ],
+ "_meta": {
+  "document": "vc1",
+  "operator": "OP_A",
+  "model": "claude-opus-5",
+  "family": "anthropic",
+  "reader_model": "M-alg",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

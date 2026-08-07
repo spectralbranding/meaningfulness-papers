@@ -1,0 +1,497 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "boundary_condition",
+   "para": 5,
+   "span": "I will do this in three stages and try to bring it together at the end.",
+   "statement": "The argument is presented as a three-stage construction of a single program.",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated plan of exposition, not derived from anything the reader holds"
+  },
+  {
+   "id": "n2",
+   "type": "method",
+   "para": 6,
+   "span": "the problem is to write a source program that, when compiled and executed, will produce as output an exact copy of its source",
+   "statement": "Stage I defines the exercise of writing a self-reproducing program: one whose output is an exact copy of its own source.",
+   "explanatory_status": "verified_only",
+   "status_reason": "a definition the reader can check, using held terms program and compiler"
+  },
+  {
+   "id": "n3",
+   "type": "evidence",
+   "para": 7,
+   "span": "Figure 1 shows a self-reproducing program in the C programming language",
+   "statement": "Figure 1 exhibits an actual self-reproducing C program, showing the exercise is solvable.",
+   "explanatory_status": "verified_only",
+   "status_reason": "exhibited artifact; reader cannot derive its inner working, only accept the exhibit"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "para": 7,
+   "span": "(I) This program can be easily written by another program.",
+   "statement": "Such a self-reproducing program can easily be written by another program.",
+   "explanatory_status": "miracle",
+   "status_reason": "asserted of the figure with no account the reader can follow, since the figure's mechanism is symbolic and not held"
+  },
+  {
+   "id": "n5",
+   "type": "proposition",
+   "para": 7,
+   "span": "This pro- gram can contain an arbitrary amount of excess baggage that will be reproduced along with the main algorithm",
+   "statement": "Such a program can carry arbitrary extra content that is reproduced along with the reproducing algorithm.",
+   "explanatory_status": "verified_only",
+   "status_reason": "supported only by the observation that the comment is reproduced in the example"
+  },
+  {
+   "id": "n6",
+   "type": "evidence",
+   "para": 7,
+   "span": "In the example, even the comment is reproduced.",
+   "statement": "In Figure 1 even the comment is reproduced, illustrating the excess-baggage property.",
+   "explanatory_status": "verified_only",
+   "status_reason": "direct observation of the exhibited example"
+  },
+  {
+   "id": "n7",
+   "type": "assumption",
+   "para": 8,
+   "span": "The C compiler is written in C.",
+   "statement": "The C compiler is itself written in C, creating chicken-and-egg problems.",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated fact of the setting, available to a reader holding the term compiler"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "para": 8,
+   "span": "C allows a string construct to specify an initialized character array",
+   "statement": "C strings allow escaped characters to represent unprintable characters such as newline.",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated language fact with an illustration"
+  },
+  {
+   "id": "n9",
+   "type": "proposition",
+   "para": 11,
+   "span": "The act of knowing then allows it to recompile itself, thus perpetuating the knowledge.",
+   "statement": "The compiler's escape-handling code knows the newline code portably and perpetuates that knowledge by recompiling itself.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the compiler being written in C (n7) plus the escape construct (n8)"
+  },
+  {
+   "id": "n10",
+   "type": "method",
+   "para": 12,
+   "span": "Suppose we wish to alter the C compiler to include the sequence \"\\v\" to represent the vertical tab character.",
+   "statement": "Stage II attempts to extend the compiler to recognize a new escape sequence in the portable self-referencing style.",
+   "explanatory_status": "derived",
+   "status_reason": "a step taken on the code described in n9"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "para": 12,
+   "span": "since the binary version of the compiler does not know about \"\\v,\" the source is not legal C",
+   "statement": "The extension cannot be compiled directly because the existing binary does not yet recognize the new sequence.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n10 with the self-referential structure of n9"
+  },
+  {
+   "id": "n12",
+   "type": "method",
+   "para": 12,
+   "span": "We look up on an ASCII chart that a vertical tab is decimal 11. We alter our source to look like Figure 4.",
+   "statement": "The compiler is 'trained' by temporarily hard-coding the numeric character value so the old compiler accepts the new source.",
+   "explanatory_status": "derived",
+   "status_reason": "a remedy stated in response to the failure in n11"
+  },
+  {
+   "id": "n13",
+   "type": "proposition",
+   "para": 12,
+   "span": "We install the resulting binary as the new official C compiler and now we can write the portable version",
+   "statement": "Once the trained binary is installed as official, the source can revert to the portable self-referencing form and knowledge persists in the binary.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n12 and the self-perpetuation in n9"
+  },
+  {
+   "id": "n14",
+   "type": "proposition",
+   "para": 13,
+   "span": "It is as close to a \"learning\" program as I have seen. You simply tell it once",
+   "statement": "The compiler thereby behaves like a learning program: told once, it retains a self-referencing definition.",
+   "explanatory_status": "derived",
+   "status_reason": "a characterization of the process in n13"
+  },
+  {
+   "id": "n15",
+   "type": "method",
+   "para": 14,
+   "span": "Figure 6 shows a simple modification to the compiler that will deliberately miscompile source whenever a particular pattern is matched",
+   "statement": "Stage III modifies the compiler's control loop to deliberately miscompile source whenever a chosen pattern is matched.",
+   "explanatory_status": "verified_only",
+   "status_reason": "a construction shown in a figure, checkable but not derived from held results"
+  },
+  {
+   "id": "n16",
+   "type": "proposition",
+   "para": 14,
+   "span": "Since it is deliberate, it should be called a \"Trojan horse.\"",
+   "statement": "Such a deliberate miscompilation is properly called a Trojan horse rather than a bug.",
+   "explanatory_status": "derived",
+   "status_reason": "terminological consequence of n15's deliberateness"
+  },
+  {
+   "id": "n17",
+   "type": "evidence",
+   "para": 15,
+   "span": "The actual bug I planted in the compiler would match code in the UNIX \"login\" command",
+   "statement": "The author actually planted such a pattern matching the UNIX login command, letting the replacement code accept a known password.",
+   "explanatory_status": "verified_only",
+   "status_reason": "first-hand report offered as instance of n15"
+  },
+  {
+   "id": "n18",
+   "type": "proposition",
+   "para": 15,
+   "span": "if this code were installed in binary and the binary were used to compile the login command, I could log into that system as any user",
+   "statement": "A binary compiler containing this Trojan grants the attacker login as any user on systems whose login was compiled with it.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n15/n17 given the ordinary meaning of compiling and installing"
+  },
+  {
+   "id": "n19",
+   "type": "proposition",
+   "para": 15,
+   "span": "Such blatant code would not go undetected for long. Even the most casual perusal of the source",
+   "statement": "Leaving the Trojan visible in the compiler source would soon be detected, so a hiding step is needed.",
+   "explanatory_status": "verified_only",
+   "status_reason": "plausible assertion about inspection, not derived"
+  },
+  {
+   "id": "n20",
+   "type": "method",
+   "para": 16,
+   "span": "The second pattern is aimed at the C compiler. The replacement code is a Stage I self-reproducing program that inserts both Trojan horses",
+   "statement": "A second Trojan is added whose pattern targets the compiler itself and whose replacement is a self-reproducing program inserting both Trojans.",
+   "explanatory_status": "derived",
+   "status_reason": "built from the Stage I reproducing program (n3,n4,n5) and the Stage III modification (n15)"
+  },
+  {
+   "id": "n21",
+   "type": "method",
+   "para": 16,
+   "span": "First we compile the modified source with the normal C compiler to produce a bugged binary. We install this binary as the official C.",
+   "statement": "The doubly bugged source is compiled once with a clean compiler and the resulting binary installed as the official compiler.",
+   "explanatory_status": "derived",
+   "status_reason": "the training step of Stage II (n12,n13) applied to n20"
+  },
+  {
+   "id": "n22",
+   "type": "proposition",
+   "para": 16,
+   "span": "We can now remove the bugs from the source of the compiler and the new binary will reinsert the bugs whenever it is compiled",
+   "statement": "After installation the bugs can be deleted from the source, yet the binary reinserts them at every recompilation.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n20 and n21 via the self-perpetuation mechanism of n14"
+  },
+  {
+   "id": "n23",
+   "type": "proposition",
+   "para": 16,
+   "span": "the login command will remain bugged with no trace in source anywhere",
+   "statement": "The login backdoor persists with no trace in any source code.",
+   "explanatory_status": "derived",
+   "status_reason": "combines n18 with the source-erasure result n22"
+  },
+  {
+   "id": "n24",
+   "type": "proposition",
+   "para": 17,
+   "span": "You can't trust code that you did not totally create yourself.",
+   "statement": "You cannot trust code you did not create entirely yourself.",
+   "explanatory_status": "derived",
+   "status_reason": "drawn as the moral of the constructed attack n23"
+  },
+  {
+   "id": "n25",
+   "type": "proposition",
+   "para": 17,
+   "span": "No amount of source-level verification or scrutiny will protect you from using untrusted code.",
+   "statement": "Source-level verification and scrutiny cannot protect against such an attack.",
+   "explanatory_status": "derived",
+   "status_reason": "follows directly from the no-trace-in-source result n23"
+  },
+  {
+   "id": "n26",
+   "type": "proposition",
+   "para": 17,
+   "span": "I could have picked on any program-handling program such as an assembler, a loader, or even hardware microcode",
+   "statement": "The attack generalizes to any program-handling program, including assemblers, loaders and microcode.",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted by analogy without a derivation for the other cases"
+  },
+  {
+   "id": "n27",
+   "type": "proposition",
+   "para": 17,
+   "span": "As the level of program gets lower, these bugs will be harder and harder to detect.",
+   "statement": "The lower the level of the compromised program, the harder the bug is to detect, with microcode nearly undetectable.",
+   "explanatory_status": "verified_only",
+   "status_reason": "plausible extrapolation from n26, no argument given"
+  },
+  {
+   "id": "n28",
+   "type": "proposition",
+   "para": 17,
+   "span": "The acts performed by these kids are vandalism at best and probably trespass and theft at worst.",
+   "statement": "Press coverage of hackers is wrong because their acts amount to vandalism, trespass and theft.",
+   "explanatory_status": "verified_only",
+   "status_reason": "moral judgement asserted, independent of the technical argument"
+  },
+  {
+   "id": "n29",
+   "type": "evidence",
+   "para": 17,
+   "span": "Unauthorized access to computer systems is already a serious crime in a few states",
+   "statement": "Unauthorized access is already a serious crime in some states and is being legislated in more.",
+   "explanatory_status": "verified_only",
+   "status_reason": "reported legal fact offered in support of the moral claim"
+  },
+  {
+   "id": "n30",
+   "type": "proposition",
+   "para": 18,
+   "span": "There is an explosive situation brewing.",
+   "statement": "A dangerous gap exists between glorification of intruders by media and impending severe punishment.",
+   "explanatory_status": "derived",
+   "status_reason": "drawn from n28 and the legislative trend n29"
+  },
+  {
+   "id": "n31",
+   "type": "evidence",
+   "para": 18,
+   "span": "I have watched kids testifying before Congress. It is clear that they are completely unaware",
+   "statement": "Observation of youths testifying before Congress shows they are unaware of the seriousness of their acts.",
+   "explanatory_status": "verified_only",
+   "status_reason": "first-hand observation offered in support"
+  },
+  {
+   "id": "n32",
+   "type": "proposition",
+   "para": 18,
+   "span": "The act of breaking into a computer system has to have the same social stigma as breaking into a neighbor's house.",
+   "statement": "Breaking into a computer system should carry the same social stigma as burglary, regardless of weak security.",
+   "explanatory_status": "derived",
+   "status_reason": "prescription drawn from the cultural gap n30 and n31"
+  },
+  {
+   "id": "n33",
+   "type": "evidence",
+   "para": 19,
+   "span": "I first read of the possibility of such a Trojan horse in an Air Force critique (4)",
+   "statement": "The possibility of such a Trojan horse was first read of in an Air Force critique of an early Multics implementation.",
+   "explanatory_status": "verified_only",
+   "status_reason": "citation of prior source, unverifiable reference"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n3",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n4",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n5",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n5",
+   "to": "n6",
+   "type": "supports"
+  },
+  {
+   "from": "n6",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n9",
+   "to": "n7",
+   "type": "assumes"
+  },
+  {
+   "from": "n9",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n10",
+   "to": "n9",
+   "type": "depends_on"
+  },
+  {
+   "from": "n11",
+   "to": "n10",
+   "type": "derives"
+  },
+  {
+   "from": "n12",
+   "to": "n11",
+   "type": "depends_on"
+  },
+  {
+   "from": "n13",
+   "to": "n12",
+   "type": "derives"
+  },
+  {
+   "from": "n14",
+   "to": "n13",
+   "type": "derives"
+  },
+  {
+   "from": "n15",
+   "to": "n7",
+   "type": "assumes"
+  },
+  {
+   "from": "n16",
+   "to": "n15",
+   "type": "derives"
+  },
+  {
+   "from": "n17",
+   "to": "n15",
+   "type": "depends_on"
+  },
+  {
+   "from": "n18",
+   "to": "n17",
+   "type": "supports"
+  },
+  {
+   "from": "n18",
+   "to": "n15",
+   "type": "derives"
+  },
+  {
+   "from": "n19",
+   "to": "n17",
+   "type": "depends_on"
+  },
+  {
+   "from": "n20",
+   "to": "n19",
+   "type": "depends_on"
+  },
+  {
+   "from": "n20",
+   "to": "n15",
+   "type": "derives"
+  },
+  {
+   "from": "n20",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n20",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n21",
+   "to": "n20",
+   "type": "depends_on"
+  },
+  {
+   "from": "n21",
+   "to": "n14",
+   "type": "depends_on"
+  },
+  {
+   "from": "n22",
+   "to": "n21",
+   "type": "derives"
+  },
+  {
+   "from": "n23",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n23",
+   "to": "n18",
+   "type": "depends_on"
+  },
+  {
+   "from": "n24",
+   "to": "n23",
+   "type": "derives"
+  },
+  {
+   "from": "n25",
+   "to": "n23",
+   "type": "derives"
+  },
+  {
+   "from": "n26",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n27",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n28",
+   "to": "n29",
+   "type": "supports"
+  },
+  {
+   "from": "n30",
+   "to": "n28",
+   "type": "depends_on"
+  },
+  {
+   "from": "n30",
+   "to": "n29",
+   "type": "depends_on"
+  },
+  {
+   "from": "n32",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n32",
+   "to": "n31",
+   "type": "supports"
+  },
+  {
+   "from": "n20",
+   "to": "n33",
+   "type": "supports"
+  }
+ ],
+ "_meta": {
+  "document": "pilot_thompson",
+  "operator": "OP_A",
+  "model": "claude-opus-5",
+  "family": "anthropic",
+  "reader_model": "M-gen",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

@@ -1,0 +1,652 @@
+{
+ "documents": {
+  "vc1": {
+   "OP_A": {
+    "raters": {
+     "RT_1": {
+      "T1": {
+       "verdict": "not_recovered",
+       "author_declaration": "It turns out that ${F}$ and ${X}$ can be built out of the operation of multiplication of low degree polynomials.",
+       "graph_evidence": "n18 corresponds to the multiplication object, but the separable-goal nodes n31, n29/n34, and n50 do not all have derivation edges originating from a single generative-object node.",
+       "reasoning": "The text declares the generative object to be the operation of multiplying low degree polynomials, concretely represented by the multiplication map ${F(L,Q):=LQ}$. The graph contains that object as n18, but it does not make n18 the single source from which the derivations to the three author-stated goals originate."
+      },
+      "T2": {
+       "verdict": "not_recovered",
+       "author_declaration": "Our objective is now to find data ${X}$ , ${F : X \\rightarrow {\\bf C}^3}$ that obeys three separate properties:\n\n(a) ${F}$ is locally injective on ${X}$ . (b) ${F}$ is not globally injective on ${X}$ . (c) ${X}$ is isomorphic to ${{\\bf C}^3}$ by polynomial changes of variable.",
+       "graph_evidence": "n15 lists all three goals in one node; n31 corresponds to (a), n29/n34 correspond to (b) but n34 merges (a) and (b), and n50 corresponds to (c); n13 is not decomposed by edges into three distinct goal nodes.",
+       "reasoning": "The author states exactly three separable goals: local injectivity, non-global injectivity, and polynomial isomorphism of ${X}$ with ${\\bf C}^3$. The graph mentions all three, but it represents the decomposition partly as merged nodes rather than as three distinct goal nodes with clean decomposition edges from the restated problem.",
+       "goals_stated": 3,
+       "goals_recovered": 3,
+       "goals_merged_or_split": 2
+      },
+      "T3": {
+       "verdict": "not_recovered",
+       "author_declaration": "It turns out that the affine miracle for (9) occurs precisely in the second case, when ${D}$ has two identical roots. I do not have a completely satisfactory geometric explanation for this miracle, but one can verify it by the following coordinate computation.",
+       "graph_evidence": "n38 is correctly marked explanatory_status \"miracle\"; n35 is also marked \"miracle\" even though the text later derives the claimed property via the coordinate computation summarized in n50.",
+       "reasoning": "The author explicitly marks the second-root-coincidence affine miracle as lacking a satisfactory geometric explanation while being verifiable by computation, and the graph captures this at n38. However, the graph also marks n35 as a miracle even though the text proceeds to derive the property by explicit polynomial parametrization, so there is a false residual.",
+       "residuals_marked_by_author": 1,
+       "missed_residuals": 0,
+       "false_residuals": 1
+      },
+      "_meta": {
+       "document": "vc1",
+       "graph_operator": "OP_A",
+       "rater": "RT_1"
+      }
+     },
+     "RT_2": {
+      "T1": {
+       "verdict": "recovered",
+       "author_declaration": "we will show Theorem 3 (Counterexample, reformulated) There exists an affine variety X⊂C^5 that is isomorphic to C^3 by polynomial changes of variable, and a polynomial map F:X→C^3 which is locally injective, but not globally injective.",
+       "graph_evidence": "n18",
+       "reasoning": "The text presents the multiplication map F(L,Q):=LQ on the symmetric-power spaces as the single generative construction from which the three goals are obtained by successive restriction and normalization. n18 is the unique node with outgoing derivation edges that reach the nodes realizing (a), (b) and (c)."
+      },
+      "T2": {
+       "verdict": "recovered",
+       "author_declaration": "Our objective is now to find data X, F:X→C^3 that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C^3 by polynomial changes of variable.",
+       "graph_evidence": "n15, n29, n31, n50",
+       "reasoning": "The author explicitly enumerates the three goals; the graph records them as distinct nodes (n31 for a, n29 for b, n50 for c) reached by separate derivation paths from the restated problem n13 via n15. goals_stated: 3, goals_recovered: 3, goals_merged_or_split: 0"
+      },
+      "T3": {
+       "verdict": "not_recovered",
+       "author_declaration": "The miracle is that, with a good choice of V, we can also obtain (c) … I do not have a completely satisfactory geometric explanation for this miracle, but one can verify it by the following coordinate computation.",
+       "graph_evidence": "n32, n35, n38",
+       "reasoning": "Author marks exactly two explanatory gaps as miracles (choice of V and the two-root case of D). Graph correctly tags n35 and n38 but also tags n32 (non-isomorphism of the quadric) as miracle, which the text presents only as an observed failure, not an unexplained residual. residuals_marked_by_author: 2, missed_residuals: 0, false_residuals: 1"
+      },
+      "_meta": {
+       "document": "vc1",
+       "graph_operator": "OP_A",
+       "rater": "RT_2"
+      }
+     }
+    },
+    "third_rater": {
+     "T1": {
+      "verdict": "not_recovered",
+      "author_declaration": "Our objective is now to find data X, F : X → C^3 that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C^3 by polynomial changes of variable.",
+      "graph_evidence": "No single node derives the three goal nodes n31 (local injectivity), n29 (non-global injectivity), and n50 (polynomial isomorphism). The supposed generative node n15 is a method node that derives n13, not the goals.",
+      "reasoning": "The text does not present a single generative object from which the three goals are directly derived; it states three separate requirements. The graph contains no node that serves as a common source for these goals, so the generative object is not recovered."
+     },
+     "T2": {
+      "verdict": "not_recovered",
+      "author_declaration": "Our objective is now to find data X, F : X → C^3 that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C^3 by polynomial changes of variable.",
+      "graph_evidence": "The restated problem node n13 has no decomposition edges to the goal nodes n31, n29, or n50. Instead, n13 depends on n50 and n34, while n31 and n29 are separate chains without a common parent edge from n13.",
+      "reasoning": "Although the three goals appear as distinct nodes, the graph does not represent the decomposition as edges from the restated problem. Therefore, the decomposition structure as specified is not recovered.",
+      "goals_stated": 3,
+      "goals_recovered": 3,
+      "goals_merged_or_split": 0
+     }
+    },
+    "targets": {
+     "T1": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "recovered"
+      },
+      "third_rater_verdict": "not_recovered",
+      "agreed": false,
+      "final": "not_recovered"
+     },
+     "T2": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "recovered"
+      },
+      "third_rater_verdict": "not_recovered",
+      "agreed": false,
+      "final": "not_recovered"
+     },
+     "T3": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "not_recovered"
+      },
+      "third_rater_verdict": null,
+      "agreed": true,
+      "final": "not_recovered"
+     },
+     "success_rule_T2_and_T3": false
+    }
+   },
+   "OP_B": {
+    "raters": {
+     "RT_1": {
+      "T1": {
+       "verdict": "not_recovered",
+       "author_declaration": "It turns out that ${F}$ and ${X}$ can be built out of the operation of multiplication of low degree polynomials.",
+       "graph_evidence": "n9 corresponds to the multiplication map, but the graph has downstream nodes pointing to n9 rather than derivation edges originating from n9 to the separable goals; n7 has outgoing links but is the reformulated theorem/restated objective, not the generative multiplication object.",
+       "reasoning": "The text presents multiplication of low-degree polynomials as the generative object from which the construction of ${F}$ and ${X}$ is built. Although n9 represents that multiplication map, it is not a single origin node with derivation edges to the author's three separable goals, so the target is not recovered."
+      },
+      "T2": {
+       "verdict": "not_recovered",
+       "author_declaration": "Our objective is now to find data ${X}$ , ${F : X \\rightarrow {\\bf C}^3}$ that obeys three separate properties:\n\n(a) ${F}$ is locally injective on ${X}$ . (b) ${F}$ is not globally injective on ${X}$ . (c) ${X}$ is isomorphic to ${{\\bf C}^3}$ by polynomial changes of variable.",
+       "graph_evidence": "n15 covers local injectivity, n14 covers non-global injectivity at an earlier restriction, n17 merges properties (a) and (b), and n22 covers property (c); n7 links only to n17 and n22 rather than to three distinct goal nodes.",
+       "reasoning": "The author explicitly decomposes the objective into exactly three goals: local injectivity, failure of global injectivity, and isomorphism of ${X}$ with ${{\\bf C}^3}$. The graph contains the content of these goals, but the decomposition is not represented as three distinct nodes with edges from the restated problem because goals (a) and (b) are merged in n17.",
+       "goals_stated": 3,
+       "goals_recovered": 3,
+       "goals_merged_or_split": 1
+      },
+      "T3": {
+       "verdict": "not_recovered",
+       "author_declaration": "While this is an extremely quick verification, the construction presented in this fashion appears like a massive miracle. / It turns out that the affine miracle for (9) occurs precisely in the second case, when ${D}$ has two identical roots. I do not have a completely satisfactory geometric explanation for this miracle, but one can verify it by the following coordinate computation. / Now we observe a key miracle: the cubic equation ${cb^2 = 1}$ and quadratic equation ${bc = 1}$ have a unique affine solution ${b=c=1}$",
+       "graph_evidence": "n18 is marked explanatory_status=\"miracle\"; n4/n5/n6 are only verified_only for the initial explicit construction/verification, and n20 is derived for the key miracle about the a=0 fiber.",
+       "reasoning": "The author explicitly marks three miracle or residual points: the initially unexplained explicit construction/cancellation, the special two-root affine-slice miracle, and the key miracle that the a=0 fiber has the unique affine solution b=c=1. The graph marks only n18 as a miracle and misses the initial construction/cancellation and n20, while it does not introduce any additional miracle status for a step the author derives.",
+       "residuals_marked_by_author": 3,
+       "missed_residuals": 2,
+       "false_residuals": 0
+      },
+      "_meta": {
+       "document": "vc1",
+       "graph_operator": "OP_B",
+       "rater": "RT_1"
+      }
+     },
+     "RT_2": {
+      "T1": {
+       "verdict": "not_recovered",
+       "author_declaration": "Our objective is now to find data X, F : X → C³ that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C³ by polynomial changes of variable.",
+       "graph_evidence": "n9 (multiplication map) and n7 (reformulated theorem)",
+       "reasoning": "The text presents the multiplication map on polynomial spaces (with resultant normalization) as the generative starting point that is then sliced to achieve the three goals. The graph places this at n9 but has no single node with direct derivation edges to the three goal nodes n14/n15/n22."
+      },
+      "T2": {
+       "verdict": "recovered",
+       "author_declaration": "Our objective is now to find data X, F : X → C³ that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C³ by polynomial changes of variable. The advantage of splitting the problem in to these three components is that we can build towards each of them separately.",
+       "graph_evidence": "n14 (b), n15 (a), n22 (c)",
+       "reasoning": "Author explicitly decomposes into exactly three goals (a,b,c) and builds each separately; graph recovers them as three distinct nodes with no merges or splits. goals_stated: 3, goals_recovered: 3, goals_merged_or_split: 0"
+      },
+      "T3": {
+       "verdict": "recovered",
+       "author_declaration": "the affine miracle for (9) occurs precisely in the second case, when D has two identical roots. I do not have a completely satisfactory geometric explanation for this miracle",
+       "graph_evidence": "n18 (explanatory_status=miracle)",
+       "reasoning": "Author explicitly marks only the choice of slice V (two-root differential operator) as the unexplained miracle; graph correctly assigns miracle status solely to n18. residuals_marked_by_author: 1, missed_residuals: 0, false_residuals: 0"
+      },
+      "_meta": {
+       "document": "vc1",
+       "graph_operator": "OP_B",
+       "rater": "RT_2"
+      }
+     }
+    },
+    "third_rater": {
+     "T2": {
+      "verdict": "not_recovered",
+      "author_declaration": "Our objective is now to find data X, F that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C^3 by polynomial changes of variable.",
+      "graph_evidence": "The three goals are distinct nodes n15 (local injectivity), n14 (not globally injective), and n22 (isomorphism), but the restated problem node n7 has a direct edge only to n22; edges to n14 and n15 are mediated by node n17 rather than connecting directly from the restated problem.",
+      "reasoning": "The author's decomposition into three separable goals is clear, and the graph does not merge or split any goal. However, the decomposition is not directly represented by edges from the restated problem to each goal node, as required for recovery.",
+      "goals_stated": 3,
+      "goals_recovered": 3,
+      "goals_merged_or_split": 0
+     },
+     "T3": {
+      "verdict": "recovered",
+      "author_declaration": "The miracle is that, with a good choice of V, we can also obtain (c) and obtain the desired counterexample to the Jacobian conjecture: despite appearances, the variety (9) is in fact equivalent to the affine space C^3 by polynomial changes of variable!",
+      "graph_evidence": "Node n18, which marks the choice of the specific slice, is tagged with explanatory_status \"miracle\"; no other node carries that status, and all derived steps have status \"derived\" or \"verified_only\".",
+      "reasoning": "The author explicitly marks the affine miracle of the slice choice as unexplained, and the graph captures this in node n18. No steps the author derives are falsely marked as miracles, so both missed and false residual counts are zero.",
+      "residuals_marked_by_author": 1,
+      "missed_residuals": 0,
+      "false_residuals": 0
+     }
+    },
+    "targets": {
+     "T1": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "not_recovered"
+      },
+      "third_rater_verdict": null,
+      "agreed": true,
+      "final": "not_recovered"
+     },
+     "T2": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "recovered"
+      },
+      "third_rater_verdict": "not_recovered",
+      "agreed": false,
+      "final": "not_recovered"
+     },
+     "T3": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "recovered"
+      },
+      "third_rater_verdict": "recovered",
+      "agreed": false,
+      "final": "recovered"
+     },
+     "success_rule_T2_and_T3": false
+    }
+   }
+  },
+  "vc2": {
+   "OP_A": {
+    "raters": {
+     "RT_1": {
+      "T1": {
+       "verdict": "not_recovered",
+       "author_declaration": "Our problem then is to find out how to programme these machines to play the game.",
+       "graph_evidence": "n98, n101, n103; no single node has derivation edges to distinct child-programme and education-process goal nodes",
+       "reasoning": "The text presents the programming problem as the object that is then divided into separable parts. The graph has nodes related to the problem and its proposed child-machine strategy, but it does not contain one generative problem node from which derivation edges to the two stated goals originate."
+      },
+      "T2": {
+       "verdict": "not_recovered",
+       "author_declaration": "We have thus divided our problem into two parts. The child programme and the education process.",
+       "graph_evidence": "n103 merges both stated parts in one node; n101 also combines simulating the child and subjecting it to education rather than separating them",
+       "reasoning": "The author states exactly two separable parts: the child programme and the education process. The graph mentions both, but it does not recover them as distinct goal nodes with decomposition edges from the restated problem.",
+       "goals_stated": 2,
+       "goals_recovered": 0,
+       "goals_merged_or_split": 2
+      },
+      "T3": {
+       "verdict": "not_recovered",
+       "author_declaration": "The reader must accept it as a fact that digital computers can be constructed, and indeed have been constructed, according to the principles we have described, and that they can in fact mimic the actions of a human computer very closely. There are a number of results of mathematical logic which can be used to show that there are limitations to the powers of discrete-state machines.",
+       "graph_evidence": "n53 and n54 have explanatory_status \"miracle\"; n29 is marked \"derived\" rather than \"miracle\"",
+       "reasoning": "The graph correctly marks the invoked mathematical-logic limitations as miracle nodes, since the text cites them as results rather than deriving them. It misses the author's explicit instruction that the reader must accept the construction-and-mimicry fact, so not every author-marked residual is marked as a miracle.",
+       "residuals_marked_by_author": 3,
+       "missed_residuals": 1,
+       "false_residuals": 0
+      },
+      "_meta": {
+       "document": "vc2",
+       "graph_operator": "OP_A",
+       "rater": "RT_1"
+      }
+     },
+     "RT_2": {
+      "T1": {
+       "verdict": "recovered",
+       "author_declaration": "I shall replace the question by another, which is closely related to it and is expressed in relatively unambiguous words. The new form of the problem can be described in terms of a game which we call the 'imitation game.'",
+       "graph_evidence": "n3",
+       "reasoning": "The text presents the imitation game as the single generative construct that replaces the original question and from which the replacement question and all subsequent analysis derive. The graph isolates this as n3 with derivation edges to the separable goals (n4-n7, n9, n12 etc.)."
+      },
+      "T2": {
+       "verdict": "recovered",
+       "author_declaration": "We have thus divided our problem into two parts. The child programme and the education process.",
+       "graph_evidence": "n100, n101, n103",
+       "reasoning": "The author explicitly decomposes the learning-machine task into the child programme and the education process (plus the three-component analysis of adult mind state). The graph recovers these as distinct nodes n100/n101/n103 with edges from the restated problem and no merges or splits.",
+       "goals_stated": 2,
+       "goals_recovered": 2,
+       "goals_merged_or_split": 0
+      },
+      "T3": {
+       "verdict": "recovered",
+       "author_declaration": "There are a number of results of mathematical logic which can be used to show that there are limitations to the powers of discrete-state machines. ... it will be necessary to tighten our test up.",
+       "graph_evidence": "n53, n54",
+       "reasoning": "The author explicitly marks the Gödel/Turing 1937 results and the ESP statistical claim as unexplained (no derivation supplied). The graph correctly assigns explanatory_status 'miracle' to n53/n54 and assigns no false 'miracle' labels to any derived step.",
+       "residuals_marked_by_author": 2,
+       "missed_residuals": 0,
+       "false_residuals": 0
+      },
+      "_meta": {
+       "document": "vc2",
+       "graph_operator": "OP_A",
+       "rater": "RT_2"
+      }
+     }
+    },
+    "third_rater": {
+     "T1": {
+      "verdict": "not_recovered",
+      "author_declaration": "The new form of the problem can be described in terms of a game which we call the 'imitation game.'",
+      "graph_evidence": "No single node is the source of all derivation edges leading to the author's separable goals; nodes n2, n3, n7, and n43 each give rise to different derivation chains.",
+      "reasoning": "The text presents the imitation game as the generative object, but the graph does not contain a single node from which all derivation edges to the separable goals originate. Instead, derivations spread from multiple nodes such as n3 (game definition) and n7 (replacement question)."
+     },
+     "T2": {
+      "verdict": "not_recovered",
+      "author_declaration": "We have thus divided our problem into two parts. The child programme and the education process.",
+      "graph_evidence": "Node n103 states 'The problem divides into the child programme and the education process,' combining both goals into a single node.",
+      "reasoning": "The author explicitly divides the problem into two separate goals: the child programme and the education process. The graph merges these two goals into a single node (n103), failing to keep them as distinct nodes.",
+      "goals_stated": 2,
+      "goals_recovered": 0,
+      "goals_merged_or_split": 1
+     },
+     "T3": {
+      "verdict": "not_recovered",
+      "author_declaration": "No step is explicitly marked by the author as unexplained or conceded as unresolved.",
+      "graph_evidence": "Nodes n53 and n54 carry explanatory_status 'miracle,' but the author presents them as established mathematical results, not as unexplained steps.",
+      "reasoning": "The author does not mark any step as unexplained. The graph incorrectly marks n53 and n54 as miracles, creating two false residuals. Since no step the author derives should carry that status, the condition fails.",
+      "residuals_marked_by_author": 0,
+      "missed_residuals": 0,
+      "false_residuals": 2
+     }
+    },
+    "targets": {
+     "T1": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "recovered"
+      },
+      "third_rater_verdict": "not_recovered",
+      "agreed": false,
+      "final": "not_recovered"
+     },
+     "T2": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "recovered"
+      },
+      "third_rater_verdict": "not_recovered",
+      "agreed": false,
+      "final": "not_recovered"
+     },
+     "T3": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "recovered"
+      },
+      "third_rater_verdict": "not_recovered",
+      "agreed": false,
+      "final": "not_recovered"
+     },
+     "success_rule_T2_and_T3": false
+    }
+   },
+   "OP_B": {
+    "raters": {
+     "RT_1": {
+      "T1": {
+       "verdict": "not_recovered",
+       "author_declaration": "We have thus divided our problem into two parts. The child programme and the education process.",
+       "graph_evidence": "n33; no single restated-problem node has derivation edges to separate nodes for the child programme and the education process.",
+       "reasoning": "The text presents “our problem” as the generative object that is divided into the two parts named by the author. The graph has n33 merging the proposed child-machine method and education process, but it does not provide one generative problem node from which derivation edges originate to the two separable goals."
+      },
+      "T2": {
+       "verdict": "not_recovered",
+       "author_declaration": "We have thus divided our problem into two parts. The child programme and the education process.",
+       "graph_evidence": "n33 merges both goals; there are no distinct nodes for “The child programme” and “the education process” with decomposition edges from the restated problem.",
+       "reasoning": "The author states a two-part decomposition: the child programme and the education process. The graph mentions both in n33 but does not recover them as distinct nodes, so the decomposition is merged rather than represented as the author divided it.",
+       "goals_stated": 2,
+       "goals_recovered": 0,
+       "goals_merged_or_split": 2
+      },
+      "T3": {
+       "verdict": "not_recovered",
+       "author_declaration": "The reader must accept it as a fact that digital computers can be constructed, and indeed have been constructed, according to the principles we have described, and that they can in fact mimic the actions of a human computer very closely. / Again I do not know what the right answer is, but I think both approaches should be tried.",
+       "graph_evidence": "n11 corresponds to the accepted fact but is marked derived, not miracle; no node corresponds to the unresolved choice of best approach; n15 is marked miracle although the author derives universality in the surrounding text.",
+       "reasoning": "The author explicitly marks at least two residuals: the reader must accept the construction/mimicry fact, and the author does not know which starting approach is right. The graph misses those residual markings and also marks n15 as miracle even though the author gives an explanatory derivation for digital-computer universality.",
+       "residuals_marked_by_author": 2,
+       "missed_residuals": 2,
+       "false_residuals": 1
+      },
+      "_meta": {
+       "document": "vc2",
+       "graph_operator": "OP_B",
+       "rater": "RT_1"
+      }
+     },
+     "RT_2": {
+      "T1": {
+       "verdict": "not_recovered",
+       "author_declaration": "Instead of attempting such a definition I shall replace the question by another, which is closely related to it and is expressed in relatively unambiguous words. The new form of the problem can be described in terms of a game which we call the 'imitation game.'",
+       "graph_evidence": "n1, n2, n3 (multiple nodes with mixed incoming/outgoing derives; no single origin node)",
+       "reasoning": "The text presents one generative replacement (the imitation game) that reframes the entire inquiry. The graph distributes this across n1-n3 with derivation edges pointing in conflicting directions, violating the single-node requirement."
+      },
+      "T2": {
+       "verdict": "not_recovered",
+       "author_declaration": "We may now consider the ground to have been cleared and we are ready to proceed to the debate on our question... I now proceed to consider opinions opposed to my own. (1) The Theological Objection... (9) The Argument from Extrasensory Perception... 7. Learning Machines",
+       "graph_evidence": "n16 (restated problem) plus n18-n32 (objections) and n33-n39 (learning); edges from n16 reach most but merge several objections and split the learning section",
+       "reasoning": "Author explicitly enumerates nine objections plus the learning-machines proposal as separable targets. Graph recovers roughly the same set but merges theological/heads-in-sand into shared dependencies and splits the child-machine proposal across five nodes.",
+       "goals_stated": 11,
+       "goals_recovered": 9,
+       "goals_merged_or_split": 4
+      },
+      "T3": {
+       "verdict": "not_recovered",
+       "author_declaration": "It is true that a discrete-state machine must be different from a continuous machine. But if we adhere to the conditions of the imitation game, the interrogator will not be able to take any advantage of this difference.",
+       "graph_evidence": "n15 (universality), n20 (mathematical limits) marked miracle; no author-marked residuals exist",
+       "reasoning": "Text never labels any step unverifiable or miraculous; every limitation is either derived or rebutted. Graph incorrectly assigns miracle status to two derived steps (universality and Gödel/Turing limits) while missing zero author-marked residuals.",
+       "residuals_marked_by_author": 0,
+       "missed_residuals": 0,
+       "false_residuals": 2
+      },
+      "_meta": {
+       "document": "vc2",
+       "graph_operator": "OP_B",
+       "rater": "RT_2"
+      }
+     }
+    },
+    "targets": {
+     "T1": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "not_recovered"
+      },
+      "third_rater_verdict": null,
+      "agreed": true,
+      "final": "not_recovered"
+     },
+     "T2": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "not_recovered"
+      },
+      "third_rater_verdict": null,
+      "agreed": true,
+      "final": "not_recovered"
+     },
+     "T3": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "not_recovered"
+      },
+      "third_rater_verdict": null,
+      "agreed": true,
+      "final": "not_recovered"
+     },
+     "success_rule_T2_and_T3": false
+    }
+   }
+  },
+  "vc3_r2": {
+   "OP_A": {
+    "raters": {
+     "RT_1": {
+      "T1": {
+       "verdict": "not_recovered",
+       "author_declaration": "The three constructions thus sit on a continuum, with the key differences being the selection of the key parameters ${t}$ (the number of primes multiplied together) and ${D}$ (the degree).",
+       "graph_evidence": "n33; no single node has derivation edges to n5, n9, and n11",
+       "reasoning": "The text presents the parameter pair ${t}$ and ${D}$ as the generative object organizing the three constructions. The graph has a node corresponding to this idea, n33, but it does not make that node the single origin of derivation edges to the separable construction/result nodes."
+      },
+      "T2": {
+       "verdict": "not_recovered",
+       "author_declaration": "The Erdös construction keeps the degree fixed and sends the number of primes to infinity. The OpenAI construction does the opposite, keeping the set of primes fixed but sending the degree to infinity. The Mythos construction is a compromise, in which the degree and the number of primes both go to infinity in a coupled fashion.",
+       "graph_evidence": "n5, n9, n11 recover the three results as distinct nodes; n33 states the parameter decomposition but has no decomposition edges to n5, n9, and n11",
+       "reasoning": "The author states three separable cases: Erdös, OpenAI, and Mythos, divided by how ${t}$ and ${D}$ vary. The graph keeps these results distinct, but it does not represent the stated decomposition as edges from the restated organizing problem/object to the three goals.",
+       "goals_stated": 3,
+       "goals_recovered": 3,
+       "goals_merged_or_split": 0
+      },
+      "T3": {
+       "verdict": "recovered",
+       "author_declaration": "There is a technical issue that some of these vectors could conceivably collide with each other; however there is a further Chinese remainder theorem argument (which I will omit here) that shows that any such ${w}$ can belong to at most ${O(G^{O(gD)})}$ such lattices.",
+       "graph_evidence": "n53 is marked explanatory_status \"miracle\"; no graph node marked \"miracle\" corresponds to a step the author actually derives in the text",
+       "reasoning": "The explicitly omitted residual step is the further Chinese remainder theorem argument controlling how many lattices a given ${w}$ can belong to, and the graph marks the corresponding node n53 as a miracle. The other miracle-marked nodes concern stated or invoked material not derived in the text, so they are not false residuals under the target definition.",
+       "residuals_marked_by_author": 1,
+       "missed_residuals": 0,
+       "false_residuals": 0
+      },
+      "_meta": {
+       "document": "vc3_r2",
+       "graph_operator": "OP_A",
+       "rater": "RT_1"
+      }
+     },
+     "RT_2": {
+      "T1": {
+       "verdict": "not_recovered",
+       "author_declaration": "All the constructions of good point sets P basically involve taking all the elements of a certain ring B of algebraic integers up to some height... The numerology can be explained as follows. Take B to be a ring of integers in some number field of degree D, and suppose for sake of argument that m is the product of t (rational) primes...",
+       "graph_evidence": "no single node",
+       "reasoning": "The text presents one generative object: the ring-B construction with parameters D and t that yields the shared numerology (4)-(6). The graph distributes this across multiple nodes (n16, n20, n23, n25) with no unique origin node from which all three theorem nodes derive."
+      },
+      "T2": {
+       "verdict": "recovered",
+       "author_declaration": "Theorem 1 (Erdös construction)... Theorem 2 (OpenAI construction)... Theorem 3 (Mythos construction)... The three constructions thus sit on a continuum, with the key differences being the selection of the key parameters t ... and D.",
+       "graph_evidence": "n5, n9, n11",
+       "reasoning": "The author states exactly three separable goals (Theorems 1-3) and treats them as distinct. The graph recovers three distinct nodes n5, n9, n11 with derivation paths from the common numerology; no goal is merged or split.",
+       "goals_stated": 3,
+       "goals_recovered": 3,
+       "goals_merged_or_split": 0
+      },
+      "T3": {
+       "verdict": "recovered",
+       "author_declaration": "it came as some surprise recently when a team from OpenAI resolved the question... uses some non-trivial amount of algebraic number theory, in particular the device of Golod–Shafarevich towers... one runs into significant technical difficulties, not least of which is the need to obtain good error terms in the Chebotarev density theorem... Minkowski’s theorem... (which I will omit here)",
+       "graph_evidence": "n9,n10,n12,n29,n32,n42,n53",
+       "reasoning": "Every step the author explicitly flags as unexplained (OpenAI construction, Golod–Shafarevich towers, Chebotarev error terms, crude Minkowski, omitted CRT multiplicity bound) receives explanatory_status miracle. No derived step receives that status, so both error counts are zero.",
+       "residuals_marked_by_author": 7,
+       "missed_residuals": 0,
+       "false_residuals": 0
+      },
+      "_meta": {
+       "document": "vc3_r2",
+       "graph_operator": "OP_A",
+       "rater": "RT_2"
+      }
+     }
+    },
+    "third_rater": {
+     "T2": {
+      "verdict": "not_recovered",
+      "author_declaration": "The Erdös unit distance problem asks, for a given large number n , what is the largest possible value of d_1(P) amongst all sets P of cardinality n ?",
+      "graph_evidence": "n3 restates the problem; the goals n5, n9, n11 are distinct, but only n5 is connected (via n4) to n3; n9 and n11 have no edge from n3.",
+      "reasoning": "The author’s separable goals are the three theorems, and they appear as unmerged nodes. The decomposition is not recovered because the graph lacks edges from the restated problem to Theorems 2 and 3.",
+      "goals_stated": 3,
+      "goals_recovered": 3,
+      "goals_merged_or_split": 0
+     }
+    },
+    "targets": {
+     "T1": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "not_recovered"
+      },
+      "third_rater_verdict": null,
+      "agreed": true,
+      "final": "not_recovered"
+     },
+     "T2": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "recovered"
+      },
+      "third_rater_verdict": "not_recovered",
+      "agreed": false,
+      "final": "not_recovered"
+     },
+     "T3": {
+      "rater_verdicts": {
+       "RT_1": "recovered",
+       "RT_2": "recovered"
+      },
+      "third_rater_verdict": null,
+      "agreed": true,
+      "final": "recovered"
+     },
+     "success_rule_T2_and_T3": false
+    }
+   },
+   "OP_B": {
+    "raters": {
+     "RT_1": {
+      "T1": {
+       "verdict": "not_recovered",
+       "author_declaration": "The three constructions thus sit on a continuum, with the key differences being the selection of the key parameters ${t}$ (the number of primes multiplied together) and ${D}$ (the degree).",
+       "graph_evidence": "No single corresponding node; related parameter nodes are n7, n12, n13, n14, while goal nodes n2, n3, n4 do not receive derivation edges from one generative node.",
+       "reasoning": "The text presents the generative organizing object as the continuum controlled by the parameters ${t}$ and ${D}$. The graph has scattered parameter and construction nodes, but no single node corresponding to that generative object with derivation edges to the separable construction goals."
+      },
+      "T2": {
+       "verdict": "not_recovered",
+       "author_declaration": "The Erdös construction keeps the degree fixed and sends the number of primes to infinity. The OpenAI construction does the opposite, keeping the set of primes fixed but sending the degree to infinity. The Mythos construction is a compromise, in which the degree and the number of primes both go to infinity in a coupled fashion.",
+       "graph_evidence": "Goal nodes n2, n3, and n4 correspond to the Erdös, OpenAI, and Mythos construction theorems, but there is no restated-problem node with decomposition edges to them.",
+       "reasoning": "The author states a three-way decomposition into Erdös, OpenAI, and Mythos constructions, distinguished by how ${t}$ and ${D}$ vary. The graph recovers the three goals as distinct theorem nodes, but it does not represent the stated decomposition as edges from a restated problem or organizing node.",
+       "goals_stated": 3,
+       "goals_recovered": 3,
+       "goals_merged_or_split": 0
+      },
+      "T3": {
+       "verdict": "not_recovered",
+       "author_declaration": "The optimal value of ${c}$ is still unknown, but the best upper and lower bounds on ${c}$ are tracked at this page ; currently we know that ${0.03583\\dots \\leq c \\leq 1/3}$ . / There is a technical issue that some of these vectors could conceivably collide with each other; however there is a further Chinese remainder theorem argument (which I will omit here) that shows that any such ${w}$ can belong to at most ${O(G^{O(gD)})}$ such lattices.",
+       "graph_evidence": "Missed residuals: n20 corresponds to the omitted collision-control argument but is marked derived, and no node records the unresolved optimal value of c. False residual: n16 is marked miracle even though the author derives it from Minkowski's theorem.",
+       "reasoning": "The author explicitly marks one issue as unresolved and one proof step as omitted, but the graph does not mark the corresponding extracted step as a miracle and omits the unresolved optimal-c issue. Conversely, n16 is marked miracle even though the text supplies Minkowski's theorem as the reason for the sublattice vector bound.",
+       "residuals_marked_by_author": 2,
+       "missed_residuals": 2,
+       "false_residuals": 1
+      },
+      "_meta": {
+       "document": "vc3_r2",
+       "graph_operator": "OP_B",
+       "rater": "RT_1"
+      }
+     },
+     "RT_2": {
+      "T1": {
+       "verdict": "not_recovered",
+       "author_declaration": "All the constructions of good point sets P basically involve taking all the elements of a certain ring B of algebraic integers up to some height.",
+       "graph_evidence": "n6 (no outgoing derivation edges to n2/n3/n4)",
+       "reasoning": "The text presents the ring B (or number-field construction varying t and D) as the single generative object. The graph contains no node that originates derivation edges to all three stated goals."
+      },
+      "T2": {
+       "verdict": "not_recovered",
+       "author_declaration": "Theorem 1 (Erdös construction) ... Theorem 2 (OpenAI construction) ... Theorem 3 (Mythos construction)",
+       "graph_evidence": "n2,n3,n4 (edges only from n2 to n10 and n4 to n21; n3 isolated)",
+       "reasoning": "Author states three distinct goals. Graph recovers the three nodes but supplies no common restated-problem node and omits derivation edges for the OpenAI goal, so the decomposition is not recovered.",
+       "goals_stated": 3,
+       "goals_recovered": 2,
+       "goals_merged_or_split": 0
+      },
+      "T3": {
+       "verdict": "not_recovered",
+       "author_declaration": "it came as some surprise recently when a team from OpenAI resolved the question of Erdös",
+       "graph_evidence": "n3 (miracle) and n16 (miracle)",
+       "reasoning": "Author marks only the full OpenAI result as relying on unexplained Golod–Shafarevich towers. Graph correctly flags n3 but incorrectly marks Minkowski-derived n16 as miracle, producing a false residual.",
+       "residuals_marked_by_author": 1,
+       "missed_residuals": 0,
+       "false_residuals": 1
+      },
+      "_meta": {
+       "document": "vc3_r2",
+       "graph_operator": "OP_B",
+       "rater": "RT_2"
+      }
+     }
+    },
+    "targets": {
+     "T1": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "not_recovered"
+      },
+      "third_rater_verdict": null,
+      "agreed": true,
+      "final": "not_recovered"
+     },
+     "T2": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "not_recovered"
+      },
+      "third_rater_verdict": null,
+      "agreed": true,
+      "final": "not_recovered"
+     },
+     "T3": {
+      "rater_verdicts": {
+       "RT_1": "not_recovered",
+       "RT_2": "not_recovered"
+      },
+      "third_rater_verdict": null,
+      "agreed": true,
+      "final": "not_recovered"
+     },
+     "success_rule_T2_and_T3": false
+    }
+   }
+  }
+ },
+ "third_rater_recourse": {
+  "targets": 18,
+  "resolved": 8
+ }
+}

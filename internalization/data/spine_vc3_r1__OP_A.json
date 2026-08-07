@@ -1,0 +1,1420 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "proposition",
+   "statement": "For a finite planar set, ν(P) counts unit-distance pairs and ν(n) is its maximum over n-point sets.",
+   "para": 6,
+   "span": "For a ﬁnite set P ⊂ R2 , let ν(P ) = #{{x, y} ⊂ P : |x − y| = 1}",
+   "explanatory_status": "derived",
+   "status_reason": "a definition built from Euclidean distance and counting pairs, both held"
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "Erdős conjectured the upper bound ν(n) ≤ n^{1+C/log log n} for all large n.",
+   "para": 6,
+   "span": "planar unit-distance problem goes back to Erdős [Erd46], who conjectured that there should be",
+   "explanatory_status": "derived",
+   "status_reason": "the reader holds the unit-distance problem as a statement"
+  },
+  {
+   "id": "n3",
+   "type": "evidence",
+   "statement": "An elementary O(n^{3/2}) bound follows because the unit-distance graph is K_{2,3}-free and Kővári–Sós–Turán applies.",
+   "para": 8,
+   "span": "Euclidean unit-distance graph is K2,3 -free, since two unit circles meet in at most two points",
+   "explanatory_status": "derived",
+   "status_reason": "uses held facts about circles, graphs and counting pairs"
+  },
+  {
+   "id": "n4",
+   "type": "evidence",
+   "statement": "Sharp results for generic and strictly convex norms provided evidence favouring Erdős's conjecture, which was widely believed.",
+   "para": 9,
+   "span": "These results provided evidence in favor of Erdős’s conjecture",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited literature results, checkable but not derived from held terms"
+  },
+  {
+   "id": "n5",
+   "type": "proposition",
+   "statement": "Theorem 1.1: there is δ>0 and infinitely many n with ν(n) ≥ n^{1+δ}, disproving the conjecture.",
+   "para": 10,
+   "span": "There exists an absolute constant δ > 0 and inﬁnitely many positive integers n",
+   "explanatory_status": "derived",
+   "status_reason": "proved at the end from Theorem 2.3 and Proposition 3.8"
+  },
+  {
+   "id": "n6",
+   "type": "proposition",
+   "statement": "Theorem 1.1 also refutes the Erdős–Fishburn prediction k ≤ n^{o(1)}, since average degree n^{Ω(1)} forces a subgraph of large minimum degree.",
+   "para": 11,
+   "span": "along our sequence the unit-distance graph has average degree nΩ(1)",
+   "explanatory_status": "derived",
+   "status_reason": "follows from Theorem 1.1 plus an elementary degree argument"
+  },
+  {
+   "id": "n7",
+   "type": "boundary_condition",
+   "statement": "The geometric part assumes the existence of the admissible fields, whose construction is deferred to Section 3.",
+   "para": 20,
+   "span": "Assuming the existence of the admissible ﬁelds deﬁned below, we construct planar point sets",
+   "explanatory_status": "verified_only",
+   "status_reason": "an explicit scope condition stated without argument"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "An admissible datum is a totally real field L, the CM field K=L(i) with automorphism c, and t primes q_b ≡ 1 mod 4 splitting completely in L, with Q their product.",
+   "para": 22,
+   "span": "a totally real number ﬁeld L of degree f = [L : Q]",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stipulated definition; CM field and its conjugation are not held"
+  },
+  {
+   "id": "n9",
+   "type": "proposition",
+   "statement": "For every complex embedding of the CM field K=L(i), c acts as complex conjugation, so u c(u)=1 implies |σ(u)|=1.",
+   "para": 113,
+   "span": "elements u with u c(u) = 1 have |σ(u)| = 1 in every complex embedding",
+   "explanatory_status": "verified_only",
+   "status_reason": "CM fields and conjugation are not held by the reader; stated as convention"
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "The selected rational primes yield m = tf conjugate pairs of prime ideals of K.",
+   "para": 23,
+   "span": "Hence the ﬁxed rational primes give m = tf conjugate pairs of prime ideals of K",
+   "explanatory_status": "derived",
+   "status_reason": "derived from complete splitting in L and x^2+1 splitting mod q_b, using held splitting notions"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "Proposition 2.2: given an admissible datum with h(K) ≤ H^f there is a large set U of elements of Q^{-2}O_K with relative norm one and all complex absolute values 1.",
+   "para": 25,
+   "span": "Suppose h(K) ≤ H f for some real H > 0. Then there is a set U ⊂ Q−2 OK",
+   "explanatory_status": "derived",
+   "status_reason": "proved below from the ideal construction, pigeonhole and valuation computations"
+  },
+  {
+   "id": "n12",
+   "type": "method",
+   "statement": "For each binary vector ε one forms the ideal A_ε by choosing one prime from each conjugate pair.",
+   "para": 26,
+   "span": "For each binary vector ε = (εs ) ∈ {0, 1}m , choose one prime from each conjugate pair",
+   "explanatory_status": "derived",
+   "status_reason": "a construction from the prime pairs of n10"
+  },
+  {
+   "id": "n13",
+   "type": "proposition",
+   "statement": "Since the 2^m ideals occupy only h(K) classes, some class contains at least 2^m/h(K) of them.",
+   "para": 27,
+   "span": "These 2m ideals need not be principal, but they occupy only h(K) ideal classes",
+   "explanatory_status": "derived",
+   "status_reason": "held pigeonhole plus held finiteness of class number"
+  },
+  {
+   "id": "n14",
+   "type": "method",
+   "statement": "Within one fiber, one writes A_εA_η^{-1} = (α_ε) and sets u_ε = α_ε/c(α_ε), which has relative norm one.",
+   "para": 27,
+   "span": "uε = αε /c(αε ). Then uε c(uε ) = 1, so NK/L (uε ) = 1",
+   "explanatory_status": "derived",
+   "status_reason": "constructed from the pigeonhole fiber and principality"
+  },
+  {
+   "id": "n15",
+   "type": "proposition",
+   "statement": "Each u_ε has absolute value 1 under every complex embedding of K.",
+   "para": 27,
+   "span": "complex conjugation under every complex embedding of K",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n14 and the CM conjugation property n9"
+  },
+  {
+   "id": "n16",
+   "type": "proposition",
+   "statement": "The valuations of u_ε at the chosen primes are ±2(ε_s − η_s).",
+   "para": 31,
+   "span": "vPs (uε ) = 2(εs − ηs ), vcPs (uε ) = −2(εs − ηs )",
+   "explanatory_status": "derived",
+   "status_reason": "computed from the principal ideal identity of n14"
+  },
+  {
+   "id": "n17",
+   "type": "proposition",
+   "statement": "All poles of u_ε have order at most 2 above the q_b, so Q^2 u_ε ∈ O_K, i.e. u_ε ∈ Q^{-2}O_K.",
+   "para": 32,
+   "span": "Since QOK has valuation 1 at each such prime, Q2 uε ∈ OK",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the valuation formula n16"
+  },
+  {
+   "id": "n18",
+   "type": "proposition",
+   "statement": "Distinct ε give distinct valuation vectors and hence distinct elements u_ε.",
+   "para": 32,
+   "span": "By (4), distinct ε’s give distinct valuation vectors, hence distinct elements uε",
+   "explanatory_status": "derived",
+   "status_reason": "immediate from n16"
+  },
+  {
+   "id": "n19",
+   "type": "proposition",
+   "statement": "|U| ≥ 2^{tf}/h(K) ≥ exp{(t log 2 − log H)f}.",
+   "para": 33,
+   "span": "|U | ≥ ≥ exp{(t log 2 − log H)f }",
+   "explanatory_status": "derived",
+   "status_reason": "combines fiber size n13, injectivity n18 and the class-number hypothesis"
+  },
+  {
+   "id": "n20",
+   "type": "proposition",
+   "statement": "The quantity γ := t log 2 − log H is the effective exponent gained.",
+   "para": 34,
+   "span": "Set γ := t log 2 − log H",
+   "explanatory_status": "derived",
+   "status_reason": "a definition read off from the bound n19"
+  },
+  {
+   "id": "n21",
+   "type": "proposition",
+   "statement": "Theorem 2.3: a sequence of admissible data with fixed primes, degrees tending to infinity, h(K_j) ≤ H^{f_j} and γ>0 yields δ>0 and infinitely many n with ν(n) ≥ n^{1+δ}.",
+   "para": 34,
+   "span": "and inﬁnitely many n such that ν(n) ≥ n1+δ",
+   "explanatory_status": "derived",
+   "status_reason": "proved from Lemmas 2.4–2.6 below"
+  },
+  {
+   "id": "n22",
+   "type": "method",
+   "statement": "K is embedded by the Minkowski map Φ into V = C^f using one extension of each real embedding.",
+   "para": 38,
+   "span": "Φ : K −→ V = Cf , Φ(x) = (σ1 (x), . . . , σf (x))",
+   "explanatory_status": "verified_only",
+   "status_reason": "a construction introduced by fiat; Minkowski-space embedding not held"
+  },
+  {
+   "id": "n23",
+   "type": "method",
+   "statement": "The fractional ideal D^{-1}O_K is identified with a lattice Λ ⊂ V containing the image of U.",
+   "para": 38,
+   "span": "We identify the fractional ideal D−1 OK with the lattice Λ = Φ(D−1 OK ) ⊂ V",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n22 and the integrality n17"
+  },
+  {
+   "id": "n24",
+   "type": "method",
+   "statement": "The window B_R is the product of f discs of radius R in the sup norm.",
+   "para": 38,
+   "span": "and let BR = {z ∈ V : kzk∞ ≤ R}. Thus BR is a product of f radius-R discs",
+   "explanatory_status": "derived",
+   "status_reason": "an elementary construction from held Euclidean geometry"
+  },
+  {
+   "id": "n25",
+   "type": "method",
+   "statement": "For each lattice coset one defines the point count N_a and the count E_a of ordered pairs differing by an element of U.",
+   "para": 38,
+   "span": "For a coset a + Λ, deﬁne Xa = (a + Λ) ∩ BR , Na = |Xa |, and",
+   "explanatory_status": "derived",
+   "status_reason": "definitions built on n23 and n24"
+  },
+  {
+   "id": "n26",
+   "type": "proposition",
+   "statement": "The disc-overlap ratio ρ_R = a(R)/b(R) tends to 1 as R → ∞.",
+   "para": 40,
+   "span": "and set ρR = a(R)/b(R). Then ρR → 1 as R → ∞",
+   "explanatory_status": "derived",
+   "status_reason": "elementary plane geometry, held"
+  },
+  {
+   "id": "n27",
+   "type": "proposition",
+   "statement": "Lemma 2.4: for R large enough that log ρ_R > −γ/2, some nonempty coset satisfies E_a ≥ e^{γf/2}N_a.",
+   "para": 40,
+   "span": "Choose R > 1/2 so large that log ρR > −γ/2. Then some nonempty coset a + Λ",
+   "explanatory_status": "derived",
+   "status_reason": "proved from the averaging identities and the size of U"
+  },
+  {
+   "id": "n28",
+   "type": "proposition",
+   "statement": "Averaging over cosets with Haar measure gives E[N_a] = b(R)^f/covol(Λ).",
+   "para": 41,
+   "span": "Averaging over a ∈ V /Λ with respect to Haar probability measure, the standard unfolding",
+   "explanatory_status": "verified_only",
+   "status_reason": "the unfolding identity is invoked as standard, not derived for this reader"
+  },
+  {
+   "id": "n29",
+   "type": "proposition",
+   "statement": "For each u ∈ U the translated window overlap has volume a(R)^f because every coordinate of the translation has absolute value 1.",
+   "para": 41,
+   "span": "every coordinate of this Minkowski-space translation has absolute value 1",
+   "explanatory_status": "derived",
+   "status_reason": "uses n15 and the product-of-discs shape n24"
+  },
+  {
+   "id": "n30",
+   "type": "proposition",
+   "statement": "Summing over U gives E[E_a] = |U| ρ_R^f E[N_a].",
+   "para": 42,
+   "span": "Ea [Ea ] = = |U |ρfR Ea [Na ]",
+   "explanatory_status": "derived",
+   "status_reason": "combines n28 and n29"
+  },
+  {
+   "id": "n31",
+   "type": "proposition",
+   "statement": "Since the averages agree, some nonempty coset has E_a ≥ |U|ρ_R^f N_a.",
+   "para": 43,
+   "span": "If every nonempty coset had Ea < |U |ρfR Na , then integrating over all cosets would contradict",
+   "explanatory_status": "derived",
+   "status_reason": "averaging/pigeonhole applied to n30"
+  },
+  {
+   "id": "n32",
+   "type": "method",
+   "statement": "Fixing the good coset X and projecting to the first complex coordinate produces the planar set P.",
+   "para": 44,
+   "span": "be the ﬁrst-coordinate projection, corresponding to the embedding σ1 , and put P = π1 (X) ⊂",
+   "explanatory_status": "derived",
+   "status_reason": "constructed from the coset supplied by n27"
+  },
+  {
+   "id": "n33",
+   "type": "proposition",
+   "statement": "Lemma 2.5: π_1 is injective on X and ν(P) ≥ (1/2)e^{γf/2}|P|.",
+   "para": 44,
+   "span": "The map π1 : X → C is injective. Moreover, ν(P ) ≥ 21 eγf /2 |P |",
+   "explanatory_status": "derived",
+   "status_reason": "proved from injectivity and projection of the pairs counted by E_a"
+  },
+  {
+   "id": "n34",
+   "type": "proposition",
+   "statement": "Injectivity holds because a difference with vanishing first coordinate must be zero, σ_1 being a field embedding.",
+   "para": 45,
+   "span": "Because σ1 is a ﬁeld embedding, β = 0, so x = x0 . Thus |P | = |X| = N",
+   "explanatory_status": "derived",
+   "status_reason": "uses the embedding construction n22"
+  },
+  {
+   "id": "n35",
+   "type": "proposition",
+   "statement": "Each pair counted by E_a projects to an ordered unit-distance pair in the plane.",
+   "para": 45,
+   "span": "Each ordered pair counted by Ea has the form (x, x + u), with u ∈ U",
+   "explanatory_status": "derived",
+   "status_reason": "follows from |π_1(u)| = 1, i.e. n15"
+  },
+  {
+   "id": "n36",
+   "type": "proposition",
+   "statement": "Distinct ordered pairs in X give distinct planar ordered pairs, and each unordered segment has at most two orientations, giving 2ν(P) ≥ E_a.",
+   "para": 46,
+   "span": "shows that distinct ordered pairs in X 2 give distinct ordered planar pairs",
+   "explanatory_status": "derived",
+   "status_reason": "combines n34 and n35 with elementary counting"
+  },
+  {
+   "id": "n37",
+   "type": "proposition",
+   "statement": "Lemma 2.6: the point count satisfies n ≤ e^{Bf} with B = 2 log(4RD).",
+   "para": 50,
+   "span": "Let n = |P |. Then n ≤ eBf , where B = 2 log(4RD)",
+   "explanatory_status": "derived",
+   "status_reason": "proved from the separation and volume-packing estimates below"
+  },
+  {
+   "id": "n38",
+   "type": "proposition",
+   "statement": "The product of coordinate absolute values of a nonzero difference is at least D^{-f} since the norm of a nonzero algebraic integer is a nonzero integer.",
+   "para": 52,
+   "span": "|σr (D−1 β)| = D−f | NK/Q (β)|1/2 ≥ D−f",
+   "explanatory_status": "verified_only",
+   "status_reason": "relies on integrality of the algebraic norm, not among the reader's held results"
+  },
+  {
+   "id": "n39",
+   "type": "proposition",
+   "statement": "Hence X is D^{-1}-separated in the sup norm.",
+   "para": 53,
+   "span": "coordinate diﬀers by at least D−1 , so X is D−1 -separated in the sup norm",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n38"
+  },
+  {
+   "id": "n40",
+   "type": "proposition",
+   "statement": "Disjoint polydiscs of radius D^{-1}/2 inside a slightly larger window give the volume comparison bounding |X|.",
+   "para": 53,
+   "span": "The open polydiscs of sup-norm radius D−1 /2 centered at the points of X are pairwise disjoint",
+   "explanatory_status": "derived",
+   "status_reason": "held elementary packing argument applied to n39"
+  },
+  {
+   "id": "n41",
+   "type": "proposition",
+   "statement": "Therefore |P| = |X| ≤ (4RD)^{2f} = e^{Bf}.",
+   "para": 54,
+   "span": "|P | = |X| ≤ (1 + 2RD)2f ≤ (4RD)2f = eBf",
+   "explanatory_status": "derived",
+   "status_reason": "computation from n40 and injectivity n34"
+  },
+  {
+   "id": "n42",
+   "type": "proposition",
+   "statement": "The sizes n_j tend to infinity because E_a ≤ n_j^2 while E_a ≥ e^{γf_j/2}n_j.",
+   "para": 57,
+   "span": "every ordered pair counted by Ea is determined by its two endpoints, so",
+   "explanatory_status": "derived",
+   "status_reason": "combines n27 with trivial pair counting"
+  },
+  {
+   "id": "n43",
+   "type": "proposition",
+   "statement": "Combining ν(P_j) ≥ n_j e^{γf_j/2} with f_j ≥ log n_j/B and setting δ = γ/(4B) yields ν(P_j) ≥ n_j^{1+δ}.",
+   "para": 58,
+   "span": "Set δ = γ/(4B) > 0. Since nj → ∞, the factor 1/2 is absorbed for all suﬃciently large j",
+   "explanatory_status": "derived",
+   "status_reason": "algebra from n33, n37 and n42"
+  },
+  {
+   "id": "n44",
+   "type": "proposition",
+   "statement": "The conductor–discriminant formula expresses the discriminant of an abelian field as the product of character conductors.",
+   "para": 63,
+   "span": "if a ﬁnite abelian ﬁeld L/Q has character group X, then |DL | =",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited class-field-theoretic tool, not held by the reader"
+  },
+  {
+   "id": "n45",
+   "type": "proposition",
+   "statement": "Proposition 3.2: for primes r_i ≡ 1 mod 3, the cubic subfields L_i are totally real and disjoint, M/Q and M/F have the stated 3-elementary Galois groups, |D_F| = D^2, and M/F is everywhere unramified.",
+   "para": 64,
+   "span": "Then the ﬁelds Li are totally real and linearly disjoint,",
+   "explanatory_status": "derived",
+   "status_reason": "proved from cyclotomic facts, the conductor–discriminant formula and the tower formula"
+  },
+  {
+   "id": "n46",
+   "type": "proposition",
+   "statement": "Standard cyclotomic facts: each L_i is totally real, of conductor r_i, ramified only at r_i.",
+   "para": 65,
+   "span": "The standard cyclotomic facts are that Li is totally real, has conductor ri , and is ramiﬁed",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited cyclotomic class field theory, not held"
+  },
+  {
+   "id": "n47",
+   "type": "proposition",
+   "statement": "Disjoint ramification makes the L_i linearly disjoint, so Gal(M/Q) ≅ (Z/3Z)^ℓ.",
+   "para": 65,
+   "span": "Since the ramiﬁed rational primes are disjoint, the Li ’s are linearly disjoint, giving",
+   "explanatory_status": "derived",
+   "status_reason": "derived from n46 using held Galois and ramification notions"
+  },
+  {
+   "id": "n48",
+   "type": "proposition",
+   "statement": "The product character χ cuts out a cyclic cubic F ⊂ M with Gal(M/F) of rank ℓ−1.",
+   "para": 65,
+   "span": "The product character χ cuts out a cyclic cubic subﬁeld",
+   "explanatory_status": "derived",
+   "status_reason": "follows from n47 and the character-to-field correspondence"
+  },
+  {
+   "id": "n49",
+   "type": "proposition",
+   "statement": "The conductor–discriminant computation gives |D_F| = D^2 and |D_M| = D^{2·3^{ℓ-1}} = |D_F|^{[M:F]}.",
+   "para": 66,
+   "span": "|DF | = D2 , |DM | = D2·3 = |DF |[M :F ]",
+   "explanatory_status": "derived",
+   "status_reason": "computed from n44, n46, n48"
+  },
+  {
+   "id": "n50",
+   "type": "proposition",
+   "statement": "The tower formula relates |D_M| to |D_F|^{[M:F]} times the norm of the relative discriminant.",
+   "para": 68,
+   "span": "|DM | = |DF |[M :F ] NF/Q (dM/F )",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated convention (Definition A.6), not held by the reader"
+  },
+  {
+   "id": "n51",
+   "type": "proposition",
+   "statement": "Equality of discriminants forces d_{M/F}=O_F and, both fields being totally real, M/F is everywhere unramified.",
+   "para": 69,
+   "span": "ﬁelds are totally real, so there is no inﬁnite ramiﬁcation either. Hence M/F is everywhere",
+   "explanatory_status": "derived",
+   "status_reason": "combines n49 with the tower formula n50"
+  },
+  {
+   "id": "n52",
+   "type": "proposition",
+   "statement": "The Frattini subgroup of a finitely generated pro-p group consists of non-generators, and one records generator rank d(G) and relation rank r(G).",
+   "para": 70,
+   "span": "It consists of the “non-generators” of G: quotienting by elements in Φ(G) does not lower the",
+   "explanatory_status": "verified_only",
+   "status_reason": "pro-p groups and Frattini subgroup are explicitly not held"
+  },
+  {
+   "id": "n53",
+   "type": "proposition",
+   "statement": "Proposition 3.3: d(G)=dim G/Φ(G), and quotienting by the closed normal closure of k Frattini elements preserves d and raises r by at most k.",
+   "para": 71,
+   "span": "g1 , . . . , gk ∈ Φ(G) and N is their closed normal closure, then d(G/N ) = d(G) and r(G/N ) ≤",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited pro-p group theory, outside the reader's held terms"
+  },
+  {
+   "id": "n54",
+   "type": "proposition",
+   "statement": "Golod–Shafarevich: a finite nontrivial pro-p group has r > d^2/4, so r ≤ d^2/4 forces infiniteness.",
+   "para": 73,
+   "span": "rank d and relation rank r, then r > d2 /4. Equivalently, a nontrivial ﬁnitely generated pro-p group",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited inequality explicitly not held by the reader"
+  },
+  {
+   "id": "n55",
+   "type": "proposition",
+   "statement": "Shafarevich's estimate: for totally real cubic F without ζ3, the unramified pro-3 group satisfies r(G) ≤ d(G) + C_0.",
+   "para": 74,
+   "span": "pro-3 extension, in the sense of Deﬁnition A.3. Then r(G) ≤ d(G) + C0 for an absolute constant",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited class-field-theoretic estimate, not held"
+  },
+  {
+   "id": "n56",
+   "type": "proposition",
+   "statement": "Proposition 3.6: Chebotarev supplies t primes splitting completely in the normal closure of E(i), hence ≡1 mod 4, split in F, with Frobenius in Φ(G).",
+   "para": 76,
+   "span": "q1 , . . . , qt which split completely in the normal closure over Q of E(i). For each such prime",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited density theorem plus Frattini quotient, both not held"
+  },
+  {
+   "id": "n57",
+   "type": "proposition",
+   "statement": "Complete splitting of a prime is equivalent to triviality of its Frobenius class.",
+   "para": 116,
+   "span": "The prime p splits completely in N exactly when this Frobenius class is the identity",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated convention with citation; Frobenius machinery beyond held terms"
+  },
+  {
+   "id": "n58",
+   "type": "proposition",
+   "statement": "Proposition 3.7: h(K) ≤ max{2, rd(K)}^{C_class[K:Q]} with an absolute constant.",
+   "para": 77,
+   "span": "There is an absolute constant Cclass > 0 such that every number ﬁeld K",
+   "explanatory_status": "verified_only",
+   "status_reason": "relies on Minkowski's ideal-class bound, explicitly not held"
+  },
+  {
+   "id": "n59",
+   "type": "proposition",
+   "statement": "Minkowski's ideal-class bound with a divisor-function count yields the class-number estimate.",
+   "para": 123,
+   "span": "Minkowski’s ideal-class bound, combined with the elementary divisor-",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited source; Minkowski convex body theorem not held"
+  },
+  {
+   "id": "n60",
+   "type": "method",
+   "statement": "Step 1 takes r_1,...,r_ℓ the first ℓ primes ≡1 mod 3, forms M as the compositum of the cubic subfields and F as the field cut out by χ=χ_1···χ_ℓ.",
+   "para": 88,
+   "span": "Let Li be the cyclic cubic subﬁeld of Q(ζri ), and put",
+   "explanatory_status": "derived",
+   "status_reason": "a construction carried out using Proposition 3.2"
+  },
+  {
+   "id": "n61",
+   "type": "proposition",
+   "statement": "F is totally real cyclic cubic, M/F is everywhere unramified with group (Z/3Z)^{ℓ-1}.",
+   "para": 88,
+   "span": "that proposition, F is a totally real cyclic cubic ﬁeld, M/F is everywhere unramiﬁed, and",
+   "explanatory_status": "derived",
+   "status_reason": "instance of n45 applied to the choice n60"
+  },
+  {
+   "id": "n62",
+   "type": "proposition",
+   "statement": "F being totally real, it does not contain ζ3.",
+   "para": 89,
+   "span": "Since F is totally real, it does not contain the non-real root of unity ζ3",
+   "explanatory_status": "derived",
+   "status_reason": "immediate from n61 and held notion of totally real"
+  },
+  {
+   "id": "n63",
+   "type": "proposition",
+   "statement": "Since G = Gal(F^{ur,3}/F) has quotient (Z/3Z)^{ℓ-1}, its generator rank satisfies d(G) ≥ ℓ−1.",
+   "para": 89,
+   "span": "everywhere-unramiﬁed pro-3 extension, G = Gal(F ur,3 /F ), has a quotient (Z/3Z)`−1 , and so",
+   "explanatory_status": "derived",
+   "status_reason": "derived from n61 via the Frattini rank identity n53"
+  },
+  {
+   "id": "n64",
+   "type": "proposition",
+   "statement": "Because the r_i are the first ℓ primes ≡1 mod 3, the prime number theorem in progressions gives log rd(F) = O(ℓ log ℓ).",
+   "para": 91,
+   "span": "the prime number theorem in arithmetic progressions [Dav00] gives",
+   "explanatory_status": "verified_only",
+   "status_reason": "invokes the prime number theorem in progressions, not among held results"
+  },
+  {
+   "id": "n65",
+   "type": "proposition",
+   "statement": "Property P1: F is totally real cyclic cubic without ζ3 and with log rd(F) = O(ℓ log ℓ).",
+   "para": 80,
+   "span": "The base ﬁeld F is totally real, cyclic cubic over Q, does not contain ζ3 , and has controlled",
+   "explanatory_status": "derived",
+   "status_reason": "assembled from n61, n62 and n64"
+  },
+  {
+   "id": "n66",
+   "type": "proposition",
+   "statement": "Step 2 applies Shafarevich's estimate to get r(G) ≤ d(G) + C_0 for this totally real cubic F.",
+   "para": 92,
+   "span": "Step 2: construct an inﬁnite quotient with trivial selected Frobenius classes. Shafarevich’s relation-",
+   "explanatory_status": "derived",
+   "status_reason": "instance of n55 using n61 and n62"
+  },
+  {
+   "id": "n67",
+   "type": "method",
+   "statement": "With E the Frattini quotient extension, d = d(G) and t = ⌊(ℓ−1)^2/100⌋ are fixed.",
+   "para": 94,
+   "span": "quotient extension corresponding to G/Φ(G), and put d = d(G) and",
+   "explanatory_status": "derived",
+   "status_reason": "definitions set up for the relation count, using n52"
+  },
+  {
+   "id": "n68",
+   "type": "method",
+   "statement": "Chebotarev is applied to choose t distinct primes q_b avoiding 3D with the splitting and Frattini-trivial Frobenius properties.",
+   "para": 94,
+   "span": "By Proposition 3.6, choose distinct rational primes q1 , . . . , qt , avoiding 3D,",
+   "explanatory_status": "derived",
+   "status_reason": "application of n56 with the parameters of n67"
+  },
+  {
+   "id": "n69",
+   "type": "proposition",
+   "statement": "There are exactly k = 3t primes v of F above the chosen q_b, since each splits completely in the cubic field F.",
+   "para": 95,
+   "span": "such primes v of F , because each qb splits completely in the cubic ﬁeld F",
+   "explanatory_status": "derived",
+   "status_reason": "follows from complete splitting in n68 with held degree count"
+  },
+  {
+   "id": "n70",
+   "type": "method",
+   "statement": "One forms N, the closed normal closure of chosen Frobenius representatives, and sets Ḡ = G/N.",
+   "para": 96,
+   "span": "N = hhσv : v | qb for some bii / G",
+   "explanatory_status": "derived",
+   "status_reason": "construction using the Frobenius elements from n68"
+  },
+  {
+   "id": "n71",
+   "type": "proposition",
+   "statement": "Because the representatives lie in Φ(G), d(Ḡ)=d while at most 3t relations are added.",
+   "para": 97,
+   "span": "representatives lie in Φ(G), the Frattini quotient identity from Proposition 3.3 gives d(G) = d,",
+   "explanatory_status": "derived",
+   "status_reason": "application of n53 to n70 and n69"
+  },
+  {
+   "id": "n72",
+   "type": "proposition",
+   "statement": "Hence r(Ḡ) ≤ d + C_0 + 3d^2/100.",
+   "para": 98,
+   "span": "r(G) ≤ r(G) + k = r(G) + 3t ≤ d + C0 +",
+   "explanatory_status": "derived",
+   "status_reason": "combines n66, n67 and n71"
+  },
+  {
+   "id": "n73",
+   "type": "proposition",
+   "statement": "For large ℓ this relation count is below d^2/4, so Golod–Shafarevich makes Ḡ infinite with trivial selected Frobenius classes.",
+   "para": 99,
+   "span": "For `, hence d, suﬃciently large, the right side is < d2 /4. By Golod-Shafarevich, again as stated",
+   "explanatory_status": "derived",
+   "status_reason": "applies n54 to the bound n72 with d ≥ ℓ−1 from n63"
+  },
+  {
+   "id": "n74",
+   "type": "proposition",
+   "statement": "Property P2: a descending chain of open normal subgroups of Ḡ yields an infinite tower of finite Galois, everywhere unramified 3-extensions F_j of F with f_j → ∞.",
+   "para": 102,
+   "span": "of open normal subgroups with indices tending to inﬁnity, and let Fj be the corresponding ﬁxed",
+   "explanatory_status": "derived",
+   "status_reason": "extracted from the infinite quotient n73 using the maximal unramified pro-3 correspondence"
+  },
+  {
+   "id": "n75",
+   "type": "proposition",
+   "statement": "Property P4: each q_b is ≡1 mod 4 and splits completely in every F_j, since its Frobenius is already trivial in Ḡ.",
+   "para": 102,
+   "span": "so each qb splits completely in every Fj : the Frobenius is",
+   "explanatory_status": "derived",
+   "status_reason": "derived from n73, n74 and the Frobenius–splitting equivalence n57"
+  },
+  {
+   "id": "n76",
+   "type": "proposition",
+   "statement": "Every layer stays totally real because a decomposition group of order 2 cannot sit inside a 3-group.",
+   "para": 102,
+   "span": "The layers remain totally real: if a real place became complex in Fj /F , the decomposition",
+   "explanatory_status": "derived",
+   "status_reason": "uses the 3-group structure of n74 with held p-group facts"
+  },
+  {
+   "id": "n77",
+   "type": "proposition",
+   "statement": "Property P3: finite unramified extensions preserve root discriminant, so rd(F_j) = rd(F).",
+   "para": 102,
+   "span": "Finite unramiﬁed extensions preserve root discriminant, so rd(Fj ) = rd(F ). This proves property P3.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from unramifiedness in n74 together with n76"
+  },
+  {
+   "id": "n78",
+   "type": "proposition",
+   "statement": "For K_j = F_j(i) the relative discriminant divides 4O_{F_j}, giving |D_{K_j}| ≤ |D_{F_j}|^2 4^{f_j}.",
+   "para": 103,
+   "span": "|DKj | = |DFj |2 NFj /Q (dKj /Fj ) ≤ |DFj |2 4fj",
+   "explanatory_status": "derived",
+   "status_reason": "uses the tower formula n50 and the divisibility of the relative discriminant"
+  },
+  {
+   "id": "n79",
+   "type": "proposition",
+   "statement": "Taking 2f_j-th roots gives rd(K_j) ≤ 2 rd(F).",
+   "para": 104,
+   "span": "Taking 2fj -th roots, since [Kj : Q] = 2fj , gives rd(Kj ) ≤ 2 rd(F )",
+   "explanatory_status": "derived",
+   "status_reason": "algebra from n78 and n77"
+  },
+  {
+   "id": "n80",
+   "type": "proposition",
+   "statement": "Each prime v | q_b of F_j splits in K_j = F_j(i), as needed by the geometric part.",
+   "para": 104,
+   "span": "each prime v | qb of Fj splits in Kj = Fj (i), as required for the",
+   "explanatory_status": "derived",
+   "status_reason": "follows from q_b ≡ 1 mod 4 and complete splitting n75"
+  },
+  {
+   "id": "n81",
+   "type": "proposition",
+   "statement": "Property P5: h(K_j) ≤ H_ℓ^{f_j} with H_ℓ = (2 rd F)^{2C_class} and log H_ℓ = O(ℓ log ℓ).",
+   "para": 105,
+   "span": "Thus log H` = O(log rd(F )) = O(` log `). This proves property P5.",
+   "explanatory_status": "derived",
+   "status_reason": "applies n58 to n79 and uses the discriminant bound n64"
+  },
+  {
+   "id": "n82",
+   "type": "proposition",
+   "statement": "Property P6: since t ≥ (ℓ−1)^2/200 grows quadratically while log H_ℓ = O(ℓ log ℓ), one has t log 2 − log H_ℓ > 0 for large ℓ.",
+   "para": 106,
+   "span": "Combining this quadratic lower bound for t with log H` = O(` log `)",
+   "explanatory_status": "derived",
+   "status_reason": "comparison of n67's choice of t with n81"
+  },
+  {
+   "id": "n83",
+   "type": "proposition",
+   "statement": "Proposition 3.8 provides fields F_j and fixed primes q_b satisfying P1–P6.",
+   "para": 79,
+   "span": "Then one can ﬁnd\na number ﬁeld F , distinct rational primes q1 , . . . , qt ﬁxed independently of j",
+   "explanatory_status": "derived",
+   "status_reason": "assembled from properties n65, n74, n75, n77, n81, n82"
+  },
+  {
+   "id": "n84",
+   "type": "proposition",
+   "statement": "Choosing ℓ large, the fields L_j = F_j and primes q_b satisfy Theorem 2.3's hypotheses, giving ν(n_j) ≥ n_j^{1+δ} for infinitely many n.",
+   "para": 107,
+   "span": "Then the ﬁelds Lj = Fj and ﬁxed rational primes qb satisfy the hypotheses of",
+   "explanatory_status": "derived",
+   "status_reason": "combines n83 with Theorem 2.3 (n21)"
+  },
+  {
+   "id": "n85",
+   "type": "proposition",
+   "statement": "All constants (ℓ, the primes q_b, Q, R, D, B, δ) are fixed before the tower level j varies.",
+   "para": 108,
+   "span": "The constants are ﬁxed before the tower level j varies. First choose ` large enough",
+   "explanatory_status": "derived",
+   "status_reason": "bookkeeping over the previously derived choices"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n2",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n3",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n4",
+   "to": "n2",
+   "type": "supports"
+  },
+  {
+   "from": "n5",
+   "to": "n84",
+   "type": "depends_on"
+  },
+  {
+   "from": "n5",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n6",
+   "to": "n5",
+   "type": "derives"
+  },
+  {
+   "from": "n8",
+   "to": "n9",
+   "type": "depends_on"
+  },
+  {
+   "from": "n10",
+   "to": "n8",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n8",
+   "type": "assumes"
+  },
+  {
+   "from": "n11",
+   "to": "n19",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n15",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n17",
+   "type": "derives"
+  },
+  {
+   "from": "n12",
+   "to": "n10",
+   "type": "depends_on"
+  },
+  {
+   "from": "n13",
+   "to": "n12",
+   "type": "derives"
+  },
+  {
+   "from": "n14",
+   "to": "n13",
+   "type": "derives"
+  },
+  {
+   "from": "n15",
+   "to": "n14",
+   "type": "derives"
+  },
+  {
+   "from": "n15",
+   "to": "n9",
+   "type": "depends_on"
+  },
+  {
+   "from": "n16",
+   "to": "n14",
+   "type": "derives"
+  },
+  {
+   "from": "n17",
+   "to": "n16",
+   "type": "derives"
+  },
+  {
+   "from": "n18",
+   "to": "n16",
+   "type": "derives"
+  },
+  {
+   "from": "n19",
+   "to": "n13",
+   "type": "derives"
+  },
+  {
+   "from": "n19",
+   "to": "n18",
+   "type": "derives"
+  },
+  {
+   "from": "n20",
+   "to": "n19",
+   "type": "derives"
+  },
+  {
+   "from": "n21",
+   "to": "n11",
+   "type": "depends_on"
+  },
+  {
+   "from": "n21",
+   "to": "n43",
+   "type": "derives"
+  },
+  {
+   "from": "n22",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n23",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n23",
+   "to": "n17",
+   "type": "depends_on"
+  },
+  {
+   "from": "n25",
+   "to": "n23",
+   "type": "depends_on"
+  },
+  {
+   "from": "n25",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n27",
+   "to": "n31",
+   "type": "derives"
+  },
+  {
+   "from": "n27",
+   "to": "n19",
+   "type": "depends_on"
+  },
+  {
+   "from": "n27",
+   "to": "n26",
+   "type": "depends_on"
+  },
+  {
+   "from": "n28",
+   "to": "n25",
+   "type": "depends_on"
+  },
+  {
+   "from": "n29",
+   "to": "n15",
+   "type": "derives"
+  },
+  {
+   "from": "n29",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n30",
+   "to": "n28",
+   "type": "derives"
+  },
+  {
+   "from": "n30",
+   "to": "n29",
+   "type": "derives"
+  },
+  {
+   "from": "n31",
+   "to": "n30",
+   "type": "derives"
+  },
+  {
+   "from": "n32",
+   "to": "n27",
+   "type": "depends_on"
+  },
+  {
+   "from": "n33",
+   "to": "n34",
+   "type": "derives"
+  },
+  {
+   "from": "n33",
+   "to": "n36",
+   "type": "derives"
+  },
+  {
+   "from": "n33",
+   "to": "n27",
+   "type": "depends_on"
+  },
+  {
+   "from": "n34",
+   "to": "n22",
+   "type": "depends_on"
+  },
+  {
+   "from": "n35",
+   "to": "n15",
+   "type": "derives"
+  },
+  {
+   "from": "n35",
+   "to": "n32",
+   "type": "depends_on"
+  },
+  {
+   "from": "n36",
+   "to": "n34",
+   "type": "derives"
+  },
+  {
+   "from": "n36",
+   "to": "n35",
+   "type": "derives"
+  },
+  {
+   "from": "n37",
+   "to": "n41",
+   "type": "derives"
+  },
+  {
+   "from": "n38",
+   "to": "n23",
+   "type": "depends_on"
+  },
+  {
+   "from": "n39",
+   "to": "n38",
+   "type": "derives"
+  },
+  {
+   "from": "n40",
+   "to": "n39",
+   "type": "derives"
+  },
+  {
+   "from": "n41",
+   "to": "n40",
+   "type": "derives"
+  },
+  {
+   "from": "n41",
+   "to": "n34",
+   "type": "depends_on"
+  },
+  {
+   "from": "n42",
+   "to": "n27",
+   "type": "derives"
+  },
+  {
+   "from": "n43",
+   "to": "n33",
+   "type": "derives"
+  },
+  {
+   "from": "n43",
+   "to": "n37",
+   "type": "derives"
+  },
+  {
+   "from": "n43",
+   "to": "n42",
+   "type": "depends_on"
+  },
+  {
+   "from": "n45",
+   "to": "n46",
+   "type": "derives"
+  },
+  {
+   "from": "n45",
+   "to": "n47",
+   "type": "derives"
+  },
+  {
+   "from": "n45",
+   "to": "n49",
+   "type": "derives"
+  },
+  {
+   "from": "n45",
+   "to": "n51",
+   "type": "derives"
+  },
+  {
+   "from": "n47",
+   "to": "n46",
+   "type": "derives"
+  },
+  {
+   "from": "n48",
+   "to": "n47",
+   "type": "derives"
+  },
+  {
+   "from": "n49",
+   "to": "n44",
+   "type": "derives"
+  },
+  {
+   "from": "n49",
+   "to": "n46",
+   "type": "depends_on"
+  },
+  {
+   "from": "n49",
+   "to": "n48",
+   "type": "depends_on"
+  },
+  {
+   "from": "n51",
+   "to": "n49",
+   "type": "derives"
+  },
+  {
+   "from": "n51",
+   "to": "n50",
+   "type": "derives"
+  },
+  {
+   "from": "n53",
+   "to": "n52",
+   "type": "depends_on"
+  },
+  {
+   "from": "n55",
+   "to": "n52",
+   "type": "depends_on"
+  },
+  {
+   "from": "n56",
+   "to": "n52",
+   "type": "depends_on"
+  },
+  {
+   "from": "n58",
+   "to": "n59",
+   "type": "supports"
+  },
+  {
+   "from": "n60",
+   "to": "n45",
+   "type": "depends_on"
+  },
+  {
+   "from": "n61",
+   "to": "n45",
+   "type": "derives"
+  },
+  {
+   "from": "n61",
+   "to": "n60",
+   "type": "depends_on"
+  },
+  {
+   "from": "n62",
+   "to": "n61",
+   "type": "derives"
+  },
+  {
+   "from": "n63",
+   "to": "n61",
+   "type": "derives"
+  },
+  {
+   "from": "n63",
+   "to": "n53",
+   "type": "depends_on"
+  },
+  {
+   "from": "n64",
+   "to": "n60",
+   "type": "depends_on"
+  },
+  {
+   "from": "n64",
+   "to": "n49",
+   "type": "depends_on"
+  },
+  {
+   "from": "n65",
+   "to": "n61",
+   "type": "derives"
+  },
+  {
+   "from": "n65",
+   "to": "n62",
+   "type": "derives"
+  },
+  {
+   "from": "n65",
+   "to": "n64",
+   "type": "derives"
+  },
+  {
+   "from": "n66",
+   "to": "n55",
+   "type": "derives"
+  },
+  {
+   "from": "n66",
+   "to": "n61",
+   "type": "depends_on"
+  },
+  {
+   "from": "n66",
+   "to": "n62",
+   "type": "depends_on"
+  },
+  {
+   "from": "n67",
+   "to": "n52",
+   "type": "depends_on"
+  },
+  {
+   "from": "n68",
+   "to": "n56",
+   "type": "derives"
+  },
+  {
+   "from": "n68",
+   "to": "n67",
+   "type": "depends_on"
+  },
+  {
+   "from": "n69",
+   "to": "n68",
+   "type": "derives"
+  },
+  {
+   "from": "n70",
+   "to": "n68",
+   "type": "depends_on"
+  },
+  {
+   "from": "n71",
+   "to": "n53",
+   "type": "derives"
+  },
+  {
+   "from": "n71",
+   "to": "n70",
+   "type": "depends_on"
+  },
+  {
+   "from": "n71",
+   "to": "n69",
+   "type": "depends_on"
+  },
+  {
+   "from": "n72",
+   "to": "n66",
+   "type": "derives"
+  },
+  {
+   "from": "n72",
+   "to": "n71",
+   "type": "derives"
+  },
+  {
+   "from": "n72",
+   "to": "n67",
+   "type": "depends_on"
+  },
+  {
+   "from": "n73",
+   "to": "n54",
+   "type": "derives"
+  },
+  {
+   "from": "n73",
+   "to": "n72",
+   "type": "derives"
+  },
+  {
+   "from": "n73",
+   "to": "n63",
+   "type": "depends_on"
+  },
+  {
+   "from": "n74",
+   "to": "n73",
+   "type": "derives"
+  },
+  {
+   "from": "n75",
+   "to": "n74",
+   "type": "derives"
+  },
+  {
+   "from": "n75",
+   "to": "n57",
+   "type": "depends_on"
+  },
+  {
+   "from": "n75",
+   "to": "n68",
+   "type": "depends_on"
+  },
+  {
+   "from": "n76",
+   "to": "n74",
+   "type": "derives"
+  },
+  {
+   "from": "n77",
+   "to": "n74",
+   "type": "derives"
+  },
+  {
+   "from": "n77",
+   "to": "n76",
+   "type": "depends_on"
+  },
+  {
+   "from": "n78",
+   "to": "n50",
+   "type": "derives"
+  },
+  {
+   "from": "n79",
+   "to": "n78",
+   "type": "derives"
+  },
+  {
+   "from": "n79",
+   "to": "n77",
+   "type": "depends_on"
+  },
+  {
+   "from": "n80",
+   "to": "n75",
+   "type": "derives"
+  },
+  {
+   "from": "n81",
+   "to": "n58",
+   "type": "derives"
+  },
+  {
+   "from": "n81",
+   "to": "n79",
+   "type": "derives"
+  },
+  {
+   "from": "n81",
+   "to": "n64",
+   "type": "depends_on"
+  },
+  {
+   "from": "n82",
+   "to": "n81",
+   "type": "derives"
+  },
+  {
+   "from": "n82",
+   "to": "n67",
+   "type": "depends_on"
+  },
+  {
+   "from": "n83",
+   "to": "n65",
+   "type": "depends_on"
+  },
+  {
+   "from": "n83",
+   "to": "n74",
+   "type": "depends_on"
+  },
+  {
+   "from": "n83",
+   "to": "n75",
+   "type": "depends_on"
+  },
+  {
+   "from": "n83",
+   "to": "n77",
+   "type": "depends_on"
+  },
+  {
+   "from": "n83",
+   "to": "n81",
+   "type": "depends_on"
+  },
+  {
+   "from": "n83",
+   "to": "n82",
+   "type": "depends_on"
+  },
+  {
+   "from": "n84",
+   "to": "n21",
+   "type": "derives"
+  },
+  {
+   "from": "n84",
+   "to": "n83",
+   "type": "derives"
+  },
+  {
+   "from": "n84",
+   "to": "n80",
+   "type": "depends_on"
+  },
+  {
+   "from": "n21",
+   "to": "n7",
+   "type": "bounds"
+  },
+  {
+   "from": "n85",
+   "to": "n84",
+   "type": "depends_on"
+  }
+ ],
+ "_meta": {
+  "document": "vc3_r1",
+  "operator": "OP_A",
+  "model": "claude-opus-5",
+  "family": "anthropic",
+  "reader_model": "M-nt",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

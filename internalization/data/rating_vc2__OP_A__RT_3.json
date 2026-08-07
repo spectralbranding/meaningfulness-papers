@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "The new form of the problem can be described in terms of a game which we call the 'imitation game.'",
+  "graph_evidence": "No single node is the source of all derivation edges leading to the author's separable goals; nodes n2, n3, n7, and n43 each give rise to different derivation chains.",
+  "reasoning": "The text presents the imitation game as the generative object, but the graph does not contain a single node from which all derivation edges to the separable goals originate. Instead, derivations spread from multiple nodes such as n3 (game definition) and n7 (replacement question)."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "We have thus divided our problem into two parts. The child programme and the education process.",
+  "graph_evidence": "Node n103 states 'The problem divides into the child programme and the education process,' combining both goals into a single node.",
+  "reasoning": "The author explicitly divides the problem into two separate goals: the child programme and the education process. The graph merges these two goals into a single node (n103), failing to keep them as distinct nodes.",
+  "goals_stated": 2,
+  "goals_recovered": 0,
+  "goals_merged_or_split": 1
+ },
+ "T3": {
+  "verdict": "not_recovered",
+  "author_declaration": "No step is explicitly marked by the author as unexplained or conceded as unresolved.",
+  "graph_evidence": "Nodes n53 and n54 carry explanatory_status 'miracle,' but the author presents them as established mathematical results, not as unexplained steps.",
+  "reasoning": "The author does not mark any step as unexplained. The graph incorrectly marks n53 and n54 as miracles, creating two false residuals. Since no step the author derives should carry that status, the condition fails.",
+  "residuals_marked_by_author": 0,
+  "missed_residuals": 0,
+  "false_residuals": 2
+ },
+ "_meta": {
+  "document": "vc2",
+  "graph_operator": "OP_A",
+  "rater": "RT_3"
+ }
+}

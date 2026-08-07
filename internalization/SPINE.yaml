@@ -1,0 +1,803 @@
+spine_version: "0.2"
+spine_doc_version: "1.0.0"
+paper_key: "2026bk"
+title: "Internalization as an Operation: Recovering the Dependency Structure of a Result, and a Pre-Registered Failure to Do So"
+provenance: "new"
+thesis: |
+  Internalization -- turning a produced result into something a human can hold, teach, and build
+  on -- is the inverse of structured drafting. Structured drafting runs spine to prose;
+  internalization runs prose to spine to the reader's prose. The paper specifies the inverse
+  operation in five steps, supplies the measurement it requires (a reader-relative count of
+  steps that are verified but not derived), states an acceptance contract under which a
+  comprehension claim may be made, and validates the pipeline against a documented expert
+  internalization used as labeled ground truth.
+
+# ---------------------------------------------------------------------------
+# Boundary conditions -- the theory does not apply outside these.
+# ---------------------------------------------------------------------------
+boundary_conditions:
+  - id: C1
+    statement: >-
+      The artifact carries an argument with a recoverable dependency structure: claims that
+      stand on other claims, evidence, methods, or assumptions. Artifacts whose value is not
+      argumentative -- data releases, catalogues, purely narrative work -- are out of scope.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: C2
+    statement: >-
+      A reader model is declared before any measurement: the set of terms and results the
+      reader is taken to already hold. Every quantity the paper reports is relative to it, and
+      comparisons across different reader models are not licensed.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: C3
+    statement: >-
+      The result itself is held fixed. The operation improves the explanation of a result, not
+      the result. Comparing explanations of different results is out of scope.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: C4
+    statement: >-
+      The reader's own held terms are themselves expressible as a module of owned and imported
+      terms. Readers whose knowledge cannot be elicited in that form fall outside the
+      negotiation step.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: C5
+    statement: >-
+      NEGATIVE SCOPE -- the conditions under which the five-step operation is expected to fail
+      EVEN WHEN step 1 recovered the dependency structure correctly. Three are declared. (i) NO
+      DECLARED READER MODEL: without one, the negotiation step has nothing to difference against,
+      the delta is undefined, and the miracle count has no referent -- the operation does not
+      degrade gracefully here, it does not apply. (ii) NO AUTHOR-MARKED RESIDUALS in the source:
+      residual-recovery cannot be scored, so the fidelity of the explanatory-status assignment is
+      unaudited even when structure recovery succeeds. (iii) A SOURCE WHOSE STRUCTURE IS SUPPLIED
+      BY GENRE TEMPLATE rather than by argument: recovery may reflect the template's section
+      headings rather than the dependency structure, so a pass carries little evidential weight.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+# ---------------------------------------------------------------------------
+# Reader models -- the referents C2 requires, declared before any measurement.
+# ---------------------------------------------------------------------------
+reader_models:
+  - id: M-alg
+    applies_to: [VC1]
+    statement: >-
+      The reader the specimen's author states he wrote for: one who holds polynomial algebra over
+      the complex numbers, Jacobian determinants, local injectivity and elementary complex
+      analysis, and who does NOT hold the machinery of algebraic geometry -- varieties as
+      geometric objects, generic points, degenerations, symmetric powers, group actions on
+      polynomial spaces. The author declares this reader himself when he says he sought to explain
+      the construction with relatively little use of algebraic geometry.
+    granularity: >-
+      A term is held or not held at the granularity of a named definition or a named theorem.
+      Partial familiarity counts as not held, which can only raise a miracle count and never lower
+      it, so the convention cannot flatter a result.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-09"
+  - id: M-nt
+    applies_to: [VC3]
+    statement: >-
+      One model used at all three rungs, which is what makes the monotonic ordering a comparison
+      at all. Holds number fields, ring of integers, discriminant, splitting and ramification,
+      Galois groups, finite groups by generators and relations, the plane as the complex numbers,
+      asymptotic notation, and the unit-distance problem as a statement. Does NOT hold pro-p
+      groups, the Golod-Shafarevich inequality, maximal unramified p-extensions, class field
+      theory, CM fields, or the specific tower construction the result rests on -- so the held /
+      not-held boundary falls exactly where the construction lives.
+    granularity: "As M-alg."
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-09"
+  - id: M-phil
+    applies_to: [VC2]
+    statement: >-
+      A reader holding ordinary educated vocabulary -- digital computer, program, instruction,
+      storage, rule, premise, conclusion, counterexample -- and no computability theory: not the
+      formal machine, not universality, not the incompleteness results or their proofs, and none
+      of the later commentary on the specimen itself.
+    granularity: "As M-alg."
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-09"
+  - id: M-gen
+    applies_to: []
+    statement: >-
+      A general technical reader, declared for the pilot material only so that the pilot's counts
+      have a referent. No reported specimen quantity is computed under it and no pilot count is
+      compared with any specimen count.
+    granularity: "As M-alg."
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-09"
+
+# ---------------------------------------------------------------------------
+# Assumption atoms -- assumed without test; relaxable, with consequences traced.
+# ---------------------------------------------------------------------------
+assumption_atoms:
+  - id: AA1
+    statement: >-
+      A rendered argumentative artifact has a dependency structure that two competent extractors
+      recover with better-than-chance agreement.
+    type: "extraction_well_posedness"
+    relaxable: true
+    relaxation_consequence: >-
+      If agreement is at chance, step 1 is not a measurement and the remaining four steps
+      inherit an unmeasured input. The pipeline would then be a rhetorical device, not a
+      procedure, and the paper's first contribution fails.
+    affects: [M1, P1, P3, P4]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: AA2
+    statement: >-
+      The reader's held knowledge can be elicited well enough to populate a held-term set at a
+      granularity comparable to the extracted graph's.
+    type: "reader_model_elicitability"
+    relaxable: true
+    relaxation_consequence: >-
+      If elicitation is coarse, the prerequisite and confusion lists are coarse, the delta is
+      over- or under-stated, and the miracle count moves with elicitation error rather than with
+      explanatory quality.
+    affects: [M2, P3, P5]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: AA3
+    statement: >-
+      An expert's own written account of how he decomposed a result is a usable label for what
+      that result's dependency structure is, for the purpose of scoring an independent
+      extraction.
+    type: "ground_truth_validity"
+    relaxable: true
+    relaxation_consequence: >-
+      If an expert account is treated instead as one reading among many, the validation becomes
+      an agreement study between two readings with no privileged target, which weakens the
+      claim from recovery to convergence.
+    affects: [VC1, P1]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: AA4
+    statement: >-
+      A miracle count is scored only on a rendering that preserves the source spine. Fidelity is
+      a precondition of the measurement, not a separate quality dimension traded against it.
+    type: "metric_fidelity_constraint"
+    relaxable: false
+    relaxation_consequence: >-
+      Without the constraint the count is trivially minimized by replacing load-bearing
+      derivations with analogies the reader already holds, which lowers the score while
+      destroying the argument. The metric would then measure familiarity, not explanation.
+    affects: [P3, M4, M5]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+# ---------------------------------------------------------------------------
+# Methods -- the five pipeline steps are first-class method nodes.
+# ---------------------------------------------------------------------------
+methods:
+  - id: M1
+    statement: >-
+      Spine extraction: recover the typed dependency graph -- propositions, methods, evidence,
+      assumptions, boundary conditions and their edges -- from a rendered artifact, using the
+      drafting schema run in reverse.
+    type: "structure_extraction"
+    conditions: "C1"
+    antecedents: [AA1]
+    reproducibility:
+      seed: "to be fixed at implementation"
+      version: "to be pinned at Phase 3"
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: M2
+    statement: >-
+      Ontology negotiation: classify every interaction between the extracted graph's terms and
+      the reader's held terms into the six cross-owner classes, then read the unresolved classes
+      as reader-facing lists -- an import neither side owns is a prerequisite; a shared key held
+      with a different definition is a confusion.
+    type: "compatibility_check"
+    conditions: "C2, C4"
+    inputs: [M1]
+    antecedents: [AA2]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: M3
+    statement: >-
+      Load analysis: rank the extracted graph's nodes by structural load using centrality over
+      the dependency edges, pre-committing to one definition and reporting sensitivity across at
+      least one alternative.
+    type: "graph_analysis"
+    inputs: [M1]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: M4
+    statement: >-
+      Re-rendering: produce prose that preserves the extracted spine and addresses the reader's
+      held ontology, defining only the terms the negotiation step returned as prerequisites or
+      confusions.
+    type: "rendering"
+    conditions: "C2"
+    inputs: [M2, M3]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: M5
+    statement: >-
+      Acceptance scoring: administer the three-clause comprehension contract and score it --
+      spine restatement against the extracted graph, load identification against the M3 ranking
+      with a stated counterfactual, and execution of one node the spine marks open.
+    type: "acceptance_test"
+    inputs: [M1, M3, M4]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+# ---------------------------------------------------------------------------
+# Propositions
+# ---------------------------------------------------------------------------
+propositions:
+  - id: P1
+    statement: >-
+      Internalization is the inverse of structured drafting: where drafting maps a dependency
+      graph to prose, internalization maps prose to a dependency graph and then to a second
+      prose rendering addressed to a specific reader. The inverse is a specifiable procedure
+      over the artifact's structure, not a matter of authorial talent.
+    type: ontological
+    conditions: "C1, C2"
+    antecedents: []
+    assumptions: [AA1, AA2]
+    falsifier: >-
+      If two competent operators running the stated procedure on the same artifact for the same
+      declared reader produce dependency graphs whose agreement is at chance, the procedure does
+      not specify an operation and P1 is false.
+    evidence:
+      - type: analytic
+        anchor: >-
+          The forward protocol is already stated as a procedure with typed nodes and typed
+          edges; running it in reverse is defined on the same type system.
+      - type: self_application
+        anchor: >-
+          Retroactive extraction from independently-authored published papers has already been
+          executed and shipped as worked cases in the corpus, which establishes that the reverse
+          direction is at least performable.
+    body_sections: ["The inverse operation"]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+  - id: P2
+    statement: >-
+      A renderer given only rendered prose can weight content only by prose mass, while
+      structural load is a property of the dependency graph. Because the two are not reliably
+      correlated -- a single line can carry an argument that pages of routine verification do
+      not -- the quality of a prose-only explanation is bounded by that correlation and does not
+      improve with renderer capability alone. The failure is a missing input, not a missing
+      ability.
+    type: ontological
+    conditions: "C1"
+    antecedents: [P1]
+    assumptions: [AA1]
+    falsifier: >-
+      If prose mass and graph-derived structural load are strongly correlated across a corpus of
+      argumentative artifacts, the diagnosis is empty and P2 is false. The paper must measure
+      this correlation rather than assert it.
+    evidence:
+      - type: analytic
+        anchor: >-
+          Structural load is defined over dependency edges; prose mass is defined over token
+          counts. Nothing in the drafting process constrains the two to agree.
+    body_sections: ["Why prose-only explanation misses"]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+  - id: P3
+    statement: >-
+      Under a declared reader model and a fixed result, explanatory quality is measurable as a
+      miracle count: the number of nodes that are verified but not derived from anything the
+      reader holds. Internalization is the operation that lowers this count. It does not drive
+      it to zero; a successful internalization localizes and names its residual rather than
+      concealing it.
+    type: measurement_result
+    conditions: "C2, C3"
+    antecedents: [P1, P2]
+    assumptions: [AA2]
+    falsifier: >-
+      If, holding reader model and result fixed, independently scored miracle counts do not
+      order a set of explanations consistently with expert judgments of explanatory quality on
+      the same set, the count does not measure what it claims and P3 is false.
+    evidence:
+      - type: citation
+        anchor: >-
+          The metric is adopted rather than invented: a working mathematician states the
+          minimization of unexplained steps as his own objective while expounding a result.
+        citation_role: motivating_problem
+    body_sections: ["Measuring an explanation"]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+  - id: P4
+    statement: >-
+      Comprehension admits an acceptance contract stated before the explanation is written and
+      checked after it is read, with three clauses -- restate the dependency structure unaided,
+      name the load-bearing step and what fails without it, and execute one step the structure
+      marks as open. The third clause has an objectively checkable outcome, which is what
+      separates the contract from a satisfaction rating.
+    type: ontological
+    conditions: "C2"
+    antecedents: [P1, P3]
+    falsifier: >-
+      If readers who pass all three clauses are indistinguishable, on an independent expert
+      assessment of understanding, from readers who fail the third, the contract does not
+      discriminate and P4 is false.
+    evidence:
+      - type: analytic
+        anchor: >-
+          The corpus already treats acceptance conditions written before the work and checked
+          after it as the design move that makes a specification testable; the contribution here
+          is applying it where the deliverable is a reader's state rather than an artifact.
+    body_sections: ["An acceptance contract for comprehension"]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+  - id: P5
+    statement: >-
+      The rendering a reader needs is determined by the difference between the artifact's
+      ontology and the reader's held ontology, not by the artifact alone. Because that
+      difference is computable from a compatibility classification, the instruction to define
+      only what the reader lacks is an operation rather than an aphorism.
+    type: rendering_equivalence
+    conditions: "C2, C4"
+    antecedents: [P1]
+    assumptions: [AA2]
+    falsifier: >-
+      If renderings built from the computed difference are not preferred, on comprehension
+      outcomes, to renderings built from the artifact alone for the same readers, P5 is false.
+    evidence:
+      - type: analytic
+        anchor: >-
+          Two prose renderings of the same locked structure are already established to converge
+          on the same conclusions while differing on every surface dimension, which is the
+          licence for re-rendering without loss.
+    body_sections: ["Define only the delta"]
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+# ---------------------------------------------------------------------------
+# Derivations
+# ---------------------------------------------------------------------------
+derivations:
+  - id: D1
+    statement: >-
+      The five-step pipeline follows from P2 by a locate-the-missing-input argument: if the
+      deficiency of prose-only explanation is the absence of the dependency graph, then
+      supplying that graph, differencing it against the reader, weighting by it, and rendering
+      from it is the minimal repair, and an acceptance test is what makes the repair checkable.
+    from: [P2]
+    to: P1
+    reasoning_type: "deductive"
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+# ---------------------------------------------------------------------------
+# Alternative explanations to rule out
+# ---------------------------------------------------------------------------
+alternative_explanations:
+  - id: A1
+    statement: >-
+      Machine-generated explanations miss the point because of model capability, not because of
+      a missing input; better models close the gap without any structural intervention.
+    rules_out_required: [P2]
+    rules_out_status: "open"
+    reasoning: >-
+      Discriminating evidence is a capability-controlled comparison: the same renderer given
+      prose alone versus prose plus the extracted graph. If the graph condition wins at fixed
+      capability, A1 is rejected.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: A2
+    statement: >-
+      The pipeline's benefit is entirely the benefit of activating prior knowledge, already
+      established for decades in the learning sciences, and the structural apparatus adds
+      nothing beyond it.
+    rules_out_required: [P5]
+    rules_out_status: "open"
+    reasoning: >-
+      Discriminating evidence is a comparison against a strong prior-knowledge-activation
+      baseline built without the computed difference. If the computed difference does not beat
+      it, A2 stands and the contribution reduces to a re-labelling.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: A3
+    statement: >-
+      As research output scales, the binding constraint is finite collective attention and
+      reliance on prestige signals rather than structural illegibility: readers stop reading
+      derivations at all, so making derivations legible relieves nothing.
+    rules_out_required: [P1, P2]
+    rules_out_status: "partially_ruled_out"
+    reasoning: >-
+      Bibliometric evidence on large fields supports the attention account and it is not in
+      conflict with the narrower claim the paper makes: for a reader who has already decided to
+      engage, structural illegibility remains a distinct constraint. A3 therefore bounds the
+      motivating claim rather than defeating it, and the paper must state the bound rather than
+      route around the evidence.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: A4
+    statement: >-
+      Understanding is irreducibly non-propositional -- resting on intuition, examples, spatial
+      translation and tacit knowledge -- so a propositional dependency graph is the wrong object
+      and the pipeline automates the wrong operation.
+    rules_out_required: [P1, P2]
+    rules_out_status: "open"
+    reasoning: >-
+      The paper does not need to defeat this to stand, because its claim is that the graph is
+      the input a renderer needs, not that the graph is the understanding. Discriminating
+      evidence for the narrower claim already exists: expert readers of proofs fixate on
+      implicit logical inference where novices fixate on surface manipulation, so structural
+      load is what expert reading tracks whatever else understanding involves. The risk is
+      drift -- a single sentence claiming the graph IS the understanding concedes the objection.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: A5
+    statement: >-
+      Explanatory power is an objective property of the argument itself -- its symmetry, unity,
+      and the depth of the structure it exhibits -- rather than a relation between an argument
+      and a reader. On that account a reader-relative count of undelivered derivations measures
+      the reader's preparation, not the explanation's quality, and the metric is mis-specified
+      at its foundation.
+    rules_out_required: [P3]
+    rules_out_status: "scoped_out"
+    reasoning: >-
+      Resolved by SCOPE DISTINCTION rather than by argument, and the paper does not contest the
+      objective account. The two address different questions: the objective account asks what
+      makes a PROOF explanatory as a property of the mathematics; the miracle count asks what
+      makes an EXPOSITION explanatory to a declared reader. Both can hold. The count does not
+      deny that some arguments are objectively deeper -- it declines to measure that and
+      measures a reader-relative quantity instead, reported with its reader model as L2 already
+      requires and comparable only within a fixed model as C2 already requires. The paper
+      therefore acknowledges A5 in a footnote and does not argue against it. Arguing it would
+      relocate the paper's weight onto its least defensible flank, since the evidence collected
+      here concerns extraction fidelity and reader outcomes and says nothing about what makes an
+      argument deep. Ignoring it would read as not having noticed. The failure mode to guard on
+      every draft pass is expansion: any pass that grows the footnote into an argument re-opens
+      the flank this decision closed, and it is the same drift already named against A4.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+# ---------------------------------------------------------------------------
+# Validation cases
+# ---------------------------------------------------------------------------
+validation_cases:
+  - id: VC1
+    statement: >-
+      A working mathematician's published digestion of a recently announced counterexample to a
+      long-standing conjecture in polynomial algebra, used as labeled ground truth. VERIFIED
+      AGAINST THE PRIMARY SOURCE 2026-08-06. The specimen states its own objective verbatim --
+      to write the explanation in a manner that minimizes the amount of "miracles" required,
+      while noting that a few places of remarkable phenomena remain -- rebases the statement to
+      an equivalent form, generates the construction from one object, and explicitly marks
+      residual unexplained steps, including one where the author states he has no completely
+      satisfactory explanation for a miracle he can nonetheless verify. This is the ONLY specimen
+      whose author supplies the paper's own metric vocabulary unprompted, which is why the
+      miracle count is ADOPTED rather than invented.
+    disambiguation: >-
+      The same author published a SECOND digestion post earlier the same month, on a different
+      result, which forms the top rung of the VC3 ladder. VC1 is the LATER post, on the
+      polynomial-algebra counterexample; it is the one carrying the miracle vocabulary and the
+      marked residuals. The two are distinct artifacts on distinct theorems and must not be
+      conflated.
+    input: >-
+      REBASED. The pipeline is pointed at the EXPOSITION, not at the raw result it expounds. The
+      exposition is a rendered argumentative artifact whose author states its decomposition and
+      marks its residuals, so extracting its structure is a test of extraction fidelity against a
+      self-labeled artifact. Pointing the pipeline at the raw result instead, with the exposition
+      as the target, would test mathematical DISCOVERY -- the expert mapped the object into a
+      different ontology to explain it, rather than recovering a structure latent in it -- which
+      is a claim the paper does not make and cannot support.
+    target: >-
+      An independent extraction of the exposition recovers (i) the generative object as the
+      exposition presents it, (ii) the stated decomposition into separable goals, and (iii) the
+      steps the author himself marks as unexplained, classified as miracles rather than as
+      derived.
+    scoring: >-
+      Each of the three targets scored separately, so a partial recovery implicates a specific
+      pipeline step rather than the pipeline as a whole.
+    threats:
+      - "Operator contamination: the specimen has been read by the operator, so the extraction arm must be blinded or independently operated."
+      - "N=1: a single specimen supports an existence proof, not a general claim."
+      - "Domain: informal mathematical prose omits dependencies by convention, so extraction failure here may reflect the domain rather than the method. RESOLVED at Phase 2 by VC2."
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: VC2
+    statement: >-
+      A NON-MATHEMATICAL second specimen, added at Phase 2 to separate method failure from domain
+      hostility -- the paper's largest risk, previously carrying no instrument. A canonical
+      philosophical argument whose author states his own decomposition in running prose (the
+      opposition decomposed into nine explicitly numbered categories), declares his objective for
+      the explanation (replace an unanswerable question with an operational test), and concedes
+      exactly one residual he cannot resolve rather than dismissing it.
+    input: >-
+      The published article itself, treated identically to VC1's exposition: a rendered
+      argumentative artifact whose author states its decomposition and marks its residual.
+    target: >-
+      Same three targets as VC1, scored identically: the generative move as the text presents it,
+      the author-stated decomposition, and the author-marked residual classified as a miracle
+      rather than as derived.
+    scoring: >-
+      Per the pre-declared rule: T2 and T3 must both be recovered; T1 is reported and is not part
+      of the rule. See DECISION_RULE.md.
+    threats:
+      - "TRAINING-DATA CONTAMINATION, and it is the serious one. The specimen is among the most reproduced texts in its field, so an LLM-assisted extraction arm has seen both it and decades of commentary ABOUT its structure, and may reproduce the consensus reading instead of extracting. This inflates a POSITIVE result specifically and cannot be removed by blinding, because the contamination is in the extractor's weights rather than the operator's memory. Mitigations: score only against the text's own statements, never the secondary literature; report the threat as a bound on the claim rather than a footnote; hold an engineering design-rationale document in reserve as the contamination control."
+      - "Two specimens are still two specimens. VC2 answers the DOMAIN confound; it does not answer the generalizability objection, and the paper stays an existence proof at v1.0.0."
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: VC3
+    statement: >-
+      THE LADDER -- three renderings of ONE fixed result at increasing degrees of internalization,
+      each extracted independently and compared pairwise. R0: the verbatim raw output of an
+      automated system, reproduced before any grading or rewriting (~1,400 words). R1: the
+      human-edited exposition of that same output, produced afterwards with reorganized proofs and
+      added explanatory material (~6,310 words), published in the same document, which states the
+      provenance itself. R2: an independent expert's published digestion of THE SAME RESULT
+      (~5,136 words), authored outside the producing organization. Because all three expound the
+      identical construction, C3 -- the result held fixed -- is satisfied STRUCTURALLY rather than
+      by assumption, which no other specimen in this paper achieves.
+    relation_to_vc1: >-
+      VC3 and VC1 are SEPARATE CHAINS on DIFFERENT results, not one chain. Both R2 and VC1 are
+      digestion posts by the same mathematician published in the same month, but they expound
+      different theorems. VC1 supplies the labeled-ground-truth case with an author-stated
+      objective and marked residuals; VC3 supplies the fixed-result ladder.
+    input: >-
+      All three renderings, each extracted on its own, blind to rung order where prose style
+      permits. THE PIPELINE IS NEVER ASKED TO REPRODUCE ONE RENDERING FROM ANOTHER. Each rung is
+      extracted independently and the resulting spines are then compared. This is why the ladder
+      does NOT test discovery, and it is the design decision that resolves the question left open
+      when the earlier rebase rationale was voided.
+    target: >-
+      Three quantities, all pre-declared before any scoring. (i) PAIRWISE SPINE PRESERVATION across
+      R0-R1, R1-R2 and R0-R2, each at the RC1 Layer-2 threshold -- the AA4 fidelity precondition
+      CHECKED rather than assumed, at every rung. (ii) MONOTONIC MIRACLE ORDERING under a single
+      declared reader model: MC(R0) > MC(R1) > MC(R2). (iii) PROSE-MASS DIVERGENCE: prose mass
+      across the rungs against structural load across the rungs, which is P2 measured on a real
+      artifact rather than argued analytically.
+    scoring: >-
+      The monotonic ordering is the strong form, and it is the reason for using all three rungs
+      rather than the pair alone: a strict ordering over three points is far harder to obtain by
+      chance than a single directional difference, and ANY inversion disconfirms it. Each pairwise
+      preservation check gates only the comparison it spans -- if R0-R1 preserves but R1-R2 does
+      not, the R0-to-R1 differential is still reported and the R1-to-R2 step is not. A count that
+      falls over an unpreserved spine is never reported as a lowered count; that is the gaming path
+      AA4 forbids.
+    branch_if_expert_rung_does_not_preserve: >-
+      PRE-DECLARED, because this outcome is scientifically interesting rather than merely null. If
+      the expert digestion does NOT preserve the structure of the renderings it digests, then
+      expert internalization sometimes REPLACES structure rather than preserving it. That would
+      bound P5 and the inherited rendering-equivalence result -- both of which hold only under
+      spine preservation and would simply not apply to that rung -- and it would say the operation
+      this paper specifies is narrower than what a human expert actually does. The paper reports
+      that as a finding about the limits of the specification, not as a failed run.
+    threats:
+      - "PROVENANCE IS A STATED CLAIM, NOT A VERIFIED FACT. That the raw block is the verbatim pre-grading output is asserted by the publishing organization and cannot be independently checked. This is an AA3-class ground-truth assumption and must be reported as such, not as an established property of the specimen."
+      - "The rungs were produced by different agents with different purposes, so the ordering confounds internalization with authorship, and the confound GROWS at the expert rung, which is independently authored. The claim licensed is that the ladder EXHIBITS the predicted ordering, not that internalization CAUSED it. Stated as a bound on the claim, not a footnote."
+      - "NO AUTHOR-MARKED RESIDUALS at rungs R0 and R1, so the T3 criterion is vacuous for them and is NOT applied. T3 applies to the expert rung alone, where it is VC1's criterion."
+      - "Rung ORDER is assumed from documented provenance rather than measured. R0 precedes R1 by the publishing document's own account; the expert rung is later and independent. If that account is wrong the ordering claim loses its interpretation, which is the same AA3-class exposure as the first threat."
+      - "Mathematics again. VC3 does not touch the domain-hostility confound; that remains VC2's job alone."
+      - "SELECTED AFTER the decision rule was written, which is disclosed rather than concealed. Its two targets were declared before any extraction or scoring was performed."
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+# ---------------------------------------------------------------------------
+# Robustness checks
+# ---------------------------------------------------------------------------
+robustness_checks:
+  - id: RC1
+    statement: >-
+      Extraction agreement: two independent operators extract the same artifact; report agreement
+      in THREE SEPARATED LAYERS rather than as one graph-level number, because the failure modes
+      differ by layer and a single statistic hides which one fired. Layer 1, node recovery:
+      nominal Krippendorff alpha over node-type assignments on unitized spans, with node-boundary
+      precision and recall alongside. Layer 2, edge recovery over the nodes both operators
+      recovered: triple-overlap F1 in the Smatch sense, reported against a random-graph null
+      rather than as a bare number. Layer 3, load-ranking agreement: rank correlation over the
+      agreed node set under the pre-committed centrality definition, reported and inspected rather
+      than gated. Thresholds are pre-declared before any run and may not be moved by the pilot.
+    varied_parameter: "operator"
+    result_stability: >-
+      RUN 2026-08-09, FAILED AT THE GATE. Layer 2 fell below the declared threshold on all five
+      documents (F1 .000 to .500 against a gate of .60), and cleared the random-graph null on only
+      two. Layer 1 cleared its threshold on three of five (alpha .663 to 1.000), missed by .013 on
+      a fourth, and was undefined on the fifth for want of matched nodes. AA1 is refuted at the
+      declared level and no downstream quantity is licensed.
+    affects_nodes: [P1, M1]
+    source_method: M1
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: RC2
+    statement: >-
+      Centrality sensitivity: recompute the load ranking under at least one alternative
+      centrality definition and report rank stability.
+    varied_parameter: "centrality_definition"
+    result_stability: >-
+      RUN 2026-08-09, STABLE. Rank correlation between the pre-committed support-mass definition and
+      the alternative reverse-PageRank ranking runs .584 to .978 on nine of the ten extractions, with
+      one outlier at .143 on a 14-node graph. The load ranking is not an artifact of the centrality
+      definition.
+    affects_nodes: [P2, M3]
+    source_method: M3
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+
+# ---------------------------------------------------------------------------
+# Limitations
+# ---------------------------------------------------------------------------
+limitations:
+  - id: L0
+    statement: >-
+      Extraction, not rendering, is the expensive and brittle step. Human agreement on argument
+      relations is low, and long-context retrieval degrades on material buried mid-document,
+      which is where load-bearing lemmas and implicit assumptions sit. The pipeline's first
+      stage is therefore its least reliable, and every downstream quantity inherits that error.
+    affects: [M1, P1, P3, P4]
+    severity: "high"
+    mitigation: >-
+      RC1 measures extraction agreement directly and reports it as a headline number rather than
+      an appendix statistic; no downstream claim is made at an agreement level the paper has not
+      demonstrated.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: L1
+    statement: >-
+      The extraction machinery was built for prose-proposition papers in management and
+      marketing. A proof's dependency structure is finer-grained and more formal, and whether
+      extraction stays faithful on mathematics is untested.
+    affects: [M1, P1, VC1]
+    severity: "high"
+    mitigation: >-
+      RC1 measures extraction agreement directly on the specimen's domain; if agreement is poor,
+      the mathematical specimen is demoted from validation to illustration and a
+      technical-but-informal specimen carries the validation instead.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: L2
+    statement: >-
+      The miracle count is reader-relative by construction, so it measures an
+      explanation-reader pair rather than an explanation. Cross-reader comparison is not
+      licensed.
+    affects: [P3]
+    severity: "medium"
+    mitigation: >-
+      Report every count with its reader model and restrict all comparisons to a fixed model,
+      the same discipline under which an item-difficulty statistic is reported with its
+      population.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: L3
+    statement: >-
+      The acceptance contract is administered per reader, which bounds the generality of any
+      single result and makes the third clause expensive to score at scale.
+    affects: [P4, M5]
+    severity: "medium"
+    mitigation: "Report cost per administration alongside the result; do not claim scalability that has not been demonstrated."
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-06"
+  - id: L4
+    statement: >-
+      There is no within-operator baseline. Each document was extracted once per arm, and machine
+      judges are unreliable against themselves across repeated runs, so the disagreement RC1
+      reports cannot be cleanly attributed to a difference between operators rather than to
+      run-to-run variance. The design does not separate the two.
+    affects: [M1, RC1, AA1]
+    severity: "high"
+    mitigation: >-
+      Declared as a limitation rather than repaired. A test-retest arm -- same operator, same
+      prompt, same document, repeated -- is the correction, and it belongs to a NEW
+      pre-registration: adding it after the result would be a protocol change made in light of an
+      outcome. The pilot rounds do not substitute, having varied the guidelines rather than
+      repeated a call.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-07"
+  - id: L5
+    statement: >-
+      Two model families are an OPERATIONAL separation between operators, not a statistical one.
+      Nothing guarantees that extractors from different families make uncorrelated errors, and
+      where they share training material or inductive bias their errors correlate positively.
+    affects: [M1, RC1, AA1]
+    severity: "medium"
+    mitigation: >-
+      Stated with its direction, which runs in the paper's favour: positively correlated errors
+      make agreement EASIER to obtain, so an agreement pass would have been weaker evidence than
+      it appeared and the observed failure is the conservative outcome. No claim of statistical
+      independence is made anywhere.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-07"
+
+# ---------------------------------------------------------------------------
+# Cross-paper engagement
+# ---------------------------------------------------------------------------
+corpus_precedents:
+  - paper_key: 2026ao
+    relationship: extends
+    spine_nodes: [P1, P2, P3]
+  - paper_key: 2026ap
+    relationship: extends
+    spine_nodes: [P1, P5]
+  - paper_key: 2026t
+    relationship: tests
+    spine_nodes: [P4]
+  - paper_key: 2026u
+    relationship: applies
+    spine_nodes: [P1, P5]
+  - paper_key: 2026i
+    relationship: applies
+    spine_nodes: [P4]
+
+# ---------------------------------------------------------------------------
+# External anchors -- deliberately EMPTY at lock. Phase 1 populates this, and
+# no entry entering it may skip independent identifier verification.
+# ---------------------------------------------------------------------------
+external_anchors:
+  - id: EA1
+    anchor: >-
+      A published collection of ten long-open results in mathematics and theoretical computer
+      science, each accompanied by a machine-checkable formal certificate.
+    use: >-
+      The motivating distinction instantiated at scale by a third party. Every result is fully
+      verified and none is thereby explained -- the certificate establishes correctness and
+      supplies no account of why the construction works or which step carries the argument. This
+      is the purest available real-world instance of the `verified_only` class, and it shows the
+      gap the paper addresses widening from the production side rather than being hypothesised
+      from the reader side.
+    supports: [P2, P3]
+  - id: EA2
+    anchor: >-
+      A single published document containing both the verbatim raw output of an automated system
+      and a human-edited exposition of that same output, at roughly a fourfold difference in
+      length.
+    use: >-
+      The VC3 specimen, and independently a demonstration of P2's divergence: prose mass grows by
+      a factor of about 4.5 over what the document itself presents as the same construction. If
+      the dependency structure is preserved across the pair, structural load is approximately
+      unchanged while prose mass quadruples, which is the divergence measured on a real artifact
+      rather than argued analytically.
+    supports: [P2, P3]
+
+# ---------------------------------------------------------------------------
+# Open questions / boundary edges
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Internal authoring history -- dropped on export; never rendered.
+# ---------------------------------------------------------------------------
+

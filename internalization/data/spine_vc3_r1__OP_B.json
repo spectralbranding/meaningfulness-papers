@@ -1,0 +1,206 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "proposition",
+   "statement": "The main theorem states that there is a positive constant delta such that the maximum number of unit distances on an n-point planar set is at least n^(1+delta) for infinitely many n.",
+   "para": 10,
+   "span": "There exists an absolute constant δ > 0 and inﬁnitely many positive integers n",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the geometric criterion and the existence of the required field tower"
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "An admissible datum consists of a totally real field, its CM extension, and a set of rational primes congruent to 1 mod 4 that split completely in the real field.",
+   "para": 21,
+   "span": "An admissible datum consists of:",
+   "explanatory_status": "verified_only",
+   "status_reason": "definition introduced by the text"
+  },
+  {
+   "id": "n3",
+   "type": "proposition",
+   "statement": "Given an admissible datum and a bound on the class number, there exists an exponentially large set of elements with relative norm 1 and absolute value 1 under all complex embeddings.",
+   "para": 25,
+   "span": "there is a set U ⊂ Q−2 OK such that every",
+   "explanatory_status": "derived",
+   "status_reason": "derived using the pigeonhole principle on ideal classes, which the reader holds"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "If there is a sequence of admissible data with degrees tending to infinity and a uniform exponential class number bound, then the unit distance conjecture is false.",
+   "para": 34,
+   "span": "Then there is a constant δ > 0 and inﬁnitely many n",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the geometric construction lemmas"
+  },
+  {
+   "id": "n5",
+   "type": "proposition",
+   "statement": "By averaging over lattice cosets, there exists a finite subset of the lattice in a bounded window containing many pairs whose difference is a norm-one translation.",
+   "para": 40,
+   "span": "some nonempty coset a + Λ satisﬁes Ea ≥ eγf /2 Na",
+   "explanatory_status": "derived",
+   "status_reason": "derived via a standard volume averaging argument"
+  },
+  {
+   "id": "n6",
+   "type": "proposition",
+   "statement": "Projecting the chosen lattice points to a single complex coordinate yields a planar set with many unit distances.",
+   "para": 44,
+   "span": "The map π1 : X → C is injective.",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the properties of the field embeddings"
+  },
+  {
+   "id": "n7",
+   "type": "proposition",
+   "statement": "The number of points in the projected planar set is bounded exponentially in the field degree.",
+   "para": 50,
+   "span": "Let n = |P |. Then n ≤ eBf",
+   "explanatory_status": "derived",
+   "status_reason": "derived using a sup-norm packing argument"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "A specific compositum of cyclic cubic fields yields a totally real base field with an everywhere unramified extension.",
+   "para": 64,
+   "span": "M/F is everywhere unramiﬁed.",
+   "explanatory_status": "derived",
+   "status_reason": "derived via cyclotomic field calculations"
+  },
+  {
+   "id": "n9",
+   "type": "proposition",
+   "statement": "The generator rank of a finitely generated pro-p group equals the dimension of its Frattini quotient, and quotienting by elements in the Frattini subgroup preserves the generator rank while adding relations.",
+   "para": 71,
+   "span": "d(G) = dimFp G/Φ(G)",
+   "explanatory_status": "miracle",
+   "status_reason": "the reader does not hold properties of the Frattini subgroup"
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "A finitely generated pro-p group with relation rank at most one quarter of the square of its generator rank is infinite.",
+   "para": 73,
+   "span": "a nontrivial ﬁnitely generated pro-p group with r ≤ d2 /4 is inﬁnite",
+   "explanatory_status": "miracle",
+   "status_reason": "the reader does not hold the Golod-Shafarevich inequality"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "The relation rank of the Galois group of the maximal unramified pro-3 extension of a totally real cubic field is bounded by its generator rank plus an absolute constant.",
+   "para": 74,
+   "span": "r(G) ≤ d(G) + C0 for an absolute constant",
+   "explanatory_status": "miracle",
+   "status_reason": "the reader does not hold Shafarevich's relation-rank estimate"
+  },
+  {
+   "id": "n12",
+   "type": "proposition",
+   "statement": "There exist rational primes that split completely in the base field and have trivial Frobenius classes in the Frattini quotient.",
+   "para": 76,
+   "span": "exist distinct rational primes q1 , . . . , qt which split completely",
+   "explanatory_status": "miracle",
+   "status_reason": "the reader does not hold class field theory or this application of Chebotarev"
+  },
+  {
+   "id": "n13",
+   "type": "proposition",
+   "statement": "The class number of a number field is bounded exponentially in its degree, controlled by its root discriminant.",
+   "para": 77,
+   "span": "h(K) ≤ max{2, rd(K)}Cclass [K:Q]",
+   "explanatory_status": "miracle",
+   "status_reason": "the reader does not hold Minkowski's convex body theorem in the form used for these estimates"
+  },
+  {
+   "id": "n14",
+   "type": "proposition",
+   "statement": "There exists an infinite tower of everywhere unramified 3-extensions over the base field in which the selected rational primes split completely, maintaining a bounded root discriminant.",
+   "para": 79,
+   "span": "one can ﬁnd a number ﬁeld F , distinct rational primes",
+   "explanatory_status": "derived",
+   "status_reason": "derived by combining the group-theoretic and number-theoretic propositions"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n1",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n1",
+   "to": "n14",
+   "type": "depends_on"
+  },
+  {
+   "from": "n3",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n4",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n4",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n4",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n4",
+   "to": "n7",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n9",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n10",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n11",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n12",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n13",
+   "type": "depends_on"
+  }
+ ],
+ "_meta": {
+  "document": "vc3_r1",
+  "operator": "OP_B",
+  "model": "gemini-3.1-pro-preview",
+  "family": "google",
+  "reader_model": "M-nt",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

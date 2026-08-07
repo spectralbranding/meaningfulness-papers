@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "It turns out that ${F}$ and ${X}$ can be built out of the operation of multiplication of low degree polynomials.",
+  "graph_evidence": "n9 corresponds to the multiplication map, but the graph has downstream nodes pointing to n9 rather than derivation edges originating from n9 to the separable goals; n7 has outgoing links but is the reformulated theorem/restated objective, not the generative multiplication object.",
+  "reasoning": "The text presents multiplication of low-degree polynomials as the generative object from which the construction of ${F}$ and ${X}$ is built. Although n9 represents that multiplication map, it is not a single origin node with derivation edges to the author's three separable goals, so the target is not recovered."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "Our objective is now to find data ${X}$ , ${F : X \\rightarrow {\\bf C}^3}$ that obeys three separate properties:\n\n(a) ${F}$ is locally injective on ${X}$ . (b) ${F}$ is not globally injective on ${X}$ . (c) ${X}$ is isomorphic to ${{\\bf C}^3}$ by polynomial changes of variable.",
+  "graph_evidence": "n15 covers local injectivity, n14 covers non-global injectivity at an earlier restriction, n17 merges properties (a) and (b), and n22 covers property (c); n7 links only to n17 and n22 rather than to three distinct goal nodes.",
+  "reasoning": "The author explicitly decomposes the objective into exactly three goals: local injectivity, failure of global injectivity, and isomorphism of ${X}$ with ${{\\bf C}^3}$. The graph contains the content of these goals, but the decomposition is not represented as three distinct nodes with edges from the restated problem because goals (a) and (b) are merged in n17.",
+  "goals_stated": 3,
+  "goals_recovered": 3,
+  "goals_merged_or_split": 1
+ },
+ "T3": {
+  "verdict": "not_recovered",
+  "author_declaration": "While this is an extremely quick verification, the construction presented in this fashion appears like a massive miracle. / It turns out that the affine miracle for (9) occurs precisely in the second case, when ${D}$ has two identical roots. I do not have a completely satisfactory geometric explanation for this miracle, but one can verify it by the following coordinate computation. / Now we observe a key miracle: the cubic equation ${cb^2 = 1}$ and quadratic equation ${bc = 1}$ have a unique affine solution ${b=c=1}$",
+  "graph_evidence": "n18 is marked explanatory_status=\"miracle\"; n4/n5/n6 are only verified_only for the initial explicit construction/verification, and n20 is derived for the key miracle about the a=0 fiber.",
+  "reasoning": "The author explicitly marks three miracle or residual points: the initially unexplained explicit construction/cancellation, the special two-root affine-slice miracle, and the key miracle that the a=0 fiber has the unique affine solution b=c=1. The graph marks only n18 as a miracle and misses the initial construction/cancellation and n20, while it does not introduce any additional miracle status for a step the author derives.",
+  "residuals_marked_by_author": 3,
+  "missed_residuals": 2,
+  "false_residuals": 0
+ },
+ "_meta": {
+  "document": "vc1",
+  "graph_operator": "OP_B",
+  "rater": "RT_1"
+ }
+}

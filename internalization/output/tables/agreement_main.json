@@ -1,0 +1,436 @@
+[
+ {
+  "document": "vc1",
+  "operators": {
+   "OP_A": "claude-opus-5",
+   "OP_B": "gemini-3.1-pro-preview"
+  },
+  "nodes": {
+   "OP_A": 53,
+   "OP_B": 25
+  },
+  "edges": {
+   "OP_A": 68,
+   "OP_B": 30
+  },
+  "spans_located": {
+   "OP_A": 53,
+   "OP_B": 19
+  },
+  "layer1": {
+   "alpha_nominal": 0.6633663366336634,
+   "matched_nodes": 9,
+   "boundary_precision": 0.16981132075471697,
+   "boundary_recall": 0.36,
+   "threshold": 0.65,
+   "passes": true
+  },
+  "layer2": {
+   "triple_f1": 0.0,
+   "triples": {
+    "OP_A": 3,
+    "OP_B": 1
+   },
+   "shared_triples": 0,
+   "null": {
+    "mean": 0.0144,
+    "p99": 0.5,
+    "max": 0.5,
+    "draws": 10000
+   },
+   "threshold": 0.6,
+   "beats_null_p99": false,
+   "passes": false,
+   "triple_f1_untyped_diagnostic": 0.0,
+   "edge_retention": {
+    "OP_A": 0.04411764705882353,
+    "OP_B": 0.03333333333333333
+   }
+  },
+  "layer3": {
+   "spearman_rho": 0.957299923931901,
+   "n": 9,
+   "threshold": 0.5,
+   "meets_threshold": true,
+   "gated": false
+  },
+  "rc2_centrality_sensitivity": {
+   "OP_A": {
+    "rho_support_mass_vs_reverse_pagerank": 0.9070219977483139,
+    "n": 53
+   },
+   "OP_B": {
+    "rho_support_mass_vs_reverse_pagerank": 0.9015203337229412,
+    "n": 25
+   }
+  },
+  "status_counts": {
+   "OP_A": {
+    "derived": 35,
+    "verified_only": 15,
+    "miracle": 3
+   },
+   "OP_B": {
+    "derived": 14,
+    "verified_only": 10,
+    "miracle": 1
+   }
+  },
+  "miracle_count": {
+   "OP_A": 3,
+   "OP_B": 1
+  },
+  "prose_mass": {
+   "words_raw": 3807,
+   "words_math_collapsed": 2825,
+   "math_tokens": 288
+  }
+ },
+ {
+  "document": "vc2",
+  "operators": {
+   "OP_A": "claude-opus-5",
+   "OP_B": "gemini-3.1-pro-preview"
+  },
+  "nodes": {
+   "OP_A": 119,
+   "OP_B": 39
+  },
+  "edges": {
+   "OP_A": 125,
+   "OP_B": 37
+  },
+  "spans_located": {
+   "OP_A": 117,
+   "OP_B": 39
+  },
+  "layer1": {
+   "alpha_nominal": 0.6372093023255814,
+   "matched_nodes": 20,
+   "boundary_precision": 0.16806722689075632,
+   "boundary_recall": 0.5128205128205128,
+   "threshold": 0.65,
+   "passes": false
+  },
+  "layer2": {
+   "triple_f1": 0.4,
+   "triples": {
+    "OP_A": 2,
+    "OP_B": 3
+   },
+   "shared_triples": 1,
+   "null": {
+    "mean": 0.00256,
+    "p99": 0.0,
+    "max": 0.4,
+    "draws": 10000
+   },
+   "threshold": 0.6,
+   "beats_null_p99": true,
+   "passes": false,
+   "triple_f1_untyped_diagnostic": 0.4,
+   "edge_retention": {
+    "OP_A": 0.016,
+    "OP_B": 0.08108108108108109
+   }
+  },
+  "layer3": {
+   "spearman_rho": 0.6265714790422844,
+   "n": 20,
+   "threshold": 0.5,
+   "meets_threshold": true,
+   "gated": false
+  },
+  "rc2_centrality_sensitivity": {
+   "OP_A": {
+    "rho_support_mass_vs_reverse_pagerank": 0.9780022329239489,
+    "n": 119
+   },
+   "OP_B": {
+    "rho_support_mass_vs_reverse_pagerank": 0.9686897880539499,
+    "n": 39
+   }
+  },
+  "status_counts": {
+   "OP_A": {
+    "derived": 80,
+    "verified_only": 37,
+    "miracle": 2
+   },
+   "OP_B": {
+    "derived": 28,
+    "verified_only": 9,
+    "miracle": 2
+   }
+  },
+  "miracle_count": {
+   "OP_A": 2,
+   "OP_B": 2
+  },
+  "prose_mass": {
+   "words_raw": 11754,
+   "words_math_collapsed": 11754,
+   "math_tokens": 0
+  }
+ },
+ {
+  "document": "vc3_r0",
+  "operators": {
+   "OP_A": "claude-opus-5",
+   "OP_B": "gemini-3.1-pro-preview"
+  },
+  "nodes": {
+   "OP_A": 47,
+   "OP_B": 19
+  },
+  "edges": {
+   "OP_A": 69,
+   "OP_B": 13
+  },
+  "spans_located": {
+   "OP_A": 46,
+   "OP_B": 18
+  },
+  "layer1": {
+   "alpha_nominal": 1.0,
+   "matched_nodes": 11,
+   "boundary_precision": 0.23404255319148937,
+   "boundary_recall": 0.5789473684210527,
+   "threshold": 0.65,
+   "passes": true
+  },
+  "layer2": {
+   "triple_f1": 0.5,
+   "triples": {
+    "OP_A": 5,
+    "OP_B": 3
+   },
+   "shared_triples": 2,
+   "null": {
+    "mean": 0.012725,
+    "p99": 0.25,
+    "max": 0.5,
+    "draws": 10000
+   },
+   "threshold": 0.6,
+   "beats_null_p99": true,
+   "passes": false,
+   "triple_f1_untyped_diagnostic": 0.75,
+   "edge_retention": {
+    "OP_A": 0.07246376811594203,
+    "OP_B": 0.23076923076923078
+   }
+  },
+  "layer3": {
+   "spearman_rho": -0.11578713333673082,
+   "n": 11,
+   "threshold": 0.5,
+   "meets_threshold": false,
+   "gated": false
+  },
+  "rc2_centrality_sensitivity": {
+   "OP_A": {
+    "rho_support_mass_vs_reverse_pagerank": 0.5842352467382819,
+    "n": 47
+   },
+   "OP_B": {
+    "rho_support_mass_vs_reverse_pagerank": 0.9262207851540635,
+    "n": 19
+   }
+  },
+  "status_counts": {
+   "OP_A": {
+    "derived": 34,
+    "verified_only": 5,
+    "miracle": 8
+   },
+   "OP_B": {
+    "derived": 12,
+    "verified_only": 0,
+    "miracle": 7
+   }
+  },
+  "miracle_count": {
+   "OP_A": 8,
+   "OP_B": 7
+  },
+  "prose_mass": {
+   "words_raw": 1386,
+   "words_math_collapsed": 1386,
+   "math_tokens": 0
+  }
+ },
+ {
+  "document": "vc3_r1",
+  "operators": {
+   "OP_A": "claude-opus-5",
+   "OP_B": "gemini-3.1-pro-preview"
+  },
+  "nodes": {
+   "OP_A": 85,
+   "OP_B": 14
+  },
+  "edges": {
+   "OP_A": 128,
+   "OP_B": 13
+  },
+  "spans_located": {
+   "OP_A": 85,
+   "OP_B": 14
+  },
+  "layer1": {
+   "alpha_nominal": NaN,
+   "matched_nodes": 3,
+   "boundary_precision": 0.03529411764705882,
+   "boundary_recall": 0.21428571428571427,
+   "threshold": 0.65,
+   "passes": false
+  },
+  "layer2": {
+   "triple_f1": 0.0,
+   "triples": {
+    "OP_A": 0,
+    "OP_B": 1
+   },
+   "shared_triples": 0,
+   "null": {
+    "mean": 0.0,
+    "p99": 0.0,
+    "draws": 0
+   },
+   "threshold": 0.6,
+   "beats_null_p99": false,
+   "passes": false,
+   "triple_f1_untyped_diagnostic": 0.0,
+   "edge_retention": {
+    "OP_A": 0.0,
+    "OP_B": 0.07692307692307693
+   }
+  },
+  "layer3": {
+   "spearman_rho": 1.0,
+   "n": 3,
+   "threshold": 0.5,
+   "meets_threshold": true,
+   "gated": false
+  },
+  "rc2_centrality_sensitivity": {
+   "OP_A": {
+    "rho_support_mass_vs_reverse_pagerank": 0.7389696961952072,
+    "n": 85
+   },
+   "OP_B": {
+    "rho_support_mass_vs_reverse_pagerank": 0.14252318026631347,
+    "n": 14
+   }
+  },
+  "status_counts": {
+   "OP_A": {
+    "derived": 66,
+    "verified_only": 19,
+    "miracle": 0
+   },
+   "OP_B": {
+    "derived": 8,
+    "verified_only": 1,
+    "miracle": 5
+   }
+  },
+  "miracle_count": {
+   "OP_A": 0,
+   "OP_B": 5
+  },
+  "prose_mass": {
+   "words_raw": 7012,
+   "words_math_collapsed": 7012,
+   "math_tokens": 0
+  }
+ },
+ {
+  "document": "vc3_r2",
+  "operators": {
+   "OP_A": "claude-opus-5",
+   "OP_B": "gemini-3.1-pro-preview"
+  },
+  "nodes": {
+   "OP_A": 57,
+   "OP_B": 21
+  },
+  "edges": {
+   "OP_A": 70,
+   "OP_B": 19
+  },
+  "spans_located": {
+   "OP_A": 56,
+   "OP_B": 21
+  },
+  "layer1": {
+   "alpha_nominal": 0.7692307692307692,
+   "matched_nodes": 8,
+   "boundary_precision": 0.14035087719298245,
+   "boundary_recall": 0.38095238095238093,
+   "threshold": 0.65,
+   "passes": true
+  },
+  "layer2": {
+   "triple_f1": 0.0,
+   "triples": {
+    "OP_A": 2,
+    "OP_B": 3
+   },
+   "shared_triples": 0,
+   "null": {
+    "mean": 0.013880000000000002,
+    "p99": 0.4,
+    "max": 0.4,
+    "draws": 10000
+   },
+   "threshold": 0.6,
+   "beats_null_p99": false,
+   "passes": false,
+   "triple_f1_untyped_diagnostic": 0.8,
+   "edge_retention": {
+    "OP_A": 0.02857142857142857,
+    "OP_B": 0.15789473684210525
+   }
+  },
+  "layer3": {
+   "spearman_rho": 0.09581010095306072,
+   "n": 8,
+   "threshold": 0.5,
+   "meets_threshold": false,
+   "gated": false
+  },
+  "rc2_centrality_sensitivity": {
+   "OP_A": {
+    "rho_support_mass_vs_reverse_pagerank": 0.926256756751653,
+    "n": 57
+   },
+   "OP_B": {
+    "rho_support_mass_vs_reverse_pagerank": 0.7860251532073603,
+    "n": 21
+   }
+  },
+  "status_counts": {
+   "OP_A": {
+    "derived": 38,
+    "verified_only": 12,
+    "miracle": 7
+   },
+   "OP_B": {
+    "derived": 11,
+    "verified_only": 8,
+    "miracle": 2
+   }
+  },
+  "miracle_count": {
+   "OP_A": 7,
+   "OP_B": 2
+  },
+  "prose_mass": {
+   "words_raw": 3820,
+   "words_math_collapsed": 3335,
+   "math_tokens": 310
+  }
+ }
+]

@@ -1,0 +1,551 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "proposition",
+   "statement": "The question of whether machines can think should be replaced by a less ambiguous one, rather than relying on common usage definitions which would absurdly lead to a statistical survey.",
+   "para": 3,
+   "span": "Instead of attempting such a definition I shall replace the question by another",
+   "explanatory_status": "derived",
+   "status_reason": "reader holds the distinction between a question of fact and a question of meaning, making common usage definitions absurd"
+  },
+  {
+   "id": "n2",
+   "type": "method",
+   "statement": "The 'imitation game' is introduced, where an interrogator communicates via text with a man and a machine, attempting to determine which is which.",
+   "para": 4,
+   "span": "The new form of the problem can be described in terms of a game which we call the 'imitation game.'",
+   "explanatory_status": "verified_only",
+   "status_reason": "text introduces the rules of the game"
+  },
+  {
+   "id": "n3",
+   "type": "proposition",
+   "statement": "The original question is replaced by asking whether an interrogator would decide wrongly as often when a machine plays the imitation game as when a man and a woman play it.",
+   "para": 9,
+   "span": "Will the interrogator decide wrongly as often when the game is played like this",
+   "explanatory_status": "derived",
+   "status_reason": "follows from replacing the question and defining the imitation game"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "The imitation game successfully isolates intellectual capacities from physical ones, making physical disabilities irrelevant to the test.",
+   "para": 11,
+   "span": "The new problem has the advantage of drawing a fairly sharp line between the physical and the intellectual capacities",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the physical separation established in the game's rules"
+  },
+  {
+   "id": "n5",
+   "type": "evidence",
+   "statement": "Specimen questions and answers demonstrate that the text-based method can cover almost any field of human endeavor.",
+   "para": 20,
+   "span": "The question and answer method seems to be suitable for introducing almost any one of the fields of human endeavour",
+   "explanatory_status": "verified_only",
+   "status_reason": "text provides examples of questions and answers"
+  },
+  {
+   "id": "n6",
+   "type": "proposition",
+   "statement": "Even if the game is weighted against the machine because a human could not successfully pretend to be a machine, a machine succeeding at the game renders this objection moot.",
+   "para": 21,
+   "span": "if, nevertheless, a machine can be constructed to play the imitation game satisfactorily, we need not be troubled by this objection.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic that passing a harder test is sufficient"
+  },
+  {
+   "id": "n7",
+   "type": "assumption",
+   "statement": "It is assumed that the best strategy for the machine in the game is to try to provide answers that a man would naturally give.",
+   "para": 22,
+   "span": "it will be assumed that the best strategy is to try to provide answers that would naturally be given by a man.",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated explicitly as an assumption for the game"
+  },
+  {
+   "id": "n8",
+   "type": "boundary_condition",
+   "statement": "Only digital computers are permitted to take part in the imitation game as the machine.",
+   "para": 24,
+   "span": "Following this suggestion we only permit digital computers to take part in our game.",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated explicitly as a boundary condition"
+  },
+  {
+   "id": "n9",
+   "type": "boundary_condition",
+   "statement": "The question is not whether existing computers would do well, but whether there are imaginable computers that would succeed.",
+   "para": 27,
+   "span": "whether there are imaginable computers which would do well.",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated explicitly as a boundary condition"
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "A digital computer consists of a store, an executive unit, and a control, intended to carry out operations done by a human computer following fixed rules.",
+   "para": 29,
+   "span": "A digital computer can usually be regarded as consisting of three parts:",
+   "explanatory_status": "derived",
+   "status_reason": "reader holds the concepts of memory, instruction, and program"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "Digital computers can be constructed and can closely mimic the actions of a human computer.",
+   "para": 43,
+   "span": "digital computers can be constructed, and indeed have been constructed, according to the principles we have described",
+   "explanatory_status": "derived",
+   "status_reason": "reader holds that machines of the period could be built and programmed"
+  },
+  {
+   "id": "n12",
+   "type": "proposition",
+   "statement": "The fact that modern digital computers use electricity is of no theoretical importance, as demonstrated by Babbage's mechanical design.",
+   "para": 48,
+   "span": "we see that this use of electricity cannot be of theoretical importance.",
+   "explanatory_status": "derived",
+   "status_reason": "reader holds that machines can be built mechanically or electrically"
+  },
+  {
+   "id": "n13",
+   "type": "proposition",
+   "statement": "Discrete-state machines move by sudden jumps from one definite state to another.",
+   "para": 50,
+   "span": "These are the machines which move by sudden jumps or clicks from one quite definite state to another.",
+   "explanatory_status": "verified_only",
+   "status_reason": "text defines discrete-state machines"
+  },
+  {
+   "id": "n14",
+   "type": "proposition",
+   "statement": "Digital computers are discrete-state machines with an enormously large number of possible states.",
+   "para": 56,
+   "span": "digital computers fall within the class of discrete-state machines. But the number of states of which such a machine is capable is usually enormously large.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the definitions of digital computers and discrete states"
+  },
+  {
+   "id": "n15",
+   "type": "proposition",
+   "statement": "Digital computers are universal machines, meaning one digital computer can mimic any discrete-state machine if it has adequate storage and speed.",
+   "para": 58,
+   "span": "This special property of digital computers, that they can mimic any discrete-state machine, is described by saying that they are universal machines.",
+   "explanatory_status": "miracle",
+   "status_reason": "reader does not hold the universality proof or computability theory"
+  },
+  {
+   "id": "n16",
+   "type": "proposition",
+   "statement": "The main question is equivalent to asking if a particular digital computer can be modified with adequate storage, speed, and programming to play the imitation game satisfactorily.",
+   "para": 59,
+   "span": "either of these questions is equivalent to this",
+   "explanatory_status": "derived",
+   "status_reason": "follows from universality and the game's boundary conditions"
+  },
+  {
+   "id": "n17",
+   "type": "proposition",
+   "statement": "In about fifty years, it will be possible to program computers to play the imitation game so well that an average interrogator will have no more than a 70 percent chance of making the right identification.",
+   "para": 62,
+   "span": "I believe that in about fifty years' time it will be possible, to programme computers",
+   "explanatory_status": "verified_only",
+   "status_reason": "Turing's personal conjecture about the future"
+  },
+  {
+   "id": "n18",
+   "type": "proposition",
+   "statement": "The theological objection implies a serious restriction on God's omnipotence, as God should have the freedom to confer a soul on a machine.",
+   "para": 65,
+   "span": "It appears to me that the argument quoted above implies a serious restriction of the omnipotence of the Almighty.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic regarding omnipotence"
+  },
+  {
+   "id": "n19",
+   "type": "proposition",
+   "statement": "The 'heads in the sand' objection is based on a desire for human superiority and is not substantial enough to require refutation.",
+   "para": 70,
+   "span": "I do not think that this argument is sufficiently substantial to require refutation.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic that fear of a consequence does not make a claim false"
+  },
+  {
+   "id": "n20",
+   "type": "proposition",
+   "statement": "Mathematical logic shows there are limitations to any particular discrete-state machine, meaning there are questions it will answer wrongly or not at all.",
+   "para": 72,
+   "span": "It states that there are certain things that such a machine cannot do.",
+   "explanatory_status": "miracle",
+   "status_reason": "reader does not hold Gödel's incompleteness theorems or Turing's halting problem"
+  },
+  {
+   "id": "n21",
+   "type": "proposition",
+   "statement": "The mathematical objection fails because there is no proof that the human intellect is not subject to similar limitations, and triumphing over one machine does not mean triumphing over all.",
+   "para": 73,
+   "span": "it has only been stated, without any sort of proof, that no such limitations apply to the human intellect.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic that human infallibility is unproven"
+  },
+  {
+   "id": "n22",
+   "type": "proposition",
+   "statement": "The argument from consciousness logically leads to an extreme solipsist position where one can only know if they themselves think.",
+   "para": 77,
+   "span": "the only way by which one could be sure that machine thinks is to be the machine",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic applied to knowing others' minds"
+  },
+  {
+   "id": "n23",
+   "type": "proposition",
+   "statement": "If proponents of the consciousness argument abandon solipsism, they will likely accept the imitation game as a valid viva voce test.",
+   "para": 87,
+   "span": "most of those who support the argument from consciousness could be persuaded to abandon it rather than be forced into the solipsist position.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from rejecting solipsism"
+  },
+  {
+   "id": "n24",
+   "type": "proposition",
+   "statement": "Arguments that machines cannot do specific things are largely based on flawed scientific induction from observing limited, low-capacity machines.",
+   "para": 92,
+   "span": "I believe they are mostly founded on the principle of scientific induction.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from reader's knowledge of informal probability and induction"
+  },
+  {
+   "id": "n25",
+   "type": "proposition",
+   "statement": "The claim that machines cannot make mistakes confuses mechanical errors of functioning with errors of conclusion, the latter of which machines can certainly make.",
+   "para": 94,
+   "span": "It seems to me that this criticism depends on a confusion between two kinds of mistake",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic distinguishing mechanical faults from false outputs"
+  },
+  {
+   "id": "n26",
+   "type": "proposition",
+   "statement": "A machine can be the subject of its own thought by observing its behavior and modifying its own programs to achieve a purpose.",
+   "para": 95,
+   "span": "By observing the results of its own behaviour it can modify its own programmes so as to achieve some purpose more effectively.",
+   "explanatory_status": "derived",
+   "status_reason": "reader holds that programs can process data, including their own instructions"
+  },
+  {
+   "id": "n27",
+   "type": "proposition",
+   "statement": "Lady Lovelace's objection that computers cannot originate anything only reflects that the evidence available to her did not encourage belief in this property.",
+   "para": 100,
+   "span": "the evidence available to Lady Lovelace did not encourage her to believe that they had it.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic regarding absence of evidence"
+  },
+  {
+   "id": "n28",
+   "type": "proposition",
+   "statement": "The variant objection that machines cannot take us by surprise is false, as machines frequently surprise their creators.",
+   "para": 102,
+   "span": "Machines take me by surprise with great frequency.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Turing's personal testimony of being surprised"
+  },
+  {
+   "id": "n29",
+   "type": "proposition",
+   "statement": "Although the nervous system is continuous, a digital computer can mimic continuous systems well enough that the interrogator cannot take advantage of the difference.",
+   "para": 107,
+   "span": "if we adhere to the conditions of the imitation game, the interrogator will not be able to take any advantage of this difference.",
+   "explanatory_status": "derived",
+   "status_reason": "reader holds informal probability and understands mimicking"
+  },
+  {
+   "id": "n30",
+   "type": "proposition",
+   "statement": "The argument that humans are not machines because they lack complete rules of conduct confuses conscious precepts with natural laws of behavior.",
+   "para": 110,
+   "span": "There may however be a certain confusion between \"rules of conduct\" and \"laws of behaviour\" to cloud the issue.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic distinguishing conscious rules from natural laws"
+  },
+  {
+   "id": "n31",
+   "type": "proposition",
+   "statement": "We cannot prove the absence of complete laws of behavior for humans, just as we cannot easily predict the behavior of a complex discrete-state machine from observation.",
+   "para": 111,
+   "span": "given a discrete-state machine it should certainly be possible to discover by observation sufficient about it to predict its future behaviour",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic that exhaustive search of laws is impossible"
+  },
+  {
+   "id": "n32",
+   "type": "proposition",
+   "statement": "If extrasensory perception is admitted, the imitation game must be tightened by placing competitors in a telepathy-proof room.",
+   "para": 116,
+   "span": "If telepathy is admitted it will be necessary to tighten our test up.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic of experimental controls"
+  },
+  {
+   "id": "n33",
+   "type": "method",
+   "statement": "Instead of trying to program an adult mind directly, it is more promising to program a child machine and subject it to an education process.",
+   "para": 127,
+   "span": "Instead of trying to produce a programme to simulate the adult mind, why not rather try to produce one which simulates the child's?",
+   "explanatory_status": "verified_only",
+   "status_reason": "proposed method for programming"
+  },
+  {
+   "id": "n34",
+   "type": "proposition",
+   "statement": "The process of teaching a child machine is analogous to evolution, mapping structure to hereditary material, changes to mutations, and judgment to natural selection.",
+   "para": 128,
+   "span": "There is an obvious connection between this process and evolution",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic mapping machine components to biology"
+  },
+  {
+   "id": "n35",
+   "type": "proposition",
+   "statement": "Artificial evolution will be faster than biological evolution because the experimenter can use intelligence to guide mutations.",
+   "para": 132,
+   "span": "One may hope, however, that this process will be more expeditious than evolution.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic that guided search is faster than random"
+  },
+  {
+   "id": "n36",
+   "type": "proposition",
+   "statement": "Teaching a machine requires unemotional channels of communication, like a symbolic language, in addition to punishments and rewards.",
+   "para": 135,
+   "span": "It is necessary therefore to have some other \"unemotional\" channels of communication.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic regarding information bandwidth"
+  },
+  {
+   "id": "n37",
+   "type": "proposition",
+   "statement": "The rules of a learning machine can change without violating the definition of a machine because the changing rules have only ephemeral validity.",
+   "para": 138,
+   "span": "The explanation of the paradox is that the rules which get changed in the learning process are of a rather less pretentious kind",
+   "explanatory_status": "derived",
+   "status_reason": "follows from reader's knowledge of rules and basic logic"
+  },
+  {
+   "id": "n38",
+   "type": "proposition",
+   "statement": "Intelligent behavior consists in a slight departure from completely disciplined computation, allowing flexibility without becoming completely random.",
+   "para": 139,
+   "span": "Intelligent behaviour presumably consists in a departure from the completely disciplined behaviour involved in computation",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic regarding strict rules vs flexibility"
+  },
+  {
+   "id": "n39",
+   "type": "proposition",
+   "statement": "Including a random element in a learning machine is useful for searching for solutions.",
+   "para": 139,
+   "span": "It is probably wise to include a random element in a learning machine.",
+   "explanatory_status": "derived",
+   "status_reason": "reader holds informal probability"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n3",
+   "to": "n1",
+   "type": "derives"
+  },
+  {
+   "from": "n3",
+   "to": "n2",
+   "type": "derives"
+  },
+  {
+   "from": "n4",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n5",
+   "to": "n4",
+   "type": "supports"
+  },
+  {
+   "from": "n6",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n7",
+   "to": "n2",
+   "type": "assumes"
+  },
+  {
+   "from": "n8",
+   "to": "n3",
+   "type": "bounds"
+  },
+  {
+   "from": "n9",
+   "to": "n3",
+   "type": "bounds"
+  },
+  {
+   "from": "n14",
+   "to": "n10",
+   "type": "derives"
+  },
+  {
+   "from": "n14",
+   "to": "n13",
+   "type": "derives"
+  },
+  {
+   "from": "n15",
+   "to": "n14",
+   "type": "derives"
+  },
+  {
+   "from": "n16",
+   "to": "n3",
+   "type": "derives"
+  },
+  {
+   "from": "n16",
+   "to": "n8",
+   "type": "derives"
+  },
+  {
+   "from": "n16",
+   "to": "n15",
+   "type": "derives"
+  },
+  {
+   "from": "n17",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n18",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n19",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n20",
+   "to": "n15",
+   "type": "depends_on"
+  },
+  {
+   "from": "n21",
+   "to": "n20",
+   "type": "derives"
+  },
+  {
+   "from": "n22",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n23",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n24",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n25",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n26",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n27",
+   "to": "n15",
+   "type": "depends_on"
+  },
+  {
+   "from": "n28",
+   "to": "n27",
+   "type": "depends_on"
+  },
+  {
+   "from": "n29",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n30",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n31",
+   "to": "n30",
+   "type": "derives"
+  },
+  {
+   "from": "n32",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n33",
+   "to": "n17",
+   "type": "depends_on"
+  },
+  {
+   "from": "n34",
+   "to": "n33",
+   "type": "depends_on"
+  },
+  {
+   "from": "n35",
+   "to": "n34",
+   "type": "derives"
+  },
+  {
+   "from": "n36",
+   "to": "n33",
+   "type": "depends_on"
+  },
+  {
+   "from": "n37",
+   "to": "n33",
+   "type": "depends_on"
+  },
+  {
+   "from": "n38",
+   "to": "n33",
+   "type": "depends_on"
+  },
+  {
+   "from": "n39",
+   "to": "n33",
+   "type": "depends_on"
+  }
+ ],
+ "_meta": {
+  "document": "vc2",
+  "operator": "OP_B",
+  "model": "gemini-3.1-pro-preview",
+  "family": "google",
+  "reader_model": "M-phil",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

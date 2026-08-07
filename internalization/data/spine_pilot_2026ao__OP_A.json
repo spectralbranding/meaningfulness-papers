@@ -1,0 +1,1283 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "proposition",
+   "statement": "Generative AI shifts the cost of knowledge work asymmetrically across an artifact's layers: substrate becomes cheap, cohort-conditional rendering does not.",
+   "para": 7,
+   "span": "Generative AI shifts the cost structure of organizational knowledge work asymmetrically across an artifact's layers",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted as an observed condition; reader holds no cost-scaling result to derive it from"
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "Prior management theory lacks a role-level account of how the cost asymmetry restructures the producer of the artifact.",
+   "para": 10,
+   "span": "What is missing is a role-level theory of how the cost asymmetry restructures the operator",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the cited literature review of task-level treatments"
+  },
+  {
+   "id": "n3",
+   "type": "evidence",
+   "statement": "Practitioner observation, methodological reflection in management research, and the automation-augmentation literature have each touched the phenomenon at task level.",
+   "para": 10,
+   "span": "Practitioner observation has surfaced the phenomenon",
+   "explanatory_status": "verified_only",
+   "status_reason": "citations checkable but not derived"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "The Operator is introduced as a role-level abstraction above the human-versus-AI instance distinction, whose intrinsic operations are performed by an era-varying projection composition.",
+   "para": 11,
+   "span": "The primary contribution is the **Operator** as a role-level abstraction above the human-versus-AI instance distinction",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stipulated construct, not derived from held terms"
+  },
+  {
+   "id": "n5",
+   "type": "proposition",
+   "statement": "Structural substrate operations (extraction, DAG maintenance, consistency checking, rival surfacing, robustness checks, draft generation) are era-dependent and post-AI executed by AI projection under human review.",
+   "para": 31,
+   "span": "Their era-projection is pre-AI by human, post-AI typically by AI under human review",
+   "explanatory_status": "verified_only",
+   "status_reason": "stipulated classification, no derivation given"
+  },
+  {
+   "id": "n6",
+   "type": "proposition",
+   "statement": "Judgment operations (slice selection, fork-rebase-merge, cohort rendering, intent verification) are era-invariant and remain with human projection.",
+   "para": 31,
+   "span": "judgment stays with human projection across all current and near-future composition modes",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted classification without argument"
+  },
+  {
+   "id": "n7",
+   "type": "proposition",
+   "statement": "The role-as-projection move extends the automation-augmentation paradox from task-level allocation to role-level division of operations.",
+   "para": 11,
+   "span": "extends the automation-augmentation paradox [@raisch-2021-artificial-intelligence-management] from task-level allocation to role-level division",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the Operator construct plus the two operation classes"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "The paper's three-mode theorizing (theory-of, theory-for, theory-about) is what lets a post-AI theoretical contribution bear weight.",
+   "para": 22,
+   "span": "The three-mode theorizing form is what allows a theoretical contribution to bear weight in the post-AI era",
+   "explanatory_status": "verified_only",
+   "status_reason": "rests on a cited typology the reader does not hold as a result"
+  },
+  {
+   "id": "n9",
+   "type": "boundary_condition",
+   "statement": "The framework applies only under four joint sufficient conditions C1–C4: version-controlled authoring, propositional claims, non-trivial audience-schema divergence, and artifact volume exceeding human verification capacity.",
+   "para": 16,
+   "span": "authoring is version-controlled (C1); claims are propositional rather than purely narrative (C2)",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated scope stipulation"
+  },
+  {
+   "id": "n10",
+   "type": "boundary_condition",
+   "statement": "Five domains where a condition is principle-failed or inverted are explicitly excluded and ceded to prior traditions.",
+   "para": 16,
+   "span": "are excluded explicitly and ceded to prior traditions",
+   "explanatory_status": "derived",
+   "status_reason": "each exclusion is argued from a specific failing condition among C1–C4"
+  },
+  {
+   "id": "n11",
+   "type": "method",
+   "statement": "A knowledge artifact is decomposed into three layers: log substrate L, spine S extracted from L, and cohort-conditional rendering R produced from S.",
+   "para": 19,
+   "span": "it decomposes a knowledge artifact into three layers — a log substrate (L)",
+   "explanatory_status": "verified_only",
+   "status_reason": "a constructed decomposition, checkable but not derived"
+  },
+  {
+   "id": "n12",
+   "type": "proposition",
+   "statement": "The extraction operator σ is lossy and the rendering operator ρ is cohort-dependent and reconstructable per language, audience, and medium.",
+   "para": 25,
+   "span": "The $\\sigma$ operator is lossy: not every event in L surfaces in S.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the definitions of L, S, R"
+  },
+  {
+   "id": "n13",
+   "type": "evidence",
+   "statement": "The log-to-projected-graph-to-rendering pattern parallels an event-sourcing architecture for agentic systems.",
+   "para": 25,
+   "span": "parallels the event-sourcing architecture Nakajima [-@nakajima-2026-log-is-agent] develops for agentic systems",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited analogy offered as support"
+  },
+  {
+   "id": "n14",
+   "type": "proposition",
+   "statement": "Meaning is a property of S (transferable across renderings) while meaningfulness is a property of a specific rendering triple.",
+   "para": 26,
+   "span": "*meaning* is a property of S, transferable across renderings and inspectable at the graph layer",
+   "explanatory_status": "derived",
+   "status_reason": "assigned directly from the three-layer decomposition"
+  },
+  {
+   "id": "n15",
+   "type": "boundary_condition",
+   "statement": "The paper's meaning/meaningfulness use is structural, not the affective organizational-behavior reading, and operates at a different unit of analysis.",
+   "para": 27,
+   "span": "Our use is structural rather than affective: meaning is a property of the substrate's typed graph",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stated disambiguation limiting scope"
+  },
+  {
+   "id": "n16",
+   "type": "proposition",
+   "statement": "Operator projections evolve across four eras from human-alone to AI-primary with human supervision at fork gates.",
+   "para": 30,
+   "span": "Operator projections evolve across four eras",
+   "explanatory_status": "derived",
+   "status_reason": "follows from separating intrinsic operations from era-dependent projection"
+  },
+  {
+   "id": "n17",
+   "type": "evidence",
+   "statement": "Role-coordination scholarship shows occupational roles absorb unexpected events through coordination structures, mirroring how the Operator absorbs the AI-projection shift.",
+   "para": 32,
+   "span": "which documents how occupational roles absorb unexpected events through structured trading zones and coordination",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited parallel offered in support of the role move"
+  },
+  {
+   "id": "n18",
+   "type": "method",
+   "statement": "The spine is formalized as a typed directed acyclic graph G = (V, E, τ) with 10 node types and 17 edge types plus per-node provenance.",
+   "para": 40,
+   "span": "The spine S is a typed directed acyclic graph $G = (V, E, \\tau)$",
+   "explanatory_status": "verified_only",
+   "status_reason": "formal apparatus in symbols, which the reader does not hold"
+  },
+  {
+   "id": "n19",
+   "type": "method",
+   "statement": "σ succeeds on a source L if the extracted graph passes an isomorphism test and a coverage test against a human gold-standard subgraph at κ ≥ .75.",
+   "para": 42,
+   "span": "an **isomorphism test** ... and a **coverage test**",
+   "explanatory_status": "verified_only",
+   "status_reason": "operational criterion stated, not derived from held terms"
+  },
+  {
+   "id": "n20",
+   "type": "method",
+   "statement": "ρ succeeds if reverse-extraction recovers the locked subset of G from R.",
+   "para": 42,
+   "span": "$\\rho$ succeeds if reverse-extraction recovers the locked subset of G from R",
+   "explanatory_status": "derived",
+   "status_reason": "defined from σ and the locked-spine notion"
+  },
+  {
+   "id": "n21",
+   "type": "proposition",
+   "statement": "AI verification cost on the spine scales sub-linearly in node count while human verification cost on the rendering scales super-linearly in token count, giving β < 1 < δ.",
+   "para": 34,
+   "span": "AI verification cost on S scales sub-linearly in node count",
+   "explanatory_status": "miracle",
+   "status_reason": "the scaling exponents are asserted in symbols with no argument or measurement the reader can follow"
+  },
+  {
+   "id": "n22",
+   "type": "proposition",
+   "statement": "Under the asymmetry β < 1 < δ, locating substrate operations at the AI end and judgment at the human end minimizes total operator cost, whereas under symmetric costs the partition is neutral.",
+   "para": 34,
+   "span": "under the asymmetry, locating structural-substrate operations at the AI-projected end and judgment operations at the human-projected end minimizes total operator cost",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the stated cost functions"
+  },
+  {
+   "id": "n23",
+   "type": "proposition",
+   "statement": "The substrate schema's complexity is the operational form the cost asymmetry predicts, since complexity concentrates where AI projection holds comparative advantage.",
+   "para": 35,
+   "span": "complexity is concentrated at the layer where AI projection holds comparative advantage",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the cost asymmetry plus the schema description"
+  },
+  {
+   "id": "n24",
+   "type": "method",
+   "statement": "The spine-first drafting protocol prescribes locking the substrate before drafting, tracing every prose claim to a substrate entry, resolving orphan claims as fork or rebase, and evaluating substrate and prose separately.",
+   "para": 36,
+   "span": "The protocol prescribes locking the substrate before drafting prose; tracing every prose claim to a substrate entry",
+   "explanatory_status": "derived",
+   "status_reason": "presented as the cost-minimizing arrangement following from the asymmetry"
+  },
+  {
+   "id": "n25",
+   "type": "method",
+   "statement": "Rec(G1,G2) is defined as the size of the maximum common subgraph preserving node typing and antecedent edges, with a recombination event thresholded at Rec ≥ 3.",
+   "para": 46,
+   "span": "is the size of the maximum common subgraph of $G_1$ and $G_2$ that preserves both node typing and antecedent edges",
+   "explanatory_status": "verified_only",
+   "status_reason": "stipulated formal metric, not held by the reader"
+  },
+  {
+   "id": "n26",
+   "type": "proposition",
+   "statement": "The spine, as a typed-DAG artifact, affords substrate operations to AI projection and judgment operations to human projection, making it a new species of machine-operable boundary object.",
+   "para": 48,
+   "span": "The spine is a new species of boundary object in the Star–Griesemer–Carlile lineage",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the typed-DAG construction plus the operation split"
+  },
+  {
+   "id": "n27",
+   "type": "proposition",
+   "statement": "The substrate differs from computational-argumentation claim graphs in typing by inferential role, requiring per-node provenance, and targeting operator-internal coordination.",
+   "para": 49,
+   "span": "Our framework's substrate differs in three respects",
+   "explanatory_status": "derived",
+   "status_reason": "contrast drawn directly from the schema definition"
+  },
+  {
+   "id": "n28",
+   "type": "proposition",
+   "statement": "P1: meaning and meaningfulness are separately optimizable — σ operates without consulting any R and ρ without altering S.",
+   "para": 53,
+   "span": "Meaning and meaningfulness are separately optimizable",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the layer decomposition and operator definitions"
+  },
+  {
+   "id": "n29",
+   "type": "method",
+   "statement": "P1's falsifier: if σ requires inspecting a rendering to produce S, the hierarchy collapses to two layers; the self-application spine is the existence-proof condition.",
+   "para": 54,
+   "span": "If $\\sigma$ requires inspecting any $R(S, c, \\ell, m)$ to produce S",
+   "explanatory_status": "derived",
+   "status_reason": "negation of P1's stated independence"
+  },
+  {
+   "id": "n30",
+   "type": "proposition",
+   "statement": "P4: two renderings of a locked spine reach the same conclusion set iff both preserve the spine's structural elements.",
+   "para": 56,
+   "span": "two prose renderings of the same spine arrive at the same set of conclusions iff both renderings preserve the spine's structural elements",
+   "explanatory_status": "derived",
+   "status_reason": "holds given the strict K definition and axiom A1"
+  },
+  {
+   "id": "n31",
+   "type": "method",
+   "statement": "The conclusion set of a rendering is defined as K(R) := σ(R) ∩ S restricted to the locked subset.",
+   "para": 56,
+   "span": "The conclusion set of a rendering R is defined as $K(R) := \\sigma(R) \\cap S$",
+   "explanatory_status": "verified_only",
+   "status_reason": "symbolic definition stipulated, not available to the reader as held apparatus"
+  },
+  {
+   "id": "n32",
+   "type": "assumption",
+   "statement": "Axiom A1: when a rendering preserves the locked elements of the spine, σ recovers them; A1 is empirically testable via inter-coder reliability at κ ≥ .75.",
+   "para": 57,
+   "span": "A1 ($\\sigma$-faithfulness on locked subsets): when a rendering preserves the locked elements of the spine, the $\\sigma$ extraction operator recovers them",
+   "explanatory_status": "verified_only",
+   "status_reason": "explicitly an unargued axiom with a stated empirical test"
+  },
+  {
+   "id": "n33",
+   "type": "boundary_condition",
+   "statement": "Under a weaker bare-content reading of conclusions, the ← direction of P4 degrades to a high-probability empirical tendency.",
+   "para": 57,
+   "span": "Under a weaker bare-content reading the $\\leftarrow$ direction degrades to a high-probability empirical tendency",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated limitation on the theorem's reading"
+  },
+  {
+   "id": "n34",
+   "type": "method",
+   "statement": "P4's falsifier: two faithful renderings of one locked spine reaching different conclusions on a central locked proposition without either breaking the spine, checked via the κ threshold.",
+   "para": 58,
+   "span": "Two faithful renderings of the same locked spine reach different conclusions on a central locked proposition",
+   "explanatory_status": "derived",
+   "status_reason": "negation of P4 given A1 and the κ operationalization"
+  },
+  {
+   "id": "n35",
+   "type": "proposition",
+   "statement": "P2: organizations publishing substrate achieve higher recombination rates, measured as citation-weighted derivative work within 24–36 months, than matched rendering-only organizations.",
+   "para": 60,
+   "span": "Organizations that publish the substrate of their knowledge artifacts as a first-class artifact achieve higher rates of knowledge recombination",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the cost-asymmetry mechanism under C1–C4"
+  },
+  {
+   "id": "n36",
+   "type": "proposition",
+   "statement": "Mechanism for P2: published S is queryable at sub-linear cost while unpublished S forces re-extraction by every consumer at super-linear total cost.",
+   "para": 61,
+   "span": "unpublished S forces re-extraction by every consuming agent at super-linear total cost",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the cost functions plus the operation split"
+  },
+  {
+   "id": "n37",
+   "type": "method",
+   "statement": "P2's falsifier and operational metric: rendering-only organizations achieving indistinguishable recombination rates over 24–36 months, measured by Rec ≥ 3 events.",
+   "para": 62,
+   "span": "an organization that publishes only R achieves recombination rates indistinguishable from a matched organization",
+   "explanatory_status": "derived",
+   "status_reason": "negation of P2 using the Rec metric"
+  },
+  {
+   "id": "n38",
+   "type": "proposition",
+   "statement": "P3: under C1–C4, allocating AI projection to substrate verification and human projection to rendering sensemaking yields lower total verification cost than uniform AI allocation.",
+   "para": 65,
+   "span": "Knowledge-work organizations that allocate AI projection to substrate verification and reserve human projection for rendering sensemaking realize lower total verification cost",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the cost functions and the boundary conditions"
+  },
+  {
+   "id": "n39",
+   "type": "method",
+   "statement": "P3's falsifier: AI verification cost on R scaling at or below the rate on S (β ≥ δ), which would invert the allocation prescription.",
+   "para": 67,
+   "span": "AI verification cost on R scales at or below the rate on S — empirically $\\beta \\geq \\delta$",
+   "explanatory_status": "derived",
+   "status_reason": "negation of the asymmetry claim"
+  },
+  {
+   "id": "n40",
+   "type": "evidence",
+   "statement": "A calibrated simulation over a 3×3 grid of β and δ values shows the cost-allocation prescription dominates across the plausible parameter space without empirical parameter estimation.",
+   "para": 44,
+   "span": "a calibrated simulation across the grid $\\beta \\in \\{.5, .7, .9\\}$ and $\\delta \\in \\{1.1, 1.3, 1.5\\}$",
+   "explanatory_status": "verified_only",
+   "status_reason": "simulation reported, checkable via released code, not derived"
+  },
+  {
+   "id": "n41",
+   "type": "evidence",
+   "statement": "A field-experimental productivity finding on customer-support work under generative AI supplies a practitioner-level anchor for the cost-asymmetry pattern.",
+   "para": 87,
+   "span": "15% productivity gain on customer-support work under generative AI assistance, with substantial worker-level heterogeneity",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited empirical result offered as support"
+  },
+  {
+   "id": "n42",
+   "type": "proposition",
+   "statement": "SF1: literature-review AI hallucinates citations when given only rendered prose, and the three-level decomposition locates the failure at the σ direction traversed without input.",
+   "para": 88,
+   "span": "the three-level decomposition locates the failure precisely at the $\\sigma$ direction the AI was forced to traverse without input",
+   "explanatory_status": "derived",
+   "status_reason": "explained by the three-layer decomposition"
+  },
+  {
+   "id": "n43",
+   "type": "evidence",
+   "statement": "Reported hallucination rates on AI bibliographies range widely and no community benchmark reports per-claim DOI-level verification at scale.",
+   "para": 87,
+   "span": "per-claim DOI-level verification rates at scale $\\geq 100$ papers across multiple AI literature-review tools are not yet reported",
+   "explanatory_status": "verified_only",
+   "status_reason": "reported state of the literature, offered as evidence for SF1"
+  },
+  {
+   "id": "n44",
+   "type": "proposition",
+   "statement": "SF2: a sub-class of replication failures are rendering-layer divergences over a preserved claim graph, which the three-level decomposition makes structurally observable.",
+   "para": 91,
+   "span": "The three-level hierarchy locates the failure cleanly at R and prescribes the intervention",
+   "explanatory_status": "derived",
+   "status_reason": "explained by the decomposition plus the meaning/meaningfulness split"
+  },
+  {
+   "id": "n45",
+   "type": "evidence",
+   "statement": "Large replication initiatives document that failures often trace to differing operationalization rather than a wrong underlying claim.",
+   "para": 90,
+   "span": "the Camerer-led replications of experimental economics findings document the pattern at population scale",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited replication record offered in support of SF2"
+  },
+  {
+   "id": "n46",
+   "type": "proposition",
+   "statement": "SF3: cross-language collaboration preserves meaning while losing meaningfulness, as predicted by a language-invariant σ and a cohort-conditional ρ.",
+   "para": 94,
+   "span": "$\\rho$ is cohort-conditional and reconstructed per language; $\\sigma$ produces a language-invariant S",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the operator definitions"
+  },
+  {
+   "id": "n47",
+   "type": "evidence",
+   "statement": "Abstracting services and clinical-trial registries institutionalize the language-invariant substrate versus language-specific rendering split.",
+   "para": 93,
+   "span": "translate mathematical claims across language boundaries on the assumption that the substrate ... is language-invariant",
+   "explanatory_status": "verified_only",
+   "status_reason": "institutional practice cited as evidence for SF3"
+  },
+  {
+   "id": "n48",
+   "type": "evidence",
+   "statement": "The paper's own Russian-language parallel rendering exhibits the same substrate with distinct register, giving a within-corpus existence proof of SF3.",
+   "para": 94,
+   "span": "the operational record is itself a within-corpus existence proof for the pattern the framework explains",
+   "explanatory_status": "verified_only",
+   "status_reason": "self-reported operational record"
+  },
+  {
+   "id": "n49",
+   "type": "proposition",
+   "statement": "SF4: conclusion-invariance across rendering media follows because medium is a parameter of ρ while the spine is medium-invariant.",
+   "para": 97,
+   "span": "medium is a parameter of $\\rho$; the spine is medium-invariant",
+   "explanatory_status": "derived",
+   "status_reason": "follows from ρ's parameterization and P4"
+  },
+  {
+   "id": "n50",
+   "type": "evidence",
+   "statement": "A conference talk and its journal paper, and a textbook chapter and its video lecture, reach the same conclusions despite different rendering parameters.",
+   "para": 96,
+   "span": "a conference talk and the journal paper it presents reach the same conclusions on the same propositions",
+   "explanatory_status": "verified_only",
+   "status_reason": "everyday observation offered as evidence for SF4"
+  },
+  {
+   "id": "n51",
+   "type": "method",
+   "statement": "Five validation cases (T1′ primary, T2 anchor, T1 historical, T3 prospective, T3-prime reflexive) together illustrate P1 and P4 at theory-paper depth.",
+   "para": 99,
+   "span": "Five validation cases together illustrate P1 and P4 at the depth a theoretical paper requires",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stated design of the evidentiary record"
+  },
+  {
+   "id": "n52",
+   "type": "boundary_condition",
+   "statement": "Empirical estimation of P2 and P3 at organizational outcome scale is out of scope and reserved for a companion empirical paper.",
+   "para": 121,
+   "span": "their empirical estimation at organizational outcome scale is the primary scope of the companion empirical working paper",
+   "explanatory_status": "verified_only",
+   "status_reason": "declared scope limitation"
+  },
+  {
+   "id": "n53",
+   "type": "method",
+   "statement": "T1′ selects Eisenhardt–Martin and Zollo–Winter on dynamic capabilities as an idea-twin pair, independently authored two years apart with markedly different formalisms.",
+   "para": 101,
+   "span": "The focal pair is Eisenhardt and Martin",
+   "explanatory_status": "verified_only",
+   "status_reason": "case selection stated with verifiable bibliographic details"
+  },
+  {
+   "id": "n54",
+   "type": "evidence",
+   "statement": "The pair satisfies published idea-twin selection criteria, including the ≤2-year gap treated as the cleanest natural-experiment range.",
+   "para": 103,
+   "span": "the dynamic-capabilities pair satisfies Bikard's selection criteria",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited criteria applied to the chosen pair"
+  },
+  {
+   "id": "n55",
+   "type": "proposition",
+   "statement": "T1′ hypotheses: the two spines are isomorphic at the proposition graph, converge at findings, and diverge only at the rendering/methods layer as P4 predicts.",
+   "para": 102,
+   "span": "H1: the retroactively-extracted spines of the two papers are structurally isomorphic at the proposition graph",
+   "explanatory_status": "derived",
+   "status_reason": "hypotheses generated by applying P4 to the selected pair"
+  },
+  {
+   "id": "n56",
+   "type": "evidence",
+   "statement": "Three illustrative substrate propositions (dynamic capabilities as separable construct, arising through deliberate effort, exhibiting equifinality) are shared across the pair's differing formalisms.",
+   "para": 104,
+   "span": "three illustrative spine entries demonstrate the structural-isomorphism finding",
+   "explanatory_status": "verified_only",
+   "status_reason": "extraction reported by the author, checkable against the sources"
+  },
+  {
+   "id": "n57",
+   "type": "method",
+   "statement": "A secondary ambidexterity pair with a 20-year gap is retained in the companion paper as a sensitivity test on P4's gap-length reach.",
+   "para": 105,
+   "span": "is retained in the companion paper as a sensitivity test on a 20-year gap",
+   "explanatory_status": "derived",
+   "status_reason": "designed as a variation on the Bikard gap threshold"
+  },
+  {
+   "id": "n58",
+   "type": "method",
+   "statement": "T2 applies retroactive extraction to a multi-author position essay authored without knowledge of the framework, giving a clean test of whether the protocol surfaces structure in artifacts not produced under it.",
+   "para": 107,
+   "span": "it was authored without knowledge of the present framework and therefore supplies a clean natural-experiment test",
+   "explanatory_status": "verified_only",
+   "status_reason": "case design stated"
+  },
+  {
+   "id": "n59",
+   "type": "evidence",
+   "statement": "Extraction of the T2 essay surfaced eight propositions (five explicit, three implicit), with three sub-essays independently rendering the same verification-cost-asymmetry proposition and the antecedent-DAG matching the citation dependency graph.",
+   "para": 109,
+   "span": "surfaces eight discrete substrate propositions, of which five are explicitly stated in body sections and three are implicit",
+   "explanatory_status": "verified_only",
+   "status_reason": "reported extraction result supporting T2's hypotheses"
+  },
+  {
+   "id": "n60",
+   "type": "evidence",
+   "statement": "The Heisenberg–Schrödinger case, including Schrödinger's equivalence paper, von Neumann's foundation, and Pauli's within-author double rendering, shows two incompatible formalisms converging on conclusions.",
+   "para": 111,
+   "span": "a within-author rendering-equivalence demonstration stronger than the cross-author H–S equivalence",
+   "explanatory_status": "verified_only",
+   "status_reason": "historical record cited as existence proof for P4"
+  },
+  {
+   "id": "n61",
+   "type": "proposition",
+   "statement": "The historical case shows the rendering-equivalence claim is not an artifact of contemporary management research, and is kept at appendix depth because of domain distance from the primary audience.",
+   "para": 112,
+   "span": "supplies historical-record evidence that the rendering-equivalence claim is not a methodological artifact of contemporary management research",
+   "explanatory_status": "derived",
+   "status_reason": "inference from the historical case plus the audience argument"
+  },
+  {
+   "id": "n62",
+   "type": "method",
+   "statement": "T3 specifies prospectively applying the spine-first protocol to an external organizational methodology handbook, with hypotheses on unnumbered central propositions, DAG alignment, and downstream substrate querying.",
+   "para": 115,
+   "span": "we apply it prospectively to a publicly available organizational methodology handbook",
+   "explanatory_status": "verified_only",
+   "status_reason": "protocol specified but not executed"
+  },
+  {
+   "id": "n63",
+   "type": "proposition",
+   "statement": "T3 is a stricter test than self-application because cross-author independence holds and the source organization has its own view of the substrate.",
+   "para": 117,
+   "span": "a stricter test than the within-paper self-application because cross-author independence holds",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the independence condition of the case design"
+  },
+  {
+   "id": "n64",
+   "type": "method",
+   "statement": "T3-prime publishes the paper's own substrate as a companion artifact, traces every prose claim to a substrate entry, and adds Russian and practitioner companion renderings.",
+   "para": 119,
+   "span": "publishing its own substrate as a Zenodo companion artifact and tracing every prose claim back to a substrate entry",
+   "explanatory_status": "derived",
+   "status_reason": "executes the spine-first protocol on the paper itself"
+  },
+  {
+   "id": "n65",
+   "type": "proposition",
+   "statement": "The reflexive case is structurally circular and therefore secondary, serving only as existence proof that the protocol yields a coherent self-application set.",
+   "para": 119,
+   "span": "The reflexive self-application is structurally circular and therefore secondary to T3's external case",
+   "explanatory_status": "derived",
+   "status_reason": "conceded from the circularity of self-application"
+  },
+  {
+   "id": "n66",
+   "type": "proposition",
+   "statement": "The primary contribution is one role architecture, with the decomposition, propositions, schema, protocol, and Design Propositions all operationalizing the Operator at more concrete levels.",
+   "para": 124,
+   "span": "The contribution is one role architecture, not several extensions",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the Operator construct organizing the paper's parts"
+  },
+  {
+   "id": "n67",
+   "type": "proposition",
+   "statement": "The Operator specifies the role-level architecture inside five established literatures without claiming co-equal extension of each.",
+   "para": 125,
+   "span": "The Operator role sits in dialogue with five established literatures without claiming co-equal extension of each",
+   "explanatory_status": "derived",
+   "status_reason": "positioning argued case by case against cited work"
+  },
+  {
+   "id": "n68",
+   "type": "boundary_condition",
+   "statement": "Three further adjacent literatures are engaged without claiming theoretical extension.",
+   "para": 127,
+   "span": "Three adjacent literatures the framework engages without claiming theoretical extension",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated limit on the contribution's claims"
+  },
+  {
+   "id": "n69",
+   "type": "proposition",
+   "statement": "DP1: organizations under C1–C4 should publish substrate as a first-class governed asset, with falsifier in recombination and verification-efficiency outcomes.",
+   "para": 130,
+   "span": "should publish the substrate of their knowledge artifacts as a first-class governed asset alongside renderings",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the cost-asymmetry mechanism under C1–C4"
+  },
+  {
+   "id": "n70",
+   "type": "proposition",
+   "statement": "DP2: organizations should redesign Operator roles and incentives along the structural-substrate / judgment partition rather than the legacy task workflow.",
+   "para": 131,
+   "span": "should redesign Operator roles around the structural-substrate / judgment partition",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the cost asymmetry making the partition cost-dominated"
+  },
+  {
+   "id": "n71",
+   "type": "evidence",
+   "statement": "Practitioner-level findings on selective professional engagement with AI and skill-heterogeneous productivity gains are consistent with the substrate-judgment split.",
+   "para": 131,
+   "span": "less-experienced workers gain most on the substrate side; most-experienced workers see small gains on speed",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited empirical results offered in support of DP2"
+  },
+  {
+   "id": "n72",
+   "type": "proposition",
+   "statement": "DP3: peer review should evaluate substrate coherence and prose craft as separable inputs, exploiting the cost asymmetry at the review layer.",
+   "para": 132,
+   "span": "should evaluate substrate coherence and prose craft as separate inputs rather than as a single rolled-up review verdict",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the cost asymmetry applied to review work"
+  },
+  {
+   "id": "n73",
+   "type": "proposition",
+   "statement": "The role split converges with an answerability-first account on which the verdict remains a human responsibility and AI systems serve as auditable recommenders.",
+   "para": 134,
+   "span": "editorial language models belong in the workflow as auditable recommenders while the verdict remains a human responsibility",
+   "explanatory_status": "verified_only",
+   "status_reason": "cited account aligned with DP3, not derived from it"
+  },
+  {
+   "id": "n74",
+   "type": "evidence",
+   "statement": "Digital-twin and generative-agent studies show rendering fidelity bounded by substrate richness, supplying cross-domain grounding for P4's scope claim.",
+   "para": 135,
+   "span": "raises behavioral fidelity from 74% (demographics-only substrate) to 83% of two-week test-retest consistency",
+   "explanatory_status": "verified_only",
+   "status_reason": "external empirical results cited as convergent support"
+  },
+  {
+   "id": "n75",
+   "type": "evidence",
+   "statement": "Companion-paper renderings in Russian and Chinese across five LLMs all return Rec ≥ 11 against the locked spine, including matching verdicts for an open-weights local model and a switched extractor.",
+   "para": 137,
+   "span": "All five new renderings return $\\mathrm{Rec} \\geq 11$ against the locked Paper B abstract spine",
+   "explanatory_status": "verified_only",
+   "status_reason": "reported companion results, checkable but not derived"
+  },
+  {
+   "id": "n76",
+   "type": "proposition",
+   "statement": "The preservation result is therefore not artifact-, language-, family-, deployment-tier-, or extractor-specific within the conditions tested, and C3 is directly exercised.",
+   "para": 137,
+   "span": "not artifact-specific, English-specific, family-specific, deployment-tier-specific, or extractor-specific within the conditions tested",
+   "explanatory_status": "derived",
+   "status_reason": "inference from the cross-language and cross-extractor Rec results"
+  },
+  {
+   "id": "n77",
+   "type": "boundary_condition",
+   "statement": "Limitation: spine extractions rely initially on single-coder coding, with a second-coder 20% subsample at κ ≥ .75 deferred to the companion paper.",
+   "para": 139,
+   "span": "rely initially on single-coder coding by the author",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated reliability limitation"
+  },
+  {
+   "id": "n78",
+   "type": "boundary_condition",
+   "statement": "Limitation: historical validation is retroactive reconstruction, mitigated by secondary-literature consensus anchors and explicit documentation of coder judgment.",
+   "para": 140,
+   "span": "The historical-case validation (T1) is necessarily a retroactive reconstruction",
+   "explanatory_status": "verified_only",
+   "status_reason": "acknowledged methodological limit with stated mitigation"
+  },
+  {
+   "id": "n79",
+   "type": "boundary_condition",
+   "statement": "Limitation: schema complexity is adoption friction for organizations not yet in the post-AI projection mode, predicted to diminish as composition migrates.",
+   "para": 142,
+   "span": "Organizations not yet operating in the post-AI mode will experience the schema as a friction",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the era-projection account plus schema design"
+  },
+  {
+   "id": "n80",
+   "type": "proposition",
+   "statement": "Three future directions: multi-discipline inter-coder reliability programs, cost-function parameter estimation across model families, and governance/incentive design for spine publication.",
+   "para": 145,
+   "span": "Three directions are immediate",
+   "explanatory_status": "derived",
+   "status_reason": "follow from the paper's stated limitations and unestimated parameters"
+  },
+  {
+   "id": "n81",
+   "type": "evidence",
+   "statement": "The paper's substrate and computation scripts are openly available, with the simulation reproducing every reported quantity under a fixed seed at 12/12 MATCH.",
+   "para": 150,
+   "span": "it computes each value from the cost-function model and prints a MATCH/MISMATCH verdict per claim — currently 12/12",
+   "explanatory_status": "verified_only",
+   "status_reason": "reproducibility claim checkable by running the released code"
+  },
+  {
+   "id": "n82",
+   "type": "proposition",
+   "statement": "Splitting theoretical contribution from empirical estimation preserves a falsification path unavailable within a single paper's page budget.",
+   "para": 148,
+   "span": "The split between theoretical contribution and empirical estimation preserves a falsification path",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the scope limitation on P2 and P3 testing"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n2",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n2",
+   "to": "n3",
+   "type": "supports"
+  },
+  {
+   "from": "n4",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n5",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n6",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n7",
+   "to": "n4",
+   "type": "derives"
+  },
+  {
+   "from": "n7",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n7",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n8",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n10",
+   "to": "n9",
+   "type": "bounds"
+  },
+  {
+   "from": "n11",
+   "to": "n9",
+   "type": "bounds"
+  },
+  {
+   "from": "n12",
+   "to": "n11",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n13",
+   "type": "supports"
+  },
+  {
+   "from": "n14",
+   "to": "n11",
+   "type": "derives"
+  },
+  {
+   "from": "n14",
+   "to": "n15",
+   "type": "bounds"
+  },
+  {
+   "from": "n16",
+   "to": "n4",
+   "type": "derives"
+  },
+  {
+   "from": "n5",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n6",
+   "to": "n16",
+   "type": "depends_on"
+  },
+  {
+   "from": "n4",
+   "to": "n17",
+   "type": "supports"
+  },
+  {
+   "from": "n18",
+   "to": "n11",
+   "type": "depends_on"
+  },
+  {
+   "from": "n19",
+   "to": "n18",
+   "type": "depends_on"
+  },
+  {
+   "from": "n19",
+   "to": "n12",
+   "type": "depends_on"
+  },
+  {
+   "from": "n20",
+   "to": "n19",
+   "type": "derives"
+  },
+  {
+   "from": "n21",
+   "to": "n18",
+   "type": "depends_on"
+  },
+  {
+   "from": "n21",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n22",
+   "to": "n21",
+   "type": "derives"
+  },
+  {
+   "from": "n22",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n22",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n23",
+   "to": "n21",
+   "type": "derives"
+  },
+  {
+   "from": "n23",
+   "to": "n18",
+   "type": "depends_on"
+  },
+  {
+   "from": "n24",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n25",
+   "to": "n18",
+   "type": "depends_on"
+  },
+  {
+   "from": "n26",
+   "to": "n18",
+   "type": "derives"
+  },
+  {
+   "from": "n26",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n26",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n27",
+   "to": "n18",
+   "type": "derives"
+  },
+  {
+   "from": "n28",
+   "to": "n11",
+   "type": "derives"
+  },
+  {
+   "from": "n28",
+   "to": "n12",
+   "type": "depends_on"
+  },
+  {
+   "from": "n28",
+   "to": "n14",
+   "type": "depends_on"
+  },
+  {
+   "from": "n29",
+   "to": "n28",
+   "type": "derives"
+  },
+  {
+   "from": "n29",
+   "to": "n64",
+   "type": "depends_on"
+  },
+  {
+   "from": "n31",
+   "to": "n18",
+   "type": "depends_on"
+  },
+  {
+   "from": "n30",
+   "to": "n31",
+   "type": "derives"
+  },
+  {
+   "from": "n30",
+   "to": "n32",
+   "type": "assumes"
+  },
+  {
+   "from": "n30",
+   "to": "n20",
+   "type": "depends_on"
+  },
+  {
+   "from": "n30",
+   "to": "n33",
+   "type": "bounds"
+  },
+  {
+   "from": "n32",
+   "to": "n19",
+   "type": "depends_on"
+  },
+  {
+   "from": "n34",
+   "to": "n30",
+   "type": "derives"
+  },
+  {
+   "from": "n34",
+   "to": "n32",
+   "type": "depends_on"
+  },
+  {
+   "from": "n35",
+   "to": "n36",
+   "type": "derives"
+  },
+  {
+   "from": "n35",
+   "to": "n9",
+   "type": "bounds"
+  },
+  {
+   "from": "n36",
+   "to": "n21",
+   "type": "derives"
+  },
+  {
+   "from": "n36",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n37",
+   "to": "n35",
+   "type": "derives"
+  },
+  {
+   "from": "n37",
+   "to": "n25",
+   "type": "depends_on"
+  },
+  {
+   "from": "n38",
+   "to": "n21",
+   "type": "derives"
+  },
+  {
+   "from": "n38",
+   "to": "n9",
+   "type": "bounds"
+  },
+  {
+   "from": "n39",
+   "to": "n38",
+   "type": "derives"
+  },
+  {
+   "from": "n38",
+   "to": "n40",
+   "type": "supports"
+  },
+  {
+   "from": "n21",
+   "to": "n41",
+   "type": "supports"
+  },
+  {
+   "from": "n42",
+   "to": "n11",
+   "type": "derives"
+  },
+  {
+   "from": "n42",
+   "to": "n43",
+   "type": "supports"
+  },
+  {
+   "from": "n44",
+   "to": "n11",
+   "type": "derives"
+  },
+  {
+   "from": "n44",
+   "to": "n45",
+   "type": "supports"
+  },
+  {
+   "from": "n46",
+   "to": "n12",
+   "type": "derives"
+  },
+  {
+   "from": "n46",
+   "to": "n47",
+   "type": "supports"
+  },
+  {
+   "from": "n46",
+   "to": "n48",
+   "type": "supports"
+  },
+  {
+   "from": "n49",
+   "to": "n12",
+   "type": "derives"
+  },
+  {
+   "from": "n49",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n49",
+   "to": "n50",
+   "type": "supports"
+  },
+  {
+   "from": "n51",
+   "to": "n28",
+   "type": "depends_on"
+  },
+  {
+   "from": "n51",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n51",
+   "to": "n52",
+   "type": "bounds"
+  },
+  {
+   "from": "n53",
+   "to": "n54",
+   "type": "supports"
+  },
+  {
+   "from": "n55",
+   "to": "n30",
+   "type": "derives"
+  },
+  {
+   "from": "n55",
+   "to": "n53",
+   "type": "depends_on"
+  },
+  {
+   "from": "n55",
+   "to": "n56",
+   "type": "supports"
+  },
+  {
+   "from": "n57",
+   "to": "n54",
+   "type": "depends_on"
+  },
+  {
+   "from": "n57",
+   "to": "n55",
+   "type": "depends_on"
+  },
+  {
+   "from": "n58",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n58",
+   "to": "n59",
+   "type": "supports"
+  },
+  {
+   "from": "n61",
+   "to": "n60",
+   "type": "supports"
+  },
+  {
+   "from": "n61",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n62",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n63",
+   "to": "n62",
+   "type": "derives"
+  },
+  {
+   "from": "n64",
+   "to": "n24",
+   "type": "derives"
+  },
+  {
+   "from": "n65",
+   "to": "n64",
+   "type": "derives"
+  },
+  {
+   "from": "n66",
+   "to": "n4",
+   "type": "derives"
+  },
+  {
+   "from": "n67",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n69",
+   "to": "n36",
+   "type": "derives"
+  },
+  {
+   "from": "n69",
+   "to": "n9",
+   "type": "bounds"
+  },
+  {
+   "from": "n70",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n70",
+   "to": "n71",
+   "type": "supports"
+  },
+  {
+   "from": "n72",
+   "to": "n21",
+   "type": "derives"
+  },
+  {
+   "from": "n72",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n72",
+   "to": "n73",
+   "type": "supports"
+  },
+  {
+   "from": "n30",
+   "to": "n74",
+   "type": "supports"
+  },
+  {
+   "from": "n76",
+   "to": "n75",
+   "type": "derives"
+  },
+  {
+   "from": "n76",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n77",
+   "to": "n19",
+   "type": "bounds"
+  },
+  {
+   "from": "n78",
+   "to": "n60",
+   "type": "bounds"
+  },
+  {
+   "from": "n79",
+   "to": "n23",
+   "type": "derives"
+  },
+  {
+   "from": "n80",
+   "to": "n77",
+   "type": "depends_on"
+  },
+  {
+   "from": "n80",
+   "to": "n21",
+   "type": "depends_on"
+  },
+  {
+   "from": "n40",
+   "to": "n81",
+   "type": "supports"
+  },
+  {
+   "from": "n82",
+   "to": "n52",
+   "type": "derives"
+  }
+ ],
+ "_meta": {
+  "document": "pilot_2026ao",
+  "operator": "OP_A",
+  "model": "claude-opus-5",
+  "family": "anthropic",
+  "reader_model": "M-gen",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

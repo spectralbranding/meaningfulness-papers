@@ -1,0 +1,465 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "boundary_condition",
+   "statement": "The framework applies only when the authoring process is version-controlled with attribution.",
+   "para": 72,
+   "span": "The artifact has a commit or revision history with attribution.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Stated as a boundary condition without derivation."
+  },
+  {
+   "id": "n2",
+   "type": "boundary_condition",
+   "statement": "The framework applies only when the artifact contains propositional claims with truth conditions.",
+   "para": 73,
+   "span": "The artifact contains identifiable propositional claim markers with truth conditions.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Stated as a boundary condition without derivation."
+  },
+  {
+   "id": "n3",
+   "type": "boundary_condition",
+   "statement": "The framework applies only when there is a non-trivial divergence between the author's and the audience's schemas.",
+   "para": 74,
+   "span": "Measured lexical or structural distance between the author domain and the target cohort domain exceeds a threshold.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Stated as a boundary condition without derivation."
+  },
+  {
+   "id": "n4",
+   "type": "boundary_condition",
+   "statement": "The framework applies only when the volume of artifacts is too large for unaided human verification.",
+   "para": 75,
+   "span": "The artifact volume per unit time relative to the community's reviewer capacity is large enough",
+   "explanatory_status": "verified_only",
+   "status_reason": "Stated as a boundary condition without derivation."
+  },
+  {
+   "id": "n5",
+   "type": "proposition",
+   "statement": "Knowledge artifacts can be decomposed into a log of authoring events, a structured graph of claims (spine), and a cohort-specific prose rendering.",
+   "para": 19,
+   "span": "decomposes a knowledge artifact into three layers — a log substrate (L) of authoring events, a semantic substrate or spine (S)",
+   "explanatory_status": "verified_only",
+   "status_reason": "Introduced as a foundational definition of the framework."
+  },
+  {
+   "id": "n6",
+   "type": "proposition",
+   "statement": "The Operator role consists of structural substrate operations, which are era-dependent, and judgment operations, which remain with humans.",
+   "para": 31,
+   "span": "The role's intrinsic operations split into two classes with qualitatively different projection patterns.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Introduced as a foundational definition of the framework."
+  },
+  {
+   "id": "n7",
+   "type": "proposition",
+   "statement": "AI verification of the structured spine scales sub-linearly, whereas human verification of the prose rendering scales super-linearly.",
+   "para": 34,
+   "span": "Generative AI bifurcates the cost of knowledge work asymmetrically across the substrate / rendering boundary",
+   "explanatory_status": "verified_only",
+   "status_reason": "Asserted as an observable structural condition of generative AI."
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "The extraction of the spine from the log and the generation of the rendering from the spine are independent processes.",
+   "para": 53,
+   "span": "Meaning and meaningfulness are separately optimizable: $\\sigma : L \\to S$ without consulting any R",
+   "explanatory_status": "derived",
+   "status_reason": "Follows logically from the definitions of the three-layer decomposition."
+  },
+  {
+   "id": "n9",
+   "type": "assumption",
+   "statement": "A faithful rendering allows the extraction operator to recover the locked elements of the spine.",
+   "para": 57,
+   "span": "when a rendering preserves the locked elements of the spine, the $\\sigma$ extraction operator recovers them.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Stated as an explicit axiom."
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "Two different prose renderings of the same locked spine will yield the same conclusions if and only if both preserve the spine's structural elements.",
+   "para": 56,
+   "span": "two prose renderings of the same spine arrive at the same set of conclusions iff both renderings preserve the spine's structural elements.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows logically from the three-layer decomposition and the faithfulness axiom A1."
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "Organizations that publish the structural spine of their artifacts achieve higher rates of knowledge recombination than those that only publish prose renderings.",
+   "para": 60,
+   "span": "Organizations that publish the substrate of their knowledge artifacts as a first-class artifact achieve higher rates of knowledge recombination",
+   "explanatory_status": "derived",
+   "status_reason": "Follows logically from the cost asymmetry and the queryability of the published spine."
+  },
+  {
+   "id": "n12",
+   "type": "proposition",
+   "statement": "Allocating AI to verify the spine and humans to make sense of the rendering results in lower total verification costs.",
+   "para": 65,
+   "span": "organizations that allocate AI projection to substrate verification and reserve human projection for rendering sensemaking realize lower total verification cost",
+   "explanatory_status": "derived",
+   "status_reason": "Follows logically from the cost asymmetry and the Operator role partition."
+  },
+  {
+   "id": "n13",
+   "type": "evidence",
+   "statement": "The Eisenhardt & Martin and Zollo & Winter papers on dynamic capabilities share the same underlying structural propositions despite using different formalisms.",
+   "para": 104,
+   "span": "their structural isomorphism across the two papers' formalism boundary is the framework's P4 prediction instantiated",
+   "explanatory_status": "verified_only",
+   "status_reason": "Empirical observation from a historical management-theory twin pair."
+  },
+  {
+   "id": "n14",
+   "type": "evidence",
+   "statement": "Independent authors in the Kulkarni et al. paper arrived at the same underlying substrate propositions through different prose renderings.",
+   "para": 109,
+   "span": "The multiple-discovery pattern within a single multi-author paper is itself an instance of the framework's central claim",
+   "explanatory_status": "verified_only",
+   "status_reason": "Empirical observation from a contemporary multi-author paper."
+  },
+  {
+   "id": "n15",
+   "type": "evidence",
+   "statement": "The historical equivalence of matrix mechanics and wave mechanics demonstrates that different formalisms can converge on the same conclusions.",
+   "para": 111,
+   "span": "Schrödinger himself then proved that matrix mechanics and wave mechanics are mathematically equivalent in the equivalence paper",
+   "explanatory_status": "verified_only",
+   "status_reason": "Historical observation from the founding papers of quantum mechanics."
+  },
+  {
+   "id": "n16",
+   "type": "evidence",
+   "statement": "The framework is reflexively applied to this paper itself, demonstrating that the spine-first protocol can produce a coherent set of renderings.",
+   "para": 119,
+   "span": "exhibits the framework reflexively by publishing its own substrate as a Zenodo companion artifact and tracing every prose claim",
+   "explanatory_status": "verified_only",
+   "status_reason": "Observation from the reflexive self-application of the framework."
+  },
+  {
+   "id": "n17",
+   "type": "proposition",
+   "statement": "Organizations should treat the structural substrate as a governed asset and publish it alongside prose renderings.",
+   "para": 130,
+   "span": "Organizations operating under C1–C4 should publish the substrate of their knowledge artifacts as a first-class governed asset alongside renderings.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows logically from the recombination advantage proposition P2."
+  },
+  {
+   "id": "n18",
+   "type": "proposition",
+   "statement": "Roles and incentives should be redesigned to separate structural-substrate operations from judgment operations.",
+   "para": 131,
+   "span": "redesign Operator roles around the structural-substrate / judgment partition rather than around the legacy task-level workflow.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows logically from the verification-cost asymmetry proposition P3."
+  },
+  {
+   "id": "n19",
+   "type": "proposition",
+   "statement": "Academic peer review should evaluate the structural coherence of the substrate separately from the prose craft of the rendering.",
+   "para": 132,
+   "span": "evaluate substrate coherence and prose craft as separate inputs rather than as a single rolled-up review verdict.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows logically from the separability proposition P1 and verification-cost asymmetry P3."
+  },
+  {
+   "id": "n20",
+   "type": "evidence",
+   "statement": "Generative AI hallucinates citations when given only prose renderings without access to the underlying claim graph.",
+   "para": 88,
+   "span": "An AI operating on R alone reconstructs a plausible-sounding S from rendering-shaped tokens because S is not exposed",
+   "explanatory_status": "verified_only",
+   "status_reason": "Empirical observation of AI behavior."
+  },
+  {
+   "id": "n21",
+   "type": "evidence",
+   "statement": "Replication failures often occur due to differences in how the same underlying claims are rendered into measurement protocols.",
+   "para": 90,
+   "span": "replications often fail not because the underlying claim is wrong but because the rendering of the claim into a measurement protocol differs",
+   "explanatory_status": "verified_only",
+   "status_reason": "Empirical observation from replication initiatives."
+  },
+  {
+   "id": "n22",
+   "type": "evidence",
+   "statement": "Cross-language translations preserve the underlying claims but lose the cohort-specific register and narrative cues.",
+   "para": 93,
+   "span": "the underlying claims translate cleanly while register, citation-density expectations, and narrative-arc cues do not.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Empirical observation from bilingual reading practices."
+  },
+  {
+   "id": "n23",
+   "type": "evidence",
+   "statement": "Scholarly artifacts maintain the same conclusions across different rendering mediums like prose, podcasts, and slide decks.",
+   "para": 96,
+   "span": "Properly specified scholarly artifacts exhibit conclusion-invariance across rendering medium — prose, podcast, slide deck, infographic, video",
+   "explanatory_status": "verified_only",
+   "status_reason": "Empirical observation from scientific communication practices."
+  },
+  {
+   "id": "n24",
+   "type": "method",
+   "statement": "The spine-first drafting protocol requires locking the structural substrate before drafting prose and tracing every prose claim to a substrate entry.",
+   "para": 36,
+   "span": "locking the substrate before drafting prose; tracing every prose claim to a substrate entry; surfacing orphan claims",
+   "explanatory_status": "derived",
+   "status_reason": "Follows logically from the cost asymmetry proposition."
+  },
+  {
+   "id": "n25",
+   "type": "evidence",
+   "statement": "The spine-first protocol is prospectively applied to a publicly available organizational methodology handbook to demonstrate its utility on non-self artifacts.",
+   "para": 115,
+   "span": "we apply it prospectively to a publicly available organizational methodology handbook.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Prospective application proposed as evidence."
+  }
+ ],
+ "edges": [
+  {
+   "from": "n5",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n5",
+   "to": "n2",
+   "type": "bounds"
+  },
+  {
+   "from": "n5",
+   "to": "n3",
+   "type": "bounds"
+  },
+  {
+   "from": "n5",
+   "to": "n4",
+   "type": "bounds"
+  },
+  {
+   "from": "n8",
+   "to": "n5",
+   "type": "derives"
+  },
+  {
+   "from": "n10",
+   "to": "n5",
+   "type": "derives"
+  },
+  {
+   "from": "n10",
+   "to": "n9",
+   "type": "assumes"
+  },
+  {
+   "from": "n11",
+   "to": "n7",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n11",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n11",
+   "to": "n2",
+   "type": "bounds"
+  },
+  {
+   "from": "n11",
+   "to": "n3",
+   "type": "bounds"
+  },
+  {
+   "from": "n11",
+   "to": "n4",
+   "type": "bounds"
+  },
+  {
+   "from": "n12",
+   "to": "n7",
+   "type": "derives"
+  },
+  {
+   "from": "n12",
+   "to": "n6",
+   "type": "depends_on"
+  },
+  {
+   "from": "n12",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n12",
+   "to": "n2",
+   "type": "bounds"
+  },
+  {
+   "from": "n12",
+   "to": "n3",
+   "type": "bounds"
+  },
+  {
+   "from": "n12",
+   "to": "n4",
+   "type": "bounds"
+  },
+  {
+   "from": "n13",
+   "to": "n10",
+   "type": "supports"
+  },
+  {
+   "from": "n14",
+   "to": "n10",
+   "type": "supports"
+  },
+  {
+   "from": "n14",
+   "to": "n12",
+   "type": "supports"
+  },
+  {
+   "from": "n14",
+   "to": "n24",
+   "type": "supports"
+  },
+  {
+   "from": "n15",
+   "to": "n10",
+   "type": "supports"
+  },
+  {
+   "from": "n16",
+   "to": "n10",
+   "type": "supports"
+  },
+  {
+   "from": "n16",
+   "to": "n8",
+   "type": "supports"
+  },
+  {
+   "from": "n16",
+   "to": "n24",
+   "type": "supports"
+  },
+  {
+   "from": "n17",
+   "to": "n11",
+   "type": "derives"
+  },
+  {
+   "from": "n17",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n17",
+   "to": "n2",
+   "type": "bounds"
+  },
+  {
+   "from": "n17",
+   "to": "n3",
+   "type": "bounds"
+  },
+  {
+   "from": "n17",
+   "to": "n4",
+   "type": "bounds"
+  },
+  {
+   "from": "n18",
+   "to": "n12",
+   "type": "derives"
+  },
+  {
+   "from": "n18",
+   "to": "n1",
+   "type": "bounds"
+  },
+  {
+   "from": "n18",
+   "to": "n2",
+   "type": "bounds"
+  },
+  {
+   "from": "n18",
+   "to": "n3",
+   "type": "bounds"
+  },
+  {
+   "from": "n18",
+   "to": "n4",
+   "type": "bounds"
+  },
+  {
+   "from": "n19",
+   "to": "n12",
+   "type": "derives"
+  },
+  {
+   "from": "n19",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n20",
+   "to": "n5",
+   "type": "supports"
+  },
+  {
+   "from": "n21",
+   "to": "n5",
+   "type": "supports"
+  },
+  {
+   "from": "n22",
+   "to": "n8",
+   "type": "supports"
+  },
+  {
+   "from": "n23",
+   "to": "n10",
+   "type": "supports"
+  },
+  {
+   "from": "n24",
+   "to": "n7",
+   "type": "derives"
+  },
+  {
+   "from": "n25",
+   "to": "n24",
+   "type": "supports"
+  }
+ ],
+ "_meta": {
+  "document": "pilot_2026ao",
+  "operator": "OP_B",
+  "model": "gemini-3.1-pro-preview",
+  "family": "google",
+  "reader_model": "M-gen",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

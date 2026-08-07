@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "All the constructions of good point sets P basically involve taking all the elements of a certain ring B of algebraic integers up to some height.",
+  "graph_evidence": "n16 states this generative object, but no derivation edges originate from n16 to any of the separable goals (n5, n9, n11).",
+  "reasoning": "The text presents the ring B as the common core of the three constructions, so the generative object is B. The graph fails to provide a single node from which derivation edges radiate to the three theorem nodes; n16 has no outgoing edges to n5, n9, or n11."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "The Erdös unit distance problem asks, for a given large number n , what is the largest possible value of d_1(P) amongst all sets P of cardinality n ?",
+  "graph_evidence": "n3 restates the problem; the goals n5, n9, n11 are distinct, but only n5 is connected (via n4) to n3; n9 and n11 have no edge from n3.",
+  "reasoning": "The author’s separable goals are the three theorems, and they appear as unmerged nodes. The decomposition is not recovered because the graph lacks edges from the restated problem to Theorems 2 and 3.",
+  "goals_stated": 3,
+  "goals_recovered": 3,
+  "goals_merged_or_split": 0
+ },
+ "T3": {
+  "verdict": "not_recovered",
+  "author_declaration": "There is a further Chinese remainder theorem argument (which I will omit here)...",
+  "graph_evidence": "n53 rightfully carries ‘miracle’. n9, n10, n12, and n42 are also correctly marked; however n29 and n32 are given ‘miracle’ though the author treats them as motivation/assertion, not as explicitly unexplained steps.",
+  "reasoning": "The graph correctly captures the explicitly omitted CRT argument and the Minkowski theorem as miracles, but it labels remarks about Chebotarev difficulties and the sufficiency of towers as miracles. These false residuals break the requirement that only steps the author concedes as unexplained carry that status.",
+  "residuals_marked_by_author": 5,
+  "missed_residuals": 0,
+  "false_residuals": 2
+ },
+ "_meta": {
+  "document": "vc3_r2",
+  "graph_operator": "OP_A",
+  "rater": "RT_3"
+ }
+}

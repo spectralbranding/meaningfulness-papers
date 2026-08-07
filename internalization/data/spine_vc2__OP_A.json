@@ -1,0 +1,1711 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "proposition",
+   "statement": "The question \"Can machines think?\" cannot be settled by defining \"machine\" and \"think\" from ordinary usage, since that would reduce the answer to an opinion poll, which is absurd.",
+   "para": 3,
+   "span": "the meaning and the answer to the question, \"Can machines think?\" is to be sought in a\nstatistical survey such as a Gallup poll. But this is absurd.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the reader's held distinction between questions of fact and questions of meaning"
+  },
+  {
+   "id": "n2",
+   "type": "method",
+   "statement": "Turing replaces the original question with a closely related one expressed in relatively unambiguous words.",
+   "para": 3,
+   "span": "I shall replace the question by another, which is closely related to it and is\nexpressed in relatively unambiguous words",
+   "explanatory_status": "derived",
+   "status_reason": "motivated by the failure of definition in n1"
+  },
+  {
+   "id": "n3",
+   "type": "method",
+   "statement": "The imitation game is defined: an interrogator in a separate room must decide which of two hidden respondents, a man and a woman, is which.",
+   "para": 4,
+   "span": "It is played with three people, a man (A), a woman (B), and an\ninterrogator (C) who may be of either sex.",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stipulated construction, checkable but not derived; rests on the reader's held notion of rules of a game"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "A's object is to cause C to make the wrong identification, so A may answer deceptively.",
+   "para": 6,
+   "span": "It is A's object in the game to try and\ncause C to make the wrong identification.",
+   "explanatory_status": "derived",
+   "status_reason": "a stipulation within the game defined in n3"
+  },
+  {
+   "id": "n5",
+   "type": "boundary_condition",
+   "statement": "Answers must be conveyed in typewritten or teleprinted form so that tones of voice give no clue.",
+   "para": 8,
+   "span": "In order that tones of voice may not help the interrogator the answers should be written,\nor better still, typewritten.",
+   "explanatory_status": "derived",
+   "status_reason": "stated as a condition needed to keep the channel neutral"
+  },
+  {
+   "id": "n6",
+   "type": "proposition",
+   "statement": "B's object is to help the interrogator, and her best strategy is probably truthful answers, since anything she asserts the man can also assert.",
+   "para": 8,
+   "span": "The best strategy for her is probably to give truthful answers.",
+   "explanatory_status": "derived",
+   "status_reason": "argued from the symmetry of what either witness can say"
+  },
+  {
+   "id": "n7",
+   "type": "proposition",
+   "statement": "The replacement question is: will the interrogator misidentify as often when a machine takes A's part as when a man does?",
+   "para": 9,
+   "span": "Will the interrogator decide wrongly as often when the game is played like this as\nhe does when the game is played between a man and a woman?",
+   "explanatory_status": "derived",
+   "status_reason": "obtained by substituting a machine for A in the game of n3"
+  },
+  {
+   "id": "n8",
+   "type": "method",
+   "statement": "The worthiness of the new question is investigated directly, to avoid an infinite regress of meta-questions.",
+   "para": 10,
+   "span": "This latter question we investigate\nwithout further ado, thereby cutting short an infinite regress.",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stated procedural choice, not derived"
+  },
+  {
+   "id": "n9",
+   "type": "proposition",
+   "statement": "The new problem sharply separates physical from intellectual capacities, which is an advantage.",
+   "para": 11,
+   "span": "The new problem has the advantage of drawing a fairly sharp line between the physical\nand the intellectual capacities of a man.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the concealment condition of n5 and the game setup"
+  },
+  {
+   "id": "n10",
+   "type": "evidence",
+   "statement": "Artificial flesh would be pointless for a thinking machine, showing the physical/intellectual line is the right one.",
+   "para": 11,
+   "span": "we should feel there was little point in trying to make a \"thinking machine\" more human by dressing it\nup in such artificial flesh",
+   "explanatory_status": "verified_only",
+   "status_reason": "offered as an intuitive illustration, not derived"
+  },
+  {
+   "id": "n11",
+   "type": "evidence",
+   "statement": "Specimen question-and-answer exchanges (sonnet, arithmetic, chess) illustrate the breadth of the method.",
+   "para": 15,
+   "span": "A: (Pause about 30 seconds and then give as answer) 105621.",
+   "explanatory_status": "verified_only",
+   "status_reason": "illustrative exchanges given, not derived from anything"
+  },
+  {
+   "id": "n12",
+   "type": "proposition",
+   "statement": "The question-and-answer format can introduce almost any field of human endeavour while making irrelevant disabilities (beauty, speed) inadmissible.",
+   "para": 20,
+   "span": "The question and answer method seems to be suitable for introducing almost any one of\nthe fields of human endeavour that we wish to include.",
+   "explanatory_status": "derived",
+   "status_reason": "supported by the specimen exchanges and by the game's prohibition on practical demonstrations"
+  },
+  {
+   "id": "n13",
+   "type": "proposition",
+   "statement": "The objection that the odds are weighted too heavily against the machine is strong, but is neutralised if a machine can nevertheless play the game satisfactorily.",
+   "para": 21,
+   "span": "if, nevertheless, a machine can be\nconstructed to play the imitation game satisfactorily, we need not be troubled by this\nobjection",
+   "explanatory_status": "derived",
+   "status_reason": "the test is sufficient rather than necessary, so a pass answers the objection"
+  },
+  {
+   "id": "n14",
+   "type": "assumption",
+   "statement": "It is assumed that the machine's best strategy in the game is to give the answers a man would naturally give.",
+   "para": 22,
+   "span": "it will be assumed that\nthe best strategy is to try to provide answers that would naturally be given by a man",
+   "explanatory_status": "verified_only",
+   "status_reason": "explicitly assumed without argument; theory of the game not investigated"
+  },
+  {
+   "id": "n15",
+   "type": "boundary_condition",
+   "statement": "Three conditions are wanted on \"machine\": all engineering techniques permitted, experimentally built machines allowed, and men born in the usual manner excluded.",
+   "para": 24,
+   "span": "Finally, we wish to exclude from\nthe machines men born in the usual manner.",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated desiderata, not derived"
+  },
+  {
+   "id": "n16",
+   "type": "proposition",
+   "statement": "Because a person could be reared from a single skin cell, no all-techniques-permitted definition excludes the wrong cases, so the all-techniques requirement is abandoned.",
+   "para": 24,
+   "span": "This prompts us to abandon the requirement that every kind of technique should be permitted.",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the conflict among the conditions in n15 via the skin-cell counterexample"
+  },
+  {
+   "id": "n17",
+   "type": "boundary_condition",
+   "statement": "Only digital computers are permitted to take part in the game.",
+   "para": 24,
+   "span": "we only permit digital\ncomputers to take part in our game",
+   "explanatory_status": "derived",
+   "status_reason": "chosen once the broad requirement is abandoned, guided by current interest in digital computers"
+  },
+  {
+   "id": "n18",
+   "type": "proposition",
+   "statement": "The restriction to digital computers is not really drastic, as an account of their nature and properties will show.",
+   "para": 25,
+   "span": "This restriction appears at first sight to be a very drastic one. I shall attempt to show that\nit is not so in reality.",
+   "explanatory_status": "derived",
+   "status_reason": "a promissory claim to be discharged by the universality section"
+  },
+  {
+   "id": "n19",
+   "type": "proposition",
+   "statement": "Both the identification of machines with digital computers and the thinking criterion will be unsatisfactory only if digital computers turn out unable to do well in the game.",
+   "para": 26,
+   "span": "will only be unsatisfactory if (contrary to my belief), it turns out\nthat digital computers are unable to give a good showing in the game",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the sufficiency structure of the test"
+  },
+  {
+   "id": "n20",
+   "type": "proposition",
+   "statement": "The question concerns imaginable computers, not all computers or presently available ones, so running the experiment now would not answer it.",
+   "para": 27,
+   "span": "whether there are imaginable computers which\nwould do well",
+   "explanatory_status": "derived",
+   "status_reason": "clarifies the scope of the replacement question n7"
+  },
+  {
+   "id": "n21",
+   "type": "proposition",
+   "statement": "Digital computers are intended to carry out any operation a human computer following fixed rules could do.",
+   "para": 28,
+   "span": "these machines are\nintended to carry out any operations which could be done by a human computer",
+   "explanatory_status": "verified_only",
+   "status_reason": "a stated characterisation resting on the reader's held notion of rule-following"
+  },
+  {
+   "id": "n22",
+   "type": "method",
+   "statement": "To avoid circularity, the definition by analogy is replaced by an outline of the means by which the effect is achieved.",
+   "para": 29,
+   "span": "We avoid this by giving an outline. of the means by which the desired effect is\nachieved.",
+   "explanatory_status": "derived",
+   "status_reason": "prompted by the circularity risk in n21"
+  },
+  {
+   "id": "n23",
+   "type": "proposition",
+   "statement": "A digital computer consists of store, executive unit, and control.",
+   "para": 29,
+   "span": "A digital computer can usually be regarded as consisting of three parts:",
+   "explanatory_status": "derived",
+   "status_reason": "delivered by the outline method of n22, using held terms memory and storage"
+  },
+  {
+   "id": "n24",
+   "type": "proposition",
+   "statement": "The store corresponds to the human computer's paper and memory.",
+   "para": 33,
+   "span": "The store is a store of information, and corresponds to the human computer's paper",
+   "explanatory_status": "derived",
+   "status_reason": "maps a part of n23 onto the human-computer picture of n21"
+  },
+  {
+   "id": "n25",
+   "type": "proposition",
+   "statement": "The executive unit carries out the individual operations, whose repertoire varies from machine to machine.",
+   "para": 34,
+   "span": "The executive unit is the part which carries out the various individual operations involved\nin a calculation.",
+   "explanatory_status": "derived",
+   "status_reason": "part of the decomposition in n23"
+  },
+  {
+   "id": "n26",
+   "type": "proposition",
+   "statement": "The book of rules is replaced by a table of instructions in the store, and the control is so built that these are necessarily obeyed correctly and in order.",
+   "para": 35,
+   "span": "It is the duty of\nthe control to see that these instructions are obeyed correctly and in the right order.",
+   "explanatory_status": "derived",
+   "status_reason": "part of the decomposition, mapping the rulebook of n21 into the store"
+  },
+  {
+   "id": "n27",
+   "type": "proposition",
+   "statement": "Information in the store is broken into numbered packets, and instructions are numerically coded strings referring to those positions.",
+   "para": 38,
+   "span": "It would more\nlikely be coded in a form such as 6809430217.",
+   "explanatory_status": "derived",
+   "status_reason": "worked out from the store/instruction-table scheme and illustrated by a coded example"
+  },
+  {
+   "id": "n28",
+   "type": "proposition",
+   "statement": "Jump and conditional-jump instructions make it possible to repeat a sequence of operations until a condition is fulfilled without fresh instructions each time.",
+   "para": 42,
+   "span": "they make it possible for a\nsequence of operations to be replaced over and over again until some condition is\nfulfilled",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the coded instruction types just exhibited, and illustrated by the Tommy analogy"
+  },
+  {
+   "id": "n29",
+   "type": "evidence",
+   "statement": "The reader must accept that computers of this kind have in fact been built and can closely mimic a human computer.",
+   "para": 43,
+   "span": "The reader must accept it as a fact that digital computers can be constructed, and indeed\nhave been constructed",
+   "explanatory_status": "derived",
+   "status_reason": "the reader model already holds that machines of the period could be built and programmed"
+  },
+  {
+   "id": "n30",
+   "type": "proposition",
+   "statement": "Programming means constructing and inserting the instruction table so that the machine performs a given operation.",
+   "para": 44,
+   "span": "To \"programme a machine to carry out the operation A\" means to put\nthe appropriate instruction table into the machine so that it will do A.",
+   "explanatory_status": "derived",
+   "status_reason": "defined from the instruction-table apparatus of n26"
+  },
+  {
+   "id": "n31",
+   "type": "proposition",
+   "statement": "A digital computer with a random element has instructions involving a die throw, and observation cannot normally reveal whether such an element is present.",
+   "para": 45,
+   "span": "It is not normally possible to\ndetermine from observing a machine whether it has a random element",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted with a pseudo-random substitute example, not derived"
+  },
+  {
+   "id": "n32",
+   "type": "proposition",
+   "statement": "Infinite-capacity computers, with an unlimited store of which only a finite part is ever used, involve no theoretical difficulty.",
+   "para": 46,
+   "span": "There is no theoretical difficulty in\nthe idea of a computer with an unlimited store.",
+   "explanatory_status": "verified_only",
+   "status_reason": "stipulated idealisation; reader holds no computability theory to derive it from"
+  },
+  {
+   "id": "n33",
+   "type": "evidence",
+   "statement": "Babbage planned the wholly mechanical Analytical Engine, which had all the essential ideas but was never completed.",
+   "para": 47,
+   "span": "Charles Babbage ... planned such a machine, called the\nAnalytical Engine, but it was never completed",
+   "explanatory_status": "verified_only",
+   "status_reason": "historical citation, checkable but not derived"
+  },
+  {
+   "id": "n34",
+   "type": "proposition",
+   "statement": "Since Babbage's machine was mechanical and all digital computers are in a sense equivalent, the use of electricity is of no theoretical importance.",
+   "para": 48,
+   "span": "Since Babbage's machine was not electrical, and since all digital computers are in a sense equivalent, we\nsee that this use of electricity cannot be of theoretical importance.",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the Babbage case plus the equivalence claim later grounded in universality"
+  },
+  {
+   "id": "n35",
+   "type": "proposition",
+   "statement": "Digital computers belong to the class of discrete-state machines, which move by sudden jumps between definite states.",
+   "para": 50,
+   "span": "The digital computers considered in the last section may be classified amongst the\n\"discrete-state machines.\"",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the digit/packet description of the machine in n27"
+  },
+  {
+   "id": "n36",
+   "type": "boundary_condition",
+   "statement": "Strictly there are no discrete-state machines, since everything moves continuously; discreteness is a convenient fiction.",
+   "para": 50,
+   "span": "Strictly speaking there, are no such machines. Everything really moves continuously.",
+   "explanatory_status": "verified_only",
+   "status_reason": "a conceded idealisation, offered without argument"
+  },
+  {
+   "id": "n37",
+   "type": "method",
+   "statement": "A discrete-state machine can be described abstractly by tables giving next state from last state and input, and output from state.",
+   "para": 50,
+   "span": "This machine could be described abstractly as follows.",
+   "explanatory_status": "derived",
+   "status_reason": "constructed by exhibiting the wheel-and-lever example"
+  },
+  {
+   "id": "n38",
+   "type": "boundary_condition",
+   "statement": "Such table descriptions are available only for machines with finitely many states.",
+   "para": 54,
+   "span": "They can be described by such tables\nprovided they have only a finite number of possible states.",
+   "explanatory_status": "derived",
+   "status_reason": "limits the applicability of the tabular method n37"
+  },
+  {
+   "id": "n39",
+   "type": "proposition",
+   "statement": "Given initial state and inputs, all future states of a discrete-state machine can be predicted, and unlike the universe, small initial errors do not amplify.",
+   "para": 55,
+   "span": "given the initial state of the machine and the input signals it is always\npossible to predict all future states",
+   "explanatory_status": "derived",
+   "status_reason": "read off from the state tables of n37"
+  },
+  {
+   "id": "n40",
+   "type": "proposition",
+   "statement": "The number of states of an actual digital computer is enormous, and its logarithm to base two is its storage capacity, which adds when machines are combined.",
+   "para": 56,
+   "span": "The logarithm to the base two of the\nnumber of states is usually called the \"storage capacity\" of the machine.",
+   "explanatory_status": "derived",
+   "status_reason": "computed from the store-of-digits picture; uses the reader's held term storage capacity"
+  },
+  {
+   "id": "n41",
+   "type": "proposition",
+   "statement": "A digital computer, given the table of any discrete-state machine, can compute and so mimic its behaviour, provided it is fast enough, has adequate storage, and is reprogrammed for each machine.",
+   "para": 57,
+   "span": "Provided it could be carried out sufficiently quickly the digital\ncomputer could mimic the behavior of any discrete-state machine.",
+   "explanatory_status": "derived",
+   "status_reason": "derived from predictability n39, tabular description n37 and programmability n30"
+  },
+  {
+   "id": "n42",
+   "type": "proposition",
+   "statement": "Digital computers are therefore universal machines, so one suitably programmed computer suffices for all computing processes and all digital computers are in a sense equivalent.",
+   "para": 58,
+   "span": "This special property of digital computers, that they can mimic any discrete-state\nmachine, is described by saying that they are universal machines.",
+   "explanatory_status": "derived",
+   "status_reason": "named consequence of the mimicry argument n41"
+  },
+  {
+   "id": "n43",
+   "type": "proposition",
+   "statement": "By universality, the question can be narrowed to whether one particular computer C, given adequate storage, speed and programme, can play A satisfactorily.",
+   "para": 59,
+   "span": "Is it true that by modifying this computer to have an adequate storage, suitably increasing its speed\nof action, and providing it with an appropriate programme, C can be made to play\nsatisfactorily the part of A",
+   "explanatory_status": "derived",
+   "status_reason": "derived from universality n42 applied to the replacement question n7"
+  },
+  {
+   "id": "n44",
+   "type": "boundary_condition",
+   "statement": "The original form of the question cannot be abandoned altogether, since opinions differ on the appropriateness of the substitution.",
+   "para": 61,
+   "span": "We cannot altogether abandon the original form of the problem, for\nopinions will differ as to the appropriateness of the substitution",
+   "explanatory_status": "verified_only",
+   "status_reason": "a procedural concession stated without argument"
+  },
+  {
+   "id": "n45",
+   "type": "proposition",
+   "statement": "Turing predicts that in about fifty years computers with 10^9 storage will play the game so well that an average interrogator will not exceed a 70 per cent chance of right identification after five minutes.",
+   "para": 62,
+   "span": "an average interrogator will not have\nmore than 70 per cent chance of making the right identification after five minutes of\nquestioning",
+   "explanatory_status": "verified_only",
+   "status_reason": "declared as a conjecture; no derivation offered"
+  },
+  {
+   "id": "n46",
+   "type": "proposition",
+   "statement": "The original question \"Can machines think?\" is too meaningless to deserve discussion, though usage will change so that speaking of machines thinking will pass unchallenged.",
+   "para": 62,
+   "span": "The original question, \"Can machines think?\" I believe to be too\nmeaningless to deserve discussion.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the diagnosis in n1 that it is a question of meaning settled by usage"
+  },
+  {
+   "id": "n47",
+   "type": "proposition",
+   "statement": "Stating conjectures openly is harmless and useful provided proved facts are distinguished from conjectures.",
+   "para": 62,
+   "span": "Provided it is made clear\nwhich are proved facts and which are conjectures, no harm can result.",
+   "explanatory_status": "verified_only",
+   "status_reason": "a methodological remark asserted, resting on the held premise/conclusion vocabulary"
+  },
+  {
+   "id": "n48",
+   "type": "proposition",
+   "statement": "The theological objection holds that thinking is a function of the immortal soul, given only to men, so no machine can think.",
+   "para": 64,
+   "span": "Hence no animal or\nmachine can think.",
+   "explanatory_status": "verified_only",
+   "status_reason": "an opponent's argument reported, not derived"
+  },
+  {
+   "id": "n49",
+   "type": "proposition",
+   "statement": "The theological objection implies a restriction on God's omnipotence, since He could confer a soul on an elephant or a machine given suitable circumstances.",
+   "para": 65,
+   "span": "the argument quoted above implies a serious restriction of the omnipotence of the Almighty",
+   "explanatory_status": "derived",
+   "status_reason": "a reductio of n48 within theological terms"
+  },
+  {
+   "id": "n50",
+   "type": "evidence",
+   "statement": "Scriptural arguments against Copernican theory, once impressive, now appear futile, showing theological arguments have often proved unsatisfactory.",
+   "para": 66,
+   "span": "In the time of Galileo it was argued that the texts ... were an\nadequate refutation of the Copernican theory",
+   "explanatory_status": "verified_only",
+   "status_reason": "historical citation supporting distrust of theological argument"
+  },
+  {
+   "id": "n51",
+   "type": "proposition",
+   "statement": "The \"heads in the sand\" objection is that the consequences of thinking machines would be too dreadful, so we should hope they cannot think.",
+   "para": 68,
+   "span": "The consequences of machines thinking would be too dreadful. Let us hope and believe\nthat they cannot do so.",
+   "explanatory_status": "verified_only",
+   "status_reason": "an opponent's position reported"
+  },
+  {
+   "id": "n52",
+   "type": "proposition",
+   "statement": "This objection rests on the wish to believe Man necessarily superior, and is not substantial enough to require refutation.",
+   "para": 70,
+   "span": "I do not think that this argument is sufficiently substantial to require refutation.",
+   "explanatory_status": "derived",
+   "status_reason": "diagnosed as motivated wishing rather than argument"
+  },
+  {
+   "id": "n53",
+   "type": "proposition",
+   "statement": "There are results of mathematical logic, notably Gödel's theorem and Turing's 1937 result, showing limitations on the powers of discrete-state machines.",
+   "para": 72,
+   "span": "There are a number of results of mathematical logic which can be used to show that there\nare limitations to the powers of discrete-state machines.",
+   "explanatory_status": "miracle",
+   "status_reason": "reader holds nothing about Gödel, computability, or the halting problem, and no proof is given"
+  },
+  {
+   "id": "n54",
+   "type": "proposition",
+   "statement": "For an infinite-capacity machine rigged to answer questions, there are questions of the form \"will this described machine ever answer Yes?\" to which it must answer wrongly or not at all.",
+   "para": 72,
+   "span": "there will be some\nquestions to which it will either give a wrong answer, or fail to give an answer at all\nhowever much time is allowed for a reply",
+   "explanatory_status": "miracle",
+   "status_reason": "asserted as a mathematical result with no proof and no held basis for the reader"
+  },
+  {
+   "id": "n55",
+   "type": "boundary_condition",
+   "statement": "For this argument the questions are supposed restricted to those answerable Yes or No.",
+   "para": 72,
+   "span": "supposing for the present that the questions are of the kind to which an answer \"Yes\" or \"No\" is appropriate",
+   "explanatory_status": "verified_only",
+   "status_reason": "an explicit scope restriction"
+  },
+  {
+   "id": "n56",
+   "type": "proposition",
+   "statement": "The short answer is that limitations are established only for particular machines, while immunity of the human intellect is asserted without proof.",
+   "para": 73,
+   "span": "it has only been stated, without any\nsort of proof, that no such limitations apply to the human intellect",
+   "explanatory_status": "derived",
+   "status_reason": "points out the missing premise in the objection built on n54"
+  },
+  {
+   "id": "n57",
+   "type": "proposition",
+   "statement": "Our feeling of superiority on catching one machine out is genuine but unimportant, since we too give wrong answers and the triumph is only over that one machine.",
+   "para": 73,
+   "span": "our superiority can\nonly be felt on such an occasion in relation to the one machine over which we have\nscored our petty triumph",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the per-machine character of the limitation in n54"
+  },
+  {
+   "id": "n58",
+   "type": "proposition",
+   "statement": "There might be men cleverer than any given machine, and machines cleverer again, without end.",
+   "para": 73,
+   "span": "there might be men cleverer than any given machine, but\nthen again there might be other machines cleverer again, and so on",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the machine-relative reading of the result"
+  },
+  {
+   "id": "n59",
+   "type": "proposition",
+   "statement": "Holders of the mathematical argument would mostly accept the imitation game as a basis for discussion, unlike holders of the first two objections.",
+   "para": 74,
+   "span": "Those who hold to the mathematical argument would, I think, mostly he willing to accept\nthe imitation game as a basis for discussion",
+   "explanatory_status": "verified_only",
+   "status_reason": "an attributed disposition, offered without support"
+  },
+  {
+   "id": "n60",
+   "type": "evidence",
+   "statement": "Jefferson's Lister Oration asserts that only a machine that wrote a sonnet out of felt thoughts and emotions, and knew it had, could be granted equality with brain.",
+   "para": 76,
+   "span": "Not until a machine can write a sonnet or compose a concerto\nbecause of thoughts and emotions felt",
+   "explanatory_status": "verified_only",
+   "status_reason": "a quotation, checkable but not derived"
+  },
+  {
+   "id": "n61",
+   "type": "proposition",
+   "statement": "In its extreme form the argument from consciousness collapses into solipsism, since it requires being the machine (or the man) to know it thinks.",
+   "para": 77,
+   "span": "It is in fact the solipsist point of view.",
+   "explanatory_status": "derived",
+   "status_reason": "drawn out of the quoted argument n60 by extending its own criterion"
+  },
+  {
+   "id": "n62",
+   "type": "proposition",
+   "statement": "In practice we escape solipsism by the polite convention that everyone thinks.",
+   "para": 77,
+   "span": "it is usual to have the polite convention that everyone thinks",
+   "explanatory_status": "derived",
+   "status_reason": "offered as the practical alternative to the untenable position n61"
+  },
+  {
+   "id": "n63",
+   "type": "evidence",
+   "statement": "A specimen viva voce on Shakespeare's sonnet shows the kind of sustained answering that could not be dismissed as an easy contrivance.",
+   "para": 86,
+   "span": "if the answers were as satisfactory and\nsustained as in the above passage I do not think he would describe it as \"an easy\ncontrivance.\"",
+   "explanatory_status": "derived",
+   "status_reason": "the dialogue is exhibited and then used against Jefferson's phrase"
+  },
+  {
+   "id": "n64",
+   "type": "proposition",
+   "statement": "Most supporters of the consciousness argument would abandon it rather than accept solipsism, and would then accept the test.",
+   "para": 87,
+   "span": "most of those who support the argument from consciousness\ncould be persuaded to abandon it rather than be forced into the solipsist position",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the dilemma of n61 plus the viva voce example n63"
+  },
+  {
+   "id": "n65",
+   "type": "boundary_condition",
+   "statement": "Mysteries about consciousness are conceded to exist but need not be solved before the paper's question is answered.",
+   "para": 88,
+   "span": "I do not think these mysteries necessarily need to be solved before we can answer the\nquestion with which we are concerned in this paper",
+   "explanatory_status": "verified_only",
+   "status_reason": "a conceded limit stated in ordinary prose without argument"
+  },
+  {
+   "id": "n66",
+   "type": "proposition",
+   "statement": "The arguments from various disabilities take the form \"you will never make a machine do X\", with a list of proposed X's and no support offered.",
+   "para": 90,
+   "span": "I grant you that you can make machines do all the things\nyou have mentioned but you will never be able to make one to do X",
+   "explanatory_status": "verified_only",
+   "status_reason": "an opponent's form of argument reported with its list"
+  },
+  {
+   "id": "n67",
+   "type": "proposition",
+   "statement": "These claims rest on unconscious scientific induction from the limited machines a person has seen, which is unreliable material for induction.",
+   "para": 92,
+   "span": "I believe they are mostly founded on\nthe principle of scientific induction.",
+   "explanatory_status": "derived",
+   "status_reason": "diagnosis supported by examples of induction going wrong, e.g. incredulity about computers and English-speaking children"
+  },
+  {
+   "id": "n68",
+   "type": "proposition",
+   "statement": "Many of the alleged limitations are associated with the very small storage capacity of most machines.",
+   "para": 92,
+   "span": "Many of these limitations are associated with the very small storage capacity of most\nmachines.",
+   "explanatory_status": "derived",
+   "status_reason": "uses the storage-capacity notion of n40, which the reader holds informally"
+  },
+  {
+   "id": "n69",
+   "type": "boundary_condition",
+   "statement": "The idea of storage capacity is assumed extensible to non-discrete-state machines, no mathematical accuracy being claimed.",
+   "para": 92,
+   "span": "I am assuming that the idea of storage capacity is extended in some way to\ncover machines other than discrete-state machines",
+   "explanatory_status": "verified_only",
+   "status_reason": "explicitly assumed for convenience"
+  },
+  {
+   "id": "n70",
+   "type": "proposition",
+   "statement": "The inability to enjoy strawberries and cream matters only because it contributes to the difficulty of man–machine friendliness.",
+   "para": 93,
+   "span": "it contributes to some of the other disabilities",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted as a special remark without derivation"
+  },
+  {
+   "id": "n71",
+   "type": "proposition",
+   "statement": "A machine programmed for the game would deliberately introduce arithmetical mistakes to avoid being unmasked by deadly accuracy.",
+   "para": 94,
+   "span": "It would deliberately introduce mistakes in a manner calculated to confuse the interrogator.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the imitation strategy assumption n14 and programmability n30"
+  },
+  {
+   "id": "n72",
+   "type": "proposition",
+   "statement": "The mistake criticism confuses errors of functioning, which abstract machines cannot make by definition, with errors of conclusion, which machines clearly can make.",
+   "para": 94,
+   "span": "this criticism depends on a confusion\nbetween two kinds of mistake, We may call them \"errors of functioning\" and \"errors of\nconclusion.\"",
+   "explanatory_status": "derived",
+   "status_reason": "a distinction drawn and applied, illustrated by a machine typing \"0 = 1\""
+  },
+  {
+   "id": "n73",
+   "type": "proposition",
+   "statement": "A machine can be its own subject matter, since it can help make its own programmes, predict effects of alterations in its structure, and modify its programmes from observed results.",
+   "para": 95,
+   "span": "In this sort of sense a\nmachine undoubtedly can be its own subject matter.",
+   "explanatory_status": "derived",
+   "status_reason": "argued via the equation example and the notion of subject matter of operations"
+  },
+  {
+   "id": "n74",
+   "type": "proposition",
+   "statement": "The claim that a machine cannot have much diversity of behaviour is just a claim about small storage capacity.",
+   "para": 96,
+   "span": "The criticism that a machine cannot have much diversity of behaviour is just a way of\nsaying that it cannot have much storage capacity.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the storage-capacity diagnosis n68"
+  },
+  {
+   "id": "n75",
+   "type": "proposition",
+   "statement": "Many of these criticisms are disguised forms of the argument from consciousness, since describing a mechanical method fails to impress.",
+   "para": 97,
+   "span": "The criticisms that we are considering here are often disguised forms of the argument\nfrom consciousness",
+   "explanatory_status": "derived",
+   "status_reason": "traced back to the consciousness objection n60/n61"
+  },
+  {
+   "id": "n76",
+   "type": "evidence",
+   "statement": "Lady Lovelace wrote that the Analytical Engine has no pretensions to originate anything and can only do what we know how to order it to perform, and Hartree adds that the evidence then available did not show such machines could 'think for itself'.",
+   "para": 99,
+   "span": "The Analytical Engine has no pretensions to\noriginate anything. It can do whatever we know how to order it to perform",
+   "explanatory_status": "verified_only",
+   "status_reason": "quotations from sources, checkable but not derived"
+  },
+  {
+   "id": "n77",
+   "type": "proposition",
+   "statement": "Hartree does not assert the machines lacked the property, only that Lady Lovelace's evidence gave no ground for believing they had it.",
+   "para": 100,
+   "span": "he does not\nassert that the machines in question had not got the property",
+   "explanatory_status": "derived",
+   "status_reason": "read off from the quoted passage n76"
+  },
+  {
+   "id": "n78",
+   "type": "proposition",
+   "statement": "Since the Analytical Engine was a universal digital computer, with adequate storage and speed it could be programmed to mimic any discrete-state machine having the property, so it may in a sense have had it.",
+   "para": 100,
+   "span": "The Analytical Engine was a universal\ndigital computer, so that, if its storage capacity and speed were adequate, it could by\nsuitable programming be made to mimic the machine in question.",
+   "explanatory_status": "derived",
+   "status_reason": "application of universality n42 to Babbage's machine n33"
+  },
+  {
+   "id": "n79",
+   "type": "proposition",
+   "statement": "The variant that a machine can never take us by surprise is false: machines surprise Turing frequently because he calculates hurriedly and takes risks.",
+   "para": 102,
+   "span": "Machines take me by surprise with great frequency.",
+   "explanatory_status": "verified_only",
+   "status_reason": "personal testimony offered as direct counterexample"
+  },
+  {
+   "id": "n80",
+   "type": "proposition",
+   "statement": "The rejoinder that the surprise reflects a creative act in the observer leads back to the consciousness argument, and anyway appreciating surprise takes as much creative act whatever the source.",
+   "para": 103,
+   "span": "the appreciation of something as surprising requires as much of a \"creative mental act\"\nwhether the surprising event originates from a man, a book, a machine or anything else",
+   "explanatory_status": "derived",
+   "status_reason": "deflects the rejoinder by symmetry, referring back to n75"
+  },
+  {
+   "id": "n81",
+   "type": "proposition",
+   "statement": "The view that machines give no surprises rests on the false assumption that all consequences of a fact spring into the mind with it.",
+   "para": 104,
+   "span": "the assumption that as soon as a fact is presented to a mind all consequences of that fact spring into the mind simultaneously with it",
+   "explanatory_status": "derived",
+   "status_reason": "diagnosis of the fallacy behind the surprise objection n79"
+  },
+  {
+   "id": "n82",
+   "type": "proposition",
+   "statement": "The nervous system is not a discrete-state machine, since a small error in an impinging impulse can make a large difference to the outgoing one, so it may be argued it cannot be mimicked discretely.",
+   "para": 106,
+   "span": "The nervous system is certainly not a discrete-state machine.",
+   "explanatory_status": "verified_only",
+   "status_reason": "the objection's premise stated, with a physiological reason but no derivation"
+  },
+  {
+   "id": "n83",
+   "type": "proposition",
+   "statement": "Within the conditions of the imitation game the interrogator cannot exploit the discrete/continuous difference, as the differential analyser example shows.",
+   "para": 107,
+   "span": "if\nwe adhere to the conditions of the imitation game, the interrogator will not be able to take\nany advantage of this difference",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the game's restricted channel n5 plus the randomised-answer construction for the analyser"
+  },
+  {
+   "id": "n84",
+   "type": "proposition",
+   "statement": "It is impossible to produce rules of conduct covering every conceivable circumstance, as the double traffic light shows, and Turing agrees.",
+   "para": 109,
+   "span": "To attempt to provide\nrules of conduct to cover every eventuality, even those arising from traffic lights, appears\nto be impossible. With all this I agree.",
+   "explanatory_status": "derived",
+   "status_reason": "supported by the traffic-light counterexample, using the reader's held notion of a rule"
+  },
+  {
+   "id": "n85",
+   "type": "proposition",
+   "statement": "The argument \"no complete rules, so men are not machines\" commits an undistributed middle.",
+   "para": 110,
+   "span": "The undistributed middle is glaring.",
+   "explanatory_status": "derived",
+   "status_reason": "a logical fault identifiable with the reader's held logical vocabulary"
+  },
+  {
+   "id": "n86",
+   "type": "proposition",
+   "statement": "Distinguishing rules of conduct from laws of behaviour repairs the argument's form, since being regulated by laws of behaviour and being a machine are mutually implied.",
+   "para": 110,
+   "span": "If we substitute \"laws of behaviour\nwhich regulate his life\" for \"laws of conduct by which he regulates his life\" in the\nargument quoted the undistributed middle is no longer insuperable.",
+   "explanatory_status": "derived",
+   "status_reason": "derived by drawing the stated distinction and applying it to the argument n85"
+  },
+  {
+   "id": "n87",
+   "type": "proposition",
+   "statement": "We cannot convince ourselves of the absence of complete laws of behaviour, since only scientific observation could find them and no circumstance would license saying the search is complete.",
+   "para": 110,
+   "span": "we\ncertainly know of no circumstances under which we could say, \"We have searched\nenough. There are no such laws.\"",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the observational character of law-finding"
+  },
+  {
+   "id": "n88",
+   "type": "evidence",
+   "statement": "A 1,000-unit programme on the Manchester computer replies to a sixteen-figure number within two seconds, and nobody could learn from its replies to predict untried values.",
+   "para": 111,
+   "span": "I would defy anyone to learn from these replies sufficient about the programme to be able to predict any replies\nto untried values",
+   "explanatory_status": "derived",
+   "status_reason": "an experiment Turing reports, used to show law-discovery by observation fails even for a small machine"
+  },
+  {
+   "id": "n89",
+   "type": "proposition",
+   "statement": "The statistical evidence for telepathy is overwhelming, and if ESP is real the assumption that bodies move by known physical laws must be abandoned.",
+   "para": 113,
+   "span": "Unfortunately the statistical evidence, at least for telepathy, is overwhelming.",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted with appeal to statistical evidence not presented"
+  },
+  {
+   "id": "n90",
+   "type": "proposition",
+   "statement": "A specific ESP argument would have a telepathic man outperform a guessing machine on card suits, letting the interrogator identify them.",
+   "para": 115,
+   "span": "The man by telepathy or clairvoyance gives the right answer 130 times\nout of 400 cards.",
+   "explanatory_status": "derived",
+   "status_reason": "constructed by applying the game n3 to the ESP premise n89"
+  },
+  {
+   "id": "n91",
+   "type": "proposition",
+   "statement": "If the machine uses a random number generator, the interrogator's psychokinesis might make it guess right more often, so identification could still fail; with ESP anything may happen.",
+   "para": 115,
+   "span": "the random number generator will be subject to the psychokinetic powers of the interrogator",
+   "explanatory_status": "derived",
+   "status_reason": "derived by applying psychokinesis to the random element of n31 within the scenario n90"
+  },
+  {
+   "id": "n92",
+   "type": "proposition",
+   "statement": "If telepathy is admitted the test must be tightened by using a telepathy-proof room.",
+   "para": 116,
+   "span": "To put the\ncompetitors into a \"telepathy-proof room\" would satisfy all requirements.",
+   "explanatory_status": "derived",
+   "status_reason": "a remedy derived from the leakage analogy given the ESP threat n90"
+  },
+  {
+   "id": "n93",
+   "type": "boundary_condition",
+   "statement": "Turing concedes he has no convincing positive arguments and offers only such evidence as he has.",
+   "para": 118,
+   "span": "I have no very convincing arguments of a positive nature to support my views",
+   "explanatory_status": "verified_only",
+   "status_reason": "an explicit concession"
+  },
+  {
+   "id": "n94",
+   "type": "proposition",
+   "statement": "Minds may be compared to atomic piles: most are subcritical, a few supercritical, prompting the question whether a machine can be made supercritical.",
+   "para": 118,
+   "span": "Adhering to this analogy we ask, \"Can a\nmachine be made to be supercritical?\"",
+   "explanatory_status": "verified_only",
+   "status_reason": "an analogy offered, explicitly not a convincing argument"
+  },
+  {
+   "id": "n95",
+   "type": "proposition",
+   "statement": "On the skin-of-an-onion analogy, stripping mechanically explicable functions may leave nothing, in which case the whole mind is mechanical.",
+   "para": 119,
+   "span": "In the latter case the whole mind\nis mechanical.",
+   "explanatory_status": "verified_only",
+   "status_reason": "an analogy whose conditional conclusion is stated, not derived"
+  },
+  {
+   "id": "n96",
+   "type": "proposition",
+   "statement": "These two analogies are not convincing arguments but recitations tending to produce belief.",
+   "para": 120,
+   "span": "They should rather\nbe described as \"recitations tending to produce belief.\"",
+   "explanatory_status": "derived",
+   "status_reason": "a self-assessment of n94 and n95, consistent with the concession n93"
+  },
+  {
+   "id": "n97",
+   "type": "proposition",
+   "statement": "Only waiting for the end of the century and doing the experiment can really support the prediction.",
+   "para": 121,
+   "span": "The only really satisfactory support that can be given for the view expressed at the\nbeginning of §6, will be that provided by waiting for the end of the century and then\ndoing the experiment described.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the conjectural status of n45 and the concession n93"
+  },
+  {
+   "id": "n98",
+   "type": "proposition",
+   "statement": "The problem is mainly one of programming rather than engineering, since 10^9 storage suffices, 10^7 is already practicable, and machine speed need not be increased.",
+   "para": 122,
+   "span": "As I have explained, the problem is mainly one of programming.",
+   "explanatory_status": "derived",
+   "status_reason": "argued from brain storage estimates and the speed comparison with nerve cells"
+  },
+  {
+   "id": "n99",
+   "type": "evidence",
+   "statement": "At Turing's rate of a thousand digits of programme a day, sixty workers over fifty years could finish the job, so a more expeditious method is desirable.",
+   "para": 122,
+   "span": "about sixty workers, working steadily through the fifty\nyears might accomplish the job",
+   "explanatory_status": "derived",
+   "status_reason": "an arithmetical estimate from his stated working rate, motivating the search for a better method"
+  },
+  {
+   "id": "n100",
+   "type": "proposition",
+   "statement": "An adult mind's state has three components: initial state at birth, education, and other experience.",
+   "para": 123,
+   "span": "We may notice three\ncomponents.",
+   "explanatory_status": "verified_only",
+   "status_reason": "a decomposition asserted without argument"
+  },
+  {
+   "id": "n101",
+   "type": "method",
+   "statement": "Instead of simulating the adult mind, simulate the child's mind and subject it to education.",
+   "para": 127,
+   "span": "why not rather try\nto produce one which simulates the child's?",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the three-component analysis n100 and the programming bottleneck n98/n99"
+  },
+  {
+   "id": "n102",
+   "type": "assumption",
+   "statement": "It is hoped that the child brain contains so little mechanism that something like it can be easily programmed, education taking about as much work as for a human child.",
+   "para": 127,
+   "span": "Our hope is that there is so little mechanism in the child brain that\nsomething like it can be easily programmed.",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated as a hope, with the notebook analogy but no derivation"
+  },
+  {
+   "id": "n103",
+   "type": "method",
+   "statement": "The problem divides into the child programme and the education process, to be improved by iterated experiment with successive child machines.",
+   "para": 128,
+   "span": "We have thus divided our problem into two parts. The child programme and the\neducation process.",
+   "explanatory_status": "derived",
+   "status_reason": "follows directly from the child-machine strategy n101"
+  },
+  {
+   "id": "n104",
+   "type": "proposition",
+   "statement": "This iterative process corresponds to evolution, with child-machine structure as hereditary material, changes as mutation, and the experimenter's judgment as natural selection.",
+   "para": 128,
+   "span": "There is an obvious connection between this process and evolution, by the\nidentifications",
+   "explanatory_status": "derived",
+   "status_reason": "an identification drawn from the trial-and-selection structure of n103"
+  },
+  {
+   "id": "n105",
+   "type": "proposition",
+   "statement": "The experimenter's process should be faster than evolution, since he can reason about causes of weakness instead of relying on random mutation.",
+   "para": 132,
+   "span": "he is not restricted to random mutations. If he can trace a cause for some weakness\nhe can probably think of the kind of mutation which will improve it",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the evolution analogy n104 by noting where the analogy breaks"
+  },
+  {
+   "id": "n106",
+   "type": "proposition",
+   "statement": "The machine's teaching cannot exactly copy a child's, since it lacks limbs and perhaps eyes, but Helen Keller shows education needs only two-way communication.",
+   "para": 133,
+   "span": "The example of Miss\nHelen Keller shows that education can take place provided that communication in both\ndirections between teacher and pupil can take place by some means or other.",
+   "explanatory_status": "derived",
+   "status_reason": "supported by the Helen Keller case against the limbs/eyes objection"
+  },
+  {
+   "id": "n107",
+   "type": "proposition",
+   "statement": "A child machine can be built on punishment and reward, so that events preceding punishment become unlikely to repeat and those preceding reward more likely, without presupposing feelings.",
+   "para": 134,
+   "span": "events which shortly preceded the occurrence of a\npunishment signal are unlikely to be repeated, whereas a reward signal increased the\nprobability of repetition",
+   "explanatory_status": "derived",
+   "status_reason": "constructed using the reader's held informal notion of probability and rules"
+  },
+  {
+   "id": "n108",
+   "type": "evidence",
+   "statement": "Turing did experiments with such a child machine and taught it a few things, but the teaching method was too unorthodox for the experiment to count as successful.",
+   "para": 134,
+   "span": "I have done some experiments with\none such child machine, and succeeded in teaching it a few things",
+   "explanatory_status": "verified_only",
+   "status_reason": "reported experience, offered as weak evidence for n107"
+  },
+  {
+   "id": "n109",
+   "type": "proposition",
+   "statement": "Rewards and punishments alone convey too little information, so unemotional channels and a symbolic language for orders are needed, greatly reducing the rewards and punishments required.",
+   "para": 135,
+   "span": "It is necessary therefore to\nhave some other \"unemotional\" channels of communication.",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the information bound on reward/punishment signalling in n107"
+  },
+  {
+   "id": "n110",
+   "type": "proposition",
+   "statement": "A child machine might instead have a complete system of logical inference built in, its store holding definitions and propositions of various statuses.",
+   "para": 136,
+   "span": "Alternatively one might have a complete system of logical inference \"built in.\"",
+   "explanatory_status": "verified_only",
+   "status_reason": "an alternative design proposed; reader holds no formal logic to derive it from"
+  },
+  {
+   "id": "n111",
+   "type": "proposition",
+   "statement": "Imperatives classed as well established trigger action automatically, as when 'teacher says do your homework' plus 'what teacher says is true' yields the homework being started.",
+   "para": 136,
+   "span": "as soon as an\nimperative is classed as \"well established\" the appropriate action automatically takes\nplace",
+   "explanatory_status": "derived",
+   "status_reason": "derived within the built-in inference design n110, illustrated by the homework example"
+  },
+  {
+   "id": "n112",
+   "type": "proposition",
+   "statement": "The machine's inference need not satisfy exacting logicians; suitable imperatives inside the system can prevent type fallacies as a fence prevents falls.",
+   "para": 136,
+   "span": "The processes of inference used by the machine need not be such as would\nsatisfy the most exacting logicians.",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted with an analogy; the type-theoretic point is not available to this reader"
+  },
+  {
+   "id": "n113",
+   "type": "proposition",
+   "statement": "Important among the machine's imperatives are those regulating which permitted logical step to take, since these choices distinguish a brilliant from a footling reasoner.",
+   "para": 137,
+   "span": "These choices make the difference between a brilliant and a footling reasoner, not the difference\nbetween a sound and a fallacious one.",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the imperative mechanism n111 plus the many-alternatives observation"
+  },
+  {
+   "id": "n114",
+   "type": "proposition",
+   "statement": "The learning-machine paradox dissolves because the time-invariant rules of operation are distinct from the ephemeral rules changed in learning.",
+   "para": 138,
+   "span": "the rules which get changed in the learning process are of a rather less pretentious\nkind, claiming only an ephemeral validity",
+   "explanatory_status": "derived",
+   "status_reason": "resolves the stated paradox by distinguishing two senses of rule, a held term"
+  },
+  {
+   "id": "n115",
+   "type": "proposition",
+   "statement": "A learning machine's teacher will be largely ignorant of what goes on inside while still somewhat able to predict its behaviour, which makes \"the machine can only do what we order it\" strange.",
+   "para": 139,
+   "span": "its teacher will often be very largely\nignorant of quite what is going on inside",
+   "explanatory_status": "derived",
+   "status_reason": "contrasts learning with ordinary computation to answer the Lovelace view n76"
+  },
+  {
+   "id": "n116",
+   "type": "proposition",
+   "statement": "Intelligent behaviour is a slight departure from wholly disciplined computation, avoiding random behaviour and pointless loops.",
+   "para": 139,
+   "span": "Intelligent behaviour presumably consists in a departure from the completely\ndisciplined behaviour involved in computation, but a rather slight one",
+   "explanatory_status": "verified_only",
+   "status_reason": "a conjectural characterisation asserted without derivation"
+  },
+  {
+   "id": "n117",
+   "type": "proposition",
+   "statement": "Teaching and learning will naturally supply human fallibility without special coaching, since learnt processes do not give certainty of result.",
+   "para": 139,
+   "span": "\"human fallibility\" is likely to be omitted in a rather natural way, i.e.,\nwithout special \"coaching.\"",
+   "explanatory_status": "derived",
+   "status_reason": "derived from the uncertain character of learnt processes n107, and bears on the mistakes reply n71"
+  },
+  {
+   "id": "n118",
+   "type": "proposition",
+   "statement": "A random element is wise in a learning machine, since when many satisfactory solutions exist random search beats systematic search, as in evolution.",
+   "para": 139,
+   "span": "Since there is probably\na very large number of satisfactory solutions the random method seems to be better than\nthe systematic.",
+   "explanatory_status": "derived",
+   "status_reason": "argued from the number-search example and the drawbacks of systematic search"
+  },
+  {
+   "id": "n119",
+   "type": "proposition",
+   "statement": "Both an abstract starting point like chess and a sensory-organ route to understanding English should be tried.",
+   "para": 140,
+   "span": "I do not know what the right answer is, but I think both approaches should be tried",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the child-machine education programme n101 with the choice left open"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n2",
+   "to": "n1",
+   "type": "depends_on"
+  },
+  {
+   "from": "n3",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n4",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n5",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n6",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n7",
+   "to": "n3",
+   "type": "derives"
+  },
+  {
+   "from": "n7",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n9",
+   "to": "n5",
+   "type": "derives"
+  },
+  {
+   "from": "n9",
+   "to": "n10",
+   "type": "supports"
+  },
+  {
+   "from": "n12",
+   "to": "n11",
+   "type": "supports"
+  },
+  {
+   "from": "n12",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n13",
+   "to": "n7",
+   "type": "depends_on"
+  },
+  {
+   "from": "n14",
+   "to": "n3",
+   "type": "bounds"
+  },
+  {
+   "from": "n16",
+   "to": "n15",
+   "type": "derives"
+  },
+  {
+   "from": "n17",
+   "to": "n16",
+   "type": "derives"
+  },
+  {
+   "from": "n18",
+   "to": "n17",
+   "type": "bounds"
+  },
+  {
+   "from": "n19",
+   "to": "n17",
+   "type": "depends_on"
+  },
+  {
+   "from": "n19",
+   "to": "n7",
+   "type": "depends_on"
+  },
+  {
+   "from": "n20",
+   "to": "n7",
+   "type": "bounds"
+  },
+  {
+   "from": "n22",
+   "to": "n21",
+   "type": "depends_on"
+  },
+  {
+   "from": "n23",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n24",
+   "to": "n23",
+   "type": "derives"
+  },
+  {
+   "from": "n24",
+   "to": "n21",
+   "type": "depends_on"
+  },
+  {
+   "from": "n25",
+   "to": "n23",
+   "type": "derives"
+  },
+  {
+   "from": "n26",
+   "to": "n23",
+   "type": "derives"
+  },
+  {
+   "from": "n26",
+   "to": "n21",
+   "type": "depends_on"
+  },
+  {
+   "from": "n27",
+   "to": "n26",
+   "type": "derives"
+  },
+  {
+   "from": "n28",
+   "to": "n27",
+   "type": "derives"
+  },
+  {
+   "from": "n29",
+   "to": "n23",
+   "type": "supports"
+  },
+  {
+   "from": "n30",
+   "to": "n26",
+   "type": "derives"
+  },
+  {
+   "from": "n31",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n32",
+   "to": "n23",
+   "type": "depends_on"
+  },
+  {
+   "from": "n34",
+   "to": "n33",
+   "type": "supports"
+  },
+  {
+   "from": "n34",
+   "to": "n42",
+   "type": "depends_on"
+  },
+  {
+   "from": "n35",
+   "to": "n27",
+   "type": "derives"
+  },
+  {
+   "from": "n36",
+   "to": "n35",
+   "type": "bounds"
+  },
+  {
+   "from": "n37",
+   "to": "n35",
+   "type": "depends_on"
+  },
+  {
+   "from": "n38",
+   "to": "n37",
+   "type": "bounds"
+  },
+  {
+   "from": "n39",
+   "to": "n37",
+   "type": "derives"
+  },
+  {
+   "from": "n40",
+   "to": "n35",
+   "type": "derives"
+  },
+  {
+   "from": "n40",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n41",
+   "to": "n39",
+   "type": "derives"
+  },
+  {
+   "from": "n41",
+   "to": "n37",
+   "type": "depends_on"
+  },
+  {
+   "from": "n41",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n41",
+   "to": "n40",
+   "type": "depends_on"
+  },
+  {
+   "from": "n42",
+   "to": "n41",
+   "type": "derives"
+  },
+  {
+   "from": "n43",
+   "to": "n42",
+   "type": "derives"
+  },
+  {
+   "from": "n43",
+   "to": "n7",
+   "type": "depends_on"
+  },
+  {
+   "from": "n18",
+   "to": "n42",
+   "type": "depends_on"
+  },
+  {
+   "from": "n45",
+   "to": "n43",
+   "type": "depends_on"
+  },
+  {
+   "from": "n46",
+   "to": "n1",
+   "type": "derives"
+  },
+  {
+   "from": "n49",
+   "to": "n48",
+   "type": "derives"
+  },
+  {
+   "from": "n50",
+   "to": "n48",
+   "type": "supports"
+  },
+  {
+   "from": "n52",
+   "to": "n51",
+   "type": "depends_on"
+  },
+  {
+   "from": "n54",
+   "to": "n53",
+   "type": "derives"
+  },
+  {
+   "from": "n54",
+   "to": "n32",
+   "type": "depends_on"
+  },
+  {
+   "from": "n54",
+   "to": "n55",
+   "type": "bounds"
+  },
+  {
+   "from": "n56",
+   "to": "n54",
+   "type": "depends_on"
+  },
+  {
+   "from": "n57",
+   "to": "n54",
+   "type": "derives"
+  },
+  {
+   "from": "n58",
+   "to": "n56",
+   "type": "derives"
+  },
+  {
+   "from": "n61",
+   "to": "n60",
+   "type": "derives"
+  },
+  {
+   "from": "n62",
+   "to": "n61",
+   "type": "depends_on"
+  },
+  {
+   "from": "n63",
+   "to": "n60",
+   "type": "depends_on"
+  },
+  {
+   "from": "n64",
+   "to": "n61",
+   "type": "derives"
+  },
+  {
+   "from": "n64",
+   "to": "n63",
+   "type": "supports"
+  },
+  {
+   "from": "n67",
+   "to": "n66",
+   "type": "depends_on"
+  },
+  {
+   "from": "n68",
+   "to": "n40",
+   "type": "depends_on"
+  },
+  {
+   "from": "n68",
+   "to": "n69",
+   "type": "assumes"
+  },
+  {
+   "from": "n70",
+   "to": "n66",
+   "type": "depends_on"
+  },
+  {
+   "from": "n71",
+   "to": "n14",
+   "type": "assumes"
+  },
+  {
+   "from": "n71",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n72",
+   "to": "n71",
+   "type": "depends_on"
+  },
+  {
+   "from": "n73",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n74",
+   "to": "n68",
+   "type": "derives"
+  },
+  {
+   "from": "n75",
+   "to": "n61",
+   "type": "depends_on"
+  },
+  {
+   "from": "n77",
+   "to": "n76",
+   "type": "derives"
+  },
+  {
+   "from": "n78",
+   "to": "n42",
+   "type": "derives"
+  },
+  {
+   "from": "n78",
+   "to": "n33",
+   "type": "depends_on"
+  },
+  {
+   "from": "n78",
+   "to": "n77",
+   "type": "depends_on"
+  },
+  {
+   "from": "n79",
+   "to": "n76",
+   "type": "depends_on"
+  },
+  {
+   "from": "n80",
+   "to": "n79",
+   "type": "depends_on"
+  },
+  {
+   "from": "n80",
+   "to": "n75",
+   "type": "depends_on"
+  },
+  {
+   "from": "n81",
+   "to": "n79",
+   "type": "depends_on"
+  },
+  {
+   "from": "n83",
+   "to": "n82",
+   "type": "depends_on"
+  },
+  {
+   "from": "n83",
+   "to": "n5",
+   "type": "derives"
+  },
+  {
+   "from": "n85",
+   "to": "n84",
+   "type": "depends_on"
+  },
+  {
+   "from": "n86",
+   "to": "n85",
+   "type": "derives"
+  },
+  {
+   "from": "n87",
+   "to": "n86",
+   "type": "depends_on"
+  },
+  {
+   "from": "n88",
+   "to": "n87",
+   "type": "supports"
+  },
+  {
+   "from": "n90",
+   "to": "n89",
+   "type": "depends_on"
+  },
+  {
+   "from": "n90",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n91",
+   "to": "n90",
+   "type": "derives"
+  },
+  {
+   "from": "n91",
+   "to": "n31",
+   "type": "depends_on"
+  },
+  {
+   "from": "n92",
+   "to": "n90",
+   "type": "depends_on"
+  },
+  {
+   "from": "n94",
+   "to": "n93",
+   "type": "depends_on"
+  },
+  {
+   "from": "n95",
+   "to": "n93",
+   "type": "depends_on"
+  },
+  {
+   "from": "n96",
+   "to": "n94",
+   "type": "depends_on"
+  },
+  {
+   "from": "n96",
+   "to": "n95",
+   "type": "depends_on"
+  },
+  {
+   "from": "n97",
+   "to": "n45",
+   "type": "depends_on"
+  },
+  {
+   "from": "n97",
+   "to": "n93",
+   "type": "depends_on"
+  },
+  {
+   "from": "n98",
+   "to": "n45",
+   "type": "depends_on"
+  },
+  {
+   "from": "n99",
+   "to": "n98",
+   "type": "derives"
+  },
+  {
+   "from": "n101",
+   "to": "n100",
+   "type": "depends_on"
+  },
+  {
+   "from": "n101",
+   "to": "n99",
+   "type": "depends_on"
+  },
+  {
+   "from": "n102",
+   "to": "n101",
+   "type": "depends_on"
+  },
+  {
+   "from": "n103",
+   "to": "n101",
+   "type": "derives"
+  },
+  {
+   "from": "n104",
+   "to": "n103",
+   "type": "derives"
+  },
+  {
+   "from": "n105",
+   "to": "n104",
+   "type": "derives"
+  },
+  {
+   "from": "n106",
+   "to": "n101",
+   "type": "bounds"
+  },
+  {
+   "from": "n107",
+   "to": "n103",
+   "type": "depends_on"
+  },
+  {
+   "from": "n108",
+   "to": "n107",
+   "type": "supports"
+  },
+  {
+   "from": "n109",
+   "to": "n107",
+   "type": "derives"
+  },
+  {
+   "from": "n110",
+   "to": "n103",
+   "type": "depends_on"
+  },
+  {
+   "from": "n111",
+   "to": "n110",
+   "type": "derives"
+  },
+  {
+   "from": "n112",
+   "to": "n110",
+   "type": "depends_on"
+  },
+  {
+   "from": "n113",
+   "to": "n111",
+   "type": "derives"
+  },
+  {
+   "from": "n114",
+   "to": "n103",
+   "type": "depends_on"
+  },
+  {
+   "from": "n115",
+   "to": "n76",
+   "type": "depends_on"
+  },
+  {
+   "from": "n115",
+   "to": "n103",
+   "type": "depends_on"
+  },
+  {
+   "from": "n116",
+   "to": "n115",
+   "type": "depends_on"
+  },
+  {
+   "from": "n117",
+   "to": "n107",
+   "type": "derives"
+  },
+  {
+   "from": "n117",
+   "to": "n71",
+   "type": "depends_on"
+  },
+  {
+   "from": "n118",
+   "to": "n31",
+   "type": "depends_on"
+  },
+  {
+   "from": "n118",
+   "to": "n103",
+   "type": "depends_on"
+  },
+  {
+   "from": "n119",
+   "to": "n101",
+   "type": "depends_on"
+  }
+ ],
+ "_meta": {
+  "document": "vc2",
+  "operator": "OP_A",
+  "model": "claude-opus-5",
+  "family": "anthropic",
+  "reader_model": "M-phil",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

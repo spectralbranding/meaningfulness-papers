@@ -1,6 +1,6 @@
 [![MIT License](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
 [![CC-BY 4.0](https://img.shields.io/badge/Data-CC--BY_4.0-lightgrey.svg)](LICENSE-data)
-![Last Updated](https://img.shields.io/badge/updated-2026--05--29-success)
+![Last Updated](https://img.shields.io/badge/updated-2026--08--07-success)
 
 # meaningfulness-papers
 
@@ -30,6 +30,26 @@ Theory paper introducing the **Operator role** as the level-of-analysis above th
 
 Empirical companion that demonstrates Paper A's **P4** on two management-theory twin pairs (dynamic-capabilities Eisenhardt-Martin 2000 + Zollo-Winter 2002; knowledge-based view Grant 1996 + Liebeskind 1996) at Rec = 4 with random-shadow null at 99th+ percentile, plus three self-application renderings (Substack practitioner of Paper B; LinkedIn third rendering of focal-pair shared substrate; cross-paper Substack practitioner rendering of Paper A's full theoretical apparatus). Cross-operator extraction discipline (Operator B Claude renderer ≠ Operator C GPT-4o extractor) bounds within-model memory contamination at ~15 percentage-points strict / ~0 semantic.
 
+### Paper C — [invention-as-structure/](invention-as-structure/) (2026bg)
+
+**Invention as a Structural Operation: Why the Abductive Jump Is a Re-Coordinatization of the Space of Description, Not a Sensory Leap**
+
+- Concept DOI: [10.5281/zenodo.21653102](https://doi.org/10.5281/zenodo.21653102)
+- v1.0.0 DOI: [10.5281/zenodo.21653103](https://doi.org/10.5281/zenodo.21653103)
+- License: CC BY 4.0 (paper) + MIT (code)
+
+Position paper relocating the abductive "jump" from an embodied sensory leap to a typed re-coordinatization of the space of description, realized by four atomic moves (adjoin a dimension, rescale or requantize, re-topologize, glue across domains). Within representational systems whose compatibility predicate is decidable the operator set is enumerable and the selection is computable; a deterministic companion demonstration classifies each of the four moves as the account predicts.
+
+### Paper D — [internalization/](internalization/) (2026bk)
+
+**Internalization as an Operation: Recovering the Dependency Structure of a Result, and a Pre-Registered Failure to Do So**
+
+- Concept DOI: [10.5281/zenodo.21828980](https://doi.org/10.5281/zenodo.21828980)
+- v1.0.0 DOI: [10.5281/zenodo.21828981](https://doi.org/10.5281/zenodo.21828981)
+- License: CC BY 4.0 (paper + data) + MIT (harness, scoring code and call logs)
+
+Specifies internalization — the inverse of Paper A's drafting direction — as a five-step operation that recovers a typed dependency graph from a rendered artifact, negotiates it against a declared reader model, ranks nodes by structural load rather than prose mass, re-renders, and submits the result to an acceptance contract; and supplies its measurement, a reader-relative count of steps verified but not derived. The pre-registered validation failed at its first gate: two machine operators from different model families did not agree on the dependency structure at the declared level, and they diverge on which nodes exist before they diverge on how nodes connect. Under the pre-declared decision rule no downstream quantity is licensed, and the quantities the run nonetheless computed are reported in an appendix rather than in Results. The specification, the instrument, the pilot, three harness defects and the negative result ship together.
+
 ## License
 
 CC BY 4.0 for the paper text and theoretical content; MIT License for companion computation code and experimental JSONL logs. See [LICENSE](LICENSE).
@@ -56,7 +76,7 @@ cd meaningfulness-papers
 
 The hub itself is index-only. Reproducible computation lives inside each paper-slug subdirectory (see section 2). The hub anchor is `pyproject.toml` at the root.
 
-This hub aggregates two paper-slug subdirectories — Paper A (`meaning-meaningfulness/`) and Paper B (`meaning-meaningfulness-empirical/`) — both first published 2026-05-29 with Zenodo concept DOIs. New paper-slugs added to this programme follow the same convention: each subdirectory is a self-contained mirror with its own `paper.md` / `paper.yaml`, `CITATION.cff`, `LICENSE`, `LICENSE-data`, and (where applicable) `reproduce.sh`.
+This hub aggregates four paper-slug subdirectories — Paper A (`meaning-meaningfulness/`) and Paper B (`meaning-meaningfulness-empirical/`), both first published 2026-05-29, Paper C (`invention-as-structure/`, 2026-07-28) and Paper D (`internalization/`, 2026-08-07) — each with its own Zenodo concept DOI. New paper-slugs added to this programme follow the same convention: each subdirectory is a self-contained mirror with its own `paper.md` / `paper.yaml`, `CITATION.cff`, `LICENSE`, `LICENSE-data`, and (where applicable) `reproduce.sh`.
 
 ---
 
@@ -66,6 +86,8 @@ This hub aggregates two paper-slug subdirectories — Paper A (`meaning-meaningf
 .
 ├── meaning-meaningfulness/             # Paper A (2026ao) — theory paper
 ├── meaning-meaningfulness-empirical/   # Paper B (2026ap) — empirical companion
+├── invention-as-structure/             # Paper C (2026bg) — position paper + demo
+├── internalization/                    # Paper D (2026bk) — specification + pre-registered validation
 ├── output/
 │   ├── figures/
 │   ├── tables/
@@ -111,6 +133,8 @@ uv sync   # inside any paper-slug subdirectory
 
 - `meaning-meaningfulness/` — pure-theory paper; reproduction is conceptual, no LLM calls.
 - `meaning-meaningfulness-empirical/` — multi-operator LLM pipeline (renderer ≠ extractor); requires API keys per `.env.example` inside that subdirectory. See its `README.md` for the operator list and key requirements.
+- `invention-as-structure/` — deterministic demonstration; Python 3.12 + PyYAML, no LLM calls.
+- `internalization/` — analysis-only reproduction needs no keys and no network (`./reproduce.sh`); re-running the collection itself (`./reproduce.sh --collect`) is a multi-operator LLM pipeline and requires provider credentials.
 
 ---
 
@@ -120,6 +144,8 @@ uv sync   # inside any paper-slug subdirectory
 |---|---|---|
 | `meaning-meaningfulness/` | Theory paper (P4 preservation theorem + L/S/R decomposition + Operator role) | `paper.md` + appendices; no computational reproduction |
 | `meaning-meaningfulness-empirical/` | Empirical companion (Rec = 4 on twin pairs; cross-operator extraction) | `reproduce.sh` inside the slug |
+| `invention-as-structure/` | Position paper (four atomic moves of representation change) | `code/four_moves_demo.py` inside the slug |
+| `internalization/` | Specification + pre-registered validation (extraction agreement, miracle count) | `reproduce.sh` inside the slug |
 
 ---
 

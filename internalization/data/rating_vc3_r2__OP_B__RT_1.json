@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "The three constructions thus sit on a continuum, with the key differences being the selection of the key parameters ${t}$ (the number of primes multiplied together) and ${D}$ (the degree).",
+  "graph_evidence": "No single corresponding node; related parameter nodes are n7, n12, n13, n14, while goal nodes n2, n3, n4 do not receive derivation edges from one generative node.",
+  "reasoning": "The text presents the generative organizing object as the continuum controlled by the parameters ${t}$ and ${D}$. The graph has scattered parameter and construction nodes, but no single node corresponding to that generative object with derivation edges to the separable construction goals."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "The Erdös construction keeps the degree fixed and sends the number of primes to infinity. The OpenAI construction does the opposite, keeping the set of primes fixed but sending the degree to infinity. The Mythos construction is a compromise, in which the degree and the number of primes both go to infinity in a coupled fashion.",
+  "graph_evidence": "Goal nodes n2, n3, and n4 correspond to the Erdös, OpenAI, and Mythos construction theorems, but there is no restated-problem node with decomposition edges to them.",
+  "reasoning": "The author states a three-way decomposition into Erdös, OpenAI, and Mythos constructions, distinguished by how ${t}$ and ${D}$ vary. The graph recovers the three goals as distinct theorem nodes, but it does not represent the stated decomposition as edges from a restated problem or organizing node.",
+  "goals_stated": 3,
+  "goals_recovered": 3,
+  "goals_merged_or_split": 0
+ },
+ "T3": {
+  "verdict": "not_recovered",
+  "author_declaration": "The optimal value of ${c}$ is still unknown, but the best upper and lower bounds on ${c}$ are tracked at this page ; currently we know that ${0.03583\\dots \\leq c \\leq 1/3}$ . / There is a technical issue that some of these vectors could conceivably collide with each other; however there is a further Chinese remainder theorem argument (which I will omit here) that shows that any such ${w}$ can belong to at most ${O(G^{O(gD)})}$ such lattices.",
+  "graph_evidence": "Missed residuals: n20 corresponds to the omitted collision-control argument but is marked derived, and no node records the unresolved optimal value of c. False residual: n16 is marked miracle even though the author derives it from Minkowski's theorem.",
+  "reasoning": "The author explicitly marks one issue as unresolved and one proof step as omitted, but the graph does not mark the corresponding extracted step as a miracle and omits the unresolved optimal-c issue. Conversely, n16 is marked miracle even though the text supplies Minkowski's theorem as the reason for the sublattice vector bound.",
+  "residuals_marked_by_author": 2,
+  "missed_residuals": 2,
+  "false_residuals": 1
+ },
+ "_meta": {
+  "document": "vc3_r2",
+  "graph_operator": "OP_B",
+  "rater": "RT_1"
+ }
+}

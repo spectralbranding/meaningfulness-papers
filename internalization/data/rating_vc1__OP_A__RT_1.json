@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "It turns out that ${F}$ and ${X}$ can be built out of the operation of multiplication of low degree polynomials.",
+  "graph_evidence": "n18 corresponds to the multiplication object, but the separable-goal nodes n31, n29/n34, and n50 do not all have derivation edges originating from a single generative-object node.",
+  "reasoning": "The text declares the generative object to be the operation of multiplying low degree polynomials, concretely represented by the multiplication map ${F(L,Q):=LQ}$. The graph contains that object as n18, but it does not make n18 the single source from which the derivations to the three author-stated goals originate."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "Our objective is now to find data ${X}$ , ${F : X \\rightarrow {\\bf C}^3}$ that obeys three separate properties:\n\n(a) ${F}$ is locally injective on ${X}$ . (b) ${F}$ is not globally injective on ${X}$ . (c) ${X}$ is isomorphic to ${{\\bf C}^3}$ by polynomial changes of variable.",
+  "graph_evidence": "n15 lists all three goals in one node; n31 corresponds to (a), n29/n34 correspond to (b) but n34 merges (a) and (b), and n50 corresponds to (c); n13 is not decomposed by edges into three distinct goal nodes.",
+  "reasoning": "The author states exactly three separable goals: local injectivity, non-global injectivity, and polynomial isomorphism of ${X}$ with ${\\bf C}^3$. The graph mentions all three, but it represents the decomposition partly as merged nodes rather than as three distinct goal nodes with clean decomposition edges from the restated problem.",
+  "goals_stated": 3,
+  "goals_recovered": 3,
+  "goals_merged_or_split": 2
+ },
+ "T3": {
+  "verdict": "not_recovered",
+  "author_declaration": "It turns out that the affine miracle for (9) occurs precisely in the second case, when ${D}$ has two identical roots. I do not have a completely satisfactory geometric explanation for this miracle, but one can verify it by the following coordinate computation.",
+  "graph_evidence": "n38 is correctly marked explanatory_status \"miracle\"; n35 is also marked \"miracle\" even though the text later derives the claimed property via the coordinate computation summarized in n50.",
+  "reasoning": "The author explicitly marks the second-root-coincidence affine miracle as lacking a satisfactory geometric explanation while being verifiable by computation, and the graph captures this at n38. However, the graph also marks n35 as a miracle even though the text proceeds to derive the property by explicit polynomial parametrization, so there is a false residual.",
+  "residuals_marked_by_author": 1,
+  "missed_residuals": 0,
+  "false_residuals": 1
+ },
+ "_meta": {
+  "document": "vc1",
+  "graph_operator": "OP_A",
+  "rater": "RT_1"
+ }
+}

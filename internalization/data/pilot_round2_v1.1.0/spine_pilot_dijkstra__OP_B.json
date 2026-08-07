@@ -1,0 +1,561 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "assumption",
+   "statement": "Computers represent a radical novelty.",
+   "para": 4,
+   "span": "the assumption that computers represent a radical novelty.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Stated as an assumption to be explored in the text."
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "People typically plan for the future by slightly adapting familiar concepts from their past experience.",
+   "para": 5,
+   "span": "we try to get away with the concepts we are familiar with",
+   "explanatory_status": "verified_only",
+   "status_reason": "General observation about human behavior accessible to the reader."
+  },
+  {
+   "id": "n3",
+   "type": "proposition",
+   "statement": "Relying on past analogies fails when faced with a sharp discontinuity, which is the defining characteristic of a radical novelty.",
+   "para": 6,
+   "span": "in the case of a sharp discontinuity, however, the method breaks down",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the definition of radical novelty as a sharp discontinuity where past experience is irrelevant."
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "To cope with radical novelty, one must abandon past habits and approach it as an entirely new, disconnected subject.",
+   "para": 7,
+   "span": "approach the radical novelty with a blank mind, consciously refusing to try to link it",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the failure of analogies to handle sharp discontinuities."
+  },
+  {
+   "id": "n5",
+   "type": "proposition",
+   "statement": "People often deny or ignore radical novelties because they find them deeply disturbing.",
+   "para": 8,
+   "span": "radical novelties are so disturbing that they tend to be suppressed or ignored",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the hard work and unwelcome nature of adjusting to them."
+  },
+  {
+   "id": "n6",
+   "type": "evidence",
+   "statement": "Historical examples, such as Gauss hiding his non-Euclidean geometry and the intellectual stagnation of the Middle Ages, show the suppression of novelty.",
+   "para": 9,
+   "span": "decided to suppress his discovery of non-Euclidean geometry",
+   "explanatory_status": "verified_only",
+   "status_reason": "Historical anecdotes provided as evidence."
+  },
+  {
+   "id": "n7",
+   "type": "evidence",
+   "statement": "A surprisingly large portion of people believe that history only progresses through gradual change.",
+   "para": 10,
+   "span": "the fraction of the population for which gradual change seems to be all but the only paradigm",
+   "explanatory_status": "verified_only",
+   "status_reason": "Author's personal observation."
+  },
+  {
+   "id": "n8",
+   "type": "evidence",
+   "statement": "Mathematicians like Herbert Robbins deny the possibility of radical leaps in mathematical ability, insisting the field will remain unchanged.",
+   "para": 13,
+   "span": "Robbins flatly refuses to honour any alternative to time-honoured brain usage",
+   "explanatory_status": "verified_only",
+   "status_reason": "Quote and analysis of Robbins provided as an example."
+  },
+  {
+   "id": "n9",
+   "type": "evidence",
+   "statement": "The education system actively hides novelties by disguising them with familiar, intuitive examples, failing to prepare students for radical change.",
+   "para": 14,
+   "span": "They constantly try to present everything that could be an exciting novelty as something as familiar as possible.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Observation of standard educational practices."
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "Modern science and technology regularly produce radical novelties that society is poorly equipped to manage.",
+   "para": 15,
+   "span": "science and technology have now shown themselves expert at inflicting them upon us.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Supported by historical examples of scientific advancements."
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "Automatic computers embody not just one, but two distinct radical novelties.",
+   "para": 16,
+   "span": "automatic computers embody not only one radical novelty but two of them.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the subsequent analysis of computing's properties."
+  },
+  {
+   "id": "n12",
+   "type": "proposition",
+   "statement": "The first radical novelty of computers is the need to manage unprecedentedly deep conceptual hierarchies due to the massive scale of computing power.",
+   "para": 18,
+   "span": "He has to be able to think in terms of conceptual hierarchies that are much deeper",
+   "explanatory_status": "verified_only",
+   "status_reason": "Based on the physical and temporal scales of computing hardware."
+  },
+  {
+   "id": "n13",
+   "type": "proposition",
+   "statement": "Those who only understand gradual change misunderstand computers by relying on shallow analogies to simpler machines.",
+   "para": 19,
+   "span": "the true believer in gradual change and incremental improvements is unable to see it.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the tendency of gradualists to use shallow analogies."
+  },
+  {
+   "id": "n14",
+   "type": "proposition",
+   "statement": "The second radical novelty is that computers are discrete digital devices where tiny changes can cause massive effects, unlike familiar continuous analogue mechanisms.",
+   "para": 21,
+   "span": "the smallest possible perturbations —i.e. changes of a single bit— can have the most drastic consequences.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Based on the discrete nature of digital information."
+  },
+  {
+   "id": "n15",
+   "type": "proposition",
+   "statement": "Society denies the discrete, unforgiving nature of computers because accepting it is too uncomfortable.",
+   "para": 22,
+   "span": "This second radical novelty shares the usual fate of all radical novelties: it is denied",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the general tendency to deny radical novelties."
+  },
+  {
+   "id": "n16",
+   "type": "proposition",
+   "statement": "Software engineering is a flawed discipline that attempts to mask the radical novelty of computing by treating it like traditional engineering.",
+   "para": 24,
+   "span": "software engineering should be known as \"The Doomed Discipline\", doomed because it cannot even approach its goal",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the denial of computing's radical novelties."
+  },
+  {
+   "id": "n17",
+   "type": "evidence",
+   "statement": "The adoption of the title 'software engineer' is a superstitious attempt to make programming seem safe and familiar.",
+   "para": 26,
+   "span": "gain some control over some unknown, malicious demon by calling it by a safe, familiar, and innocent name",
+   "explanatory_status": "verified_only",
+   "status_reason": "Observation of industry naming conventions."
+  },
+  {
+   "id": "n18",
+   "type": "evidence",
+   "statement": "Measuring productivity by lines of code is a misguided practice stemming from the illusion that programs are standard manufactured goods.",
+   "para": 27,
+   "span": "measuring \"programmer productivity\" in terms of \"number of lines of code produced per month\".",
+   "explanatory_status": "verified_only",
+   "status_reason": "Observation of industry productivity metrics."
+  },
+  {
+   "id": "n19",
+   "type": "evidence",
+   "statement": "Relying on program testing for quality control ignores the fact that testing cannot prove the absence of bugs in discrete systems.",
+   "para": 28,
+   "span": "program testing may convincingly demonstrate the presence of bugs, but can never demonstrate their absence.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Logical property of testing discrete systems."
+  },
+  {
+   "id": "n20",
+   "type": "evidence",
+   "statement": "The concept of software maintenance relies on the false analogy that abstract programs degrade over time like physical machines.",
+   "para": 29,
+   "span": "many people continue to believe that programs —and even programming languages themselves— are subject to wear and tear.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Observation of industry terminology regarding maintenance."
+  },
+  {
+   "id": "n21",
+   "type": "evidence",
+   "statement": "The push for programming tools is based on a shallow analogy that fails to address the true difficulties of software production.",
+   "para": 30,
+   "span": "the suggestion has been accepted that the pains of software production are largely due to a lack of appropriate \"programming tools\".",
+   "explanatory_status": "verified_only",
+   "status_reason": "Observation of industry reliance on programming tools."
+  },
+  {
+   "id": "n22",
+   "type": "evidence",
+   "statement": "Artificial Intelligence is embraced because it uses computers to mimic the familiar human mind, thereby hiding the computer's radical novelty.",
+   "para": 31,
+   "span": "the frightening computer becomes less frightening if it is used only to simulate a familiar noncomputer.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Author's explanation for the popularity of AI."
+  },
+  {
+   "id": "n23",
+   "type": "proposition",
+   "statement": "A program is essentially an abstract symbol manipulator that dictates the behavior of a computer.",
+   "para": 35,
+   "span": "the program is an abstract symbol manipulator, which can be turned into a concrete one by supplying a computer",
+   "explanatory_status": "verified_only",
+   "status_reason": "Definition of a program in computing science."
+  },
+  {
+   "id": "n24",
+   "type": "proposition",
+   "statement": "Programs should be viewed as complex mathematical formulae derived through human symbol manipulation.",
+   "para": 36,
+   "span": "they look like programs or —to use somewhat more general terminology— usually rather elaborate formulae from some formal system.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from viewing programs as abstract symbol manipulators."
+  },
+  {
+   "id": "n25",
+   "type": "proposition",
+   "statement": "Computing science is the study of formal methods and symbol manipulation on a massive scale, placing it within formal mathematics and logic.",
+   "para": 37,
+   "span": "computing science is —and will always be— concerned with the interplay between mechanized and human symbol manipulation",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the definition of programming as deriving formal formulae."
+  },
+  {
+   "id": "n26",
+   "type": "proposition",
+   "statement": "Computing science has the potential to fulfill Leibniz's dream by replacing human reasoning with symbolic calculation.",
+   "para": 38,
+   "span": "realizing a significant part of Leibniz's Dream of providing symbolic calculation as an alternative to human reasoning.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the scale and effectiveness of formal methods in computing."
+  },
+  {
+   "id": "n27",
+   "type": "evidence",
+   "statement": "The vision of computing science as formal mathematics faces widespread opposition from various established groups who refuse to accept its radical nature.",
+   "para": 39,
+   "span": "it has met widespread —and sometimes even violent— opposition from all sorts of directions.",
+   "explanatory_status": "verified_only",
+   "status_reason": "List of examples of opposition from various fields."
+  },
+  {
+   "id": "n28",
+   "type": "proposition",
+   "statement": "Universities fail to teach the rigorous science of computing, instead catering to industry demands and student expectations by dumbing down the curriculum.",
+   "para": 50,
+   "span": "The universities will continue to lack the courage to teach hard science, they will continue to misguide the students",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the educational sector's opposition to formal mathematics."
+  },
+  {
+   "id": "n29",
+   "type": "method",
+   "statement": "The term 'bug' should be replaced with 'error' to correctly attribute faults to the programmer rather than an external force.",
+   "para": 52,
+   "span": "calling a bug a bug but by calling it an error. It is much more honest because it squarely puts the blame where it belongs",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the need to recognize programmer responsibility."
+  },
+  {
+   "id": "n30",
+   "type": "proposition",
+   "statement": "Using human-like terms for programs forces people to think about them in terms of their execution over time, which is a paralyzing and wasteful approach.",
+   "para": 55,
+   "span": "its adoption effectively prevents a departure from operational semantics and thus forces people to think about programs in terms of computational behaviours",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the mismatch between continuous humans and discrete programs."
+  },
+  {
+   "id": "n31",
+   "type": "proposition",
+   "statement": "Reasoning about individual computational behaviors is highly inefficient compared to reasoning abstractly using definitions.",
+   "para": 56,
+   "span": "if we have to demonstrate something about all the elements of a large set, it is hopelessly inefficient to deal with all the elements",
+   "explanatory_status": "verified_only",
+   "status_reason": "General mathematical principle regarding large sets."
+  },
+  {
+   "id": "n32",
+   "type": "evidence",
+   "statement": "The mutilated chessboard problem shows that abstract mathematical reasoning is far more powerful and efficient than exhaustively checking all possibilities.",
+   "para": 61,
+   "span": "the above simple argument many orders of magnitude shorter than the exhaustive investigation of the possible placements",
+   "explanatory_status": "verified_only",
+   "status_reason": "Mathematical proof provided as an analogy."
+  },
+  {
+   "id": "n33",
+   "type": "proposition",
+   "statement": "Programmers should analyze programs by examining their text rather than trying to trace their execution.",
+   "para": 63,
+   "span": "deal with all computations possible under control of a given program by ignoring them and working with the program.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the inefficiency of operational reasoning and the power of working with definitions."
+  },
+  {
+   "id": "n34",
+   "type": "proposition",
+   "statement": "Because programming languages are formal systems, programs should be reasoned about formally, independent of their execution models.",
+   "para": 64,
+   "span": "we should reason about programs without even mentioning their possible \"behaviours\".",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the nature of formal systems."
+  },
+  {
+   "id": "n35",
+   "type": "evidence",
+   "statement": "Visual educational tools harm students by encouraging them to focus on program execution rather than formal reasoning.",
+   "para": 66,
+   "span": "they were used to display all sorts of features of computations evolving under control of the student's program!",
+   "explanatory_status": "verified_only",
+   "status_reason": "Observation of a specific educational tool."
+  },
+  {
+   "id": "n36",
+   "type": "proposition",
+   "statement": "A programmer's true task is to mathematically prove that a program satisfies its formal functional specification.",
+   "para": 67,
+   "span": "The programmer's task is to present such complete conjectures as proven theorems.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from viewing programs as formal formulae."
+  },
+  {
+   "id": "n37",
+   "type": "method",
+   "statement": "A proper introductory programming course should teach formal logic and a clean programming language, requiring students to mathematically prove their programs correct without ever executing them.",
+   "para": 71,
+   "span": "the programming language in question has not been implemented on campus so that students are protected from the temptation to test their programs.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the need to ban operational reasoning and enforce formal mathematical derivation."
+  },
+  {
+   "id": "n38",
+   "type": "evidence",
+   "statement": "The proposed formal programming course is practically viable, having been successfully taught to many freshmen for years.",
+   "para": 74,
+   "span": "since the early 80's, such an introductory programming course has successfully been given to hundreds of college freshmen each year.",
+   "explanatory_status": "verified_only",
+   "status_reason": "Empirical evidence from the author's teaching experience."
+  },
+  {
+   "id": "n39",
+   "type": "proposition",
+   "statement": "Teaching formal methods provides students with immense intellectual power and confidence, fulfilling the university's duty to embrace radical novelties.",
+   "para": 76,
+   "span": "Teaching to unsuspecting youngsters the effective use of formal methods is one of the joys of life because it is so extremely rewarding.",
+   "explanatory_status": "derived",
+   "status_reason": "Follows from the success of the proposed course and the power of formal methods."
+  }
+ ],
+ "edges": [
+  {
+   "from": "n3",
+   "to": "n2",
+   "type": "depends_on"
+  },
+  {
+   "from": "n4",
+   "to": "n3",
+   "type": "depends_on"
+  },
+  {
+   "from": "n5",
+   "to": "n4",
+   "type": "depends_on"
+  },
+  {
+   "from": "n6",
+   "to": "n5",
+   "type": "supports"
+  },
+  {
+   "from": "n7",
+   "to": "n5",
+   "type": "supports"
+  },
+  {
+   "from": "n8",
+   "to": "n5",
+   "type": "supports"
+  },
+  {
+   "from": "n9",
+   "to": "n5",
+   "type": "supports"
+  },
+  {
+   "from": "n11",
+   "to": "n1",
+   "type": "assumes"
+  },
+  {
+   "from": "n11",
+   "to": "n10",
+   "type": "depends_on"
+  },
+  {
+   "from": "n11",
+   "to": "n12",
+   "type": "depends_on"
+  },
+  {
+   "from": "n11",
+   "to": "n14",
+   "type": "depends_on"
+  },
+  {
+   "from": "n13",
+   "to": "n12",
+   "type": "depends_on"
+  },
+  {
+   "from": "n13",
+   "to": "n7",
+   "type": "depends_on"
+  },
+  {
+   "from": "n15",
+   "to": "n14",
+   "type": "depends_on"
+  },
+  {
+   "from": "n15",
+   "to": "n5",
+   "type": "depends_on"
+  },
+  {
+   "from": "n16",
+   "to": "n15",
+   "type": "depends_on"
+  },
+  {
+   "from": "n17",
+   "to": "n16",
+   "type": "supports"
+  },
+  {
+   "from": "n18",
+   "to": "n16",
+   "type": "supports"
+  },
+  {
+   "from": "n19",
+   "to": "n16",
+   "type": "supports"
+  },
+  {
+   "from": "n20",
+   "to": "n16",
+   "type": "supports"
+  },
+  {
+   "from": "n21",
+   "to": "n16",
+   "type": "supports"
+  },
+  {
+   "from": "n22",
+   "to": "n15",
+   "type": "supports"
+  },
+  {
+   "from": "n24",
+   "to": "n23",
+   "type": "depends_on"
+  },
+  {
+   "from": "n25",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n26",
+   "to": "n25",
+   "type": "depends_on"
+  },
+  {
+   "from": "n27",
+   "to": "n25",
+   "type": "supports"
+  },
+  {
+   "from": "n28",
+   "to": "n27",
+   "type": "depends_on"
+  },
+  {
+   "from": "n29",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n30",
+   "to": "n14",
+   "type": "depends_on"
+  },
+  {
+   "from": "n31",
+   "to": "n30",
+   "type": "depends_on"
+  },
+  {
+   "from": "n32",
+   "to": "n31",
+   "type": "supports"
+  },
+  {
+   "from": "n33",
+   "to": "n31",
+   "type": "depends_on"
+  },
+  {
+   "from": "n33",
+   "to": "n24",
+   "type": "depends_on"
+  },
+  {
+   "from": "n34",
+   "to": "n33",
+   "type": "depends_on"
+  },
+  {
+   "from": "n35",
+   "to": "n34",
+   "type": "supports"
+  },
+  {
+   "from": "n36",
+   "to": "n34",
+   "type": "depends_on"
+  },
+  {
+   "from": "n37",
+   "to": "n36",
+   "type": "depends_on"
+  },
+  {
+   "from": "n38",
+   "to": "n37",
+   "type": "supports"
+  },
+  {
+   "from": "n39",
+   "to": "n37",
+   "type": "depends_on"
+  }
+ ],
+ "_meta": {
+  "document": "pilot_dijkstra",
+  "operator": "OP_B",
+  "model": "gemini-3.1-pro-preview",
+  "family": "google",
+  "reader_model": "M-gen",
+  "prompt_version": "internalization/1.1.0",
+  "schema_problems": []
+ }
+}

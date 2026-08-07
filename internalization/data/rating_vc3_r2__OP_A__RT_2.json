@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "All the constructions of good point sets P basically involve taking all the elements of a certain ring B of algebraic integers up to some height... The numerology can be explained as follows. Take B to be a ring of integers in some number field of degree D, and suppose for sake of argument that m is the product of t (rational) primes...",
+  "graph_evidence": "no single node",
+  "reasoning": "The text presents one generative object: the ring-B construction with parameters D and t that yields the shared numerology (4)-(6). The graph distributes this across multiple nodes (n16, n20, n23, n25) with no unique origin node from which all three theorem nodes derive."
+ },
+ "T2": {
+  "verdict": "recovered",
+  "author_declaration": "Theorem 1 (Erdös construction)... Theorem 2 (OpenAI construction)... Theorem 3 (Mythos construction)... The three constructions thus sit on a continuum, with the key differences being the selection of the key parameters t ... and D.",
+  "graph_evidence": "n5, n9, n11",
+  "reasoning": "The author states exactly three separable goals (Theorems 1-3) and treats them as distinct. The graph recovers three distinct nodes n5, n9, n11 with derivation paths from the common numerology; no goal is merged or split.",
+  "goals_stated": 3,
+  "goals_recovered": 3,
+  "goals_merged_or_split": 0
+ },
+ "T3": {
+  "verdict": "recovered",
+  "author_declaration": "it came as some surprise recently when a team from OpenAI resolved the question... uses some non-trivial amount of algebraic number theory, in particular the device of Golod–Shafarevich towers... one runs into significant technical difficulties, not least of which is the need to obtain good error terms in the Chebotarev density theorem... Minkowski’s theorem... (which I will omit here)",
+  "graph_evidence": "n9,n10,n12,n29,n32,n42,n53",
+  "reasoning": "Every step the author explicitly flags as unexplained (OpenAI construction, Golod–Shafarevich towers, Chebotarev error terms, crude Minkowski, omitted CRT multiplicity bound) receives explanatory_status miracle. No derived step receives that status, so both error counts are zero.",
+  "residuals_marked_by_author": 7,
+  "missed_residuals": 0,
+  "false_residuals": 0
+ },
+ "_meta": {
+  "document": "vc3_r2",
+  "graph_operator": "OP_A",
+  "rater": "RT_2"
+ }
+}

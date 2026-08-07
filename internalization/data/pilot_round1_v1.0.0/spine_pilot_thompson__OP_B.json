@@ -1,0 +1,179 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "proposition",
+   "statement": "It is possible to write a program that outputs an exact copy of its own source code.",
+   "span": "write a source program that, when compiled and executed, will produce as output an exact copy of its source.",
+   "explanatory_status": "verified_only",
+   "status_reason": "the reader model cannot formally derive how to write a quine but can verify the text's assertion"
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "A self-reproducing program can include additional, unrelated code that is also reproduced.",
+   "span": "contain an arbitrary amount of excess baggage that will be reproduced along with the main algorithm.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the general capability of a program to reproduce its own source code"
+  },
+  {
+   "id": "n3",
+   "type": "method",
+   "statement": "A compiler can be trained to recognize new constructs by temporarily using lower-level equivalents to bootstrap the new binary.",
+   "span": "We must \"train\" the compiler. After it \"knows\" what \"\\v\" means, then our new change will become legal C.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the step-by-step explanation of bootstrapping the compiler with a decimal value"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "A compiler can be modified to intentionally miscompile specific source code patterns.",
+   "span": "deliberately miscompile source whenever a particular pattern is matched.",
+   "explanatory_status": "verified_only",
+   "status_reason": "the reader model understands compilers and can accept they can be modified to alter output"
+  },
+  {
+   "id": "n5",
+   "type": "proposition",
+   "statement": "A compiler bug could alter the login command to accept a backdoor password.",
+   "span": "miscompile the login command so that it would accept either the intended encrypted password or a particular known password.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the general concept of a compiler bug applied to a specific target"
+  },
+  {
+   "id": "n6",
+   "type": "proposition",
+   "statement": "Malicious code placed directly in the compiler's source code would be easily noticed by reviewers.",
+   "span": "Even the most casual perusal of the source of the C compiler would raise suspicions.",
+   "explanatory_status": "verified_only",
+   "status_reason": "relies on the reader's general understanding that malicious code is visible in source"
+  },
+  {
+   "id": "n7",
+   "type": "method",
+   "statement": "A self-reproducing program can be used as a Trojan horse to automatically inject malicious code into future compilations.",
+   "span": "The replacement code is a Stage I self-reproducing program that inserts both Trojan horses into the compiler.",
+   "explanatory_status": "derived",
+   "status_reason": "combines the concepts of a self-reproducing program, excess baggage, and a compiler bug"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "Once the infected compiler binary is installed, the malicious code can be removed from the source, leaving no visible trace while still infecting future compilations.",
+   "span": "remove the bugs from the source of the compiler and the new binary will reinsert the bugs whenever it is compiled.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from bootstrapping the compiler trojan so the binary retains the bug after source removal"
+  },
+  {
+   "id": "n9",
+   "type": "proposition",
+   "statement": "Examining the source code is insufficient to guarantee that a program is free of malicious behavior.",
+   "span": "No amount of source-level verification or scrutiny will protect you from using untrusted code.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the fact that the bug exists only in the binary and leaves no trace in the source"
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "You cannot fully trust any software unless you wrote all of it, including the tools used to build it.",
+   "span": "You can't trust code that you did not totally create yourself.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the failure of source-level verification"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "This type of self-propagating attack can be implemented in any software that processes other programs, such as assemblers or microcode.",
+   "span": "I could have picked on any program-handling program such as an assembler, a loader, or even hardware microcode.",
+   "explanatory_status": "verified_only",
+   "status_reason": "the reader model cannot derive this for microcode but can verify the author's assertion"
+  },
+  {
+   "id": "n12",
+   "type": "proposition",
+   "statement": "Malicious bugs become increasingly difficult to discover when they are placed in lower-level system components.",
+   "span": "As the level of program gets lower, these bugs will be harder and harder to detect.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the fact that lower level tools compile the higher level ones"
+  },
+  {
+   "id": "n13",
+   "type": "proposition",
+   "statement": "Unauthorized access to computer systems is a serious offense akin to burglary, not a harmless prank.",
+   "span": "The act of breaking into a computer system has to have the same social stigma as breaking into a neighbor's house.",
+   "explanatory_status": "verified_only",
+   "status_reason": "a moral assertion that cannot be logically derived from the technical argument"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n1",
+   "to": "n2",
+   "type": "derives"
+  },
+  {
+   "from": "n4",
+   "to": "n5",
+   "type": "derives"
+  },
+  {
+   "from": "n1",
+   "to": "n7",
+   "type": "derives"
+  },
+  {
+   "from": "n2",
+   "to": "n7",
+   "type": "derives"
+  },
+  {
+   "from": "n5",
+   "to": "n7",
+   "type": "derives"
+  },
+  {
+   "from": "n3",
+   "to": "n8",
+   "type": "depends_on"
+  },
+  {
+   "from": "n7",
+   "to": "n8",
+   "type": "derives"
+  },
+  {
+   "from": "n6",
+   "to": "n8",
+   "type": "supports"
+  },
+  {
+   "from": "n8",
+   "to": "n9",
+   "type": "derives"
+  },
+  {
+   "from": "n9",
+   "to": "n10",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n12",
+   "type": "derives"
+  },
+  {
+   "from": "n12",
+   "to": "n9",
+   "type": "supports"
+  }
+ ],
+ "_meta": {
+  "document": "pilot_thompson",
+  "operator": "OP_B",
+  "model": "gemini-3.1-pro-preview",
+  "family": "google",
+  "reader_model": "M-gen",
+  "prompt_version": "internalization/1.0.0",
+  "schema_problems": []
+ }
+}

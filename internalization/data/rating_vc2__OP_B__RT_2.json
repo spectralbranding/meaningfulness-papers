@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "Instead of attempting such a definition I shall replace the question by another, which is closely related to it and is expressed in relatively unambiguous words. The new form of the problem can be described in terms of a game which we call the 'imitation game.'",
+  "graph_evidence": "n1, n2, n3 (multiple nodes with mixed incoming/outgoing derives; no single origin node)",
+  "reasoning": "The text presents one generative replacement (the imitation game) that reframes the entire inquiry. The graph distributes this across n1-n3 with derivation edges pointing in conflicting directions, violating the single-node requirement."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "We may now consider the ground to have been cleared and we are ready to proceed to the debate on our question... I now proceed to consider opinions opposed to my own. (1) The Theological Objection... (9) The Argument from Extrasensory Perception... 7. Learning Machines",
+  "graph_evidence": "n16 (restated problem) plus n18-n32 (objections) and n33-n39 (learning); edges from n16 reach most but merge several objections and split the learning section",
+  "reasoning": "Author explicitly enumerates nine objections plus the learning-machines proposal as separable targets. Graph recovers roughly the same set but merges theological/heads-in-sand into shared dependencies and splits the child-machine proposal across five nodes.",
+  "goals_stated": 11,
+  "goals_recovered": 9,
+  "goals_merged_or_split": 4
+ },
+ "T3": {
+  "verdict": "not_recovered",
+  "author_declaration": "It is true that a discrete-state machine must be different from a continuous machine. But if we adhere to the conditions of the imitation game, the interrogator will not be able to take any advantage of this difference.",
+  "graph_evidence": "n15 (universality), n20 (mathematical limits) marked miracle; no author-marked residuals exist",
+  "reasoning": "Text never labels any step unverifiable or miraculous; every limitation is either derived or rebutted. Graph incorrectly assigns miracle status to two derived steps (universality and Gödel/Turing limits) while missing zero author-marked residuals.",
+  "residuals_marked_by_author": 0,
+  "missed_residuals": 0,
+  "false_residuals": 2
+ },
+ "_meta": {
+  "document": "vc2",
+  "graph_operator": "OP_B",
+  "rater": "RT_2"
+ }
+}

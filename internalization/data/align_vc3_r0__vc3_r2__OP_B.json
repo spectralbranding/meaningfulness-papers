@@ -1,0 +1,14 @@
+{
+ "pairs": [
+  {
+   "a": "n18",
+   "b": "n3",
+   "confidence": "high"
+  },
+  {
+   "a": "n16",
+   "b": "n10",
+   "confidence": "medium"
+  }
+ ]
+}

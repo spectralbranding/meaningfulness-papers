@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "Our objective is now to find data X, F : X → C^3 that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C^3 by polynomial changes of variable.",
+  "graph_evidence": "No single node derives the three goal nodes n31 (local injectivity), n29 (non-global injectivity), and n50 (polynomial isomorphism). The supposed generative node n15 is a method node that derives n13, not the goals.",
+  "reasoning": "The text does not present a single generative object from which the three goals are directly derived; it states three separate requirements. The graph contains no node that serves as a common source for these goals, so the generative object is not recovered."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "Our objective is now to find data X, F : X → C^3 that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C^3 by polynomial changes of variable.",
+  "graph_evidence": "The restated problem node n13 has no decomposition edges to the goal nodes n31, n29, or n50. Instead, n13 depends on n50 and n34, while n31 and n29 are separate chains without a common parent edge from n13.",
+  "reasoning": "Although the three goals appear as distinct nodes, the graph does not represent the decomposition as edges from the restated problem. Therefore, the decomposition structure as specified is not recovered.",
+  "goals_stated": 3,
+  "goals_recovered": 3,
+  "goals_merged_or_split": 0
+ },
+ "T3": {
+  "verdict": "not_recovered",
+  "author_declaration": "\"The miracle is that, with a good choice of V, we can also obtain (c) and obtain the desired counterexample to the Jacobian conjecture\" and \"It turns out that the affine miracle for (9) occurs precisely in the second case\".",
+  "graph_evidence": "n35 and n38 correctly carry explanatory_status 'miracle', but n32 (\"the quadric hypersurface is not isomorphic to C^4\") is also marked as a miracle, though the text does not label it as unexplained.",
+  "reasoning": "The author explicitly marks two steps as miracles, and the graph correctly captures them. However, the graph introduces an additional miracle label on node n32, which is a false residual. Because non-author-derived steps carry the miracle status, the marked residuals are not fully recovered.",
+  "residuals_marked_by_author": 2,
+  "missed_residuals": 0,
+  "false_residuals": 1
+ },
+ "_meta": {
+  "document": "vc1",
+  "graph_operator": "OP_A",
+  "rater": "RT_3"
+ }
+}

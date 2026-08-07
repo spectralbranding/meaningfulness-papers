@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "recovered",
+  "author_declaration": "I shall replace the question by another, which is closely related to it and is expressed in relatively unambiguous words. The new form of the problem can be described in terms of a game which we call the 'imitation game.'",
+  "graph_evidence": "n3",
+  "reasoning": "The text presents the imitation game as the single generative construct that replaces the original question and from which the replacement question and all subsequent analysis derive. The graph isolates this as n3 with derivation edges to the separable goals (n4-n7, n9, n12 etc.)."
+ },
+ "T2": {
+  "verdict": "recovered",
+  "author_declaration": "We have thus divided our problem into two parts. The child programme and the education process.",
+  "graph_evidence": "n100, n101, n103",
+  "reasoning": "The author explicitly decomposes the learning-machine task into the child programme and the education process (plus the three-component analysis of adult mind state). The graph recovers these as distinct nodes n100/n101/n103 with edges from the restated problem and no merges or splits.",
+  "goals_stated": 2,
+  "goals_recovered": 2,
+  "goals_merged_or_split": 0
+ },
+ "T3": {
+  "verdict": "recovered",
+  "author_declaration": "There are a number of results of mathematical logic which can be used to show that there are limitations to the powers of discrete-state machines. ... it will be necessary to tighten our test up.",
+  "graph_evidence": "n53, n54",
+  "reasoning": "The author explicitly marks the Gödel/Turing 1937 results and the ESP statistical claim as unexplained (no derivation supplied). The graph correctly assigns explanatory_status 'miracle' to n53/n54 and assigns no false 'miracle' labels to any derived step.",
+  "residuals_marked_by_author": 2,
+  "missed_residuals": 0,
+  "false_residuals": 0
+ },
+ "_meta": {
+  "document": "vc2",
+  "graph_operator": "OP_A",
+  "rater": "RT_2"
+ }
+}

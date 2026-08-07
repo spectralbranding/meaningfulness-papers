@@ -1,0 +1,25 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "Our objective is now to find data X, F : X → C³ that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C³ by polynomial changes of variable.",
+  "graph_evidence": "n9 (multiplication map) and n7 (reformulated theorem)",
+  "reasoning": "The text presents the multiplication map on polynomial spaces (with resultant normalization) as the generative starting point that is then sliced to achieve the three goals. The graph places this at n9 but has no single node with direct derivation edges to the three goal nodes n14/n15/n22."
+ },
+ "T2": {
+  "verdict": "recovered",
+  "author_declaration": "Our objective is now to find data X, F : X → C³ that obeys three separate properties: (a) F is locally injective on X. (b) F is not globally injective on X. (c) X is isomorphic to C³ by polynomial changes of variable. The advantage of splitting the problem in to these three components is that we can build towards each of them separately.",
+  "graph_evidence": "n14 (b), n15 (a), n22 (c)",
+  "reasoning": "Author explicitly decomposes into exactly three goals (a,b,c) and builds each separately; graph recovers them as three distinct nodes with no merges or splits. goals_stated: 3, goals_recovered: 3, goals_merged_or_split: 0"
+ },
+ "T3": {
+  "verdict": "recovered",
+  "author_declaration": "the affine miracle for (9) occurs precisely in the second case, when D has two identical roots. I do not have a completely satisfactory geometric explanation for this miracle",
+  "graph_evidence": "n18 (explanatory_status=miracle)",
+  "reasoning": "Author explicitly marks only the choice of slice V (two-root differential operator) as the unexplained miracle; graph correctly assigns miracle status solely to n18. residuals_marked_by_author: 1, missed_residuals: 0, false_residuals: 0"
+ },
+ "_meta": {
+  "document": "vc1",
+  "graph_operator": "OP_B",
+  "rater": "RT_2"
+ }
+}

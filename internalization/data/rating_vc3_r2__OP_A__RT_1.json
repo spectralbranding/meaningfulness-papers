@@ -1,0 +1,31 @@
+{
+ "T1": {
+  "verdict": "not_recovered",
+  "author_declaration": "The three constructions thus sit on a continuum, with the key differences being the selection of the key parameters ${t}$ (the number of primes multiplied together) and ${D}$ (the degree).",
+  "graph_evidence": "n33; no single node has derivation edges to n5, n9, and n11",
+  "reasoning": "The text presents the parameter pair ${t}$ and ${D}$ as the generative object organizing the three constructions. The graph has a node corresponding to this idea, n33, but it does not make that node the single origin of derivation edges to the separable construction/result nodes."
+ },
+ "T2": {
+  "verdict": "not_recovered",
+  "author_declaration": "The Erdös construction keeps the degree fixed and sends the number of primes to infinity. The OpenAI construction does the opposite, keeping the set of primes fixed but sending the degree to infinity. The Mythos construction is a compromise, in which the degree and the number of primes both go to infinity in a coupled fashion.",
+  "graph_evidence": "n5, n9, n11 recover the three results as distinct nodes; n33 states the parameter decomposition but has no decomposition edges to n5, n9, and n11",
+  "reasoning": "The author states three separable cases: Erdös, OpenAI, and Mythos, divided by how ${t}$ and ${D}$ vary. The graph keeps these results distinct, but it does not represent the stated decomposition as edges from the restated organizing problem/object to the three goals.",
+  "goals_stated": 3,
+  "goals_recovered": 3,
+  "goals_merged_or_split": 0
+ },
+ "T3": {
+  "verdict": "recovered",
+  "author_declaration": "There is a technical issue that some of these vectors could conceivably collide with each other; however there is a further Chinese remainder theorem argument (which I will omit here) that shows that any such ${w}$ can belong to at most ${O(G^{O(gD)})}$ such lattices.",
+  "graph_evidence": "n53 is marked explanatory_status \"miracle\"; no graph node marked \"miracle\" corresponds to a step the author actually derives in the text",
+  "reasoning": "The explicitly omitted residual step is the further Chinese remainder theorem argument controlling how many lattices a given ${w}$ can belong to, and the graph marks the corresponding node n53 as a miracle. The other miracle-marked nodes concern stated or invoked material not derived in the text, so they are not false residuals under the target definition.",
+  "residuals_marked_by_author": 1,
+  "missed_residuals": 0,
+  "false_residuals": 0
+ },
+ "_meta": {
+  "document": "vc3_r2",
+  "graph_operator": "OP_A",
+  "rater": "RT_1"
+ }
+}

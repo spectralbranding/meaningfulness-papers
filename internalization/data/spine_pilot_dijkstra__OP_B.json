@@ -1,0 +1,416 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "assumption",
+   "statement": "Computers represent a radical novelty.",
+   "para": 4,
+   "span": "the assumption that computers represent a radical novelty",
+   "explanatory_status": "verified_only",
+   "status_reason": "stated as an assumption the author makes"
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "The usual method of coping with novelty via metaphors and analogies breaks down when faced with a sharp discontinuity.",
+   "para": 6,
+   "span": "in the case of a sharp discontinuity, however, the method breaks down",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the reader's understanding of metaphors"
+  },
+  {
+   "id": "n3",
+   "type": "method",
+   "statement": "Coping with radical novelty requires approaching it with a blank mind and consciously refusing to link it to the familiar.",
+   "para": 7,
+   "span": "approach the radical novelty with a blank mind, consciously refusing to try to link it",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the failure of analogies"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "Radical novelties are so disturbing that people tend to suppress, ignore, or deny them.",
+   "para": 8,
+   "span": "radical novelties are so disturbing that they tend to be suppressed or ignored",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the difficulty of the required blank mind"
+  },
+  {
+   "id": "n5",
+   "type": "evidence",
+   "statement": "Gauss suppressed his discovery of non-Euclidean geometry out of fear.",
+   "para": 9,
+   "span": "decided to suppress his discovery of non-Euclidean geometry",
+   "explanatory_status": "verified_only",
+   "status_reason": "historical anecdote provided as evidence"
+  },
+  {
+   "id": "n6",
+   "type": "evidence",
+   "statement": "The mathematical community assumes that doing mathematics will remain the same type of mental activity it has always been.",
+   "para": 11,
+   "span": "the mathematical community has never challenged its tacit assumption that doing mathematics will remain very much the same",
+   "explanatory_status": "verified_only",
+   "status_reason": "observation of the mathematical community provided as evidence"
+  },
+  {
+   "id": "n7",
+   "type": "evidence",
+   "statement": "Educational practices constantly try to disguise exciting novelties as familiar things.",
+   "para": 14,
+   "span": "constantly try to present everything that could be an exciting novelty as something as familiar as possible",
+   "explanatory_status": "verified_only",
+   "status_reason": "observation of educational practices provided as evidence"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "Automatic computers embody not just one, but two radical novelties.",
+   "para": 16,
+   "span": "automatic computers embody not only one radical novelty but two of them",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the assumption that computers are a radical novelty"
+  },
+  {
+   "id": "n9",
+   "type": "proposition",
+   "statement": "The first radical novelty is the gigantic ratio of scale that requires programmers to use unprecedentedly deep conceptual hierarchies.",
+   "para": 18,
+   "span": "think in terms of conceptual hierarchies that are much deeper than a single mind ever needed to face before",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the physical reality of computing scale"
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "The second radical novelty is that computers are large-scale digital devices where the smallest perturbations can have drastic consequences.",
+   "para": 20,
+   "span": "the automatic computer is our first large-scale digital device",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the discrete nature of computers"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "The evidence that computing's novelties are radical lies in the doomed efforts to hide or deny the unfamiliar.",
+   "para": 23,
+   "span": "strange phenomena as frantic —but, as we now know, doomed— efforts at hiding or denying the frighteningly unfamiliar",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the tendency to deny radical novelties"
+  },
+  {
+   "id": "n12",
+   "type": "evidence",
+   "statement": "Software engineering is a doomed discipline that tries to teach people how to program if they cannot.",
+   "para": 24,
+   "span": "software engineering has accepted as its charter \"How to program if you cannot.\"",
+   "explanatory_status": "verified_only",
+   "status_reason": "observation of software engineering provided as evidence"
+  },
+  {
+   "id": "n13",
+   "type": "evidence",
+   "statement": "Measuring programmer productivity in lines of code is a reassuring illusion that programs are like other devices.",
+   "para": 27,
+   "span": "measuring \"programmer productivity\" in terms of \"number of lines of code produced per month\"",
+   "explanatory_status": "verified_only",
+   "status_reason": "observation of productivity metrics provided as evidence"
+  },
+  {
+   "id": "n14",
+   "type": "evidence",
+   "statement": "Software engineers continue to refine testing strategies even though testing can never demonstrate the absence of bugs.",
+   "para": 28,
+   "span": "program testing may convincingly demonstrate the presence of bugs, but can never demonstrate their absence",
+   "explanatory_status": "verified_only",
+   "status_reason": "observation of testing practices provided as evidence"
+  },
+  {
+   "id": "n15",
+   "type": "evidence",
+   "statement": "Artificial Intelligence is popular because it makes the computer less frightening by simulating a familiar noncomputer.",
+   "para": 31,
+   "span": "the frightening computer becomes less frightening if it is used only to simulate a familiar noncomputer",
+   "explanatory_status": "verified_only",
+   "status_reason": "observation of AI's popularity provided as evidence"
+  },
+  {
+   "id": "n16",
+   "type": "proposition",
+   "statement": "A program is an abstract symbol manipulator that becomes concrete when a computer is supplied to it.",
+   "para": 35,
+   "span": "the program is an abstract symbol manipulator, which can be turned into a concrete one by supplying a computer",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the discrete nature of computers"
+  },
+  {
+   "id": "n17",
+   "type": "proposition",
+   "statement": "Programs are elaborate formulae from a formal system, and the programmer's task is to derive that formula.",
+   "para": 36,
+   "span": "programs or —to use somewhat more general terminology— usually rather elaborate formulae from some formal system",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the definition of abstract symbol manipulators"
+  },
+  {
+   "id": "n18",
+   "type": "proposition",
+   "statement": "Computing science is concerned with the interplay between mechanized and human symbol manipulation.",
+   "para": 37,
+   "span": "computing science is —and will always be— concerned with the interplay between mechanized and human symbol manipulation",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the programmer's task of deriving formulae"
+  },
+  {
+   "id": "n19",
+   "type": "method",
+   "statement": "We should clean up our language by calling a bug an error to put the blame on the programmer.",
+   "para": 52,
+   "span": "cleaning up our language by no longer calling a bug a bug but by calling it an error",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the programmer's responsibility for the code"
+  },
+  {
+   "id": "n20",
+   "type": "method",
+   "statement": "We must never refer to parts of programs or equipment in anthropomorphic terminology.",
+   "para": 53,
+   "span": "never refer to parts of programs or pieces of equipment in an anthropomorphic terminology",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the wastefulness of operational reasoning"
+  },
+  {
+   "id": "n21",
+   "type": "proposition",
+   "statement": "The anthropomorphic metaphor forces people to think about programs in terms of computational behaviors, which is a tremendous waste of mental effort.",
+   "para": 55,
+   "span": "operational reasoning is a tremendous waste of mental effort",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the inefficiency of element-wise reasoning"
+  },
+  {
+   "id": "n22",
+   "type": "proposition",
+   "statement": "To demonstrate something about all elements of a large set, it is hopelessly inefficient to deal with elements individually; one must use the set's definition.",
+   "para": 56,
+   "span": "if we have to demonstrate something about all the elements of a large set, it is hopelessly inefficient",
+   "explanatory_status": "derived",
+   "status_reason": "follows from basic logic and set theory"
+  },
+  {
+   "id": "n23",
+   "type": "evidence",
+   "statement": "Proving that a mutilated chessboard cannot be covered by dominos is vastly simpler using a coloring argument than by exhaustively generating all placements.",
+   "para": 60,
+   "span": "each placement covers as many white squares as it covers black squares",
+   "explanatory_status": "verified_only",
+   "status_reason": "mathematical proof example provided as evidence"
+  },
+  {
+   "id": "n24",
+   "type": "method",
+   "statement": "Because a program defines a set of computations, we must deal with all possible computations by ignoring them and working with the program text.",
+   "para": 63,
+   "span": "deal with all computations possible under control of a given program by ignoring them and working with the program",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the inefficiency of reasoning about individual computations"
+  },
+  {
+   "id": "n25",
+   "type": "proposition",
+   "statement": "A programming language is a formal system for which program execution provides only a model.",
+   "para": 64,
+   "span": "A programming language, with its formal syntax and with the proof rules that define its semantics, is a formal system",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the need to work with program texts"
+  },
+  {
+   "id": "n26",
+   "type": "proposition",
+   "statement": "A program is half a conjecture, and the programmer must present complete conjectures as proven theorems.",
+   "para": 67,
+   "span": "The programmer's task is to present such complete conjectures as proven theorems.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from viewing programming languages as formal systems"
+  },
+  {
+   "id": "n27",
+   "type": "method",
+   "statement": "An introductory programming course should teach boolean algebra, a clean imperative language defined by proof rules, and require students to formally prove their programs meet specifications without testing them.",
+   "para": 71,
+   "span": "his main task is to give a formal proof that the program he proposes meets the equally formal functional specification",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the programmer's task to present proven theorems"
+  },
+  {
+   "id": "n28",
+   "type": "evidence",
+   "statement": "Such an introductory programming course has been successfully given to hundreds of college freshmen each year since the early 80s.",
+   "para": 74,
+   "span": "such an introductory programming course has successfully been given to hundreds of college freshmen each year",
+   "explanatory_status": "verified_only",
+   "status_reason": "historical fact about the course provided as evidence"
+  },
+  {
+   "id": "n29",
+   "type": "evidence",
+   "statement": "Students quickly discover that mastering the manipulation of uninterpreted formulae gives them immense power, rather than being frustrated.",
+   "para": 75,
+   "span": "he makes the exciting discovery that he is beginning to master the use of a tool that",
+   "explanatory_status": "verified_only",
+   "status_reason": "observation of student reactions provided as evidence"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n3",
+   "to": "n2",
+   "type": "derives"
+  },
+  {
+   "from": "n4",
+   "to": "n3",
+   "type": "derives"
+  },
+  {
+   "from": "n4",
+   "to": "n5",
+   "type": "supports"
+  },
+  {
+   "from": "n4",
+   "to": "n6",
+   "type": "supports"
+  },
+  {
+   "from": "n4",
+   "to": "n7",
+   "type": "supports"
+  },
+  {
+   "from": "n8",
+   "to": "n1",
+   "type": "derives"
+  },
+  {
+   "from": "n9",
+   "to": "n8",
+   "type": "derives"
+  },
+  {
+   "from": "n10",
+   "to": "n8",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n8",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n4",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n12",
+   "type": "supports"
+  },
+  {
+   "from": "n11",
+   "to": "n13",
+   "type": "supports"
+  },
+  {
+   "from": "n11",
+   "to": "n14",
+   "type": "supports"
+  },
+  {
+   "from": "n11",
+   "to": "n15",
+   "type": "supports"
+  },
+  {
+   "from": "n16",
+   "to": "n10",
+   "type": "depends_on"
+  },
+  {
+   "from": "n17",
+   "to": "n16",
+   "type": "derives"
+  },
+  {
+   "from": "n18",
+   "to": "n17",
+   "type": "derives"
+  },
+  {
+   "from": "n19",
+   "to": "n17",
+   "type": "depends_on"
+  },
+  {
+   "from": "n20",
+   "to": "n21",
+   "type": "derives"
+  },
+  {
+   "from": "n21",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n22",
+   "to": "n23",
+   "type": "supports"
+  },
+  {
+   "from": "n24",
+   "to": "n22",
+   "type": "derives"
+  },
+  {
+   "from": "n24",
+   "to": "n17",
+   "type": "depends_on"
+  },
+  {
+   "from": "n25",
+   "to": "n24",
+   "type": "derives"
+  },
+  {
+   "from": "n26",
+   "to": "n25",
+   "type": "derives"
+  },
+  {
+   "from": "n27",
+   "to": "n26",
+   "type": "derives"
+  },
+  {
+   "from": "n27",
+   "to": "n28",
+   "type": "supports"
+  },
+  {
+   "from": "n27",
+   "to": "n29",
+   "type": "supports"
+  }
+ ],
+ "_meta": {
+  "document": "pilot_dijkstra",
+  "operator": "OP_B",
+  "model": "gemini-3.1-pro-preview",
+  "family": "google",
+  "reader_model": "M-gen",
+  "prompt_version": "internalization/1.2.0",
+  "schema_problems": []
+ }
+}

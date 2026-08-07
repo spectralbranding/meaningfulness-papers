@@ -1,0 +1,47 @@
+# DATA_MANIFEST -- 2026bk (Internalization as an Operation)
+#
+# What the validation run produced, where it lives, and what a reader needs in
+# order to reproduce a reported number. The rule the layout follows: everything
+# required to recompute the results is committed; the specimen texts themselves
+# are not, because they are third-party works. `code/prepare_specimens.py`
+# re-fetches them from public sources and verifies them against the digests in
+# specimens/MANIFEST.json, so the inputs are reconstructible without being
+# redistributed.
+
+paper: 2026bk
+run_date: "2026-08-09"
+protocol: PROTOCOL.yaml           # pre-declared before any call
+decision_rule: DECISION_RULE.md   # pre-declared 2026-08-06
+reader_models: READER_MODEL.md    # pre-declared before any measurement
+
+committed_internal:
+  - code/                            # harness, scorers, unit tests
+  - data/spine_<doc>__<OP>.json      # one extracted graph per document and operator
+  - data/align_*.json                # blind cross-rendering node alignments
+  - data/rating_*.json               # per-rater recovery-target judgments
+  - data/pilot_round1_v1.0.0/        # discarded pilot rounds, kept for the record
+  - data/pilot_round2_v1.1.0/
+  - data/superseded_unbounded_armB/  # ladder extractions replaced for configuration parity
+  - output/tables/                   # computed statistics + the rendered results summary
+  - specimens/MANIFEST.json          # source URL, sha256, word count per input
+
+on_disk_not_in_internal_git:
+  # Carried to the public record at publication rather than into the internal
+  # SSOT, following the corpus's three-layer convention for bulk run data.
+  - logs/*.jsonl                  # every model call: prompts, hash, params, response, tokens
+
+not_redistributed:
+  - specimens/*.txt               # third-party texts; re-fetched by prepare_specimens.py
+  - specimens/*.pdf               # ditto
+
+dataset_of_record: >-
+  The extracted graphs in data/ are the observations. They were produced by two
+  hosted models whose behaviour is epoch-pinned, so re-collection yields a new
+  epoch rather than a byte-identical replication; the committed graphs are what
+  every reported number is computed from.
+
+reproduce:
+  analysis_only: "./reproduce.sh"                    # no keys, no network, deterministic
+  re_fetch_inputs: "./reproduce.sh --fetch"
+  re_collect: "bws run -- ./reproduce.sh --collect"  # new epoch, not a replication
+  seed: 20260809

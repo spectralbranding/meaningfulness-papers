@@ -1,0 +1,187 @@
+{
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "proposition",
+   "statement": "Computers are a radical novelty.",
+   "span": "automatic computers represent a radical novelty",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the two specific novelties of scale and digital nature"
+  },
+  {
+   "id": "n2",
+   "type": "proposition",
+   "statement": "The scale of computing requires unprecedentedly deep conceptual hierarchies.",
+   "span": "think in terms of conceptual hierarchies that are much deeper than a single mind ever needed to face before.",
+   "explanatory_status": "verified_only",
+   "status_reason": "can be checked against the reader's general knowledge of computing scale"
+  },
+  {
+   "id": "n3",
+   "type": "proposition",
+   "statement": "Computers are large-scale digital devices where tiny changes cause drastic effects.",
+   "span": "the smallest possible perturbations —i.e. changes of a single bit— can have the most drastic consequences.",
+   "explanatory_status": "verified_only",
+   "status_reason": "can be checked against the reader's understanding of digital systems"
+  },
+  {
+   "id": "n4",
+   "type": "proposition",
+   "statement": "Dealing with radical novelty requires abandoning familiar analogies.",
+   "span": "Coping with radical novelty requires an orthogonal method.",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted as a general principle of epistemology"
+  },
+  {
+   "id": "n5",
+   "type": "proposition",
+   "statement": "Software engineering is fundamentally flawed because it treats programming like familiar engineering.",
+   "span": "software engineering should be known as \"The Doomed Discipline\", doomed because it cannot even approach its goal",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the radical novelty of computers and the failure of analogies"
+  },
+  {
+   "id": "n6",
+   "type": "proposition",
+   "statement": "A program is an abstract formula for manipulating symbols.",
+   "span": "the program is an abstract symbol manipulator",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted as a definition of what a program is"
+  },
+  {
+   "id": "n7",
+   "type": "proposition",
+   "statement": "Computing science is the study of formal symbol manipulation.",
+   "span": "computing science is —and will always be— concerned with the interplay between mechanized and human symbol manipulation",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the definition of programs as symbol manipulators"
+  },
+  {
+   "id": "n8",
+   "type": "proposition",
+   "statement": "Reasoning about all elements of a large set individually is highly inefficient.",
+   "span": "it is hopelessly inefficient to deal with all the elements of the set individually",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted as a mathematical principle"
+  },
+  {
+   "id": "n9",
+   "type": "evidence",
+   "statement": "The mutilated chessboard problem shows that reasoning via properties is vastly superior to exhaustive checking.",
+   "span": "In the figure Q, however, the number of white squares and the number of black squares differ by 2",
+   "explanatory_status": "verified_only",
+   "status_reason": "a mathematical example that the reader can follow"
+  },
+  {
+   "id": "n10",
+   "type": "proposition",
+   "statement": "Operational reasoning about programs is a massive waste of effort.",
+   "span": "operational reasoning is a tremendous waste of mental effort.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the inefficiency of dealing with all elements of a set individually"
+  },
+  {
+   "id": "n11",
+   "type": "proposition",
+   "statement": "We should reason about programs using their texts and formal semantics, ignoring their execution behaviors.",
+   "span": "We must learn to work with program texts while (temporarily) ignoring that they admit the interpretation of executable code.",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the need to avoid operational reasoning"
+  },
+  {
+   "id": "n12",
+   "type": "proposition",
+   "statement": "Using anthropomorphic terms for programs forces inefficient operational reasoning.",
+   "span": "its adoption effectively prevents a departure from operational semantics and thus forces people to think about programs in terms of computational behaviours",
+   "explanatory_status": "verified_only",
+   "status_reason": "asserted as a consequence of personifying programs"
+  },
+  {
+   "id": "n13",
+   "type": "proposition",
+   "statement": "The anthropomorphic metaphor is a severe handicap.",
+   "span": "the anthropomorphic metaphor —for whose introduction we can blame John von Neumann— is an enormous handicap",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the fact that anthropomorphism forces inefficient operational reasoning"
+  },
+  {
+   "id": "n14",
+   "type": "method",
+   "statement": "Introductory programming should be taught as formal mathematics, focusing on proofs and avoiding testing.",
+   "span": "this introductory programming course is primarily a course in formal mathematics",
+   "explanatory_status": "derived",
+   "status_reason": "follows from the need to treat programs as formal texts rather than executable behaviors"
+  }
+ ],
+ "edges": [
+  {
+   "from": "n2",
+   "to": "n1",
+   "type": "supports"
+  },
+  {
+   "from": "n3",
+   "to": "n1",
+   "type": "supports"
+  },
+  {
+   "from": "n1",
+   "to": "n5",
+   "type": "derives"
+  },
+  {
+   "from": "n4",
+   "to": "n5",
+   "type": "derives"
+  },
+  {
+   "from": "n6",
+   "to": "n7",
+   "type": "derives"
+  },
+  {
+   "from": "n9",
+   "to": "n8",
+   "type": "supports"
+  },
+  {
+   "from": "n8",
+   "to": "n10",
+   "type": "derives"
+  },
+  {
+   "from": "n8",
+   "to": "n11",
+   "type": "derives"
+  },
+  {
+   "from": "n12",
+   "to": "n13",
+   "type": "derives"
+  },
+  {
+   "from": "n10",
+   "to": "n13",
+   "type": "derives"
+  },
+  {
+   "from": "n11",
+   "to": "n14",
+   "type": "derives"
+  },
+  {
+   "from": "n7",
+   "to": "n14",
+   "type": "derives"
+  }
+ ],
+ "_meta": {
+  "document": "pilot_dijkstra",
+  "operator": "OP_B",
+  "model": "gemini-3.1-pro-preview",
+  "family": "google",
+  "reader_model": "M-gen",
+  "prompt_version": "internalization/1.0.0",
+  "schema_problems": []
+ }
+}

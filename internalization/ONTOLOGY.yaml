@@ -1,0 +1,97 @@
+paper_key: 2026bk
+schema_version: 0.1
+
+owns:
+  - term_key: internalization
+    label: "internalization"
+    definition: >-
+      The operation that turns a produced result into something a reader can hold, teach, and
+      build on, specified as the inverse of structured drafting: where drafting maps a dependency
+      graph to prose, internalization maps prose to a dependency graph and then to a second prose
+      rendering addressed to a named reader. It is a procedure over the artifact's structure, not
+      an attribute of authorial talent.
+    canonical_form: "internalization"
+    replaces: ["digestion", "absorption"]
+    first_section: "The inverse operation"
+    relations:
+      - {type: contrasts, term_key: rendering-equivalence, note: "rendering-equivalence licenses step 4; internalization is the whole five-step operation that ends in it"}
+
+  - term_key: prose-mass
+    label: "prose mass"
+    definition: >-
+      The quantity of text an idea occupies in a rendered artifact, measured over tokens. The only
+      weighting signal available to a renderer given prose alone.
+    canonical_form: "prose mass"
+    first_section: "Why prose-only explanation misses"
+    relations:
+      - {type: contrasts, term_key: structural-load, note: "the divergence between the two is the paper's lead claim"}
+
+  - term_key: structural-load
+    label: "structural load"
+    definition: >-
+      The extent to which a node carries the argument, defined over the dependency graph's edges
+      rather than over the text, and computed by centrality on those edges. A one-line lemma may
+      carry high structural load while pages of routine verification carry none.
+    canonical_form: "structural load"
+    replaces: ["importance", "salience"]
+    first_section: "Why prose-only explanation misses"
+
+  - term_key: explanatory-status
+    label: "explanatory status"
+    definition: >-
+      A three-valued property carried per spine node relative to a declared reader model:
+      `derived` (follows from nodes the reader holds), `verified_only` (checkable but not
+      derived), or `miracle` (neither derived nor reducible, and named as such).
+    canonical_form: "explanatory status"
+    first_section: "Measuring an explanation"
+
+  - term_key: miracle
+    label: "miracle"
+    definition: >-
+      A step that is verified but unexplained: true, checkable, and not derived from anything the
+      declared reader already holds. The term is adopted from working expository practice rather
+      than coined, and is reader-relative by construction.
+    canonical_form: "miracle"
+    first_section: "Measuring an explanation"
+    relations:
+      - {type: contrasts, term_key: structural-load, note: "structural load is a graph property; a miracle is a reader-relative property of a node under a declared model"}
+
+  - term_key: miracle-count
+    label: "miracle count"
+    definition: >-
+      The cardinality of the set of nodes whose explanatory status is `miracle`, under a fixed
+      result and a declared reader model. Scored only on renderings that preserve the source
+      spine; without that precondition the count is minimized by replacing derivations with
+      familiar analogies, and measures familiarity rather than explanation.
+    canonical_form: "miracle count"
+    first_section: "Measuring an explanation"
+
+  - term_key: reader-model
+    label: "reader model"
+    definition: >-
+      The declared set of terms and results a reader is taken to already hold, fixed before any
+      measurement. Every quantity the operation reports travels with it, and comparisons across
+      different reader models are not licensed.
+    canonical_form: "reader model"
+    replaces: ["audience", "target reader"]
+    first_section: "Define only the delta"
+
+imports:
+  - {term_key: spine}
+  - {term_key: rendering-equivalence}
+  - {term_key: operator-role}
+  - {term_key: paper-spec}
+  - {term_key: link-time-compatibility-check}
+
+refines:
+  - term_key: experience-contract
+    narrows_to: >-
+      the comprehension case, where the deliverable whose acceptance is contracted is a reader's
+      state rather than an artifact or an organizational output
+    note: >-
+      Compatible narrowing, not a redefinition. The inherited move is unchanged -- write the
+      acceptance condition as a checkable test BEFORE the work that is supposed to satisfy it.
+      What narrows is the object under test: three clauses over a reader (restate the dependency
+      structure unaided; name the load-bearing node and what fails without it; execute one node
+      the structure marks open), of which the third has an objectively checkable outcome.
+

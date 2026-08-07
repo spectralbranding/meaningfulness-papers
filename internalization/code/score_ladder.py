@@ -270,7 +270,7 @@ def main() -> int:
     print(
         f"\n  ordering survives on both arms: {result['ordering']['survives_on_both_arms']}"
     )
-    print(f"\nwritten -> {out.relative_to(L.REPO)}")
+    print(f"\nwritten -> {out.relative_to(L.PAPER_DIR)}")
     return 0
 
 

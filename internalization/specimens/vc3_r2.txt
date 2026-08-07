@@ -1,0 +1,123 @@
+Suppose that one has a set ${P}$ of ${n}$ points in the plane, which we will think of as the complex plane ${{\bf C}}$ . Let ${d_1(P)}$ denote the number of unit distances determined by these points, i.e., pairs of points ${p,q \in P}$ whose displacement ${w = q-p}$ obeys the equation
+
+$\displaystyle w \overline{w} = 1. \ \ \ \ \ (1)$
+
+(It makes little difference for the asymptotics, but we will count the pair ${(q,p)}$ separately from ${(p,q)}$ here.)
+
+The Erdös unit distance problem asks, for a given large number ${n}$ , what is the largest possible value of ${d_1(P)}$ amongst all sets ${P}$ of cardinality ${n}$ ?
+
+For instance, if one takes ${P}$ to be ${n}$ equally spaced collinear points with unit spacing, one can obtain a linear construction with ${d_1(P) = 2n-2}$ . Erdös observed that one can improve this construction asymptotically:
+
+Theorem 1 (Erdös construction) There exists point sets ${P}$ of arbitrarily large cardinality ${n}$ such that ${d_1(P) \gg n^{1 +c / \log\log n}}$ for some absolute constant ${c > 0}$ .
+
+In fact, in the construction one could take ${c}$ arbitrarily close to ${\log 2}$ . Erdös famously asked whether ${d_1(P)}$ had to be bounded above by ${n^{1+o(1)}}$ ; and for decades there was significant effort expended on upper bounding ${d_1(P)}$ , with the best known upper bound being ${d_1(P) \ll n^{4/3}}$ , established by by Spencer, Szemerédi, and Trotter in 1984. We will note here that it seems extremely difficult to improve this upper bound. One reason for this is that if one replaces the equation (1) with the superficially similar equation
+
+$\displaystyle \mathrm{Im} w = (\mathrm{Re} w)^2 \ \ \ \ \ (2)$
+
+(i.e., replace the unit circle ${(\mathrm{Re} w)^2 + (\mathrm{Im} w)^2 = 1}$ by a standard parabola), then the ${n^{4/3}}$ bound is best possible, as can be seen by taking ${P}$ to be a rectangle in the Gaussian integers of width ${\asymp n^{1/3}}$ and height ${\asymp n^{2/3}}$ . Hence any improvement of the ${n^{4/3}}$ bound would have to exploit some special property of the unit circle that is not shared by the parabola.
+
+It came as some surprise recently when a team from OpenAI resolved the question of Erdös :
+
+Theorem 2 (OpenAI construction) There exists point sets ${P}$ of arbitrarily large cardinality ${n}$ such that ${d_1(P) \gg n^{1 + c}}$ for some absolute constant ${c > 0}$ .
+
+The optimal value of ${c}$ is still unknown, but the best upper and lower bounds on ${c}$ are tracked at this page ; currently we know that ${0.03583\dots \leq c \leq 1/3}$ .
+
+The construction in Theorem 2 is a heavily modified version of that in Theorem 1 , and uses some non-trivial amount of algebraic number theory, in particular the device of Golod–Shafarevich towers of field extensions. However, it was later observed using the Mythos AI that one could get a weaker bound with less algebraic number theory, which after optimizing parameters yields the following intermediate result between Theorem 1 and Theorem 2 :
+
+Theorem 3 (Mythos construction) There exists point sets ${P}$ of arbitrarily large cardinality ${n}$ such that ${d_1(P) \gg n^{1 + c / \log\log\log n}}$ for some absolute constant ${c > 0}$ .
+
+Furthermore, by inserting Golod–Shafarevich towers back into the Mythos construction, one can recover the full strength of Theorem 2 .
+
+These results already have a number of expositions; see for instance this article of Alon et al. , or this blog post of Bloom . As an exercise for myself, I recently spent some time trying to “digest” these constructions and place them on a common footing, with an emphasis on trying to find the minimal route to either heuristically or rigorously recovering these results relying on as little algebraic number theory as possible. The post here is a writeup of this exercise. (Disclosure: AI tools were useful for providing initial summaries of these arguments, as well as on explaining various fundamentals of algebraic number theory to me.)
+
+The first (trivial) observation is that one can use rescaling to replace the unit distance by any other fixed distance. In particular, for any positive real ${m}$ , if we let ${d_m(P)}$ denote the number of pairs ${p,q}$ whose displacement ${w = q-p}$ obeys the equation
+
+$\displaystyle w \overline{w} = m, \ \ \ \ \ (3)$
+
+then it is clear that any construction of a point set ${P}$ with a given value of ${d_m(P)}$ can be rescaled to another point set ${m^{-1/2} \cdot P}$ of the same cardinality with the corresponding value of ${d_1(P)}$ . It turns out to be convenient to work with values of ${m}$ that are asymptotically large, for instance the product of several large primes.
+
+All the constructions of good point sets ${P}$ basically involve taking all the elements of a certain ring ${B}$ of algebraic integers up to some height. In the original construction of Erdös, ${B}$ was chosen to be the ring of Gaussian integers ${{\bf Z}[i]}$ , but in fact any ring of integers in a non-trivial bounded degree field extension of ${{\bf Q}}$ would suffice to recover Theorem 1 (though always with the constant ${c}$ not exceeding ${\log 2}$ ). To go beyond this, one has to start considering number fields of unbounded degree. As it turns out, the field extensions arising from Golod–Shafarevich towers are the most efficient for this purpose, and lead to Theorem 2 ; but one can work with the more elementary construction of number fields generated by many square roots of medium-sized primes, and this suffices for the intermediate result in Theorem 3 .
+
+The numerology can be explained as follows. Take ${B}$ to be a ring of integers in some number field of degree ${D}$ , and suppose for sake of argument that ${m}$ is the product of ${t}$ (rational) primes ${p_1,\dots,p_t}$ , which for simplicity we will assume to all have comparable magnitude, thus ${p_i \asymp T}$ for some ${T}$ and all ${i=1,\dots,t}$ . Thus, ${m}$ is roughly of the size of ${T^t}$ . In practice one wants to impose some additional “splitting” conditions on these primes ${p_1,\dots,p_t}$ , but the prime number theorem, as well as variants such as the Chebotarev density theorem, suggest that we should be able to keep ${T}$ reasonably close to ${t}$ in size; for instance, if we select primes greedily then we can have ${T \asymp t \log t}$ . In particular we expect to have ${\log T \asymp \log t}$ in practice.
+
+By construction, ${m}$ splits into the product of ${t}$ rational primes. Moving up to the degree ${D}$ extension, one can optimistically hope that ${m}$ splits further into the product of ${Dt}$ primes in ${B}$ . Using conjugation symmetry, these primes might split into ${Dt/2}$ conjugate pairs ${\rho, \overline{\rho}}$ . By selecting one element from each pair and multiplying, this generates ${2^{Dt/2}}$ solutions to (3) in ${B}$ . These solutions ${w}$ will of course have complex magnitude ${m^{1/2}}$ ; one can optimistically hope that they in fact have “height” ${O(m^{1/2})}$ in some sense.
+
+To take advantage of this, take ${P}$ to be the set of points in ${B}$ of height ${O(m^{1/2})}$ . As ${B}$ has rank ${D}$ , we therefore expect the size ${n = |P|}$ of this set to be roughly
+
+$\displaystyle n \approx (m^{1/2})^D \approx T^{D t / 2}. \ \ \ \ \ (4)$
+
+(For this heuristic discussion I will be deliberately vague about what the symbol ${\approx}$ means.) Meanwhile, using our solutions to (3) , we expect to have
+
+$\displaystyle d_m(P) \gtrapprox n 2^{Dt/2} \approx n^{1 + \frac{\log 2}{\log T}} \approx n^{1 + \frac{\log 2}{\log t}}. \ \ \ \ \ (5)$
+
+But this can be clarified by the heuristic (4) . Taking logarithms, we expect to have
+
+$\displaystyle \log n \asymp D t \log T \asymp D t \log t. \ \ \ \ \ (6)$
+
+In the regime where the degree ${D}$ of the number field is held fixed, we thus expect ${t}$ to exhibit logarithmic type growth in ${n}$ , and on inserting this back into (5) we (heuristically) recover Theorem 1 (with the natural constant ${c = \log 2}$ ). In fact it is not hard to turn the above heuristics into a rigorous argument, by setting ${B}$ equal the Gaussian integers ${{\bf Z}[i]}$ and selecting all the primes ${p_1,\dots,p_t}$ to be ${1 \hbox{ mod } 4}$ , so that they split completely in ${{\bf Z}[i]}$ by the Fermat two-square theorem .
+
+But if one can permit the degree ${D}$ to grow in the construction, and in particular be superpolynomial in ${t}$ , then the above heuristics suggest that we can start improving upon Theorem 1 , and even get all the way to Theorem 2 if we can make the degree go to infinity while keeping the number of primes ${t}$ fixed.
+
+If one naively tries this approach by forcing all the primes ${p}$ to split completely in a very high degree number field, one runs into significant technical difficulties, not least of which is the need to obtain good error terms in the Chebotarev density theorem , which touches upon such difficult questions as the Generalized Riemann Hypothesis and the existence of Siegel zeroes. From an algebraic number theory perspective, this is related to the breakdown of unique factorization in such number fields, as measured by the class group. The size of this group is in turn controlled by the discriminant of the field, as per the fundamental theorem of Minkowski in this subject.
+
+But one can hope that the arguments are robust enough to tolerate a little bit of breakdown in unique factorization, so long as the class group is not too large. The most natural way to do this is to use all the standard machinery of algebraic number theory, such as the unique factorization of ideals. But there turns out to be a more elementary (though largely equivalent) approach, which is to weaken the target equation (3) to a congruence equation
+
+$\displaystyle w \overline{w} = 0 \hbox{ mod } mB. \ \ \ \ \ (7)$
+
+This condition does not pin down the value of ${w \overline{w}}$ completely, but so long as we can keep the height of ${w}$ not too much larger than ${m^{1/2}}$ , it does restrict ${w \overline{w}}$ to a sufficiently small set of possible values that a simple application of the pigeonhole principle can allow one to conclude.
+
+In order for this strategy to work well, one needs to locate high-degree number fields ${B}$ of controlled discriminant for which it is relatively easy to at least partially split one’s rational primes ${p_1,\dots,p_t}$ into ideals in this field ${B}$ . It turns out that requiring the field to have a tower structure and admit complex multiplication (which basically amounts to it including ${i}$ ) is already sufficient to get a satisfactory amount of splitting. To control discriminants, the most efficient choices are the Golod–Shafarevich towers, for which the (root) discriminant stays bounded; but a more naive choice of a tower of quadratic extensions also gives reasonable control on discriminants and is sufficient to establish Theorem 3 .
+
+The three constructions thus sit on a continuum, with the key differences being the selection of the key parameters ${t}$ (the number of primes multiplied together) and ${D}$ (the degree). The Erdös construction keeps the degree fixed and sends the number of primes to infinity. The OpenAI construction does the opposite, keeping the set of primes fixed but sending the degree to infinity. The Mythos construction is a compromise, in which the degree and the number of primes both go to infinity in a coupled fashion. In particular, one could easily imagine an alternate timeline of events in which the Mythos construction was the first to be discovered (by either humans or AI) after the Erdos construction as a reasonably natural modification of the latter, and then subsequently refined (again either by humans or AI) to the OpenAI construction once the significance of Golod–Shafarevich towers was realized.
+
+In this recent paper of Pohoata , the terms “horizontal amplification” and “vertical amplification” were proposed for the technique of constructing large configurations by increasing ${t}$ and ${D}$ , thus the Erdös construction becomes a paradigm for horizontal amplification while the OpenAI construction becomes a paradigm for vertical amplification (and the Mythos construction utilizes both types of amplification). See also this paper of Bloom-Sawin-Schildkraut-Zhelezov for another recent application of vertical amplification.
+
+— 1. Some more details —
+
+Here we sketch how the quadratic extension approach can recover Theorem 3 .
+
+As indicated above, we will work with a product ${m = p_1 \dots p_t}$ of ${t}$ (rational) primes of size ${\asymp T}$ . Our only requirements of these primes, beyond their size, will be that they are distinct and equal to ${1}$ mod ${4}$ , so that they split in the Gaussian integers. By the prime number theorem in arithmetic progressions, this allows us to take ${T}$ as small as ${T \asymp t \log t}$ , so in particular ${\log T \asymp \log t}$ .
+
+To construct ${B}$ , we start by taking ${g}$ distinct medium-sized (rational) primes ${q_1,\dots,q_g}$ of size ${\asymp G}$ for some medium-sized parameter ${g}$ (eventually, when we optimize parameters, we will take ${g}$ to be a small multiple of ${t/\log t}$ ). We will not need any further properties of these primes, so by the prime number theorem we can take ${G}$ as small as ${G \asymp g \log g}$ , so in particular ${\log G \asymp \log g}$ . We will take ${T}$ to be larger than ${G}$ , so that the primes ${p_1,\dots,p_t}$ are distinct from the primes ${q_1,\dots,q_g}$ .
+
+We will work in the number field $\displaystyle {\bf Q}(i, \sqrt{q_1}, \dots, \sqrt{q_g})$ generated by ${i}$ and ${g}$ real square roots ${\sqrt{q_1},\dots,\sqrt{q_g}}$ . For instance, if ${g = 1}$ and ${q_1 = 3}$ , a typical element in this field would take the form
+
+$\displaystyle a + b i + c \sqrt{3} + d i \sqrt{3} \ \ \ \ \ (8)$
+
+In this particular example, the ring of integers would consist of those elements (8) for which ${a,b,c,d}$ are rational integers. In general, the ring of integers can be slightly larger than this, but for our purposes we can just work with the “naive” ring of integers ${B}$ generated by ${i}$ and ${\sqrt{q_1},\dots,\sqrt{q_g}}$ . A typical element of this ring then looks like
+
+$\displaystyle \sum_{I \subset \{0,\dots,g\}} a_I \prod_{i \in I} \sqrt{q_i}$ where ${a_I}$ are rational integers and we adopt the convention that ${\sqrt{q_0} = i}$ . Let us define the (naive) height of such a ring element to be ${\max_I |a_I|}$ . Then the number of elements of ${B}$ of height at most ${H}$ is ${\approx H^D}$ as long as ${H}$ is sufficiently large (again I will be vague about what ${\approx}$ means here).
+
+Our main goal is to find a large number of solutions ${w}$ in ${B}$ to the congruence equation (7) . As per the usual Minkowski embedding based on the various ways to embed ${B}$ into ${{\bf R}}$ or ${{\bf C}}$ , it is convenient to think of ${B}$ as a lattice in a ${D}$ -dimensional vector space, which (due to the presence of ${i}$ , which excludes purely real embeddings) is naturally thought of as the product of ${D/2}$ copies of ${{\bf C}}$ . For instance, in the running example, one can identify a ring element ${B}$ with an element
+
+$\displaystyle ( a + b i + c \sqrt{3} + d i \sqrt{3}, a - b i + c \sqrt{3} - d i \sqrt{3} )$ of ${{\bf C}^2}$ , and with this embedding ${B}$ becomes a lattice in ${{\bf C}^2}$ . In general, the embedding of ${B}$ into ${{\bf C}^{D/2}}$ is essentially the Walsh–Fourier transform , weighted by the various square roots of ${q_1,\dots,q_g}$ . (The appearance of the Walsh-Fourier transform reflects the fact that the specific number field we are working with is an abelian Galois extension with Galois group ${({\mathbb Z}/2{\mathbb Z})^{g+1}}$ .) Because of this, one can readily compute the covolume of the lattice, which up to lower order terms is basically ${(\sqrt{q_1} \dots \sqrt{q_g})^D}$ , which with our construction can be crudely bounded by ${G^{O(gD)}}$ . As long as we keep ${g}$ small compared to ${t/\log t}$ , this covolume will be small compared to ${2^{tD}}$ and will end up being a lower order term.
+
+The reason we care about the covolume (whichis essentially the square root of the discriminant ) is because of Minkowski’s theorem, which we will use in this crude form: Minkowski’s theorem : any lattice ${\Lambda}$ in a ${D}$ -dimensional space of covolume ${V}$ will contain a non-zero lattice vector of length ${O(V^{1/D})}$ . Thus for instance ${B}$ will contain some vector of length ${O(Q^{g/2})}$ , and any sublattice of ${B}$ of index ${I}$ will contain a vector of length ${O(I^{1/D} G^{O(g)})}$ , and thus also of height ${O(I^{1/D} G^{O(g)})}$ by inverting the Walsh-Fourier transform.
+
+Anyway, suppose that we can find some sublattice ${\Lambda}$ (in fact, they will be ideals, but we will not need this) of ${B}$ for which we can obtain the inclusion
+
+$\displaystyle \Lambda \cdot \overline{\Lambda} \subset m B, \ \ \ \ \ (9)$
+
+that is to say one has ${w_1 \overline{w_2} = 0 \hbox{ mod } mB}$ for all ${w_1, w_2 \in \Lambda}$ . Then clearly any element ${w}$ of ${\Lambda}$ will obey the congruence (7) . An obvious choice of ${\Lambda}$ would be ${\Lambda = mB}$ , but this is way too sparse: this lattice has index ${m^D}$ in ${B}$ , so the shortest vector one can hope to locate in it will have height ${O(m G^{O(g)})}$ , which is too large for our purposes. Instead, we would like ${\Lambda}$ to have index ${m^{D/2}}$ (which is the smallest it can be while still yielding the inclusion (9) ); then ${\Lambda}$ will contain a non-zero element ${w}$ of height ${O(m^{1/2} G^{O(g)})}$ , which means that ${w \overline{w}}$ is equal to ${m}$ times an element of ${B}$ of height ${O(G^{O(g)})}$ . The number of such elements is ${O(G^{O(gD)})}$ , which will end up being a lower order term that we can easily pigeonhole away.
+
+We claim that we can find at least ${2^{tD/4}}$ different sublattices ${\Lambda}$ of index ${m^{D/2}}$ that obey (9) . To verify this claim, it is a straightforward matter to use the Chinese remainder theorem to work “prime by prime”. Indeed, it suffices to show for each of the ${t}$ primes ${p}$ dividing ${m}$ , that there are ${2^{D/4}}$ different sublattices ${\Lambda_p}$ of ${B}$ of index ${p^{D/2}}$ that obey the inclusion
+
+$\displaystyle \Lambda_p \cdot \overline{\Lambda_p} \subset p B.$ We can descend now to the finite ring ${B/pB}$ , which is a ${D}$ -dimensional vector space over the finite field ${{\mathbb F}_p}$ . The complex conjugation operation descends to an involution on this vector space, and we are looking for ${2^{D/4}}$ subspaces ${V}$ of dimension ${D/2}$ with the property that
+
+$\displaystyle V \cdot \overline{V} = 0.$
+
+So now we just need to understand the structure of ${B/pB}$ . The general Wedderburn–Artin theorem tells us that this ring is the product of finite fields, but we can be much more explicit here in this specific situation. Exactly as Minkowski embedding maps rings in number fields into product of copies of ${{\bf R}}$ and ${{\bf C}}$ associated to the real and complex embeddings of the ring, we can also embed ${B/pB}$ into a product of copies of ${{\mathbb F}_p}$ and ${{\mathbb F}_{p^2}}$ , depending on how we assign square roots to ${-1}$ or ${q_1,\dots,q_g}$ in ${{\mathbb F}_p}$ or the quadratic extension ${{\mathbb F}_{p^2}}$ . We can illustrate this with the running example. As ${p = -1}$ mod ${4}$ , the square roots ${\alpha, -\alpha}$ of ${-1}$ in ${{\mathbb F}_p}$ stay in ${{\mathbb F}_p}$ . Suppose first that ${3}$ also splits into square roots ${\beta, -\beta}$ in ${{\mathbb F}_p}$ . Then we can embed ${B/pB}$ into ${{\mathbb F}_p^4}$ by mapping
+
+$\displaystyle a + b i + c \sqrt{3} + d i \sqrt{3} \mapsto (a + b \alpha + c \beta + d \alpha \beta, a + b \alpha + c \beta - d \alpha \beta, a - b \alpha + c \beta + d \alpha \beta, a - b \alpha + c \beta - d \alpha \beta).$ By counting elements we see that this embedding is in fact an isomorphism. If instead ${3}$ does not split, so that ${\pm \beta}$ now lie in ${{\mathbb F}_{p^2}}$ , then we can embed ${B/pB}$ into ${ {\mathbb F}_{p^2}^2}$ by mapping
+
+$\displaystyle a + b i + c \sqrt{3} + d i \sqrt{3} \mapsto (a + b \alpha + c \beta + d \alpha \beta, a - b \alpha + c \beta + d \alpha \beta),$ thus we drop half of the previous embeddings as being conjugate to the half that we retain. Again, counting shows that this is an isomorphism.
+
+In general, one can show that ${B/pB}$ is isomorphic to either ${{\mathbb F}_p^D}$ (if all the ${q_1,\dots,q_g}$ split in ${{\mathbb F}_p}$ ) or ${{\mathbb F}_{p^2}^{D/2}}$ (if at least one of the ${q_1,\dots,q_g}$ does not split). Furthermore, in the former case the ${D}$ copies of ${{\mathbb F}_p}$ organize into ${D/2}$ conjugate pairs (corresponding to flipping ${\alpha}$ to ${-\alpha}$ ), and in the latter case the ${D/2}$ copies of ${{\mathbb F}_{p^2}}$ organize into ${D/4}$ conjugate pairs. By selecting one element from each conjugate pair, and taking ${V}$ to be the joint kernel of such elements, we can generate either ${2^{D/2}}$ or ${2^{D/4}}$ different subspaces ${V}$ of dimension ${D/2}$ with the desired property that ${V \cdot \overline{V} = 0}$ . By the aforementioned Chinese remainder argument, this gives the ${2^{tD/4}}$ claimed lattices ${\Lambda}$ of index ${m^{D/2}}$ .
+
+Invoking Minkowski’s theorem, this now generates ${2^{tD/4}}$ non-zero vectors ${w}$ of height ${O( m^{1/2} G^{O(g)})}$ obeying (7) . There is a technical issue that some of these vectors could conceivably collide with each other; however there is a further Chinese remainder theorem argument (which I will omit here) that shows that any such ${w}$ can belong to at most ${O(G^{O(gD)})}$ such lattices. So the number of distinct ${w}$ generated by this argument is at least ${2^{tD/4} / O(G)^{O(gD)}}$ , and by pigeonholing one can now also get at least at least ${2^{tD/4} / O(G)^{O(gD)}}$ solutions to the equation
+
+$\displaystyle w \overline{w} = a m$ of height ${O( m^{1/2} G^{O(g)})}$ for some ${a \in B}$ of height ${O(G^{O(g)})}$ . As long as we select
+
+$\displaystyle g \log G \asymp g \log G \lll t,$ then the ${O(G^{O(gD)})}$ type factors can be neglected, and we approximately have
+
+$\displaystyle n \approx T^{D t / 2}, \quad d_{am}(P) \gtrapprox n 2^{Dt/4} \approx n^{1 + \frac{\log 2}{4 \log T}} \approx n^{1 + \frac{\log 2}{4 \log t}}$ up to lower order terms. If we choose ${g}$ to be a small multiple of ${t / \log t}$ , then we soon calculate that ${\log t \asymp \log\log\log n}$ , and we recover Theorem 3 .

@@ -22,17 +22,17 @@ import time
 from pathlib import Path
 from typing import Any
 
-import httpx
 import yaml
 
 PAPER_DIR = Path(__file__).resolve().parents[1]
-REPO = PAPER_DIR.parents[2]
 SPECIMENS = PAPER_DIR / "specimens"
 LOGS_DIR = PAPER_DIR / "logs"
 DATA_DIR = PAPER_DIR / "data"
 OUTPUT_DIR = PAPER_DIR / "output"
 
-sys.path.insert(0, str(REPO / "research" / "code"))
+# The logger ships beside this module in the published bundle, so the import
+# resolves without a repo-relative path that only exists in the working tree.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from llm_call_logger import log_call  # noqa: E402
 
 # 1.1.0 -- the pilot's one permitted product: refined annotation guidelines.
@@ -305,6 +305,11 @@ def call_model(
     max_out: int = 16000,
 ) -> str:
     """One logged, retried provider call. Returns raw response text."""
+    # Imported here, not at module scope: the pure parsing helpers in this
+    # module must stay importable for the offline analysis path, which
+    # declares no HTTP client because it makes no calls.
+    import httpx
+
     key = os.environ[FAMILY_KEYS[family]]
     endpoint = FAMILY_ENDPOINTS[family].format(model=model_id)
     prompt_sha = hashlib.sha256((system + "\n" + user).encode()).hexdigest()

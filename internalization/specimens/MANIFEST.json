@@ -1,5 +1,5 @@
 {
-  "retrieved": "2026-08-06",
+  "retrieved": "2026-08-07",
   "items": {
     "vc1": {
       "source": "https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/",
@@ -64,14 +64,6 @@
       "chars": 9907,
       "words": 1731,
       "short_line_share": 0.237
-    },
-    "pilot_2026ao": {
-      "source": "https://doi.org/10.5281/zenodo.20409683",
-      "kind": "spine-first-drafted corpus paper",
-      "sha256": "3b619c4eec0a3a809e75c3c330aa9f25841bbe844776fce5a392b49039ac0c9c",
-      "chars": 88195,
-      "words": 11062,
-      "short_line_share": 0.153
     }
   }
 }

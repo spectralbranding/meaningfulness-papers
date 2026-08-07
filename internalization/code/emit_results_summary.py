@@ -172,7 +172,7 @@ def main() -> int:
     out = L.OUTPUT_DIR / "tables" / "RESULTS_SUMMARY.md"
     out.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
-    print(f"\nwritten -> {out.relative_to(L.REPO)}")
+    print(f"\nwritten -> {out.relative_to(L.PAPER_DIR)}")
     return 0
 
 

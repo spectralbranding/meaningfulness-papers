@@ -1,0 +1,765 @@
+The notorious Jacobian conjecture can be formulated concretely over the complex numbers as follows.
+
+Conjecture 1 (Jacobian Conjecture) Let ${F:{\bf C}^n \rightarrow {\bf C}^n}$ be a polynomial map in ${n}$ complex variables, whose Jacobian ${\mathrm{det} DF}$ is a non-zero constant. Then ${F}$ is invertible (with polynomial inverse).
+
+The condition that the Jacobian ${\mathrm{det} DF}$ is non-zero is equivalent to ${F}$ being locally invertible. (The implication of local invertibility from non-vanishing Jacobian follows from the inverse function theorem; the converse implication can be derived from the Weierstrass preparation theorem , but is omitted here; see also Lemma 5 of this previous blog post .) Also, from the fundamental theorem of algebra, once the Jacobian polynomial ${\mathrm{det} DF}$ is non-zero, it must be constant. So the hypothesis “Jacobian ${\mathrm{det} DF}$ is a non-zero constant” can be replaced with “ ${F}$ is locally invertible”. So the Jacobian conjecture can be viewed as an assertion that local invertibility implies global invertibility. The complex numbers can be easily replaced with other fields of characteristic zero by the Lefschetz principle , but I prefer to work in the concrete setting of the complex numbers.
+
+It was recently shown (using the Fable AI) that the conjecture is false in three dimensions (and thus in higher dimensions as well):
+
+Theorem 2 (Counterexample to conjecture) There exists a polynomial ${F : {\bf C}^3 \rightarrow {\bf C}^3}$ which has non-zero constant Jacobian, but is not invertible.
+
+The conjecture remains open in two dimensions, and is easy to establish in one dimension.
+
+The example can be stated completely explicitly: one can take
+
+$\displaystyle F(z_1,z_2,z_3) = \Big((1+z_1 z_2)^3 z_3 + z_2^2 (1+z_1z_2) (4+3z_1z_2), \ \ \ \ \ (1)$
+
+$\displaystyle z_2 + 3 z_1 (1+z_1z_2)^2 z_3 + 3 z_1 z_2^2 (4+3z_1z_2),$
+
+$\displaystyle 2 z_1 - 3 z_1^2 z_2 - z_1^3 z_3\Big)$
+
+and one can verify by a brief calculation that
+
+$\displaystyle \mathrm{det} DF = -2$
+
+and
+
+$\displaystyle F(0,0,-1/4) = F(1,-3/2, 13/2) = F(-1,3/2,13/2)$
+
+$\displaystyle = (-1/4,0,0).$
+
+While this is an extremely quick verification, the construction presented in this fashion appears like a massive miracle. The polynomial
+
+${F}$
+
+has degree seven, so
+
+a priori
+
+the Jacobian
+
+${\mathrm{det} DF}$
+
+ought to be a polynomial in three variables of degree as large as
+
+${3 \times 6 = 18}$
+
+, so the fact that all non-constant coefficients of this polynomial vanish looks like a massive cancellation involving
+
+${\binom{18+3}{3}-1 = 1329}$
+
+equations, which is much larger than the
+
+${3 \times \binom{7+3}{3} = 360}$
+
+degrees of freedom for a generic degree seven polynomial map of three variables. So finding such a polynomial looks highly unlikely to be located by brute force.
+
+The example has since been retroactively explained in more geometric terms . As a “digestion” exercise to myself, I sought to write this explanation with relatively little use of algebraic geometry, in a manner that minimizes the amount of “miracles” required, although there are still a few places where some remarkable phenomena occur.
+
+It is convenient to use the local injectivity formulation, and to generalize the domain ${{\bf C}^3}$ to an equivalent affine variety. Namely, we will show
+
+Theorem 3 (Counterexample, reformulated) There exists an affine variety ${X \subset {\bf C}^5}$ that is isomorphic to ${{\bf C}^3}$ by polynomial changes of variable, and a polynomial map ${F : X \rightarrow {\bf C}^3}$ which is locally injective, but not globally injective.
+
+Clearly one can get from Theorem 3 to Theorem 2 by composing with the isomorphism ${X \cong {\bf C}^3}$ and using the previously mentioned fact that local injectivity implies non-zero constant Jacobian. Our objective is now to find data ${X}$ , ${F : X \rightarrow {\bf C}^3}$ that obeys three separate properties:
+
+(a) ${F}$ is locally injective on ${X}$ . (b) ${F}$ is not globally injective on ${X}$ . (c) ${X}$ is isomorphic to ${{\bf C}^3}$ by polynomial changes of variable.
+
+The advantage of splitting the problem in to these three components is that we can build towards each of them separately.
+
+(A pedantic remark: strictly speaking, in the arguments below, we not only replace the domain ${{\bf C}^3}$ of ${F}$ by an equivalent variety ${X}$ , but also replace the range ${{\bf C}^3}$ of ${F}$ by an equivalent variety ${V}$ . But the equivalence between ${V}$ and ${{\bf C}^3}$ is a boring linear isomorphism ( ${V}$ will just be a hyperplane in a four-dimensional vector space ${\mathrm{Sym}^3({\bf C}^2)}$ ), so we do not highlight this aspect of the construction.)
+
+It turns out that ${F}$ and ${X}$ can be built out of the operation of multiplication of low degree polynomials. Namely, consider the following three simple affine spaces:
+
+The space ${\mathrm{Sym}^1({\bf C}^2)}$ of linear homogeneous polynomials ${L(z,w) = az + bw}$ of two complex variables ${z,w}$ . The space ${\mathrm{Sym}^2({\bf C}^2)}$ of quadratic homogeneous polynomials ${Q(z,w) = cz^2 + dzw + ew^2}$ of two complex variables ${z,w}$ . The space ${\mathrm{Sym}^3({\bf C}^2)}$ of cubic homogeneous polynomials ${C(z,w) = fz^3 + gz^2w + hzw^2 + iw^3}$ of two complex variables ${z,w}$ .
+
+(The notation
+
+${\mathrm{Sym}^k(V)}$
+
+here refers to the
+
+${k^{th}}$
+
+symmetric power
+
+of a vector space
+
+${V}$
+
+.) Clearly these spaces are isomorphic to
+
+${{\bf C}^2, {\bf C}^3, {\bf C}^4}$
+
+respectively. Furthermore, we have a multiplication map
+
+${F : \mathrm{Sym}^1({\bf C}^2) \times \mathrm{Sym}^2({\bf C}^2) \rightarrow \mathrm{Sym}^3({\bf C}^2)}$
+
+, mapping a pair
+
+${(L,Q)}$
+
+of a linear polynomial
+
+${L}$
+
+and a quadratic polynomial
+
+${Q}$
+
+to a cubic polynomial
+
+$\displaystyle F(L,Q) := LQ.$
+
+(Right now, the domain and range of this map
+
+${F}$
+
+is larger dimensional than the target of three; we will cut the dimensions down to three as the argument progresses.)
+
+The map ${F}$ , essentially a map from ${{\bf C}^5}$ to ${{\bf C}^4}$ , is clearly polynomial; it is given explicitly in coordinates as
+
+$\displaystyle F( (a,b), (c,d,e) ) = (ac, ad + bc, ae + bd, be). \ \ \ \ \ (2)$
+
+The map
+
+${F}$
+
+also enjoys two basic (and commuting) symmetries:
+
+If one applies a scaling ${(L,Q) \mapsto (\lambda_1 L, \lambda_2 Q)}$ for some non-zero complex numbers ${\lambda_1, \lambda_2}$ , then the product ${LQ}$ is scaled by ${C \mapsto \lambda_1 \lambda_2 C}$ : ${F( \lambda_1 L, \lambda_2 Q) = \lambda_1 \lambda_2 F(L,Q)}$ . If one applies a change of variables ${(L, Q) \mapsto (L \circ T, Q \circ T)}$ for some invertible linear transformation ${T \in \mathrm{SL}_2({\bf C})}$ , then the product ${LQ}$ is transformed by ${C \mapsto C \circ T}$ : ${F(L \circ T, Q \circ T) = F(L,Q) \circ T}$ .
+
+So this map enjoys a huge amount of equivariance, basically with respect to an action of the five-dimensional group
+
+${{\bf C}^\times \times {\bf C}^\times \times \mathrm{SL}_2({\bf C})}$
+
+.
+
+The five-dimensional domain ${\mathrm{Sym}^1({\bf C}^2) \times \mathrm{Sym}^2({\bf C}^2)}$ is of course larger than the four-dimensional range ${\mathrm{Sym}^3({\bf C}^2)}$ , so the map ${F}$ clearly cannot be injective. This can already be seen from the scaling symmetry, as the specific scalings
+
+$\displaystyle (L, Q) \mapsto (\lambda L, \lambda^{-1} Q) \ \ \ \ \ (3)$
+
+for
+
+${\lambda \in {\bf C}^\times}$
+
+modify the linear and quadratic polynomials
+
+${L,Q}$
+
+but not their product
+
+${C = LQ}$
+
+. But even if one quotients out by this symmetry
+
+(3)
+
+to cut the dimension of the domain down to four, the map
+
+${F}$
+
+is still not injective for the following basic reason. A generically chosen cubic polynomial
+
+${C}$
+
+will split into the product
+
+${C = L_1 L_2 L_3}$
+
+of three independent linear polynomials. Then there are three pairs
+
+$\displaystyle (L_1, L_2 L_3), (L_2, L_1 L_3), (L_3, L_1 L_2) \ \ \ \ \ (4)$
+
+which all map to the same cubic polynomial
+
+$\displaystyle F(L_1, L_2 L_3) = F(L_2, L_1 L_3) = F(L_3, L_1 L_2) = C$
+
+under the multiplication map
+
+${F}$
+
+, but are not related to each other by scaling symmetry
+
+(3)
+
+. Thus, we see that even after quotienting out by the scaling symmetry
+
+(3)
+
+, the multiplication map
+
+${F}$
+
+is generically non-injective in a three-to-one fashion. Thus we already have achieved something resembling goal (b)!
+
+It will be convenient to “spend” the scaling symmetry ${(L, Q) \mapsto (\lambda L, \lambda^{-1} Q)}$ to obtain a useful normalization. If ${L(z,w) = az+bw}$ is a linear polynomial and ${Q(z,w) = cz^2 + dzw + ew^2}$ is a quadratic polynomial, the (homogeneous) resultant ${\mathrm{Res}(L,Q)}$ can be defined by the determinant
+
+$\displaystyle \mathrm{Res}(L,Q) = \begin{vmatrix} a & b & 0 \\ 0 & a & b \\ c & d & e \end{vmatrix} = a^2 e - abd + c b^2. \ \ \ \ \ (5)$
+
+If we have a factorization
+
+$\displaystyle L(z,w) = a (z - \alpha w), \quad Q(z,w) = c (z - \beta_1 w)(z - \beta_2 w)$
+
+then the resultant can also be described as
+
+$\displaystyle \mathrm{Res}(L,Q) = a^2 c (\alpha - \beta_1) (\alpha - \beta_2).$
+
+Thus the resultant measures whether the linear polynomial
+
+${L}$
+
+and the quadratic polynomial
+
+${Q}$
+
+share a common root. A fundamental fact about resultants is that they are
+
+${SL_2}$
+
+-invariant: for any
+
+${T \in SL_2({\bf C})}$
+
+, we have
+
+$\displaystyle \mathrm{Res}(L \circ T, Q \circ T) = \mathrm{Res}(L,Q).$
+
+One way to see this is to check it first for translations
+
+${(z,w) \mapsto (z + hw, w)}$
+
+(which translate the roots
+
+${\alpha,\beta_1,\beta_2}$
+
+by
+
+${-h}$
+
+while leaving
+
+${a,c}$
+
+unchanged) and for inversions
+
+${(z,w) \mapsto (w,-z)}$
+
+(which map
+
+${\alpha,\beta_1,\beta_2}$
+
+to
+
+${-1/\alpha, -1/\beta_1, -1/\beta_2}$
+
+while mapping
+
+${a,c}$
+
+to
+
+${a\alpha}$
+
+and
+
+${c\beta_1 \beta_2}$
+
+respectively), and then noting that these transformations generate all of
+
+${SL_2({\bf C})}$
+
+. They also interact very nicely with scaling:
+
+$\displaystyle \mathrm{Res}(\lambda_1 L, \lambda_2 Q) = \lambda_1^2 \lambda_2 \mathrm{Res}(L,Q).$
+
+In particular, the scaling symmetry
+
+(3)
+
+multiplies
+
+${\mathrm{Res}(L,Q)}$
+
+by
+
+${\lambda}$
+
+:
+
+$\displaystyle \mathrm{Res}(\lambda L, \lambda^{-1} Q) = \lambda \mathrm{Res}(L,Q). \ \ \ \ \ (6)$
+
+Thus, we can (generically) normalize away this scaling symmetry by imposing the condition
+
+$\displaystyle \mathrm{Res}(L,Q) = 1. \ \ \ \ \ (7)$
+
+We now have a restricted multiplication map (which by abuse of notation we will continue to call ${F}$ ) from the four-dimensional variety
+
+$\displaystyle \{ (L,Q) \in \mathrm{Sym}^1({\bf C}^2) \times \mathrm{Sym}^2({\bf C}^2) : \mathrm{Res}(L,Q) = 1\} \ \ \ \ \ (8)$
+
+to the four-dimensional space
+
+${\mathrm{Sym}^3({\bf C}^2)}$
+
+. This map
+
+${F}$
+
+is still not globally injective, as we can take the three pairs in
+
+(4)
+
+from before and apply the scaling
+
+(3)
+
+separately to each of the three pairs to obtain the normalization
+
+(7)
+
+. So we have kept property (b). Furthermore, this map retains the
+
+${SL_2}$
+
+-equivariance (and also one remaining scaling symmetry, though we will not make much further use of that symmetry).
+
+But we now also have property (a)! Suppose we want to show the local injectivity of ${F}$ in the neighborhood of a pair ${(L,Q)}$ with ${\mathrm{Res}(L,Q) = 1}$ . As the resultant is non-vanishing, the root ${\alpha}$ of ${L}$ (which exists in the Riemann sphere, or projective line if you prefer) is distinct from the two roots ${\beta_1, \beta_2}$ of ${Q}$ (though the latter two roots could be equal to each other). Applying the ${SL_2}$ action (which performs Möbius transforms on the roots), one can assume without loss of generality that ${\alpha}$ is the point at infinity (or equivalently ${a=0}$ ), thus ${L(z,w) = b w}$ for some complex number ${b}$ and ${Q(z,w) = c (z - \beta_1 w)(z - \beta_2 w)}$ for some complex numbers ${c, \beta_1, \beta_2}$ , with the resultant condition (7) simplifies to ${cb^2 = 1}$ (so in particular ${c,b}$ are also non-zero). It is then clear that if one perturbs ${L}$ and ${Q}$ by a small amount (say, modifying each coefficient by ${O(\varepsilon)}$ ), then the root ${\alpha=\infty}$ of ${L}$ will perturb to something large ( ${\gg 1/\varepsilon}$ ), while the roots ${\beta_1,\beta_2}$ of ${Q}$ stay bounded. Thus, just from knowledge of the product ${F(L,Q)}$ , one can reconstruct which of the three roots of this cubic polynomial will be the perturbed root of ${L}$ , and which two will be the perturbed roots of ${Q}$ ; from this and (6) , (7) we can also reconstruct the leading coefficient ${c}$ of ${Q}$ , and this completely determines both ${L}$ and ${Q}$ . This establishes the local injectivity property (a). (In fact it is étale , but we will not need the machinery of étale maps here.)
+
+Unfortunately, (the four-dimensional analogue of) condition (c) fails: the quadric hypersurface (8) is not isomorphic to the affine space ${{\bf C}^4}$ . But we can try to get around this by passing to a three-dimensional slice. Let ${V}$ be some three-dimensional affine plane of ${\mathrm{Sym}^3({\bf C}^2)}$ (which we will take to avoid the origin for technical reasons), then we can restrict ${F}$ as a map from the set
+
+$\displaystyle \{ (L,Q) \in \mathrm{Sym}^1({\bf C}^2) \times \mathrm{Sym}^2({\bf C}^2) : \mathrm{Res}(L,Q) = 1; \ \ \ \ \ (9)$
+
+$\displaystyle F(L,Q) \in V\}$
+
+to
+
+${V}$
+
+.
+
+${V}$
+
+is clearly identifiable (by linear changes of coordinate) to
+
+${{\bf C}^3}$
+
+. As
+
+${F}$
+
+was already locally invertible, it remains locally invertible under restriction; and because generic cubic polynomials
+
+${C}$
+
+had three preimages under
+
+${F}$
+
+in
+
+(8)
+
+, this continues to be the case after restricting to
+
+(9)
+
+(unless
+
+${V}$
+
+was somehow so degenerate that it had no generic elements, but this turns out to be impossible). So we have retained properties (a) and (b). The miracle is that, with a good choice of
+
+${V}$
+
+, we can also obtain (c) and obtain the desired counterexample to the Jacobian conjecture: despite appearances, the variety
+
+(9)
+
+is in fact equivalent to the affine space
+
+${{\bf C}^3}$
+
+by polynomial changes of variable!
+
+Let’s see how. The affine hyperplanes in ${\mathrm{Sym}^3({\bf C}^2)}$ avoiding the origin are parameterized by the dual space of ${\mathrm{Sym}^3({\bf C}^2)}$ avoiding the origin, which one can think of as the non-zero third order homogeneous differential operators ${D = j \partial_z^3 + k \partial_z^2 \partial_w + l \partial_z \partial_w^2 + m \partial_w^3}$ in two variables. Indeed, every such operator ${D}$ generates an affine hyperplane ${\{ C \in \mathrm{Sym}^3({\bf C}^2) : D(C) = 1\}}$ that avoids the origin, and conversely by duality every affine hyperplane avoiding the origin arises in this form uniquely. Just as the cubic polynomials in ${\mathrm{Sym}^3({\bf C}^2)}$ can be factored into three linear polynomials, the differential operators in the dual space ${\mathrm{Sym}^3({\bf C}^2)^*}$ can also be factored into three linear differential operators, e.g.,
+
+$\displaystyle D = j (\partial_z - \gamma_1 \partial_w) (\partial_z - \gamma_2 \partial_w) (\partial_z - \gamma_3 \partial_w)$
+
+in the case that
+
+${j}$
+
+is non-zero. The
+
+${SL_2}$
+
+action moves the roots
+
+${\gamma_1,\gamma_2,\gamma_3}$
+
+around the Riemann sphere by Möbius transformations. As these transformations are
+
+${3}$
+
+-transitive, the actual selection of such roots is not too important (and the scaling symmetry similarly makes the choice of leading coefficient
+
+${j}$
+
+unimportant); the only thing to keep track of is whether the roots repeat. Up to the symmetries, there are in fact just three different equivalence classes of differential operator
+
+${D}$
+
+(and thus of affine hyperplane
+
+${V}$
+
+) to consider:
+
+Operators where the three roots ${\gamma_1,\gamma_2,\gamma_3}$ are all distinct, thus ${D = D_1 D_2 D_3}$ for independent first-order operators ${D_1,D_2,D_3}$ . Operators where two roots coincide and one is distinct, thus ${D = D_1^2 D_2}$ for independent first-order operators ${D_1,D_2}$ . Operators where all three roots coincide, thus ${D = D_1^3}$ for some first-order operator ${D_1}$ .
+
+It turns out that the affine miracle for (9) occurs precisely in the second case, when ${D}$ has two identical roots. I do not have a completely satisfactory geometric explanation for this miracle, but one can verify it by the following coordinate computation.
+
+By applying the ${SL_2}$ action, we can normalize so that ${D = \frac{1}{2} \partial_z^2 \partial_w}$ , thus ${V}$ is now the affine hyperplane of cubic polynomials ${C(z,w) = f z^3 + g z^2 w + h z w^2 + i w^3}$ with ${g=1}$ . Using (2) and (5) , the variety (9) can now be described explicitly in coordinates as
+
+$\displaystyle \{ (a,b,c,d,e) \in {\bf C}^5 : a^2 e - abd + cb^2 = 1; ad + bc = 1 \}. \ \ \ \ \ (10)$
+
+At first glance this seems to be a generic-looking variety cut out by a cubic equation and a quadratic equation – hardly a candidate to be affine! But observe that if
+
+${a}$
+
+is non-zero, then the second equation
+
+${ad+bc = 1}$
+
+can be solved for
+
+${d}$
+
+,
+
+$\displaystyle d = \frac{1 - bc}{a} \ \ \ \ \ (11)$
+
+and the first equation
+
+${a^2 e - abd + cb^2 = 1}$
+
+can be solved for
+
+${e}$
+
+,
+
+$\displaystyle e = \frac{1 + abd - cb^2}{a^2}. \ \ \ \ \ (12)$
+
+Putting these two equations together, we see that as long as one removes the case
+
+${a=0}$
+
+, the quintuple
+
+${(a,b,c,d,e)}$
+
+is uniquely determined by
+
+${(a,b,c)}$
+
+by a change of variables which is Laurent in
+
+${a}$
+
+and polynomial in
+
+${b,c}$
+
+. Thus we have a nice birational equivalence
+
+$\displaystyle \{ (a,b,c,d,e) \in {\bf C}^5 : a^2 e - abd + cb^2 = 1; ad + bc = 1; a \neq 0 \}$
+
+$\displaystyle \cong \{ (a,b,c) \in {\bf C}^3 : a \neq 0 \}.$
+
+Thus we have already
+
+almost
+
+established property (c): the variety
+
+(9)
+
+becomes birationally equivalent to
+
+${{\bf C}^3}$
+
+after cutting out the
+
+${a=0}$
+
+subvariety. In particular, for each fixed non-zero value
+
+${a_0}$
+
+of
+
+${a}$
+
+, the corresponding fiber
+
+$\displaystyle \{ (a,b,c,d,e) \in {\bf C}^5 : a^2 e - abd + cb^2 = 1; ad + bc = 1; a = a_0 \}$
+
+of
+
+(10)
+
+is equivalent to
+
+${{\bf C}^2}$
+
+by polynomial changes of variable, since we can reconstruct
+
+${d,e}$
+
+from the coordinates
+
+${b,c}$
+
+by the polynomial formulae
+
+$\displaystyle d = \frac{1-bc}{a_0}; \quad e = \frac{1 + a_0 d b - c b^2}{a_0^2}.$
+
+So we just need to glue back in the ${a=0}$ fiber. Indeed, from (10) we see that the fiber at ${0}$ is just
+
+$\displaystyle \{ (0,b,c,d,e) \in {\bf C}^5 : cb^2 = 1; bc = 1 \}.$
+
+Now we observe a key miracle: the cubic equation
+
+${cb^2 = 1}$
+
+and quadratic equation
+
+${bc = 1}$
+
+have a unique affine solution
+
+${b=c=1}$
+
+(as opposed to the six possible solutions that Bezout’s theorem might suggest – the other five solutions live on the line at infinity). So the fiber here is also affine:
+
+$\displaystyle \{ (0,1,1,d,e) \in {\bf C}^5 : d, e \in {\bf C} \}.$
+
+This is extremely encouraging for the purposes of establishing property (c), as it strongly suggests that the variety
+
+(10)
+
+has the structure of an
+
+${{\bf C}^2}$
+
+-bundle over
+
+${{\bf C}^1}$
+
+, which is already extremely close to being isomorphic to the affine space
+
+${{\bf C}^3}$
+
+. The main remaining task is to make sure that nothing singular happens in the limit
+
+${a \rightarrow 0}$
+
+, and that a global polynomial coordinate chart for
+
+(10)
+
+that covers both the
+
+${a \neq 0}$
+
+and
+
+${a = 0}$
+
+fibers can be constructed.
+
+The standard way to proceed here is to manipulate various tangent spaces using the modern machinery of algebraic geometry and commutative algebra, but given my own background, I prefer to adopt the language of analysis, and in particular big-O notation (in place of the ideals used in algebraic geometry), in order to investigate the limit ${a \rightarrow 0}$ by hand. On the variety (10) , let us use ${O(X)}$ to denote any multiple of ${X}$ by a polynomial expression in ${a,b,c,d,e}$ . Thus, for instance, the equation ${ad + bc = 1}$ implies that
+
+$\displaystyle bc = 1 + O(a) \ \ \ \ \ (13)$
+
+while the equation
+
+${a^2 e - abd + cb^2 = 1}$
+
+implies that
+
+$\displaystyle cb^2 = 1 + O(a) \ \ \ \ \ (14)$
+
+as well as the more refined estimate
+
+$\displaystyle cb^2 = 1 + abd + O(a^2). \ \ \ \ \ (15)$
+
+In the
+
+${a=0}$
+
+case we could conclude that
+
+${b=c=1}$
+
+. Now we perturb this observation. Multiplying
+
+(13)
+
+by
+
+${b}$
+
+we have
+
+${b^2 c = b + O(a)}$
+
+, which on substitution into
+
+(14)
+
+gives
+
+${b = 1 + O(a)}$
+
+; substituting this back into either
+
+(13)
+
+or
+
+(14)
+
+also gives
+
+${c = 1 + O(a)}$
+
+.
+
+We can get some more precise asymptotics by also taking advantage of (15) . Substituting ${ad+bc=1}$ into (15) , we obtain after some algebra
+
+$\displaystyle 2 cb^2 = 1 + b + O(a^2).$
+
+So if we write
+
+${b = 1+O(a)}$
+
+more explicitly as
+
+${b = 1 + a y}$
+
+, then we have
+
+$\displaystyle 2 c (1 + 2ay + O(a^2)) = 2 + ay + O(a^2)$
+
+and thus
+
+$\displaystyle c = 1 - \frac{3}{2} ay + O(a^2). \ \ \ \ \ (16)$
+
+Substituting this back into
+
+(11)
+
+gives an asymptotic for
+
+${d}$
+
+:
+
+$\displaystyle d = \frac{1 - bc}{a}$
+
+$\displaystyle = \frac{1 - (1 + ay) (1 - \frac{3}{2} ay + O(a^2))}{a}$
+
+$\displaystyle =\frac{1}{2} y + O(a).$
+
+Finally, one can insert these estimates into
+
+(12)
+
+, although one only gets a trivial bound in this case:
+
+$\displaystyle e = \frac{1 + abd - cb^2}{a^2}$
+
+$\displaystyle = \frac{1 + a (1+O(a)) (\frac{1}{2} y + O(a)) - (1 - \frac{3}{2} ay + O(a^2)) (1 + ay)^2}{a^2}$
+
+$\displaystyle = O(1).$
+
+Expanding the ${O(a^2)}$ error term in (16) as ${a^2 z}$ , and doing a little more algebra, we thus have a polynomial change of variables
+
+$\displaystyle a = a$
+
+$\displaystyle b = 1 + ay$
+
+$\displaystyle c = 1 - \frac{3}{2} ay + a^2 z$
+
+$\displaystyle d = \frac{1-bc}{a} = \frac{1}{2} y - az + \frac{3}{2} a y^2 - a^2 yz$
+
+$\displaystyle e = \frac{1 + abd - cb^2}{a^2} = -2z + 4y^2 - 4ayz + 3ay^3 - 2a^2 y^2 z$
+
+which completely parameterizes the variety
+
+(10)
+
+by polynomial combinations of three coordinates
+
+${a,y,z}$
+
+. This already gives (c) and thus completes the proof of Theorem
+
+.
+
+The previous computations, when expanded out, also gives polynomial inverse maps:
+
+$\displaystyle a = a$
+
+$\displaystyle y = 2bd - ae$
+
+$\displaystyle z = 2d^2 + ce + 6bd^2 + 3bce - \frac{9}{2} e$
+
+The map from
+
+${(a,y,z)}$
+
+to the
+
+${(f,h,i)}$
+
+coefficients of
+
+${F(L,Q)}$
+
+(dropping the
+
+${g}$
+
+coefficient which is constrained to equal
+
+${1}$
+
+), we obtain a polynomial map
+
+$\displaystyle (a,y,z) \mapsto (G_1(a,y,z), G_2(a,y,z), G_3(a,y,z))$
+
+with
+
+$\displaystyle \begin{array}{rl} G_1(a,y,z) &= a - \frac{3}{2} a^2 y + a^3 z \\ G_2(a,y,z) &= \frac{1}{2} y - 3az + 6ay^2 - 6a^2 yz + \frac{9}{2} a^2 y^3 - 3a^3 y^2 z \\ G_3(a,y,z) &= -2z + 4y^2 - 6ayz + 7ay^3 - 6a^2 y^2 z + 3a^2 y^4 \\ & \quad - 2 a^3 y^3 z \end{array}$
+
+which theory predicts to have a constant Jacobian, and indeed one can calculate that the Jacobian is
+
+${-1}$
+
+. This is essentially the original example up to trivial changes of variable; indeed, one can check that the map
+
+$\displaystyle (a, y, -2z) \mapsto (G_3(a,y,z), 2G_2(a,y,z), 2G_1(a,y,z))$
+
+is exactly the map
+
+${F}$
+
+given in
+
+(1)
+
+.
+
+AI disclosure: I used an AI chatbot to discuss various aspects of this problem and to confirm several of the calculations made here.

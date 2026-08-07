@@ -164,7 +164,7 @@ def main() -> int:
     rec = results["third_rater_recourse"]
     share = rec["resolved"] / rec["targets"] if rec["targets"] else 0
     print(f"\nthird-rater recourse: {rec['resolved']}/{rec['targets']} = {share:.3f}")
-    print(f"written -> {out.relative_to(L.REPO)}")
+    print(f"written -> {out.relative_to(L.PAPER_DIR)}")
     return 0
 
 

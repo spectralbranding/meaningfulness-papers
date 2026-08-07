@@ -162,7 +162,7 @@ def main() -> int:
             f"{r['layer2']['triple_f1']:>6.3f} {r['layer2']['null']['p99']:>7.3f} "
             f"{r['layer3']['spearman_rho']:>7.3f}"
         )
-    print(f"\nwritten -> {path.relative_to(L.REPO)}")
+    print(f"\nwritten -> {path.relative_to(L.PAPER_DIR)}")
     return 0
 
 

@@ -34,9 +34,27 @@ DEPS_ANALYSIS="--with numpy --with scipy --with pyyaml --with httpx"
 DEPS_COLLECT="--with httpx --with pyyaml"
 
 echo "== unit suite (must pass before anything) ==" | tee -a "$LOG"
-uv run --with pytest --with numpy python -m pytest code/tests -q 2>&1 | tee -a "$LOG"
+# The suite must run under the SAME dependency set as the analysis it
+# guards. Declaring a narrower set here let two tests fail on an import
+# in the published bundle while passing wherever the deps happened to be
+# cached -- the failure mode a reproduction script exists to prevent.
+uv run --with pytest $DEPS_ANALYSIS python -m pytest code/tests -q 2>&1 | tee -a "$LOG"
 
-if [[ "${1:-}" == "--fetch" ]]; then
+# The specimen texts are third-party works and are NOT redistributed, so a
+# fresh clone has none and the ladder's prose-mass step would die on a missing
+# file. Fetch them when they are absent rather than failing: this is the one
+# step that touches the network, it needs no credentials, and every file is
+# verified against the digests in specimens/MANIFEST.json before use.
+NEED_SPECIMENS=0
+while read -r name; do
+    [ -f "specimens/${name}.txt" ] || NEED_SPECIMENS=1
+done < <(uv run --with pyyaml python -c "
+import json,pathlib
+m=json.loads(pathlib.Path('specimens/MANIFEST.json').read_text())
+print('\n'.join((m.get('specimens') or m).keys()))
+")
+
+if [[ "${1:-}" == "--fetch" || "$NEED_SPECIMENS" == "1" ]]; then
     echo "== specimens: fetch and hash ==" | tee -a "$LOG"
     uv run --with requests --with beautifulsoup4 python code/prepare_specimens.py 2>&1 | tee -a "$LOG"
 fi

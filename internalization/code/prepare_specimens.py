@@ -33,8 +33,11 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-ROOT = Path(__file__).resolve().parents[4]
-OUT = ROOT / "[internal path removed]"
+PAPER_DIR = Path(__file__).resolve().parents[1]
+OUT = PAPER_DIR / "specimens"
+# Optional local copies. Present in the authoring tree; absent from a published
+# clone, where the public URL beside each one is used instead.
+LOCAL_CACHE = PAPER_DIR.parents[2] / "research" / "references"
 UA = {"User-Agent": "Mozilla/5.0 (compatible; 2026bk-specimen-fetch/1.0)"}
 
 # --- source declarations ---------------------------------------------------
@@ -54,7 +57,7 @@ TURING_PDF = "https://courses.cs.umbc.edu/471/papers/turing.pdf"
 
 # VC3 rungs R0/R1 -- one document, published by the producing organization,
 # which states the provenance of the verbatim block itself.
-PLANAR_PDF_LOCAL = ROOT / "[internal path removed]"
+PLANAR_PDF_LOCAL = LOCAL_CACHE / "openai-2026-planar-point-sets.pdf"
 PLANAR_PDF_URL = "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf"
 # Declared anchors, verbatim from the source document.
 R0_START = "Final Response from Internal Model."
@@ -73,8 +76,10 @@ PILOT_PDF: dict[str, str] = {}
 PILOT_LOCAL_MD = {
     # A spine-first-drafted corpus paper: the one pilot document for which an
     # authored reference spine exists, which is why it is in the pilot set.
-    "pilot_2026ao": ROOT
-    / "[internal path removed]",
+    # An authoring-tree sibling. The pilot rounds were DISCARDED and no reported
+    # number depends on this file, so a clone that does not hold it skips the
+    # specimen and loses nothing; its public copy is the 2026ao Zenodo record.
+    "pilot_2026ao": PAPER_DIR.parent / "2026ao" / "paper.md",
 }
 
 
@@ -136,6 +141,17 @@ def pdf_text(path: Path) -> str:
         check=True,
     )
     return proc.stdout
+
+
+def pdf_text_from_url(url: str) -> str:
+    """Same as pdf_text, for the case where no local copy is held. A published
+    clone has no authoring-tree cache, so it takes the declared public URL."""
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as td:
+        dest = Path(td) / "source.pdf"
+        fetch_pdf(url, dest)
+        return pdf_text(dest)
 
 
 def fetch_pdf(url: str, dest: Path) -> Path:
@@ -212,7 +228,10 @@ def main() -> int:
         manifest,
     )
 
-    planar = pdf_text(PLANAR_PDF_LOCAL)
+    if PLANAR_PDF_LOCAL.is_file():
+        planar = pdf_text(PLANAR_PDF_LOCAL)
+    else:
+        planar = pdf_text_from_url(PLANAR_PDF_URL)
     r0, r1 = cut(planar, R0_START, R0_END)
     emit(
         "vc3_r0",
@@ -249,11 +268,14 @@ def main() -> int:
             manifest,
         )
     for name, path in PILOT_LOCAL_MD.items():
+        if not path.is_file():
+            print(f"  skip {name}: not present in this checkout (discarded pilot round)")
+            continue
         emit(
             name,
             strip_references(path.read_text(encoding="utf-8")),
             {
-                "source": str(path.relative_to(ROOT)),
+                "source": "https://doi.org/10.5281/zenodo.20409683",
                 "kind": "spine-first-drafted corpus paper",
             },
             manifest,
@@ -266,7 +288,7 @@ def main() -> int:
     )
     for tmp in OUT.glob("_*.pdf"):
         tmp.unlink()
-    print(f"\nmanifest -> {(OUT / 'MANIFEST.json').relative_to(ROOT)}")
+    print(f"\nmanifest -> {(OUT / 'MANIFEST.json').relative_to(PAPER_DIR)}")
     return 0
 
 

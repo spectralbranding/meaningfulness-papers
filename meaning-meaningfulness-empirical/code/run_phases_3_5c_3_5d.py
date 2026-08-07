@@ -20,7 +20,7 @@ Prompt-purity discipline per PROMPT_PURITY_PROTOCOL.md:
 
 Run:
     bws run -- uv run --with openai --with anthropic --with httpx \\
-        python [internal path removed]
+        python code/run_phases_3_5c_3_5d.py
 
 Fixed seed: 42 (per PAPER_QUALITY_STANDARDS 37a).
 """

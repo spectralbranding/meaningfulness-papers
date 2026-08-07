@@ -12,7 +12,7 @@ in phase_3_5d_runs/ and are reused as-is.
 Run command:
 
     cd [internal path removed]
-    uv run python [internal path removed]
+    uv run python code/run_phase_3_5d_only.py
 """
 
 from __future__ import annotations

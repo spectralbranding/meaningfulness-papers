@@ -13,7 +13,7 @@ Run command:
 
     cd [internal path removed]
     uv run --with anthropic --with openai --with httpx --with PyYAML \
-        python [internal path removed]
+        python code/run_phase_3_5d_complete.py
 """
 
 from __future__ import annotations

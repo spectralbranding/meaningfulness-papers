@@ -17,7 +17,7 @@ Run:
 
 Outputs:
     [internal path removed]<id>.txt
-    [internal path removed]
+    specimens/MANIFEST.json
 """
 
 from __future__ import annotations

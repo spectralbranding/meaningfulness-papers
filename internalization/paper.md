@@ -353,7 +353,11 @@ Published with the record: the pre-declared protocol, decision rule and reader m
 extraction harness and every scoring script; the extracted graphs for all five documents and both
 arms, including the discarded pilot rounds; the blind alignments and the per-rater target
 judgments; and a JSONL log of every model call carrying its prompts, prompt hash, parameters,
-response and token usage.
+response and token usage. The code and the machine-readable bundle are in the paper's public
+repository at
+[github.com/spectralbranding/meaningfulness-papers](https://github.com/spectralbranding/meaningfulness-papers/tree/main/internalization);
+the protocol layers, the records and the complete call logs are archived together as a Hugging Face
+dataset (DOI [10.57967/hf/9898](https://doi.org/10.57967/hf/9898)).
 
 Not redistributed: the specimen texts themselves, which are third-party works. The three specimens
 are publicly available — the matched pair, R0 and R1, in a single document from its producing

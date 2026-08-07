@@ -1,0 +1,616 @@
+spine_version: "0.2"
+spine_doc_version: "0.9.0"
+paper_key: "2026bl"
+title: "Unitization Before Extraction: A Pre-Registered Decomposition of Disagreement in Machine Recovery of Dependency Structure"
+provenance: "new"
+thesis: |
+  Round 1 established that two machine operators do not recover the dependency structure of
+  argumentative documents at a pre-declared agreement level, and located the failure upstream of
+  relation labelling. It could not go further: unitization, node typing and relation drawing varied
+  at once, so no quantity separates them, and each document was extracted once per arm, so
+  between-operator disagreement is not distinguishable from one operator's run-to-run variance.
+  This paper fixes the unit inventory before extraction and repeats every extraction, which turns
+  one undifferentiated failure into three separately measured components read against a noise
+  floor. The claim under test is Round 1's own closing recommendation, stated so that it can fail.
+
+# ---------------------------------------------------------------------------
+# Boundary conditions -- the design does not apply outside these.
+# ---------------------------------------------------------------------------
+boundary_conditions:
+  - id: C1
+    statement: >-
+      The artifact carries an argument with a recoverable dependency structure. Inherited from
+      Round 1 unchanged; data releases, catalogues and purely narrative work stay out of scope.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: C2
+    statement: >-
+      In the intervention conditions a unit inventory is fixed BEFORE any extraction and supplied
+      identically to both operators. Every quantity is relative to the inventory it was computed
+      under, and quantities from different inventories -- including the free condition, which has
+      none -- are NOT compared by magnitude. The free and fixed conditions are contrasted by what
+      each makes measurable, not by whose coefficient is larger, because the two occupy different
+      probability spaces.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: C3
+    statement: >-
+      The specimen corpus is held fixed at Round 1's five documents. The paper measures the effect
+      of the unitization condition, not the effect of a corpus, and a changed corpus would confound
+      the two.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: C4
+    statement: >-
+      NEGATIVE SCOPE. Two conditions under which this design is expected to produce an
+      uninterpretable result even when executed correctly. (i) IF NODE SELECTION IS NEAR-UNIVERSAL
+      over the fixed inventory, node-selection agreement is high by construction and carries no
+      information; a base-rate-aware chance model and a declared floor are required before the run,
+      not after it. (ii) IF THE UNITIZER'S OWN ERROR IS LARGE on a document, the operators inherit
+      it identically and the measured agreement describes the unitizer rather than the operators.
+      Unit segmentation is a hard task across domains, so this is a live condition and not a
+      formality.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: C5
+    statement: >-
+      THE FRAMING HAS ITS OWN LIMIT, and it is declared rather than left for a reader to find. The
+      diagnostic-replication frame licenses reusing the predecessor's five documents, because the
+      object under study is a mechanism of failure and holding the corpus fixed is what isolates it.
+      That licence lapses the moment a reader takes the paper to be estimating how often extraction
+      fails, or how well it would work on other documents. Under that reading the corpus reuse is a
+      defect rather than a requirement, and the design supports no answer at all. The paper claims a
+      controlled contrast on a fixed corpus; where a claim about frequency, coverage or transfer is
+      wanted, this design is out of scope rather than weakly informative.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+
+# ---------------------------------------------------------------------------
+# Assumptions carried without test
+# ---------------------------------------------------------------------------
+assumption_atoms:
+  - id: AA1
+    statement: >-
+      RETIRED at Phase 1, and replaced rather than defended. The original form assumed a fixed
+      inventory leaves quantities comparable with the free-unitization round. The measurement
+      literature says otherwise: unitizing coefficients and fixed-index classification coefficients
+      occupy different probability spaces and their magnitudes are not commensurable. The design no
+      longer needs the assumption, because the free-unitization condition now runs IN-STUDY as a
+      third arm, so the contrast is within one study, one operator pair and one epoch.
+    status: "RETIRED 2026-08-07 -- replaced by the in-study U-free arm, not carried"
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: AA2
+    statement: >-
+      RETIRED AS STATED at Phase 1. The original form assumed repeated calls estimate a stable
+      within-operator noise floor, treating the operator as stationary. Hosted endpoints are not
+      stationary: provider-side dynamic batching makes temperature-zero decoding nondeterministic,
+      so variance across repeated calls carries a component of infrastructure conditions, and silent
+      model updates add drift across any window that is not tight. What replaces it is not a repair
+      but a redefinition of the measured quantity -- see P2.
+    status: "RETIRED AS STATED 2026-08-07 -- the quantity is redefined, not the assumption rescued"
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: AA3
+    statement: >-
+      Two arms from different model families are an OPERATIONAL separation and not a statistical
+      one. Nothing guarantees uncorrelated errors, and where they correlate positively agreement is
+      easier to obtain. Inherited from Round 1's L5.
+    status: "untested; direction declared -- it makes a pass weak and a failure conservative"
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+
+# ---------------------------------------------------------------------------
+# Propositions
+# ---------------------------------------------------------------------------
+propositions:
+  - id: P1
+    statement: >-
+      Disagreement in machine recovery of document-scale dependency structure decomposes into three
+      separately measurable components -- unitization, node selection and typing over a fixed unit
+      inventory, and relation drawing over a shared node set -- and fixing the first by design is
+      what makes the second and third measurable at all.
+    type: methodological
+    conditions: "C1, C2"
+    antecedents: []
+    assumptions: []
+    falsifier: >-
+      If agreement over a fixed unit inventory cannot be computed without conditioning on a matched
+      subset -- that is, if the same conditioning Round 1 was criticised for reappears once units
+      are fixed -- the decomposition is not achieved and P1 is false.
+    evidence:
+      - type: analytic
+        anchor: >-
+          With units fixed and shared, node selection is a decision over a common index set, so a
+          chance-corrected coefficient is defined without an alignment step. Round 1 had no shared
+          index set and therefore no such coefficient.
+      - type: prior_art
+        anchor: >-
+          Unit segmentation is an established standalone task with published performance, which is
+          what licenses treating unitization as a separable component rather than a nuisance.
+      - type: prior_art
+        anchor: >-
+          WHY THE DECOMPOSITION MATTERS OUTSIDE THIS STUDY. Machine-extracted argument structures
+          are already being assembled across documents into linked argument and citation networks
+          intended for downstream analysis. A network built from an extractor inherits that
+          extractor's disagreement, and an undecomposed agreement figure cannot say whether the
+          inherited error sits in the nodes or in the edges -- which is exactly the distinction a
+          claim about a network's structure depends on. Measurement error in extraction therefore
+          propagates into science-of-science claims built on the extracted graph, and the
+          decomposition is what makes the propagated error attributable.
+      - type: analytic
+        anchor: >-
+          HOW THE DECOMPOSITION RELATES TO THE PUBLISHED COMPOSITE, argued rather than only
+          contrasted. A composite segmentation-plus-structure score treats unitization as a
+          nuisance parameter: it is absorbed into a single number so that two systems can be
+          ranked. The claim here is the stronger one that unitization is SEPARABLE -- that with
+          the inventory held fixed and shared, the residual disagreement is a quantity in its own
+          right, defined over a common index set, rather than the remainder after a nuisance is
+          integrated out. Separability is what converts a nuisance parameter into a measured
+          component, and it is the extension the composite does not provide. The composite answers
+          HOW MUCH two operators agree and is the right instrument for ranking; the decomposition
+          answers WHERE they disagree and is the right instrument for repair. Both are reported.
+      - type: analytic
+        anchor: >-
+          THE SUBSTITUTION OBJECTION, AND THE ARM THAT ANSWERS IT. The strongest objection to P1 is
+          not about coefficients: it is that fixing the inventory does not SHOW unitization to be
+          separable but REMOVES it, so that what is measured afterwards is a different quantity
+          about a different task, and the predecessor's failure is stepped around rather than
+          addressed. The answer is the free-unitization arm, whose function is therefore construct
+          validity and not only comparability. It runs the original unmodified task in-study, on
+          the same documents, with the same operator pair, in the same epoch. If the free arm
+          reproduces the predecessor's failure pattern while the fixed arm does not, the
+          intervention moved something inside a task that still behaves like the original. If both
+          fail identically, the task was not changed enough for the objection to bite. If the free
+          arm does NOT reproduce the predecessor's pattern, that is itself reportable and bounds
+          every comparison the paper makes. The claim is stated at the width this supports: not
+          that the fixed-index quantity IS the free-unitization quantity, but that the two are
+          measured on the same documents by the same operators in the same epoch, so what changes
+          between them is attributable to the unitization condition and to nothing else about the
+          study.
+    body_sections: ["The decomposition", "The objection that the task has been replaced rather than decomposed"]
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+
+  - id: P2
+    statement: >-
+      A between-operator agreement number is uninterpretable without a within-operator baseline.
+      Machine operators are unreliable against themselves across repeated runs, so low
+      between-operator agreement may be variance rather than disagreement, and high agreement may
+      be a shared prior rather than a recovered structure. The baseline measures REPRODUCIBILITY OF
+      THE INSTRUMENT AS DEPLOYED, not the model's epistemic uncertainty: provider-side variance is a
+      genuine component of what a replicator faces and is therefore part of the quantity, not a
+      contaminant of it.
+    type: methodological
+    conditions: "C2"
+    antecedents: []
+    assumptions: []
+    falsifier: >-
+      BROADENED at Phase 3, because the original form was too narrow to fire. P2 is false if the
+      within-operator baseline is uninformative -- which now covers two cases rather than one. The
+      first is the original: within-operator agreement at or near ceiling on every document. The
+      second, and the one that will actually occur, is within-operator agreement STATISTICALLY
+      INDISTINGUISHABLE FROM BETWEEN-OPERATOR AGREEMENT on every document, since a floor that does
+      not separate from the quantity it is supposed to calibrate cannot calibrate it. THE TEST IS
+      FIXED HERE, so that the falsifier can fire mechanically: per document, the difference between
+      the within-operator and the between-operator coefficient is referred to a PAIRED PERMUTATION
+      NULL under which the within-pair and between-pair labellings of the repeated extractions are
+      exchangeable, with 10,000 permutations and a percentile bootstrap interval on the difference at
+      B = 10,000. The stream is offset by a stable digest of the document identifier rather than by a
+      process-dependent hash, so the draw regenerates byte-identically from the committed record. The
+      level is .05 per document, and the falsifier fires only when the interval includes zero on
+      EVERY document; a mixed outcome is reported per document and does not fire it. Either way
+      the design would have spent its repetitions to learn nothing, which is a result about this
+      class of operator and is reported as one.
+    evidence:
+      - type: prior_art
+        anchor: >-
+          Self-inconsistency in machine judges across repeated runs is reported in the evaluation
+          literature; this design imports the concern rather than discovering it.
+      - type: prior_art
+        anchor: >-
+          THE GAP CLAIM IS NARROWED, NOT RESTATED. Reproducibility of machine annotation is not an
+          unstudied area: it has a metrological reframing that treats reproducibility as measurement
+          precision rather than binary success, a quantified assessment method, and a field-level
+          finding of non-repeatability. That literature supplies the frame this proposition uses and
+          must be credited rather than displaced. Equivalence testing of whether a machine annotator
+          is indistinguishable from a human one is also more recent than an earlier pass supposed.
+          What remains genuinely absent is narrower and is stated at that width: inter-system
+          agreement between two generative operators on a structured extraction task, reported as a
+          reliability coefficient with no gold standard.
+      - type: corpus_precedent
+        anchor: >-
+          Round 1 has no within-operator baseline, which is recorded there as a limitation rather
+          than repaired, precisely because repairing it after the result would have been a protocol
+          change made in light of an outcome.
+    body_sections: ["The noise floor"]
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+
+  - id: P3
+    statement: >-
+      Round 1's node-layer statistic is favourably biased by conditioning on matched nodes, and the
+      size of the bias is measurable by recomputing that layer under a coefficient that charges for
+      boundary disagreement rather than excluding it.
+    type: methodological
+    conditions: "C3"
+    antecedents: [P1]
+    assumptions: []
+    falsifier: >-
+      If the recomputation leaves Round 1's node layer materially unchanged, the conditioning was
+      not doing the work attributed to it and P3 is false. The direction is declared BEFORE the
+      recomputation: the expectation is that Round 1's node layer looks worse, and the result is
+      reported whichever way it comes out.
+    evidence:
+      - type: analytic
+        anchor: >-
+          Round 1's node-boundary precision runs far below its node-type agreement, so the excluded
+          mass is large; a coefficient that charges for it cannot leave the statistic unchanged
+          unless the excluded units happen to be typed as the matched ones were.
+    reporting_status: >-
+      DEMOTED at Phase 3 to a declared robustness check, deliberately and in advance. Three
+      co-equal contributions inside one pre-registration is one too many, and a re-analysis of a
+      predecessor will be read as a secondary check however it is presented -- so it is better to
+      demote it on purpose than to have it demoted by a reader. The demotion is structural only:
+      the recomputation and its table sit in an appendix, but the DECLARED UNFAVOURABLE DIRECTION
+      stays in the main text, because the credibility this proposition buys comes from the paper
+      correcting itself against its own interest in plain sight. Burying that would forfeit exactly
+      what the demotion is meant to protect.
+    body_sections: ["What Round 1's node layer was worth"]
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+
+  - id: P4
+    statement: >-
+      The located failure is testable and may be refuted. If edge-level agreement still fails with
+      the units fixed and the noise floor known, then unitization was not where the failure lived,
+      and Round 1's own conclusion is overturned by its declared successor.
+    type: empirical
+    conditions: "C1, C2, C3"
+    antecedents: [P1, P2]
+    assumptions: [AA1, AA3]
+    falsifier: >-
+      P4 is the falsification instrument rather than a claim to defend: it is stated so that the
+      unfavourable branch is pre-committed. Reporting an inconclusive run instead of this branch is
+      the specific failure mode the pre-declaration exists to prevent.
+    evidence: []
+    body_sections: ["The pre-declared decision rule"]
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+
+# ---------------------------------------------------------------------------
+# Methods
+# ---------------------------------------------------------------------------
+methods:
+  - id: M1
+    statement: >-
+      THREE conditions, ordered in advance, all on the same five documents with the same operator
+      pair in the same epoch. U-free, no inventory supplied, the free-unitization condition, which
+      is both the comparability control and the control for granularity mismatch. U-det, a
+      deterministic published segmentation rule applied with no model in the loop, the PRIMARY
+      intervention. U-mod, units produced by a model family used neither as operator nor as rater,
+      the realistic deployment condition. The ordering is fixed here so that a result cannot later
+      be reported from whichever condition ran the better way. Running U-free in-study rather than
+      relying on the predecessor's numbers is what makes the contrast sound: fixed-index
+      classification and free unitizing occupy different probability spaces, so a cross-study
+      magnitude comparison would not have been valid.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: M1a
+    statement: >-
+      VALIDATE THE SEGMENTER BEFORE USING IT. A segmenter whose own reliability is unknown cannot
+      serve as a control condition, because its error passes silently to the operators and is scored
+      as theirs. The deterministic rule is fixed by version, its own reported reliability is stated,
+      and its treatment of DISPLAYED MATHEMATICS is declared before the run as an explicit rule
+      rather than handled case by case -- a rule that splits on sentence punctuation shatters
+      displayed equations into fragments, and one of the five specimens is a mathematical
+      exposition. ADDED at Phase 3: a segmenter's reported accuracy is measured on ITS OWN
+      benchmarks, and a rule that scores well on newswire need not on a mathematical exposition or
+      a philosophical essay. Its agreement with a hand-adjudicated inventory ON THESE FIVE
+      DOCUMENTS is therefore established BEFORE any operator call and reported per document beside
+      the operator quantities. The ORDER is the substantive part: measured after the operator runs,
+      the segmenter's error becomes available as an explanation for whatever the operators did,
+      which is precisely the researcher degree of freedom L3 names. THE ADJUDICATED INVENTORY IS
+      ITSELF AN INSTRUMENT and is produced as one: two adjudicators segment each document
+      independently under the declared rule, blind to the study's hypotheses and to which condition
+      the inventory will serve; a third resolves disagreements; and the adjudicators' own agreement
+      is reported beside the segmenter's. Without that, the segmenter-fidelity layer compares the
+      instrument against its own designer and the degree of freedom L3 closes reopens one level up.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: M1b
+    statement: >-
+      THE DETERMINISTIC RULE IS SENTENCE SEGMENTATION AT A PINNED VERSION, and the coarser
+      granularity is declared rather than hidden. U-det uses a rule-based sentence segmenter that is
+      installable at a fixed release, carries a permissive licence and reports its own accuracy
+      against a published rule set. Two finer elementary-discourse-unit rules exist and neither is
+      adopted, for reasons stated in the pre-registration rather than left implicit. The first
+      defines units on clause boundaries and reports the highest blind segmentation reliability
+      available for any rule, but its gold corpus is licensed and using the rule would mean
+      reimplementing it and having no evidence that the reimplementation is faithful. The second is
+      distributed only as a single archive with no release tags, requires an interpreter and library
+      generation two decades old, and bundles a third-party script carrying no licence, so it cannot
+      be published as reproduction code. The two rules also disagree with each other -- one
+      deliberately does not treat complements of attributive verbs as units -- so there is no single
+      "the" discourse rule to inherit. The consequence is stated as a limitation and not as a
+      finding: sentence units are coarser than discourse units, so U-det tests a coarser shared
+      inventory than the finest one available, and the granularity-mismatch threat is argued at that
+      granularity. THE SHARPEST REPLY IS ACCEPTED RATHER THAN DEFLECTED: that this design has not
+      removed a segmentation-AGREEMENT problem so much as converted it into a segmentation-CHOICE
+      problem, and that choosing sentence over discourse granularity is itself the study's most
+      consequential decision rather than a preliminary. That is why the choice is argued on stated
+      grounds, why a second model-produced inventory runs rather than leaving one rule unexamined,
+      and why the effect of granularity is reported per document rather than assumed uniform. The
+      design does not settle which granularity is correct; it fixes one, declares it, and measures
+      what follows. THE AFFIRMATIVE CASE for imposing a rule at all is established rather than
+      assumed: human subjects segment discourse reliably once a criterion is declared, which makes a
+      declared criterion an improvement on unconstrained judgement rather than a straitjacket.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: M1c
+    statement: >-
+      THE MATHEMATICAL UNIT RULE IS THIS PAPER'S OWN INSTRUMENT DECISION, declared and defended
+      here, because no published segmentation rule for mathematical text exists to adopt. The rule:
+      a displayed expression is attached to the sentence that introduces it and is not a unit of its
+      own, and no unit boundary is placed inside symbolic material. The grounding is the established
+      result that the textual and the symbolic in rigorous mathematical prose are grammatically
+      intertwined and that symbolic ambiguity resolves only once the types of the entities are
+      known -- from which it follows that a rule severing symbolic material from its sentence
+      destroys the unit rather than dividing it. What is NOT claimed, because no source supports it:
+      that displayed and inline mathematics constitute different unit TYPES. The rule is declared
+      before the run and its effect on the mathematical specimen's inventory size is reported
+      beside the other four documents.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: M2
+    statement: >-
+      Narrow the operator task to three decisions over the given units -- which units are nodes,
+      what type each node carries, and which typed edges hold between nodes. An operator may not
+      re-cut a unit. That single restriction is the whole intervention.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: M3
+    statement: >-
+      Repeat every extraction k times per operator per document per condition under identical
+      parameters, with k fixed before the run for statistical reasons and not budgetary ones. There
+      is no principled published guidance for k; the practical constraint is that k = 3 is the bare
+      minimum for a repeated-measures reliability statistic and k >= 5 is needed to stabilise a
+      variance estimate. K IS FIXED AT 5 -- the floor of that argued range, not above it, because
+      nothing in the reference class supports a larger number and a k chosen for comfort rather than
+      for a stated reason is a budget decision wearing a statistical costume. The arithmetic is
+      published so the count is auditable: 3 conditions x 5 documents x 2 operators x 5 repetitions
+      = 150 extraction calls.
+      Run all repetitions for a document in as tight a window as rate limits permit, and log model
+      version and epoch per call, because silent provider-side updates drift across a long window.
+      Report every between-operator quantity beside its within-operator counterpart, computed on the
+      same statistic.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: M4
+    statement: >-
+      Score the nested decision in a HIERARCHICAL form rather than flattening it into a joint label
+      space: one coefficient for the binary include/exclude decision over the shared inventory, and
+      a CONDITIONAL coefficient for typing computed over the units both operators included.
+      Flattening conflates the base rate of inclusion with the accuracy of typing, which would
+      dissolve the very decomposition this paper contributes. THE PRINCIPLE IS ADOPTED, NOT
+      INVENTED: a peer-reviewed treatment of two-stage annotation in a different domain establishes
+      that when a decision is locate-then-describe, the two stages' agreement must be reported
+      SEPARATELY rather than as one measurement. This paper adopts that principle and instantiates
+      it for select-then-type over a fixed inventory. STRENGTHENED 2026-08-07 on reading the source in
+      full: it supplies more than the principle. It states that agreement on the second stage has
+      agreement on the first as a NECESSARY PRECONDITION, and that only the positions at least two
+      annotators marked are taken into consideration when scoring the second stage -- unmarked
+      positions are not locations at all and cannot be scored further. The conditioning rule used
+      here is therefore that PUBLISHED PROTOCOL applied to a two-operator design, where "at least two
+      annotators agreeing" and "both operators agreeing" coincide. What stays this paper's own is the
+      transfer to select-then-type over a fixed inventory and the chance model under it, neither of
+      which the source supplies. What is NOT claimed as a source: the majority-agreement
+      treatment often cited for nested decisions, which concerns agreement among more than two
+      observers and is a different paper from the benchmark-scale one the corpus holds; and the
+      category-conditional kappa, which conditions on the CATEGORY assigned rather than on a prior
+      stage. Report edge recovery as triple overlap BOTH over
+      the agreed node set AND over the full fixed inventory, the second being what the predecessor
+      could not compute and what does not condition disagreement away. Report a composite
+      segmentation-plus-structure score alongside the layered form. ITS STATUS IS DECLARED: SECONDARY
+      IN INFERENTIAL STATUS, CO-EQUAL IN REPORTING PROMINENCE. Secondary because the decomposition is
+      the contribution and a single ranking number cannot answer WHERE two systems disagree, so the
+      composite does not gate and no conclusion rests on it alone. Co-equal in reporting because
+      burying it would earn the fair reply that the standard instrument was avoided rather than
+      answered, so it is computed for every document and condition and printed beside the layered
+      form, with any divergence between the two reported as a finding rather than resolved in the
+      decomposition's favour. For the continuous
+      repeated-measures component, adopt the field's intraclass-correlation convention rather than
+      inventing a bespoke variance decomposition.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: M4a
+    statement: >-
+      THRESHOLDS ARE RE-DERIVED PER LAYER FROM THE RIGHT REFERENCE CLASS, and the predecessor's gate
+      is NOT inherited. Selection over a shared inventory has its own published track record and it
+      is poor -- human agreement on extractive selection sits well below the predecessor's gate --
+      so carrying that gate to the node layer would declare a floor no human reference pool reaches.
+      Each layer's threshold is argued in the pre-registration with its reference class named, and
+      the sensitivity table is published with its thresholds FILLED and its outcome cells empty
+      before the run.
+
+      THE FIVE THRESHOLDS, EACH DERIVED FROM THE REFERENCE CLASS NAMED BESIDE IT.
+      (S) SEGMENTER FIDELITY >= .80 against the adjudicated inventory. The human blind segmentation
+      floor is .874; this gate sits deliberately below it, because the comparison here is a
+      deterministic rule against human adjudication, which is a harder comparison than human against
+      human, and because a rule agreeing below .80 is describing itself rather than the document --
+      the second negative-scope condition of C4.
+      (1) NODE SELECTION >= .51. The reference class is NOT the broad summarisation range but the
+      single published figure computed over the SAME decision structure: binary salience over
+      pre-segmented units. The broader human range on free extractive selection runs .127 to .274 and
+      strict selection from online debate sits at .28; those are different decisions over unsegmented
+      text and are reported for context rather than used as the gate.
+      (2) CONDITIONAL TYPING >= .70, the lower bound of the published range for relation and type
+      agreement over FIXED units in scientific discourse, .699 to .772. A machine pair claiming to
+      type over a shared inventory should meet the weakest human pair reported on that task.
+      (3) EDGE RECOVERY OVER AGREED NODES >= .71, the annotator-versus-annotator figure for gold-free
+      graph annotation. NO DISCOUNT is applied for document scale, although the published figure comes
+      from a fixed scheme and a trained pool on sentence-scale semantics. A discount would be derived
+      from an expectation about this study's outcome rather than from evidence, which is precisely the
+      move this paper forbids elsewhere. The consequence is a hard gate, and a hard gate here is
+      conservative: it makes a pass strong, and the decomposition is the contribution whether or not
+      the verdict is favourable. BUT A CEILING BORROWED FROM AN EASIER TASK MAKES A POOR SOLE
+      CRITERION, so layer 3 carries TWO and the second is the informative one. The ABSOLUTE
+      criterion is the imported ceiling. The RELATIVE criterion reads between-operator edge
+      agreement against the WITHIN-OPERATOR BASELINE on the same statistic, using P2's separation
+      test: two operators that agree with each other about as well as each agrees with itself have
+      recovered whatever structure this instrument can recover, whether or not that level clears a
+      ceiling set on sentence-scale semantics by trained humans. Both are reported for every
+      document and condition, and neither may substitute for the other once the results are visible.
+      (4) EDGE RECOVERY OVER THE FULL INVENTORY has NO independent threshold, because constructing a
+      level for it from nothing would be inventing a number. What is gated instead is its RATIO to
+      layer 3, which must exceed .70. That ratio is the measured worth of the conditioning this paper
+      criticises -- how much of the agreed-node figure survives once the nodes the operators did not
+      share are charged rather than excluded. Gating the ratio rather than the level ties the layer to
+      the methodological complaint it exists to instrument.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: M4b
+    statement: >-
+      REPORT THE FULL MARGINAL PICTURE with every chance-corrected coefficient: the marginal
+      distributions, a prevalence index, and raw agreement. No published guidance pre-specifies a
+      prevalence floor beyond which a coefficient is uninterpretable, so the floor this design needs
+      is CONSTRUCTED AND DEFENDED HERE rather than cited.
+
+      THE CHANCE MODEL IS THE OBSERVED-MARGINAL ONE, KEPT RATHER THAN REPLACED: chance agreement is
+      derived from each operator's own observed marginals, and the depression this produces under
+      skewed base rates is treated as the coefficient reporting correctly rather than as a defect to
+      engineer away.
+
+      THE PREVALENCE FLOOR IS A DECLARED INTERPRETABILITY GATE, NOT A CORRECTION. The prevalence index
+      is reported beside every coefficient, and WHERE IT EXCEEDS .85 ON A DOCUMENT that document's
+      chance-corrected coefficient is reported but DOES NOT GATE -- it is declared uninterpretable in
+      advance, and the document's evidence rests on the marginals, raw agreement and the F-measure
+      instead. The floor instantiates C4's first negative-scope condition: selection that is
+      near-universal over the inventory carries no information however high the raw agreement.
+
+      THE BASE RATE IS ESTIMATED BEFORE THE RUN, which is what makes this a pre-registration rather
+      than a post-hoc escape. The expected selection base rate per document is the predecessor's
+      recorded node count divided by this study's inventory size for that document. Both quantities
+      exist before any operator call: the node counts are in the predecessor's published record, the
+      inventory sizes are computed by the segmenter. The predicted base rate and the predicted
+      prevalence index are therefore PUBLISHED PER DOCUMENT BEFORE THE RUN, and any document whose
+      predicted index already breaches .85 is declared non-gating in advance rather than after its
+      coefficient has been seen. Prevalence-robust coefficients are not
+      adopted as an escape: they are contested precisely because they reward a rater for assigning
+      the dominant label, which is the failure mode this design exists to exclude. If one is
+      reported at all it is reported beside the standard coefficient with the objection stated.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: M5
+    statement: >-
+      Recompute Round 1's node layer under a joint unitizing coefficient, as a declared re-analysis
+      whose unfavourable direction is stated in advance. Round 1's frozen guidelines are NOT edited
+      and its reported numbers are NOT revised; the re-analysis is additive and is labelled as this
+      paper's, not as a correction to Round 1's record.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: M5a
+    statement: >-
+      DISPOSE OF THE PUBLISHED FAMILY EXPLICITLY, AND OF BOTH ITS MEMBERS. A published unified
+      coefficient scores unitizing and categorisation jointly, with a maintained implementation, and
+      it has a COMPANION that isolates categorisation agreement while setting positional discrepancy
+      aside. The companion is the near-neighbour of this design's conditional typing statistic and
+      is the harder of the two to dispose of; silence about it would be the single most visible hole
+      in the contribution. Neither is argued against a priori. BOTH are computed in-study beside the
+      decomposition, and the paper states in the method what its conditional typing statistic does
+      that the companion does not -- the honest candidate being that the companion sets position
+      aside as a nuisance whereas this design REMOVES it by construction and then measures selection
+      as a quantity in its own right. If that distinction does not survive contact with the
+      companion's definition, the paper says so and the decomposition's novelty narrows to the
+      selection stage. The holistic member answers HOW MUCH two operators agree; the decomposition
+      answers WHERE they disagree, and locating it is this paper's claim. Where any two of the three
+      diverge, the divergence is reported rather than resolved in the decomposition's favour.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+
+# ---------------------------------------------------------------------------
+# Limitations, carried forward and new
+# ---------------------------------------------------------------------------
+limitations:
+  - id: L1
+    statement: >-
+      N is still five documents, and the specimen corpus is deliberately unchanged. No
+      generalization claim is available.
+    affects: [P4]
+    severity: "high"
+    mitigation: "Claim a controlled contrast, not a general result. Inherited from Round 1 and not repaired."
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: L2
+    statement: >-
+      The training-data contamination threat on the philosophical specimen is unchanged. It inflates
+      a positive result specifically and cannot be removed by blinding.
+    affects: [P4]
+    severity: "medium"
+    mitigation: "Carried forward verbatim from Round 1 and reported as a bound on the claim."
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: L3
+    statement: >-
+      The unitizer is a new researcher degree of freedom. A segmenter imported across domains
+      carries its own error, and this design must not launder that error into the operators' scores.
+    affects: [P1, P4]
+    severity: "high"
+    mitigation: >-
+      Both conditions declared in advance with the primary fixed; the unitizer's output published
+      with the record so a reader can inspect what the operators were given.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: L4
+    statement: >-
+      Fixing the units may manufacture agreement rather than measure it. If node selection is
+      near-universal over sentence-like units, the coefficient is high by construction. This is the
+      mirror image of Round 1's error -- Round 1 conditioned disagreement away, this design could
+      define it away.
+    affects: [P1]
+    severity: "high"
+    mitigation: >-
+      A base-rate-aware chance model and a declared floor, both fixed before the run. Named as the
+      single most likely way this paper fools itself.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: L5
+    statement: >-
+      DISCHARGED 2026-08-07. The sequencing constraint was real and is now satisfied: the paper
+      cites its predecessor, could not be deposited before it, and the predecessor was deposited on
+      2026-08-07 under a resolving concept DOI. The predecessor is therefore cited as a
+      deposited record rather than as a working paper, and this paper is no longer blocked behind
+      it. The limitation is retained rather than deleted because the ORDERING still holds for every
+      later round of the arc, and because a reader should be able to see that the constraint was
+      declared before it was met rather than after.
+    affects: []
+    severity: "discharged"
+    mitigation: "Stated as a hard ordering rather than managed; the ordering was met, not waived."
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: L6
+    statement: >-
+      GRANULARITY MISMATCH. Fixing the units does not eliminate the unitization problem so much as
+      trade it. If the imposed rule cuts at a granularity that conflicts with an operator's internal
+      representation of the argument, the operator will fail to draw edges, and the failure will be
+      recorded as an edge-drawing deficit when it is an artifact of the segmentation. This is worse
+      than the prevalence risk because it produces a result that looks exactly like the one the
+      paper is testing for. Displayed mathematics is where it bites hardest.
+    affects: [P1, P4]
+    severity: "high"
+    mitigation: >-
+      The U-free arm is the control: if U-det fails and U-free fails in the same way, the
+      segmentation did not produce the failure. Plus M1a -- a version-pinned segmenter with a stated
+      reliability and a declared rule for mathematical units.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+  - id: L7
+    statement: >-
+      The within-operator baseline includes provider-side variance that is not a property of the
+      model -- dynamic batching makes temperature-zero decoding nondeterministic, so part of the
+      measured variance tracks infrastructure conditions at call time.
+    affects: [P2]
+    severity: "medium"
+    mitigation: >-
+      Addressed by DEFINITION rather than by repair: the quantity is reproducibility of the
+      instrument as deployed, which is what a replicator faces and which properly includes that
+      variance. A local fixed-batch control arm would isolate the model's own contribution but would
+      change the operator class from hosted frontier models to open-weight local ones, so it is
+      recorded as an explicit scope decision rather than assumed in.
+    provenance: {created_by: "author", created_at: "2026-08-07"}
+
+# ---------------------------------------------------------------------------
+# Cross-paper engagement
+# ---------------------------------------------------------------------------
+corpus_precedents:
+  - paper_key: 2026bk
+    relationship: extends
+    claim: >-
+      Round 1 specifies the internalization operation, freezes the extraction guidelines, declares
+      the decision rule, and reports the run that failed at its gate and located the failure
+      upstream of relation labelling. This paper inherits all of it and tests the location.
+  - paper_key: 2026ao
+    relationship: inherits
+    claim: >-
+      The cost-asymmetry account of structural versus rendered layers, which Round 1 inherits and
+      does not re-litigate.
+
+# ---------------------------------------------------------------------------
+# Open questions -- Phase 0
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Internal authoring history -- dropped on export; never rendered.
+# ---------------------------------------------------------------------------
+

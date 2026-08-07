@@ -1,0 +1,109 @@
+paper_key: 2026bl
+schema_version: 0.1
+
+owns:
+  - term_key: unit-inventory
+    label: "unit inventory"
+    definition: >-
+      The complete, ordered list of text units a document is cut into by a declared segmentation
+      rule, fixed before any extraction and supplied identically to every operator. It is the
+      common index set over which node selection becomes a decision rather than an alignment
+      problem. Every quantity in a study is relative to the inventory it was computed under, and
+      quantities computed under different inventories are not compared by magnitude.
+    canonical_form: "unit inventory"
+    replaces: ["unit list", "segmentation output"]
+    first_section: "The decomposition"
+
+  - term_key: unitization-condition
+    label: "unitization condition"
+    definition: >-
+      The experimental arm defined by where a study's unit inventory comes from: none supplied and
+      each operator cutting its own (free), a deterministic published rule applied with no model in
+      the loop (deterministic), or a model family used neither as operator nor as rater
+      (model-produced). The condition is the manipulated variable; the operator pair, the corpus and
+      the epoch are held fixed across all three.
+    canonical_form: "unitization condition"
+    first_section: "The decomposition"
+
+  - term_key: three-way-decomposition
+    label: "three-way decomposition"
+    definition: >-
+      The separation of total disagreement in machine recovery of dependency structure into three
+      independently measured components: unitization, node selection and typing over a fixed unit
+      inventory, and relation drawing over a shared node set. Fixing the first by design is what
+      makes the second and third measurable at all, since without a common index set the later two
+      have no coefficient defined over them.
+    canonical_form: "three-way decomposition"
+    replaces: ["disagreement breakdown"]
+    first_section: "The decomposition"
+    relations:
+      - {type: contrasts, term_key: unit-inventory, note: "the inventory is the instrument; the decomposition is what the instrument makes measurable"}
+
+  - term_key: within-operator-baseline
+    label: "within-operator baseline"
+    definition: >-
+      The agreement of one operator with itself across repeated extractions of the same document
+      under identical parameters, computed on the same statistic as the between-operator quantity
+      it calibrates. It measures reproducibility of the instrument AS DEPLOYED -- provider-side
+      variance is part of what a replicator faces and is therefore part of the quantity, not a
+      contaminant of it. Without it a between-operator number is uninterpretable in both
+      directions: a low one may be variance, a high one a shared prior.
+    canonical_form: "within-operator baseline"
+    replaces: ["noise floor", "test-retest floor"]
+    first_section: "The noise floor"
+
+  - term_key: conditional-typing-statistic
+    label: "conditional typing statistic"
+    definition: >-
+      The chance-corrected agreement on node TYPE, computed only over the units both operators
+      selected as nodes, and reported separately from the binary include-or-exclude agreement over
+      the full inventory. Reporting the two stages separately rather than flattening them into one
+      joint label space is what keeps the base rate of inclusion from being confounded with the
+      accuracy of typing.
+    canonical_form: "conditional typing statistic"
+    first_section: "The decomposition"
+
+  - term_key: granularity-mismatch
+    label: "granularity mismatch"
+    definition: >-
+      The failure mode in which an imposed unit rule cuts at a grain that conflicts with an
+      operator's internal representation of the argument, so the operator fails to draw edges and
+      the failure is recorded as an edge-drawing deficit when it is an artifact of the
+      segmentation. It is more dangerous than a prevalence artifact because it produces a result
+      that looks exactly like the one under test.
+    canonical_form: "granularity mismatch"
+    first_section: "Threats this design carries"
+
+  - term_key: diagnostic-replication
+    label: "diagnostic replication"
+    definition: >-
+      A re-run whose declared purpose is to isolate a mechanism of failure rather than to reproduce
+      a result. Holding the corpus fixed is a requirement of the design rather than a shortcut,
+      because a changed corpus would confound the mechanism with the material. The term is adopted
+      from the replication literature rather than coined, and naming it is what makes deliberate
+      corpus reuse legible instead of reading as a defect.
+    canonical_form: "diagnostic replication"
+    replaces: ["re-run", "repeat study"]
+    first_section: "What this design is"
+
+imports:
+  - {term_key: spine}
+  - {term_key: operator-role}
+  - {term_key: internalization}
+  - {term_key: reader-model}
+
+refines:
+  - term_key: operator-noise-floor
+    narrows_to: >-
+      the single-operator, repeated-call case on a structured extraction task, where the floor is
+      an operator's agreement with ITSELF across repetitions rather than the distance between
+      cross-family operator pairs
+    note: >-
+      Compatible narrowing, not a redefinition. The inherited move is unchanged -- compute a floor
+      from the instrument itself and read every substantive difference against it, so that a
+      measured difference is not silently attributed to the object when the instrument could have
+      produced it. What narrows is the source of the floor: the inherited form substitutes one
+      operator pair for another and measures the displacement, whereas this form holds the operator
+      fixed and repeats the call, which isolates run-to-run variance from family substitution. Both
+      are floors on the same class of inference; this one is the stricter and the cheaper.
+

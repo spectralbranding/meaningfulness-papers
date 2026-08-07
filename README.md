@@ -50,6 +50,16 @@ Position paper relocating the abductive "jump" from an embodied sensory leap to 
 
 Specifies internalization — the inverse of Paper A's drafting direction — as a five-step operation that recovers a typed dependency graph from a rendered artifact, negotiates it against a declared reader model, ranks nodes by structural load rather than prose mass, re-renders, and submits the result to an acceptance contract; and supplies its measurement, a reader-relative count of steps verified but not derived. The pre-registered validation failed at its first gate: two machine operators from different model families did not agree on the dependency structure at the declared level, and they diverge on which nodes exist before they diverge on how nodes connect. Under the pre-declared decision rule no downstream quantity is licensed, and the quantities the run nonetheless computed are reported in an appendix rather than in Results. The specification, the instrument, the pilot, three harness defects and the negative result ship together.
 
+### Paper E — [unitization/](unitization/) (2026bl)
+
+**Unitization Before Extraction: A Pre-Registered Decomposition of Disagreement in Machine Recovery of Dependency Structure**
+
+- Concept DOI: [10.5281/zenodo.21830220](https://doi.org/10.5281/zenodo.21830220)
+- v1.0.0 DOI: [10.5281/zenodo.21830221](https://doi.org/10.5281/zenodo.21830221)
+- License: CC BY 4.0 (paper) + MIT (code)
+
+Pre-registration of the diagnostic replication that Paper D's failure calls for. It removes the two degrees of freedom the predecessor recorded as limitations: a unit inventory is fixed before extraction and supplied identically to both operators, so node selection becomes a decision over a common index set, and every extraction is repeated, so an operator's agreement with itself supplies the noise floor against which any between-operator number is read. Three unitization conditions run on one corpus, one operator pair, one epoch, ordered in advance; thresholds are re-derived per layer from their own reference classes rather than inherited. This version contains the specification, the instruments and the decision rule in full — including the branch that would overturn the predecessor's own recommendation — and no results: the tables that will carry them are published with their thresholds filled and their outcome cells empty.
+
 ## License
 
 CC BY 4.0 for the paper text and theoretical content; MIT License for companion computation code and experimental JSONL logs. See [LICENSE](LICENSE).
@@ -76,7 +86,7 @@ cd meaningfulness-papers
 
 The hub itself is index-only. Reproducible computation lives inside each paper-slug subdirectory (see section 2). The hub anchor is `pyproject.toml` at the root.
 
-This hub aggregates four paper-slug subdirectories — Paper A (`meaning-meaningfulness/`) and Paper B (`meaning-meaningfulness-empirical/`), both first published 2026-05-29, Paper C (`invention-as-structure/`, 2026-07-28) and Paper D (`internalization/`, 2026-08-07) — each with its own Zenodo concept DOI. New paper-slugs added to this programme follow the same convention: each subdirectory is a self-contained mirror with its own `paper.md` / `paper.yaml`, `CITATION.cff`, `LICENSE`, `LICENSE-data`, and (where applicable) `reproduce.sh`.
+This hub aggregates five paper-slug subdirectories — Paper A (`meaning-meaningfulness/`) and Paper B (`meaning-meaningfulness-empirical/`), both first published 2026-05-29, Paper C (`invention-as-structure/`, 2026-07-28), Paper D (`internalization/`, 2026-08-07) and Paper E (`unitization/`, 2026-08-07) — each with its own Zenodo concept DOI. New paper-slugs added to this programme follow the same convention: each subdirectory is a self-contained mirror with its own `paper.md` / `paper.yaml`, `CITATION.cff`, `LICENSE`, `LICENSE-data`, and (where applicable) `reproduce.sh`.
 
 ---
 
@@ -88,6 +98,7 @@ This hub aggregates four paper-slug subdirectories — Paper A (`meaning-meaning
 ├── meaning-meaningfulness-empirical/   # Paper B (2026ap) — empirical companion
 ├── invention-as-structure/             # Paper C (2026bg) — position paper + demo
 ├── internalization/                    # Paper D (2026bk) — specification + pre-registered validation
+├── unitization/                        # Paper E (2026bl) — pre-registered diagnostic replication
 ├── output/
 │   ├── figures/
 │   ├── tables/
@@ -135,6 +146,7 @@ uv sync   # inside any paper-slug subdirectory
 - `meaning-meaningfulness-empirical/` — multi-operator LLM pipeline (renderer ≠ extractor); requires API keys per `.env.example` inside that subdirectory. See its `README.md` for the operator list and key requirements.
 - `invention-as-structure/` — deterministic demonstration; Python 3.12 + PyYAML, no LLM calls.
 - `internalization/` — analysis-only reproduction needs no keys and no network (`./reproduce.sh`); re-running the collection itself (`./reproduce.sh --collect`) is a multi-operator LLM pipeline and requires provider credentials.
+- `unitization/` — pre-registration only at v1.0.0; it carries the design, not a run, so there is nothing to reproduce yet. The harness and its dependencies ship with the results version.
 
 ---
 
@@ -146,6 +158,7 @@ uv sync   # inside any paper-slug subdirectory
 | `meaning-meaningfulness-empirical/` | Empirical companion (Rec = 4 on twin pairs; cross-operator extraction) | `reproduce.sh` inside the slug |
 | `invention-as-structure/` | Position paper (four atomic moves of representation change) | `code/four_moves_demo.py` inside the slug |
 | `internalization/` | Specification + pre-registered validation (extraction agreement, miracle count) | `reproduce.sh` inside the slug |
+| `unitization/` | Pre-registered diagnostic replication (fixed unit inventory, within-operator noise floor) | none at v1.0.0 — design only |
 
 ---
 
@@ -170,4 +183,4 @@ Both licences permit reuse with attribution. The MIT Licence permits modificatio
 
 ---
 
-*Last updated: 2026-05-29*
+*Last updated: 2026-08-07*

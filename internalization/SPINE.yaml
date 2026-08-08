@@ -81,7 +81,7 @@ reader_models:
       it, so the convention cannot flatter a result.
     provenance:
       created_by: "author"
-      created_at: "2026-08-09"
+      created_at: "2026-08-06"
   - id: M-nt
     applies_to: [VC3]
     statement: >-
@@ -95,7 +95,7 @@ reader_models:
     granularity: "As M-alg."
     provenance:
       created_by: "author"
-      created_at: "2026-08-09"
+      created_at: "2026-08-06"
   - id: M-phil
     applies_to: [VC2]
     statement: >-
@@ -106,7 +106,7 @@ reader_models:
     granularity: "As M-alg."
     provenance:
       created_by: "author"
-      created_at: "2026-08-09"
+      created_at: "2026-08-06"
   - id: M-gen
     applies_to: []
     statement: >-
@@ -116,7 +116,7 @@ reader_models:
     granularity: "As M-alg."
     provenance:
       created_by: "author"
-      created_at: "2026-08-09"
+      created_at: "2026-08-06"
 
 # ---------------------------------------------------------------------------
 # Assumption atoms -- assumed without test; relaxable, with consequences traced.
@@ -627,7 +627,7 @@ robustness_checks:
       than gated. Thresholds are pre-declared before any run and may not be moved by the pilot.
     varied_parameter: "operator"
     result_stability: >-
-      RUN 2026-08-09, FAILED AT THE GATE. Layer 2 fell below the declared threshold on all five
+      RUN 2026-08-06, FAILED AT THE GATE. Layer 2 fell below the declared threshold on all five
       documents (F1 .000 to .500 against a gate of .60), and cleared the random-graph null on only
       two. Layer 1 cleared its threshold on three of five (alpha .663 to 1.000), missed by .013 on
       a fourth, and was undefined on the fifth for want of matched nodes. AA1 is refuted at the
@@ -643,7 +643,7 @@ robustness_checks:
       centrality definition and report rank stability.
     varied_parameter: "centrality_definition"
     result_stability: >-
-      RUN 2026-08-09, STABLE. Rank correlation between the pre-committed support-mass definition and
+      RUN 2026-08-06, STABLE. Rank correlation between the pre-committed support-mass definition and
       the alternative reverse-PageRank ranking runs .584 to .978 on nine of the ten extractions, with
       one outlier at .143 on a 14-node graph. The load ranking is not an artifact of the centrality
       definition.

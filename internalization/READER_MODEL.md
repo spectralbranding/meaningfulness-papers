@@ -1,6 +1,6 @@
 # Declared Reader Models — Internalization (2026bk)
 
-**Status: PRE-DECLARED 2026-08-09, before any extraction, before any measurement.** C2 requires a
+**Status: PRE-DECLARED 2026-08-06, before any extraction, before any measurement.** C2 requires a
 reader model to be fixed before any quantity is measured, because every quantity the paper reports
 travels with it. This document supplies the models. Like `DECISION_RULE.md`, nothing here may be
 revised in the light of a result; a change made before data collection is a FORK with a changelog

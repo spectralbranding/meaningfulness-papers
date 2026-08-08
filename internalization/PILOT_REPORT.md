@@ -1,6 +1,6 @@
 # Pilot Report — Internalization (2026bk)
 
-**Run 2026-08-09, before the main extraction, on material that is neither specimen**, as
+**Run 2026-08-06, before the main extraction, on material that is neither specimen**, as
 `DECISION_RULE.md` §1 requires. Its purpose is to check that the extraction protocol is executable
 at all and to estimate variance. Under the rule the pilot may (a) refine the annotation guidelines,
 (b) inform the number of documents in the main run, or (c) cause the study to be abandoned before

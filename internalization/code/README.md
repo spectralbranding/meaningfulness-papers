@@ -65,4 +65,4 @@ Code MIT; data and generated artifacts CC BY 4.0. Specimen texts remain under
 their own authors' terms and are not redistributed here — `prepare_specimens.py`
 fetches them from their public sources and verifies the digests.
 
-*Last updated: 2026-08-09*
+*Last updated: 2026-08-06*

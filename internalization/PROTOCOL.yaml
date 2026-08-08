@@ -1,6 +1,6 @@
 # Pre-declared run protocol -- Internalization (2026bk)
 #
-# STATUS: PRE-DECLARED 2026-08-09, BEFORE any extraction call was made.
+# STATUS: PRE-DECLARED 2026-08-06, BEFORE any extraction call was made.
 # Everything a result could be tuned against is fixed here: the operators, the
 # reader models, the centrality definition M3 pre-commits to, the counting
 # rules, and the way each pre-declared quantity is computed. Nothing in this
@@ -10,13 +10,18 @@
 #
 # Companion documents:
 #   DECISION_RULE.md   thresholds and stopping rules (pre-declared 2026-08-06)
-#   READER_MODEL.md    the three declared reader models (pre-declared 2026-08-09)
+#   READER_MODEL.md    the three declared reader models (pre-declared 2026-08-06)
 #   SECOND_SPECIMEN.md specimen selection and the contamination threat
 
 protocol_version: "2026bk/1.0.0"
 prompt_version: "internalization/1.0.0"
+# The seed's digits look like a date and are NOT one. It stays 20260809 because
+# every published result is reproducible under it and the re-run instructions in
+# paper.md and the dataset card cite it by value; changing it would invalidate
+# them. See the date-correction note under run_notes. Do not "fix" it to match
+# declared_on.
 seed: 20260809
-declared_on: "2026-08-09"
+declared_on: "2026-08-06"
 
 # ---------------------------------------------------------------------------
 # Operators. RC1 requires TWO INDEPENDENT operators. The corpus rule is that
@@ -26,7 +31,7 @@ declared_on: "2026-08-09"
 # ---------------------------------------------------------------------------
 extraction_operators:
   - {id: OP_A, family: anthropic, model: claude-opus-5}
-  # Identifier corrected 2026-08-09 during the pilot smoke test, before any
+  # Identifier corrected 2026-08-06 during the pilot smoke test, before any
   # specimen was extracted: the served id on this endpoint is the -preview one.
   - {id: OP_B, family: google, model: gemini-3.1-pro-preview}
 
@@ -152,14 +157,14 @@ quantities:
     - >-
       RC1 Layer 2, UNTYPED variant: the same triple overlap with the edge type
       erased, so that disagreement about whether an edge exists is separated
-      from disagreement about what to call it. Added 2026-08-09 after the pilot
+      from disagreement about what to call it. Added 2026-08-06 after the pilot
       showed the two arms drawing the same edge under different type names.
       DIAGNOSTIC ONLY -- the gate remains the typed statistic at the threshold
       DECISION_RULE.md declares, and this variant is never substituted for it.
     - >-
       RC1 Layer 2, EDGE RETENTION: the share of each operator's edges whose both
       endpoints survive the restriction to the agreed node set. Declared
-      2026-08-09 during the pilot, before the specimen run. Diagnostic only: it
+      2026-08-06 during the pilot, before the specimen run. Diagnostic only: it
       bounds how much of a low F1 can be read as disagreement about edges rather
       than as a small denominator.
     - "RC1 Layer 3: Spearman rank correlation of support_mass over the agreed node set."
@@ -189,11 +194,35 @@ run_order:
 # a guideline, or a scored quantity.
 # ---------------------------------------------------------------------------
 run_notes:
-  - date: "2026-08-09"
+  - date: "2026-08-08"
+    defect: >-
+      Every date in this protocol, in READER_MODEL.md, PILOT_REPORT.md,
+      DATA_MANIFEST.yaml and SPINE.yaml read 2026-08-09 -- a pre-declaration
+      date three days AFTER the run it governs, and two days after this file was
+      committed (9a3d4f01f, 2026-08-07, the commit that ran the validation) and
+      the paper was deposited. On a paper about pre-registration discipline, a
+      declaration that post-dates its own publication is the one defect a reader
+      is entitled to check first.
+    fix: >-
+      Corrected to 2026-08-06 against machine-written evidence rather than
+      memory: all 62 timestamped records in logs/*.jsonl -- pilot and specimen
+      calls alike -- fall between 2026-08-06T20:17:36Z and 2026-08-06T22:14:25Z.
+      DECISION_RULE.md independently reads PRE-DECLARED 2026-08-06 and has commit
+      evidence from that date, so the two documents now agree. The seed literal
+      20260809 is deliberately NOT changed: it is a reproducibility pin cited by
+      value in paper.md and the dataset card, and its digits resembling a date is
+      a coincidence of how it was chosen, not a claim about when anything
+      happened.
+    affects: >-
+      The stated date of declaration only. No threshold, guideline, operator,
+      counting rule or scored quantity is touched, and no result changes. Logged
+      here rather than applied silently, because a pre-declaration that can be
+      edited without a record is not one.
+  - date: "2026-08-06"
     defect: "One provider counts reasoning tokens against the output cap; a call spent its entire budget reasoning and returned an empty response."
     fix: "Output cap raised to 48,000 and reasoning depth bounded at that provider's middle effort level."
     affects: "Whether a call returns at all. No scored quantity."
-  - date: "2026-08-09"
+  - date: "2026-08-06"
     defect: "Verbatim spans quoting mathematics are not valid JSON as emitted -- a span containing a LaTeX control sequence breaks the parse, and the operator has no way to know that while quoting faithfully."
     fix: >-
       The response parser repairs invalid escape sequences before parsing, and
@@ -206,7 +235,7 @@ run_notes:
       what can be parsed, not what the operator said. Every saved graph was
       checked for control-character corruption; none was found.
     affects: "Whether a mathematical specimen can be extracted at all. No scored quantity."
-  - date: "2026-08-09"
+  - date: "2026-08-06"
     defect: >-
       On a dense mathematical document the google arm spent 62,912 tokens
       reasoning and was truncated mid-graph with 2,620 tokens left to write in.

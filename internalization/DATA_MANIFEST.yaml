@@ -9,7 +9,7 @@
 # redistributed.
 
 paper: 2026bk
-run_date: "2026-08-09"
+run_date: "2026-08-06"
 protocol: PROTOCOL.yaml           # pre-declared before any call
 decision_rule: DECISION_RULE.md   # pre-declared 2026-08-06
 reader_models: READER_MODEL.md    # pre-declared before any measurement

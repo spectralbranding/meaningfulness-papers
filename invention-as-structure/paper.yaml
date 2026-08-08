@@ -266,7 +266,7 @@ dependencies:
 - relationship: applies
   claim: builds on tier-bundle-algebra
   critical: false
-  reference: Zharnikov (tier-bundle-algebra), this corpus.
+  doi: 10.5281/zenodo.21756077
 - relationship: extends
   claim: 'anchor: zahavy-2026-llms-cant-jump'
   reference: zahavy-2026-llms-cant-jump

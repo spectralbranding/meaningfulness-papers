@@ -13,7 +13,7 @@ meta:
     orcid: 0009-0000-6893-9231
     affiliation: Independent Researcher
   doi: 10.5281/zenodo.20409683
-  date: '2026-05-01'
+  date: '2026-06-27'
   venue: Organization Science
   license: CC-BY-4.0
   keywords:
@@ -56,7 +56,7 @@ claims:
   statement: 'Organizations (research labs, consulting firms, standards bodies) that publish the semantic
     substrate (S) of their knowledge artifacts as a first-class artifact achieve higher rates of knowledge
     recombination than organizations that publish only the rendering (R), under boundary conditions C1–C4.
-    v0.5.0 organizational-outcome reframing: "Labs that publish spines exhibit higher citation-weighted
+    a working version organizational-outcome reframing: "Labs that publish spines exhibit higher citation-weighted
     derivative work (extension, contradiction, or refinement of locked propositions) within 24–36 months
     than matched labs that publish renderings only."'
   testable: true
@@ -163,6 +163,11 @@ dependencies:
   claim: Replaces fabricated Puranam-Raveendran 2024 AMR.
   reference: kulkarni-2024-future-of-research-in-ai-driven-world
 - relationship: extends
+  claim: Answerability-first account of AI in publishing (the standing to answer for a claim, not detection/provenance);
+    role-indexed architecture with editorial LLMs as auditable recommenders — converges independently
+    with DP3's substrate/judgment editorial split. Added 2026-07-04 (citation-only, no version bump).
+  reference: floridi-2026-answerability-publishing
+- relationship: extends
   claim: Real Puranam-co-authored Org Sci paper; substitutes the fabricated Puranam-Raveendran 2024 AMR
     with a related theoretical predecessor.
   reference: kocak-levinthal-puranam-2023-dual-challenge-search-coordination
@@ -170,7 +175,7 @@ dependencies:
   claim: Real O'Mahony AMJ paper; substitutes the fabricated Seidel-O'Mahony 2023 AMJ.
   reference: grodal-omahony-2017-grand-challenge-displaced
 - relationship: extends
-  claim: Canonical AMR anchor.
+  claim: Canonical theory-journal anchor.
   doi: 10.5465/amr.2018.0072
 - relationship: extends
   claim: 'anchor: vonkrogh-2023-recognizing-research-opportunities-ai'
@@ -206,18 +211,18 @@ dependencies:
 - relationship: extends
   claim: Knowledge-based theory of the firm at the problem-solving level. Co-authored by Zenger; resolves
     the search for the "Felin-Zenger anchor" an AI tool had hallucinated. Nickerson-Zenger frames the
-    firm as a knowledge-coordination apparatus for problem-solving; the Operator role v0.7.0 specifies
-    the role-level structure within that coordination apparatus under generative AI. Engaging Nickerson-Zenger
-    in §4.1 + §8 supplies a canonical Org Sci anchor for the role-theoretic contribution.
+    firm as a knowledge-coordination apparatus for problem-solving; the Operator role a working version
+    specifies the role-level structure within that coordination apparatus under generative AI. Engaging
+    Nickerson-Zenger in §4.1 + §8 supplies a canonical Org Sci anchor for the role-theoretic contribution.
   reference: nickerson-zenger-2004-knowledge-based-theory-firm-problem-solving
 - relationship: extends
   claim: A canonical role-theoretic treatment of how occupational roles absorb unexpected events; the
     Operator role engages it in §B/§J to show how the structural/judgment split generalizes (or differs
     from) classic OST role theory rather than appearing sui generis to AI. Bechky-Okhuysen documents how
     SWAT officers and film crews maintain role-coherence under surprise via 'trading zones' and coordination;
-    the Operator role v0.7.0 generalizes their role- coordination move to substrate/rendering coordination
-    under AI projection. Engaging Bechky-Okhuysen demonstrates the Operator role is not sui generis to
-    AI-era scholarship.
+    the Operator role a working version generalizes their role- coordination move to substrate/rendering
+    coordination under AI projection. Engaging Bechky-Okhuysen demonstrates the Operator role is not sui
+    generis to AI-era scholarship.
   reference: bechky-okhuysen-2011-expecting-unexpected-swat-film
 - relationship: extends
   claim: 'Partially resolves a fabricated-citation gap. An AI tool suggested a non-existent Felin-Zenger
@@ -341,19 +346,19 @@ dependencies:
   reference: berente-seidel-safadi-2019-data-driven-theory-development
 - relationship: extends
   claim: Paper B 2026ap takes the empirical estimation of P2 (recombination) and P3 (verification-cost
-    asymmetry β/δ) at growing-N twin-pair cohort. v1.0.0 ships with N=2 focal pair (Eisenhardt-Martin
+    asymmetry β/δ) at growing-N twin-pair cohort. a working version ships with N=2 focal pair (Eisenhardt-Martin
     2000 SMJ + Zollo-Winter 2002 Org Sci), plus N=2 secondary pair (Tushman-O'Reilly 1996 CMR + Duncan
-    1976 Kilmann-ed.) for 20-year-gap sensitivity. v2.0.0+ adds prospective lab-cohort data. v4.0.0 targets
-    SMJ submission scale. Each version cites Paper A 2026ao DOI as theoretical foundation. Scoping doc
-    at [internal path removed]
+    1976 Kilmann-ed.) for 20-year-gap sensitivity. a working version+ adds prospective lab-cohort data.
+    Each version cites Paper A 2026ao DOI as theoretical foundation.
   reference: zharnikov-2026ap-meaningfulness-empirical-companion
 - relationship: extends
   claim: 'Multiple-discovery hypothesis: independent discovery of the same idea is structurally inevitable
     under shared substrate conditions.'
   reference: merton-1961-singletons-multiples-scientific-discovery
 - relationship: extends
-  claim: 'Title correction at v0.3.0: actual title is ''...Zeitgeist, genius, or chance?'' not ''...Zuckerman''s
-    theory revisited'' (Crossref-confirmed). Quantitative model of multiple-discovery frequency.'
+  claim: 'Title correction at a working version: actual title is ''...Zeitgeist, genius, or chance?''
+    not ''...Zuckerman''s theory revisited'' (Crossref-confirmed). Quantitative model of multiple-discovery
+    frequency.'
   reference: simonton-1979-multiple-discovery-zeitgeist-genius-chance
 - relationship: extends
   claim: 'Michaël Bikard (not David Bikard the microbiologist — common-name disambiguation: there are
@@ -389,19 +394,17 @@ dependencies:
   reference: pauli-1926-wasserstoffspektrum-neue-quantenmechanik
 - relationship: extends
   claim: 'Pauli 1927 "Zur Quantenmechanik des magnetischen Elektrons" (Delphenich English: "On the quantum
-    mechanics of magnetic electrons"). User- supplied PDF v0.7.1 (2026-05-26). Pauli explicitly derives
-    the Schrödinger wave-mechanics form of the magnetic-electron problem AND states the derivation produces
-    results "completely equivalent in their consequences to the matrix equations of Heisenberg and Jordan"
-    (abstract; verbatim Delphenich translation). This is a *within- author rendering-equivalence demonstration*:
-    same operator (Pauli) explicitly performs both renderings (matrix-mechanics treatment of spin in Heisenberg-Jordan
-    + Schrödinger wave-mechanics method in Pauli 1927) and explicitly notes their equivalence. Stronger
-    P4 evidence than the cross-author H-S equivalence because it removes possible coordination/cross-influence
-    concerns: a single author doing both renderings within one paper cannot have coordinated with himself
-    or been influenced by external bias. Auxiliary T1 supporting evidence; appendix-depth at Paper A Phase
-    3 drafting ("Online Appendix D — Historical Existence Proof (Non-Management Domain)"). Per PIVOT-SPLIT
-    discipline (H-S preserved as historical existence proof for P4; main body weight at Eisenhardt-Martin
-    + Zollo- Winter management twin pair), Pauli 1927 strengthens the historical- record evidence without
-    expanding main-body weight.'
+    mechanics of magnetic electrons"). User- supplied PDF a working version (2026-05-26). Pauli explicitly
+    derives the Schrödinger wave-mechanics form of the magnetic-electron problem AND states the derivation
+    produces results "completely equivalent in their consequences to the matrix equations of Heisenberg
+    and Jordan" (abstract; verbatim Delphenich translation). This is a *within- author rendering-equivalence
+    demonstration*: same operator (Pauli) explicitly performs both renderings (matrix-mechanics treatment
+    of spin in Heisenberg-Jordan + Schrödinger wave-mechanics method in Pauli 1927) and explicitly notes
+    their equivalence. Stronger P4 evidence than the cross-author H-S equivalence because it removes possible
+    coordination/cross-influence concerns: a single author doing both renderings within one paper cannot
+    have coordinated with himself or been influenced by external bias. Auxiliary T1 supporting evidence;
+    appendix-depth at Paper A Phase 3 drafting ("Online Appendix D — Historical Existence Proof (Non-Management
+    Domain)"). Pauli 1927 strengthens the historical- record evidence without expanding main-body weight.'
   reference: pauli-1927-quantenmechanik-magnetischen-elektrons
 - relationship: extends
   claim: Born's probabilistic interpretation of ψ (the ψψ̄ ≡ probability density reading that Schrödinger's
@@ -421,12 +424,12 @@ dependencies:
     are mathematically equivalent — the natural-experiment confirmation of rendering-equivalence.'
   reference: schrodinger-1926-equivalence-heisenberg-wave-mechanics
 - relationship: extends
-  claim: Acquired v0.4.0 by operator. The rigorous Hilbert-space functional-analytic foundation of the
-    matrix-vs-wave-mechanics equivalence; canonical formal-equivalence citation.
+  claim: Acquired a working version by operator. The rigorous Hilbert-space functional-analytic foundation
+    of the matrix-vs-wave-mechanics equivalence; canonical formal-equivalence citation.
   reference: vonneumann-1932-mathematical-foundations-quantum-mechanics
 - relationship: extends
-  claim: Acquired v0.4.0 by operator. Multiple-discovery hypothesis canonical source. Merton 1961 PAPS
-    paper; later expanded in Merton 1973 Sociology of Science book that Bikard 2020 cites.
+  claim: Acquired a working version by operator. Multiple-discovery hypothesis canonical source. Merton
+    1961 PAPS paper; later expanded in Merton 1973 Sociology of Science book that Bikard 2020 cites.
   reference: merton-1961-singletons-multiples-scientific-discovery-acquired
 - relationship: extends
   claim: 'anchor: cover-2006-elements-information-theory'
@@ -453,7 +456,7 @@ dependencies:
   doi: 10.17705/1jais.00861
 contradictions: []
 limitations:
-- description: Corpus-internal SF1 evidence (F1) is based on a single-session aggregate observation; statistical
+- description: Corpus-internal SF1 evidence (F1) is based on a single-[session] observation; statistical
     generalization from corpus-internal observations alone is not warranted. Public-paper SF1 evidence
     prioritizes published RAG-hallucination benchmarks.
   severity: moderate

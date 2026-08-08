@@ -1,6 +1,6 @@
 [![MIT License](https://img.shields.io/badge/Code-MIT-blue.svg)](../LICENSE)
 [![CC-BY 4.0](https://img.shields.io/badge/Data-CC--BY_4.0-lightgrey.svg)](../LICENSE-data)
-![Last Updated](https://img.shields.io/badge/updated-2026--07--28-success)
+![Last Updated](https://img.shields.io/badge/updated-2026--08--08-success)
 
 # Invention as a Structural Operation: Why the Abductive Jump Is a Re-Coordinatization of the Space of Description, Not a Sensory Leap
 
@@ -37,4 +37,4 @@ Code (if any): MIT — see hub-level [../LICENSE](../LICENSE). Data, figures, ta
 
 ---
 
-*Last updated: 2026-07-28*
+*Last updated: 2026-08-08*

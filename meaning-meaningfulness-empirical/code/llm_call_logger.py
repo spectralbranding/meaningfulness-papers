@@ -36,6 +36,18 @@ set_cost_estimate, _build_row computes a fallback estimate from PRICE_TABLE[mode
 and the captured token counts. Callers should still override via set_cost_estimate
 when actual billed cost differs from list (promotional discounts, prompt caching
 credits, batch-API rates).
+
+model_version_served + model_version_matches_request (added v1.3): `model_version`
+is what the caller ASKED FOR; `model_version_served` is what the provider says it
+ANSWERED WITH. These differ whenever an alias resolves to a dated build --
+`claude-haiku-4-5` -> `claude-haiku-4-5-20251001`, `deepseek-v4-flash` -> the 0731
+build -- and the resolution can change without a line of code changing. Until v1.3
+the served value was DISCARDED whenever a caller had already called
+set_model_version, which is the usual pattern: the log kept the alias and threw away
+the only record of what actually ran. That is invisible in a one-off measurement and
+fatal in a longitudinal one, where a re-pointed alias is indistinguishable from a
+change in the thing being measured. Both are now recorded, with a third field stating
+plainly whether they agree (None when the provider did not say).
 - request_id + endpoint + sdk_version
 - response + response_metadata + tokens + latency_seconds + cost_usd_est
 - errors + retries + git_sha_caller + python_env_hash + human_in_loop +
@@ -65,7 +77,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterator
 
-LOG_FORMAT_VERSION = "1.2"
+LOG_FORMAT_VERSION = "1.3"
 
 # Default logs directory relative to this script.
 DEFAULT_LOGS_DIR = Path(__file__).resolve().parent.parent / "logs"
@@ -250,6 +262,12 @@ class _CallLogger:
     _response: str = ""
     _response_metadata: dict[str, Any] = field(default_factory=dict)
     _model_version: str = ""
+    # What the PROVIDER says it answered with, which is not always what was
+    # asked for: an alias (`claude-haiku-4-5`, `deepseek-v4-flash`) resolves
+    # to a dated build that can change under a caller who never edits a line.
+    # A longitudinal measurement whose log keeps only the request cannot tell
+    # a stable series from a silently re-pointed one, so both are recorded.
+    _model_version_served: str = ""
     _request_id: str | None = None
     _tokens: dict[str, int] = field(default_factory=dict)
     _cost_usd_est: float = 0.0
@@ -297,7 +315,8 @@ class _CallLogger:
                 "input": getattr(usage, "input_tokens", 0),
                 "output": getattr(usage, "output_tokens", 0),
             }
-            self._model_version = self._model_version or getattr(response, "model", "")
+            self._model_version_served = getattr(response, "model", "") or ""
+            self._model_version = self._model_version or self._model_version_served
             self._request_id = getattr(response, "id", None)
             return
 
@@ -312,7 +331,8 @@ class _CallLogger:
                 "input": getattr(usage, "prompt_tokens", 0),
                 "output": getattr(usage, "completion_tokens", 0),
             }
-            self._model_version = self._model_version or getattr(response, "model", "")
+            self._model_version_served = getattr(response, "model", "") or ""
+            self._model_version = self._model_version or self._model_version_served
             self._request_id = getattr(response, "id", None)
             try:
                 self._response_metadata = {
@@ -348,8 +368,13 @@ class _CallLogger:
                 }
             if response.get("id") and self._request_id is None:
                 self._request_id = response.get("id")
-            if response.get("model") and not self._model_version:
-                self._model_version = response.get("model")
+            # Google returns `modelVersion`; the OpenAI-compatible shape returns
+            # `model`. Raw-HTTP callers land here, so both spellings are read.
+            served = response.get("model") or response.get("modelVersion") or ""
+            if served:
+                self._model_version_served = served
+            if served and not self._model_version:
+                self._model_version = served
             return
 
         # String / unknown — capture as-is
@@ -371,6 +396,12 @@ class _CallLogger:
             "operator": self.operator,
             "operator_role": self.operator_role,
             "model_version": self._model_version,
+            "model_version_served": self._model_version_served,
+            "model_version_matches_request": (
+                None
+                if not self._model_version_served or not self._model_version
+                else self._model_version_served == self._model_version
+            ),
             "timestamp_utc": dt.datetime.now(dt.timezone.utc)
             .isoformat()
             .replace("+00:00", "Z"),

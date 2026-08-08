@@ -26,19 +26,20 @@ meta:
   - pre-registration
   - argument mining.
   abstract: 'Machine-extracted argument structures are increasingly read as evidence about how fields
-    move, so measurement error entering at extraction propagates into whatever is built on the extracted
-    graph. In a prior pre-registered run, two machine operators did not recover the dependency structure
-    of five argumentative documents at a declared agreement level, and the failure sat upstream of relation
-    labelling. That result cannot say what the disagreement is made of: unitization, node typing and relation
-    drawing varied at once, and each document was extracted once per operator, so between-operator disagreement
-    is not separable from run-to-run variance. This paper pre-registers a design removing both. A unit
-    inventory is fixed before extraction and supplied identically to both operators, making node selection
-    a decision over a common index set; every extraction is repeated, supplying a within-operator baseline
-    against which any between-operator number is read. Three unitization conditions run on one corpus,
-    one operator pair, one epoch, ordered in advance. Thresholds are re-derived per layer from their own
-    reference classes, not inherited, and the sensitivity table is published empty. The claim under test
-    is the predecessor''s closing recommendation, stated so it can fail: if fixing the units does not
-    move edge-level agreement, the failure was mislocated.'
+    move, so measurement error at extraction propagates into whatever is built on the extracted graph.
+    A prior pre-registered run found two machine operators did not recover the dependency structure of
+    five argumentative documents at a declared agreement level, and located the failure upstream of relation
+    labelling, but could not say what the disagreement was made of. This paper fixed the unit inventory
+    before extraction, supplied it identically to both operators, and repeated every extraction five times,
+    decomposing disagreement into selection, typing and relation drawing against a within-operator baseline.
+    Every threshold was derived from its own reference class and deposited before data collection. Across
+    150 extraction calls in three unitization conditions, edge-level agreement failed its $.71$ gate in
+    all fifteen document-by-condition cells, including the ten where units were supplied identically,
+    and separated below the within-operator baseline in every cell ($p \leq .001$). On this corpus the
+    predecessor''s closing recommendation is therefore overturned: sharing an inventory does not rescue
+    edge agreement, so unitization was not where the failure lived. Segmenter fidelity failed on all five
+    documents, which bounds every fixed-inventory claim here and leaves a shared inventory of established
+    fidelity untested.'
 claims:
 - id: P1
   type: proposition
@@ -47,7 +48,7 @@ claims:
     and relation drawing over a shared node set -- and fixing the first by design is what makes the second
     and third measurable at all.
   testable: true
-  tested_in_paper: false
+  tested_in_paper: true
   status: not_tested
 - id: P2
   type: proposition
@@ -58,7 +59,7 @@ claims:
     the model''s epistemic uncertainty: provider-side variance is a genuine component of what a replicator
     faces and is therefore part of the quantity, not a contaminant of it.'
   testable: true
-  tested_in_paper: false
+  tested_in_paper: true
   status: not_tested
 - id: P3
   type: proposition
@@ -66,7 +67,7 @@ claims:
     the size of the bias is measurable by recomputing that layer under a coefficient that charges for
     boundary disagreement rather than excluding it.
   testable: true
-  tested_in_paper: false
+  tested_in_paper: true
   status: not_tested
   depends_on:
   - P1
@@ -76,13 +77,13 @@ claims:
     the units fixed and the noise floor known, then unitization was not where the failure lived, and Round
     1's own conclusion is overturned by its declared successor.
   testable: true
-  tested_in_paper: false
+  tested_in_paper: true
   status: not_tested
   depends_on:
   - P1
   - P2
 methodology:
-  type: theoretical
+  type: empirical
   design: 'THREE conditions, ordered in advance, all on the same five documents with the same operator
     pair in the same epoch. U-free, no inventory supplied, the free-unitization condition, which is both
     the comparability control and the control for granularity mismatch. U-det, a deterministic published
@@ -219,6 +220,39 @@ limitations:
     the model -- dynamic batching makes temperature-zero decoding nondeterministic, so part of the measured
     variance tracks infrastructure conditions at call time.
   severity: moderate
+  addressable: true
+- description: THE LAYER S ADJUDICATORS ARE MACHINE, NOT HUMAN. The deposit's M1a describes two adjudicators
+    segmenting independently under the declared rule with a third resolving, and M4a derives the .80 gate
+    as a discount on the human blind segmentation floor because rule-against-HUMAN adjudication is the
+    harder comparison. What ran is that same structure -- two independent adjudicators from families used
+    in no other role, blind to the hypotheses and to which condition the inventory would serve, plus a
+    third-family resolver -- with machine adjudicators in place of human ones. The alternative to the
+    substitution was no Layer S at all, and therefore no operator call, since the ordering is itself pre-registered.
+  severity: major
+  addressable: true
+- description: 'LAYER S ADJUDICATION IS ELICITED IN CHUNKS OF 25 CANDIDATE POSITIONS rather than one call
+    per document, each chunk carrying its own passage with a 240-character overlap into the preceding
+    chunk. Every candidate is still decided exactly once, under the same rule, by the same adjudicator.
+    A whole-document call did not survive contact with the providers: one adjudicator spent its entire
+    token budget reasoning and returned empty content, and another answered a 614-candidate document with
+    64 boundaries.'
+  severity: moderate
+  addressable: true
+- description: AN UNPARSEABLE ADJUDICATION CHUNK IS RECORDED UNANSWERED AND THE PASS CONTINUES, a failure
+    mode the deposited design did not anticipate. For positions inside an unanswered chunk the design's
+    two independent adjudicators reduce to one adjudicator plus the resolver -- the resolver still decides
+    them, because a position one adjudicator marked and the other did not is by definition disputed. Introduced
+    before any Layer S coefficient was computed.
+  severity: moderate
+  addressable: true
+- description: 'THE TWO OPERATORS ARE NOT SAMPLED THE SAME WAY, AND CANNOT BE. M3 requires the k repetitions
+    to run "under identical parameters", and they are identical WITHIN each operator, which is what the
+    within-operator baseline requires. They are not identical BETWEEN operators, because this provider
+    pair offers no common setting: OP_B is called at temperature 0 with the study seed, while OP_A''s
+    family rejects sampling parameters outright and bounds reasoning depth by an effort level instead.
+    Equalising would have meant abandoning the predecessor''s operator pair, and comparability with the
+    run whose failure this design decomposes is the reason that pair is used at all.'
+  severity: major
   addressable: true
 repositories:
 - platform: GitHub

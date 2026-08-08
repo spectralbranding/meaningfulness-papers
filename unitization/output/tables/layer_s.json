@@ -1,0 +1,176 @@
+{
+ "gate": 0.8,
+ "measured_before_any_operator_call": true,
+ "rows": [
+  {
+   "document": "vc1",
+   "n_candidates": 668,
+   "units_segmenter": 273,
+   "units_adjudicated": 116,
+   "math_merges": 218,
+   "segmenter_boundaries_unrepresentable": 7,
+   "adjudicator_kappa": {
+    "n_candidates": 668,
+    "both_boundary": 98,
+    "neither": 547,
+    "only_first": 7,
+    "only_second": 16,
+    "raw_agreement": 0.9655688622754491,
+    "expected_agreement": 0.7258058732833734,
+    "kappa": 0.8744278802144633,
+    "marginal_first": 0.15718562874251496,
+    "marginal_second": 0.17065868263473055
+   },
+   "layer_s_kappa": {
+    "n_candidates": 668,
+    "both_boundary": 70,
+    "neither": 358,
+    "only_first": 195,
+    "only_second": 45,
+    "raw_agreement": 0.6407185628742516,
+    "expected_agreement": 0.567728315823443,
+    "kappa": 0.1688527139820624,
+    "marginal_first": 0.3967065868263473,
+    "marginal_second": 0.1721556886227545
+   },
+   "gate": 0.8,
+   "passes": false
+  },
+  {
+   "document": "vc2",
+   "n_candidates": 742,
+   "units_segmenter": 590,
+   "units_adjudicated": 616,
+   "math_merges": 1,
+   "segmenter_boundaries_unrepresentable": 2,
+   "adjudicator_kappa": {
+    "n_candidates": 742,
+    "both_boundary": 523,
+    "neither": 126,
+    "only_first": 56,
+    "only_second": 37,
+    "raw_agreement": 0.8746630727762803,
+    "expected_agreement": 0.6428062859177135,
+    "kappa": 0.6491065707980351,
+    "marginal_first": 0.7803234501347709,
+    "marginal_second": 0.7547169811320755
+   },
+   "layer_s_kappa": {
+    "n_candidates": 742,
+    "both_boundary": 486,
+    "neither": 26,
+    "only_first": 101,
+    "only_second": 129,
+    "raw_agreement": 0.6900269541778976,
+    "expected_agreement": 0.6914545811204509,
+    "kappa": -0.004626958804760586,
+    "marginal_first": 0.7911051212938005,
+    "marginal_second": 0.8288409703504043
+   },
+   "gate": 0.8,
+   "passes": false
+  },
+  {
+   "document": "vc3_r0",
+   "n_candidates": 98,
+   "units_segmenter": 74,
+   "units_adjudicated": 76,
+   "math_merges": 5,
+   "segmenter_boundaries_unrepresentable": 2,
+   "adjudicator_kappa": {
+    "n_candidates": 98,
+    "both_boundary": 75,
+    "neither": 23,
+    "only_first": 0,
+    "only_second": 0,
+    "raw_agreement": 1.0,
+    "expected_agreement": 0.6407746772178258,
+    "kappa": 1.0,
+    "marginal_first": 0.7653061224489796,
+    "marginal_second": 0.7653061224489796
+   },
+   "layer_s_kappa": {
+    "n_candidates": 98,
+    "both_boundary": 59,
+    "neither": 11,
+    "only_first": 12,
+    "only_second": 16,
+    "raw_agreement": 0.7142857142857143,
+    "expected_agreement": 0.6191170345689295,
+    "kappa": 0.24986331328594882,
+    "marginal_first": 0.7244897959183674,
+    "marginal_second": 0.7653061224489796
+   },
+   "gate": 0.8,
+   "passes": false
+  },
+  {
+   "document": "vc3_r1",
+   "n_candidates": 564,
+   "units_segmenter": 421,
+   "units_adjudicated": 420,
+   "math_merges": 23,
+   "segmenter_boundaries_unrepresentable": 17,
+   "adjudicator_kappa": {
+    "n_candidates": 564,
+    "both_boundary": 330,
+    "neither": 141,
+    "only_first": 70,
+    "only_second": 23,
+    "raw_agreement": 0.8351063829787234,
+    "expected_agreement": 0.5526759217343192,
+    "kappa": 0.631377730301071,
+    "marginal_first": 0.7092198581560284,
+    "marginal_second": 0.625886524822695
+   },
+   "layer_s_kappa": {
+    "n_candidates": 564,
+    "both_boundary": 324,
+    "neither": 66,
+    "only_first": 79,
+    "only_second": 95,
+    "raw_agreement": 0.6914893617021277,
+    "expected_agreement": 0.6042263970625219,
+    "kappa": 0.22048707642937743,
+    "marginal_first": 0.7145390070921985,
+    "marginal_second": 0.7429078014184397
+   },
+   "gate": 0.8,
+   "passes": false
+  },
+  {
+   "document": "vc3_r2",
+   "n_candidates": 184,
+   "units_segmenter": 131,
+   "units_adjudicated": 124,
+   "math_merges": 17,
+   "segmenter_boundaries_unrepresentable": 2,
+   "adjudicator_kappa": {
+    "n_candidates": 184,
+    "both_boundary": 103,
+    "neither": 58,
+    "only_first": 6,
+    "only_second": 17,
+    "raw_agreement": 0.875,
+    "expected_agreement": 0.5281190926275993,
+    "kappa": 0.7351026539809714,
+    "marginal_first": 0.592391304347826,
+    "marginal_second": 0.6521739130434783
+   },
+   "layer_s_kappa": {
+    "n_candidates": 184,
+    "both_boundary": 86,
+    "neither": 19,
+    "only_first": 42,
+    "only_second": 37,
+    "raw_agreement": 0.5706521739130435,
+    "expected_agreement": 0.5659262759924385,
+    "kappa": 0.010887316276537936,
+    "marginal_first": 0.6956521739130435,
+    "marginal_second": 0.6684782608695652
+   },
+   "gate": 0.8,
+   "passes": false
+  }
+ ]
+}

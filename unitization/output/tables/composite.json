@@ -1,0 +1,188 @@
+{
+ "implementation": "pygamma-agreement",
+ "solver": "GLPK_MI via cvxpy (CBC absent); exact MILP, proven 0.0% gap",
+ "sampler_seeded": true,
+ "computed_on": "repetition 1 of each operator",
+ "rows": [
+  {
+   "document": "vc1",
+   "condition": "u_free",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 58,
+    "OP_B": 7
+   },
+   "gamma": 0.03128528594970703,
+   "gamma_cat": -0.0995246171951294,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc2",
+   "condition": "u_free",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 137,
+    "OP_B": 16
+   },
+   "gamma": 0.10625052452087402,
+   "gamma_cat": -0.09703445434570312,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc3_r0",
+   "condition": "u_free",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 40,
+    "OP_B": 32
+   },
+   "gamma": 0.35019803047180176,
+   "gamma_cat": 0.25698137283325195,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc3_r1",
+   "condition": "u_free",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 53,
+    "OP_B": 14
+   },
+   "gamma": 0.3080294728279114,
+   "gamma_cat": 0.13912838697433472,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc3_r2",
+   "condition": "u_free",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 48,
+    "OP_B": 14
+   },
+   "gamma": 0.13821882009506226,
+   "gamma_cat": -0.0826643705368042,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc1",
+   "condition": "u_det",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 115,
+    "OP_B": 25
+   },
+   "gamma": 0.0799223780632019,
+   "gamma_cat": -0.019413113594055176,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc2",
+   "condition": "u_det",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 301,
+    "OP_B": 16
+   },
+   "gamma": -0.04861724376678467,
+   "gamma_cat": -0.13443052768707275,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc3_r0",
+   "condition": "u_det",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 67,
+    "OP_B": 59
+   },
+   "gamma": 0.5961351990699768,
+   "gamma_cat": 0.4673810601234436,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc3_r1",
+   "condition": "u_det",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 153,
+    "OP_B": 16
+   },
+   "gamma": 0.03140151500701904,
+   "gamma_cat": -0.13795948028564453,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc3_r2",
+   "condition": "u_det",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 92,
+    "OP_B": 28
+   },
+   "gamma": 0.28758853673934937,
+   "gamma_cat": 0.1704980731010437,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc1",
+   "condition": "u_mod",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 102,
+    "OP_B": 15
+   },
+   "gamma": 0.09023070335388184,
+   "gamma_cat": 0.05207252502441406,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc2",
+   "condition": "u_mod",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 317,
+    "OP_B": 112
+   },
+   "gamma": 0.2908540964126587,
+   "gamma_cat": 0.1502077579498291,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc3_r0",
+   "condition": "u_mod",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 69,
+    "OP_B": 68
+   },
+   "gamma": 0.7536113262176514,
+   "gamma_cat": 0.6480126976966858,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc3_r1",
+   "condition": "u_mod",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 158,
+    "OP_B": 15
+   },
+   "gamma": -0.10810792446136475,
+   "gamma_cat": -0.1308121681213379,
+   "precision_level": 0.05
+  },
+  {
+   "document": "vc3_r2",
+   "condition": "u_mod",
+   "repetition": 1,
+   "annotations": {
+    "OP_A": 90,
+    "OP_B": 35
+   },
+   "gamma": 0.37322986125946045,
+   "gamma_cat": 0.26031625270843506,
+   "precision_level": 0.05
+  }
+ ]
+}

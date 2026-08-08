@@ -1,5 +1,5 @@
 spine_version: "0.2"
-spine_doc_version: "0.9.0"
+spine_doc_version: "1.0.0"
 paper_key: "2026bl"
 title: "Unitization Before Extraction: A Pre-Registered Decomposition of Disagreement in Machine Recovery of Dependency Structure"
 provenance: "new"
@@ -88,7 +88,13 @@ assumption_atoms:
     statement: >-
       Two arms from different model families are an OPERATIONAL separation and not a statistical
       one. Nothing guarantees uncorrelated errors, and where they correlate positively agreement is
-      easier to obtain. Inherited from Round 1's L5.
+      easier to obtain. Inherited from Round 1's L5. EXTENDED at the 1.0.0 fork to the LAYER S
+      ADJUDICATORS, who are machines (LA1) and therefore carry the same assumption: perfect
+      adjudicator agreement is consistent with two instruments sharing a prior and jointly diverging
+      from the segmenter, as well as with the segmenter being wrong, and nothing in this design
+      distinguishes those. The consequence is a reading rule rather than a repair -- Layer S is
+      reported as machine-adjudicated fidelity, and the inference drawn is that the segmenter
+      disagrees with the adjudication, not that it is wrong in some adjudicator-independent sense.
     status: "untested; direction declared -- it makes a pass weak and a failure conservative"
     provenance: {created_by: "author", created_at: "2026-08-07"}
 
@@ -160,7 +166,20 @@ propositions:
           measured on the same documents by the same operators in the same epoch, so what changes
           between them is attributable to the unitization condition and to nothing else about the
           study.
-    body_sections: ["The decomposition", "The objection that the task has been replaced rather than decomposed"]
+      - type: dataset_anchor
+        anchor: >-
+          EXECUTED 2026-08-08 under the deposited design (see ME1, F1, F4, NF1). P1 is SUPPORTED and
+          its falsifier did not fire: over the fixed inventory, node selection, conditional typing
+          and edge recovery were each computed as coefficients over a common index set, with no
+          alignment step and no conditioning on a matched subset -- the conditioning the predecessor
+          is criticised for did not reappear. The three components are separately measured in all ten
+          fixed-inventory cells, and they separate: on VC3 R2 under U-mod, selection is .220 while
+          typing over the selected units is .808, which is a decomposition an undecomposed figure
+          cannot produce. The substitution objection is answered by the arm built for it and resolves
+          to the third of its three enumerated outcomes: U-free and the two fixed conditions FAIL
+          LAYER 3 IN THE SAME WAY, so the task was not changed enough for the objection to bite and
+          the decomposition describes the task the predecessor ran (NF1).
+    body_sections: ["The decomposition", "The objection that the task has been replaced rather than decomposed", "Results"]
     provenance: {created_by: "author", created_at: "2026-08-07"}
 
   - id: P2
@@ -214,7 +233,17 @@ propositions:
           Round 1 has no within-operator baseline, which is recorded there as a limitation rather
           than repaired, precisely because repairing it after the result would have been a protocol
           change made in light of an outcome.
-    body_sections: ["The noise floor"]
+      - type: dataset_anchor
+        anchor: >-
+          EXECUTED 2026-08-08 (see ME1, F2). P2's falsifier DID NOT FIRE, on the broadened form that
+          was written so it could. The interval includes zero on NO document and no condition: in all
+          fifteen cells the between-operator quantity separates below the within-operator baseline,
+          at p <= .001, with the percentile bootstrap interval on the difference excluding zero
+          throughout. The baseline is therefore informative, and it removes the comfortable
+          explanation for the Layer 3 failure rather than supplying one. Read with LA4: wherever OP_B
+          contributed a constant the pooled baseline is inflated toward 1.000, which biases the
+          design in favour of obtaining separation.
+    body_sections: ["The noise floor", "Results"]
     provenance: {created_by: "author", created_at: "2026-08-07"}
 
   - id: P3
@@ -237,6 +266,16 @@ propositions:
           Round 1's node-boundary precision runs far below its node-type agreement, so the excluded
           mass is large; a coefficient that charges for it cannot leave the statistic unchanged
           unless the excluded units happen to be typed as the matched ones were.
+      - type: dataset_anchor
+        anchor: >-
+          EXECUTED 2026-08-08 (see ME5, F8). P3 is SUPPORTED in the direction declared before the
+          recomputation. Charging boundary disagreement rather than excluding it moves the
+          predecessor's node layer down by .409 to .765 on the four documents that have a reported
+          comparator: .663 to .136 (VC1), .637 to .228 (VC2), 1.000 to .235 (VC3 R0), .769 to .245
+          (VC3 R2). The fifth, VC3 R1, has no reported comparator in the predecessor's record rather
+          than a contradicting one, and is reported as recomputed-only (.125). The declared
+          unfavourable direction therefore holds wherever it can be evaluated, and the conditioning
+          was doing the work attributed to it.
     reporting_status: >-
       DEMOTED at Phase 3 to a declared robustness check, deliberately and in advance. Three
       co-equal contributions inside one pre-registration is one too many, and a re-analysis of a
@@ -246,7 +285,18 @@ propositions:
       stays in the main text, because the credibility this proposition buys comes from the paper
       correcting itself against its own interest in plain sight. Burying that would forfeit exactly
       what the demotion is meant to protect.
-    body_sections: ["What Round 1's node layer was worth"]
+    evidence_executed:
+      - type: dataset_anchor
+        anchor: >-
+          EXECUTED 2026-08-08 (see ME5, F8). P3 is SUPPORTED in the direction declared before the
+          recomputation. Charging boundary disagreement rather than excluding it moves the
+          predecessor's node layer down by .409 to .765 on the four documents that have a reported
+          comparator: .663 to .136 (VC1), .637 to .228 (VC2), 1.000 to .235 (VC3 R0), .769 to .245
+          (VC3 R2). The fifth, VC3 R1, has no reported comparator in the predecessor's record rather
+          than a contradicting one, and is reported as recomputed-only (.125). The declared
+          unfavourable direction therefore holds wherever it can be evaluated, and the conditioning
+          was doing the work attributed to it.
+    body_sections: ["What Round 1's node layer was worth", "Results"]
     provenance: {created_by: "author", created_at: "2026-08-07"}
 
   - id: P4
@@ -262,8 +312,19 @@ propositions:
       P4 is the falsification instrument rather than a claim to defend: it is stated so that the
       unfavourable branch is pre-committed. Reporting an inconclusive run instead of this branch is
       the specific failure mode the pre-declaration exists to prevent.
-    evidence: []
-    body_sections: ["The pre-declared decision rule"]
+    evidence:
+      - type: dataset_anchor
+        anchor: >-
+          EXECUTED 2026-08-08 (see ME1, F1, F2). THE UNFAVOURABLE BRANCH FIRED, and it fired on all
+          five documents and in all three conditions. Edge-level agreement fails the .71 absolute
+          gate in every one of the fifteen cells, INCLUDING the ten fixed-inventory cells where the
+          units were supplied identically to both operators; and the noise floor is known rather than
+          assumed, because the within-operator baseline separates from the between-operator quantity
+          in every cell (F2). Both conditions of P4's antecedent are therefore met and the consequent
+          holds: unitization was not where the failure lived, and Round 1's closing recommendation is
+          overturned by its declared successor. The branch was pre-committed as the likely one, which
+          is why the decomposition and not the verdict is the contribution.
+    body_sections: ["The pre-declared decision rule", "Results"]
     provenance: {created_by: "author", created_at: "2026-08-07"}
 
 # ---------------------------------------------------------------------------
@@ -506,6 +567,349 @@ methods:
     provenance: {created_by: "author", created_at: "2026-08-07"}
 
 # ---------------------------------------------------------------------------
+# Measurements -- what was computed, and from what. Added at the 1.0.0 fork.
+# ---------------------------------------------------------------------------
+measurements:
+  - id: ME1
+    statement: >-
+      THE RUN, executed 2026-08-08 under the deposited design at protocol version 2026bl/1.0.0,
+      prompts 1.0.0, seed 20260808, k = 5. The published arithmetic was met exactly: 3 conditions x
+      5 documents x 2 operators x 5 repetitions = 150 extraction calls, with ZERO hard failures and
+      no missing cell. Every between-operator quantity is the mean over the 25 cross-operator
+      repetition pairs and every within-operator baseline the mean over the 20 same-operator pairs,
+      computed on the same statistic as M3 requires. Scoring covers all four layers in the two
+      fixed-inventory conditions and Layer 3 alone in U-free, which has no shared inventory.
+      Rendered to output/tables/decomposition.json.
+    generating_method: [M1, M2, M3, M4, M4a, M4b]
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: ME2
+    statement: >-
+      LAYER S, established BEFORE any operator call as M1a requires, and the ordering is a checkable
+      property of the record rather than an assertion. Per document: segmenter inventory size,
+      adjudicated inventory size, the segmenter's boundary agreement with the adjudicated inventory,
+      the two adjudicators' own agreement with each other, and the displayed-mathematics merge count
+      produced by M1c's rule (218 on VC1, 1 on VC2, 5 on VC3 R0, 23 on VC3 R1, 17 on VC3 R2).
+      Rendered to output/tables/layer_s.json.
+    generating_method: [M1a, M1b, M1c]
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: ME3
+    statement: >-
+      THE PREDICTED BASE RATES, computed and published BEFORE any operator call from the
+      predecessor's recorded node counts over this study's segmenter-computed inventory sizes:
+      predicted base rate .143 (VC1), .134 (VC2), .446 (VC3 R0), .118 (VC3 R1), .298 (VC3 R2), with
+      predicted prevalence indices .714, .732, .108, .765 and .405 respectively. No document's
+      PREDICTED index breaches the .85 floor, so all five were declared gating in advance. Rendered
+      to output/tables/predicted_base_rates.json.
+    generating_method: [M4b]
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: ME4
+    statement: >-
+      THE PUBLISHED JOINT COEFFICIENTS, computed in-study on every document and condition as M5a
+      requires, in both members of the family -- the holistic one and its categorisation-focused
+      companion -- from the maintained version-pinned implementation, on repetition 1 of each
+      operator. The alignment is solved as an exact mixed-integer program at a proven 0.0 percent
+      gap, and the expected-disorder sampler is seeded from the study's declared stable-digest rule
+      (RC2). Rendered to output/tables/composite.json.
+    generating_method: [M5a]
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: ME5
+    statement: >-
+      THE DECLARED RE-ANALYSIS of the predecessor's node layer under the joint unitizing
+      coefficient, additive and labelled as this paper's rather than as a correction to the
+      predecessor's record, whose frozen guidelines are not edited and whose published numbers are
+      not revised. Rendered to output/tables/reanalysis.json.
+    generating_method: [M5]
+    body_sections: ["What Round 1's node layer was worth"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: ME6
+    statement: >-
+      ADJUDICATION COVERAGE, reported because LA3's degradation is measured rather than described:
+      125 of 2,256 candidate positions across the five documents -- 5.5 percent -- were decided by
+      one adjudicator plus the resolver rather than by two, concentrated on VC3 R1 (75 positions,
+      13.3 percent) and VC2 (50 positions, 6.7 percent), with zero on the other three documents.
+      Rendered to output/tables/adjudication_coverage.json.
+    generating_method: [M1a]
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+
+# ---------------------------------------------------------------------------
+# Findings -- what is the case. Added at the 1.0.0 fork.
+# ---------------------------------------------------------------------------
+findings:
+  - id: F1
+    statement: >-
+      EDGE-LEVEL AGREEMENT FAILS THE .71 ABSOLUTE GATE IN ALL FIFTEEN CELLS, including the ten
+      fixed-inventory cells where the units were supplied identically to both operators.
+      Between-operator Layer 3 runs .000 to .367 under U-free, .227 to .488 under U-det and .000 to
+      .481 under U-mod -- a maximum of .488 against a gate of .71, so no cell approaches it and none
+      is a near miss. This is P4's pre-committed unfavourable branch, and it is the paper's headline
+      result.
+
+      THE WIDTH OF THE VERDICT IS PART OF THE FINDING, because Layer S failed (F3). What was
+      supplied to both operators was a SHARED inventory, not a GOOD one, so what this run
+      establishes is that SHARING an inventory does not rescue edge agreement, together with NF2's
+      result that the failure is not an artifact of IMPOSING a cut. What it does NOT establish is
+      any claim about a shared inventory of established fidelity: no inventory in this study cleared
+      Layer S, so that cell is untested. The predecessor's recommendation is overturned in the form
+      it was made -- fix the units the operators disagreed about -- and it is not thereby shown that
+      units cannot matter under a better inventory. Claims are stated at that width in the abstract,
+      the Results and the Discussion rather than at the wider one.
+    source_measurements: [ME1]
+    generating_method: M4a
+    statistical_strength: >-
+      Fifteen document-by-condition cells, each a mean over 25 cross-operator repetition pairs; every
+      quantity document-level, aggregation across the five specimens descriptive only.
+    conditions: "C1, C2, C3"
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: F2
+    statement: >-
+      THE BETWEEN-OPERATOR QUANTITY SEPARATES BELOW THE WITHIN-OPERATOR BASELINE IN ALL FIFTEEN
+      CELLS, at p <= .001 with every percentile bootstrap interval on the difference excluding zero.
+      Between-operator Layer 3 of .000 to .488 is read against a within-operator baseline of .625 to
+      .873. The operators are far more consistent with themselves than with each other, so the
+      disagreement is signal rather than run-to-run instability, and P2's falsifier -- which fires
+      only when the interval includes zero on EVERY document -- does not fire.
+    source_measurements: [ME1]
+    generating_method: M3
+    statistical_strength: >-
+      Paired permutation null, 10,000 permutations, percentile bootstrap at B = 10,000, level .05 per
+      document, streams seeded from the declared stable digest so each interval regenerates
+      byte-identically from the committed record.
+    conditions: "C2"
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: F3
+    statement: >-
+      LAYER S FAILS ON ALL FIVE DOCUMENTS -- .169, -.005, .250, .220 and .011 against a gate of .80 --
+      so C4's second negative-scope condition is REALIZED rather than avoided: the imposed
+      inventory's own error is large enough that measured agreement would describe the segmenter
+      rather than the operators. VC3 R0 is the cleanest evidence, because there the two adjudicators
+      agreed PERFECTLY with each other (kappa 1.000) and the segmenter still diverged from them
+      (.250), which locates the failure in the segmenter rather than in the adjudication. The gate
+      does not move.
+    source_measurements: [ME2]
+    generating_method: M1a
+    statistical_strength: >-
+      Five documents, one coefficient each, computed before any operator call.
+    conditions: "C4"
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: F4
+    statement: >-
+      FOUR OF SIXTY-FOUR PRE-DECLARED GATE VERDICTS PASS -- 59 evaluable verdicts across the fifteen
+      decomposition cells plus five Layer S verdicts. The four are VC3 R0 under U-mod at Layer 1
+      (.737 against .51), VC3 R2 under U-mod at Layer 2 (.808 against .70), and VC3 R0's Layer 4
+      ratio in BOTH fixed conditions (.856 under U-det and .989 under U-mod, against .70). All four
+      fall on the two smallest documents and three of the four on VC3 R0, which is the smallest of
+      the five and the one where both operators select nearly the whole inventory -- so they are read
+      with suspicion rather than relief (F5).
+    source_measurements: [ME1, ME2]
+    generating_method: M4a
+    statistical_strength: >-
+      Verdict counts over the committed record; five verdicts are not evaluable (Layer 1, Layer 2 and
+      the Layer 4 ratio are undefined in U-free, which has no shared inventory, and the Layer 4 ratio
+      is undefined on VC3 R1 under U-mod where Layer 3 is .000).
+    conditions: "C2"
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: F5
+    statement: >-
+      THE STUDY'S ONLY LAYER 1 PASS SITS IN A CELL WHOSE OBSERVED PREVALENCE INDEX IS .930, above the
+      .85 interpretability floor. On VC3 R0 under U-mod both operators select nearly the whole
+      inventory -- marginals .972 and .958 over 71 units, raw agreement .986 -- which is L4's
+      manufactured-agreement risk realized in the one place the design returned a favourable
+      selection verdict. The cell GATES as recorded, because the floor is declared on the PREDICTED
+      index and that index was .108; the prediction is not revised in the light of the observation.
+      The verdict therefore stands as computed and the observed index is reported beside it, so that
+      no reader takes .737 for a selection result without the marginals that produced it. This is the
+      only cell in the study whose observed index breaches .85. THE PAPER ALSO NAMES THE AMBIGUITY
+      IT SITS ON: the deposited floor admits an observed-index reading as well as the predicted-index
+      one the harness implements, and under that reading this coefficient is uninterpretable and the
+      study carries three passing verdicts rather than four. Both readings are disclosed and neither
+      is applied retroactively, because the reading that was implemented is also the one that
+      flatters, and a rule re-applied after the results are visible is a degree of freedom whichever
+      direction it moves.
+    source_measurements: [ME1, ME3]
+    generating_method: M4b
+    statistical_strength: >-
+      One cell; marginals, prevalence index, raw agreement and F-measure all reported, as M4b
+      requires of every chance-corrected coefficient.
+    conditions: "C4"
+    antecedents: [F4]
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: F6
+    statement: >-
+      OBSERVED SELECTION DEPARTS SHARPLY FROM THE PREDICTED BASE RATE, AND IN OPPOSITE DIRECTIONS BY
+      OPERATOR. OP_A selects above the prediction on every document and condition -- VC3 R0 predicted
+      .446 against .905 observed under U-det and .972 under U-mod; VC1 predicted .143 against .421
+      and .773 -- while OP_B selects far below it on the three long documents (.092, .027 and .038
+      under U-det on VC1, VC2 and VC3 R1). The prediction was derived from the predecessor's POOLED
+      node counts, and it describes neither operator. The floor still gates on the prediction exactly
+      as declared, which is what makes it a pre-registration rather than an escape hatch; the gap
+      between predicted and observed is reported as a finding in its own right rather than as a
+      reason to re-gate.
+    source_measurements: [ME1, ME3]
+    generating_method: M4b
+    statistical_strength: >-
+      Ten fixed-inventory cells, marginals from the first repetition pair of each.
+    conditions: "C2"
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: F7
+    statement: >-
+      THE COMPOSITE DIVERGES FROM THE DECOMPOSITION AND DOES NOT DOMINATE IT, which is M5a's declared
+      test and it resolves in the decomposition's favour on the evidence rather than by assertion.
+      The categorisation-focused companion crosses over against Layer 2 between conditions on the
+      same document: on VC3 R0 it reads .467 against Layer 2's .659 under U-det, and .648 against
+      .498 under U-mod. A statistic that reverses its ordering against another statistic between two
+      conditions of the same document is not measuring the same thing, so the honest candidate
+      distinction SURVIVES contact with the companion's definition and the decomposition's novelty
+      does NOT narrow to the selection stage. The divergence is reported rather than resolved.
+      EVIDENTIAL WEIGHT STATED: the reversal occurs in two of the ten fixed-inventory cells (VC3 R0
+      under U-mod, VC1 under U-det); in the other eight Layer 2 reads higher than the companion, so
+      the two mostly order consistently and differ in level. That defeats the DECLARED test, which
+      was whether the two are INDISTINGUISHABLE IN PRACTICE -- statistics that reverse anywhere are
+      not interchangeable -- so the pre-committed narrowing does not trigger. It is not the stronger
+      claim that the two measure unrelated things, and the paper does not make it.
+      Carried with the claim: the composite is computed on repetition 1 only while the layered form
+      averages 25 cross pairs, and the deposit already declares these are not averages over the same
+      thing.
+    source_measurements: [ME4, ME1]
+    generating_method: M5a
+    statistical_strength: >-
+      Fifteen cells in both members of the family; the composite is non-gating by declaration (M4),
+      so no verdict rests on it.
+    conditions: "C2"
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: F8
+    statement: >-
+      THE RE-ANALYSIS MOVES THE PREDECESSOR'S NODE LAYER DOWN BY .409 TO .765 wherever a reported
+      comparator exists: .663 to .136 on VC1, .637 to .228 on VC2, 1.000 to .235 on VC3 R0 and .769
+      to .245 on VC3 R2. VC3 R1 has no reported comparator in the predecessor's record and is
+      reported as recomputed-only (.125). The direction declared before the recomputation therefore
+      holds on four of five documents and is contradicted on none.
+    source_measurements: [ME5]
+    generating_method: M5
+    statistical_strength: >-
+      Five documents, one recomputation each; a re-analysis of a published record, reported as this
+      paper's own and not as a revision of the predecessor's numbers.
+    conditions: "C3"
+    body_sections: ["What Round 1's node layer was worth"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: F9
+    statement: >-
+      THE DISAGREEMENT IS DOMINATED, ON THE LONG DOCUMENTS, BY A GROSS ASYMMETRY IN HOW MUCH OF A
+      DOCUMENT EACH OPERATOR TREATS AS NODE-WORTHY, AND FIXING THE INVENTORY DOES NOT REMOVE IT.
+      OP_B returns roughly 14 to 16 nodes almost regardless of document length or inventory size --
+      16 of 421 units on VC3 R1 under U-det, 15 of 406 under U-mod -- while OP_A returns 50 to 170.
+      The alternative explanation was excluded before the number was read as a finding (RC1), and the
+      asymmetry replicates the predecessor exactly on VC3 R1, at 14 nodes in both studies. Given 421
+      units, OP_B still selects 16: that is P4's unfavourable branch in its starkest available form.
+    source_measurements: [ME1]
+    generating_method: M2
+    statistical_strength: >-
+      Descriptive across documents and conditions; the replication is a two-study comparison on one
+      document, not an estimate.
+    conditions: "C1, C2"
+    antecedents: [RC1]
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: F10
+    statement: >-
+      M4b's PREVALENCE PARADOX ARRIVES EXACTLY WHERE THE DESIGN SAID TO LOOK FOR IT. On VC2's Layer
+      S, raw agreement of .690 sits against a coefficient of -.005, because both parties mark about
+      eighty percent of candidate positions as boundaries -- marginals .791 and .829 -- so expected
+      agreement is .691 and the observed agreement is a hair below it. The coefficient is behaving
+      correctly under the observed-marginal chance model that M4b KEPT rather than replaced; the
+      marginals are the report. This is the case the design declined to engineer away with a
+      prevalence-robust substitute, and it vindicates that refusal rather than embarrassing it.
+    source_measurements: [ME2]
+    generating_method: M4b
+    statistical_strength: >-
+      One document, one layer; reported with marginals, expected agreement and raw agreement as M4b
+      requires.
+    conditions: "C4"
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+
+# ---------------------------------------------------------------------------
+# Negative findings -- discoveries of absence. Added at the 1.0.0 fork.
+# ---------------------------------------------------------------------------
+negative_findings:
+  - id: NF1
+    statement: >-
+      NO CONDITION PRODUCES A FAVOURABLE EDGE-LEVEL BRANCH ANYWHERE. U-free, U-det and U-mod all fail
+      Layer 3's absolute gate on all five documents, and all three fail it by a wide margin. The
+      free-unitization arm therefore reproduces the fixed-inventory arms' failure rather than
+      diverging from it.
+    expected_observation: >-
+      A fixed-inventory condition clearing .71 on at least one document where U-free does not, which
+      would have shown the intervention moving the quantity it was built to move.
+    source_method: "M1, M4a"
+    affects_nodes: [P1, P4, L6]
+    motivates: [F1]
+    body_sections: ["Results", "The objection that the task has been replaced rather than decomposed"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: NF2
+    statement: >-
+      THE GRANULARITY-MISMATCH THREAT IS NOT WHAT PRODUCED THE FAILURE, on the control the design
+      declared for it. L6's mitigation was stated in advance as: if U-det fails and U-free fails in
+      the same way, the segmentation did not produce the failure. Both fail, in the same way, on
+      every document -- so the imposed cut is not the explanation for the edge-level result, and the
+      substitution objection to P1 does not bite either. What this does NOT do is exonerate the
+      segmenter, whose own fidelity failed on all five documents (F3); it establishes only that the
+      edge failure is not an artifact of imposing units, because it is equally present where no units
+      were imposed.
+    expected_observation: >-
+      U-det failing where U-free succeeds, which would have indicated an edge-drawing deficit
+      manufactured by the imposed granularity.
+    source_method: "M1, M1a"
+    affects_nodes: [L6, P1]
+    motivates: [F1]
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+
+# ---------------------------------------------------------------------------
+# Robustness checks -- alternatives excluded before a number was read as a
+# finding. Added at the 1.0.0 fork.
+# ---------------------------------------------------------------------------
+robustness_checks:
+  - id: RC1
+    statement: >-
+      TRUNCATION EXCLUDED AS THE EXPLANATION FOR OP_B's SMALL GRAPHS. A recurring node count is
+      exactly what a truncated response looks like, and the design's own prompt says a graph that
+      stops early is wrong, so the possibility was checked rather than assumed away. Every such call
+      returned a normal stop reason rather than a length stop, used about 1,751 output tokens against
+      a cap of 96,000, parsed completely, and passed the schema validators. OP_B is answering fully
+      and briefly.
+    mitigates: []
+    affects_nodes: [F9]
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: RC2
+    statement: >-
+      THE COMPOSITE IS SEEDED AND REPRODUCIBLE, AND THE SOLVER IS NOT A DEGREE OF FREEDOM. The
+      coefficient's expected disorder is Monte-Carlo estimated and the implementation does not seed
+      that sampler; unseeded, one cell returned .589, .593, .594 and .597 across four runs of
+      identical input. The sampler is now seeded from the same stable-digest construction the
+      separation test uses, which APPLIES the study's declared reproducibility rule rather than
+      amending it, and two full passes over all fifteen cells now agree to six decimal places. The
+      alignment is an exact mixed-integer program solved at a proven 0.0 percent gap, so an
+      alternative solver returns the same objective. Neither can move a verdict, because the
+      composite is declared non-gating.
+    mitigates: []
+    affects_nodes: [F7, ME4]
+    body_sections: ["Results"]
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+
+# ---------------------------------------------------------------------------
 # Limitations, carried forward and new
 # ---------------------------------------------------------------------------
 limitations:
@@ -589,6 +993,89 @@ limitations:
       change the operator class from hosted frontier models to open-weight local ones, so it is
       recorded as an explicit scope decision rather than assumed in.
     provenance: {created_by: "author", created_at: "2026-08-07"}
+
+  - id: LA1
+    statement: >-
+      THE LAYER S ADJUDICATORS ARE MACHINE, NOT HUMAN. The deposit's M1a describes two adjudicators
+      segmenting independently under the declared rule with a third resolving, and M4a derives the
+      .80 gate as a discount on the human blind segmentation floor because rule-against-HUMAN
+      adjudication is the harder comparison. What ran is that same structure -- two independent
+      adjudicators from families used in no other role, blind to the hypotheses and to which
+      condition the inventory would serve, plus a third-family resolver -- with machine adjudicators
+      in place of human ones. The alternative to the substitution was no Layer S at all, and
+      therefore no operator call, since the ordering is itself pre-registered.
+    affects: [F3, ME2]
+    severity: "high"
+    mitigation: >-
+      The threshold is NOT adjusted in either direction, because the direction of the effect is
+      unknown: machine adjudicators may be more rule-following than humans, which would make the
+      comparison easier, or may share the segmenter's failure modes, which would inflate agreement
+      for a reason unrelated to the segmenter being right. Adjusting would require a number that does
+      not exist -- the same move the design refuses for the Layer 3 document-scale discount. Layer S
+      is reported as machine-adjudicated fidelity and every claim resting on it is read at that
+      width. Declared before any call of any kind.
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: LA2
+    statement: >-
+      LAYER S ADJUDICATION IS ELICITED IN CHUNKS OF 25 CANDIDATE POSITIONS rather than one call per
+      document, each chunk carrying its own passage with a 240-character overlap into the preceding
+      chunk. Every candidate is still decided exactly once, under the same rule, by the same
+      adjudicator. A whole-document call did not survive contact with the providers: one adjudicator
+      spent its entire token budget reasoning and returned empty content, and another answered a
+      614-candidate document with 64 boundaries.
+    affects: [F3, ME2]
+    severity: "medium"
+    mitigation: >-
+      Stated rather than absorbed: a chunked adjudicator sees less context than a whole-document one,
+      and a boundary judgement near a chunk edge is made against the preceding chunk's tail rather
+      than the whole preceding argument. The overlap bounds this without removing it, the direction
+      is unknown, and the gate is not adjusted. Introduced in the harness as first written, before
+      any adjudication quantity was observed.
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: LA3
+    statement: >-
+      AN UNPARSEABLE ADJUDICATION CHUNK IS RECORDED UNANSWERED AND THE PASS CONTINUES, a failure mode
+      the deposited design did not anticipate. For positions inside an unanswered chunk the design's
+      two independent adjudicators reduce to one adjudicator plus the resolver -- the resolver still
+      decides them, because a position one adjudicator marked and the other did not is by definition
+      disputed. Introduced before any Layer S coefficient was computed.
+    affects: [F3, ME2, ME6]
+    severity: "medium"
+    mitigation: >-
+      The degradation is MEASURED rather than described (ME6): 125 of 2,256 positions, 5.5 percent,
+      decided by one adjudicator plus the resolver. It is not uniform, and it bears on one reported
+      quantity in particular -- VC3 R1 carries both the largest singly-adjudicated share (13.3
+      percent) and the lowest inter-adjudicator agreement (.631), and the two are not independent,
+      since an unanswered chunk depresses one adjudicator's boundary count in a region where
+      boundaries exist. The inter-adjudicator figure for VC3 R1 is therefore reported as a FLOOR
+      rather than an estimate, and the same holds more weakly for VC2. The Layer S coefficient itself
+      is less affected, because the resolver restores the disputed positions before it is computed.
+    provenance: {created_by: "author", created_at: "2026-08-08"}
+  - id: LA4
+    statement: >-
+      THE TWO OPERATORS ARE NOT SAMPLED THE SAME WAY, AND CANNOT BE. M3 requires the k repetitions to
+      run "under identical parameters", and they are identical WITHIN each operator, which is what
+      the within-operator baseline requires. They are not identical BETWEEN operators, because this
+      provider pair offers no common setting: OP_B is called at temperature 0 with the study seed,
+      while OP_A's family rejects sampling parameters outright and bounds reasoning depth by an
+      effort level instead. Equalising would have meant abandoning the predecessor's operator pair,
+      and comparability with the run whose failure this design decomposes is the reason that pair is
+      used at all.
+    affects: [F2, P2, ME1]
+    severity: "high"
+    mitigation: >-
+      Nothing is done to the declared statistic: the pooled within-operator mean is computed exactly
+      as M3 specifies and is not adjusted. What is added is REPORTING, in the spirit of M4b's
+      requirement that a summary never travel without its marginals -- each operator's own baseline
+      is emitted beside every pooled figure, with a flag that says outright when an operator
+      contributed a constant. The consequence must travel with F2: a deterministic operator has no
+      run-to-run variance, so its within-operator agreement is 1.000 by construction rather than by
+      measurement, the pooled baseline is inflated wherever that happens, and an inflated baseline
+      makes P2's separation EASIER to obtain -- biasing the design against its own falsifier firing.
+      The measured gap is far too large for that inflation to account for, but the caveat is stated
+      wherever the separation is claimed. Configuration fixed before any call; consequence discovered
+      during the run and reported rather than repaired.
+    provenance: {created_by: "author", created_at: "2026-08-08"}
 
 # ---------------------------------------------------------------------------
 # Cross-paper engagement

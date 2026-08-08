@@ -1,0 +1,103 @@
+{
+ "declared_direction": "recomputed worse than reported (P3)",
+ "documents_in_declared_direction": 4,
+ "documents": 5,
+ "precision_level": 0.05,
+ "rows": [
+  {
+   "document": "vc1",
+   "as_reported_matched_nodes_only": 0.6633663366336634,
+   "as_reported_statistic": "Krippendorff alpha over matched nodes (the predecessor's layer 1)",
+   "recomputed_joint_gamma": 0.1359168291091919,
+   "recomputed_gamma_cat": -0.08799576759338379,
+   "difference": -0.5274495075244715,
+   "nodes": {
+    "OP_A": {
+     "nodes": 53,
+     "located": 53
+    },
+    "OP_B": {
+     "nodes": 25,
+     "located": 13
+    }
+   },
+   "predecessor_matched_nodes": 9
+  },
+  {
+   "document": "vc2",
+   "as_reported_matched_nodes_only": 0.6372093023255814,
+   "as_reported_statistic": "Krippendorff alpha over matched nodes (the predecessor's layer 1)",
+   "recomputed_joint_gamma": 0.22787541151046753,
+   "recomputed_gamma_cat": 0.07096225023269653,
+   "difference": -0.40933389081511384,
+   "nodes": {
+    "OP_A": {
+     "nodes": 119,
+     "located": 117
+    },
+    "OP_B": {
+     "nodes": 39,
+     "located": 38
+    }
+   },
+   "predecessor_matched_nodes": 20
+  },
+  {
+   "document": "vc3_r0",
+   "as_reported_matched_nodes_only": 1.0,
+   "as_reported_statistic": "Krippendorff alpha over matched nodes (the predecessor's layer 1)",
+   "recomputed_joint_gamma": 0.23472392559051514,
+   "recomputed_gamma_cat": 0.1770162582397461,
+   "difference": -0.7652760744094849,
+   "nodes": {
+    "OP_A": {
+     "nodes": 47,
+     "located": 42
+    },
+    "OP_B": {
+     "nodes": 19,
+     "located": 18
+    }
+   },
+   "predecessor_matched_nodes": 11
+  },
+  {
+   "document": "vc3_r1",
+   "as_reported_matched_nodes_only": NaN,
+   "as_reported_statistic": "Krippendorff alpha over matched nodes (the predecessor's layer 1)",
+   "recomputed_joint_gamma": 0.12475484609603882,
+   "recomputed_gamma_cat": -0.0010477304458618164,
+   "difference": NaN,
+   "nodes": {
+    "OP_A": {
+     "nodes": 85,
+     "located": 84
+    },
+    "OP_B": {
+     "nodes": 14,
+     "located": 14
+    }
+   },
+   "predecessor_matched_nodes": 3
+  },
+  {
+   "document": "vc3_r2",
+   "as_reported_matched_nodes_only": 0.7692307692307692,
+   "as_reported_statistic": "Krippendorff alpha over matched nodes (the predecessor's layer 1)",
+   "recomputed_joint_gamma": 0.24451595544815063,
+   "recomputed_gamma_cat": 0.08917319774627686,
+   "difference": -0.5247148137826185,
+   "nodes": {
+    "OP_A": {
+     "nodes": 57,
+     "located": 53
+    },
+    "OP_B": {
+     "nodes": 21,
+     "located": 20
+    }
+   },
+   "predecessor_matched_nodes": 8
+  }
+ ]
+}

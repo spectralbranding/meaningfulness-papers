@@ -1,0 +1,64 @@
+{
+ "chunk_size": 25,
+ "adjudicators": [
+  "ADJ_1",
+  "ADJ_2"
+ ],
+ "rows": [
+  {
+   "document": "vc1",
+   "n_candidates": 668,
+   "n_chunks": 27,
+   "unanswered_chunks": {
+    "ADJ_1": 0,
+    "ADJ_2": 0
+   },
+   "positions_decided_by_one_adjudicator": 0,
+   "share": 0.0
+  },
+  {
+   "document": "vc2",
+   "n_candidates": 742,
+   "n_chunks": 30,
+   "unanswered_chunks": {
+    "ADJ_1": 0,
+    "ADJ_2": 2
+   },
+   "positions_decided_by_one_adjudicator": 50,
+   "share": 0.0673854447439353
+  },
+  {
+   "document": "vc3_r0",
+   "n_candidates": 98,
+   "n_chunks": 4,
+   "unanswered_chunks": {
+    "ADJ_1": 0,
+    "ADJ_2": 0
+   },
+   "positions_decided_by_one_adjudicator": 0,
+   "share": 0.0
+  },
+  {
+   "document": "vc3_r1",
+   "n_candidates": 564,
+   "n_chunks": 23,
+   "unanswered_chunks": {
+    "ADJ_1": 0,
+    "ADJ_2": 3
+   },
+   "positions_decided_by_one_adjudicator": 75,
+   "share": 0.13297872340425532
+  },
+  {
+   "document": "vc3_r2",
+   "n_candidates": 184,
+   "n_chunks": 8,
+   "unanswered_chunks": {
+    "ADJ_1": 0,
+    "ADJ_2": 0
+   },
+   "positions_decided_by_one_adjudicator": 0,
+   "share": 0.0
+  }
+ ]
+}

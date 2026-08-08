@@ -1,0 +1,92 @@
+{
+ "declared_before_any_operator_call": true,
+ "prevalence_floor": 0.85,
+ "rule": "predicted base rate = mean predecessor node count / inventory size; predicted prevalence index = |2p - 1|",
+ "rows": [
+  {
+   "document": "vc1",
+   "inventory_units": 273,
+   "math_merges": 218,
+   "predecessor_nodes": {
+    "OP_A": 53,
+    "OP_B": 25
+   },
+   "predicted_base_rate_per_operator": {
+    "OP_A": 0.19413919413919414,
+    "OP_B": 0.09157509157509157
+   },
+   "predicted_base_rate": 0.14285714285714285,
+   "predicted_prevalence_index": 0.7142857142857143,
+   "gates": true,
+   "floor": 0.85
+  },
+  {
+   "document": "vc2",
+   "inventory_units": 590,
+   "math_merges": 1,
+   "predecessor_nodes": {
+    "OP_A": 119,
+    "OP_B": 39
+   },
+   "predicted_base_rate_per_operator": {
+    "OP_A": 0.2016949152542373,
+    "OP_B": 0.06610169491525424
+   },
+   "predicted_base_rate": 0.13389830508474576,
+   "predicted_prevalence_index": 0.7322033898305085,
+   "gates": true,
+   "floor": 0.85
+  },
+  {
+   "document": "vc3_r0",
+   "inventory_units": 74,
+   "math_merges": 5,
+   "predecessor_nodes": {
+    "OP_A": 47,
+    "OP_B": 19
+   },
+   "predicted_base_rate_per_operator": {
+    "OP_A": 0.6351351351351351,
+    "OP_B": 0.25675675675675674
+   },
+   "predicted_base_rate": 0.44594594594594594,
+   "predicted_prevalence_index": 0.10810810810810811,
+   "gates": true,
+   "floor": 0.85
+  },
+  {
+   "document": "vc3_r1",
+   "inventory_units": 421,
+   "math_merges": 23,
+   "predecessor_nodes": {
+    "OP_A": 85,
+    "OP_B": 14
+   },
+   "predicted_base_rate_per_operator": {
+    "OP_A": 0.20190023752969122,
+    "OP_B": 0.0332541567695962
+   },
+   "predicted_base_rate": 0.11757719714964371,
+   "predicted_prevalence_index": 0.7648456057007126,
+   "gates": true,
+   "floor": 0.85
+  },
+  {
+   "document": "vc3_r2",
+   "inventory_units": 131,
+   "math_merges": 17,
+   "predecessor_nodes": {
+    "OP_A": 57,
+    "OP_B": 21
+   },
+   "predicted_base_rate_per_operator": {
+    "OP_A": 0.4351145038167939,
+    "OP_B": 0.16030534351145037
+   },
+   "predicted_base_rate": 0.29770992366412213,
+   "predicted_prevalence_index": 0.40458015267175573,
+   "gates": true,
+   "floor": 0.85
+  }
+ ]
+}

@@ -1,0 +1,206 @@
+# Pre-declared run protocol -- Unitization Before Extraction (2026bl)
+#
+# STATUS: PRE-DECLARED 2026-08-08, BEFORE any call of any kind was made -- before
+# segmentation, before adjudication, and before any operator call.
+#
+# What this file is FOR: the pre-registration (v1.0.0, deposited 2026-08-07,
+# DOI 10.5281/zenodo.21830221) fixes the design -- the layers, the thresholds,
+# the chance model, the prevalence floor, the separation test, k, and the
+# ordering. It deliberately does not name model identifiers, which are not
+# design decisions and would have dated the deposit. This file fixes the
+# remaining operational choices, in the same spirit and under the same rule:
+#
+#   NOTHING HERE MAY BE REVISED IN THE LIGHT OF A RESULT.
+#
+# Thresholds are NOT restated here as editable values. They live in the
+# deposited paper (Table 2) and the scorer reads them from `thresholds:` below,
+# which is a transcription with the paper's section named beside each one; if a
+# transcription and the paper ever disagree, the paper wins.
+#
+# Companion documents:
+#   paper.md        the pre-registration itself (v1.0.0 as deposited)
+#   AMENDMENTS.md   every departure from the deposited design, with its reason
+#   SPINE.yaml      the proposition/dependency graph the paper is drawn from
+
+protocol_version: "2026bl/1.0.0"
+prompt_version: "unitization/1.0.0"
+seed: 20260808
+declared_on: "2026-08-08"
+
+# ---------------------------------------------------------------------------
+# Operators. The SAME pair as the predecessor (2026bk), deliberately: the
+# U-free arm exists to show that the fixed-inventory arms have not replaced the
+# task, and that evidence is only as good as the operators' comparability with
+# the run whose failure this design decomposes. Different model families, per
+# the corpus cross-operator rule; neither arm is the session that authored the
+# protocol.
+# ---------------------------------------------------------------------------
+extraction_operators:
+  - {id: OP_A, family: anthropic, model: claude-opus-5}
+  - {id: OP_B, family: google, model: gemini-3.1-pro-preview}
+
+# U-mod's inventory comes from a model family used neither as operator nor as
+# adjudicator (M1). It sees the document and the declared unit rule, and it is
+# never told what the inventory will be used for.
+unitizer:
+  {id: UNI_1, family: openai, model: gpt-5.5-2026-04-23}
+
+# Layer S adjudication (M1a). Two adjudicators segment each document
+# independently under the declared rule; a third resolves disagreements. Three
+# further families, so that no role in this study is filled twice by one family.
+# See AMENDMENTS.md A1: the deposited design says "hand-adjudicated" and
+# derives the .80 gate from human-vs-human blind segmentation. These
+# adjudicators are machine, the gate does NOT move, and the substitution is
+# reported as a deviation rather than absorbed.
+segmentation_adjudicators:
+  - {id: ADJ_1, family: xai, model: grok-4.3}
+  - {id: ADJ_2, family: deepseek, model: deepseek-v4-pro}
+adjudication_resolver:
+  # Identifier corrected 2026-08-08 during the pre-run smoke test, before any
+  # adjudication call: `mistral-large-2026-02` is not served; the dated release
+  # on this endpoint is `mistral-large-2512`. A served identifier is not a
+  # design decision, and the correction is recorded rather than silent.
+  {id: ADJ_3, family: mistral, model: mistral-large-2512}
+
+replacement_rule: >-
+  A family substitutes only on hard API unavailability (endpoint or model
+  retired, or all retries exhausted on every call), and the substitution is
+  recorded in the run log, in AMENDMENTS.md, and reported in the paper. A poor
+  result is never a reason to substitute any model in any role.
+
+blinding: >-
+  No model in any role is told the study's hypotheses, which condition it is
+  serving, which other models participate, or what the predecessor found. The
+  adjudicators receive the segmentation rule and the text and nothing else. The
+  operators receive the unit inventory (U-det, U-mod) or the bare text (U-free)
+  and the task, and are never told that a repetition is a repetition.
+
+# ---------------------------------------------------------------------------
+# Documents. The predecessor's five specimens, unedited and unreplaced: a
+# changed corpus would confound the mechanism with the material, which is what
+# makes this a diagnostic rather than an integrative replication.
+# ---------------------------------------------------------------------------
+specimens:
+  vc1:    {kind: mathematical exposition, predecessor_nodes: {OP_A: 53, OP_B: 25}}
+  vc2:    {kind: philosophical essay,     predecessor_nodes: {OP_A: 119, OP_B: 39}}
+  vc3_r0: {kind: machine-generated proof, predecessor_nodes: {OP_A: 47, OP_B: 19}}
+  vc3_r1: {kind: expanded exposition,     predecessor_nodes: {OP_A: 85, OP_B: 14}}
+  vc3_r2: {kind: expert digestion,        predecessor_nodes: {OP_A: 57, OP_B: 21}}
+
+# The predecessor's node counts are transcribed from its published run record
+# (output/tables/agreement_main.json in the 2026bk record) solely to predict the
+# selection base rate BEFORE the run (M4b / Table A2). They are not re-analysed
+# here except as declared in M5.
+
+# ---------------------------------------------------------------------------
+# Conditions. The order is pre-declared so that a result cannot be reported
+# from whichever condition ran the better way (M1).
+# ---------------------------------------------------------------------------
+condition_order: [u_free, u_det, u_mod]
+conditions:
+  u_free:
+    inventory: none
+    role: comparability control + granularity control (L6) + construct validity
+  u_det:
+    inventory: segmenter
+    role: primary intervention
+  u_mod:
+    inventory: unitizer
+    role: realistic deployment condition
+
+repetitions_k: 5   # M3: 3 conditions x 5 documents x 2 operators x 5 = 150 calls
+
+# ---------------------------------------------------------------------------
+# The segmenter, pinned by release (M1b).
+# ---------------------------------------------------------------------------
+segmenter:
+  package: pysbd
+  version: "0.3.4"
+  language: en
+  options: {clean: false, char_span: true}
+  reported_accuracy:
+    golden_rule_set_en: 0.9792
+    biomedical: 0.9700
+  # M1c, declared before the run: a displayed expression attaches to the
+  # sentence that introduces it and is not a unit of its own, and no unit
+  # boundary falls inside symbolic material. Implemented as: a candidate
+  # segment whose non-whitespace content is entirely symbolic (no alphabetic
+  # word of 2+ letters outside math delimiters) is merged into the preceding
+  # segment; if it is the first segment of the document it merges forward.
+  math_rule: attach_displayed_to_introducing_sentence
+
+# ---------------------------------------------------------------------------
+# How Layer S is computed. Declared 2026-08-08, before any adjudication call.
+#
+# Agreement on a division of a text needs a common index set -- which is this
+# paper's own argument, applied to its own instrument. The index set is the set
+# of CANDIDATE BOUNDARY POSITIONS, fixed by a rule that does not consult the
+# segmenter: every position following a sentence-terminating mark (. ? !),
+# optionally closed by a quote or bracket, that is followed by whitespace; plus
+# every blank-line break. Segmenter and adjudicators each make the same binary
+# decision at each candidate -- boundary or not -- so kappa is defined over a
+# shared index without an alignment step, and the segmenter cannot be scored
+# against a candidate set of its own devising.
+# ---------------------------------------------------------------------------
+layer_s:
+  index_set: candidate_boundary_positions
+  candidate_rule: >-
+    A position after [.?!] with optional closing " ' ) ] followed by
+    whitespace, or a blank-line break. Independent of pysbd.
+  adjudicator_output: the subset of candidate positions that are unit boundaries
+  resolution: >-
+    Positions where the two adjudicators disagree are put to the resolver, with
+    their surrounding text and without saying which adjudicator chose what;
+    positions they agree on are not re-decided.
+  reported: >-
+    Segmenter-vs-adjudicated kappa (the gate) AND the adjudicators' own
+    kappa beside it (M1a), per document.
+
+# ---------------------------------------------------------------------------
+# Thresholds -- transcribed from the deposited paper's Table 2. Not editable.
+# ---------------------------------------------------------------------------
+thresholds:
+  layer_S_segmenter_kappa: 0.80        # Table 2, Layer S
+  layer_1_selection_kappa: 0.51        # Table 2, Layer 1
+  layer_2_typing_kappa: 0.70           # Table 2, Layer 2 (conditional on joint selection)
+  layer_3_edges_absolute: 0.71         # Table 2, Layer 3 (absolute criterion)
+  layer_4_ratio_to_layer_3: 0.70       # Table 2, Layer 4 (ratio gate, strict >)
+  prevalence_floor: 0.85               # M4b: above this the coefficient is reported, non-gating
+
+# Layer 3 also carries the RELATIVE criterion: between-operator edge agreement
+# read against the within-operator baseline (Layer B) on the same statistic via
+# the separation test below. Both are reported for every document and
+# condition; neither may substitute for the other after the fact.
+
+separation_test:                        # P2
+  kind: paired_permutation
+  permutations: 10000
+  bootstrap_B: 10000
+  alpha_per_document: 0.05
+  fires_only_if: interval includes zero on EVERY document
+  stream_seeding: >-
+    Every permutation and bootstrap stream is seeded from a stable digest of
+    (seed, document, condition, layer, operator_pair), never from a process
+    hash, so a re-run reproduces the same intervals.
+
+chance_model: observed_marginals        # M4b, kept rather than replaced
+
+# ---------------------------------------------------------------------------
+# Ordering. The order is itself pre-registered (M1a): the segmenter's fidelity
+# and the predicted base rates are both established BEFORE any operator call,
+# because measured afterwards the segmenter's error becomes available as an
+# explanation for whatever the operators did.
+# ---------------------------------------------------------------------------
+run_order:
+  - segment: build the segmenter inventory for all five documents
+  - adjudicate: independent adjudication + resolution; Layer S kappa; Table A2 gate
+  - predict: predicted base rate and prevalence index per document; Table A2 columns
+  - extract: 150 extraction calls, condition order as declared
+  - score: layers 1-4, Layer B, composite, marginals/prevalence/raw/F1
+  - reanalyse: the predecessor's node layer under a joint unitizing coefficient (M5)
+
+# Per-call logging is a HARD standing rule: every call is logged with its model
+# version, epoch, parameters, prompt digest and full response, append-only.
+logging:
+  per_call: true
+  logs_dir: output/logs

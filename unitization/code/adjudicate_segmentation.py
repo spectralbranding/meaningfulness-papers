@@ -159,9 +159,7 @@ def ask_adjudicator(doc: str, adj: dict, text: str, cands: list[int]) -> set[int
             "chunks": {},
         }
     )
-    system = (
-        L.SEGMENT_SYSTEM
-        + """
+    system = L.SEGMENT_SYSTEM + """
 
 You are given a passage with numbered markers <<1>>, <<2>>, ... at every position
 where a unit could end. Decide, for EACH marker in turn, whether a unit ends
@@ -172,7 +170,6 @@ inside a displayed expression.
 OUTPUT. A single JSON object: {"boundaries": [1, 4, 5, ...]}, listing exactly
 the marker numbers at which a unit ends. Answer with the JSON object only: no
 reasoning, no prose, no markdown fence."""
-    )
 
     for idx, chunk in _chunk_ranges(cands, text):
         key = str(idx)
@@ -255,9 +252,7 @@ def resolve(
         before = text[max(0, pos - 220) : pos].replace("\n", " ")
         after = text[pos : pos + 220].replace("\n", " ")
         items.append(f"marker {idx[pos]}: ...{before}  <<HERE>>  {after}...")
-    system = (
-        L.RESOLVE_SYSTEM
-        + """
+    system = L.RESOLVE_SYSTEM + """
 
 You are given the positions two independent divisions disagreed about, each
 shown with the text before and after it. You are not told which division chose
@@ -265,7 +260,6 @@ what. Decide, for each, whether a unit ends at that position.
 
 OUTPUT. A single JSON object: {"boundaries": [<marker numbers where a unit
 ends>]}, drawn only from the markers you were given. No prose, no fence."""
-    )
     raw = L.call_model(
         res["model"],
         res["family"],

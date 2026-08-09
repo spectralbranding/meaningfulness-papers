@@ -20,7 +20,7 @@ spine_version: "0.2"              # schema version (extended; see SPINE_FIRST_DR
 spine_doc_version: "0.8.0"
 paper_key: "2026ao"               # placeholder; verify CANONICAL_REFERENCES.md at Phase 5; Paper A only post-PIVOT-SPLIT
 paper_b_companion_key: "2026ap"   # empirical companion; scoping at [internal path removed]
-status: "Phase 0.5 + Phase 4 FORK x2 — locked under schema v0.2 (Paper A theory-only post-PIVOT-SPLIT; v0.7.3 revision after review adds 8 verified external_anchors plus records NF11-NF14; cumulative SF1 hallucination rate across r1-r5 + post1 + post2 ≈ 17 catches / ~53%)"
+status: "Not exported; see the paper's own version and DOI."
 
 title: >-
   Spec-Based Research in the Post-AI Era: A Cost-Asymmetry Theory of

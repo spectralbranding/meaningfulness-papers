@@ -25,7 +25,7 @@ space of random typed graphs is not a detail to be handled at implementation tim
 defended approximation the coefficient has no interpretation.
 
 So the spine as locked would have required the paper to **invent and defend a new agreement
-instrument** — an unplanned methodological contribution, load-bearing under L0, sitting on the one
+instrument** — an unplanned methodological contribution, decisive under L0, sitting on the one
 robustness check the paper cannot afford to lose. It is exactly the class of error the pre-draft
 gate exists to catch, and it is caught here at the cost of a rebase rather than at the cost of a
 referee report.
@@ -193,7 +193,7 @@ the extracted graph and the M3 ranking, both fixed before administration.
   the paper must say so explicitly rather than appear to have retired P6 at its own declared
   level. What this paper can retire is P6's *untested* status, not its threshold.
 
-### Clause (b) — name the load-bearing step and what breaks without it
+### Clause (b) — name the step the rest depends on and what breaks without it
 
 - **Pass**: the reader names a node in the **top decile** of the M3 load ranking, **and** states a
   consequence of its removal that a blind expert rater judges correct.

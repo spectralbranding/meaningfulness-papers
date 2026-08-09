@@ -92,6 +92,6 @@ refines:
       Compatible narrowing, not a redefinition. The inherited move is unchanged -- write the
       acceptance condition as a checkable test BEFORE the work that is supposed to satisfy it.
       What narrows is the object under test: three clauses over a reader (restate the dependency
-      structure unaided; name the load-bearing node and what fails without it; execute one node
+      structure unaided; name the node the rest depends on and what fails without it; execute one node
       the structure marks open), of which the third has an objectively checkable outcome.
 

@@ -172,7 +172,7 @@ assumption_atoms:
     type: "metric_fidelity_constraint"
     relaxable: false
     relaxation_consequence: >-
-      Without the constraint the count is trivially minimized by replacing load-bearing
+      Without the constraint the count is trivially minimized by replacing depended-upon
       derivations with analogies the reader already holds, which lowers the score while
       destroying the argument. The metric would then measure familiarity, not explanation.
     affects: [P3, M4, M5]
@@ -332,7 +332,7 @@ propositions:
     statement: >-
       Comprehension admits an acceptance contract stated before the explanation is written and
       checked after it is read, with three clauses -- restate the dependency structure unaided,
-      name the load-bearing step and what fails without it, and execute one step the structure
+      name the step the rest depends on and what fails without it, and execute one step the structure
       marks as open. The third clause has an objectively checkable outcome, which is what
       separates the contract from a satisfaction rating.
     type: ontological
@@ -661,7 +661,7 @@ limitations:
     statement: >-
       Extraction, not rendering, is the expensive and brittle step. Human agreement on argument
       relations is low, and long-context retrieval degrades on material buried mid-document,
-      which is where load-bearing lemmas and implicit assumptions sit. The pipeline's first
+      which is where the lemmas and implicit assumptions an argument depends on sit. The pipeline's first
       stage is therefore its least reliable, and every downstream quantity inherits that error.
     affects: [M1, P1, P3, P4]
     severity: "high"

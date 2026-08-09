@@ -76,9 +76,9 @@ claims:
   type: proposition
   statement: Comprehension admits an acceptance contract stated before the explanation is written and
     checked after it is read, with three clauses -- restate the dependency structure unaided, name the
-    load-bearing step and what fails without it, and execute one step the structure marks as open. The
-    third clause has an objectively checkable outcome, which is what separates the contract from a satisfaction
-    rating.
+    step the rest depends on and what fails without it, and execute one step the structure marks as open.
+    The third clause has an objectively checkable outcome, which is what separates the contract from a
+    satisfaction rating.
   testable: true
   tested_in_paper: false
   status: not_tested
@@ -130,7 +130,8 @@ acceptance:
 - claim_id: P4
   criterion: Holds if comprehension admits an acceptance contract stated before the explanation is written
     and checked after it is read, with three clauses -- restate the dependency structure unaided, name
-    the load-bearing step and what fails without it, and execute one step the structure marks as open.
+    the step the rest depends on and what fails without it, and execute one step the structure marks as
+    open.
   falsification: If readers who pass all three clauses are indistinguishable, on an independent expert
     assessment of understanding, from readers who fail the third, the contract does not discriminate and
     P4 is false.
@@ -164,8 +165,8 @@ contradictions: []
 limitations:
 - description: Extraction, not rendering, is the expensive and brittle step. Human agreement on argument
     relations is low, and long-context retrieval degrades on material buried mid-document, which is where
-    load-bearing lemmas and implicit assumptions sit. The pipeline's first stage is therefore its least
-    reliable, and every downstream quantity inherits that error.
+    the lemmas and implicit assumptions an argument depends on sit. The pipeline's first stage is therefore
+    its least reliable, and every downstream quantity inherits that error.
   severity: major
   addressable: true
 - description: The extraction machinery was built for prose-proposition papers in management and marketing.

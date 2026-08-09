@@ -32,7 +32,7 @@ theoretical_predecessor:
     - "Theoretically-derived predictions P2 recombination + P3 verification-cost asymmetry (paper_a:P2, paper_a:P3)"
     - "Preservation theorem under strict K-as-typed-DAG reading (paper_a:preservation_theorem)"
     - "Spine-first drafting protocol (paper_a:appendix_B_protocol)"
-status: "Phase 0.5 — locked under schema v0.2 (Paper B v1.0.0 P4-reframed empirical companion; central contribution is empirical demonstration of paper_a:P4 rendering-equivalence under spine-preservation; β/δ calibration demoted to supportive evidence for paper_a:P3 ordering)"
+status: "Not exported; see the paper's own version and DOI."
 
 title: >-
   Same Meaning, Different Prose: Spine Preservation and Rendering Equivalence in Organizational Knowledge Work

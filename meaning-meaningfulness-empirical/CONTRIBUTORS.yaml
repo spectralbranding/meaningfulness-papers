@@ -27,8 +27,14 @@ contributors:
 ai_assistance_disclosure: |
   AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1) were used during
   the drafting of this paper for initial literature search and editorial
-  refinement. All citation anchors were independently Crossref-verified
-  before inclusion. All theoretical claims, propositions,
-  methodology specifications, calibration choices, and interpretations are
-  the author's sole responsibility.
+  refinement. The paper was additionally reviewed before and after
+  drafting, with every round surfaced to the author for decision; those
+  review records are retained in the project's internal audit trail.
+  Citation anchors proposed by an AI assistant are subject to the
+  project's Crossref-verification discipline before they may enter the
+  paper: PHASE1_ANCHOR_VERIFICATION_2026-05-27.md documents the
+  verification of 12 such anchors, of which 10 did not verify and were
+  recorded as negative findings rather than cited. All theoretical
+  claims, propositions, methodology specifications, calibration choices,
+  and interpretations are the author's sole responsibility.
 ---

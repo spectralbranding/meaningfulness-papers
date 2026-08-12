@@ -1,9 +1,10 @@
 ---
 title: "Phase 3.5b multi-LLM cross-FAMILY robustness — Russian (Slavic) + Chinese (Sino-Tibetan) protocol + script + v1.1.0 execution-ready backlog"
 date: 2026-05-27
+session: [internal ref removed] Phase 3.5b (NEW stretch per user mid-session addendum + Chinese expansion delta)
 covers_stylized_fact: "SF3 cross-language preservation — robustness check on operator-choice variation AND cross-FAMILY robustness (Slavic + Sino-Tibetan; maximally distant well-resourced language families)"
 purpose: "Reviewer-defense framing: preservation isn't an artifact of operator choice OR Russian-English linguistic proximity"
-status: "Protocol documented + script execution-ready (research/meaningfulness_empirical_companion/code/multi_llm_rendering.py); BWS keys verified (YANDEX_AI_API_KEY + GIGACHAT_API_KEY + DEEPSEEK_API_KEY + ANTHROPIC_API_KEY + OPENAI_API_KEY); EXECUTION DEFERRED to v1.1.0 stretch per the stretch-budget rule (better a clean v1.0.0 + Zenodo ship than a partial 3.5b that slips Zenodo)"
+status: "Protocol documented + script execution-ready (code/multi_llm_rendering.py); BWS keys verified (YANDEX_AI_API_KEY + GIGACHAT_API_KEY + DEEPSEEK_API_KEY + ANTHROPIC_API_KEY + OPENAI_API_KEY); EXECUTION DEFERRED to v1.1.0 stretch per [internal ref removed] init prompt stretch budget rule (better clean v1.0.0 + Zenodo ship Fri AM than partial 3.5b that slips Zenodo)"
 academic_pattern: "LLM-as-evaluator robustness check (Chiang et al. 2023; Zheng et al. 2023) extended to rendering-operator level + cross-family linguistic-family robustness"
 ---
 
@@ -17,7 +18,7 @@ The Phase 3.5b stretch test recruits 2-3 LLM operators (preferably 1-2 Russian-n
 
 ## Operator selection (cross-FAMILY robustness — Slavic + Sino-Tibetan)
 
-User-authorized expansion (2026-05-27): extend Phase 3.5b from Russian-only (Slavic family) to Russian + Chinese (Slavic + Sino-Tibetan). The cross-family pair (Russian + Chinese) is the maximally-distant well-resourced language-family pair, addressing the additional reviewer objection that within-Indo-European preservation may reflect linguistic proximity rather than substrate-as-language-invariant claim.
+User-authorized expansion ([internal ref removed] delta 2026-05-27): extend Phase 3.5b from Russian-only (Slavic family) to Russian + Chinese (Slavic + Sino-Tibetan). The cross-family pair (Russian + Chinese) is the maximally-distant well-resourced language-family pair, addressing the additional reviewer objection that within-Indo-European preservation may reflect linguistic proximity rather than substrate-as-language-invariant claim.
 
 **Russian-native operators (Slavic family):**
 
@@ -40,17 +41,17 @@ User-authorized expansion (2026-05-27): extend Phase 3.5b from Russian-only (Sla
 
 ## Execution-ready script
 
-Script: `research/meaningfulness_empirical_companion/code/multi_llm_rendering.py` (single shared script under the paper's own code/ directory). Run pattern (BWS-injected per fleet convention; reference: `audit/scripts/dr_v1_empirical_cases.py`):
+Script: `code/multi_llm_rendering.py` (by author decision: single shared script under the paper's own code/ directory). Run pattern (BWS-injected per fleet convention; reference: `audit/scripts/dr_v1_empirical_cases.py`):
 
 ```bash
-cd <repo-root>
+cd [internal path removed]
 bws run -- uv run --with anthropic --with openai --with httpx \
-  python research/meaningfulness_empirical_companion/code/multi_llm_rendering.py \
-  --source-text research/meaningfulness_empirical_companion/paper.md \
+  python code/multi_llm_rendering.py \
+  --source-text [internal path removed] \
   --source-extract abstract \
   --target-languages ru zh \
   --operators yandexgpt gigachat deepseek claude_opus \
-  --output-dir research/meaningfulness_empirical_companion/multi_llm_cross_family/ \
+  --output-dir [internal path removed] \
   --seed 42
 ```
 
@@ -76,7 +77,7 @@ Naming convention per user spec: `RENDERING_PB_<RU|ZH>_<ABSTRACT|SECTION_THEORY>
 
 ### Per-operator spine re-extraction (Claude as extractor, per user authorization)
 
-Quality-control note: "Chinese: you are the spine extractor for Chinese renderings. You're Claude, fluent in Chinese reading + structured extraction. The Paper A codebook is language-agnostic (conceptual node types, not lexical). Extract directly from Chinese prose; do not back-translate."
+by author decision ([internal ref removed] delta): "QUALITY CONTROL FOR CHINESE: you are the spine extractor for Chinese renderings. You're Claude, fluent in Chinese reading + structured extraction. The Paper A codebook is language-agnostic (conceptual node types, not lexical). Extract directly from Chinese prose; do not back-translate."
 
 Per-operator re-extraction follows the same protocol as the English / Russian extractions:
 
@@ -92,7 +93,7 @@ Output: `CROSS_LANGUAGE_MULTI_OPERATOR_ROBUSTNESS.md`. Contents per user spec:
 - **Within-family agreement**: do Russian operators (human + YandexGPT + GigaChat + Claude-rendering-into-Russian) preserve the SAME locked-proposition set? Same question for Chinese operators (DeepSeek + Claude-rendering-into-Chinese). Within-family agreement matrix.
 - **Cross-FAMILY agreement**: does the proposition set preserved in Russian renderings match the set preserved in Chinese renderings? (Strongest SF3 evidence — cross-family preservation invariance regardless of operator)
 - **Honest disclosure**: name any operator falling below ≥ 90% threshold + which propositions dropped + hypothesize translation-layer vs spine-extraction-layer cause
-- **Methodological observation**: if Chinese topic-prominent syntax makes antecedent-edge extraction systematically harder than Russian, document as schema-refinement candidate (per user note: "If the process notices systematic drift... that's a methodological finding worth documenting in the robustness analysis — not a falsifier of P4 but a refinement of the schema.")
+- **Methodological observation**: if Chinese topic-prominent syntax makes antecedent-edge extraction systematically harder than Russian, document as schema-refinement candidate (per user note: "If [internal ref removed] notices systematic drift... that's a methodological finding worth documenting in the robustness analysis — not a falsifier of P4 but a refinement of the schema.")
 
 ## NEW spine node if Phase 3.5b executes
 
@@ -117,15 +118,15 @@ The defense (per user spec):
 
 This is the LLM-as-evaluator robustness pattern formalized in Chiang et al. (2023) "Can Large Language Models Be an Alternative to Human Evaluations?" and Zheng et al. (2023) "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" — applied here at the rendering-operator level rather than the evaluation-judge level, AND extended across language-family boundaries (Slavic + Sino-Tibetan) for cross-family-invariance evidence.
 
-## v1.1.0 backlog placement (stretch-budget rule)
+## v1.1.0 backlog placement ([internal ref removed] stretch budget rule)
 
-Per the stretch-budget rule:
+Per [internal ref removed] init prompt:
 
 > Stretch budget rule: execute ONLY if Phase 3.5a finishes with >2h remaining in Thu PM window; otherwise record as v1.1.0 backlog. Better clean v1.0.0 with human-rendering SF3 than partial v1.0.0 that slips Zenodo.
 
-Phase 3.5a closed at the AI-draft + user-QC-handoff state (human-native rendering not yet executed). The v1.0.0 budget cannot afford partial execution of 3.5b on top. **Phase 3.5b is marked v1.1.0 backlog**.
+Phase 3.5a closed at the AI-draft + user-QC-handoff state (not human-native-rendering executed in [internal ref removed]). The [internal ref removed] budget cannot afford partial execution of 3.5b on top. **Phase 3.5b is marked v1.1.0 backlog**.
 
-What v1.0.0 delivers under 3.5b:
+What [internal ref removed] delivers under 3.5b:
 
 - Protocol documented (this file).
 - Operator subset selected and rationalized (YandexGPT + GigaChat + Claude Opus).
@@ -133,7 +134,7 @@ What v1.0.0 delivers under 3.5b:
 - BWS secret-name requirements documented (YANDEXGPT_API_KEY + YANDEXGPT_FOLDER_ID + GIGACHAT_AUTH + ANTHROPIC_API_KEY + OPENAI_API_KEY).
 - Re-extraction + cross-operator preservation analysis sub-pipeline outlined.
 
-What v1.0.0 does NOT deliver under 3.5b:
+What [internal ref removed] does NOT deliver under 3.5b:
 
 - Actual per-operator Russian renderings (API calls not fired; budget rule).
 - Per-operator re-extracted spines.
@@ -155,4 +156,4 @@ Phase 3.5b status disclosed in paper.md v1.0.0 §Discussion §Cross-language pre
 
 ---
 
-*Phase 3.5b closes with documented protocol + execution-ready script skeleton + v1.1.0 backlog placement. The v1.0.0 release prioritizes a clean ship over partial 3.5b execution; the multi-LLM cross-operator robustness evidence lands at v1.1.0 alongside the human-native Russian pass.*
+*Phase 3.5b closes with documented protocol + execution-ready script skeleton + v1.1.0 backlog placement. [internal ref removed] prioritizes clean v1.0.0 ship over partial 3.5b execution; the multi-LLM cross-operator robustness evidence lands at v1.1.0 alongside the human-native Russian pass.*

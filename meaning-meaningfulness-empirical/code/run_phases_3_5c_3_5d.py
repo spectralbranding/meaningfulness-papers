@@ -233,7 +233,7 @@ def render_with_gigachat(source_text: str) -> str:
             raise
 
     # Step 2: Render call
-    user_prompt = RUSSIAN_RENDER_PROMPT_USER.format(source_text=source_text)
+    [internal ref removed] = RUSSIAN_RENDER_PROMPT_USER.format(source_text=source_text)
     with log_call(
         phase="3.5c",
         operation="render_PB_abstract_RU_gigachat",
@@ -243,7 +243,7 @@ def render_with_gigachat(source_text: str) -> str:
         logs_dir=LOGS_DIR,
     ) as logger:
         logger.set_system_prompt(RUSSIAN_RENDER_PROMPT_SYSTEM)
-        logger.set_user_prompt(user_prompt)
+        logger.set_user_prompt([internal ref removed])
         logger.set_parameters(
             {"model": "GigaChat", "temperature": 0.3, "max_tokens": 2000}
         )
@@ -258,7 +258,7 @@ def render_with_gigachat(source_text: str) -> str:
                     "model": "GigaChat",
                     "messages": [
                         {"role": "system", "content": RUSSIAN_RENDER_PROMPT_SYSTEM},
-                        {"role": "user", "content": user_prompt},
+                        {"role": "user", "content": [internal ref removed]},
                     ],
                     "temperature": 0.3,
                     "max_tokens": 2000,
@@ -290,7 +290,7 @@ def render_with_yandexgpt(source_text: str) -> str:
     api_key = os.environ["YANDEX_AI_API_KEY"].strip()
     folder_id = os.environ.get("YANDEX_AI_FOLDER_ID", "b1g894jalgr7i0op2s70").strip()
 
-    user_prompt = RUSSIAN_RENDER_PROMPT_USER.format(source_text=source_text)
+    [internal ref removed] = RUSSIAN_RENDER_PROMPT_USER.format(source_text=source_text)
     payload = {
         "modelUri": f"gpt://{folder_id}/yandexgpt/latest",
         "completionOptions": {
@@ -300,7 +300,7 @@ def render_with_yandexgpt(source_text: str) -> str:
         },
         "messages": [
             {"role": "system", "text": RUSSIAN_RENDER_PROMPT_SYSTEM},
-            {"role": "user", "text": user_prompt},
+            {"role": "user", "text": [internal ref removed]},
         ],
     }
 
@@ -313,7 +313,7 @@ def render_with_yandexgpt(source_text: str) -> str:
         logs_dir=LOGS_DIR,
     ) as logger:
         logger.set_system_prompt(RUSSIAN_RENDER_PROMPT_SYSTEM)
-        logger.set_user_prompt(user_prompt)
+        logger.set_user_prompt([internal ref removed])
         logger.set_parameters(
             {"modelUri": payload["modelUri"], "temperature": 0.3, "maxTokens": 2000}
         )
@@ -405,7 +405,7 @@ def render_with_deepseek_zh(source_text: str) -> str:
     """DeepSeek Chinese rendering (OpenAI-compatible API)."""
     api_key = os.environ["DEEPSEEK_API_KEY"].strip()
     client = get_openai_client(api_key, base_url="https://api.deepseek.com")
-    user_prompt = CHINESE_RENDER_PROMPT_USER.format(source_text=source_text)
+    [internal ref removed] = CHINESE_RENDER_PROMPT_USER.format(source_text=source_text)
 
     with log_call(
         phase="3.5d",
@@ -416,7 +416,7 @@ def render_with_deepseek_zh(source_text: str) -> str:
         logs_dir=LOGS_DIR,
     ) as logger:
         logger.set_system_prompt(CHINESE_RENDER_PROMPT_SYSTEM)
-        logger.set_user_prompt(user_prompt)
+        logger.set_user_prompt([internal ref removed])
         logger.set_parameters(
             {"model": "deepseek-chat", "temperature": 0.3, "max_tokens": 2000}
         )
@@ -424,7 +424,7 @@ def render_with_deepseek_zh(source_text: str) -> str:
             model="deepseek-chat",
             messages=[
                 {"role": "system", "content": CHINESE_RENDER_PROMPT_SYSTEM},
-                {"role": "user", "content": user_prompt},
+                {"role": "user", "content": [internal ref removed]},
             ],
             temperature=0.3,
             max_tokens=2000,
@@ -443,7 +443,7 @@ def render_with_claude_opus_zh(source_text: str) -> str:
     """Claude Opus Chinese rendering (English-substrate control)."""
     api_key = os.environ["ANTHROPIC_API_KEY"].strip()
     client = get_anthropic_client(api_key)
-    user_prompt = CHINESE_RENDER_PROMPT_USER.format(source_text=source_text)
+    [internal ref removed] = CHINESE_RENDER_PROMPT_USER.format(source_text=source_text)
 
     with log_call(
         phase="3.5d",
@@ -454,7 +454,7 @@ def render_with_claude_opus_zh(source_text: str) -> str:
         logs_dir=LOGS_DIR,
     ) as logger:
         logger.set_system_prompt(CHINESE_RENDER_PROMPT_SYSTEM)
-        logger.set_user_prompt(user_prompt)
+        logger.set_user_prompt([internal ref removed])
         logger.set_parameters(
             {"model": "claude-opus-4-5", "temperature": 0.3, "max_tokens": 2000}
         )
@@ -462,7 +462,7 @@ def render_with_claude_opus_zh(source_text: str) -> str:
             model="claude-opus-4-5",
             max_tokens=2000,
             system=CHINESE_RENDER_PROMPT_SYSTEM,
-            messages=[{"role": "user", "content": user_prompt}],
+            messages=[{"role": "user", "content": [internal ref removed]}],
         )
         logger.capture_response(resp)
         logger.set_model_version(resp.model)
@@ -480,10 +480,10 @@ def render_with_qwen_zh_ollama(source_text: str) -> dict:
     """
     import httpx
 
-    user_prompt = CHINESE_RENDER_PROMPT_USER.format(source_text=source_text)
+    [internal ref removed] = CHINESE_RENDER_PROMPT_USER.format(source_text=source_text)
     # Qwen3.6 is a thinking model; /no_think disables the thinking phase so all
     # tokens go to the final response (otherwise thinking consumes num_predict).
-    full_prompt = f"{CHINESE_RENDER_PROMPT_SYSTEM}\n\n/no_think\n\n{user_prompt}"
+    full_prompt = f"{CHINESE_RENDER_PROMPT_SYSTEM}\n\n/no_think\n\n{[internal ref removed]}"
 
     start_ts = dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z")
     with log_call(
@@ -495,7 +495,7 @@ def render_with_qwen_zh_ollama(source_text: str) -> dict:
         logs_dir=LOGS_DIR,
     ) as logger:
         logger.set_system_prompt(CHINESE_RENDER_PROMPT_SYSTEM)
-        logger.set_user_prompt(user_prompt)
+        logger.set_user_prompt([internal ref removed])
         logger.set_parameters(
             {
                 "model": "qwen3.6:27b",
@@ -537,7 +537,7 @@ def render_with_qwen_zh_ollama(source_text: str) -> dict:
 def translate_en_to_zh(source_text: str, openai_key: str) -> str:
     """GPT-4o: English abstract → Chinese reference (sanity check only; NOT input to renderers)."""
     client = get_openai_client(openai_key)
-    user_prompt = TRANSLATION_USER.format(source_text=source_text)
+    [internal ref removed] = TRANSLATION_USER.format(source_text=source_text)
 
     with log_call(
         phase="3.5d",
@@ -548,7 +548,7 @@ def translate_en_to_zh(source_text: str, openai_key: str) -> str:
         logs_dir=LOGS_DIR,
     ) as logger:
         logger.set_system_prompt(TRANSLATION_SYSTEM)
-        logger.set_user_prompt(user_prompt)
+        logger.set_user_prompt([internal ref removed])
         logger.set_parameters(
             {"model": "gpt-4o-2024-08-06", "temperature": 0.0, "seed": SEED}
         )
@@ -556,7 +556,7 @@ def translate_en_to_zh(source_text: str, openai_key: str) -> str:
             model="gpt-4o-2024-08-06",
             messages=[
                 {"role": "system", "content": TRANSLATION_SYSTEM},
-                {"role": "user", "content": user_prompt},
+                {"role": "user", "content": [internal ref removed]},
             ],
             temperature=0.0,
             seed=SEED,
@@ -575,7 +575,7 @@ def back_translate_zh_prompt(prompt_text: str, openai_key: str) -> str:
     Task-isolated invocation (different from translation step).
     """
     client = get_openai_client(openai_key)
-    user_prompt = BACKTRANSLATION_USER.format(prompt_text=prompt_text)
+    [internal ref removed] = BACKTRANSLATION_USER.format(prompt_text=prompt_text)
 
     with log_call(
         phase="3.5d",
@@ -586,7 +586,7 @@ def back_translate_zh_prompt(prompt_text: str, openai_key: str) -> str:
         logs_dir=LOGS_DIR,
     ) as logger:
         logger.set_system_prompt(BACKTRANSLATION_SYSTEM)
-        logger.set_user_prompt(user_prompt)
+        logger.set_user_prompt([internal ref removed])
         logger.set_parameters(
             {"model": "gpt-4o-2024-08-06", "temperature": 0.0, "seed": SEED}
         )
@@ -594,7 +594,7 @@ def back_translate_zh_prompt(prompt_text: str, openai_key: str) -> str:
             model="gpt-4o-2024-08-06",
             messages=[
                 {"role": "system", "content": BACKTRANSLATION_SYSTEM},
-                {"role": "user", "content": user_prompt},
+                {"role": "user", "content": [internal ref removed]},
             ],
             temperature=0.0,
             seed=SEED,
@@ -617,7 +617,7 @@ def extract_via_gpt4o(
 ) -> str:
     """GPT-4o extraction: receives only prose, no source spine (B != C rule)."""
     client = get_openai_client(openai_key)
-    user_prompt = EXTRACTION_USER_PROMPT.format(prose=prose)
+    [internal ref removed] = EXTRACTION_USER_PROMPT.format(prose=prose)
 
     with log_call(
         phase=phase,
@@ -628,7 +628,7 @@ def extract_via_gpt4o(
         logs_dir=LOGS_DIR,
     ) as logger:
         logger.set_system_prompt(EXTRACTION_CODEBOOK)
-        logger.set_user_prompt(user_prompt)
+        logger.set_user_prompt([internal ref removed])
         logger.set_parameters(
             {
                 "model": "gpt-4o-2024-08-06",
@@ -641,7 +641,7 @@ def extract_via_gpt4o(
             model="gpt-4o-2024-08-06",
             messages=[
                 {"role": "system", "content": EXTRACTION_CODEBOOK},
-                {"role": "user", "content": user_prompt},
+                {"role": "user", "content": [internal ref removed]},
             ],
             temperature=0.2,
             max_tokens=4000,
@@ -662,10 +662,10 @@ def extract_via_qwen_ollama(prose: str, phase: str, operation_suffix: str) -> di
     """
     import httpx
 
-    user_prompt = EXTRACTION_USER_PROMPT.format(prose=prose)
+    [internal ref removed] = EXTRACTION_USER_PROMPT.format(prose=prose)
     # Qwen3.6 is a thinking model; /no_think disables the thinking phase so all
     # tokens go to the final response (otherwise thinking consumes num_predict).
-    full_prompt = f"{EXTRACTION_CODEBOOK}\n\n/no_think\n\n{user_prompt}"
+    full_prompt = f"{EXTRACTION_CODEBOOK}\n\n/no_think\n\n{[internal ref removed]}"
 
     start_ts = dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z")
     with log_call(
@@ -677,7 +677,7 @@ def extract_via_qwen_ollama(prose: str, phase: str, operation_suffix: str) -> di
         logs_dir=LOGS_DIR,
     ) as logger:
         logger.set_system_prompt(EXTRACTION_CODEBOOK)
-        logger.set_user_prompt(user_prompt)
+        logger.set_user_prompt([internal ref removed])
         logger.set_parameters(
             {
                 "model": "qwen3.6:27b",
@@ -1086,7 +1086,7 @@ def main():
         "source_abstract_chars": len(SOURCE_ABSTRACT_EN),
         "seed": SEED,
         "cross_operator_discipline": {
-            "rule": "B != C (renderer != extractor); HARD RULE per feedback_cross_operator_extraction_separation.md",
+            "rule": "B != C (renderer != extractor); HARD RULE per [internal ref removed]",
             "gigachat": "renderer=GigaChat; extractor=GPT-4o-2024-08-06 (different model; valid)",
             "yandexgpt": "renderer=YandexGPT; extractor=GPT-4o-2024-08-06 (different model; valid)",
         },
@@ -1404,7 +1404,7 @@ def main():
         "source_abstract_chars": len(SOURCE_ABSTRACT_EN),
         "seed": SEED,
         "cross_operator_discipline": {
-            "rule": "B != C (renderer != extractor); HARD RULE per feedback_cross_operator_extraction_separation.md",
+            "rule": "B != C (renderer != extractor); HARD RULE per [internal ref removed]",
             "deepseek": "renderer=deepseek-chat; extractor=GPT-4o-2024-08-06 + Qwen3.6:27b (both different from DeepSeek; valid)",
             "claude_opus": "renderer=claude-opus-4-5; extractor=GPT-4o-2024-08-06 (different from Claude; valid)",
             "qwen36_27b": "renderer=qwen3.6:27b; extractor=GPT-4o-2024-08-06 ONLY (Qwen cannot extract its own rendering; B=C would be violated)",

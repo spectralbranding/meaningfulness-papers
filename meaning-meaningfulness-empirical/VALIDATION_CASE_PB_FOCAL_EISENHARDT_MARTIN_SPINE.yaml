@@ -4,7 +4,7 @@
 # inter-coder κ scheduled for v1.1.0.
 
 extraction_version: "1.0.0"
-extraction_session: "Phase 2"
+extraction_session: "[internal ref removed] Phase 2"
 extraction_date: "2026-05-27"
 schema_version: "0.2"
 
@@ -14,7 +14,7 @@ source_paper:
   doi: "10.1002/1097-0266(200010/11)21:10/11<1105::AID-SMJ133>3.0.CO;2-E"
   publication_date: "2000-10/11"
   venue: "Strategic Management Journal"
-  source_pdf: "research/references/pericles_exported.pdf (17 pages)"
+  source_pdf: "[internal path removed] (17 pages)"
 
 paper_thesis: |
   Dynamic capabilities are specific and identifiable organizational processes

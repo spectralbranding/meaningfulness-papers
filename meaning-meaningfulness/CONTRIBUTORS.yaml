@@ -1,6 +1,6 @@
 ---
 paper_key: 2026ao
-status: skeleton (drafting init; final values at Zenodo upload)
+status: skeleton ([internal ref removed] init; final values at Zenodo upload)
 contributors:
   - name: "Dmitry Zharnikov"
     orcid: "0009-0000-6893-9231"
@@ -21,18 +21,20 @@ ai_assistants:
       spine-first drafting protocol's structural-substrate operation class.
       All judgment operations (fork/rebase/merge; theoretical commitments;
       cohort-specific rendering decisions) remained with the human author.
-    sessions_used: "drafting"
+    sessions_used: "[internal ref removed] and prior Sessions A through C+C-prime (predraft + Phase 3 drafting)"
   - name: "Grok 4.1"
     provider: "xAI"
     role: >-
-      Critical review of and feedback on the draft. No drafting authorship.
-    sessions_used: "drafting phase"
+      Pre-draft critical-review applied to predraft bundle across five review
+      cycles ([internal ref removed]; plateau reached r4→r5). No drafting authorship. Audit
+      record at audit/grok_outputs/2026ao_grok_r{1,2,3,4,5}.md.
+    sessions_used: "Sessions A through C-prime predraft"
   - name: "Gemini 3.1"
     provider: "Google"
     role: >-
       Auxiliary literature search and citation verification supplements;
       no drafting authorship.
-    sessions_used: "As needed during drafting"
+    sessions_used: "As needed during predraft phase"
 ai_disclosure_text: >-
   AI assistants (Claude Opus 4.7, Grok 4.1, Gemini 3.1) were used for initial
   literature search and editorial refinement; all theoretical claims,
@@ -43,9 +45,9 @@ ai_co_authorship_policy: >-
   artifacts. AI use is disclosed in Acknowledgments and Method per AMA
   guidance.
 human_reviewers_during_drafting:
-  - name: "Author self-review during drafting"
-    note: "External pre-submission reviewer engagement deferred to a later review pass."
+  - name: "Author self-review across five pre-draft cycles"
+    note: "External pre-submission reviewer engagement deferred to the post-draft review pass and the venue review cycle."
 acknowledgment_placement: >-
   Acknowledgments + CRediT contributions appear at END of paper, between
-  Conclusion and References — NOT on first page.
+  Conclusion and References — NOT on first page per [internal ref removed].
 ---

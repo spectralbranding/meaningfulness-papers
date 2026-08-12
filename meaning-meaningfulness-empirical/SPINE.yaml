@@ -11,7 +11,7 @@
 # spine.
 
 spine_version: "0.2"              # schema version (per Paper A; observations/methods/measurements/findings/derivations first-class)
-spine_doc_version: "0.5.3"
+spine_doc_version: "0.5.3"        # v0.1.0 lock → v0.1.1 FORK → v0.1.2 NF16+NF17 → v0.1.3 N=2→N=1 scope reduction → v0.2.0 KBV-pair FORK → v0.3.0 P4 REFRAME → v0.3.1 Crossref-verify 12 Grok anchors → v0.4.0 Phase 5 integrative theory + null-baseline + Phase 2/3 self-application + Phase 4 κ pre-registration → v0.4.1 ([internal ref removed] Phase 5h + Phase 2.5 + Phase 3.5a + Phase 3.5b deferred) NEW Phase 2.5 cross-paper P4 (Paper A SPINE.yaml v0.7.3 → 2,102w practitioner rendering; 12/15 strict / 15/15 semantic / 0 contradicted; strongest single P4 evidence point at full-framework boundary); NEW PB_F6 cross-paper P4 evidence node; NEW Phase 3.5a Russian-rendering protocol + AI-draft starter + user-QC handoff for v1.1.0; NEW Phase 3.5b multi-LLM cross-FAMILY (Slavic + Sino-Tibetan) protocol + script + BWS keys verified (DEEPSEEK + GIGACHAT + YANDEX_AI + ANTHROPIC) for v1.1.0 execution; NEW PB_F7 SF1 anchor-verification evidence node; NEW PB_F8 cross-language preservation node (placeholder for v1.1.0); NEW §LLM-call provenance §Method subsection + logs/ directory + llm_call_logger.py utility + [internal ref removed] phase 1/2/2.5/3/3.5a log reconstruction per [internal ref removed] HARD RULE; paper.md body unchanged at v1.0.0; SF1-SF4 stylized-facts mapping clarified in §Results + §Discussion
 paper_key: "2026ap"               # placeholder; verify CANONICAL_REFERENCES.md at joint Zenodo upload (post-Session-E)
 paper_a_companion_key: "2026ao"   # theoretical-foundation paper
 theoretical_predecessor:
@@ -89,10 +89,10 @@ boundary_conditions:
 observations:
   - id: PB_O1
     statement: "Eisenhardt & Martin 2000 SMJ 21(10-11):1105-1121 published October-November 2000 with the dynamic-capabilities-as-best-practices-routines formalism."
-    raw_data_pointer: "[internal path removed] (verify in [session] Phase 2)"
+    raw_data_pointer: "[internal path removed] (verify in [internal ref removed] Phase 2)"
     instrument: "Crossref metadata + direct PDF read"
     timestamp: "2000-10"
-    conditions_at_capture: "Paper B extraction [session] Phase 2 from finalized journal version"
+    conditions_at_capture: "Paper B extraction [internal ref removed] Phase 2 from finalized journal version"
     provenance:
       created_by: "author + tool:verify_citations.py (Crossref Stage 1 verified)"
       created_at: "2026-05-26"
@@ -100,10 +100,10 @@ observations:
 
   - id: PB_O2
     statement: "Zollo & Winter 2002 Organization Science 13(3):339-351 published May-June 2002 with the deliberate-learning-and-evolutionary-mechanisms formalism."
-    raw_data_pointer: "[internal path removed] (verify in [session] Phase 2)"
+    raw_data_pointer: "[internal path removed] (verify in [internal ref removed] Phase 2)"
     instrument: "Crossref metadata + direct PDF read"
     timestamp: "2002-05"
-    conditions_at_capture: "Paper B extraction [session] Phase 2 from finalized journal version"
+    conditions_at_capture: "Paper B extraction [internal ref removed] Phase 2 from finalized journal version"
     provenance:
       created_by: "author + tool:verify_citations.py (Crossref Stage 1 verified)"
       created_at: "2026-05-26"
@@ -111,7 +111,7 @@ observations:
 
   - id: PB_O3
     statement: "Tushman & O'Reilly 1996 California Management Review 38(4):8-30 published Summer 1996 with the ambidextrous-organizations-managing-evolutionary-and-revolutionary-change formalism. Released at a working version as STANDALONE PRECURSOR; a working version KBV-pair FORK reclassifies its standalone-precursor status from 'a working version partner expected' to 'a working version partner expected' since a working version added a DIFFERENT pair (KBV) rather than completing the secondary-pair (Duncan-or-substitute) extraction."
-    raw_data_pointer: "[internal path removed] ([session] Phase 2 user-supplied + verified)"
+    raw_data_pointer: "[internal path removed] ([internal ref removed] Phase 2 user-supplied + verified)"
     instrument: "Crossref metadata + direct PDF read of tushman1996.pdf"
     timestamp: "1996-07"
     conditions_at_capture: "Paper B v0.1.3 scope reduction reclassifies PB_O3 from secondary_pair_first to v1_1_0_precursor; single-paper extraction at v1.0.0 without isomorphism partner"
@@ -168,7 +168,7 @@ methods:
     code_anchor: "code/extract_citation_contexts.py + manual proposition coding (single-coder at v1.0.0)"
     reproducibility:
       seed: "single-coder by author at v1.0.0; inter-coder κ on 20% subsample for reliability deferred to v1.1.0"
-      version: "TBD at [session] Phase 2"
+      version: "TBD at [internal ref removed] Phase 2"
     related_paper_a_method: "paper_a:M2 (retroactive spine extraction)"
     provenance:
       created_by: "author"
@@ -198,7 +198,7 @@ methods:
     code_anchor: "code/cost_function_calibration.py"
     reproducibility:
       seed: "42 (fixed; per paper_a default)"
-      version: "[session] Phase 3 + v1.1.0 KBV-pair FORK"
+      version: "[internal ref removed] Phase 3 + v1.1.0 KBV-pair FORK"
     note: "v1.1.0 reports point estimates without confidence intervals; statistical-power claims are out of scope. v1.0.0 reframe demotes β/δ from primary to secondary contribution."
     provenance:
       created_by: "author + tool:cost_function_calibration.py"
@@ -209,7 +209,7 @@ methods:
     statement: "Iterative-cohort-growth protocol: a working version → a working version versioning trajectory with Zenodo-DOI-per-version discipline; methodological additions per release."
     type: "research_protocol"
     inputs: ["v1.0.0 release procedure", "subsequent-version specifications"]
-    outputs: ["RELEASE_NOTES_v1.0.0.md ([session])", "trajectory documentation in paper.md Discussion"]
+    outputs: ["RELEASE_NOTES_v1.0.0.md ([internal ref removed])", "trajectory documentation in paper.md Discussion"]
     related_paper_a_method: "self-application of paper_a:appendix_B_protocol at multi-version scale"
     provenance:
       created_by: "author"
@@ -510,6 +510,7 @@ corpus_precedents:
     note: "Round 2 of the same arc: units fixed before extraction and supplied identically to both operators, every extraction repeated so an operator's agreement with itself gives a noise floor. Edge agreement failed its absolute gate in all fifteen document-by-condition cells, including the ten with shared units, and separated below the within-operator floor in every cell. Removes the expectation that a better protocol absorbs the disagreement; names the one untested condition (a shared inventory of established segmenter fidelity)."
 
 # ============================================================================
+# External anchors — Crossref-verified at [internal ref removed] open
 # ============================================================================
 external_anchors:
   - citation_key: bikard-2020-idea-twins
@@ -526,7 +527,7 @@ external_anchors:
     doi: "10.1002/1097-0266(200010/11)21:10/11<1105::AID-SMJ133>3.0.CO;2-E"
     role: "twin_pair_source_focal_first"
     verified_at: "2026-05-26"
-    verification_method: "Crossref Stage 1 verified ([session]-prime + [session] re-confirmation)"
+    verification_method: "Crossref Stage 1 verified ([internal ref removed]-prime + [internal ref removed] re-confirmation)"
     spine_nodes: ["PB_O1"]
     body_sections: ["Method — focal pair"]
 
@@ -535,7 +536,7 @@ external_anchors:
     doi: "10.1287/orsc.13.3.339.2780"
     role: "twin_pair_source_focal_second"
     verified_at: "2026-05-26"
-    verification_method: "Crossref Stage 1 verified ([session]-prime + [session] re-confirmation)"
+    verification_method: "Crossref Stage 1 verified ([internal ref removed]-prime + [internal ref removed] re-confirmation)"
     spine_nodes: ["PB_O2"]
     body_sections: ["Method — focal pair"]
 
@@ -544,7 +545,7 @@ external_anchors:
     doi: "10.2307/41165852"
     role: "v1_1_0_secondary_pair_precursor (released standalone at v1.0.0)"
     verified_at: "2026-05-26"
-    verification_method: "Crossref Stage 1 verified ([session]); PDF source-verified via tushman1996.pdf first-page extraction"
+    verification_method: "Crossref Stage 1 verified ([internal ref removed]); PDF source-verified via tushman1996.pdf first-page extraction"
     spine_nodes: ["PB_O3"]
     body_sections: ["Method — TO1996 standalone precursor extraction", "Discussion — v1.1.0 secondary-pair commitment"]
 
@@ -556,7 +557,7 @@ external_anchors:
     doi: "10.1002/smj.2294"
     role: "recombination_measurement_contrast"
     verified_at: "2026-05-26"
-    verification_method: "Crossref Stage 1 verified [session] Phase 2 (post-Grok-r1; page-range corrected from Grok-suggested 1437-1457 to Crossref-canonical 1435-1457)"
+    verification_method: "Crossref Stage 1 verified [internal ref removed] Phase 2 (post-Grok-r1; page-range corrected from Grok-suggested 1437-1457 to Crossref-canonical 1435-1457)"
     spine_nodes: ["PB_M2"]
     body_sections: ["Method — Rec metric construct-validity contrast", "Discussion — Theoretical Implications of Calibration (§M)"]
 
@@ -565,7 +566,7 @@ external_anchors:
     doi: "10.5465/amp.2013.0025"
     role: "secondary_pair_bridging_review (engagement deferred to v2.0.0 alongside secondary-pair partner extraction)"
     verified_at: "2026-05-26"
-    verification_method: "Crossref Stage 1 verified [session] Phase 2 (post-Grok-r1; DOI corrected from Grok-suggested 10.5465/amp.2012.0085 which 404s)"
+    verification_method: "Crossref Stage 1 verified [internal ref removed] Phase 2 (post-Grok-r1; DOI corrected from Grok-suggested 10.5465/amp.2012.0085 which 404s)"
     spine_nodes: ["PB_O3"]
     body_sections: ["Method — secondary pair (v2.0.0)", "Results — secondary-pair isomorphism (v2.0.0)"]
 
@@ -574,7 +575,7 @@ external_anchors:
     doi: "10.1002/smj.4250171110"
     role: "kbv_pair_source_first (v1.1.0 addition)"
     verified_at: "2026-05-27"
-    verification_method: "Crossref-verifiable DOI from user-supplied citation; PDF source verified via ocrmypdf + pdftotext extraction [session] continuation"
+    verification_method: "Crossref-verifiable DOI from user-supplied citation; PDF source verified via ocrmypdf + pdftotext extraction [internal ref removed] continuation"
     spine_nodes: ["PB_O5"]
     body_sections: ["Method — KBV pair", "Results — KBV-pair Rec metric", "References"]
 
@@ -592,17 +593,19 @@ external_anchors:
     doi: "10.1002/smj.4250141009"
     role: "organizational_learning_antecedent (v0.3.1 Phase 1 addition; antecedent for KBV-pair K1/K3 substrate nodes on knowledge integration and tacit-vs-explicit; complements Levitt-March 1988 already named as L2 focal-pair antecedent)"
     verified_at: "2026-05-27"
-    verification_method: "Crossref Stage-1 verified [session] Phase 1 via [internal audit artifact]; DOI confirmed 10.1002/smj.4250141009 SMJ 14(S2):95-112"
+    verification_method: "Crossref Stage-1 verified [internal ref removed] Phase 1 via [internal audit artifact]; DOI confirmed 10.1002/smj.4250141009 SMJ 14(S2):95-112"
     spine_nodes: ["PB_M1", "PB_M2"]
     body_sections: ["Theory — organizational-learning antecedent positioning"]
     grok_suggested_anchor_provenance: "anchor A10 in PHASE1_ANCHOR_VERIFICATION_2026-05-27.md; 1 of 2 verified out of 12 Grok-suggested; underlying 1993 paper verified, Grok's '2025 retrospective commentary' component unverified and dropped"
 
+  # ----- v0.5.0 additions (joint review pass, 2026-05-27) -----
+
   - citation_key: grimes-vonKrogh-feuerriegel-rink-gruber-2023-scarcity-to-abundance
     full_citation: "Grimes, M., von Krogh, G., Feuerriegel, S., Rink, F., & Gruber, M. (2023). From scarcity to abundance: Scholars and scholarship in an age of generative artificial intelligence. Academy of Management Journal 66(6): 1617–1624."
     doi: "10.5465/amj.2023.4006"
-    role: "scholarship-in-genAI-era_framing (v0.5.0 [session] addition; field-level intervention frame for Paper B's empirical demonstration of substrate-vs-rendering decomposition at the scholarly-artifact level)"
+    role: "scholarship-in-genAI-era_framing (v0.5.0 [internal ref removed] addition; field-level intervention frame for Paper B's empirical demonstration of substrate-vs-rendering decomposition at the scholarly-artifact level)"
     verified_at: "2026-05-27"
-    verification_method: "Crossref REST API DOI lookup ([session]; title + authors + year + venue match expected; user pre-verified PDF authentic upstream"
+    verification_method: "Crossref REST API DOI lookup ([internal ref removed] Step 4.5b); title + authors + year + venue match expected; user pre-verified PDF authentic upstream"
     spine_nodes: ["PB_M3", "PB_F4"]
     body_sections: ["Theory — GenAI-era scholarship framing", "Discussion — Implications"]
     grok_suggested_anchor_provenance: "anchor A2 in PHASE4_5_ANCHOR_VERIFICATION_2026-05-27.md; user-pre-verified; 0 hallucinations this round"
@@ -610,7 +613,7 @@ external_anchors:
   - citation_key: brynjolfsson-li-raymond-2025-genai-at-work
     full_citation: "Brynjolfsson, E., Li, D., & Raymond, L. (2025). Generative AI at Work. Quarterly Journal of Economics 140(2)."
     doi: "10.1093/qje/qjae044"
-    role: "productivity_heterogeneity_empirical_template (v0.5.0 [session] addition; canonical empirical demonstration of differential GenAI productivity gains — supplies grounding for the cost-asymmetry mechanism Paper A predicts and Paper B's β/δ ordering supports)"
+    role: "productivity_heterogeneity_empirical_template (v0.5.0 [internal ref removed] addition; canonical empirical demonstration of differential GenAI productivity gains — supplies grounding for the cost-asymmetry mechanism Paper A predicts and Paper B's β/δ ordering supports)"
     verified_at: "2026-05-27"
     verification_method: "Crossref REST API DOI lookup; title + authors + year + venue match expected"
     spine_nodes: ["PB_M3", "PB_F2"]
@@ -620,7 +623,7 @@ external_anchors:
   - citation_key: george-storey-hong-2025-chatgpt-knowledge-anchor
     full_citation: "George, J. F., Storey, V. C., & Hong, S. J. (2025). Unraveling the impact of ChatGPT as a knowledge anchor in business education. ACM Transactions on Management Information Systems."
     doi: "10.1145/3705734"
-    role: "knowledge_anchor_framework (v0.5.0 [session] addition; supplies the knowledge-anchor framing for how AI-mediated artifacts shape downstream cohort renderings — complements the substrate-vs-rendering decomposition Paper A introduces)"
+    role: "knowledge_anchor_framework (v0.5.0 [internal ref removed] addition; supplies the knowledge-anchor framing for how AI-mediated artifacts shape downstream cohort renderings — complements the substrate-vs-rendering decomposition Paper A introduces)"
     verified_at: "2026-05-27"
     verification_method: "Crossref REST API title-search (no DOI provided initially; resolved to DOI 10.1145/3705734); user provided local PDF (3705734.pdf) and bib file (acm_3705734.bib) confirming"
     spine_nodes: ["PB_M3"]
@@ -630,7 +633,7 @@ external_anchors:
   - citation_key: kirchner-bolisani-kassaneh-scarso-taraghi-2025-genai-km-software-dev
     full_citation: "Kirchner, K., Bolisani, E., Kassaneh, T. C., Scarso, E., & Taraghi, M. (2025). Generative AI meets knowledge management: Insights from software development practices. Knowledge and Process Management."
     doi: "10.1002/kpm.70004"
-    role: "TOE_framework_qualitative_grounding (v0.5.0 [session] addition; technology-organization-environment qualitative grounding for substrate-and-rendering practice in software development — adjacent organizational-knowledge-work context for Paper B's empirical claims)"
+    role: "TOE_framework_qualitative_grounding (v0.5.0 [internal ref removed] addition; technology-organization-environment qualitative grounding for substrate-and-rendering practice in software development — adjacent organizational-knowledge-work context for Paper B's empirical claims)"
     verified_at: "2026-05-27"
     verification_method: "Crossref REST API DOI lookup; title + authors + year + venue match expected"
     spine_nodes: ["PB_M3"]
@@ -640,7 +643,7 @@ external_anchors:
   - citation_key: alavi-leidner-mousavi-2024-km-perspective-genai
     full_citation: "Alavi, M., Leidner, D. E., & Mousavi, R. (2024). Knowledge management perspective of generative artificial intelligence. Journal of the Association for Information Systems 25(1)."
     doi: "10.17705/1jais.00859"
-    role: "km_foundational_lens (v0.5.0 [session] addition; KM-perspective revisit of Alavi-Leidner 2001 in the GenAI era; substrate-vs-rendering decomposition Paper B's empirical demonstration grounds is consistent with the KM lens Alavi-Leidner identify and Alavi-Leidner-Mousavi 2024 update)"
+    role: "km_foundational_lens (v0.5.0 [internal ref removed] addition; KM-perspective revisit of Alavi-Leidner 2001 in the GenAI era; substrate-vs-rendering decomposition Paper B's empirical demonstration grounds is consistent with the KM lens Alavi-Leidner identify and Alavi-Leidner-Mousavi 2024 update)"
     verified_at: "2026-05-27"
     verification_method: "Crossref REST API DOI lookup; title + authors + year + venue match expected"
     spine_nodes: ["PB_M3", "PB_F4"]
@@ -650,7 +653,7 @@ external_anchors:
   - citation_key: benbya-strich-tamm-2024-navigating-genai
     full_citation: "Benbya, H., Strich, F., & Tamm, T. (2024). Navigating generative artificial intelligence promises and perils for knowledge and creative work. Journal of the Association for Information Systems 25(1)."
     doi: "10.17705/1jais.00861"
-    role: "genai-implications_taxonomy (v0.5.0 [session] addition; promises-and-perils taxonomy for knowledge-and-creative work — supplies a taxonomy the Operator-role / three-layer L→S→R decomposition this paper empirically demonstrates organizes around the structural asymmetry the cost-function specifies)"
+    role: "genai-implications_taxonomy (v0.5.0 [internal ref removed] addition; promises-and-perils taxonomy for knowledge-and-creative work — supplies a taxonomy the Operator-role / three-layer L→S→R decomposition this paper empirically demonstrates organizes around the structural asymmetry the cost-function specifies)"
     verified_at: "2026-05-27"
     verification_method: "Crossref REST API DOI lookup; title + authors + year + venue match expected"
     spine_nodes: ["PB_M3", "PB_F4"]
@@ -674,7 +677,7 @@ negative_findings:
 
   - id: NF16
     statement: "the review §2 HIGH-priority suggested 'Felin, T., & Zenger, T. R. (2024). The economic theory of the firm in the age of AI. SMJ 45(4): 721–752. DOI: 10.1002/smj.3612.' Grok claimed 'verified via Semantic Scholar 2024 entry.' Verification at [session] Phase 2.5: DOI 10.1002/smj.3612 resolves to Neckebrouck-Kryscynski 2024 'Empirically exploring the veracity of the new stakeholder perspective in strategy: Documenting workforce rents' SMJ 45(10): 2159-2188 — NOT a Felin-Zenger 2024 paper on AI. HALLUCINATED."
-    pattern: "matches NF15 + Paper A NF1..NF14; cumulative ~50% rate across the review+r2 on Paper B"
+    pattern: "matches NF15 + Paper A NF1..NF14; cumulative ~50% rate across Grok [internal ref removed] on Paper B"
     provenance:
       created_by: "author + tool:Crossref manual verification"
       created_at: "2026-05-27"

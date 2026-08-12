@@ -4,13 +4,13 @@ author: Dmitry Zharnikov
 date: 2026-05-26
 status: Phase-2 analysis
 related:
-  - research/meaning_meaningfulness_paper/SPINE.yaml (v0.3.0 schema v0.2 — the meaningfulness paper's own spine; P4 + T1 anchor here)
-  - research/meaning_meaningfulness_paper/VALIDATION_CASE_T1_HEISENBERG_SPINE.yaml (Heisenberg-path spine; 45 typed nodes)
-  - research/meaning_meaningfulness_paper/VALIDATION_CASE_T1_SCHRODINGER_SPINE.yaml (Schrödinger-path spine; 54 typed nodes)
-  - research/meaning_meaningfulness_paper/VALIDATION_CASE_T1_SCHRODINGER_EQUIVALENCE_NOTES.md (verbatim Schrödinger equivalence quotes)
-  - research/references/heisenberg_1925_english_delphenich.pdf
-  - research/references/born_jordan_1925_english_neoclassical.pdf
-  - research/references/schrodinger_1928_collected_papers_wave_mechanics.pdf
+  - [internal path removed] (v0.3.0 schema v0.2 — the meaningfulness paper's own spine; P4 + T1 anchor here)
+  - [internal path removed] (Heisenberg-path spine; 45 typed nodes)
+  - [internal path removed] (Schrödinger-path spine; 54 typed nodes)
+  - [internal path removed] (verbatim Schrödinger equivalence quotes)
+  - [internal path removed]
+  - [internal path removed]
+  - [internal path removed]
 ---
 
 # Twin-Pair Spine Isomorphism — Heisenberg ↔ Schrödinger (T1 analysis)

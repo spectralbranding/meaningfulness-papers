@@ -1,7 +1,8 @@
 ---
 title: "Cross-paper P4 isomorphism — Paper A's substrate across academic + Substack practitioner renderings"
 date: 2026-05-27
-source_spine: "Paper A 2026ao SPINE.yaml v0.7.3"
+session: [internal ref removed] Phase 2.5 — Cross-paper P4 (new by author decision; dual-purpose research artifact + Article 1 raw material)
+source_spine: "Paper A 2026ao SPINE.yaml v0.7.3 at [internal path removed]"
 rendered_artifact: "RENDERING_PA_PRACTITIONER.md (2,102 words; practitioner register)"
 re_extracted_spine: "VALIDATION_CASE_PA_PRACTITIONER_SPINE.yaml"
 metric: "preservation rate of Paper A's locked propositions, propositions, stylized facts, boundary conditions, and operational protocols across the academic → Substack practitioner rendering boundary"
@@ -12,7 +13,7 @@ covers_stylized_fact: "SF4 (cross-medium conclusion-invariance under multi-rende
 
 ## Purpose
 
-Phase 2.5 (added during the work) tests P4 at a boundary the Paper B v1.0.0 evidence base does not otherwise cross: **cross-paper rendering** of Paper A's structural substrate into a fresh practitioner-register article, with re-extraction and isomorphism check. This complements:
+Phase 2.5 (added by author decision mid-session) tests P4 at a boundary the Paper B v1.0.0 evidence base does not otherwise cross: **cross-paper rendering** of Paper A's structural substrate into a fresh practitioner-register article, with re-extraction and isomorphism check. This complements:
 
 - **Phase 2 Task α** (within-Paper-B self-application; same spine, two renderings of Paper B's own substrate)
 - **Phase 3 Task β** (within-focal-pair third rendering; same focal-pair-shared substrate, three renderings)
@@ -86,7 +87,7 @@ The cross-paper P4 result is **stronger than the within-paper Phase 2 Task α re
 
 ## Cross-rendering consistency check (against Phase 2 + Phase 3 renderings)
 
-The three practitioner-tier renderings produced for v1.0.0 (Phase 2 Substack rendering of Paper B's own substrate; Phase 3 LinkedIn rendering of focal-pair shared substrate; Phase 2.5 Substack rendering of Paper A's whole substrate) all preserve the same core elements: substrate-vs-rendering distinction; cost-asymmetry direction; substrate-as-first-class-object operational implication; spine-first protocol; three-first-moves operational guidance. None of the three contradicts another. Cross-rendering consistency rate across all three renderings = 100%.
+The three practitioner-tier renderings produced in [internal ref removed] (Phase 2 Substack rendering of Paper B's own substrate; Phase 3 LinkedIn rendering of focal-pair shared substrate; Phase 2.5 Substack rendering of Paper A's whole substrate) all preserve the same core elements: substrate-vs-rendering distinction; cost-asymmetry direction; substrate-as-first-class-object operational implication; spine-first protocol; three-first-moves operational guidance. None of the three contradicts another. Cross-rendering consistency rate across all three renderings = 100%.
 
 ## Integration into v1.0.0 paper.md (Phase 5 re-revision)
 
@@ -94,7 +95,7 @@ Phase 5 paper.md v1.0.0 already lands the Substack (Phase 2) and LinkedIn (Phase
 
 ## Dual-purpose use as Article 1 raw material
 
-The RENDERING_PA_PRACTITIONER.md article is publishable on Substack as Article 1 of the practitioner-tier series articulating Paper A's framework. The user may, post-Zenodo, take it as the starting material for a published derivative article.
+The RENDERING_PA_PRACTITIONER.md article is publishable on Substack as Article 1 of the practitioner-tier series articulating Paper A's framework. The rendering is a research artifact in this [internal ref removed] context; the user may, post-Zenodo, take it as the starting material for a published derivative article. Publication is NOT authorized in [internal ref removed] scope; the rendering remains internal until user explicitly authorizes Substack publication.
 
 ## Honest limitations
 

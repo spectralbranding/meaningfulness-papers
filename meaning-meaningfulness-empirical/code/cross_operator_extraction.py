@@ -1,23 +1,23 @@
 """Cross-operator spine extraction — Phase 2-prime / 2.5-prime / 3-prime
-retroactive re-extraction of Session H rendering artifacts using GPT-4 as
+retroactive re-extraction of [internal ref removed] rendering artifacts using GPT-4 as
 the extraction operator.
 
-Per feedback_cross_operator_extraction_separation.md HARD RULE (2026-05-27):
+Per [internal ref removed] HARD RULE (2026-05-27):
 when the same LLM both renders prose from a spine AND extracts spine from that
 prose in the same session, "extraction" is partly memory reconstruction — not
 pure prose→spine inference. The within-operator preservation result is
 confounded by within-model context memory.
 
 Correct three-operator pipeline:
-- Operator A (orchestrator, Session H Claude): provides source spine; compares;
+- Operator A (orchestrator, [internal ref removed] Claude): provides source spine; compares;
   reports.
-- Operator B (rendering, Session H Claude in Phases 2/2.5/3): receives source
+- Operator B (rendering, [internal ref removed] Claude in Phases 2/2.5/3): receives source
   spine; produces prose.
 - Operator C (extraction, GPT-4 via this script): DIFFERENT model from B;
   receives ONLY the prose + the appendix-A codebook; NEVER receives the source
   spine; produces extracted spine.
 
-Per feedback_llm_call_professional_logging.md: every extraction call JSONL-
+Per [internal ref removed]: every extraction call JSONL-
 logged at logs/<phase>_extraction_<extractor>_calls.jsonl.
 
 Renderings re-extracted (Phase 2/2.5/3 — drafting work; the extraction is the

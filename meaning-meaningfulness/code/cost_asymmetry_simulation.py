@@ -145,7 +145,7 @@ def section_ratio():
             r10 = cost_ratio(V_SMALL, beta, delta)
             r100 = cost_ratio(V_TYPICAL, beta, delta)
             r500 = cost_ratio(V_LONGTAIL, beta, delta)
-            grid[(beta, delta)] = (r10, r100, r500)
+            grid[(beta, delta)] = ([internal ref removed])
             print(
                 f"  {beta:>5.1f} {delta:>6.1f} {delta - beta:>5.1f} "
                 f"{r10:>14.3g} {r100:>14.3g} {r500:>14.3g}"

@@ -2,7 +2,7 @@
 # Retroactive spine extraction per paper_a:appendix_B_protocol.
 
 extraction_version: "1.0.0"
-extraction_session: "Phase 2"
+extraction_session: "[internal ref removed] Phase 2"
 extraction_date: "2026-05-27"
 schema_version: "0.2"
 
@@ -12,7 +12,7 @@ source_paper:
   doi: "10.1287/orsc.13.3.339.2780"
   publication_date: "2002-05/06"
   venue: "Organization Science (Special Issue on Knowledge, Knowing and Organization)"
-  source_pdf: "research/references/Deliberate_Learning_and_the_Evolution_of_Dynamic_C.pdf (47 pages incl. tables/refs)"
+  source_pdf: "[internal path removed] (47 pages incl. tables/refs)"
   working_paper_predecessor: "Zollo & Winter (1999) WP 99-07 'From Organizational Routines to Dynamic Capabilities' — confirms independent draft-time emergence relative to Eisenhardt-Martin 2000 (both circulating as working papers in parallel through 1999-2000)."
 
 paper_thesis: |

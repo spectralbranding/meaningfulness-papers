@@ -189,13 +189,13 @@ def main() -> int:
         "source_abstract_chars": len(SOURCE_ABSTRACT_EN),
         "seed": 42,
         "cross_operator_discipline": {
-            "rule": "B != C (renderer != extractor); HARD RULE per feedback_cross_operator_extraction_separation.md",
+            "rule": "B != C (renderer != extractor); HARD RULE per [internal ref removed]",
             "deepseek": "renderer=deepseek-chat; extractors=GPT-4o + Qwen3.6:27b (both different from DeepSeek; both valid)",
             "claude_opus": "renderer=claude-opus-4-5; extractor=GPT-4o-2024-08-06 (different from Claude; valid)",
             "qwen36_27b": "renderer=qwen3.6:27b@Ollama; extractor=GPT-4o-2024-08-06 (different from Qwen; valid)",
         },
         "ollama_serial_discipline": {
-            "rule": "Ollama calls strictly one-at-a-time per feedback_ollama_serial_only.md",
+            "rule": "Ollama calls strictly one-at-a-time per [internal ref removed]",
             "ollama_calls_in_phase_3_5d": [
                 "render_with_qwen_zh_ollama (qwen3.6:27b @ digest a50eda8ed977)",
                 "extract_via_qwen_ollama on DeepSeek's Chinese rendering (qwen3.6:27b)",

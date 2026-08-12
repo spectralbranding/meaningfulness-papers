@@ -4,7 +4,7 @@
 # papers + the 1926 equivalence paper, performed under SPINE schema v0.2
 # for use as Validation Case T1 of the meaningfulness paper (2026ao).
 #
-# Source artifact: research/references/schrodinger_1928_collected_papers_wave_mechanics.pdf
+# Source artifact: [internal path removed]
 # (E. Schrödinger, Collected Papers on Wave Mechanics, Blackie & Son, London, 1928;
 #  English translation of Abhandlungen zur Wellenmechanik, J.A. Barth, 2nd German ed., 1928.)
 #
@@ -859,6 +859,6 @@ changelog:
       Initial spine extraction from Schrödinger 1928 Collected Papers on
       Wave Mechanics (Blackie & Son English edition) for Validation Case
       T1 of meaningfulness paper 2026ao. Source PDF:
-      research/references/schrodinger_1928_collected_papers_wave_mechanics.pdf.
+      [internal path removed]
       Companion prose summary in
       VALIDATION_CASE_T1_SCHRODINGER_EQUIVALENCE_NOTES.md.

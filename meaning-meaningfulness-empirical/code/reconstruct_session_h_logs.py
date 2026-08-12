@@ -1,5 +1,5 @@
-"""Post-hoc reconstruction of LLM-call logs for Session H phases that
-executed BEFORE feedback_llm_call_professional_logging.md HARD RULE arrived.
+"""Post-hoc reconstruction of LLM-call logs for [internal ref removed] phases that
+executed BEFORE [internal ref removed] HARD RULE arrived.
 
 Per the rule's "How to apply (post-hoc for Claude Code harness work)" section,
 reconstructed entries are marked `"human_in_loop": true` and
@@ -17,7 +17,7 @@ script execution-ready); real-time logging via llm_call_logger.py will run at
 v1.1.0 execution.
 
 Phase 6 Grok r2 fire happens AFTER this reconstruction lands; it logs in real-time
-via llm_call_logger.py inside run_grok_review.py.
+via the LLM-call logger inside the review runner.
 """
 
 from __future__ import annotations
@@ -112,7 +112,7 @@ def reconstruct_phase_1() -> None:
             operator="crossref",
             model_version="api.crossref.org REST API",
             system_prompt="(none; REST API)",
-            user_prompt=(
+            [internal ref removed]=(
                 "GET https://api.crossref.org/works?"
                 f"query.title=<title-of-{anchor_id}>&query.author={author_query}&rows=5"
             ),
@@ -121,7 +121,7 @@ def reconstruct_phase_1() -> None:
                 if resolved_doi
                 else "No exact title+author+year match within rows=5; classified NF"
             ),
-            parameters={"rows": 5, "user_agent": "Paper2026ap-anchor-verifier/0.1"},
+            parameters={"rows": 5, "[internal ref removed]": "Paper2026ap-anchor-verifier/0.1"},
             endpoint="https://api.crossref.org/works",
             sdk_version="urllib.request stdlib",
             cost_usd_est=0.0,  # Crossref is free
@@ -138,13 +138,13 @@ def reconstruct_phase_2() -> None:
         operator="claude-via-harness",
         model_version="claude-opus-4-7",
         system_prompt=(
-            "Session H Phase 2 Task α: render Paper B v1.0.0's SPINE.yaml v0.3.0 into a "
+            "[internal ref removed] Phase 2 Task α: render Paper B v1.0.0's SPINE.yaml v0.3.0 into a "
             "1,500-word Substack practitioner-register article. Different audience (CMO/strategy-"
             "director tier; not tier-1 academic); different prose conventions (named-case "
             "anecdotes; no mathematical notation); different length (one-quarter the academic "
             "word count); different tone (declarative rather than hedged)."
         ),
-        user_prompt=(
+        [internal ref removed]=(
             "Re-render Paper B's central P4-demonstration claim + Rec=4 evidence + "
             "boundary conditions + self-application + AI cost asymmetry into Substack "
             "practitioner register. Output: RENDERING_PB_SUBSTACK_PRACTITIONER.md."
@@ -177,7 +177,7 @@ def reconstruct_phase_2() -> None:
             "classify each into the 10-node-type taxonomy; trace antecedent edges using 17-edge "
             "catalog. Produce YAML spine with RPB_ node prefix."
         ),
-        user_prompt="Re-extract spine from RENDERING_PB_SUBSTACK_PRACTITIONER.md",
+        [internal ref removed]="Re-extract spine from RENDERING_PB_SUBSTACK_PRACTITIONER.md",
         response=(
             "Output: VALIDATION_CASE_PB_SELF_APPLICATION_SPINE.yaml (RPB_O1..O3 + RPB_M1-M2 + "
             "RPB_F1-F4 + RPB_BC_VC/PROP/AUD/VOL/SUB + propositions block + recommended_actions "
@@ -200,11 +200,11 @@ def reconstruct_phase_2_5() -> None:
         operator="claude-via-harness",
         model_version="claude-opus-4-7",
         system_prompt=(
-            "Session H Phase 2.5 cross-paper P4: render Paper A 2026ao's SPINE.yaml v0.7.3 into "
+            "[internal ref removed] Phase 2.5 cross-paper P4: render Paper A 2026ao's SPINE.yaml v0.7.3 into "
             "a Substack practitioner-register article ~2,000-2,500 words. Dual-purpose: research "
             "artifact + Article 1 raw material for forthcoming Substack series."
         ),
-        user_prompt=(
+        [internal ref removed]=(
             "Render Paper A's full theoretical apparatus (Operator role + three-layer L→S→R + "
             "P1-P4 propositions + SF1-SF4 stylized facts + C1-C4 boundary conditions + spine-"
             "first protocol + Heisenberg-Schrödinger appendix + three Design Propositions) into "
@@ -216,7 +216,7 @@ def reconstruct_phase_2_5() -> None:
             "boundary conditions + three first moves. Greek symbols selectively retained where "
             "they ARE the explanation (σ-direction SF1 failure mode); dropped elsewhere; math "
             "notation dropped; self-referential audit incidents dropped per "
-            "feedback_audit_record_discipline."
+            "[internal ref removed]."
         ),
         parameters={
             "medium": "Substack standalone article",
@@ -236,7 +236,7 @@ def reconstruct_phase_2_5() -> None:
             "Apply paper_a:appendix_B_protocol in reverse to PA practitioner rendering. "
             "Compare against Paper A SPINE.yaml v0.7.3 locked-set of 15 elements."
         ),
-        user_prompt="Re-extract spine from RENDERING_PA_PRACTITIONER.md and compare to Paper A locked set",
+        [internal ref removed]="Re-extract spine from RENDERING_PA_PRACTITIONER.md and compare to Paper A locked set",
         response=(
             "Output: VALIDATION_CASE_PA_PRACTITIONER_SPINE.yaml + CROSS_PAPER_P4_ISOMORPHISM.md. "
             "Preservation: 12/15 strict, 15/15 semantic, 0 contradicted. Three partial "
@@ -258,12 +258,12 @@ def reconstruct_phase_3() -> None:
         operator="claude-via-harness",
         model_version="claude-opus-4-7",
         system_prompt=(
-            "Session H Phase 3 Task β: render focal-pair shared substrate (L1-L4 from "
+            "[internal ref removed] Phase 3 Task β: render focal-pair shared substrate (L1-L4 from "
             "TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md §2) into a 1,000-word LinkedIn long-post. "
             "Practitioner register; arrow-bullet structure for L1-L4; named antecedents in plain "
             "prose; no equations; light citation."
         ),
-        user_prompt=(
+        [internal ref removed]=(
             "Render L1-L4 (DCs as identifiable processes / learning mechanisms drive evolution / "
             "cross-firm commonalities at best-practice level / market-task contingency) into "
             "LinkedIn long-post. Output: RENDERING_FOCAL_PAIR_THIRD_PROSE.md."
@@ -290,11 +290,11 @@ def reconstruct_phase_3_5a() -> None:
         operator="claude-via-harness",
         model_version="claude-opus-4-7",
         system_prompt=(
-            "Session H Phase 3.5a: produce an AI-draft Russian rendering of paper.md v1.0.0 "
+            "[internal ref removed] Phase 3.5a: produce an AI-draft Russian rendering of paper.md v1.0.0 "
             "§Abstract as a starter for the user (native Russian speaker) to edit, replace, or "
             "approve for use as research artifact. This is NOT a final human-native rendering."
         ),
-        user_prompt=(
+        [internal ref removed]=(
             "Render English Paper B abstract (198 words) into native Russian academic register "
             "appropriate for SMJ-tier Russian-language audience. Preserve all propositional claims, "
             "numerical figures, citation references."
@@ -324,7 +324,7 @@ def main() -> None:
     reconstruct_phase_2_5()
     reconstruct_phase_3()
     reconstruct_phase_3_5a()
-    print("Reconstructed Session H phase 1 / 2 / 2.5 / 3 / 3.5a logs at:")
+    print("Reconstructed [internal ref removed] phase 1 / 2 / 2.5 / 3 / 3.5a logs at:")
     for f in sorted(LOGS_DIR.glob("*.jsonl")):
         n_lines = sum(1 for _ in f.open())
         print(f"  {f.name}: {n_lines} entries")

@@ -1,6 +1,6 @@
 ---
 title: "When two strategy papers say the same thing in different words — and what that tells you about AI in your organization"
-source_spine_pointer: "research/meaningfulness_empirical_companion/SPINE.yaml v0.3.1"
+source_spine_pointer: "[internal path removed] v0.3.1"
 rendering_target_audience: "senior practitioners (CMOs, strategy directors, organization-design leaders, knowledge-management heads, partner-track consultants)"
 rendering_medium_spec: "Substack standalone article; ~1,500 words; practitioner register; plain English; minimal jargon; named-case examples; explicit Monday-morning moves; first-person plural where natural"
 rendering_register_shift_from_source: "academic-paper.md (third-person, hedged, mathematical notation, citation-dense, AMA structure) → Substack practitioner article (declarative, named-case anecdotes, no equations, light citation, three first moves)"
@@ -16,8 +16,8 @@ expected_preservation_set:
   - "boundary conditions where this applies (version-controlled artifacts, propositional content, audience divergence, volume exceeding human review capacity)"
   - "self-application: the Substack article you are reading is itself a worked instance of the framework — same idea, different rendering, conclusions preserved"
 date: 2026-05-27
-session: Phase 2 (Task α self-application — P4 evidence at the Paper-B-own-spine boundary)
-status: research artifact NOT publication candidate; do not post to spectralbranding.substack.com (per this work init prompt restriction)
+session: [internal ref removed] Phase 2 (Task α self-application — P4 evidence at the Paper-B-own-spine boundary)
+status: research artifact NOT publication candidate; do not post to spectralbranding.substack.com (per [internal ref removed] init prompt restriction)
 ---
 
 # When two strategy papers say the same thing in different words — and what that tells you about AI in your organization

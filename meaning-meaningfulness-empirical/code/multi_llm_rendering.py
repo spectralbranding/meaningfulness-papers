@@ -1,6 +1,6 @@
 """Phase 3.5b — Multi-LLM Russian operator robustness for cross-language P4 evidence.
 
-User direction (Session H addendum): test whether P4 cross-language preservation
+User direction ([internal ref removed] addendum): test whether P4 cross-language preservation
 holds across rendering OPERATOR types (academic-robustness pattern from LLM-as-
 evaluator literature; e.g., Chiang et al. 2023). Each LLM operator gets the
 same English source text → renders into Russian → spine re-extracted → per-
@@ -15,10 +15,10 @@ Operators (target: 2-3 of these depending on API access):
   - Claude (English-substrate; ANTHROPIC_API_KEY env)
   - GPT-4o (English-substrate; OPENAI_API_KEY env)
 
-Per Session H init prompt §Phase 3.5b stretch budget rule: execute ONLY when
+Per [internal ref removed] init prompt §Phase 3.5b stretch budget rule: execute ONLY when
 Phase 3.5a finishes with >2h remaining; otherwise mark as v1.1.0 backlog.
 This script is the EXECUTION-READY SKELETON for that v1.1.0 sub-task; it is
-NOT fired in Session H.
+NOT fired in [internal ref removed].
 
 Run pattern (BWS-injected per fleet convention):
     bws run -- uv run --with openai --with anthropic --with httpx \\
@@ -87,7 +87,7 @@ def render_with_yandexgpt(source_text: str, seed: int) -> str:
     folder_id = os.environ.get("YANDEXGPT_FOLDER_ID", "").strip()
     if not api_key or not folder_id:
         raise RuntimeError("YANDEXGPT_API_KEY and YANDEXGPT_FOLDER_ID required")
-    # Prompt is in Russian per feedback_native_language_prompts.md HARD RULE:
+    # Prompt is in Russian per [internal ref removed] HARD RULE:
     # non-English prompts must be fully native, not mixed-language.
     # YandexGPT is a Russian-native LLM; its instruction prompt is in Russian.
     prompt = (

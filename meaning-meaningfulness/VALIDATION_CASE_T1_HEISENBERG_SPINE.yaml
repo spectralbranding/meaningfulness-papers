@@ -22,10 +22,10 @@
 # Sources extracted from:
 #   Heisenberg 1925 "Über quantentheoretische Umdeutung kinematischer
 #     und mechanischer Beziehungen" Zeit. Phys. 33, 879-893 (Delphenich
-#     translation; research/references/heisenberg_1925_english_delphenich.pdf)
+#     translation; [internal path removed])
 #   Born-Jordan 1925 "Zur Quantenmechanik" Zeit. Phys. 34, 858-888
 #     (Delphenich translation;
-#      research/references/born_jordan_1925_english_neoclassical.pdf)
+#      [internal path removed])
 #   Born-Heisenberg-Jordan 1926 "Zur Quantenmechanik II" (Three-Men paper)
 #     engaged indirectly via citations in Born-Jordan 1925 §3 footnote
 #     and standard physics-history secondary literature (van der Waerden
@@ -71,7 +71,7 @@ boundary_conditions:
     provenance:
       created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
       created_at: "2026-05-26"
-      source_log_event: "research/references/heisenberg_1925_english_delphenich.pdf §1 p.2"
+      source_log_event: "[internal path removed] §1 p.2"
 
   - id: HC2
     statement: "Theory traffics only in quantities observable in principle (spectral frequencies, transition intensities); unobservable kinematic quantities (electron position, orbital period) are excluded as inputs to the formalism."
@@ -81,7 +81,7 @@ boundary_conditions:
     provenance:
       created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
       created_at: "2026-05-26"
-      source_log_event: "research/references/heisenberg_1925_english_delphenich.pdf p.1 abstract"
+      source_log_event: "[internal path removed] p.1 abstract"
 
   - id: HC3
     statement: "The correspondence principle holds: in the large-quantum-number limit, the new quantum-theoretical quantities go over asymptotically into their classical Fourier-series analogues."
@@ -91,7 +91,7 @@ boundary_conditions:
     provenance:
       created_by: "ai:claude-opus-4.7+seed:N/A+prompt_anchor:VALIDATION_CASE_T1_HEISENBERG_extraction_prompt_2026-05-26"
       created_at: "2026-05-26"
-      source_log_event: "research/references/heisenberg_1925_english_delphenich.pdf p.11 after eq. (21)"
+      source_log_event: "[internal path removed] p.11 after eq. (21)"
 
 # ============================================================================
 # Observations: empirical inputs the matrix-mechanics formulation took as data

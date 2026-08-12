@@ -1,6 +1,6 @@
 # SPINE.yaml — Layered Knowledge Artifacts Under Generative AI
 #
-# First paper drafted under the spine-first drafting protocol per CLAUDE.md
+# First paper drafted under the spine-first drafting protocol per [internal ref removed]
 # item 0aa + [internal path removed]
 #
 # This file is the canonical structured representation of the paper's
@@ -17,7 +17,7 @@
 # operationalized — see thesis below).
 
 spine_version: "0.2"              # schema version (extended; see SPINE_FIRST_DRAFTING_PROTOCOL.md §"Schema v0.2")
-spine_doc_version: "0.8.0"
+spine_doc_version: "0.8.0"        # document revision (v0.1.0 → … → v0.7.3 → v0.8.0 [internal ref removed] Step 4.5c FORK + 4 verified anchors per Grok joint review 2026-05-27)
 paper_key: "2026ao"               # placeholder; verify CANONICAL_REFERENCES.md at Phase 5; Paper A only post-PIVOT-SPLIT
 paper_b_companion_key: "2026ap"   # empirical companion; scoping at [internal path removed]
 status: "Not exported; see the paper's own version and DOI."
@@ -60,7 +60,7 @@ thesis: |
   production.
 
 # Internal authoring provenance (DROPPED on public SPINE export and NOT synced to
-# the claims/thesis projection — kept as SSOT history per CLAUDE.md rule 0aб). The
+# the claims/thesis projection — kept as SSOT history per [internal ref removed] rule 0aб). The
 # thesis above is the substantive, public-renderable statement; the validation-case
 # selection rationale and the proposition-locking history live here, off the
 # rendered surface.
@@ -225,7 +225,7 @@ methods:
     statement: "5-stage citation verification cascade (Crossref → Semantic Scholar → arXiv → OpenAlex → OpenLibrary → Perplexity)."
     type: "verification_cascade"
     inputs: [O1, O2]
-    outputs: ["m1..m15 ([session])", "m16..m19 (Phase-2 DR [session])"]
+    outputs: ["m1..m15 ([session])", "m16..m19 (Phase-2 DR [internal ref removed])"]
     code_anchor: "code/verify_citations.py"
     reproducibility:
       seed: "deterministic (no RNG; cascade ordering fixed)"
@@ -294,7 +294,7 @@ measurements:
       - "Glaser et al. 2024 SMJ (DOI 10.1002/smj.3601): DIFFERENT_RECORD (resolves to Polidoro-Yang on platform multihoming)"
       - "Seidel-O'Mahony 2023 AMJ: NOT_FOUND"
     provenance:
-      created_by: "author + tool:verify_citations.py ([session] Phase-2 DR)"
+      created_by: "author + tool:verify_citations.py ([internal ref removed] Phase-2 DR)"
       created_at: "2026-05-26"
 
 # ============================================================================
@@ -341,7 +341,7 @@ findings:
     citation_role_in_paper: "audit_internal_only; public paper relies on generic SF1 evidence per editorial direction"
     audit_internal_reference: "[internal path removed]"
     provenance:
-      created_by: "[author]"
+      created_by: "operator ([internal ref removed] per editorial direction)"
       created_at: "2026-05-26"
     body_sections: []   # NOT cited in body; audit-internal only
 
@@ -382,10 +382,10 @@ stylized_facts:
       lit-review workflows produce fabrication rates above chance under
       R-only-access conditions) supplemented by NF1 (literature gap)
       and by generic-literature evidence on RAG-hallucination rates in
-      scientific summarization ([session] Phase-2 DR identifies specific
+      scientific summarization ([internal ref removed] Phase-2 DR identifies specific
       published benchmarks).
     indirect_evidence:
-      - "Published hallucination-rate studies on RAG in scientific summarization (Phase-2 DR [session] will identify specific papers; current NF1)"
+      - "Published hallucination-rate studies on RAG in scientific summarization (Phase-2 DR [internal ref removed] will identify specific papers; current NF1)"
       - "Generic-literature primacy: SF1 in the public paper rests on these published studies, not on self-referential audit evidence (audit-internal F2 retained but not body-cited per v0.4.0 editorial direction)"
     uniquely_explained_by: >-
       Three-level hierarchy: AI operating on R alone reconstructs a
@@ -403,7 +403,7 @@ stylized_facts:
       rendering-layer divergences (operationalization, scale anchors, time
       windows) over a preserved underlying claim graph, not graph-layer
       disagreements.
-    aggregates_findings: ["TBD Phase-2 DR [session] identifies specific OSC-2015 / Many-Labs / Camerer cases"]
+    aggregates_findings: ["TBD Phase-2 DR [internal ref removed] identifies specific OSC-2015 / Many-Labs / Camerer cases"]
     direct_evidence:
       - "Open Science Collaboration 2015 replication project"
       - "Many Labs studies"
@@ -427,7 +427,7 @@ stylized_facts:
       - "Mathematical Reviews translation workflow"
       - "Bulletin of the AMS Russian translation series"
       - "Multi-language clinical-trial registry summary practice"
-      - "Spectral Branding Russian Telegram channel (memory: reference_telegram_channel) — same S, distinct R"
+      - "Spectral Branding Russian Telegram channel (memory: [internal ref removed]) — same S, distinct R"
     uniquely_explained_by: >-
       Three-level hierarchy: ρ is cohort-conditional and reconstructed per
       language; σ produces a language-invariant S.
@@ -543,11 +543,11 @@ negative_findings:
       hard verification rate that the cost-asymmetry framework
       requires for empirical anchoring.
     expected_observation: "A benchmark with per-citation DOI-verification at scale ≥ 100 papers across multiple AI lit-review tools."
-    source_method: "Phase-2 DR literature search (Crossref + SemScholar + Google Scholar; [session] agent a59fe34fb8eecb54e secondary scan)"
+    source_method: "Phase-2 DR literature search (Crossref + SemScholar + Google Scholar; [internal ref removed] agent a59fe34fb8eecb54e secondary scan)"
     affects_nodes: [F1, F2, SF1]
     motivates: [SF1]
     provenance:
-      created_by: "author (via [session] DR)"
+      created_by: "author (via [internal ref removed] DR)"
       created_at: "2026-05-26"
     body_sections: ["Section 4.1 — Stylized Fact 1 (literature gap)"]
 
@@ -582,7 +582,7 @@ negative_findings:
     affects_nodes: [external_anchors, SF1]
     motivates: [SF1]
     provenance:
-      created_by: "[author]"
+      created_by: "operator ([internal ref removed]-prime 2026-05-26; Crossref API check)"
       created_at: "2026-05-26"
     body_sections: []   # audit-internal per editorial discipline (matches F2 visibility pattern)
     visibility: audit_internal
@@ -622,7 +622,7 @@ negative_findings:
     affects_nodes: [external_anchors, SF1]
     motivates: [SF1]
     provenance:
-      created_by: "[author]"
+      created_by: "operator ([internal ref removed]-prime 2026-05-26 v0.7.0; Crossref API check)"
       created_at: "2026-05-26"
     body_sections: []
     visibility: audit_internal
@@ -659,7 +659,7 @@ negative_findings:
     affects_nodes: [external_anchors, SF1]
     motivates: [SF1]
     provenance:
-      created_by: "[author]"
+      created_by: "operator ([internal ref removed] + user-supplied 2026-05-26)"
       created_at: "2026-05-26"
     body_sections: []
     visibility: audit_internal
@@ -680,7 +680,7 @@ negative_findings:
     affects_nodes: [external_anchors, SF1]
     motivates: [SF1]
     provenance:
-      created_by: "[author]"
+      created_by: "operator ([internal ref removed] + user-supplied 2026-05-26)"
       created_at: "2026-05-26"
     body_sections: []
     visibility: audit_internal
@@ -717,7 +717,7 @@ negative_findings:
     affects_nodes: [external_anchors, SF1]
     motivates: [SF1]
     provenance:
-      created_by: "[author]"
+      created_by: "operator ([internal ref removed] + user-supplied 2026-05-26)"
       created_at: "2026-05-26"
     body_sections: []
     visibility: audit_internal
@@ -738,7 +738,7 @@ negative_findings:
     affects_nodes: [external_anchors, SF1]
     motivates: [SF1]
     provenance:
-      created_by: "[author]"
+      created_by: "operator ([internal ref removed] verification cascade 2026-05-26)"
       created_at: "2026-05-26"
     body_sections: []
     visibility: audit_internal
@@ -769,7 +769,7 @@ negative_findings:
     affects_nodes: [external_anchors, SF1]
     motivates: [SF1]
     provenance:
-      created_by: "[author]"
+      created_by: "operator ([internal ref removed] + user-supplied 2026-05-26)"
       created_at: "2026-05-26"
     body_sections: []
     visibility: audit_internal
@@ -779,7 +779,7 @@ negative_findings:
     statement: >-
       review §5 sixth bullet suggested HIGH-priority
       "Grodal et al. (2024). Academy of Management Journal. Category
-      emergence in AI discourse." Crossref [session]: real Grodal, Ha,
+      emergence in AI discourse." Crossref [internal ref removed]: real Grodal, Ha,
       Hood (2024) paper exists at SIMILAR topic — "Between Humans and
       Machines: The social construction of the generative AI category"
       — but venue is *Organization Theory* (DOI 10.1177/26317877241275125),
@@ -791,7 +791,7 @@ negative_findings:
     affects_nodes: [external_anchors, SF1]
     motivates: [SF1]
     provenance:
-      created_by: "[author]"
+      created_by: "operator ([internal ref removed] verification cascade 2026-05-26)"
       created_at: "2026-05-26"
     body_sections: []
     visibility: audit_internal
@@ -806,7 +806,7 @@ negative_findings:
     affects_nodes: [external_anchors, SF1]
     motivates: [SF1]
     provenance:
-      created_by: "[author]"
+      created_by: "operator ([internal ref removed] verification cascade 2026-05-26)"
       created_at: "2026-05-26"
     body_sections: []
     visibility: audit_internal
@@ -855,7 +855,7 @@ limitations:
     statement: "Corpus-internal SF1 evidence (F1) is based on a single-[session] observation; statistical generalization from corpus-internal observations alone is not warranted. Public-paper SF1 evidence prioritizes published RAG-hallucination benchmarks."
     affects: [F1, SF1]
     severity: "medium"
-    mitigation: "RC1 planned (additional sessions); NF1 motivates publication of a benchmark by future work; [session] DR for published-literature anchors."
+    mitigation: "RC1 planned (additional sessions); NF1 motivates publication of a benchmark by future work; [internal ref removed] DR for published-literature anchors."
     provenance:
       created_by: "operator"
       created_at: "2026-05-26"
@@ -889,7 +889,7 @@ limitations:
     mitigation: >-
       Audit-internal record at AUDIT_INTERNAL_F2_PHASE2_DR_NEAR_MISS.md.
       Public paper's SF1 evidence cites generic literature on
-      RAG-hallucination rates ([session] Phase-2 DR identifies specific
+      RAG-hallucination rates ([internal ref removed] Phase-2 DR identifies specific
       published benchmarks) rather than the corpus's own audit incident.
     audit_internal_reference: "[internal path removed]"
     provenance:
@@ -1127,7 +1127,7 @@ derivations:
     reasoning_type: "operational-consequence"
     note: "Closes the 'is this too complex for humans' objection at the framework level: yes, intentionally."
     provenance:
-      created_by: "author ([session] reframe pass)"
+      created_by: "author ([internal ref removed] reframe pass)"
       created_at: "2026-05-26"
     body_sections: ["Section 8 — Discussion: schema-complexity is the operational form"]
 
@@ -1170,7 +1170,7 @@ validation_cases:
   # ---------------------------------------------------------------------------
   - id: T1prime
     label: "Management-theory twin pair retroactive spine extraction (PRIMARY ILLUSTRATIVE CASE for Paper A; full extraction in Paper B 2026ap v1.0.0)"
-    status: "v0.6.0 — focal pair LOCKED per the review §5 endorsement; secondary pair retained for v0.6.0 illustration; both Crossref-verified [session]-prime 2026-05-26"
+    status: "v0.6.0 — focal pair LOCKED per the review §5 endorsement; secondary pair retained for v0.6.0 illustration; both Crossref-verified [internal ref removed]-prime 2026-05-26"
     selection_method: >-
       Bikard 2020 SMJ idea-twin methodology applied to AMR / Organization
       Science / SMJ / AMJ 2000-2010 publication record. the review §5
@@ -1183,13 +1183,13 @@ validation_cases:
     focal_pair_locked_v0_6_0:
       - paper: "Eisenhardt, K. M., & Martin, J. A. (2000). Dynamic capabilities: What are they? Strategic Management Journal 21(10-11): 1105-1121."
         doi: "10.1002/1097-0266(200010/11)21:10/11<1105::AID-SMJ133>3.0.CO;2-E"
-        doi_status: "VERIFIED (Crossref [session]-prime 2026-05-26)"
+        doi_status: "VERIFIED (Crossref [internal ref removed]-prime 2026-05-26)"
       - paper: "Zollo, M., & Winter, S. G. (2002). Deliberate Learning and the Evolution of Dynamic Capabilities. Organization Science 13(3): 339-351."
         doi: "10.1287/orsc.13.3.339.2780"
-        doi_status: "VERIFIED (Crossref [session]-prime 2026-05-26)"
+        doi_status: "VERIFIED (Crossref [internal ref removed]-prime 2026-05-26)"
       - gap: "2 years"
       - formalism_difference: "best-practices/routines (Eisenhardt-Martin) vs deliberate-learning/evolutionary mechanisms (Zollo-Winter)"
-      - independence_at_draft: "verifiable from each paper's original reference list; Phase-2 follow-up DR ([session] for Paper B v1.0.0) confirms"
+      - independence_at_draft: "verifiable from each paper's original reference list; Phase-2 follow-up DR ([internal ref removed] for Paper B v1.0.0) confirms"
     secondary_pair_v0_6_0:
       - paper: "Tushman, M. L., & O'Reilly, C. A. (1996). Ambidextrous Organizations. California Management Review 38(4): 8-30."
       - paper: "Duncan, R. B. (1976). The Ambidextrous Organization. In Kilmann, Pondy, Slevin (eds.) The Management of Organization Design, Vol 1, pp. 167-188. North-Holland."
@@ -1218,7 +1218,7 @@ validation_cases:
       experiment logic but eliminate the 'cross-domain killer' framing that
       invites relevance objections."
     provenance:
-      created_by: "[author]"
+      created_by: "operator ([internal ref removed]-prime by author decision 2026-05-26 + the review NF1)"
       created_at: "2026-05-26"
     body_sections: ["Section 7.1 — Validation Case T1': Management-theory twin pair (primary empirical case)"]
 
@@ -1267,7 +1267,7 @@ validation_cases:
     falsifier: "If the two extracted spines disagree on a central proposition without either being defective relative to the canonical secondary-literature consensus (Schrödinger 1926 equivalence + von Neumann 1932), P4 is falsified on this case."
     motivating_literature: [merton-1961-singletons-multiples-scientific-discovery, simonton-1979-multiple-discovery-zeitgeist-genius-chance, bikard-2020-idea-twins-simultaneous-discoveries]
     provenance:
-      created_by: "author ([session] per user direction; replaces v0.2.0 Case A)"
+      created_by: "author ([internal ref removed] by author decision; replaces v0.2.0 Case A)"
       created_at: "2026-05-26"
     body_sections: ["Section 7.1 — Validation Case T1: Twin-pair Heisenberg-Schrödinger"]
 
@@ -1277,13 +1277,13 @@ validation_cases:
       Kulkarni, M., Mantere, S., Greenwood, M., et al. (2024). The Future
       of Research in an Artificial Intelligence-Driven World. Journal of
       Management Inquiry. DOI: 10.1177/10564926231219622 (Crossref-verified
-      [session]). Selected because: (i) directly on AI's role in scholarly
+      [internal ref removed]). Selected because: (i) directly on AI's role in scholarly
       research, meta-coherent with this paper's subject; (ii) multi-author
       venue-credible JMI paper; (iii) authored without knowledge of the
       spine-first protocol, supplying a clean natural-experiment test.
     pivot_note: >-
       Original v0.2.0 Case A focal artifact (Puranam & Raveendran 2024
-      AMR) confirmed fabricated by Phase-2 DR ([session]); see F2 and L3.
+      AMR) confirmed fabricated by Phase-2 DR ([internal ref removed]); see F2 and L3.
       Kulkarni et al. 2024 JMI substitutes with stronger topical match.
     method: M2
     validates: [P1]
@@ -1297,7 +1297,7 @@ validation_cases:
         statement: "Retroactive spine's antecedents DAG matches paper's actual citation dependency graph."
     falsifier: "If extraction produces a degenerate or unfaithful graph, the protocol does not generalize to contemporary management-theory papers; the framework's empirical claim fails on the contemporary case (T1 remains)."
     provenance:
-      created_by: "author ([session] pivot per user direction; replaces fabricated v0.2.0 Case A)"
+      created_by: "author ([internal ref removed] pivot by author decision; replaces fabricated v0.2.0 Case A)"
       created_at: "2026-05-26"
     body_sections: ["Section 7.2 — Validation Case T2: Kulkarni et al. 2024"]
 
@@ -1499,7 +1499,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Social Studies of Science 19(3): 387-420"
     doi: "10.1177/030631289019003001"
-    doi_status: "VERIFIED (Crossref [session]-prime 2026-05-26)"
+    doi_status: "VERIFIED (Crossref [internal ref removed]-prime 2026-05-26)"
     spine_nodes: [P1, P4, operator_role]
     body_sections: ["Section 5 — Three-Level Hierarchy", "Section 8 — Discussion: spine as machine-operable boundary object (Star-Griesemer plasticity-vs-robustness lineage)"]
     note: >-
@@ -1517,7 +1517,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Research in Organizational Behavior 30: 91-127"
     doi: "10.1016/j.riob.2010.09.001"
-    doi_status: "VERIFIED (Crossref [session]-prime 2026-05-26)"
+    doi_status: "VERIFIED (Crossref [internal ref removed]-prime 2026-05-26)"
     spine_nodes: [thesis, operator_role, P1, P4]
     body_sections: ["Section 1 — Problem", "Section 2 — Theory: meaning vs meaningfulness distinction", "Section 8 — Discussion"]
     note: >-
@@ -1531,13 +1531,14 @@ external_anchors:
   # v0.7.0 NEW — user-supplied theory-of-the-firm anchors (2026-05-26).
   # §4 predicted_reviewer_lead_objection points to ("does the Operator role
   # constitute a fundamental advance in organization theory…?"). Both
+  # Crossref-verified [internal ref removed]-prime 2026-05-26; both PDFs in main repo
   # [internal path removed] corpus.
   - citation_key: liebeskind-1996-knowledge-strategy-theory-firm
     role: theoretical_predecessor
     venue: "Strategic Management Journal 17(S2): 93-107 (winter special issue)"
     doi: "10.1002/smj.4250171109"
-    doi_status: "VERIFIED (Crossref [session]-prime 2026-05-26)"
-    pdf_local: "[internal path removed][internal path removed] (main repo shared corpus; not in worktree)"
+    doi_status: "VERIFIED (Crossref [internal ref removed]-prime 2026-05-26)"
+    pdf_local: "[internal path removed] (main repo shared corpus; not in worktree)"
     spine_nodes: [thesis, operator_role, P1]
     body_sections: ["Section 4.1 — Theoretical foundations (knowledge-based theory of the firm lineage)", "Section 8 — Discussion"]
     note: >-
@@ -1554,8 +1555,8 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Organization Science 15(6): 617-632"
     doi: "10.1287/orsc.1040.0093"
-    doi_status: "VERIFIED (Crossref [session]-prime 2026-05-26)"
-    pdf_local: "[internal path removed][internal path removed] (main repo shared corpus; not in worktree)"
+    doi_status: "VERIFIED (Crossref [internal ref removed]-prime 2026-05-26)"
+    pdf_local: "[internal path removed] (main repo shared corpus; not in worktree)"
     spine_nodes: [thesis, operator_role, P2, P3]
     body_sections: ["Section 4.1 — Theoretical foundations (knowledge-based theory of the firm lineage)", "Section 8 — Discussion"]
     note: >-
@@ -1572,7 +1573,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Academy of Management Journal 54(2): 239-261"
     doi: "10.5465/amj.2011.60263060"
-    doi_status: "VERIFIED (Crossref [session]-prime 2026-05-26; corrects the review-suggested DOI 60215091 → actual 60263060)"
+    doi_status: "VERIFIED (Crossref [internal ref removed]-prime 2026-05-26; corrects the review-suggested DOI 60215091 → actual 60263060)"
     spine_nodes: [operator_role, P4]
     body_sections: ["Section 3 — Contributions (role-theoretic lineage)", "Section 8 — Discussion: Operator role vs occupational role theory"]
     note: >-
@@ -1596,8 +1597,8 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Strategic Management Journal 44(6): 1514-1533"
     doi: "10.1002/smj.3350"
-    doi_status: "VERIFIED (Crossref [session]-prime 2026-05-26; user-supplied)"
-    pdf_local: "[internal path removed][internal path removed] Management Journal - 2021 - Felin - Resource origins and search.pdf"
+    doi_status: "VERIFIED (Crossref [internal ref removed]-prime 2026-05-26; user-supplied)"
+    pdf_local: "[internal path removed] Management Journal - 2021 - Felin - Resource origins and search.pdf"
     publication_date_note: "Crossref online-published 2021; journal-issue 2023 (typical SMJ early-view lag)"
     spine_nodes: [operator_role, P2, intervention]
     body_sections: ["Section 4.1 — Theoretical foundations (resource origins + search lineage)", "Section 8 — Discussion: spine generation as resource origins"]
@@ -1632,7 +1633,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Academy of Management Annals 11(1): 150-188"
     doi: "10.5465/annals.2015.0144"
-    doi_status: "VERIFIED (Crossref [session]-prime 2026-05-26; user-supplied)"
+    doi_status: "VERIFIED (Crossref [internal ref removed]-prime 2026-05-26; user-supplied)"
     pdf_local: "(not yet acquired; full PDF on AOM digital library; abstract supplied user 2026-05-26)"
     spine_nodes: [operator_role, P1, intervention]
     body_sections: ["Section 5 — Three-Level Hierarchy (affordances framing for SPINE.yaml)", "Section 8 — Discussion: spine-as-affordance for the Operator role"]
@@ -1666,7 +1667,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Academy of Management Review"
     doi: "10.5465/amr.2019.0186"
-    doi_status: "VERIFIED (Crossref [session] 2026-05-26)"
+    doi_status: "VERIFIED (Crossref [internal ref removed] 2026-05-26)"
     spine_nodes: [operator_role, P1]
     body_sections: ["Theory — Operator role and era-dependent projection", "Discussion — Operator role versus task-level automation-augmentation"]
     note: >-
@@ -1679,7 +1680,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Academy of Management Annals 14(1): 366-410"
     doi: "10.5465/annals.2018.0174"
-    doi_status: "VERIFIED (Crossref [session] 2026-05-26)"
+    doi_status: "VERIFIED (Crossref [internal ref removed] 2026-05-26)"
     spine_nodes: [operator_role, P3]
     body_sections: ["Theory — judgment-operations era-invariance", "Discussion — Operator role versus role-coordination scholarship"]
     note: >-
@@ -1692,7 +1693,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "MIS Quarterly 45(3): 1501-1525"
     doi: "10.25300/misq/2021/16564"
-    doi_status: "VERIFIED (Crossref [session] 2026-05-26; published 2021 not 2022)"
+    doi_status: "VERIFIED (Crossref [internal ref removed] 2026-05-26; published 2021 not 2022)"
     spine_nodes: [P3, SF1, operator_role]
     body_sections: ["Stylized Facts SF1", "Discussion — verification-cost asymmetry empirical grounding"]
     note: >-
@@ -1704,7 +1705,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Organization Science 33(1): 126-148"
     doi: "10.1287/orsc.2021.1549"
-    doi_status: "VERIFIED (Crossref [session] 2026-05-26; bonus find)"
+    doi_status: "VERIFIED (Crossref [internal ref removed] 2026-05-26; bonus find)"
     spine_nodes: [P3, operator_role]
     body_sections: ["Discussion — verification-cost asymmetry organizational implications"]
     note: >-
@@ -1717,7 +1718,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Information and Organization 28(1): 62-70"
     doi: "10.1016/j.infoandorg.2018.02.005"
-    doi_status: "VERIFIED (Crossref [session] 2026-05-26)"
+    doi_status: "VERIFIED (Crossref [internal ref removed] 2026-05-26)"
     spine_nodes: [operator_role, P1]
     body_sections: ["Theory — Operator role and era-dependent projection", "Discussion — Operator role versus role-coordination scholarship"]
     note: >-
@@ -1746,7 +1747,7 @@ external_anchors:
     venue: "Organizational Communication Theory and Research (book; Ch 22)"
     doi: "10.1515/9783110718508-023"
     doi_status: "VERIFIED (user-supplied 2026-05-26)"
-    pdf_local: "[internal path removed][internal path removed]"
+    pdf_local: "[internal path removed]"
     spine_nodes: [operator_role, P1, intervention]
     body_sections: ["Discussion — spine as affordance + AI in organizational communication"]
     note: >-
@@ -1768,8 +1769,8 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Quarterly Journal of Economics 140(2): 889-942"
     doi: "10.1093/qje/qjae044"
-    doi_status: "VERIFIED (Crossref [session] 2026-05-26; user-supplied PDF; the review self-flagged forthcoming but verified real)"
-    pdf_local: "[internal path removed][internal path removed]"
+    doi_status: "VERIFIED (Crossref [internal ref removed] 2026-05-26; user-supplied PDF; the review self-flagged forthcoming but verified real)"
+    pdf_local: "[internal path removed]"
     spine_nodes: [SF1, P3, operator_role]
     body_sections: ["Stylized Facts SF1", "Discussion — cost-asymmetry empirical grounding"]
     note: >-
@@ -1789,7 +1790,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "SSRN Electronic Journal (Harvard Business School Working Paper 24-013)"
     doi: "10.2139/ssrn.4573321"
-    doi_status: "VERIFIED (Crossref [session] 2026-05-26)"
+    doi_status: "VERIFIED (Crossref [internal ref removed] 2026-05-26)"
     spine_nodes: [SF1, P3]
     body_sections: ["Stylized Facts SF1"]
     note: >-
@@ -1805,7 +1806,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "MIS Quarterly 45(3): 1433-1450"
     doi: "10.25300/misq/2021/16274"
-    doi_status: "VERIFIED (Crossref [session] 2026-05-26; 3 authors not 4 as Grok suggested — Santhanam not coauthor on Crossref record)"
+    doi_status: "VERIFIED (Crossref [internal ref removed] 2026-05-26; 3 authors not 4 as Grok suggested — Santhanam not coauthor on Crossref record)"
     spine_nodes: [operator_role, P3, intervention]
     body_sections: ["Discussion — organizational management of AI capability"]
     note: >-
@@ -1819,7 +1820,7 @@ external_anchors:
     role: theoretical_predecessor
     venue: "Organization Theory 5(3) (venue-corrected from the review's suggested AMJ)"
     doi: "10.1177/26317877241275125"
-    doi_status: "VERIFIED (Crossref [session] 2026-05-26; venue is Organization Theory not AMJ)"
+    doi_status: "VERIFIED (Crossref [internal ref removed] 2026-05-26; venue is Organization Theory not AMJ)"
     spine_nodes: [operator_role]
     body_sections: ["Discussion — Operator as emergent role category"]
     note: >-
@@ -1835,7 +1836,7 @@ external_anchors:
     venue: "Strategic Management Journal 47(2): 463-493"
     doi: "10.1002/smj.70020"
     doi_status: "VERIFIED (user-supplied 2026-05-26; PDF at [internal path removed])"
-    pdf_local: "[internal path removed][internal path removed]"
+    pdf_local: "[internal path removed]"
     spine_nodes: [operator_role, P2]
     body_sections: ["Discussion — KBV organizational-form positioning"]
     note: >-
@@ -1871,7 +1872,7 @@ external_anchors:
     venue: "Organization Science 25(3): 691-712"
     doi: "10.1287/orsc.2013.0879"
     doi_status: "VERIFIED (user-supplied 2026-05-26)"
-    pdf_local: "[internal path removed][internal path removed]"
+    pdf_local: "[internal path removed]"
     spine_nodes: [operator_role, intervention, P1]
     body_sections: ["Discussion — concept-coherence and substrate-rendering engagement"]
     note: >-
@@ -1890,7 +1891,7 @@ external_anchors:
     venue: "Information Systems Research 30(1): 50-64"
     doi: "10.1287/isre.2018.0774"
     doi_status: "VERIFIED (user-supplied 2026-05-26)"
-    pdf_local: "[internal path removed][internal path removed]"
+    pdf_local: "[internal path removed]"
     spine_nodes: [intervention, M2]
     body_sections: ["Discussion — computationally-intensive theory development as substrate-discipline parallel"]
     note: >-
@@ -1907,7 +1908,7 @@ external_anchors:
     role: empirical_companion
     venue: "Zenodo working paper (in iterative development per PAPER_B_2026ap_SCOPING.md)"
     doi: "TBD at Paper B v1.0.0 Zenodo upload (post-Paper-A-Phase-3-GO)"
-    doi_status: "PENDING — companion paper scoped [session]-prime; v1.0.0 publication after Paper A reaches Phase 3"
+    doi_status: "PENDING — companion paper scoped [internal ref removed]-prime; v1.0.0 publication after Paper A reaches Phase 3"
     spine_nodes: [P2, P3, T1prime, T1, T2, T3]
     body_sections: ["Section 4.2 — Corpus parallels (forthcoming empirical companion)", "Section 10 — Empirical Validation (cross-reference for P2/P3 large-N estimation)"]
     note: >-
@@ -2029,7 +2030,7 @@ external_anchors:
     venue: "Zeitschrift für Physik 43: 601-623"
     doi: null
     doi_status: "VERIFIED (no DOI; pre-DOI publication; Z.f.Phys.-record; Delphenich English translation acquired v0.7.1)"
-    pdf_local: "[internal path removed][internal path removed] (Delphenich English translation; main repo shared corpus; not in worktree)"
+    pdf_local: "[internal path removed] (Delphenich English translation; main repo shared corpus; not in worktree)"
     spine_nodes: [T1, P4]
     body_sections: ["Section 7.1 — Validation Case T1 (within-author rendering-equivalence demonstration; appendix-depth supporting evidence)"]
     note: >-
@@ -2134,6 +2135,8 @@ external_anchors:
     doi_status: VERIFIED
     spine_nodes: [P1, intervention]
     body_sections: ["Section 5 — Three-level hierarchy"]
+
+  # ----- v0.8.0 additions ([internal ref removed] Step 4.5c per Grok joint review 2026-05-27) -----
 
   - citation_key: cornelissen-hollerer-seidl-2021-theorizing-forms
     role: theorizing-forms_positioning

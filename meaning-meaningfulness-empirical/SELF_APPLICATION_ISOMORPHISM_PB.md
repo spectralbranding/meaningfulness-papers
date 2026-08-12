@@ -1,7 +1,7 @@
 ---
 title: "Self-application isomorphism — Paper B's own substrate across academic + Substack renderings"
 date: 2026-05-27
-session: Phase 2 — Task α self-application
+session: [internal ref removed] Phase 2 — Task α self-application
 source_spine: "SPINE.yaml v0.3.1"
 rendered_artifact: "RENDERING_PB_SUBSTACK_PRACTITIONER.md (1,615 words; practitioner register)"
 re_extracted_spine: "VALIDATION_CASE_PB_SELF_APPLICATION_SPINE.yaml"
@@ -14,7 +14,7 @@ falsifier: "< 70% preservation = real P4 falsifier at framework self-application
 
 ## Purpose
 
-Task α (per SESSION_F_COMPLETION_2026-05-27.md and this work init prompt) tests whether Paper B's own structural substrate is preserved when re-rendered into a different prose form — different audience register, different prose conventions, different length, different tone. The same operator (author) acts as a fresh coder reading the Substack rendering and re-extracts a spine; that re-extracted spine is then compared against the source spine for preservation of locked propositions with matching node typing and antecedent edges.
+Task α (per SESSION_F_COMPLETION_2026-05-27.md and [internal ref removed] init prompt) tests whether Paper B's own structural substrate is preserved when re-rendered into a different prose form — different audience register, different prose conventions, different length, different tone. The same operator (author) acts as a fresh coder reading the Substack rendering and re-extracts a spine; that re-extracted spine is then compared against the source spine for preservation of locked propositions with matching node typing and antecedent edges.
 
 This is the strongest P4 evidence the framework can produce on its own substrate at v1.0.0. If the re-extracted spine preserves ≥ 90% of the source spine's locked propositions, P4 holds at Paper B's own self-application. If it preserves < 70%, P4 is empirically degraded at the framework's own self-application — a real falsifier that would trigger either schema refinement or honest disclosure that P4 holds only under careful rendering discipline.
 
@@ -82,7 +82,7 @@ The strict-preservation rate (**78.6%**) is **above the < 70% falsifier threshol
 
 **Methodological finding worth surfacing**: the academic → practitioner register shift reliably drops (a) version-trajectory metadata, (b) the log layer of the three-layer decomposition, and (c) functional-form mathematics. A spine-first authoring discipline that anticipates this can mark these elements as "preserve-semantically; do not require formal preservation" in the practitioner rendering specification. This is the kind of observation that strengthens the framework's operational guidance for organizations producing both academic-tier and practitioner-tier renderings of the same substrate.
 
-## Integration into paper.md
+## Integration into paper.md v1.0.0
 
 The Phase 5 integrative-theory rewrite uses this Task α result as the second concrete P4-evidence point in the Discussion §Self-application as longitudinal P4 test subsection. Specifically:
 
@@ -95,8 +95,8 @@ The Phase 5 integrative-theory rewrite uses this Task α result as the second co
 
 - **Coding-time observation**: the operator who re-extracted the spine knows the source spine. This is the inter-coder reliability concern that Task δ is designed to address — without an independent second coder, the strict-preservation rate of 78.6% may be optimistically biased by author familiarity. Task δ (κ measurement by independent coder on 2 of 5 spines) is the appropriate next test.
 - **Schema-refinement candidate**: the three partial-preservation cases (L12, L13, L14) all involve metadata-vs-substantive-content distinctions that the current schema does not formally mark. A v0.3 spine-schema extension could add a "preservation_class" tag per node: {formal-required, semantic-sufficient, optional}.
-- **Phase 5 inheritance**: the L1-L11 strict preservation result is the highest-information-value piece of evidence the v1.0.0 paper revision can use to address the "N=2 thin" critique without expanding the empirical base in ways that would require v2.0.0+ prospective-cohort work.
+- **Phase 5 inheritance**: the L1-L11 strict preservation result is the highest-information-value piece of evidence the v1.0.0 paper revision can use to address Grok r1's "N=2 thin" critique without expanding the empirical base in ways that would require v2.0.0+ prospective-cohort work.
 
 ---
 
-*Self-application isomorphism analysis closes Phase 2 Task α. Strict preservation rate 11/14 = 78.6%; semantic preservation rate 14/14 = 100%; zero contradictions. Below ≥90% strong-success threshold under strict reading; above 70% falsifier threshold under any reading. Not a P4 falsifier; identifies rendering-cost frontier the framework's operational guidance can absorb.*
+*Self-application isomorphism analysis closes [internal ref removed] Phase 2 Task α. Strict preservation rate 11/14 = 78.6%; semantic preservation rate 14/14 = 100%; zero contradictions. Below ≥90% strong-success threshold under strict reading; above 70% falsifier threshold under any reading. Not a P4 falsifier; identifies rendering-cost frontier the framework's operational guidance can absorb.*

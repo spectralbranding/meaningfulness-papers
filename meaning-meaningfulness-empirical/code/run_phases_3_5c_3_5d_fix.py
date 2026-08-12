@@ -53,7 +53,7 @@ def render_with_deepseek_zh_safe(
     from openai import OpenAI
 
     client = OpenAI(api_key=openai_key_ds, base_url="https://api.deepseek.com")
-    user_prompt = CHINESE_RENDER_PROMPT_USER.format(source_text=source_text)
+    [internal ref removed] = CHINESE_RENDER_PROMPT_USER.format(source_text=source_text)
 
     last_err = None
     for attempt in range(3):
@@ -66,7 +66,7 @@ def render_with_deepseek_zh_safe(
             logs_dir=LOGS_DIR,
         ) as logger:
             logger.set_system_prompt(CHINESE_RENDER_PROMPT_SYSTEM)
-            logger.set_user_prompt(user_prompt)
+            logger.set_user_prompt([internal ref removed])
             logger.set_parameters(
                 {
                     "model": "deepseek-chat",
@@ -80,7 +80,7 @@ def render_with_deepseek_zh_safe(
                     model="deepseek-chat",
                     messages=[
                         {"role": "system", "content": CHINESE_RENDER_PROMPT_SYSTEM},
-                        {"role": "user", "content": user_prompt},
+                        {"role": "user", "content": [internal ref removed]},
                     ],
                     temperature=0.3,
                     max_tokens=2000,
@@ -114,8 +114,8 @@ def render_with_qwen_zh_ollama_nothink(
     """Qwen3.6:27b render via Ollama with think=false (disable reasoning)."""
     import httpx
 
-    user_prompt = CHINESE_RENDER_PROMPT_USER.format(source_text=source_text)
-    full_prompt = f"{CHINESE_RENDER_PROMPT_SYSTEM}\n\n{user_prompt}"
+    [internal ref removed] = CHINESE_RENDER_PROMPT_USER.format(source_text=source_text)
+    full_prompt = f"{CHINESE_RENDER_PROMPT_SYSTEM}\n\n{[internal ref removed]}"
 
     start_ts = dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z")
     with log_call(
@@ -127,7 +127,7 @@ def render_with_qwen_zh_ollama_nothink(
         logs_dir=LOGS_DIR,
     ) as logger:
         logger.set_system_prompt(CHINESE_RENDER_PROMPT_SYSTEM)
-        logger.set_user_prompt(user_prompt)
+        logger.set_user_prompt([internal ref removed])
         logger.set_parameters(
             {
                 "model": "qwen3.6:27b",
@@ -176,8 +176,8 @@ def extract_via_qwen_ollama_nothink(
     """Qwen3.6:27b extraction via Ollama with think=false."""
     import httpx
 
-    user_prompt = EXTRACTION_USER_PROMPT.format(prose=prose)
-    full_prompt = f"{EXTRACTION_CODEBOOK}\n\n{user_prompt}"
+    [internal ref removed] = EXTRACTION_USER_PROMPT.format(prose=prose)
+    full_prompt = f"{EXTRACTION_CODEBOOK}\n\n{[internal ref removed]}"
 
     start_ts = dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z")
     with log_call(
@@ -189,7 +189,7 @@ def extract_via_qwen_ollama_nothink(
         logs_dir=LOGS_DIR,
     ) as logger:
         logger.set_system_prompt(EXTRACTION_CODEBOOK)
-        logger.set_user_prompt(user_prompt)
+        logger.set_user_prompt([internal ref removed])
         logger.set_parameters(
             {
                 "model": "qwen3.6:27b",

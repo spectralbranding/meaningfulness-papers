@@ -1,7 +1,7 @@
 ---
 title: Phase 3.5b Cross-FAMILY multi-LLM operator robustness — execution log + preservation analysis
 date: 2026-05-27
-phase: Phase 3.5b (Session I Step 4.5+ execution; promoted from v1.1.0-deferred to v1.0.0-executed)
+phase: Phase 3.5b ([internal ref removed] Step 4.5+ execution; promoted from v1.1.0-deferred to v1.0.0-executed)
 locked_set_source: Paper B §Abstract (12 propositions L1-L12)
 language_families_tested: ["Slavic (Russian-native)", "Sino-Tibetan (Chinese-native)", "English-substrate control"]
 ---
@@ -100,7 +100,7 @@ Phase 3.5b is promoted from "v1.1.0 execution-deferred" to "v1.0.0 executed":
 - paper.md §Results: new subsection §Cross-FAMILY operator robustness added with the per-operator preservation triple.
 - paper.md Versioning trajectory table: Phase 3.5b moved from v1.1.0 row to v1.0.0 row scope addition list.
 - SPINE.yaml v0.5.0 → v0.5.1 minor bump: adds Phase 3.5b execution evidence node (was placeholder; now executed).
-- Internal artifact log records the 9 LLM API calls (3 renderings + 3 extractions + 3 preservation classifications); logs/ public mirror gets the experimental calls per `the LLM-call professional-logging discipline`.
+- Internal artifact log records the 9 LLM API calls (3 renderings + 3 extractions + 3 preservation classifications); logs/ public mirror gets the experimental calls per `[internal ref removed]`.
 
 ## What this release does NOT establish at Phase 3.5b
 

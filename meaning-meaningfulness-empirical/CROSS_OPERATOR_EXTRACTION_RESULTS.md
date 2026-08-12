@@ -1,20 +1,20 @@
 ---
 title: "Cross-operator extraction results — Phase 2-prime + 2.5-prime + 3-prime retroactive re-extraction via GPT-4o"
 date: 2026-05-27
-session: Phase 2-prime / 2.5-prime / 3-prime (cross-operator extraction discipline HARD RULE applied retroactively)
-rule_source: the cross-operator extraction separation rule
+session: [internal ref removed] Phase 2-prime / 2.5-prime / 3-prime (cross-operator extraction discipline HARD RULE applied retroactively by author decision 2026-05-27)
+rule_source: [internal ref removed]
 extraction_operator: gpt-4o-2024-08-06 (Operator C; received prose-only input; no source spine context; appendix-A codebook as system prompt)
-extractor_script: research/meaningfulness_empirical_companion/code/cross_operator_extraction.py
-extractor_call_logs: research/meaningfulness_empirical_companion/logs/phase_2_prime_extract_*_calls.jsonl + logs/phase_2.5_prime_extract_*_calls.jsonl + logs/phase_3_prime_extract_*_calls.jsonl
+extractor_script: code/cross_operator_extraction.py
+extractor_call_logs: logs/phase_2_prime_extract_*_calls.jsonl + logs/phase_2.5_prime_extract_*_calls.jsonl + logs/phase_3_prime_extract_*_calls.jsonl
 ---
 
-# Cross-operator extraction results — Phase 2-prime + 2.5-prime + 3-prime
+# Cross-operator extraction results — [internal ref removed] Phase 2-prime + 2.5-prime + 3-prime
 
 ## Why this analysis exists
 
-Phases 2, 2.5, and 3 of this work executed with **Claude as both renderer and extractor** in the same session — the "within-operator" pattern that confounds rendering→extraction with within-model context memory (Claude recalls the spine it just wrote about). Academic-grade P4 evidence requires that the rendering operator and the extraction operator be DIFFERENT models, with the extraction operator receiving only the prose and the appendix-A codebook — never the source spine.
+Phases 2, 2.5, and 3 of [internal ref removed] executed with **Claude as both renderer and extractor** in the same session — the "within-operator" pattern that confounds rendering→extraction with within-model context memory (Claude recalls the spine it just wrote about). Per [internal ref removed] HARD RULE (user direction 2026-05-27), academic-grade P4 evidence requires that the rendering operator and the extraction operator be DIFFERENT models, with the extraction operator receiving only the prose and the appendix-A codebook — never the source spine.
 
-This document reports the retroactive cross-operator re-extraction of the three this work rendering artifacts using GPT-4o as Operator C. The GPT-4o extractor was given the appendix-A codebook (10 node types + 17 edge types) as system prompt, and the prose-only body of each rendering (frontmatter stripped) as user prompt; no source spine context. The within-operator preservation results (Claude self-extracted spines) are retained alongside the cross-operator results so reviewers can compare both and judge whether the within-model memory contamination materially affects the preservation finding.
+This document reports the retroactive cross-operator re-extraction of the three [internal ref removed] rendering artifacts using GPT-4o as Operator C. The GPT-4o extractor was given the appendix-A codebook (10 node types + 17 edge types) as system prompt, and the prose-only body of each rendering (frontmatter stripped) as user prompt; no source spine context. The within-operator preservation results (Claude self-extracted spines) are retained alongside the cross-operator results so reviewers can compare both and judge whether the within-model memory contamination materially affects the preservation finding.
 
 ## Cross-operator preservation summary
 
@@ -113,7 +113,7 @@ The cross-operator results materially strengthen the v1.0.0 P4 evidence base:
 
 4. **Cross-paper P4 result holds at cross-operator**. The Phase 2.5 cross-paper P4 test (the strongest single P4 evidence point at v1.0.0) sits at 10/15 strict / 14/15 semantic / 0 contradicted under cross-operator extraction (vs 12/15 / 15/15 / 0 within-operator). All four SF1-SF4 stylized facts and the four C1-C4 boundary conditions are preserved at cross-operator. The framework's substantive content survives the rendering→cross-operator-extraction round-trip.
 
-## Integration into paper.md
+## Integration into paper.md v1.0.0
 
 Phase 5 paper.md §Results §Self-application of P4 is updated to report **all three preservation triples (within-operator + cross-operator) per phase**, with the cross-operator result foregrounded as the academic-grade evidence and the within-operator result presented as the methodological-finding companion. §Method gets a new §Cross-operator extraction discipline subsection (co-located with the §LLM-call provenance subsection) disclosing the three-operator pipeline (Operator A orchestrator + Operator B renderer + Operator C extractor) and the prose-only extraction protocol. §Discussion §Methodological refinement note is extended with the edge-type-disambiguation observation as a v1.1.0 schema-refinement candidate.
 
@@ -135,4 +135,4 @@ Total cross-operator extraction cost: ~$0.04. Tokens: 8,239 in / 2,160 out. All 
 
 ---
 
-*Cross-operator extraction analysis closes the retroactive Phase 2-prime + 2.5-prime + 3-prime work per the cross-operator extraction separation rule HARD RULE. Within-model memory contamination is empirically bounded; the P4 evidence base survives the cross-operator round-trip with zero contradictions across all three phases.*
+*Cross-operator extraction analysis closes the retroactive Phase 2-prime + 2.5-prime + 3-prime work per [internal ref removed] HARD RULE. Within-model memory contamination is empirically bounded; the P4 evidence base survives the cross-operator round-trip with zero contradictions across all three phases.*

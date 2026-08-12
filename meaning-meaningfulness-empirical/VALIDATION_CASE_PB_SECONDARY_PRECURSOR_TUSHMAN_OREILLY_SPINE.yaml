@@ -5,7 +5,7 @@
 # paired with a twin at v1.0.0; no Rec computation against a partner.
 
 extraction_version: "1.0.0"
-extraction_session: "Phase 2"
+extraction_session: "[internal ref removed] Phase 2"
 extraction_date: "2026-05-27"
 schema_version: "0.2"
 
@@ -15,7 +15,7 @@ source_paper:
   doi: "10.2307/41165852"
   publication_date: "1996-07 (Summer 1996)"
   venue: "California Management Review (practitioner-oriented; not peer-reviewed academic-tier; intentional positioning for practitioner readership)"
-  source_pdf: "research/references/tushman1996.pdf (23 pages reproduced-with-permission)"
+  source_pdf: "[internal path removed] (23 pages reproduced-with-permission)"
   v1_1_0_role: "Secondary-pair-precursor awaiting partner extraction (Duncan 1976 OR substitute). At v1.0.0, this spine is released standalone for transparency + v1.1.0 commitment concreteness."
 
 paper_thesis: |

@@ -2,7 +2,7 @@
 
 This appendix specifies the operational protocol that follows from the cost-asymmetry result in the main body. The protocol prescribes how an Operator should produce a knowledge artifact under conditions C1–C4. It is the cost-minimizing arrangement of Operator operations under the parameter regime β < 1 < δ. The protocol's enabling artifact (the substrate schema) is specified in Online Appendix A; its calibrated cost analysis is in Online Appendix C.
 
-The protocol's full reference specification lives at `research/SPINE_FIRST_DRAFTING_PROTOCOL.md` in the project repository. This appendix reproduces the operational core for the paper's reader.
+The protocol's full reference specification lives at `[internal path removed]` in the project repository. This appendix reproduces the operational core for the paper's reader.
 
 ## B.1 The four operations
 
@@ -55,7 +55,7 @@ The present paper is the first paper drafted under the protocol. The paper's sub
 
 ## B.7 Tooling
 
-Reference tooling is available at `research/code/` in the project repository: `coverage_diagnostic.py` for single-paper spine-engagement checks; `verify_citations.py` for the five-stage cascade applied to spine evidence anchors; `extract_citation_contexts.py` for retroactive spine extraction from external paper.md or PDF sources. Tooling is not a precondition for the protocol; the protocol's discipline operates equally on hand-edited spine files. The tooling is a cost-amortization layer that exploits AI projection on structural-substrate operations to reduce the Operator's structural-substrate workload further.
+Reference tooling is available at `[internal path removed]` in the project repository: `coverage_diagnostic.py` for single-paper spine-engagement checks; `verify_citations.py` for the five-stage cascade applied to spine evidence anchors; `extract_citation_contexts.py` for retroactive spine extraction from external paper.md or PDF sources. Tooling is not a precondition for the protocol; the protocol's discipline operates equally on hand-edited spine files. The tooling is a cost-amortization layer that exploits AI projection on structural-substrate operations to reduce the Operator's structural-substrate workload further.
 
 ## B.8 Audit discipline
 

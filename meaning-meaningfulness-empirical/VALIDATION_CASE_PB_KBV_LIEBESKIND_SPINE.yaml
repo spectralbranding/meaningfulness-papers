@@ -2,7 +2,7 @@
 # Second twin pair partner (KBV neighborhood); v1.1.0 addition.
 
 extraction_version: "1.1.0"
-extraction_session: "a later extraction pass"
+extraction_session: "[internal ref removed] continuation post-Path-A"
 extraction_date: "2026-05-27"
 schema_version: "0.2"
 
@@ -12,7 +12,7 @@ source_paper:
   doi: "10.1002/smj.4250171109"
   publication_date: "1996 (Winter Special Issue: Knowledge and the Firm)"
   venue: "Strategic Management Journal (Winter 1996 Special Issue 'Knowledge and the Firm' — SAME ISSUE as Grant 1996)"
-  source_pdf: "research/references/knowledge-strategy-and-the-theory-of-the-firm-3vnmmubi3u.pdf (16 pages)"
+  source_pdf: "[internal path removed] (16 pages)"
 
 paper_thesis: |
   Firms have particular institutional capabilities that allow them to

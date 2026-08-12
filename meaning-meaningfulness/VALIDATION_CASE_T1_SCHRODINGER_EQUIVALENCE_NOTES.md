@@ -4,7 +4,7 @@
 
 **Paper of focus**: "On the Relation between the Quantum Mechanics of Heisenberg, Born, and Jordan, and that of Schrödinger" (*Annalen der Physik* (4), vol. 79, 1926; collected ed. pp. 45–61).
 
-**File location**: `research/references/schrodinger_1928_collected_papers_wave_mechanics.pdf`.
+**File location**: `[internal path removed]`.
 
 ---
 

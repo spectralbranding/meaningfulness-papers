@@ -1,6 +1,7 @@
 ---
 title: "Phase 4 inter-coder κ measurement — protocol setup + recruitment status + execution-deferred-to-v1.1.0"
 date: 2026-05-27
+session: [internal ref removed] Phase 4 — Task δ
 target_axiom: "paper_a:axiom_A1 (σ-faithfulness on locked subsets); operational threshold κ ≥ .75 on both node typing and antecedent-edge placement"
 status: "Protocol documented + recruitment status surfaced + EXECUTION DEFERRED to v1.1.0 pending second-coder onboarding"
 ---
@@ -11,13 +12,13 @@ status: "Protocol documented + recruitment status surfaced + EXECUTION DEFERRED 
 
 Paper A 2026ao's P4 (rendering-equivalence under spine-preservation) holds as a preservation result under axiom A1 (σ-faithfulness on locked subsets). A1's operational threshold is **κ ≥ .75 on both node typing AND antecedent-edge placement**, measured via inter-coder reliability on retroactive spine extractions. Below threshold on either dimension, A1 fails empirically on the affected subdomain and P4 degrades from a preservation result to a probabilistic tendency on that subdomain.
 
-Inter-coder reliability measurement is a priority for the next revision. The v1.0.0 release explicitly schedules κ measurement as Task δ; this document is the execution-readiness pass.
+Post-draft review elevated the κ measurement from a Limitations item to a top-priority item to settle before any submission. The v1.0.0 release schedules it as Task δ; this document is the execution-readiness pass.
 
 ## Protocol specification (operational, ready for execution)
 
 ### Codebook
 
-The codebook is **`paper_a:appendix_A_schema`** — the 10-type node taxonomy plus 17-edge catalog locked in Paper A v1.0 (per Paper A `SPINE.yaml` Online Appendix A and `paper.md` §Theory inheritance).
+The codebook is **`paper_a:appendix_A_schema`** — the 10-type node taxonomy plus 17-edge catalog locked in Paper A v1.0 (per `[internal path removed]` Online Appendix A and `paper.md` §Theory inheritance).
 
 **Node types** (10):
 
@@ -136,26 +137,38 @@ and report κ as a "with OCR noise floor" lower bound.
 
 ## Second-coder recruitment status
 
-The author operates as a solo researcher on this corpus; no second coder has been onboarded as of the v1.0.0 release.
+The user operates as a solo researcher on this corpus. No second coder has been onboarded by [internal ref removed] end. Per [internal ref removed] init prompt: "If second coder unavailable: document the protocol setup + recruitment status; mark κ-measurement execution deferred to v1.1.0; surface as honest disclosure in Phase 5 paper.md revision".
 
-Inter-coder κ measurement on axiom A1 (recommended κ ≥ .75 on both node typing and antecedent-edge placement) is scheduled for the v1.1.0 release. The protocol and codebook are pre-registered alongside this release; execution awaits the onboarding of an independent second coder. Honest disclosure: axiom A1 reliability is currently asserted rather than measured.
+**Per [internal ref removed]** (which extends to coder-recruitment): below are 5 ranked candidate-second-coder options for the user to choose from when v1.1.0 execution begins. Ranked by estimated κ-yield-quality × onboarding-cost.
 
-## What v1.0.0 achieves under Task δ deferral
+| Rank | Candidate type | κ-yield quality | Onboarding cost | Notes |
+|---|---|---|---|---|
+| 1 | **PhD candidate in strategy / org theory (R1 program)** | HIGH | MEDIUM | Familiar with EM/ZW/Grant/Liebeskind from coursework; needs only paper_a:appendix_A_schema codebook walkthrough (~1 hour); typical compensation $300-500 per spine. Recruitment channels: SMS PhD listserv; Strategic Management Society Discord; AOM PhD-student group. |
+| 2 | **Independent academic collaborator with prior DC/KBV familiarity** | HIGH | LOW | If user has a 1st-degree or 2nd-degree LinkedIn contact who knows the DC/KBV literature and is willing to do ~4-6 hours of coding work; likely a quid-pro-quo arrangement rather than monetary. Candidates from user's existing network are best-positioned. |
+| 3 | **Practitioner with strategy-theory background (ex-McKinsey / BCG / Bain analyst)** | MEDIUM-HIGH | MEDIUM | Reads strategy papers regularly; needs codebook walkthrough + 1-2 calibration sessions on a non-corpus spine before producing the test extractions. ~$400-600 per spine. Recruitment channels: paid-consulting platforms (Catalant, GLG) or direct LinkedIn outreach to "ex-MBB independent consultant" contacts. |
+| 4 | **Two AI-assisted coders (different model families: Claude + Gemini OR Claude + GPT-4o) acting in coordination with a human spot-check** | LOW-MEDIUM | LOW | Cheap to execute; produces a synthetic-κ that is methodologically informative but does NOT satisfy the "independent human coder" specification axiom A1 requires per Paper A. Acceptable as a v1.1.5 interim measurement only if explicitly framed as machine-coding-consistency, not as κ-on-axiom-A1. |
+| 5 | **Crowdsourced coders (MTurk / Prolific with management-research-experience filter)** | LOW | LOW | Cheapest; lowest signal quality at the typed-DAG depth axiom A1 requires; not recommended unless paired with a stratified-sample design and aggregation rule. |
+
+Candidates 1 and 2 are the recommended options for v1.1.0 execution. Candidate 4 is the corpus-precedent fallback if no human coder lands within Q3 (per Paper A 2026am precedent of accepting machine-coding-consistency interim measurements).
+
+**Note (per [internal ref removed])**: this ranked list of candidate coders is INTERNAL to this session and the worktree. The Phase 5 paper.md revision discloses the recruitment-status honestly but does NOT publicly name candidate channels or specific outreach plans. The public disclosure language: "Inter-coder κ measurement on axiom A1 (recommended κ ≥ .75 on both node typing and antecedent-edge placement) is scheduled for the v1.1.0 release. The protocol and codebook are pre-registered alongside this release; execution awaits the onboarding of an independent second coder. Honest disclosure: axiom A1 reliability is currently asserted rather than measured."
+
+## What [internal ref removed] achieves under Task δ deferral
 
 - **Protocol document**: complete and execution-ready for v1.1.0 (this file).
 - **Codebook**: locked at paper_a:appendix_A_schema (no schema-refinement needed for execution; refinement would only be triggered if κ < .50 lands at execution).
 - **Sampling frame**: two of five spines selected and rationale documented.
 - **Falsifier specification**: explicit at .75 / .50 thresholds per axiom A1.
-- **Pre-extraction OCR-correction step**: script lost and deliberately not restored (2026-08-13); rationale and the cheaper replacement check are documented in that section.
+- **Pre-extraction OCR-correction step**: documented with stash-recovery commands ready to execute.
 - **Recruitment status**: surfaced with ranked candidate-coder options.
 - **Public disclosure language**: drafted for Phase 5 paper.md revision (see quoted block above).
 
-## What v1.0.0 does NOT achieve under Task δ deferral
+## What [internal ref removed] does NOT achieve under Task δ deferral
 
 - Actual κ values on either spine.
 - Second-coder extractions.
 - Empirical anchoring of axiom A1 on the Paper B subdomain.
-- The Priority-1 item is documented + protocolized + deferred — not closed.
+- The top-priority review item is documented, protocolized and deferred — not closed.
 
 ## Integration into v1.0.0 paper.md (Phase 5 5a)
 
@@ -163,10 +176,10 @@ The Phase 5 integrative-theory rewrite and the §Limitations / §Method-extracti
 
 ## Cross-reference
 
-- Source: Phase 4 Task δ + Paper A 2026ao §Method-single-coder-reliability + paper_a:axiom_A1.
+- Source: [internal ref removed] init prompt §Phase 4 Task δ + SESSION_F_COMPLETION_2026-05-27.md §v1.0.0 task α/β/γ/δ — DEFERRED + Paper A 2026ao §Method-single-coder-reliability + paper_a:axiom_A1.
 - Companion: PHASE1_ANCHOR_VERIFICATION_2026-05-27.md (Phase 1 sister artifact); SELF_APPLICATION_ISOMORPHISM_PB.md (Phase 2 sister artifact); TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md §8 (Phase 3 sister artifact).
 - Successor: PHASE4_KAPPA_RESULTS_v1.1.0.md (to be created at v1.1.0 execution).
 
 ---
 
-*Phase 4 closes with full protocol documentation + recruitment status surfaced + execution deferred to v1.1.0. The Priority-1 item remains pre-registered and tractable; what is missing is operator-attention-budget for second-coder onboarding, not framework-design clarity.*
+*Phase 4 closes with full protocol documentation, recruitment status surfaced, and execution deferred. The item review elevated to top priority remains pre-registered and tractable; what is missing is attention budget for second-coder onboarding, not framework-design clarity.*

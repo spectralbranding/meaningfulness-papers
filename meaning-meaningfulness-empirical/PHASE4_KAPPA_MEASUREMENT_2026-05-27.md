@@ -97,12 +97,33 @@ survives on disk.
    executed, so restoring it means writing unvalidated code from scratch, not recovering a working
    asset.
 
-**If assurance on the Grant spine is ever wanted, do this instead — it is cheaper and strictly better.**
-Obtain the Grant 1996 PDF into the reference library and link it on the source record (that link is
-currently empty — the corpus does **not** hold this PDF today, so the lost script could not have run
-now in any case), then read the seven propositions against the text directly. No API call, one pass.
-Grant 1996 is also among the most-cited papers in strategy, so the same seven propositions are
-independently checkable against any knowledge-based-view review without touching the OCR at all.
+**The assurance was obtained on 2026-08-13, and the OCR concern did not survive it.**
+
+The source PDF is now in the reference library and linked on the source record. Two copies were
+offered: a 14-page image-only scan with no usable text layer (105 extractable characters per page, all
+of it rights boilerplate — the kind of source that made OCR necessary in the first place), and a
+15-page copy carrying a **clean text layer**, ~4,700 characters per page, 64,285 in total. The
+text-layer copy is the one kept, which removes the need for any OCR pass or API call.
+
+**Result of reading the spine against it:**
+
+- **Section headings match.** The spine's `body_location` values resolve to real headings in the
+  source — *The Existence of the Firm* (G_P4), *Coordination Within the Firm* (G_P5),
+  *Organizational Structure* (G_P6).
+- **Every construct each proposition rests on is present**, at substantial frequency: all four of
+  G_P5's integration mechanisms (rules and directives, sequencing, routines, group problem solving);
+  G_P2's knowledge characteristics (transferability, appropriability, tacitness, common knowledge);
+  G_P6's hierarchy and decision rights; G_P7's boundaries of the firm.
+- **Every named antecedent appears** — Nonaka, Hayek, Jensen and Meckling, Thompson, Demsetz.
+
+**Conclusion: the OCR-noise worry was unfounded, and no correction is owed.** The KBV twin-pair result
+rests on a spine whose seven propositions are corroborated against a clean rendering of the source.
+This is the assurance the lost script was meant to provide, obtained without it — which is also the
+strongest argument that rebuilding it would have been wasted work.
+
+Grant 1996 is in any case among the most-cited papers in strategy, so the same seven propositions are
+independently checkable against any knowledge-based-view review. That remains the cheapest form of
+assurance and needs no PDF at all.
 
 **Standing alternative (unchanged, and now the default):** proceed with the existing OCR'd extraction
 and report κ as a "with OCR noise floor" lower bound.

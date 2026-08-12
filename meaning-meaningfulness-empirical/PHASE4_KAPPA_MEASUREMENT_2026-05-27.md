@@ -66,24 +66,46 @@ For each assigned spine pair (author's vs second-coder's extraction of the same 
 
 Both κ values must be ≥ .75 for axiom A1 to hold strictly on that subdomain. If one passes and one fails, the failing dimension is the empirical-A1-failure subdomain; report which.
 
-### Pre-extraction OCR-correction (optional, raises Grant 1996 baseline accuracy)
+### Pre-extraction OCR-correction — SCRIPT LOST, AND NOT BEING RESTORED (decided 2026-08-13)
 
-A Perplexity-based verbatim-quote-verification script was drafted earlier for the Grant 1996 spine. The script is preserved in **`git stash@{0}` of the worktree** (in commit `498bcdb9` parent `29eec8e7` as untracked file `code/verify_grant_1996_perplexity.py`, 337 lines, never executed).
+> **DO NOT RUN THE RECOVERY COMMANDS THAT USED TO BE IN THIS SECTION.** They restored a saved
+> working-tree snapshot by position, and that position now resolves to an unrelated snapshot — so
+> following them literally would restore the wrong thing. They have been removed rather than left in
+> place with a warning attached.
 
-To salvage and run BEFORE second-coder extraction begins (raises baseline accuracy of the author's Grant 1996 extraction so the κ measurement compares against a corrected baseline):
+A Perplexity-based verbatim-quote-verification script for the Grant 1996 spine was drafted earlier
+(`verify_grant_1996_perplexity.py`, 337 lines, **never executed**). It is **gone**, verified
+2026-08-13: the working tree it was written in no longer exists, and because the file was never
+tracked, that snapshot was its only copy. It is absent from every commit on every branch, and no copy
+survives on disk.
 
-```bash
-cd <repo-root>
-git stash apply --index "stash@{0}"   # restores code/verify_grant_1996_perplexity.py to working tree
-# fix openai-module dependency: requires openai>=1.0.0 + PERPLEXITY_API_KEY env var
-uv add openai
-PERPLEXITY_API_KEY="..." uv run python code/verify_grant_1996_perplexity.py
-# review output, integrate corrections into VALIDATION_CASE_PB_KBV_GRANT_SPINE.yaml
-# commit the spine update before second-coder extraction
-git stash drop "stash@{0}"
-```
+**Decision: do not rewrite it.** Four reasons, in order of weight:
 
-Alternative (skip-OCR-correction path): proceed with the existing OCR'd extraction; report κ as "with OCR noise floor" lower-bound. Acceptable if Perplexity API access is unavailable or if v1.1.0 execution-time prioritizes the κ measurement over the OCR-correction.
+1. **It is the wrong instrument for what this spine actually contains.** The script verifies *verbatim
+   quotes*. `VALIDATION_CASE_PB_KBV_GRANT_SPINE.yaml` contains none — its seven propositions are
+   author paraphrase at proposition level ("Knowledge is the most strategically important resource of
+   the firm..."), and the single near-quote sits in an `antecedents` field (Simon 1991). Character-level
+   OCR noise would have to be catastrophic, not marginal, to change which propositions exist.
+2. **Rec is coarse relative to the noise.** The published KBV result counts linked propositions with
+   preserved antecedents over seven nodes. That quantity is not sensitive to the transcription errors
+   this script was meant to catch, and the paper already discloses the OCR dependence as a limitation.
+3. **It was a prerequisite for a task that cannot run**, and optional even then. Task δ is blocked on
+   second-coder recruitment (see below), and this section was always labelled optional with a stated
+   alternative.
+4. **The chosen verifier over-flags on this corpus.** Used as a verbatim checker it would return false
+   positives needing manual adjudication — the manual work it was supposed to save. And it was never
+   executed, so restoring it means writing unvalidated code from scratch, not recovering a working
+   asset.
+
+**If assurance on the Grant spine is ever wanted, do this instead — it is cheaper and strictly better.**
+Obtain the Grant 1996 PDF into the reference library and link it on the source record (that link is
+currently empty — the corpus does **not** hold this PDF today, so the lost script could not have run
+now in any case), then read the seven propositions against the text directly. No API call, one pass.
+Grant 1996 is also among the most-cited papers in strategy, so the same seven propositions are
+independently checkable against any knowledge-based-view review without touching the OCR at all.
+
+**Standing alternative (unchanged, and now the default):** proceed with the existing OCR'd extraction
+and report κ as a "with OCR noise floor" lower bound.
 
 ### Falsifier specification
 
@@ -103,7 +125,7 @@ Inter-coder κ measurement on axiom A1 (recommended κ ≥ .75 on both node typi
 - **Codebook**: locked at paper_a:appendix_A_schema (no schema-refinement needed for execution; refinement would only be triggered if κ < .50 lands at execution).
 - **Sampling frame**: two of five spines selected and rationale documented.
 - **Falsifier specification**: explicit at .75 / .50 thresholds per axiom A1.
-- **Pre-extraction OCR-correction step**: documented with stash-recovery commands ready to execute.
+- **Pre-extraction OCR-correction step**: script lost and deliberately not restored (2026-08-13); rationale and the cheaper replacement check are documented in that section.
 - **Recruitment status**: surfaced with ranked candidate-coder options.
 - **Public disclosure language**: drafted for Phase 5 paper.md revision (see quoted block above).
 

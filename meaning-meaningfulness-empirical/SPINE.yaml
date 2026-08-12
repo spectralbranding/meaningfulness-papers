@@ -199,7 +199,7 @@ methods:
     reproducibility:
       seed: "42 (fixed; per paper_a default)"
       version: "[session] Phase 3 + v1.1.0 KBV-pair FORK"
-    note: "v1.1.0 reports point estimates without confidence intervals; statistical-power claims are out of scope. v1.0.0 reframe demotes β/δ from primary to secondary contribution per feedback_paper_b_p4_reframe.md."
+    note: "v1.1.0 reports point estimates without confidence intervals; statistical-power claims are out of scope. v1.0.0 reframe demotes β/δ from primary to secondary contribution."
     provenance:
       created_by: "author + tool:cost_function_calibration.py"
       created_at: "2026-05-26"
@@ -329,7 +329,7 @@ findings:
     conditions: ["paper_a:C1", "paper_a:C2", "paper_a:C3", "paper_a:C4", "PB_BC1"]
     antecedents: ["PB_m_rec_focal", "PB_m_rec_kbv", "code/null_baseline.py"]
     falsifier_at_v1_3_0: "Random-shadow Rec distribution producing Pr(Rec ≥ 4 by chance) > .05 — would indicate the observed Rec = 4 is attributable to chance under the random null. Observed Pr = .000 across n = 1,000 shadows comfortably rejects the chance hypothesis."
-    citation_role_in_paper: "addresses_grok_r1_must_fix_random_graph_null_baseline"
+    citation_role_in_paper: "supplies_the_random_graph_null_baseline"
     related_paper_a_proposition: "paper_a:P4 (strengthens central P4 demonstration)"
     provenance:
       created_by: "author + tool:null_baseline.py"
@@ -476,7 +476,7 @@ propositions:
   inheritance:
     from: ["paper_a:P1", "paper_a:P2", "paper_a:P3", "paper_a:P4"]
     relationship: "inherited_unchanged"
-    note: "Paper B's v1.0.0 central empirical contribution is on paper_a:P4 (rendering-equivalence under spine-preservation). paper_a:P3 receives supportive evidence via the β/δ ordering. paper_a:P2 (organizational recombination rates) is acknowledged in Paper A as deferred to large-N work at v4.0.0 scale and is NOT tested at v1.0.0. paper_a:P1 (separability) is inherited unchanged. Under v0.3.0 P4 reframe per feedback_paper_b_p4_reframe.md, Paper B does not introduce new propositions; the Rec*(β) β-conditional threshold (introduced at v1.0.1 Phase 2 FORK) is retained in Discussion as a P3-conditional cross-tie footnote, demoted from contribution-2 level to secondary observation."
+    note: "Paper B's v1.0.0 central empirical contribution is on paper_a:P4 (rendering-equivalence under spine-preservation). paper_a:P3 receives supportive evidence via the β/δ ordering. paper_a:P2 (organizational recombination rates) is acknowledged in Paper A as deferred to large-N work at v4.0.0 scale and is NOT tested at v1.0.0. paper_a:P1 (separability) is inherited unchanged. Under the v0.3.0 P4 reframe, Paper B does not introduce new propositions; the Rec*(β) β-conditional threshold (introduced at v1.0.1 Phase 2 FORK) is retained in Discussion as a P3-conditional cross-tie footnote, demoted from contribution-2 level to secondary observation."
   primary_engagement: "paper_a:P4"
   secondary_engagement: "paper_a:P3"
 

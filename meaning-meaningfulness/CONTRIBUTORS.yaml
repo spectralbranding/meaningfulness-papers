@@ -25,9 +25,10 @@ ai_assistants:
   - name: "Grok 4.1"
     provider: "xAI"
     role: >-
-      Pre-draft critical-review applied to predraft bundle across five review
-      cycles ([internal ref removed]; plateau reached r4→r5). No drafting authorship. Audit
-      record at audit/grok_outputs/2026ao_grok_r{1,2,3,4,5}.md.
+      Pre-draft critical review applied to the predraft bundle across five
+      cycles, the last two of which returned no new material. No drafting
+      authorship. The review records are retained in the project's internal
+      audit trail.
     sessions_used: "Sessions A through C-prime predraft"
   - name: "Gemini 3.1"
     provider: "Google"

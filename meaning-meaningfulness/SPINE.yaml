@@ -17,7 +17,7 @@
 # operationalized — see thesis below).
 
 spine_version: "0.2"              # schema version (extended; see SPINE_FIRST_DRAFTING_PROTOCOL.md §"Schema v0.2")
-spine_doc_version: "0.8.0"        # document revision (v0.1.0 → … → v0.7.3 → v0.8.0 [internal ref removed] Step 4.5c FORK + 4 verified anchors per Grok joint review 2026-05-27)
+spine_doc_version: "0.8.0"        # document revision (v0.1.0 → … → v0.7.3 → v0.8.0 FORK + 4 verified anchors, 2026-05-27)
 paper_key: "2026ao"               # placeholder; verify CANONICAL_REFERENCES.md at Phase 5; Paper A only post-PIVOT-SPLIT
 paper_b_companion_key: "2026ap"   # empirical companion; scoping at [internal path removed]
 status: "Not exported; see the paper's own version and DOI."

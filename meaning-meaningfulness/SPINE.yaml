@@ -897,6 +897,44 @@ limitations:
       created_at: "2026-05-26"
     body_sections: ["Section 11 — Method (verification cascade illustration, generic)"]
 
+  - id: L4
+    statement: >-
+      Axiom A1 (σ-faithfulness on locked subsets) is asserted rather than
+      measured. RC2, the second-coder measurement that would test it, has not
+      been run. Two pre-registered studies elsewhere in this corpus measure the
+      adjacent operation — reference-free recovery of dependency structure from
+      prose — and both are negative: machine operators from different families
+      diverged on which nodes exist before how nodes connect, and fixing the
+      unit inventory and supplying it identically to both operators did not
+      rescue edge-level agreement, which failed its absolute gate in every
+      document-by-condition cell and separated below the within-operator noise
+      floor in every cell.
+    affects: [P4, AA2, RC2, "T1prime", "T1", "T2"]
+    severity: "high"
+    non_equivalence: >-
+      Those studies are not RC2 and do not execute it: different coefficient and
+      threshold, machine operators rather than a second human coder, and
+      argumentative and mathematical specimens rather than the management-theory
+      spines on which A1 would be tested. They remove the expectation that a
+      better extraction protocol absorbs the disagreement — operators disagree
+      with each other by more than they disagree with themselves — without
+      settling A1 on this paper's subdomain. One condition remains untested and
+      is named by the second study itself: segmenter fidelity failed on all five
+      of its documents, so a shared inventory of established fidelity has not
+      been tried.
+    mitigation: >-
+      Apply P4's own degradation clause rather than a new concession: on the
+      reference-free retroactive-extraction subdomain, P4 reads as a
+      probabilistic tendency rather than a preservation result, pending RC2.
+      Preservation checking against a supplied reference is a different and
+      bounded operation — the spine is locked first and the question is whether
+      a rendering still carries its locked elements — and the validation cases
+      of that form are unaffected.
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-12"
+    body_sections: ["Section 8 — Discussion (Limitations)", "Section 3 — P4 (falsifier)"]
+
 # ============================================================================
 # Propositions: explanatory theoretical claims
 # ============================================================================
@@ -1348,6 +1386,31 @@ corpus_precedents:
       Light cross-reference only (theory-loaded paper in active drafting).
     spine_nodes: [P1, schema_human_operability]
     body_sections: ["Section 8 — Discussion"]
+  - paper_key: zharnikov-2026bk
+    relationship: bears_on_assumption
+    description: >-
+      Pre-registered validation of reference-free recovery of dependency
+      structure from prose, failed at its first gate: two machine operators from
+      different families diverged on which nodes exist before how nodes connect,
+      so edge-level agreement fell below the declared threshold on every
+      document. Evidence bearing on A1 for the retroactive-extraction subdomain,
+      not an execution of RC2. It cites this framework for the claim that
+      retroactive extraction is performable, never that it is well posed.
+    spine_nodes: [P4, AA2, RC2, L4]
+    body_sections: ["Section 8 — Discussion (Limitations)"]
+  - paper_key: zharnikov-2026bl
+    relationship: bears_on_assumption
+    description: >-
+      Round 2 of the same arc: the unit inventory is fixed before extraction and
+      supplied identically to both operators, and every extraction is repeated
+      so an operator's agreement with itself gives a noise floor. Edge-level
+      agreement failed its absolute gate in all fifteen document-by-condition
+      cells, including the ten with shared units, and separated below the
+      within-operator floor in every cell. Removes the expectation that a better
+      protocol absorbs the disagreement; the untested condition it names is a
+      shared inventory of established segmenter fidelity.
+    spine_nodes: [P4, AA2, RC2, L4]
+    body_sections: ["Section 8 — Discussion (Limitations)"]
 
 # ============================================================================
 # External anchor literature — POST-FORK after Phase-2 DR caught fabrications

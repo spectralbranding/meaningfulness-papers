@@ -14,7 +14,7 @@ meta:
     affiliation: Independent Researcher
   doi: 10.5281/zenodo.20409701
   date: '2026-06-26'
-  venue: Strategic Management Journal
+  venue: Preprint
   license: CC-BY-4.0
   keywords:
   - generative AI
@@ -87,6 +87,22 @@ dependencies:
   critical: false
   doi: 10.5281/zenodo.20384084
 - relationship: extends
+  claim: 'Pre-registered validation of reference-free recovery of dependency structure from prose, failed
+    at its first gate: two machine operators from different families diverged on which nodes exist before
+    how nodes connect. It cites Paper B for the claim that retroactive extraction is performable, never
+    that it is well posed, and that scoping is correct and must survive future edits on both sides.'
+  critical: false
+  doi: 10.5281/zenodo.21828980
+- relationship: extends
+  claim: 'Round 2 of the same arc: units fixed before extraction and supplied identically to both operators,
+    every extraction repeated so an operator''s agreement with itself gives a noise floor. Edge agreement
+    failed its absolute gate in all fifteen document-by-condition cells, including the ten with shared
+    units, and separated below the within-operator floor in every cell. Removes the expectation that a
+    better protocol absorbs the disagreement; names the one untested condition (a shared inventory of
+    established segmenter fidelity).'
+  critical: false
+  doi: 10.5281/zenodo.21830220
+- relationship: extends
   claim: 'anchor: bikard-2020-idea-twins'
   doi: 10.1002/smj.3162
 - relationship: extends
@@ -147,6 +163,13 @@ limitations:
   addressable: true
 - description: The four twin-pair source papers concentrate in management theory; cross-discipline generalization
     is out of scope.
+  severity: moderate
+  addressable: true
+- description: The twin-pair Rec results rest on reference-free retroactive extraction — the spine is
+    recovered from prose with no reference — which is the operation two later pre-registered studies in
+    this corpus measured and found unreliable between machine operators. Axiom A1 licenses those results
+    and remains asserted rather than measured; the second-coder measurement scheduled at PB_L2 has not
+    been made.
   severity: moderate
   addressable: true
 repositories:

@@ -14,7 +14,7 @@ meta:
     affiliation: Independent Researcher
   doi: 10.5281/zenodo.20409683
   date: '2026-06-27'
-  venue: Organization Science
+  venue: Preprint
   license: CC-BY-4.0
   keywords:
   - generative AI
@@ -159,6 +159,14 @@ dependencies:
   claim: builds on zharnikov-2026u
   critical: false
   reference: Zharnikov (zharnikov-2026u), this corpus.
+- relationship: extends
+  claim: builds on zharnikov-2026bk
+  critical: false
+  reference: Zharnikov (zharnikov-2026bk), this corpus.
+- relationship: extends
+  claim: builds on zharnikov-2026bl
+  critical: false
+  reference: Zharnikov (zharnikov-2026bl), this corpus.
 - relationship: extends
   claim: Replaces fabricated Puranam-Raveendran 2024 AMR.
   reference: kulkarni-2024-future-of-research-in-ai-driven-world
@@ -471,6 +479,15 @@ limitations:
     The audit record is maintained internally; the public paper does not foreground this incident as evidence,
     treating it as standard operational hygiene rather than as a self-referential SF1 demonstration.
   severity: moderate
+  addressable: true
+- description: 'Axiom A1 (σ-faithfulness on locked subsets) is asserted rather than measured. RC2, the
+    second-coder measurement that would test it, has not been run. Two pre-registered studies elsewhere
+    in this corpus measure the adjacent operation — reference-free recovery of dependency structure from
+    prose — and both are negative: machine operators from different families diverged on which nodes exist
+    before how nodes connect, and fixing the unit inventory and supplying it identically to both operators
+    did not rescue edge-level agreement, which failed its absolute gate in every document-by-condition
+    cell and separated below the within-operator noise floor in every cell.'
+  severity: major
   addressable: true
 repositories:
 - platform: GitHub

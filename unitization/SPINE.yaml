@@ -1091,7 +1091,20 @@ corpus_precedents:
     relationship: inherits
     claim: >-
       The cost-asymmetry account of structural versus rendered layers, which Round 1 inherits and
-      does not re-litigate.
+      does not re-litigate. That framework also licenses its preservation result on an axiom of
+      extraction faithfulness whose falsifier is inter-coder agreement on retroactive extractions,
+      and that axiom is asserted there rather than measured — so this run bears on it. Forward
+      reference only: the connection is stated, nothing here is re-derived for it, and the
+      non-equivalence is carried with it.
+
+  - paper_key: 2026ap
+    relationship: bears_on_assumption
+    claim: >-
+      The empirical companion applies that axiom to twin-pair results obtained by reference-free
+      retroactive extraction — the same operation this paper measures. This run supplies no test of
+      its coefficient or threshold and uses different specimens and machine rather than human
+      operators, so it does not settle the axiom there; what it removes is the expectation that a
+      better protocol absorbs the disagreement.
 
 # ---------------------------------------------------------------------------
 # Open questions -- Phase 0

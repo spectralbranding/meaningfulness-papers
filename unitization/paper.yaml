@@ -181,6 +181,10 @@ dependencies:
   claim: builds on 2026ao
   critical: false
   doi: 10.5281/zenodo.20409683
+- relationship: extends
+  claim: builds on 2026ap
+  critical: false
+  doi: 10.5281/zenodo.20409701
 contradictions: []
 limitations:
 - description: N is still five documents, and the specimen corpus is deliberately unchanged. No generalization

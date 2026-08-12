@@ -381,6 +381,44 @@ limitations:
       created_at: "2026-05-26"
     body_sections: ["Discussion — Limitations"]
 
+  - id: PB_L5
+    statement: >-
+      The twin-pair Rec results rest on reference-free retroactive extraction —
+      the spine is recovered from prose with no reference — which is the
+      operation two later pre-registered studies in this corpus measured and
+      found unreliable between machine operators. Axiom A1 licenses those
+      results and remains asserted rather than measured; the second-coder
+      measurement scheduled at PB_L2 has not been made.
+    scope: "The twin-pair Rec = 4 findings (PB_O1..PB_O4) and any claim licensed by paper_a:axiom_A1 on the retroactive-extraction subdomain. Does NOT scope the self-application or cross-language renderings."
+    non_equivalence: >-
+      Neither study executes the pre-registered second-coder test: different
+      coefficient and threshold, machine operators rather than a second human
+      coder, and argumentative and mathematical specimens rather than
+      management-theory spines. They remove the expectation that a better
+      protocol absorbs the disagreement — the second supplies a within-operator
+      noise floor and operators separate below it in every cell — without
+      settling A1 here. The untested condition is a shared inventory of
+      established segmenter fidelity; the second study's own segmenter failed
+      its fidelity gate on all five documents.
+    decision: >-
+      Restate the twin-pair Rec results as a probabilistic tendency on the
+      reference-free retroactive-extraction subdomain, per axiom A1's own
+      degradation clause, pending the second-coder measurement. This is the
+      clause operating as specified, not a retraction: the reported Rec values,
+      the null baseline and the cross-pair convergence are unchanged, and what
+      changes is the modal force of the inference drawn from them.
+    unaffected: >-
+      The self-application and cross-language renderings are preservation checks
+      against a locked reference substrate, not recovery: the spine exists
+      before the rendering and the question is whether the rendering still
+      carries its locked elements. They are bounded, checkable item by item, and
+      untouched by this limitation.
+    actionable_next_step: "Run the pre-registered second-coder measurement knowing what the two adjacent runs found; do not sequence it behind a further machine-operator round."
+    provenance:
+      created_by: "author"
+      created_at: "2026-08-12"
+    body_sections: ["Discussion — Limitations", "Discussion — Reliability of the P4 Demonstration"]
+
 # ============================================================================
 # Assumption atoms (inherited from Paper A; Paper-B-specific atoms recorded)
 # ============================================================================
@@ -451,6 +489,16 @@ corpus_precedents:
     relationship: "methodological_precedent"
     spine_nodes: []
     note: "2026an Specification Readiness Empirical Companion is the direct precedent for the iteratively-versioned-working-paper format Paper B adopts. 2026an at a working version was reframed as construct + measurement + identification toolkit when initial drafts plateaued; Paper B's design pre-empts that plateau by scoping a working version explicitly to small-N existence proofs."
+
+  - paper_key: "2026bk"
+    relationship: "bears_on_assumption"
+    spine_nodes: ["paper_a:axiom_A1", "PB_L5", "PB_O1", "PB_O2", "PB_O3", "PB_O4"]
+    note: "Pre-registered validation of reference-free recovery of dependency structure from prose, failed at its first gate: two machine operators from different families diverged on which nodes exist before how nodes connect. It cites Paper B for the claim that retroactive extraction is performable, never that it is well posed, and that scoping is correct and must survive future edits on both sides."
+
+  - paper_key: "2026bl"
+    relationship: "bears_on_assumption"
+    spine_nodes: ["paper_a:axiom_A1", "PB_L5"]
+    note: "Round 2 of the same arc: units fixed before extraction and supplied identically to both operators, every extraction repeated so an operator's agreement with itself gives a noise floor. Edge agreement failed its absolute gate in all fifteen document-by-condition cells, including the ten with shared units, and separated below the within-operator floor in every cell. Removes the expectation that a better protocol absorbs the disagreement; names the one untested condition (a shared inventory of established segmenter fidelity)."
 
 # ============================================================================
 # ============================================================================

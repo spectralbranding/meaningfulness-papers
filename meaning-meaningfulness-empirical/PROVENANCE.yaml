@@ -47,7 +47,7 @@ phase_execution:
     commit: "7a238a6"
   phase_2_scope_reduction:
     output: "v1.0.0 N=2 → N=1 + TO1996 standalone precursor (Duncan 1976 PDF unavailable)"
-    [internal ref removed]: "Option A (drop secondary pair from v1.0.0; defer to v1.1.0)"
+    user_decision: "Option A (drop secondary pair from v1.0.0; defer to v1.1.0)"
     output_files: ["PHASE_0_THESIS.md updated", "SPINE.yaml v0.1.3"]
     completed: "2026-05-27"
     commit: "b643e89"
@@ -82,8 +82,8 @@ phase_execution:
     commit: "86b32ed9"
   v1_2_0_p4_reframe_session_f:
     rationale: "PIVOT_SPLIT_PLAN + PAPER_B_2026ap_SCOPING ([internal ref removed]-prime) allocated Paper B to test paper_a:P2 + paper_a:P3 while Paper A retained P1 + P4. That scoping was wrong relative to the original research idea (user 2026-05-27): 'A paper is meaningfulness (prose). The structured deeper tier is meaning (manageable by AI). The same meaning can be re-rendered into different prose preserving the same conclusions.' This is paper_a:P4 verbatim. Paper B v1.1.0 framed Rec values as 'P2 existence proof' — wrong interpretation. v1.0.0 P4 REFRAME reinterprets Rec values as paper_a:P4 evidence (substrate-preservation across two prose renderings)."
-    [internal ref removed]: "2026-05-27"
-    [internal ref removed]: "[internal path removed][internal ref removed] HARD CORRECTION"
+    user_direction_date: "2026-05-27"
+    user_direction_anchor: "[internal path removed][internal ref removed] HARD CORRECTION"
     files_revised:
       - "paper.md (title + abstract + intro + Theory + Method + Results + Discussion + Limitations; ~5,800 words)"
       - "SPINE.yaml v0.3.0 (PB_F1 reframed from P2 to P4; PB_F2 demoted from P3 primary to P3 supportive; PB_M2 + PB_M3 statements reframed; PB_BC1 softened on Bikard independence; new PB_F4 P4 self-application node; thesis rewritten; title updated; v0.3.0 changelog row added)"
@@ -113,7 +113,7 @@ phase_execution:
     output: "RENDERING_PA_PRACTITIONER.md (2,102w) + VALIDATION_CASE_PA_PRACTITIONER_SPINE.yaml + CROSS_PAPER_P4_ISOMORPHISM.md"
     completed: "2026-05-27"
     verdict: "12/15 strict / 15/15 semantic / 0 contradicted preservation across academic → practitioner full-framework rendering boundary; strongest single P4 evidence point in v1.0.0 release; dual-purpose research artifact + Article 1 raw material"
-    [internal ref removed]: "mid-session addendum 2026-05-27 added Phase 2.5 as required scope"
+    user_direction: "mid-session addendum 2026-05-27 added Phase 2.5 as required scope"
 
   session_h_phase_3_5a_russian_protocol:
     output: "PHASE3_5A_RUSSIAN_RENDERING_PROTOCOL.md + AI-draft Russian rendering of Paper B §Abstract"

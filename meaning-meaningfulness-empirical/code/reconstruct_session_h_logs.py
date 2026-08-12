@@ -112,7 +112,7 @@ def reconstruct_phase_1() -> None:
             operator="crossref",
             model_version="api.crossref.org REST API",
             system_prompt="(none; REST API)",
-            [internal ref removed]=(
+            user_prompt=(
                 "GET https://api.crossref.org/works?"
                 f"query.title=<title-of-{anchor_id}>&query.author={author_query}&rows=5"
             ),
@@ -121,7 +121,7 @@ def reconstruct_phase_1() -> None:
                 if resolved_doi
                 else "No exact title+author+year match within rows=5; classified NF"
             ),
-            parameters={"rows": 5, "[internal ref removed]": "Paper2026ap-anchor-verifier/0.1"},
+            parameters={"rows": 5, "user_agent": "Paper2026ap-anchor-verifier/0.1"},
             endpoint="https://api.crossref.org/works",
             sdk_version="urllib.request stdlib",
             cost_usd_est=0.0,  # Crossref is free
@@ -144,7 +144,7 @@ def reconstruct_phase_2() -> None:
             "anecdotes; no mathematical notation); different length (one-quarter the academic "
             "word count); different tone (declarative rather than hedged)."
         ),
-        [internal ref removed]=(
+        user_prompt=(
             "Re-render Paper B's central P4-demonstration claim + Rec=4 evidence + "
             "boundary conditions + self-application + AI cost asymmetry into Substack "
             "practitioner register. Output: RENDERING_PB_SUBSTACK_PRACTITIONER.md."
@@ -177,7 +177,7 @@ def reconstruct_phase_2() -> None:
             "classify each into the 10-node-type taxonomy; trace antecedent edges using 17-edge "
             "catalog. Produce YAML spine with RPB_ node prefix."
         ),
-        [internal ref removed]="Re-extract spine from RENDERING_PB_SUBSTACK_PRACTITIONER.md",
+        user_prompt="Re-extract spine from RENDERING_PB_SUBSTACK_PRACTITIONER.md",
         response=(
             "Output: VALIDATION_CASE_PB_SELF_APPLICATION_SPINE.yaml (RPB_O1..O3 + RPB_M1-M2 + "
             "RPB_F1-F4 + RPB_BC_VC/PROP/AUD/VOL/SUB + propositions block + recommended_actions "
@@ -204,7 +204,7 @@ def reconstruct_phase_2_5() -> None:
             "a Substack practitioner-register article ~2,000-2,500 words. Dual-purpose: research "
             "artifact + Article 1 raw material for forthcoming Substack series."
         ),
-        [internal ref removed]=(
+        user_prompt=(
             "Render Paper A's full theoretical apparatus (Operator role + three-layer L→S→R + "
             "P1-P4 propositions + SF1-SF4 stylized facts + C1-C4 boundary conditions + spine-"
             "first protocol + Heisenberg-Schrödinger appendix + three Design Propositions) into "
@@ -236,7 +236,7 @@ def reconstruct_phase_2_5() -> None:
             "Apply paper_a:appendix_B_protocol in reverse to PA practitioner rendering. "
             "Compare against Paper A SPINE.yaml v0.7.3 locked-set of 15 elements."
         ),
-        [internal ref removed]="Re-extract spine from RENDERING_PA_PRACTITIONER.md and compare to Paper A locked set",
+        user_prompt="Re-extract spine from RENDERING_PA_PRACTITIONER.md and compare to Paper A locked set",
         response=(
             "Output: VALIDATION_CASE_PA_PRACTITIONER_SPINE.yaml + CROSS_PAPER_P4_ISOMORPHISM.md. "
             "Preservation: 12/15 strict, 15/15 semantic, 0 contradicted. Three partial "
@@ -263,7 +263,7 @@ def reconstruct_phase_3() -> None:
             "Practitioner register; arrow-bullet structure for L1-L4; named antecedents in plain "
             "prose; no equations; light citation."
         ),
-        [internal ref removed]=(
+        user_prompt=(
             "Render L1-L4 (DCs as identifiable processes / learning mechanisms drive evolution / "
             "cross-firm commonalities at best-practice level / market-task contingency) into "
             "LinkedIn long-post. Output: RENDERING_FOCAL_PAIR_THIRD_PROSE.md."
@@ -294,7 +294,7 @@ def reconstruct_phase_3_5a() -> None:
             "§Abstract as a starter for the user (native Russian speaker) to edit, replace, or "
             "approve for use as research artifact. This is NOT a final human-native rendering."
         ),
-        [internal ref removed]=(
+        user_prompt=(
             "Render English Paper B abstract (198 words) into native Russian academic register "
             "appropriate for SMJ-tier Russian-language audience. Preserve all propositional claims, "
             "numerical figures, citation references."

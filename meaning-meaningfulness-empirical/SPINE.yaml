@@ -677,7 +677,7 @@ negative_findings:
 
   - id: NF16
     statement: "the review §2 HIGH-priority suggested 'Felin, T., & Zenger, T. R. (2024). The economic theory of the firm in the age of AI. SMJ 45(4): 721–752. DOI: 10.1002/smj.3612.' Grok claimed 'verified via Semantic Scholar 2024 entry.' Verification at [session] Phase 2.5: DOI 10.1002/smj.3612 resolves to Neckebrouck-Kryscynski 2024 'Empirically exploring the veracity of the new stakeholder perspective in strategy: Documenting workforce rents' SMJ 45(10): 2159-2188 — NOT a Felin-Zenger 2024 paper on AI. HALLUCINATED."
-    pattern: "matches NF15 + Paper A NF1..NF14; cumulative ~50% rate across Grok [internal ref removed] on Paper B"
+    pattern: "matches NF15 + Paper A NF1..NF14; cumulative ~50% rate across the review+r2 on Paper B"
     provenance:
       created_by: "author + tool:Crossref manual verification"
       created_at: "2026-05-27"

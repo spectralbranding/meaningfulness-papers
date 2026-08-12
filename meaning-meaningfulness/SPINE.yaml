@@ -427,7 +427,7 @@ stylized_facts:
       - "Mathematical Reviews translation workflow"
       - "Bulletin of the AMS Russian translation series"
       - "Multi-language clinical-trial registry summary practice"
-      - "Spectral Branding Russian Telegram channel (memory: [internal ref removed]) — same S, distinct R"
+      - "Spectral Branding Russian Telegram channel (memory: reference_telegram_channel) — same S, distinct R"
     uniquely_explained_by: >-
       Three-level hierarchy: ρ is cohort-conditional and reconstructed per
       language; σ produces a language-invariant S.

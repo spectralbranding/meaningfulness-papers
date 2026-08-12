@@ -127,10 +127,19 @@ observations:
 
   - id: PB_O5
     statement: "Grant 1996 Strategic Management Journal 17 (Winter Special Issue):109-122 published Winter 1996 with the knowledge-based-theory-of-the-firm formalism focused on firm-as-knowledge-integrator. Added a working version KBV-pair FORK."
-    raw_data_pointer: "[internal path removed] (14 pages; image-only — OCR'd via ocrmypdf --force-ocr [session] continuation)"
+    raw_data_pointer: "The published article, DOI 10.1002/smj.4250171110. Extraction was performed from a page-image scan read via OCR; the spine was afterwards checked against a copy carrying a native text layer and holds (see transcription_fidelity_check)."
     instrument: "Crossref metadata + OCR'd PDF read"
+    transcription_fidelity_check: >-
+      Verified 2026-08-13 against a native-text-layer copy of the source. Each
+      proposition's recorded section location resolves to a real heading; every
+      construct the seven propositions rest on is present, including all four
+      knowledge-integration mechanisms, the four knowledge characteristics, and
+      the hierarchy, decision-right and firm-boundary constructs; every named
+      antecedent appears. No reported value affected. This settles transcription
+      fidelity only — independent second-coder reliability remains outstanding
+      and is a separate question.
     timestamp: "1996-Winter"
-    conditions_at_capture: "Paper B v1.1.0 KBV-pair extraction; user-supplied PDF [session] continuation"
+    conditions_at_capture: "Paper B v1.1.0 KBV-pair extraction; author-supplied source PDF"
     provenance:
       created_by: "author + tool:ocrmypdf + tool:PyPDF2"
       created_at: "2026-05-27"

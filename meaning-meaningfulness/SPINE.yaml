@@ -777,8 +777,8 @@ negative_findings:
       Machines: The social construction of the generative AI category"
       — but venue is *Organization Theory* (DOI 10.1177/26317877241275125),
       not AMJ. Engaged at venue-corrected citation. Note: this is the
-      a review-flagged hallucination shape where author + year + topic are correct
-      but venue is mis-attributed — different from the NF11/NF13 shape
+      venue-mis-attribution hallucination shape, where author + year and
+      topic are correct — different from the NF11/NF13 shape
       where the entire suggestion fails.
     source_method: M1
     affects_nodes: [external_anchors, SF1]

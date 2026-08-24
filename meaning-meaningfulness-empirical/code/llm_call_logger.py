@@ -94,7 +94,11 @@ PRICE_TABLE: dict[str, dict[str, float]] = {
     "claude-opus-5": {"input": 5.00, "output": 25.00},
     "claude-opus-4-8": {"input": 5.00, "output": 25.00},
     "claude-opus-4-7": {"input": 5.00, "output": 25.00},
-    "claude-sonnet-5": {"input": 3.00, "output": 15.00},
+    # Sonnet 5's launch price was introductory, scheduled to rise to 3.00/15.00
+    # on 2026-09-01. Anthropic made 2.00/10.00 permanent (announced 2026-08-11;
+    # confirmed against the live models table 2026-08-16, which now carries no
+    # introductory qualifier). The 3.00/15.00 figure was never billed.
+    "claude-sonnet-5": {"input": 2.00, "output": 10.00},
     "claude-sonnet-4-6": {"input": 3.00, "output": 15.00},
     "claude-fable-5": {"input": 10.00, "output": 50.00},
     "claude-haiku-4-5-20251001": {"input": 1.00, "output": 5.00},
@@ -124,8 +128,11 @@ PRICE_TABLE: dict[str, dict[str, float]] = {
     "sonar": {"input": 1.00, "output": 1.00},
     "sonar-pro": {"input": 3.00, "output": 15.00},
     "sonar-reasoning": {"input": 1.00, "output": 5.00},
-    # xAI Grok (June 2026 list; OpenAI-compatible endpoint)
+    # xAI Grok (June 2026 list; OpenAI-compatible endpoint). Both lines price
+    # in two bands by prompt size; the figures here are the <200k-token band,
+    # which every corpus call falls in. Above 200k input, xAI doubles both.
     "grok-4.3": {"input": 1.25, "output": 2.50},
+    "grok-4.6": {"input": 2.00, "output": 6.00},
 }
 
 

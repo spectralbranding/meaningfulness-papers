@@ -1,6 +1,6 @@
 """LLM-call professional logger — single-source schema + JSONL writer + redaction.
 
-Implements feedback_llm_call_professional_logging.md (HARD RULE 2026-05-27):
+Implements [internal ref removed] (HARD RULE 2026-05-27):
 every LLM/model API call in this paper's research work is JSONL-logged in an
 academically-acceptable schema, published on the public GitHub mirror at
 Zenodo upload, and cited in paper.md by GitHub URL.
@@ -22,7 +22,7 @@ Pattern:
         logger.capture_response(response)
     # On exit: writes JSONL row to logs/3.5b_render_PB_abstract_to_chinese_calls.jsonl
 
-Schema (per feedback_llm_call_professional_logging.md):
+Schema (per [internal ref removed]):
 - log_format_version + phase + operation + operator + operator_role + model_version
 - timestamp_utc + system_prompt + user_prompt + parameters
 
@@ -107,7 +107,7 @@ PRICE_TABLE: dict[str, dict[str, float]] = {
     "deepseek-chat": {"input": 0.27, "output": 1.10},
     "deepseek-coder": {"input": 0.27, "output": 1.10},
     # Perplexity (May 2026 list; discovery operator_role only per
-    # reference_perplexity_role_in_t4_re). Excludes per-request search
+    # [internal ref removed]). Excludes per-request search
     # surcharges, which the caller should add via set_cost_estimate.
     "sonar": {"input": 1.00, "output": 1.00},
     "sonar-pro": {"input": 3.00, "output": 15.00},

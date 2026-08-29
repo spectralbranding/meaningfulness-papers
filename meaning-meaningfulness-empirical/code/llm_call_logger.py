@@ -103,11 +103,36 @@ PRICE_TABLE: dict[str, dict[str, float]] = {
     "claude-fable-5": {"input": 10.00, "output": 50.00},
     "claude-haiku-4-5-20251001": {"input": 1.00, "output": 5.00},
     "claude-haiku-4-5": {"input": 1.00, "output": 5.00},
-    # OpenAI
+    # OpenAI -- STANDARD tier, SHORT-context band, checked against the published
+    # pricing page 2026-08-24. Two things to know before trusting a row here:
+    #
+    #   1. The gpt-5.x lines price in TWO CONTEXT BANDS. Everything below is the
+    #      short band (<272K for 5.4/5.5). Above it, input and output both rise --
+    #      roughly 2x input and 1.5x output -- so a long-context run is UNDER-costed
+    #      by this table. Same shape as the xAI note further down. Override via
+    #      set_cost_estimate when a call crosses the band.
+    #   2. Batch and Flex are ~50% of standard; Fast mode is ~2x. Cached input is
+    #      ~10% of input on the 5.x line. None of that is modelled here; the caller
+    #      overrides.
+    #
+    # CORRECTED 2026-08-24: gpt-5.4-mini was carried at 0.55/2.20, which is
+    # o4-mini's price, not its own -- a copy from the wrong row that understated
+    # output by roughly 2x on every logged call. Published price is 0.75/4.50.
+    "gpt-5.6-sol": {"input": 4.00, "output": 20.00},
+    "gpt-5.6-terra": {"input": 2.00, "output": 12.00},
+    "gpt-5.6-luna": {"input": 0.20, "output": 1.20},
     "gpt-5.5-2026-04-23": {"input": 5.00, "output": 30.00},
     "gpt-5.5": {"input": 5.00, "output": 30.00},
-    "gpt-5.4-mini-2026-03-17": {"input": 0.55, "output": 2.20},
-    "gpt-5.4-mini": {"input": 0.55, "output": 2.20},
+    "gpt-5.5-pro": {"input": 30.00, "output": 180.00},
+    "gpt-5.4": {"input": 2.50, "output": 15.00},
+    "gpt-5.4-mini-2026-03-17": {"input": 0.75, "output": 4.50},
+    "gpt-5.4-mini": {"input": 0.75, "output": 4.50},
+    "gpt-5.4-nano": {"input": 0.20, "output": 1.25},
+    "gpt-5.2": {"input": 1.75, "output": 14.00},
+    "gpt-5.1": {"input": 1.25, "output": 10.00},
+    "gpt-5": {"input": 1.25, "output": 10.00},
+    "gpt-5-mini": {"input": 0.25, "output": 2.00},
+    "gpt-5-nano": {"input": 0.05, "output": 0.40},
     "gpt-4o-2024-11-20": {"input": 2.50, "output": 10.00},
     "gpt-4o": {"input": 2.50, "output": 10.00},
     "gpt-4o-mini-2024-07-18": {"input": 0.15, "output": 0.60},

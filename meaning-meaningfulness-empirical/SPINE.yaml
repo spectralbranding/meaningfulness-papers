@@ -17,7 +17,7 @@ paper_a_companion_key: "2026ao"   # theoretical-foundation paper
 theoretical_predecessor:
   paper_key: "2026ao"
   spine_doc_version: "0.7.3"
-  spine_path: "[internal path removed] (in worktree [internal path removed])"
+  spine_path: "[internal path removed] (authored in a separate worktree)"
   concept_doi: "[DOI reserved at joint Zenodo upload]"
   inheritance_mode: "namespaced_reference"
   inherited_elements:

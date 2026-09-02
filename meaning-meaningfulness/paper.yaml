@@ -107,10 +107,12 @@ acceptance:
   falsification: If σ requires inspecting any R(S, c, ℓ, m) to produce S, the middle layer is a projection
     from rendering rather than from log, and the hierarchy collapses to two-level.
 - claim_id: P2
-  criterion: Holds if organizations (research labs, consulting firms, standards bodies) that publish the
-    semantic substrate (S) of their knowledge artifacts as a first-class artifact achieve higher rates
+  criterion: 'Holds if organizations (research labs, consulting firms, standards bodies) that publish
+    the semantic substrate (S) of their knowledge artifacts as a first-class artifact achieve higher rates
     of knowledge recombination than organizations that publish only the rendering (R), under boundary
-    conditions C1–C4.
+    conditions C1–C4. a working version organizational-outcome reframing: "Labs that publish spines exhibit
+    higher citation-weighted derivative work (extension, contradiction, or refinement of locked propositions)
+    within 24–36 months than matched labs that publish renderings only.".'
   falsification: Under C1–C4, an organization that publishes only R achieves recombination rates indistinguishable
     from a matched organization that publishes S over a 24–36 month observation window. Empirical test
     in Paper B v2.0.0+ once prospective lab-cohort data is available; v1.0.0 illustration only.
@@ -122,7 +124,9 @@ acceptance:
     β/δ point estimates from N=2 twin-pair extractions; v2.0.0+ supplies confidence intervals; v4.0.0
     supplies SMJ-scale falsification test.
 - claim_id: P4
-  criterion: Holds if for any artifact whose SPINE.
+  criterion: Holds if for any artifact whose SPINE.yaml is locked (propositions + dependencies + evidence-anchors
+    + boundary conditions all explicit), two prose renderings of the same spine arrive at the same set
+    of conclusions iff both preserve the spine's structural elements.
   falsification: Two faithful renderings of the same locked spine arrive at DIFFERENT conclusions on an
     essential proposition without either one having broken the spine. (If found, the renderings would
     need a hidden spine-layer difference, which contradicts the spine-lock hypothesis.)

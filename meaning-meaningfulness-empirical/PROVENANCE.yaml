@@ -14,7 +14,7 @@ date: "2026-05-27"
 internal_drafting_close_date: "2026-05-27"
 
 drafting_session: "Four working sessions: initial drafting, the P4 reframe pass, a post-draft review cycle, and a deep-path revision pass."
-worktree_path: "[internal path removed]"
+worktree_path: "a separate worktree of this repo, on the branch below"
 branch: "feature/meaningfulness-empirical-companion"
 forked_from: "main commit 87b6642f ([internal ref removed] init prompt landed)"
 
@@ -83,7 +83,7 @@ phase_execution:
   v1_2_0_p4_reframe_session_f:
     rationale: "PIVOT_SPLIT_PLAN + PAPER_B_2026ap_SCOPING ([internal ref removed]-prime) allocated Paper B to test paper_a:P2 + paper_a:P3 while Paper A retained P1 + P4. That scoping was wrong relative to the original research idea (user 2026-05-27): 'A paper is meaningfulness (prose). The structured deeper tier is meaning (manageable by AI). The same meaning can be re-rendered into different prose preserving the same conclusions.' This is paper_a:P4 verbatim. Paper B v1.1.0 framed Rec values as 'P2 existence proof' — wrong interpretation. v1.0.0 P4 REFRAME reinterprets Rec values as paper_a:P4 evidence (substrate-preservation across two prose renderings)."
     user_direction_date: "2026-05-27"
-    user_direction_anchor: "[internal path removed][internal ref removed] HARD CORRECTION"
+    user_direction_anchor: "[[[internal ref removed]]] HARD CORRECTION"
     files_revised:
       - "paper.md (title + abstract + intro + Theory + Method + Results + Discussion + Limitations; ~5,800 words)"
       - "SPINE.yaml v0.3.0 (PB_F1 reframed from P2 to P4; PB_F2 demoted from P3 primary to P3 supportive; PB_M2 + PB_M3 statements reframed; PB_BC1 softened on Bikard independence; new PB_F4 P4 self-application node; thesis rewritten; title updated; v0.3.0 changelog row added)"

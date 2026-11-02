@@ -1,6 +1,6 @@
 [![MIT License](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
 [![CC-BY 4.0](https://img.shields.io/badge/Data-CC--BY_4.0-lightgrey.svg)](LICENSE-data)
-![Last Updated](https://img.shields.io/badge/updated-2026--08--07-success)
+![Last Updated](https://img.shields.io/badge/updated-2026--11--02-success)
 
 # meaningfulness-papers
 
@@ -35,6 +35,7 @@ Empirical companion that demonstrates Paper A's **P4** on two management-theory 
 **Invention as a Structural Operation: Why the Abductive Jump Is a Re-Coordinatization of the Space of Description, Not a Sensory Leap**
 
 - Concept DOI: [10.5281/zenodo.21653102](https://doi.org/10.5281/zenodo.21653102)
+- Current version: v1.1.0 (November 2026); cite the concept DOI, which resolves to it
 - v1.0.0 DOI: [10.5281/zenodo.21653103](https://doi.org/10.5281/zenodo.21653103)
 - License: CC BY 4.0 (paper) + MIT (code)
 

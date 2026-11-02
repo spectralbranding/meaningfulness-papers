@@ -13,7 +13,7 @@ meta:
     orcid: 0009-0000-6893-9231
     affiliation: Independent Researcher
   doi: 10.5281/zenodo.21653102
-  date: '2026-07-28'
+  date: '2026-11-02'
   venue: Preprint
   license: CC-BY-4.0
   keywords:
@@ -77,10 +77,12 @@ claims:
   statement: 'The general-relativity move — promoting the measured coincidence of inertial and gravitational
     mass from a contingent numerical equality to a structural identity (a quotient / geometric re-topologization
     on the existing representation) — is a composition of re-topologize and adjoin-dimension moves, not
-    a fresh percept. HOWEVER, the empirical constraint was active during generation: the correct curvature
-    structure was found early and abandoned for roughly three years because it failed the Newtonian limit.
-    Generation is therefore search under joint intrinsic and empirical constraints; the embodied "elevator"
-    thought experiment is the human rendering of the structural move, not its content.'
+    a fresh percept. HOWEVER, a constraint was active during generation (the correspondence constraint
+    of P10): the correct curvature structure was found early and abandoned for roughly three years because
+    it failed the Newtonian limit. Generation is therefore constrained search: a candidate must first
+    be admissible, and admissible candidates are ranked under joint intrinsic and empirical constraints;
+    the embodied "elevator" thought experiment is the human rendering of the structural move, not its
+    content.'
   testable: false
   tested_in_paper: false
   status: not_tested
@@ -251,6 +253,88 @@ claims:
   status: not_tested
   depends_on:
   - C1
+- id: P10
+  type: proposition
+  statement: 'Selection is preceded by an admissibility constraint, not a fifth term of the functional
+    of P4. A candidate representation R'' is admissible only with a return map to R whose loss is bounded
+    where R is known to work; the functional ranks only admissible candidates. This is the general correspondence
+    principle (a successor must reproduce the well-confirmed part of its predecessor in the predecessor''s
+    domain). The Newtonian limit is this constraint in the general-relativity case, where the candidate
+    was dropped, not down-weighted. The same structure appears where adjoining dimensions makes a problem
+    easy: semidefinite lift-and-round in optimization, and Koopman embeddings that linearize nonlinear
+    dynamics in a lifted space and are used through finite-dimensional approximation. Consequence for
+    the adjoin-a-dimension move: an adjunction without a return map is a description, not yet an invention.
+    The constraint adds no weight to the functional.'
+  testable: false
+  tested_in_paper: false
+  status: not_tested
+  depends_on:
+  - P2
+  - P3
+  - P4
+- id: P11
+  type: proposition
+  statement: 'Selection acts on instances as well as on solutions. Successfully folded proteins show a
+    relative lack of conflicting interactions (the principle of minimal frustration), and the proteins
+    that exist fold reliably because selection kept sequences with funneled folding energy landscapes,
+    which simplify the search problem of folding. Instances that exist are therefore easy for the process
+    that selected them. This does not make evolution''s search fast: the search remains blind, slow and
+    wasteful.'
+  testable: false
+  tested_in_paper: false
+  status: not_tested
+  depends_on:
+  - P9
+- id: P12
+  type: proposition
+  statement: 'The difficulty of the glue move sits in finding the shared substructure, not in forming
+    the composite. On a cross-domain blending benchmark across 35 language models, a valid generic space
+    was found in 43.4% of blends, and a coherent blend followed in 97.1% of the cases that had one. LIMITS:
+    validity was judged by a panel of three language models (ICC .48 to .67); the human comparison sample
+    was lay adults recruited online; the benchmark scores have no analogue of the axiom description length,
+    symmetry or closure terms of the functional of P4. The benchmark supports the location of difficulty
+    in the glue move; it does not test the functional or the mechanizability claim.'
+  testable: false
+  tested_in_paper: false
+  status: not_tested
+  depends_on:
+  - P2
+- id: P13
+  type: proposition
+  statement: Two testable conditions follow from the market instance (P8). (a) Time that automation frees
+    turns into representation-changing work only for agents with a method for it; without one it is absorbed
+    by more work inside the old representation. This method-dependence is a prediction, observable in
+    how freed time is spent; existing evidence shows only that freed time did not appear in earnings or
+    recorded hours, with employers absorbing AI through task reorganization. (b) Automation raises the
+    floor of execution most for the least skilled, so differences between agents move up to the choice
+    of representation; observable in where performance differences between firms concentrate after adoption.
+  testable: false
+  tested_in_paper: false
+  status: not_tested
+  depends_on:
+  - P8
+- id: P14
+  type: proposition
+  statement: In a qualitative interview study of innovation search, practitioners identify machine help
+    with search that crosses language, discipline and geographic boundaries. The design is interviews
+    with self-report, sampled through one vendor's customer network, so the study documents practitioner
+    accounts and measures no innovation outcome.
+  testable: false
+  tested_in_paper: false
+  status: not_tested
+  depends_on:
+  - P2
+- id: L4
+  type: proposition
+  statement: LIMITATION. The correspondence constraint of P10 is a filter on candidates and adds no weight
+    to the functional; the robustness check on the weights of the functional (L2) is unchanged by it.
+    The bound on the return map's loss is stated, not operationalized, in this paper.
+  testable: false
+  tested_in_paper: false
+  status: not_tested
+  depends_on:
+  - P10
+  - L2
 methodology:
   type: theoretical
   design: Theoretical derivation.
@@ -311,7 +395,7 @@ dependencies:
   doi: 10.7551/mitpress/4627.001.0001
 - relationship: extends
   claim: 'anchor: schmidhuber-2008-driven-by-compression'
-  doi: 10.1007/978-3-540-85563-7_2
+  doi: 10.1007/978-3-642-02565-5_4
 - relationship: extends
   claim: 'anchor: magnani-2009-abductive-cognition'
   reference: magnani-2009-abductive-cognition
@@ -324,6 +408,36 @@ dependencies:
 - relationship: extends
   claim: 'anchor: gould-vrba-1982-exaptation'
   doi: 10.1017/S0094837300004310
+- relationship: extends
+  claim: 'anchor: post-1971-correspondence-invariance-heuristics'
+  reference: post-1971-correspondence-invariance-heuristics
+- relationship: extends
+  claim: 'anchor: goemans-1995-improved-approximation-algorithms'
+  doi: 10.1145/227683.227684
+- relationship: extends
+  claim: 'anchor: koopman-1931-hamiltonian-systems-transformation'
+  doi: 10.1073/pnas.17.5.315
+- relationship: extends
+  claim: 'anchor: brunton-2022-modern-koopman-theory'
+  doi: 10.1137/21m1401243
+- relationship: extends
+  claim: 'anchor: wolynes-2015-evolution-energy-landscapes'
+  doi: 10.1016/j.biochi.2014.12.007
+- relationship: extends
+  claim: 'anchor: bryngelson-1987-spin-glasses-statistical'
+  doi: 10.1073/pnas.84.21.7524
+- relationship: extends
+  claim: 'anchor: schapiro-2025-measuring-combinatorial-creativity'
+  doi: 10.48550/arXiv.2509.21043
+- relationship: extends
+  claim: 'anchor: humlum-2025-still-waters-rapid'
+  doi: 10.3386/w33777
+- relationship: extends
+  claim: 'anchor: brynjolfsson-2025-generative-ai-at'
+  doi: 10.1093/qje/qjae044
+- relationship: extends
+  claim: 'anchor: hassan-2026-searching-together-humanai'
+  doi: 10.1016/j.respol.2026.105597
 contradictions: []
 repositories:
 - platform: GitHub

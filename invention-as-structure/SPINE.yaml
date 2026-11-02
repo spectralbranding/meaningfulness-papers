@@ -17,7 +17,7 @@
 # predicate, and make no claim over open-ended empirical discovery.
 
 spine_version: "0.1"
-spine_doc_version: "0.2.0"
+spine_doc_version: "0.3.0"
 paper_key: "invention-as-structure"
 provenance: generative
 title: >-
@@ -118,11 +118,12 @@ propositions:
       inertial and gravitational mass from a contingent numerical equality to a
       structural identity (a quotient / geometric re-topologization on the
       existing representation) — is a composition of re-topologize and
-      adjoin-dimension moves, not a fresh percept. HOWEVER, the empirical
-      constraint was active during generation: the correct curvature structure
-      was found early and abandoned for roughly three years because it failed the
-      Newtonian limit. Generation is therefore search under joint intrinsic and
-      empirical constraints; the embodied "elevator" thought experiment is the
+      adjoin-dimension moves, not a fresh percept. HOWEVER, a constraint was
+      active during generation (the correspondence constraint of P10): the correct
+      curvature structure was found early and abandoned for roughly three years
+      because it failed the Newtonian limit. Generation is therefore constrained
+      search: a candidate must first be admissible, and admissible candidates
+      are ranked under joint intrinsic and empirical constraints; the embodied "elevator" thought experiment is the
       human rendering of the structural move, not its content.
     antecedents: [P1, P2]
     body_sections: ["Case: the general-relativity move, corrected"]
@@ -358,6 +359,134 @@ propositions:
       - type: citation
         anchor: "Kauffman (2000); Fodor (2000) [UNVERIFIED]."
 
+  - id: P10
+    statement: >-
+      Selection is preceded by an admissibility constraint, not a fifth term of
+      the functional of P4. A candidate representation R' is admissible only
+      with a return map to R whose loss is bounded where R is known to work; the
+      functional ranks only admissible candidates. This is the general
+      correspondence principle (a successor must reproduce the well-confirmed
+      part of its predecessor in the predecessor's domain). The Newtonian limit
+      is this constraint in the general-relativity case, where the candidate was
+      dropped, not down-weighted. The same structure appears where adjoining
+      dimensions makes a problem easy: semidefinite lift-and-round in
+      optimization, and Koopman embeddings that linearize nonlinear dynamics in
+      a lifted space and are used through finite-dimensional approximation.
+      Consequence for the adjoin-a-dimension move: an adjunction without a
+      return map is a description, not yet an invention. The constraint adds no
+      weight to the functional.
+    antecedents: [P2, P3, P4]
+    body_sections: ["The general-relativity case, corrected", "A structural account of invention", "Limitations"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Post (1971) for the general correspondence principle, which states the
+          requirement qualitatively; the bounded-loss formulation is this
+          paper's. Goemans and Williamson (1995) for lift-and-round with a
+          proven approximation ratio; Koopman (1931) and Brunton, Budisic,
+          Kaiser and Kutz (2022) for the Koopman operator and its
+          finite-dimensional use. Not cited for a quantitative loss bound or for
+          any claim about mechanized search.
+
+  - id: P11
+    statement: >-
+      Selection acts on instances as well as on solutions. Successfully folded
+      proteins show a relative lack of conflicting interactions (the principle
+      of minimal frustration), and the proteins that exist fold reliably because
+      selection kept sequences with funneled folding
+      energy landscapes, which simplify the search problem of folding. Instances
+      that exist are therefore easy for the process that selected them. This
+      does not make evolution's search fast: the search remains blind, slow and
+      wasteful.
+    antecedents: [P9]
+    body_sections: ["The same moves without a mind: evolution"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Wolynes (2015) on funneled folding landscapes and the imprint of that
+          selection constraint on existing protein sequences. Not cited for the
+          worst-case complexity of protein folding.
+      - type: citation
+        anchor: >-
+          Bryngelson and Wolynes (1987), the origin of the principle of minimal
+          frustration in successfully folded proteins. Not cited for evolution
+          or selection, which the paper does not discuss.
+
+  - id: P12
+    statement: >-
+      The difficulty of the glue move sits in finding the shared substructure,
+      not in forming the composite. On a cross-domain blending benchmark across
+      35 language models, a valid generic space was found in 43.4% of blends,
+      and a coherent blend followed in 97.1% of the cases that had one.
+      LIMITS: validity was judged by a panel of three language models
+      (ICC .48 to .67); the human comparison sample was lay adults recruited
+      online; the benchmark scores have no analogue of the axiom description
+      length, symmetry or closure terms of the functional of P4. The benchmark
+      supports the location of difficulty in the glue move; it does not test the
+      functional or the mechanizability claim.
+    antecedents: [P2]
+    body_sections: ["A structural account of invention"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Schapiro et al. (2025), the Kombine benchmark (unpublished at the
+          time of writing). Cited for the measured rates only; not for
+          scientific invention, for human creativity in general, or for a
+          machine-checkable validity test.
+
+  - id: P13
+    statement: >-
+      Two testable conditions follow from the market instance (P8). (a) Time
+      that automation frees turns into representation-changing work only for
+      agents with a method for it; without one it is absorbed by more work
+      inside the old representation. This method-dependence is a prediction,
+      observable in how freed time is spent; existing evidence shows only that
+      freed time did not appear in earnings or recorded hours, with employers
+      absorbing AI through task reorganization. (b) Automation raises the floor
+      of execution most for the least skilled, so differences between agents
+      move up to the choice of representation; observable in where performance
+      differences between firms concentrate after adoption.
+    antecedents: [P8]
+    body_sections: ["The same move in markets"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Humlum and Vestergaard (2025), a working paper not peer-reviewed, for
+          null effects on earnings and recorded hours and absorption through
+          task reorganization; not for what agents with a method do with freed
+          time. Brynjolfsson, Li and Raymond (2025) for larger gains among less
+          experienced and lower-skilled workers.
+
+  - id: P14
+    statement: >-
+      In a qualitative interview study of innovation search, practitioners identify
+      machine help with search that crosses language, discipline and geographic
+      boundaries. The design is interviews with self-report, sampled through one
+      vendor's customer network, so the study documents practitioner accounts and
+      measures no innovation outcome.
+    antecedents: [P2]
+    body_sections: ["A structural account of invention"]
+    evidence:
+      - type: citation
+        anchor: >-
+          Hassan and Nair (2026), an inductive study of 41 interviews across 25
+          organizations. Cited for documented practitioner accounts only; not for
+          any causal or quantitative claim.
+
+  - id: L4
+    statement: >-
+      LIMITATION. The correspondence constraint of P10 is a filter on candidates and
+      adds no weight to the functional; the robustness check on the weights of
+      the functional (L2) is unchanged by it. The bound on the return map's loss
+      is stated, not operationalized, in this paper.
+    antecedents: [P10, L2]
+    body_sections: ["Limitations"]
+    evidence:
+      - type: reasoning
+        anchor: >-
+          The constraint ranks nothing; it only removes candidates, so no
+          untested weight is added to the functional.
+
 # ============================================================================
 # Corpus precedents — self-citations (cap 3). Exact keys to CONFIRM against
 # CANONICAL_REFERENCES.md before substrate registration; the meaning/
@@ -436,6 +565,36 @@ external_anchors:
   - citation_key: gould-vrba-1982-exaptation
     role: boundary_object_evidence
     spine_nodes: [P9]
+  - citation_key: post-1971-correspondence-invariance-heuristics
+    role: theoretical_predecessor
+    spine_nodes: [P10]
+  - citation_key: goemans-1995-improved-approximation-algorithms
+    role: supporting_evidence
+    spine_nodes: [P10]
+  - citation_key: koopman-1931-hamiltonian-systems-transformation
+    role: supporting_evidence
+    spine_nodes: [P10]
+  - citation_key: brunton-2022-modern-koopman-theory
+    role: supporting_evidence
+    spine_nodes: [P10]
+  - citation_key: wolynes-2015-evolution-energy-landscapes
+    role: boundary_object_evidence
+    spine_nodes: [P11]
+  - citation_key: bryngelson-1987-spin-glasses-statistical
+    role: boundary_object_evidence
+    spine_nodes: [P11]
+  - citation_key: schapiro-2025-measuring-combinatorial-creativity
+    role: supporting_evidence
+    spine_nodes: [P12]
+  - citation_key: humlum-2025-still-waters-rapid
+    role: supporting_evidence
+    spine_nodes: [P13]
+  - citation_key: brynjolfsson-2025-generative-ai-at
+    role: supporting_evidence
+    spine_nodes: [P13]
+  - citation_key: hassan-2026-searching-together-humanai
+    role: supporting_evidence
+    spine_nodes: [P14]
 
 # ============================================================================
 # INTERNAL ONLY — dropped on public export (scrub_spine_ontology.py) and never

@@ -6,7 +6,7 @@ ORCID: 0009-0000-6893-9231
 
 DOI: [10.5281/zenodo.21653102](https://doi.org/10.5281/zenodo.21653102)
 
-Working Paper v1.0.0 – July 2026
+Working Paper v1.1.0 – July 2026 (revised November 2026)
 
 ## Abstract
 
@@ -57,7 +57,9 @@ conjectures — and makes falsifiable below — that $\mathcal{M}$ has four type
 
 1. **Adjoin a dimension** ($\alpha$): make a latent degree of freedom explicit, adding an
    independent axis to $R$. Observer-indexed time in special relativity, or the metric treated as a
-   dynamical field rather than a fixed backdrop, are adjunctions.
+   dynamical field rather than a fixed backdrop, are adjunctions. An adjunction without a return map to
+   the original representation (the correspondence constraint, below) is a description, not yet an
+   invention.
 2. **Rescale or requantize** ($\rho$): change the unit or granularity of a measurement, including
    quantizing a quantity previously treated as continuous, or moving to a logarithmic or
    renormalized scale.
@@ -80,6 +82,23 @@ not the individual moves. The closure claim is falsifiable within its scope (bel
 whose minimal description requires an operation outside $\{\alpha, \rho, \tau, \gamma\}$ would
 refute it.
 
+On a cross-domain blending benchmark built from random pairs of entities in a general knowledge
+graph, 35 language models found a valid generic space — the structure
+both inputs instantiate — in 43.4% of blends, and a coherent blend followed in 97.1% of the cases
+that had one [@schapiro-2025-measuring-combinatorial-creativity]. On this benchmark the hard step in
+gluing was finding the shared substructure, not forming the composite. The limits belong with the
+result. The item pairs are random entities, not scientific problems; validity was judged by a panel of three language models (ICC .48 to .67), the human comparison
+sample was lay adults recruited online, and the benchmark's scores have no analogue of the axiom
+description length, symmetry, or closure terms of the selection functional below. The benchmark
+supports the location of difficulty in the glue move; it does not test the functional or the
+mechanizability claim.
+
+Hassan and Nair
+[-@hassan-2026-searching-together-humanai] report that practitioners identify machine help with
+search that crosses language, discipline, and geographic boundaries; the study is qualitative,
+based on interviews in which informants report their own practice and sampled through one vendor's
+customer network, so it documents practitioner accounts and measures no innovation outcome.
+
 ## Selection under joint constraints
 
 The move set says what operations are available; it does not say which to apply. The space of
@@ -100,9 +119,11 @@ its content.
 But the clean story that generation precedes validation is historically false, and the paper does
 not tell it. The documentary record of the Zurich notebook shows that Einstein found the
 mathematically correct curvature structure early and abandoned it for roughly three years because it
-failed to reproduce the Newtonian limit; the empirical constraint actively pruned the generative
-search, and at one point derailed it [@janssen-2007-genesis-general-relativity]. Generation is
-therefore search under *joint* constraints. Let a candidate representation $R'$ be scored by
+failed to reproduce the Newtonian limit; that requirement, a constraint on which candidates are
+admissible (stated below), actively pruned the generative search, and at one point derailed it
+[@janssen-2007-genesis-general-relativity]. Generation is therefore constrained search: a candidate
+must first be admissible, and admissible candidates are ranked under *joint* constraints. Let a
+candidate representation $R'$ be scored by
 
 $$
 \mathcal{S}(R') \;=\; \alpha_1\,\mathrm{DL}(A_{R'}) \;-\; \alpha_2\,\mathrm{Sym}(R') \;-\;
@@ -117,10 +138,28 @@ operative compression is of the axioms, not the data — which dissolves the "no
 objection, since data-loss can be near-zero while axiom description length falls steeply (this is
 also the answer to creativity-as-compression, which measures loss on data
 [@schmidhuber-2008-driven-by-compression]). Second, the empirical term $\mathcal{E}$ is often weak
-but rarely absent, and it can act *during* generation, as the notebook shows. Third — and this is
+but rarely absent, and it can act *during* generation, as the evolution case below shows. The
+Zurich notebook shows the same timing for a different constraint: the Newtonian limit is not a term
+of $\mathcal{S}$ but the admissibility condition stated next. Third — and this is
 the scope condition made precise below — within any domain whose compatibility predicate is
 decidable, $\mathcal{M}$ is enumerable and $\mathcal{S}$ is computable; outside such domains the
 paper asserts neither.
+
+One constraint precedes the score. A candidate $R'$ is admissible only with a return map to $R$
+whose loss is bounded where $R$ is known to work, and $\mathcal{S}$ ranks only admissible
+candidates. This is the correspondence principle, which requires a successor theory to reproduce the
+well-confirmed part of its predecessor in the predecessor's domain
+[@post-1971-correspondence-invariance-heuristics]; the bounded-loss form is this paper's
+formulation. The Newtonian limit is this constraint in the general-relativity case: the candidate
+was dropped, not down-weighted. The same structure appears where adjoining dimensions makes a
+problem tractable. Lift-and-round methods in optimization solve a relaxation in a higher-dimensional
+space and round the solution back, with a proven approximation ratio
+[@goemans-1995-improved-approximation-algorithms]; Koopman embeddings represent nonlinear dynamics
+by a linear operator in a lifted space [@koopman-1931-hamiltonian-systems-transformation] and are
+used in practice through finite-dimensional approximations
+[@brunton-2022-modern-koopman-theory]. On this paper's reading, in each case the lift is useful
+because a way back to the original space is available. The constraint is a filter on candidates; it adds no weight
+to $\mathcal{S}$.
 
 That intrinsic selection can drive discovery without a body is not a conjecture, and it is not new:
 machine discovery of scientific regularities from intrinsic signals has a lineage running from the
@@ -136,8 +175,9 @@ symbols has, a priori, no purchase on meaning, so structural moves driven by int
 merely shuffling form [@harnad-1990-symbol-grounding; @bender-koller-2020-climbing-towards-nlu]. The
 reply is not to deny grounding but to locate it. Grounding constrains knowing *which* structural
 hypothesis is true of an external world; it does not block *generating* a well-typed structural
-hypothesis. And it is not wholly downstream: in empirical domains the filter for which move is
-domain-coherent is exactly the empirical term $\mathcal{E}$, which co-selects during generation; in
+hypothesis. And it is not wholly downstream: in empirical domains the filters for which move is
+domain-coherent are the correspondence constraint and the empirical term $\mathcal{E}$, both of
+which act during generation; in
 formal domains $\mathcal{E}$ is absent and invention is fully intrinsic. This is why the
 paper rejects a pipeline with separate `generate` and `validate` modules — in empirical science they
 are the same module — while preserving the claim that the generative act, in formalized domains,
@@ -200,13 +240,22 @@ evidence that structural invention is substrate- *and* mind-independent.
 
 Selection is the joint functional of the preceding section, with fitness-in-environment as the
 empirical term $\mathcal{E}$. Crucially, $\mathcal{E}$ acts *during* variation, not after it:
-evolution is the paradigm case that generation and validation are one process, corroborating the
-correction made to the general-relativity story. And because the biological adjacent possible is not
+evolution is the paradigm case that generation and validation are one process. The
+general-relativity case showed the same timing for the correspondence constraint; here the
+constraint acting during generation is $\mathcal{E}$ itself. And because the biological adjacent possible is not
 finitely prestatable, evolution operates *outside* a decidable-compatibility domain — which is
 precisely why its search is blind, slow, and wasteful rather than the fast computable selection
 available in formalized domains. Evolution is thus an honest illustration of the account's boundary,
 not a counterexample to it. It is worth noting that the module operators above — fork, rebase, merge
 — are the computational cognates of duplication-divergence and symbiogenesis.
+
+Selection acts on instances as well as on solutions. Successfully folded proteins show a relative
+lack of conflicting interactions, the principle of minimal frustration
+[@bryngelson-1987-spin-glasses-statistical], and existing proteins fold reliably because selection
+kept sequences with funneled folding energy landscapes, which simplify the search problem of folding
+[@wolynes-2015-evolution-energy-landscapes]. The
+instances that exist are therefore easy for the process that selected them. This does not make
+evolution's search fast: the search remains blind, slow, and wasteful.
 
 ## The same move in markets
 
@@ -216,6 +265,18 @@ lock-in of that coordinate, a phenomenon on the side of meaning rather than a mo
 cannot decide which category to own — as a special case of the same authoring-versus-optimizing
 distinction that separates a representation-changing move from optimization within a fixed
 representation.
+
+Two conditions make this claim testable. First, time that automation frees turns into
+representation-changing work only for agents with a method for it; without one, it is absorbed by
+more work inside the old representation. This method-dependence is a prediction, observable in how
+freed time is spent. Existing evidence is narrower: a working paper on adopters in Denmark found
+precise null effects on earnings and recorded hours, with employers absorbing AI through task
+reorganization [@humlum-2025-still-waters-rapid]. Second, in a study of customer-support agents,
+AI assistance raised productivity most among less experienced and lower-skilled workers
+[@brynjolfsson-2025-generative-ai-at]. If automation raises the floor of execution in this way, the
+differences that remain between agents move up to the choice of representation. This is a
+prediction too, observable in where performance differences
+between firms concentrate after adoption.
 
 ## Scope and boundary conditions
 
@@ -252,7 +313,8 @@ out-of-distribution abstraction bounds the empirical reach, and the paper does n
 [@chollet-2019-measure-of-intelligence]. The existence proof is a companion
 demonstration inside one specification domain; a fuller suite across more move compositions and a
 robustness check on the weighting of $\mathcal{S}$ remain future work before it can bear its full
-weight. And the
+weight. The correspondence constraint adds no weight to $\mathcal{S}$, so that check is unchanged
+by it; the bound on the return map's loss is stated here, not operationalized. And the
 non-prestatability of the adjacent possible means the account does not extend to open-ended
 empirical discovery without an external oracle; the joint-constraint reframe bounds this limitation
 but does not remove it.
@@ -261,7 +323,8 @@ but does not remove it.
 
 The abductive jump is real, but it is not a leap from sensation to axioms that only a grounded body
 can make. It is a re-coordinatization of the space of description — an adjunction, a rescaling, a
-re-topologization, or a gluing — selected under joint intrinsic and empirical constraints. In
+re-topologization, or a gluing — admitted under a correspondence constraint and selected under
+joint intrinsic and empirical constraints. In
 formalized domains the operators are enumerable and the selection computable, and a running
 adjudicator already performs the central move; in open empirical domains the operators still
 describe invention, but the search becomes the blind, prestatement-free process that evolution
@@ -302,8 +365,9 @@ with `python code/four_moves_demo.py` (Python 3.12 and PyYAML; deterministic; ex
 together with its two input module sets under `code/fixtures/` and the vendored negotiator it invokes. The public repository — paper source, the argument
 spine to which every claim is traced, the ontology module, and the demonstration code — is available
 at <https://github.com/spectralbranding/meaningfulness-papers/tree/main/invention-as-structure>. The
-archival record is deposited on Zenodo: concept DOI (all versions)
-[10.5281/zenodo.21653102](https://doi.org/10.5281/zenodo.21653102); this version (v1.0.0)
+archival record is deposited on Zenodo. Cite the concept DOI (all versions)
+[10.5281/zenodo.21653102](https://doi.org/10.5281/zenodo.21653102). This text is v1.1.0; the
+earlier version v1.0.0 is
 [10.5281/zenodo.21653103](https://doi.org/10.5281/zenodo.21653103). No new empirical data were
 collected.
 

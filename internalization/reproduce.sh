@@ -4,9 +4,14 @@
 # Two modes.
 #
 #   analysis-only (default): re-runs every reported statistic from the
-#     committed extractions and ratings in data/. No API keys, no network,
-#     deterministic under the seed in PROTOCOL.yaml. This reproduces every
-#     number in the paper.
+#     extractions and ratings in data/. No API keys; deterministic under the
+#     seed in PROTOCOL.yaml. This reproduces every number in the paper. Two
+#     inputs are fetched over the network when absent, neither needing
+#     credentials: the records (from the Hugging Face dataset of record, DOI
+#     10.57967/hf/9898, where each verbatim span is replaced by the offsets it
+#     resolved to) and the specimen texts (from their public sources, verified
+#     against specimens/MANIFEST.json). Set BK_DATA_DIR to a local download of
+#     the dataset to skip the records fetch.
 #
 #   --collect: additionally re-runs the extraction, alignment and rating calls
 #     (requires ANTHROPIC_API_KEY, GOOGLE_API_KEY, OPENAI_API_KEY, GROK_API_KEY,
@@ -51,8 +56,26 @@ while read -r name; do
 done < <(uv run --with pyyaml python -c "
 import json,pathlib
 m=json.loads(pathlib.Path('specimens/MANIFEST.json').read_text())
-print('\n'.join((m.get('specimens') or m).keys()))
+print('\n'.join((m.get('items') or m.get('specimens') or {}).keys()))
 ")
+
+# The records are the dataset of record on Hugging Face and are not vendored in
+# the GitHub repository: they carry located offsets, not the verbatim spans, so
+# no specimen text ships with them. A fresh clone has no data/; fetch it.
+if ! ls data/spine_*.json >/dev/null 2>&1; then
+    DS="${BK_DATA_DIR:-hf-data}"
+    if [ ! -d "$DS/records" ]; then
+        echo "== records: fetch the Hugging Face dataset ==" | tee -a "$LOG"
+        uvx --from huggingface_hub hf download spectralbranding/internalization \
+            --repo-type dataset --local-dir "$DS" 2>&1 | tail -1 | tee -a "$LOG"
+    fi
+    for f in "$DS"/records/spine_*.json "$DS"/records/align_*.json "$DS"/records/rating_*.json; do
+        cp "$f" data/
+    done
+    for d in "$DS"/records/*/; do
+        cp -R "${d%/}" data/   # no trailing slash: BSD cp would copy the contents
+    done
+fi
 
 if [[ "${1:-}" == "--fetch" || "$NEED_SPECIMENS" == "1" ]]; then
     echo "== specimens: fetch and hash ==" | tee -a "$LOG"

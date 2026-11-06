@@ -46,3 +46,11 @@ skills/
 .rooignore
 .mcp.json
 .flake8
+
+# Downloaded datasets of record (fetched by reproduce.sh; never vendored)
+*/hf-data/
+*/hf-data-predecessor/
+# Specimen texts are third-party works, fetched and digest-verified by prepare_specimens.py
+internalization/specimens/*.txt
+!internalization/specimens/pilot_2026ao.txt
+unitization/specimens/*.txt

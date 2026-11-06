@@ -85,6 +85,14 @@ def span_offsets(
     """
     out: dict[str, tuple[int, int]] = {}
     for node in graph.get("nodes", []):
+        # Published records carry the offsets each span resolved to instead of
+        # the verbatim span (redact_for_release.py); use them as recorded.
+        if "span_offsets" in node:
+            lo, hi = node["span_offsets"]
+            out[node["id"]] = (int(lo), int(hi))
+            continue
+        if node.get("span_unlocatable"):
+            continue
         span = node.get("span", "")
         loc = None
         para = node.get("para")

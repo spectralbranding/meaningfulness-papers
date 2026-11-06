@@ -62,22 +62,31 @@ def stage(tmp: Path) -> Path:
         (PAPER_DIR / "specimens" / "MANIFEST.json").read_bytes()
     )
 
-    # Extracted graphs, alignments and rater judgments, keeping the pilot-round
-    # subdirectories so a discarded round cannot be mistaken for a reported one.
-    for f in sorted((PAPER_DIR / "data").rglob("*")):
+    # Extracted graphs, alignments, rater judgments, tables and call logs, each
+    # REDACTED by redact_for_release.py: verbatim spans become the offsets they
+    # resolved to, rater quotations and log bodies become digests. The build
+    # refuses unless its specimen gate passes. The pilot-round subdirectories
+    # are kept so a discarded round cannot be mistaken for a reported one.
+    import redact_for_release as R
+
+    release = tmp / "release"
+    R.build(release)
+    if R.specimen_gate(release):
+        raise SystemExit("ABORTED: the specimen gate failed. Nothing uploaded.")
+    for f in sorted((release / "data").rglob("*")):
         if f.is_file():
-            dst = root / "records" / f.relative_to(PAPER_DIR / "data")
+            dst = root / "records" / f.relative_to(release / "data")
             dst.parent.mkdir(parents=True, exist_ok=True)
             dst.write_bytes(f.read_bytes())
-
     # The generated tables the Results section is written from, so a reported
     # value and a computed value cannot drift apart in the dataset either.
-    for f in sorted((PAPER_DIR / "output" / "tables").glob("*")):
+    for f in sorted((release / "tables").glob("*")):
         if f.is_file():
             (root / "records" / f.name).write_bytes(f.read_bytes())
-
-    for f in sorted((PAPER_DIR / "logs").glob("*.jsonl")):
-        (root / "logs" / f.name).write_bytes(f.read_bytes())
+    for f in sorted((release / "logs").rglob("*.jsonl")):
+        dst = root / "logs" / f.relative_to(release / "logs")
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        dst.write_bytes(f.read_bytes())
 
     return root
 
@@ -101,7 +110,10 @@ def main() -> int:
             folder_path=str(root),
             repo_id=repo_id,
             repo_type="dataset",
-            commit_message=f"{SLUG}: campaign drop (protocol + records + call logs)",
+            commit_message=(
+                f"{SLUG}: records and call logs redacted (spans -> offsets, "
+                "quotations and log bodies -> digests); specimen texts withheld"
+            ),
         )
         print(f"uploaded {n} files -> {repo_id}")
     print("DONE. USER ACTION: mint the dataset DOI on HF (Settings -> DOI).")

@@ -41,7 +41,7 @@ User-authorized expansion ([internal ref removed] delta 2026-05-27): extend Phas
 
 ## Execution-ready script
 
-Script: `code/multi_llm_rendering.py` (by author decision: single shared script under the paper's own code/ directory). Run pattern (BWS-injected per fleet convention; reference: `audit/scripts/dr_v1_empirical_cases.py`):
+Script: `code/multi_llm_rendering.py` (by author decision: single shared script under the paper's own code/ directory). Run pattern (BWS-injected per fleet convention):
 
 ```bash
 cd [internal path removed]
@@ -130,7 +130,7 @@ What [internal ref removed] delivers under 3.5b:
 
 - Protocol documented (this file).
 - Operator subset selected and rationalized (YandexGPT + GigaChat + Claude Opus).
-- Execution-ready script skeleton (audit/scripts/dr_phase3_5b_multi_llm_russian_robustness.py): per-operator render functions stubbed; BWS-injection pattern compatible with fleet convention; OAuth2 flow for GigaChat included; per-operator manifest written.
+- Execution-ready script skeleton (code/multi_llm_rendering.py): per-operator render functions stubbed; BWS-injection pattern compatible with fleet convention; OAuth2 flow for GigaChat included; per-operator manifest written.
 - BWS secret-name requirements documented (YANDEXGPT_API_KEY + YANDEXGPT_FOLDER_ID + GIGACHAT_AUTH + ANTHROPIC_API_KEY + OPENAI_API_KEY).
 - Re-extraction + cross-operator preservation analysis sub-pipeline outlined.
 

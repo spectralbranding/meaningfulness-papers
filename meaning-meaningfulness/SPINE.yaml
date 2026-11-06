@@ -2137,7 +2137,7 @@ external_anchors:
     spine_nodes: [P1, intervention]
     body_sections: ["Section 5 — Three-level hierarchy"]
 
-  # ----- v0.8.0 additions ([internal ref removed] Step 4.5c per Grok joint review 2026-05-27) -----
+  # ----- v0.8.0 additions -----
 
   - citation_key: cornelissen-hollerer-seidl-2021-theorizing-forms
     role: theorizing-forms_positioning

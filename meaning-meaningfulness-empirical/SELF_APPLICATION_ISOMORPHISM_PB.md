@@ -14,7 +14,7 @@ falsifier: "< 70% preservation = real P4 falsifier at framework self-application
 
 ## Purpose
 
-Task α (per SESSION_F_COMPLETION_2026-05-27.md and [internal ref removed] init prompt) tests whether Paper B's own structural substrate is preserved when re-rendered into a different prose form — different audience register, different prose conventions, different length, different tone. The same operator (author) acts as a fresh coder reading the Substack rendering and re-extracts a spine; that re-extracted spine is then compared against the source spine for preservation of locked propositions with matching node typing and antecedent edges.
+Task α (per the Phase 4 task plan) tests whether Paper B's own structural substrate is preserved when re-rendered into a different prose form — different audience register, different prose conventions, different length, different tone. The same operator (author) acts as a fresh coder reading the Substack rendering and re-extracts a spine; that re-extracted spine is then compared against the source spine for preservation of locked propositions with matching node typing and antecedent edges.
 
 This is the strongest P4 evidence the framework can produce on its own substrate at v1.0.0. If the re-extracted spine preserves ≥ 90% of the source spine's locked propositions, P4 holds at Paper B's own self-application. If it preserves < 70%, P4 is empirically degraded at the framework's own self-application — a real falsifier that would trigger either schema refinement or honest disclosure that P4 holds only under careful rendering discipline.
 

@@ -168,20 +168,20 @@ bikard_protocol_independence_check:
     verdict: "PARTIAL independence (acceptable for v1.0.0 existence-proof scope; v1.1.0 adds fully-independent pair)"
 
 zenodo_upload_status:
-  paper_b: "v1.0.0 uploaded jointly with Paper A 2026ao on 2026-05-27 per SESSION_I"
+  paper_b: "v1.0.0 uploaded jointly with Paper A 2026ao on 2026-05-27"
   paper_b_concept_doi: "10.5281/zenodo.20409701"
   paper_b_version_doi: "10.5281/zenodo.20409702"
   paper_a_concept_doi: "10.5281/zenodo.20409683"
   paper_a_version_doi: "10.5281/zenodo.20409684"
   paper_a_tip_commit: "c299caca on feature/meaningfulness-paper-predraft worktree"
-  joint_upload_procedure: "14-step (Step 0 + 13-step) per SESSION_I init prompt; based on SESSION_D_COMPLETION_2026-05-26.md original procedure"
+  joint_upload_procedure: "14-step (Step 0 + 13-step) joint upload procedure"
 
 pending_user_decisions:
   - "A further post-draft review pass on v1.0.0 paper.md"
   - "One additional review pass only if the previous one surfaces a small, clearly addressable gap"
   - "v1.1.0 Task δ inter-coder κ execution: independent second-coder onboarding per ranked candidate options in PHASE4_KAPPA_MEASUREMENT_2026-05-27.md §recruitment"
   - "v1.1.0 Task γ cross-language Russian re-rendering (user is native Russian speaker; quality-check cross-rendering before extraction)"
-  - "Joint Zenodo upload Paper A + Paper B trigger ([internal ref removed] scope; 13-step procedure per SESSION_D_COMPLETION_2026-05-26.md)"
+  - "Joint Zenodo upload Paper A + Paper B trigger (13-step procedure)"
   - "Public mirror creation at sbt-papers/meaningfulness-empirical/ ([internal ref removed] scope)"
   - "PDF generation via export/ pipeline ([internal ref removed] scope)"
 ---

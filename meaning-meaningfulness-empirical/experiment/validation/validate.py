@@ -9,7 +9,7 @@ Exit 1 on any validation failures (details printed to stdout).
 
 Optional pre-commit hook note:
     Add to .git/hooks/pre-commit (do not install automatically):
-        uv run python research/meaning-meaningfulness-empirical/experiment/validation/validate.py
+        uv run python experiment/validation/validate.py
     This is a suggestion only; the hook is not installed by this script.
 """
 from __future__ import annotations

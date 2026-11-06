@@ -70,15 +70,15 @@ By design, the public log includes ONLY calls that produce empirical evidence ci
 
 Logs marked `"reconstructed_post_hoc": true` were assembled from the Claude Code session transcript after the LLM-call professional logging HARD RULE arrived mid-session (a later phase). They reflect honest disclosure of the gap between when the work executed and when structured logging was added. Reconstructed entries lack tokens / latency / cost values for the harness-internal Claude rendering operations (claude-via-harness operator); the Crossref calls in Phase 1 have full reconstruction fidelity because the calling script `audit/scripts/verify_2026ap_postdraft_r1_anchors.py` recorded the requests it made.
 
-Reconstruction script: `research/meaningfulness_empirical_companion/code/reconstruct_session_h_logs.py`. Future research-pass calls use real-time logging via `research/meaningfulness_empirical_companion/code/llm_call_logger.py`.
+Reconstruction script: `code/reconstruct_session_h_logs.py`. Future research-pass calls use real-time logging via `code/llm_call_logger.py`.
 
 ## Reproduction guide
 
-1. Clone the public mirror at `sbt-papers/meaningfulness-empirical/` (URL filled at Zenodo upload).
+1. Clone the public mirror at `meaningfulness-papers/meaning-meaningfulness-empirical/`.
 2. For each phase, the JSONL log + the artifacts in the paper's main directory (`RENDERING_*.md`, `VALIDATION_CASE_*.yaml`, `*_ISOMORPHISM*.md`) together let an independent reader reproduce the result chain.
-3. For Phase 1 anchor verification: rerun `audit/scripts/verify_2026ap_postdraft_r1_anchors.py` against the live Crossref API to confirm the 2 VERIFIED / 10 NF classification (results may drift if Crossref metadata updates; the log preserves point-in-time provenance).
-4. For Phases 2, 2.5, 3 Claude renderings: the log captures the system prompt + user prompt + the response summary. Full rendered articles are at `research/meaningfulness_empirical_companion/RENDERING_*.md`. An independent reader can re-render with any AI operator using the same prompts to compare against this paper's renderings.
-5. For Phase 3.5b multi-LLM cross-family renderings (v1.1.0 execution): the script `research/meaningfulness_empirical_companion/code/multi_llm_rendering.py` uses `llm_call_logger.py` with real-time logging from invocation; results land in `phase_3.5b_*.jsonl` files at v1.1.0 release.
+3. For Phase 1 anchor verification: re-resolve the logged anchors against the live Crossref API to confirm the 2 VERIFIED / 10 NF classification (results may drift if Crossref metadata updates; the log preserves point-in-time provenance).
+4. For Phases 2, 2.5, 3 Claude renderings: the log captures the system prompt + user prompt + the response summary. Full rendered articles are at `RENDERING_*.md` in the paper directory. An independent reader can re-render with any AI operator using the same prompts to compare against this paper's renderings.
+5. For Phase 3.5b multi-LLM cross-family renderings (v1.1.0 execution): the script `code/multi_llm_rendering.py` uses `llm_call_logger.py` with real-time logging from invocation; results land in `phase_3.5b_*.jsonl` files at v1.1.0 release.
 6. Internal review activity is logged via `llm_call_logger.py` integration; those review logs are internal-only (see Internal scope above) and are not published.
 
 ## Redaction audit

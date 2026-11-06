@@ -22,7 +22,7 @@ NOT fired in [internal ref removed].
 
 Run pattern (BWS-injected per fleet convention):
     bws run -- uv run --with openai --with anthropic --with httpx \\
-        python audit/scripts/dr_phase3_5b_multi_llm_russian_robustness.py \\
+        python code/multi_llm_rendering.py \\
         --source-text [internal path removed] \\
         --source-extract abstract \\
         --operators yandexgpt gigachat claude_opus \\
@@ -30,8 +30,7 @@ Run pattern (BWS-injected per fleet convention):
         --seed 42
 
 The `bws run` wrapper injects API keys from Bitwarden Secrets Manager into
-the environment before exec. See audit/scripts/dr_v1_empirical_cases.py for
-the reference pattern.
+the environment before exec.
 
 Random seed fixed at 42 per PAPER_QUALITY_STANDARDS 37a. Outputs include
 per-operator rendering files + per-operator re-extracted spine YAMLs +

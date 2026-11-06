@@ -176,7 +176,7 @@ The Phase 5 integrative-theory rewrite and the §Limitations / §Method-extracti
 
 ## Cross-reference
 
-- Source: [internal ref removed] init prompt §Phase 4 Task δ + SESSION_F_COMPLETION_2026-05-27.md §v1.0.0 task α/β/γ/δ — DEFERRED + Paper A 2026ao §Method-single-coder-reliability + paper_a:axiom_A1.
+- Source: Phase 4 task plan (task δ; tasks α/β/γ/δ deferred at v1.0.0) + Paper A 2026ao §Method-single-coder-reliability + paper_a:axiom_A1.
 - Companion: PHASE1_ANCHOR_VERIFICATION_2026-05-27.md (Phase 1 sister artifact); SELF_APPLICATION_ISOMORPHISM_PB.md (Phase 2 sister artifact); TWIN_PAIR_ISOMORPHISM_PB_FOCAL.md §8 (Phase 3 sister artifact).
 - Successor: PHASE4_KAPPA_RESULTS_v1.1.0.md (to be created at v1.1.0 execution).
 

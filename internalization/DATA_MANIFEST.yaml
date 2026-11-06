@@ -2,8 +2,9 @@
 #
 # What the validation run produced, where it lives, and what a reader needs in
 # order to reproduce a reported number. The rule the layout follows: everything
-# required to recompute the results is committed; the specimen texts themselves
-# are not, because they are third-party works. `code/prepare_specimens.py`
+# required to recompute the results is published; the specimen texts themselves
+# are not, because they are third-party works, and neither is any field that
+# quotes them at length (see public_record below). `code/prepare_specimens.py`
 # re-fetches them from public sources and verifies them against the digests in
 # specimens/MANIFEST.json, so the inputs are reconstructible without being
 # redistributed.
@@ -34,14 +35,29 @@ not_redistributed:
   - specimens/*.txt               # third-party texts; re-fetched by prepare_specimens.py
   - specimens/*.pdf               # ditto
 
+public_record:
+  # Since v1.1.0 (2026-11-06) the records are published once, in redacted form,
+  # as the dataset; this repository carries the code, the tables and the manifest.
+  repository:
+    - code/                            # harness, scorers, redactor, unit tests
+    - output/tables/                   # computed statistics (targets.json withheld: it quotes)
+    - specimens/MANIFEST.json          # source URL, sha256, word count per input
+    - specimens/pilot_2026ao.txt       # the author's own CC BY text
+  dataset: "10.57967/hf/9898"          # spectralbranding/internalization on Hugging Face
+  dataset_contents:
+    - records/                         # graphs, alignments, ratings; spans as character offsets + digest
+    - logs/                            # call metadata; prompt and response bodies as sha256 digests
+    - protocol/                        # PROTOCOL, DECISION_RULE, READER_MODEL, specimen manifest
+  redaction: code/redact_for_release.py  # gate: no published string shares >100 chars with a specimen
+
 dataset_of_record: >-
-  The extracted graphs in data/ are the observations. They were produced by two
+  The extracted graphs are the observations. They were produced by two
   hosted models whose behaviour is epoch-pinned, so re-collection yields a new
   epoch rather than a byte-identical replication; the committed graphs are what
   every reported number is computed from.
 
 reproduce:
-  analysis_only: "./reproduce.sh"                    # no keys, no network, deterministic
+  analysis_only: "./reproduce.sh"                    # no keys, deterministic; downloads the dataset when data/ is empty
   re_fetch_inputs: "./reproduce.sh --fetch"
   re_collect: "bws run -- ./reproduce.sh --collect"  # new epoch, not a replication
   seed: 20260809

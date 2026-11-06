@@ -13,7 +13,7 @@ meta:
     orcid: 0009-0000-6893-9231
     affiliation: Independent Researcher
   doi: 10.5281/zenodo.21828980
-  date: '2026-08-07'
+  date: '2026-11-06'
   venue: Preprint
   license: CC-BY-4.0
   keywords:
@@ -115,7 +115,7 @@ acceptance:
     same declared reader produce dependency graphs whose agreement is at chance, the procedure does not
     specify an operation and P1 is false.
 - claim_id: P2
-  criterion: Holds if a renderer given only rendered prose can weight content only by prose mass, while
+  criterion: Holds if A renderer given only rendered prose can weight content only by prose mass, while
     structural load is a property of the dependency graph.
   falsification: If prose mass and graph-derived structural load are strongly correlated across a corpus
     of argumentative artifacts, the diagnosis is empty and P2 is false. The paper must measure this correlation

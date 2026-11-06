@@ -84,7 +84,15 @@ def seed() -> int:
 
 
 def specimen_text(name: str) -> str:
-    return (SPECIMENS / f"{name}.txt").read_text(encoding="utf-8")
+    """The specimen, or "" when it is absent.
+
+    The specimens are third-party works and are not redistributed. The scoring
+    path needs the text only to locate a verbatim span, and the published
+    records carry the located offsets instead, so a clone without the texts
+    scores identically.
+    """
+    path = SPECIMENS / f"{name}.txt"
+    return path.read_text(encoding="utf-8") if path.exists() else ""
 
 
 # --- schema ----------------------------------------------------------------

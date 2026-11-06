@@ -20,8 +20,12 @@ Run:
 
 from __future__ import annotations
 
+import os
+import random
 import sys
 from pathlib import Path
+
+import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -29,6 +33,10 @@ import score_layers as S  # noqa: E402
 import unit_lib as L  # noqa: E402
 
 PRED = L.PAPER_DIR.parent / "internalization"
+# The predecessor's extracted graphs. In its published form each span is the
+# character offsets it resolved to (2026bk redact_for_release.py), which
+# free_view consumes directly; reproduce.sh fetches them when absent.
+PRED_DATA = Path(os.environ.get("PRED_DATA_DIR", PRED / "data"))
 PRECISION = 0.05
 
 
@@ -44,11 +52,14 @@ def main() -> int:
 
     rows = []
     for doc in L.protocol()["specimens"]:
-        text = (PRED / "specimens" / f"{doc}.txt").read_text(encoding="utf-8")
+        # Only needed to LOCATE verbatim spans; the published records carry
+        # offsets instead, and the specimen texts are not redistributed.
+        spec = PRED / "specimens" / f"{doc}.txt"
+        text = spec.read_text(encoding="utf-8") if spec.exists() else ""
         cont = Continuum()
         located = {}
         for op in ("OP_A", "OP_B"):
-            path = PRED / "data" / f"spine_{doc}__{op}.json"
+            path = PRED_DATA / f"spine_{doc}__{op}.json"
             if not path.exists():
                 break
             graph = L.load_json(path)
@@ -62,6 +73,13 @@ def main() -> int:
                     cont.add(op, Segment(float(start), float(end)), str(types.get(nid)))
         if len(located) < 2:
             continue
+        # The expected-disorder sampler inside compute_gamma is not seeded by the
+        # library, so unseeded the same input moved the gamma by up to ~.04
+        # between runs (found 2026-11-06). Seed it from the protocol's stream
+        # rule, exactly as score_composite.py does.
+        stream = L.stream_seed(doc, "predecessor", "reanalysis", "OP_A|OP_B")
+        np.random.seed(stream % (2**32))
+        random.seed(stream)
         res = cont.compute_gamma(diss, precision_level=PRECISION)
         as_reported = reported[doc]["layer1"]["alpha_nominal"]
         rows.append(

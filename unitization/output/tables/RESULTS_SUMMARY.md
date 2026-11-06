@@ -150,11 +150,11 @@ Computed on repetition 1 of each operator.
 
 | Document | As reported (matched nodes only) | Recomputed (charging boundary disagreement) | Difference |
 |---|---:|---:|---:|
-| VC1 | .663 | .136 | -.527 |
-| VC2 | .637 | .228 | -.409 |
-| VC3 R0 | 1.000 | .235 | -.765 |
-| VC3 R1 | -- | .125 | -- |
-| VC3 R2 | .769 | .245 | -.525 |
+| VC1 | .663 | .208 | -.455 |
+| VC2 | .637 | .214 | -.423 |
+| VC3 R0 | 1.000 | .283 | -.717 |
+| VC3 R1 | -- | .145 | -- |
+| VC3 R2 | .769 | .242 | -.527 |
 
 Declared direction (recomputed worse) holds on 4 of 5 documents.
 

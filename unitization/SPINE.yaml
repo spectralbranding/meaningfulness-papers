@@ -270,10 +270,10 @@ propositions:
         anchor: >-
           EXECUTED 2026-08-08 (see ME5, F8). P3 is SUPPORTED in the direction declared before the
           recomputation. Charging boundary disagreement rather than excluding it moves the
-          predecessor's node layer down by .409 to .765 on the four documents that have a reported
-          comparator: .663 to .136 (VC1), .637 to .228 (VC2), 1.000 to .235 (VC3 R0), .769 to .245
+          predecessor's node layer down by .423 to .717 on the four documents that have a reported
+          comparator: .663 to .208 (VC1), .637 to .214 (VC2), 1.000 to .283 (VC3 R0), .769 to .242
           (VC3 R2). The fifth, VC3 R1, has no reported comparator in the predecessor's record rather
-          than a contradicting one, and is reported as recomputed-only (.125). The declared
+          than a contradicting one, and is reported as recomputed-only (.145). The declared
           unfavourable direction therefore holds wherever it can be evaluated, and the conditioning
           was doing the work attributed to it.
     reporting_status: >-
@@ -290,10 +290,10 @@ propositions:
         anchor: >-
           EXECUTED 2026-08-08 (see ME5, F8). P3 is SUPPORTED in the direction declared before the
           recomputation. Charging boundary disagreement rather than excluding it moves the
-          predecessor's node layer down by .409 to .765 on the four documents that have a reported
-          comparator: .663 to .136 (VC1), .637 to .228 (VC2), 1.000 to .235 (VC3 R0), .769 to .245
+          predecessor's node layer down by .423 to .717 on the four documents that have a reported
+          comparator: .663 to .208 (VC1), .637 to .214 (VC2), 1.000 to .283 (VC3 R0), .769 to .242
           (VC3 R2). The fifth, VC3 R1, has no reported comparator in the predecessor's record rather
-          than a contradicting one, and is reported as recomputed-only (.125). The declared
+          than a contradicting one, and is reported as recomputed-only (.145). The declared
           unfavourable direction therefore holds wherever it can be evaluated, and the conditioning
           was doing the work attributed to it.
     body_sections: ["What Round 1's node layer was worth", "Results"]
@@ -790,10 +790,10 @@ findings:
     provenance: {created_by: "author", created_at: "2026-08-08"}
   - id: F8
     statement: >-
-      THE RE-ANALYSIS MOVES THE PREDECESSOR'S NODE LAYER DOWN BY .409 TO .765 wherever a reported
-      comparator exists: .663 to .136 on VC1, .637 to .228 on VC2, 1.000 to .235 on VC3 R0 and .769
-      to .245 on VC3 R2. VC3 R1 has no reported comparator in the predecessor's record and is
-      reported as recomputed-only (.125). The direction declared before the recomputation therefore
+      THE RE-ANALYSIS MOVES THE PREDECESSOR'S NODE LAYER DOWN BY .423 TO .717 wherever a reported
+      comparator exists: .663 to .208 on VC1, .637 to .214 on VC2, 1.000 to .283 on VC3 R0 and .769
+      to .242 on VC3 R2. VC3 R1 has no reported comparator in the predecessor's record and is
+      reported as recomputed-only (.145). The direction declared before the recomputation therefore
       holds on four of five documents and is contradicted on none.
     source_measurements: [ME5]
     generating_method: M5

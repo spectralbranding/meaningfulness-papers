@@ -13,7 +13,7 @@ meta:
     orcid: 0009-0000-6893-9231
     affiliation: Independent Researcher
   doi: 10.5281/zenodo.21830220
-  date: '2026-08-12'
+  date: '2026-11-06'
   venue: Preprint
   license: CC-BY-4.0
   keywords:
@@ -142,7 +142,7 @@ acceptance:
     matched subset -- that is, if the same conditioning Round 1 was criticised for reappears once units
     are fixed -- the decomposition is not achieved and P1 is false.
 - claim_id: P2
-  criterion: Holds if a between-operator agreement number is uninterpretable without a within-operator
+  criterion: Holds if A between-operator agreement number is uninterpretable without a within-operator
     baseline.
   falsification: 'BROADENED at Phase 3, because the original form was too narrow to fire. P2 is false
     if the within-operator baseline is uninformative -- which now covers two cases rather than one. The
@@ -168,7 +168,9 @@ acceptance:
     the expectation is that Round 1''s node layer looks worse, and the result is reported whichever way
     it comes out.'
 - claim_id: P4
-  criterion: Holds if the located failure is testable and may be refuted.
+  criterion: Holds if the located failure is testable and may be refuted. If edge-level agreement still
+    fails with the units fixed and the noise floor known, then unitization was not where the failure lived,
+    and Round 1's own conclusion is overturned by its declared successor.
   falsification: 'P4 is the falsification instrument rather than a claim to defend: it is stated so that
     the unfavourable branch is pre-committed. Reporting an inconclusive run instead of this branch is
     the specific failure mode the pre-declaration exists to prevent.'

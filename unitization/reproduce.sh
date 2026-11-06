@@ -2,9 +2,15 @@
 # Reproduce the 2026bl run.
 #
 # Default (no flags): ANALYSIS ONLY. Re-derives every reported number from the
-# extraction records already in data/, and needs no API key and no network.
+# extraction records and needs no API key. The records are the Hugging Face
+# dataset of record (DOI 10.57967/hf/9911), not files in this repository; when
+# data/ is empty they are downloaded (no credentials) and unpacked into data/.
+# Set BL_DATA_DIR to an existing download to skip the network. The declared
+# re-analysis also reads the predecessor's graphs (2026bk); when
+# ../internalization/data is empty they come from its dataset (DOI
+# 10.57967/hf/9898), or from PRED_DATA_DIR if set.
 #
-#   ./reproduce.sh                 analysis only -- no keys, no network
+#   ./reproduce.sh                 analysis only -- no keys
 #   ./reproduce.sh --collect       re-run the collection itself (needs keys)
 #   ./reproduce.sh --check-only    check the toolchain and stop
 #
@@ -60,6 +66,27 @@ if [ "$COLLECT" = "1" ]; then
 
   echo "== 5. the 150 extraction calls, in the pre-declared condition order =="
   "${PY_CALLS[@]}" code/extract_graphs.py
+fi
+
+if [ "$COLLECT" = "0" ]; then
+  if ! ls data/extract_*.json >/dev/null 2>&1; then
+    DS="${BL_DATA_DIR:-hf-data}"
+    if [ ! -d "$DS/records" ]; then
+      echo "== records: download the dataset of record =="
+      uvx --from huggingface_hub hf download spectralbranding/unitization-before-extraction \
+        --repo-type dataset --local-dir "$DS" | tail -1
+    fi
+    "${PY_ANALYSIS[@]}" code/fetch_records.py --dataset-dir "$DS"
+  fi
+  if [ -z "${PRED_DATA_DIR:-}" ] && ! ls ../internalization/data/spine_*.json >/dev/null 2>&1; then
+    PD="${BL_PRED_DIR:-hf-data-predecessor}"
+    if [ ! -d "$PD/records" ]; then
+      echo "== predecessor records: download the 2026bk dataset =="
+      uvx --from huggingface_hub hf download spectralbranding/internalization \
+        --repo-type dataset --local-dir "$PD" | tail -1
+    fi
+    export PRED_DATA_DIR="$PD/records"
+  fi
 fi
 
 echo "== analysis: predicted base rates =="

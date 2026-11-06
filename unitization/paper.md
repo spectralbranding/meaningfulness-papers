@@ -6,7 +6,7 @@ ORCID: 0009-0000-6893-9231
 
 DOI: [10.5281/zenodo.21830220](https://doi.org/10.5281/zenodo.21830220)
 
-Working Paper v2.1.0 – August 2026
+Working Paper v2.2.0 – August 2026 (revised November 2026)
 
 ## Abstract
 
@@ -322,7 +322,7 @@ Both members of the published joint-coefficient family were computed in-study on
 
 ### *The declared re-analysis of the predecessor.*
 
-Recomputing the predecessor's node layer under a joint unitizing coefficient — charging boundary disagreement rather than excluding it — moves it down by $.409$ to $.765$ wherever a reported comparator exists: from $.663$ to $.136$ on VC1, $.637$ to $.228$ on VC2, $1.000$ to $.235$ on VC3 R0, and $.769$ to $.245$ on VC3 R2 (Table A3). VC3 R1 has no reported comparator in the predecessor's record and is reported as recomputed-only ($.125$).
+Recomputing the predecessor's node layer under a joint unitizing coefficient — charging boundary disagreement rather than excluding it — moves it down by $.423$ to $.717$ wherever a reported comparator exists: from $.663$ to $.208$ on VC1, $.637$ to $.214$ on VC2, $1.000$ to $.283$ on VC3 R0, and $.769$ to $.242$ on VC3 R2 (Table A3). VC3 R1 has no reported comparator in the predecessor's record and is reported as recomputed-only ($.145$).
 
 **The direction was declared before the recomputation and it holds on four of five documents, contradicted on none.** P3's falsifier — that the recomputation leaves the layer materially unchanged — did not fire. The conditioning was doing the work attributed to it. This remains a re-analysis performed by this paper and not a correction to the predecessor's record: its guidelines stay frozen and its published numbers stand as published.
 
@@ -374,7 +374,7 @@ The models named above also appear in this study as its *instruments*: two are t
 
 Published with this record: the pre-registration as deposited, the propositions and dependency graph behind it, the ontology module for the terms it introduces, and the full statement of every deviation. Published with the run: the extraction harness, the segmentation and adjudication scripts, and every analysis and scoring script, together with the derived tables from which each reported number is rendered — the segmenter-fidelity layer, the predicted base rates, the decomposition, the joint coefficients, the adjudication coverage and the predecessor re-analysis. The code and the machine-readable bundle are in the paper's public repository at [github.com/spectralbranding/meaningfulness-papers](https://github.com/spectralbranding/meaningfulness-papers/tree/main/unitization); the extraction records, the adjudicated inventories, the derived tables and the per-call logs are archived together as a Hugging Face dataset (DOI [10.57967/hf/9911](https://doi.org/10.57967/hf/9911)). The segmenter is a released package pinned by version; the frozen extraction guidelines and the predecessor's run records are available in the predecessor's record [@zharnikov-2026bk-internalization-as-operation].
 
-**Reproduction does not require a provider key.** The repository's orchestrator re-derives the reported numbers from the published records with no network access; re-running the collection itself is a separate flag. The pre-registered ordering is enforced by the orchestrator rather than documented beside it: segmenter fidelity and the predicted base rates are established before any operator call, and there is no path through the script that reverses that. One qualification is stated rather than left to be discovered: the free-condition layer matches nodes by locating each node's span in the document and comparing character offsets, so reproducing those five cells requires the offsets, which are published, together with the specimen texts, which are not redistributed here but are reconstructed by the fetch script from their public sources.
+**Reproduction does not require a provider key.** The repository's orchestrator fetches the published records from the dataset of record (no credentials needed) and re-derives the reported numbers from them; re-running the collection itself is a separate flag. The pre-registered ordering is enforced by the orchestrator rather than documented beside it: segmenter fidelity and the predicted base rates are established before any operator call, and there is no path through the script that reverses that. The free-condition layer matches nodes by comparing the character offsets at which each node's span sits in the document. The published records carry those offsets in place of the spans, so those five cells, like every other, reproduce without the specimen texts.
 
 ### *What is withheld, and why.*
 
@@ -384,7 +384,7 @@ The fixed-condition extraction records are published in full, because an operato
 
 ### *Identifiers.*
 
-Concept DOI: [10.5281/zenodo.21830220](https://doi.org/10.5281/zenodo.21830220), which resolves to the most recent version and is the identifier to cite unless a specific version is intended. The pre-registration is version v1.0.0, whose version DOI is [10.5281/zenodo.21830221](https://doi.org/10.5281/zenodo.21830221) and which remains independently checkable as the record that preceded the data. This record is version v2.0.0, whose version DOI is [10.5281/zenodo.21850328](https://doi.org/10.5281/zenodo.21850328). The run's records are archived as a dataset at [10.57967/hf/9911](https://doi.org/10.57967/hf/9911).
+Concept DOI: [10.5281/zenodo.21830220](https://doi.org/10.5281/zenodo.21830220), which resolves to the most recent version and is the identifier to cite unless a specific version is intended. The pre-registration is version v1.0.0, whose version DOI is [10.5281/zenodo.21830221](https://doi.org/10.5281/zenodo.21830221) and which remains independently checkable as the record that preceded the data. This record is version v2.2.0, whose version DOI is [10.5281/zenodo.24015983](https://doi.org/10.5281/zenodo.24015983). The run's records are archived as a dataset at [10.57967/hf/9911](https://doi.org/10.57967/hf/9911).
 
 ## References
 
@@ -439,10 +439,10 @@ The tables in this appendix are the reporting format fixed before any data exist
 
 | Document | As reported (matched nodes only) | Recomputed (charging boundary disagreement) | Difference |
 |---|---:|---:|---:|
-| VC1 | .663 | .136 | $-.527$ |
-| VC2 | .637 | .228 | $-.409$ |
-| VC3 R0 | 1.000 | .235 | $-.765$ |
-| VC3 R1 | — | .125 | — |
-| VC3 R2 | .769 | .245 | $-.525$ |
+| VC1 | .663 | .208 | $-.455$ |
+| VC2 | .637 | .214 | $-.423$ |
+| VC3 R0 | 1.000 | .283 | $-.717$ |
+| VC3 R1 | — | .145 | — |
+| VC3 R2 | .769 | .242 | $-.527$ |
 
-*Notes*: The declared direction is that the recomputed column is **worse** than the reported one (P3), and the difference column is reported whichever way it comes out. It came out in the declared direction on all four documents for which the predecessor reports a comparable figure, by $.409$ to $.765$, and is contradicted on none; VC3 R1 has no reported comparator in the predecessor's record and is shown as recomputed-only, which is a gap in the comparison rather than a disagreement with it. The reported column is the predecessor's node-layer statistic over matched nodes only; the recomputed column is a joint unitizing coefficient over the same records. This is a re-analysis performed by this paper, not a correction to the predecessor's record: the predecessor's guidelines are frozen and its published numbers stand as published.
+*Notes*: The declared direction is that the recomputed column is **worse** than the reported one (P3), and the difference column is reported whichever way it comes out. It came out in the declared direction on all four documents for which the predecessor reports a comparable figure, by $.423$ to $.717$, and is contradicted on none; VC3 R1 has no reported comparator in the predecessor's record and is shown as recomputed-only, which is a gap in the comparison rather than a disagreement with it. The reported column is the predecessor's node-layer statistic over matched nodes only; the recomputed column is a joint unitizing coefficient over the same records, taking each span at the offsets the predecessor's own locator resolved it to (its published records carry those offsets, not the verbatim spans), with the coefficient's expected-disorder sampler seeded from the protocol's stream rule so that the column reproduces exactly. Version 2.1.0 of this record printed an unseeded run located by this paper's stricter locator, which placed one to six fewer nodes per graph; the declared direction and the four-of-four comparison are the same under both. This is a re-analysis performed by this paper, not a correction to the predecessor's record: the predecessor's guidelines are frozen and its published numbers stand as published.

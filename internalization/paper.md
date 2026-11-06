@@ -6,7 +6,7 @@ ORCID: 0009-0000-6893-9231
 
 DOI: [10.5281/zenodo.21828980](https://doi.org/10.5281/zenodo.21828980)
 
-Working Paper v1.0.0 – August 2026
+Working Paper v1.1.0 – August 2026 (revised November 2026)
 
 ## Abstract
 
@@ -68,7 +68,7 @@ The distinction the count rests on is not hypothetical, and the clearest demonst
 
 Operationally the metric adds one field to the spine schema: a per-node **explanatory status** taking one of three values relative to a declared reader model — `derived` (follows from nodes the reader holds), `verified_only` (checkable but not derived), or `miracle` (neither derived nor reducible, and named as such). The miracle count is the cardinality of the third class:
 
-$$\mathrm{MC}(R \mid M) = \bigl| \{\, v \in V(\sigma(R)) : \mathrm{status}(v \mid M) = \texttt{miracle} \,\} \bigr|$$
+$$\mathrm{MC}(R \mid M) = \bigl| \{\, v \in V(\sigma(R)) : \mathrm{status}(v \mid M) = \mathrm{miracle} \,\} \bigr|$$
 
 where $R$ is a rendering, $M$ a declared reader model, and $\sigma$ the extraction operator.
 
@@ -341,8 +341,10 @@ One command reproduces the analysis:
 ./reproduce.sh
 ```
 
-This requires no API keys and no network access. It recomputes every reported statistic from the
-committed extractions under the fixed seed 20260809, including the random-graph null. Re-running the
+This requires no API keys. When they are absent it fetches two inputs over the network, neither
+needing credentials: the records, from the dataset of record, and the specimen texts, from their
+public sources, verified against their digests. It then recomputes every reported statistic from the
+extractions under the fixed seed 20260809, including the random-graph null. Re-running the
 collection itself (`./reproduce.sh --collect`) requires provider credentials and yields a **new
 epoch rather than a replication**: the operators are hosted models whose behaviour is pinned to a
 point in time. That is why the extracted graphs, not the models, are the dataset of record.
@@ -352,14 +354,18 @@ point in time. That is why the extracted graphs, not the models, are the dataset
 Published with the record: the pre-declared protocol, decision rule and reader models; the
 extraction harness and every scoring script; the extracted graphs for all five documents and both
 arms, including the discarded pilot rounds; the blind alignments and the per-rater target
-judgments; and a JSONL log of every model call carrying its prompts, prompt hash, parameters,
-response and token usage. The code and the machine-readable bundle are in the paper's public
+judgments; and a JSONL log of every model call carrying its prompt hash, parameters, token usage,
+latency and retries. The code and the machine-readable bundle are in the paper's public
 repository at
 [github.com/spectralbranding/meaningfulness-papers](https://github.com/spectralbranding/meaningfulness-papers/tree/main/internalization);
-the protocol layers, the records and the complete call logs are archived together as a Hugging Face
-dataset (DOI [10.57967/hf/9898](https://doi.org/10.57967/hf/9898)).
+the protocol layers, the records and the call logs are archived together as a Hugging Face dataset
+(DOI [10.57967/hf/9898](https://doi.org/10.57967/hf/9898)), which is the dataset of record.
 
-Not redistributed: the specimen texts themselves, which are third-party works. The three specimens
+Not redistributed: the specimen texts themselves, which are third-party works, or any verbatim
+passage of them. Each node's quoted span is published as the character offsets it resolved to in
+the specimen, which is what the agreement statistics consume; the raters' quotations, and the
+prompt and response bodies of the call logs (the prompts embed the specimens), are published as
+digests. Every reported statistic regenerates identically from the records in this form. The three specimens
 are publicly available — the matched pair, R0 and R1, in a single document from its producing
 organization [@openai-2026-planar-point-sets], the independent expert digestions on the author's
 weblog [@tao-2026-digestion-unit-distance; @tao-2026-digestion-jacobian-counterexample], and the
@@ -370,8 +376,8 @@ is proprietary and none was obtained under restriction.
 Version of record and all subsequent versions: concept DOI
 [10.5281/zenodo.21828980](https://doi.org/10.5281/zenodo.21828980), which resolves to the most
 recent version and is the identifier to cite unless a specific version is intended. This record is
-version v1.0.0, whose version DOI is
-[10.5281/zenodo.21828981](https://doi.org/10.5281/zenodo.21828981).
+version v1.1.0, whose version DOI is
+[10.5281/zenodo.24015974](https://doi.org/10.5281/zenodo.24015974).
 
 ## Acknowledgments
 

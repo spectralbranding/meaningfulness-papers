@@ -8,9 +8,9 @@
    "document": "vc1",
    "as_reported_matched_nodes_only": 0.6633663366336634,
    "as_reported_statistic": "Krippendorff alpha over matched nodes (the predecessor's layer 1)",
-   "recomputed_joint_gamma": 0.1359168291091919,
-   "recomputed_gamma_cat": -0.08799576759338379,
-   "difference": -0.5274495075244715,
+   "recomputed_joint_gamma": 0.208093523979187,
+   "recomputed_gamma_cat": 0.07446885108947754,
+   "difference": -0.4552728126544764,
    "nodes": {
     "OP_A": {
      "nodes": 53,
@@ -18,7 +18,7 @@
     },
     "OP_B": {
      "nodes": 25,
-     "located": 13
+     "located": 19
     }
    },
    "predecessor_matched_nodes": 9
@@ -27,9 +27,9 @@
    "document": "vc2",
    "as_reported_matched_nodes_only": 0.6372093023255814,
    "as_reported_statistic": "Krippendorff alpha over matched nodes (the predecessor's layer 1)",
-   "recomputed_joint_gamma": 0.22787541151046753,
-   "recomputed_gamma_cat": 0.07096225023269653,
-   "difference": -0.40933389081511384,
+   "recomputed_joint_gamma": 0.21447134017944336,
+   "recomputed_gamma_cat": 0.12813246250152588,
+   "difference": -0.422737962146138,
    "nodes": {
     "OP_A": {
      "nodes": 119,
@@ -37,7 +37,7 @@
     },
     "OP_B": {
      "nodes": 39,
-     "located": 38
+     "located": 39
     }
    },
    "predecessor_matched_nodes": 20
@@ -46,13 +46,13 @@
    "document": "vc3_r0",
    "as_reported_matched_nodes_only": 1.0,
    "as_reported_statistic": "Krippendorff alpha over matched nodes (the predecessor's layer 1)",
-   "recomputed_joint_gamma": 0.23472392559051514,
-   "recomputed_gamma_cat": 0.1770162582397461,
-   "difference": -0.7652760744094849,
+   "recomputed_joint_gamma": 0.28291523456573486,
+   "recomputed_gamma_cat": 0.16966211795806885,
+   "difference": -0.7170847654342651,
    "nodes": {
     "OP_A": {
      "nodes": 47,
-     "located": 42
+     "located": 46
     },
     "OP_B": {
      "nodes": 19,
@@ -65,13 +65,13 @@
    "document": "vc3_r1",
    "as_reported_matched_nodes_only": NaN,
    "as_reported_statistic": "Krippendorff alpha over matched nodes (the predecessor's layer 1)",
-   "recomputed_joint_gamma": 0.12475484609603882,
-   "recomputed_gamma_cat": -0.0010477304458618164,
+   "recomputed_joint_gamma": 0.14534235000610352,
+   "recomputed_gamma_cat": -0.11568069458007812,
    "difference": NaN,
    "nodes": {
     "OP_A": {
      "nodes": 85,
-     "located": 84
+     "located": 85
     },
     "OP_B": {
      "nodes": 14,
@@ -84,17 +84,17 @@
    "document": "vc3_r2",
    "as_reported_matched_nodes_only": 0.7692307692307692,
    "as_reported_statistic": "Krippendorff alpha over matched nodes (the predecessor's layer 1)",
-   "recomputed_joint_gamma": 0.24451595544815063,
-   "recomputed_gamma_cat": 0.08917319774627686,
-   "difference": -0.5247148137826185,
+   "recomputed_joint_gamma": 0.24197173118591309,
+   "recomputed_gamma_cat": 0.15833622217178345,
+   "difference": -0.5272590380448561,
    "nodes": {
     "OP_A": {
      "nodes": 57,
-     "located": 53
+     "located": 56
     },
     "OP_B": {
      "nodes": 21,
-     "located": 20
+     "located": 21
     }
    },
    "predecessor_matched_nodes": 8

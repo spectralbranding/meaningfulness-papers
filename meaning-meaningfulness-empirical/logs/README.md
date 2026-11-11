@@ -68,7 +68,7 @@ By design, the public log includes ONLY calls that produce empirical evidence ci
 
 ## Reconstructed-post-hoc entries
 
-Logs marked `"reconstructed_post_hoc": true` were assembled from the Claude Code session transcript after the LLM-call professional logging HARD RULE arrived mid-session (a later phase). They reflect honest disclosure of the gap between when the work executed and when structured logging was added. Reconstructed entries lack tokens / latency / cost values for the harness-internal Claude rendering operations (claude-via-harness operator); the Crossref calls in Phase 1 have full reconstruction fidelity because the calling script `audit/scripts/verify_2026ap_postdraft_r1_anchors.py` recorded the requests it made.
+Logs marked `"reconstructed_post_hoc": true` were assembled after the fact from the working transcript, because structured LLM-call logging was introduced partway through the work. They disclose the gap between when the work ran and when structured logging began. Reconstructed entries lack token, latency and cost values for the Claude rendering operations (claude-via-harness operator); the Crossref calls in Phase 1 are reconstructed in full because the calling script recorded the requests it made.
 
 Reconstruction script: `code/reconstruct_session_h_logs.py`. Future research-pass calls use real-time logging via `code/llm_call_logger.py`.
 

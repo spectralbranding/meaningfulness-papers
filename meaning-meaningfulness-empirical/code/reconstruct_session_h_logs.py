@@ -1,5 +1,5 @@
-"""Post-hoc reconstruction of LLM-call logs for [internal ref removed] phases that
-executed BEFORE [internal ref removed] HARD RULE arrived.
+"""Post-hoc reconstruction of LLM-call logs for the phases that ran before
+structured LLM-call logging was introduced.
 
 Per the rule's "How to apply (post-hoc for Claude Code harness work)" section,
 reconstructed entries are marked `"human_in_loop": true` and
@@ -30,7 +30,7 @@ LOGS_DIR = Path(__file__).resolve().parent.parent / "logs"
 
 
 def reconstruct_phase_1() -> None:
-    """12 Crossref queries from verify_2026ap_postdraft_r1_anchors.py."""
+    """12 Crossref queries from the anchor-verification script."""
     anchors = [
         (
             "A01",

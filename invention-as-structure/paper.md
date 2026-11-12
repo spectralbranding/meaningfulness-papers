@@ -74,7 +74,7 @@ The fourth move is the formal content of the folk notion that invention "combine
 different domains": it is not a mixture but a pullback over a shared substructure $S$, a change of
 basis under which the merged basis is seen to span something new. Moves (1) and (3) were already
 formalized as the drop-or-adjoin of a dimension in a conceptual space and the alteration of its
-structure [@boden-1990-creative-mind; @gardenfors-2000-conceptual-spaces]; move (4) was formalized
+structure [@boden-1990-creative-mind; @gardenfors-2000-conceptual-spaces-geometry]; move (4) was formalized
 as conceptual blending, in which two input spaces are mapped through a shared generic space into a
 novel blend [@fauconnier-turner-2002-the-way-we-think]. The contribution here is the conjunction —
 a single closed calculus — together with the selection functional and the mechanized adjudicator,

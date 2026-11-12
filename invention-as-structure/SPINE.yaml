@@ -517,7 +517,7 @@ external_anchors:
   - citation_key: fauconnier-turner-2002-the-way-we-think
     role: theoretical_predecessor
     spine_nodes: [P2]
-  - citation_key: gardenfors-conceptual-spaces
+  - citation_key: gardenfors-2000-conceptual-spaces-geometry
     role: theoretical_predecessor
     spine_nodes: [P2]
   - citation_key: spivak-kent-2012-ologs
